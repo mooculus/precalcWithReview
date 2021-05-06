@@ -1,0 +1,295 @@
+\documentclass[nooutcomes]{ximera}
+
+\input{../preamble}
+\author{Elizabeth Miller}
+\license{Creative Commons Attribution-ShareAlike 4.0 International License}
+\acknowledgement{https://activecalculus.org/prelude/sec-exp-growth.html}
+
+\title{Exponential Functions}
+
+\begin{document}
+\begin{abstract}
+  
+\end{abstract}
+\maketitle
+
+
+%\typeout{************************************************}
+%\typeout{Motivating Questions}
+%\typeout{************************************************}
+
+\begin{motivatingQuestions}
+\item What does it mean to say that a function is ``exponential”?
+\item How much data do we need to know in order to determine the formula for an exponential function?
+\item Are there important trends that all exponential functions exhibit?
+\end{motivatingQuestions}
+
+
+%\typeout{************************************************}
+%\typeout{Subsection Introduction}
+%\typeout{************************************************}
+
+\section{Introduction}
+Linear functions have constant average rate of change and model many important phenomena.  In other settings, it is natural for a quantity to change at a rate that is proportional to the amount of the quantity present.  For instance, whether you put \textdollar{}\(100\) or \textdollar{}\(100000\) or any other amount in a mutual fund, the investment's value changes at a rate proportional the amount present.  We often measure that rate in terms of the annual percentage rate of return.
+
+Suppose that a certain mutual fund has a \(10\)\% annual return.  If we invest \textdollar{}\(100\), after \(1\) year we still have the original \textdollar{}\(100\), plus we gain \(10\)\% of \textdollar{}\(100\), so%
+\begin{equation*}
+100 \xrightarrow{\text{year } 1} 100 + 0.1(100) = 1.1(100)\text{.}
+\end{equation*}
+If we instead invested \textdollar{}\(100000\), after \(1\) year we again have the original \textdollar{}\(100000\), but now we gain \(10\)\% of \textdollar{}\(100000\), and thus%
+\begin{equation*}
+100000 \xrightarrow{\text{year } 1} 100000 + 0.1(100000) = 1.1(100000)\text{.}
+\end{equation*}
+We therefore see that regardless of the amount of money originally invested, say \(P\), the amount of money we have after \(1\) year is \(1.1P\).
+
+If we repeat our computations for the second year, we observe that%
+\begin{equation*}
+1.1(100) \xrightarrow{\text{year } 2} 1.1(100) + 0.1(1.1(100) = 1.1(1.1(100)) = 1.1^2 (100)\text{.}
+\end{equation*}
+The ideas are identical with the larger dollar value, so%
+\begin{equation*}
+1.1(100000) \xrightarrow{\text{year } 2} 1.1(100000) + 0.1(1.1(100000) = 1.1(1.1(100000)) = 1.1^2 (100000)\text{,}
+\end{equation*}
+and we see that if we invest \(P\) dollars, in \(2\) years our investment will grow to \(1.1^2 P\).%
+
+Of course, in \(3\) years at \(10\)\%, the original investment \(P\) will have grown to \(1.1^3 P\).  Here we see a new kind of pattern developing:  annual growth of \(10\)\% is leading to \emph{powers} of the base \(1.1\), where the power to which we raise \(1.1\) corresponds to the number of years the investment has grown.  We often call this phenomenon \emph{exponential growth}. \index{exponential growth!introduction}
+
+\begin{exploration}
+Suppose that at age \(20\) you have \textdollar{}\(20000\) and you can choose between one of two ways to use the money:  you can invest it in a mutual fund that will, on average, earn \(8\)\% interest annually, or you can purchase a new automobile that will, on average, depreciate \(12\)\% annually.  Let's explore how the \(20000\) changes over time.%
+
+Let \(I(t)\) denote the value of the \textdollar{}\(20000\) after \(t\) years if it is invested in the mutual fund, and let \(V(t)\) denote the value of the automobile \(t\) years after it is purchased.
+
+\begin{enumerate}[label=\alph*.]
+\item Determine \(I(0)\), \(I(1)\), \(I(2)\), and \(I(3)\).
+\item Note that if a quantity depreciates \(12\)\% annually, after a given year, \(88\)\% of the quantity remains.  Compute \(V(0)\), \(V(1)\), \(V(2)\), and \(V(3)\).
+\item Based on the patterns in your computations in (a) and (b), determine formulas for \(I(t)\) and \(V(t)\).
+\item Use \emph{Desmos} to define \(I(t)\) and \(V(t)\).  Plot each function on the interval \(0 \le t \le 20\) and record your results on the axes below, being sure to label the scale on the axes.  What trends do you observe in the graphs?  How do \(I(20)\) and \(V(20)\) compare?
+\begin{image}
+\includegraphics{ExpText1.jpg}
+%add alt text
+\end{image}
+\end{enumerate}
+\end{exploration}
+
+
+%\typeout{************************************************}
+%\typeout{Subsection 3.1.1 Exponential functions of form \(f(t) = ab^t\)}
+%\typeout{************************************************}
+
+
+\section{Exponential functions of form \(f(t) = ab^t\)}
+
+In the exploration above, we encountered the functions \(I(t)\) and \(V(t)\) that had the same basic structure.  Each can be written in the form \(g(t) = ab^t\) where \(a\) and \(b\) are positive constants and \(b \ne 1\).  Based on our earlier work with transformations, we know that the constant \(a\) is a vertical scaling factor, and thus the main behavior of the function comes from \(b^t\), which we call an ``exponential function''.%
+\begin{definition}
+Let \(b\) be a real number such that \(b \gt 0\) and \(b \ne 1\).  We call the function defined by%
+$$f(t) = b^t$$
+an \dfn{exponential function} with \dfn{base} \(b\).%
+\end{definition}
+
+For an exponential function \(f(t) = b^t\), we note that \(f(0) = b^0 = 1\), so an exponential function of this form always passes through \((0,1)\).  In addition, because a positive number raised to any power is always positive (for instance, \(2^{10} = 1096\) and \(2^{-10} = \frac{1}{2^{10}} = \frac{1}{2096}\)), the output of an exponential function is also always positive.  In particular, \(f(t) = b^t\) is never zero and thus has no \(x\)-intercepts.
+
+Because we will be frequently interested in functions such as \(I(t)\) and \(V(t)\) with the form \(ab^t\), we will also refer to functions of this form as ``exponential'', understanding that technically these are vertical stretches of exponential functions according to our definition of exponential function.  In the exploration above, we found that \(I(t) = 20000(1.08)^t\) and \(V(t) = 20000(0.88)^t\).  It is natural to call \(1.08\) the ``growth factor''  of \(I\) and similarly \(0.88\) the growth factor of \(V\).  In addition, we note that these values stem from the actual growth rates:  \(0.08\) for \(I\) and \(-0.12\) for \(V\), the latter being negative because value is depreciating.  In general, for a function of form \(f(t) = ab^t\), we call \(b\) the \dfn{growth factor}. \index{exponential function!growth factor}  Moreover, if \(b = 1+r\), we call \(r\) the \dfn{growth rate}. \index{exponential function!growth rate}  Whenever \(b \gt 1\), we often say that the function \(f\) is exhibiting ``exponential growth'', wherease if \(0 \lt b \lt 1\), we say \(f\) exhibits ``exponential decay''. \index{exponential function!exponential decay}
+
+\begin{exploration}
+Suppose that at age \(20\) you have \textdollar{}\(20000\) and you can choose between one of two ways to use the money:  you can invest it in a mutual fund that will, on average, earn \(8\)\% interest annually, or you can purchase a new automobile that will, on average, depreciate \(12\)\% annually.  Let's explore how the \(20000\) changes over time.%
+
+Let \(I(t)\) denote the value of the \textdollar{}\(20000\) after \(t\) years if it is invested in the mutual fund, and let \(V(t)\) denote the value of the automobile \(t\) years after it is purchased.
+
+\begin{enumerate}[label=\alph*.]
+\item What is the domain of \(g(t) = ab^t\)?
+\item What is the range of \(g(t) = ab^t\)?
+\item What is the \(y\)-intercept of \(g(t) = ab^t\)?
+\item How does changing the value of \(b\) affect the shape and behavior of the graph of \(g(t) = ab^t\)?  Write several sentences to explain.
+\item For what values of the growth factor \(b\) is the corresponding growth rate positive?  For which \(b\)-values is the growth rate negative?
+\item Consider the graphs of the exponential functions \(p\) and \(q\) provided in teh figure below.  If \(p(t) = ab^t\) and \(q(t) = cd^t\), what can you say about the values \(a\), \(b\), \(c\), and \(d\) (beyond the fact that all are positive and \(b \ne 1\) and \(d \ne 1\))?  For instance, can you say a certain value is larger than another?  Or that one of the values is less than \(1\)?
+\begin{image}
+\includegraphics{ExpText2.jpg}
+%add alt text
+\end{image}
+\end{enumerate}
+\end{exploration}
+%
+%\typeout{************************************************}
+%\typeout{Subsection 3.1.2 Determining formulas for exponential functions}
+%\typeout{************************************************}
+
+\section{Determining formulas for exponential functions}
+
+To better understand the roles that \(a\) and \(b\) play in an exponential function, let's compare exponential and linear functions.  In the tables below, we see output for two different functions \(r\) and \(s\) that correspond to equally spaced input.
+
+\begin{center}
+\(
+\begin{array}{cccccc}
+%\(
+{\begin{array}{cc}
+t&r(t)\\
+\hline
+0&12\\
+3&10\\
+6&8\\
+9&6
+\end{array}}&&&&&
+%\)
+%\end{center}
+%\begin{center}
+%\(
+{\begin{array}{cc}
+t&s(t)\\
+\hline
+0&12\\
+3&9\\
+6&6.75\\
+9&5.0625
+\end{array}}\\
+\end{array}
+\)
+\end{center}
+
+
+
+In the leftside table for $r(t)$, we see a function that exhibits constant average rate of change since the change in output is always \(\triangle r = -2\) for any change in input of \(\triangle t = 3\).  Said differently, \(r\) is a linear function with slope \(m = -\frac{2}{3}\).  Since its \(y\)-intercept is \((0,12)\), the function's formula is \(y = r(t) = 12 - \frac{2}{3}t\).
+
+In contrast, the function \(s\) given by rightside table for $s(t)$ does not exhibit constant average rate of change.  Instead, another pattern is present.  Observe that if we consider the ratios of consecutive outputs in the table, we see that%
+\begin{equation*}
+\frac{9} {12}= \frac{3}{4}, \frac{6.75}{9} = 0.75 = \frac{3}{4}, \text{ and } \frac{5.0625}{6.75} = 0.75 = \frac{3}{4}\text{.}
+\end{equation*}
+So, where the \emph{differences} in the outputs in the table for $r(t)$ are constant, the \emph{ratios} in the outputs in the table for $s(t)$ are constant.  The latter is a hallmark of exponential functions and may be used to help us determine the formula of a function for which we have certain information.
+
+If we know that a certain function is linear, it suffices to know two points that lie on the line to determine the function's formula.  It turns out that exponential functions are similar:  knowing two points on the graph of a function known to be exponential is enough information to determine the function's formula.  In the following example, we show how knowing two values of an exponential function enables us to find both \(a\) and \(b\) exactly.
+
+\begin{example}
+Suppose that \(p\) is an exponential function and we know that \(p(2) = 11\) and \(p(5) = 18\).  Determine the exact values of \(a\) and \(b\) for which \(p(t) = ab^t\).
+\begin{explanation}
+Since we know that \(p(t) = ab^t\), the two data points give us two equations in the unknowns \(a\) and \(b\).  First, using \(t = 2\),%
+\begin{equation}
+ab^2 = 11\text{,}
+\end{equation}
+and using \(t = 5\) we also have%
+\begin{equation}
+ab^5 = 18\text{.}
+\end{equation}
+Because we know that the quotient of outputs of an exponential function corresponding to equally-spaced inputs must be constant, we thus naturally consider the quotient \(\frac{18}{11}\).  Using $ab^2 = 11$ and $ab^5 = 18$, it follows that%
+\begin{equation*}
+\frac{18}{11} = \frac{ab^5}{ab^2}\text{.}
+\end{equation*}
+Simplifying the fraction on the right, we see that \(\frac{18}{11} = b^3\). Solving for \(b\), we find that \(b = \sqrt[3]{\frac{18}{11}}\) is the exact value of \(b\).  Substituting this value for \(b\) in $ab^2 = 11$, it then follows that \(a \left( \sqrt[3]{\frac{18}{11}} \right)^2 = 11\), so \(a = \frac{11}{\left( \frac{18}{11} \right)^{2/3}}\).  Therefore,%
+\begin{equation*}
+p(t) = \frac{11}{\left( \frac{18}{11} \right)^{2/3}} \left( \sqrt[3]{\frac{18}{11}} \right)^t \approx 7.9215 \cdot 1.1784^t\text{,}
+\end{equation*}
+and a plot of \(y = p(t)\) confirms that the function indeed passes through \((2,11)\) and \((5,18)\) as shown in the figure below.
+
+\begin{image}
+\includegraphics{ExpText3.jpg}
+\end{image}
+
+\end{explanation}
+\end{example}
+
+\begin{exploration}
+The value of an automobile is depreciating.  When the car is \(3\) years old, its value is \textdollar{}\(12500\); when the car is \(7\) years old, its value is \textdollar{}\(6500\).
+
+\begin{enumerate}[label=\alph*.]
+\item The value of an automobile is depreciating.  When the car is \(3\) years old, its value is \textdollar{}\(12500\); when the car is \(7\) years old, its value is \textdollar{}\(6500\).
+\item The value of an automobile is depreciating.  When the car is \(3\) years old, its value is \textdollar{}\(12500\); when the car is \(7\) years old, its value is \textdollar{}\(6500\).
+\item Suppose instead that the car's value is modeled by a linear function \(L\) and satisfies the values stated at the outset of this activity.  Find a formula for \(L(t)\) and determine both the purchase value of the car and when the car will be worth \textdollar{}\(1000\).
+\item Which model do you think is more realistic?  Why?
+\end{enumerate}
+\end{exploration}
+
+%\typeout{************************************************}
+%\typeout{Subsection 3.1.3 Trends in the behavior of exponential functions}
+%\typeout{************************************************}
+
+Recall that a function is increasing on an interval if its value always increasing as we move from left to right.  Similarly, a function is decreasing on an interval provided that its value always decreases as we move from left to right.
+
+\begin{image}
+\includegraphics{ExpText4.jpg}
+\end{image}
+
+If we consider an exponential function \(f\) with a growth factor \(b > 1\), such as the function pictured in the left-hand graph above, then the function is always increasing because higher powers of \(b\) are greater than lesser powers (for example, \((1.2)^3 \gt (1.2)^2\)).  On the other hand, if \(0 \lt b \lt 1\), then the exponential function will be decreasing because higher powers of positive numbers less than \(1\) get smaller (e.g., \((0.9)^3 \lt (0.9)^2\)), as seen for the exponential function in the right-hand graph above.
+
+An additional trend is apparent in the graphs in above.  Each graph bends upward and is therefore concave up.  We can better understand why this is so by considering the average rate of change of both \(f\) and \(g\) on consecutive intervals of the same width.  We choose adjacent intervals of length \(1\) and note particularly that as we compute the average rate of change of each function on such intervals,%
+\begin{equation*}
+AV_{[t,t+1]} = \frac{f(t+1) - f(t)}{t+1-1} = f(t+1) - f(t)\text{.}
+\end{equation*}
+Thus, these average rates of change are also measuring the total change in the function across an interval that is \(1\)-unit wide. We now assume that \(f(t) = 2 (1.25)^t\) and \(g(t) = 8(0.75)^t\) and compute the rate of change of each function on several consecutive intervals.
+
+
+\begin{center}
+\(
+%\begin{array}{cccccc}
+%\(
+{\begin{array}{ccc}
+\multicolumn{3}{c}{\text{The average rate of change of } f(t) = 2(1.25)^t}\\
+t&f(t)&AV_{[t,t+1]}\\
+\hline
+0&2&0.5\\
+1&2.5&0.625\\
+2&3.125&0.78215\\
+3&3.90625&0.97656
+\end{array}}%&&&&&
+\)
+\end{center}
+\begin{center}
+\(
+{\begin{array}{ccc}
+\multicolumn{3}{c}{\text{The average rate of change of } g(t) = 8(0.75)^t}\\
+t&g(t)&AV_{[t,t+1]}\\
+\hline
+0&8&-2\\
+1&6&-1.5\\
+2&4.5&-1.125\\
+3&3.375&-0.84375
+\end{array}}%\\
+%\end{array}
+\)
+\end{center}
+
+From the data in the first table about $f(t)$ we see that the average rate of change is increasing as we increase the value of \(t\).  We naturally say that \(f\) appears to be ``increasing at an increasing rate''.  For the function \(g\), we first notice that its average rate of change is always negative, but also that the average rate of change gets \emph{less negative} as we increase the value of \(t\). Said differently, the average rate of change of \(g\) is also increasing as we increase the value of \(t\).  Since \(g\) is always decreasing but its average rate of change is increasing, we say that \(g\) appears to be ``decreasing at an increasing rate''.  These trends hold for exponential functions generally according to the conditions given below.  It takes calculus to justify this claim fully and rigorously. 
+
+\begin{callout}
+\section{Trends in exponential function behavior.}
+For an exponential function of the form \(f(t) = ab^t\) where \(a\) and \(b\) are both positive with \(b \ne 1\),\leavevmode%
+\begin{itemize}[label=\textbullet]
+\item{}\hypertarget{p-1228}{}%
+if \(b \gt 1\), then \(f\) is always increasing and always increases at an increasing rate;%
+\item{}\hypertarget{p-1229}{}%
+if \(0 \lt b \lt 1\), then \(f\) is always decreasing and always decreases at an increasing rate.%
+\end{itemize}
+\end{callout}
+
+Observe how a function's average rate of change helps us classify the function's behavior on an interval:  whether the average rate of change is always positive or always negative on the interval enables us to say if the function is always increasing or always decreasing, and then how the average rate of change itself changes enables us to potentially say \emph{how} the function is increasing or decreasing through phrases such as ``decreasing at an increasing rate''.
+
+\begin{exploration}
+
+For each of the following prompts, give an example of a function that satisfies the stated characteristics by both providing a formula and sketching a graph.
+
+\begin{enumerate}[label=\alph*.]
+\item A function \(p\) that is always decreasing and decreases at a constant rate.
+\item A function \(q\) that is always increasing and increases at an increasing rate.
+\item A function \(r\) that is always increasing for \(t \lt 2\), always decreasing for \(t \gt 2\), and is always changing at a decreasing rate.
+\item A function \(s\) that is always increasing and increases at a decreasing rate.  (Hint: to find a formula, think about how you might use a transformation of a familiar function.)
+\item A function \(u\) that is always decreasing and decreases at a decreasing rate.
+
+\end{enumerate}
+
+\end{exploration}
+
+\begin{summary}
+\item We say that a function is exponential whenever its algebraic form is \(f(t) = ab^t\) for some positive constants \(a\) and \(b\) where \(b \ne 1\).  (Technically, the formal definition of an exponential function is one of form \(f(t) = b^t\), but in our everyday usage of the term ``exponential'' we include vertical stretches of these functions and thus allow \(a\) to be any positive constant, not just \(a = 1\).)
+\item To determine the formula for an exponential function of form \(f(t) = ab^t\), we need to know two pieces of information.  Typically this information is presented in one of two ways.
+\begin{itemize}
+\item If we know the amount, \(a\), of a quantity at time \(t = 0\) and the rate, \(r\), at which the quantity grows or decays per unit time, then it follows \(f(t) = a(1+r)^t\).  In this setting, \(r\) is often given as a percentage that we convert to a decimal (e.g., if the quantity grows at a rate of \(7\)\% per year, we set \(r = 0.07\), so \(b = 1.07\)).
+\item If we know any two points on the exponential function's graph, then we can set up a system of two equations in two unknowns and solve for both \(a\) and \(b\) exactly.  In this situation, it is useful to consider the quotient of the two known outputs, as demonstrated in Example 1.
+\end{itemize}
+\item Exponential functions of the form \(f(t) = ab^t\) (where \(a\) and \(b\) are both positive and \(b \ne 1\)) exhibit the following important characteristics:
+\begin{itemize}
+\item The domain of any exponential function is the set of all real numbers and the range of any exponential function is the set of all positive real numbers.
+\item The \(y\)-intercept of the exponential function \(f(t) = ab^t\) is \((0,a)\) and the function has no \(x\)-intercepts.
+\item If \(b \gt 1\), then the exponential function is always increasing and always increases at an increasing rate.  If \(0 \lt b \lt 1\), then the exponential function is always decreasing and always decreases at an increasing rate.
+\end{itemize}
+\end{summary}
+
+
+
+\end{document}

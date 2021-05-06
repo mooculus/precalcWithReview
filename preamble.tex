@@ -1,7 +1,16 @@
 \graphicspath{
   {./}
+  {1-1QuantitativeReasoning/}
+  {1-2RelationsAndGraphs/}
   {1-3ChangingInTandem/}
   {1-3ChangingInTandem/exercises/}
+  {2-1LinearEquations/}
+  {2-2LinearModeling/}
+  {2-3ExponentialModeling/}
+  {3-1WhatIsAFunction/}
+  {3-2FunctionProperties/}
+  {3-3AverageRatesOfChange/}
+  {3-4ExponentialFunctions/}
 }
 
 \newcommand{\mooculus}{\textsf{\textbf{MOOC}\textnormal{\textsf{ULUS}}}}
@@ -11,10 +20,16 @@
 \usepackage[most]{tcolorbox}
 
 
+
+%\typeout{************************************************}
+%\typeout{New Environments}
+%\typeout{************************************************}
+
+
 \NewEnviron{motivatingQuestions}{
-  \begin{tcolorbox}
-    \subsection{Motivating Questions}
-    \begin{itemize}[label=\textbullet]%STUFF ABOVE
+  \begin{tcolorbox}[ breakable,pad at break*=1mm]
+    \textbf{\Large Motivating Questions}
+    \begin{itemize}[label=\textbullet]
       \BODY
     \end{itemize}
   \end{tcolorbox}
@@ -31,6 +46,113 @@
   \end{tcolorbox}
 }
 
+
+
+\NewEnviron{objectives}{  
+    \textbf{\LARGE Learning Objectives}
+    \begin{itemize}[label=\textbullet]
+      \BODY
+    \end{itemize}
+}
+
+\NewEnviron{overview}{
+  \begin{tcolorbox}[colback=blue!5, breakable,pad at break*=1mm]
+    \textbf{\LARGE Unit Overview}
+    \begin{enumerate}[label=\textbullet]
+      \BODY
+    \end{enumerate}
+  \end{tcolorbox}
+}
+
+\let\remark\relax
+\let\endremark\relax
+
+\NewEnviron{remark}{
+  \begin{tcolorbox}[colback=blue!5, breakable,pad at break*=1mm]
+    \noindent\textbf{Remark}~
+      \BODY
+  \end{tcolorbox}
+}
+
+
+\let\definition\relax
+\let\enddefinition\relax
+
+\NewEnviron{definition}{
+  \begin{tcolorbox}[ breakable,pad at break*=1mm]
+    \noindent\textbf{Definition}~
+      \BODY
+  \end{tcolorbox}
+}
+% use \dfn{}  for bolding vocabulary words
+
+\let\summary\relax
+\let\endsummary\relax
+
+\NewEnviron{summary}{
+  \begin{tcolorbox}[ breakable,pad at break*=1mm]
+    \textbf{\Large Summary}
+    \begin{itemize}[label=\textbullet]
+      \BODY
+    \end{itemize}
+  \end{tcolorbox}
+}
+
+
+\let\explanation\relax
+\let\endexplanation\relax
+
+\NewEnviron{explanation}{
+    \normalfont
+    \noindent\textbf{Explanation}~
+      \BODY
+}
+
+\NewEnviron{callout}{
+  \begin{tcolorbox}[colback=blue!5, breakable,pad at break*=1mm]
+      \BODY
+  \end{tcolorbox}
+}
+
+\NewEnviron{folder}{
+      \addcontentsline{toc}{section}{\textbf{\BODY}}
+}
+
+%Notes on what envirnoment to use:  Example with Explanation in text; if they are supposed to answer- Problem; no answer - Exploration
+
+
+%\typeout{************************************************}
+%\typeout{Table of Contents}
+%\typeout{************************************************}
+
+
+\makeatletter
+
+\renewcommand\chapterstyle{%
+  \def\maketitle{%
+    \addtocounter{titlenumber}{1}%
+    \phantomsection
+    \addcontentsline{toc}{section}{\textbf{\thetitlenumber\hspace{1em}\@title}}%
+                    {\flushleft\small\sffamily\bfseries\@pretitle\par\vspace{-1.5em}}%
+                    {\flushleft\LARGE\sffamily\bfseries\thetitlenumber\hspace{1em}\@title \par }%
+                    {\setcounter{problem}{0}\setcounter{sectiontitlenumber}{0}}%
+                    \par}}
+
+\renewcommand\sectionstyle{%
+  \def\maketitle{%
+    \addtocounter{sectiontitlenumber}{1}
+    \phantomsection
+    \addcontentsline{toc}{subsection}{\thetitlenumber.\thesectiontitlenumber\hspace{1em}\@title}%
+    {\flushleft\small\sffamily\bfseries\@pretitle\par\vspace{-1.5em}}%
+    {\flushleft\Large\sffamily\bfseries\thetitlenumber.\thesectiontitlenumber\hspace{1em}\@title \par}%
+    \par}}
+
+\makeatother
+
+
+%\typeout{************************************************}
+%\typeout{Stuff from Ximera}
+%\typeout{************************************************}
 
 
 
@@ -120,7 +242,10 @@
 
 
 
-%% ORCCA PREAMBLE
+
+%\typeout{************************************************}
+%\typeout{ORCCA Preamble}
+%\typeout{************************************************}
 
 
 %% \usepackage{geometry}
@@ -147,14 +272,14 @@
 \definecolor{amber}{HTML}{c7502a}
 \definecolor{amethyst}{HTML}{70485b}
 \definecolor{sapphire}{HTML}{263c53}
-\colorlet{firstcolor}{ruby}
+\colorlet{firstcolor}{sapphire}
 \colorlet{secondcolor}{turquoise}
 \colorlet{thirdcolor}{emerald}
 \colorlet{fourthcolor}{amber}
 \colorlet{fifthcolor}{amethyst}
-\colorlet{sixthcolor}{sapphire}
+\colorlet{sixthcolor}{ruby}
 \colorlet{highlightcolor}{green!50!black}
-\colorlet{graphbackground}{yellow!30}
+\colorlet{graphbackground}{white}
 \colorlet{wood}{brown!60!white}
 %%% curve, dot, and graph custom styles %%%
 \pgfplotsset{firstcurve/.style      = {color=firstcolor,  mark=none, line width=1pt, {Kite}-{Kite}, solid}}
@@ -188,7 +313,7 @@
                                         xtick={-10,-9,...,10},
                                         ytick={-10,-9,...,10},
                                         grid=major,
-                                        grid style={solid,gray!40},
+                                        grid style={solid,gray!20},
                                         xticklabels={,,},
                                         yticklabels={,,},
                                         minor xtick=,
@@ -255,7 +380,7 @@
   tick label style={font=\footnotesize},
   legend cell align=left,
   grid = both,
-  grid style = {solid,gray!40},
+  grid style = {solid,gray!20},
   axis background/.style={fill=graphbackground},
 }}
 \pgfplotsset{framed/.style={axis background/.style ={draw=gray}}}

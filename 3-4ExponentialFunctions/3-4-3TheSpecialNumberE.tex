@@ -1,0 +1,184 @@
+\documentclass[nooutcomes]{ximera}
+
+\input{../preamble}
+\author{Elizabeth Miller}
+\license{Creative Commons Attribution-ShareAlike 4.0 International License}
+\acknowledgement{https://activecalculus.org/prelude/sec-exp-e.html}
+
+\title{The Special Number $e$}
+
+\begin{document}
+\begin{abstract}
+  
+\end{abstract}
+\maketitle
+
+
+%\typeout{************************************************}
+%\typeout{Motivating Questions}
+%\typeout{************************************************}
+
+\begin{motivatingQuestions}
+\item Why can every exponential function of form \(f(t) = b^t\) (where \(b \gt 0\) and \(b \ne 1\)) be thought of as a horizontal scaling of a single special exponential function?
+\item What is the natural base \(e\) and what makes this number special?
+\end{motivatingQuestions}
+
+
+%\typeout{************************************************}
+%\typeout{Introduction}
+%\typeout{************************************************}
+
+\section{Introduction}
+We have observed that the behavior of functions of the form \(f(t) = b^t\) is very consistent, where the only major differences depend on whether \(b \lt 1\) or \(b \gt 1\).  Indeed, if we stipulate that \(b \gt 1\), the graphs of functions with different bases \(b\) look nearly identical, as seen in the plots of \(p\), \(q\), \(r\), and \(s\) below.
+
+\begin{image}
+\includegraphics{ExpText12}
+\end{image}
+Because the point \((0,1)\) lies on the graph of each of the four functions in \hyperref[F-e-4-b-t]{Figure~\ref{F-e-4-b-t}}, the functions cannot be vertical scalings of one another.  However, it is possible that the functions are \emph{horizontal} scalings of one another.  This leads us to a natural question:  might it be possible to find a single exponential function with a special base, say \(e\), for which every other exponential function \(f(t) = b^t\) can be expressed as a horizontal scaling of \(E(t) = e^t\)?
+
+\begin{exploration}
+Open a new \emph{Desmos} worksheet and define the following functions: \(f(t) = 2^t\), \(g(t) = 3^t\), \(h(t) = (\frac{1}{3})^t\), and \(p(t) = f(kt)\).  After you define \(p\), accept the slider for \(k\), and set the range of the slider to be \(-2 \le k \le 2\).
+\begin{enumerate}[label=\alph*.]
+\item By experimenting with the value of \(k\), find a value of \(k\) so that the graph of \(p(t) = f(kt) = 2^{kt}\) appears to align with the graph of \(g(t) = 3^t\).   What is the value of \(k\)?
+\item Similarly, experiment to find a value of \(k\) so that the graph of \(p(t) = f(kt) = 2^{kt}\) appears to align with the graph of \(h(t) = (\frac{1}{3})^t\).   What is the value of \(k\)?
+\item For the value of \(k\) you determined in (a), compute \(2^k\).  What do you observe?
+\item For the value of \(k\) you determined in (b), compute \(2^k\).  What do you observe?
+\item Given any exponential function of the form \(b^t\), do you think it's possible to find a value of \(k\) to that \(p(t) = f(kt) = 2^{kt}\) is the same function as \(b^t\)?  Why or why not?
+\end{enumerate}
+
+\end{exploration}
+
+
+%\typeout{************************************************}
+%\typeout{Subsection 3.3.1 The natural base \(e\)}
+%\typeout{************************************************}
+
+\section{The natural base \(e\)}
+
+In the exploration above, we found that it appears possible to find a value of \(k\) so that given any base \(b\), we can write the function \(b^t\) as the horizontal scaling of \(2^t\) given by%
+\begin{equation*}
+b^t = 2^{kt}\text{.}
+\end{equation*}
+It's also apparent that there's nothing particularly special about ``\(2\)'': we could similarly write any function \(b^t\) as a horizontal scaling of \(3^t\) or \(4^t\), albeit with a different scaling factor \(k\) for each.  Thus, we might also ask:  is there a \emph{best} possible single base to use?
+
+Through the central topic of the \emph{rate of change} of a function, calculus helps us decide which base is best to use to represent all exponential functions.  While we study \emph{average} rate of change extensively in this course, in calculus there is more emphasis on the \emph{instantaneous} rate of change.  In that context, a natural question arises: is there a nonzero function that grows in such a way that its \emph{height} is exactly how \emph{fast} its height is increasing?
+
+Amazingly, it turns out that the answer to this questions is ``yes,'' and the function with this property is \dfn{the exponential function with the natural base}, denoted \(e^t\). The number \(e\) (named in homage to the great Swiss mathematician Leonard Euler (1707-1783)) is complicated to define.  Like \(\pi\), \(e\) is an irrational number that cannot be represented exactly by a ratio of integers and whose decimal expansion never repeats.  Advanced mathematics is needed in order to make the following formal definition of \(e\).%
+
+\begin{definition}[The natural base, \(e\)]
+The number \(e\) is the infinite sum\footnote{Infinite sums are usually studied in second semester calculus.\label{fn-28}}%
+\begin{equation*}
+e = 1 + \frac{1}{1!} + \frac{1}{2!} + \frac{1}{3!} + \frac{1}{4!} + \cdots
+\end{equation*}
+From this, \(e \approx 2.718281828\).%
+\end{definition}
+
+For instance, \(1 + \frac{1}{1} + \frac{1}{2} + \frac{1}{6} + \frac{1}{24} + \frac{1}{120} = \frac{163}{60} \approx 2.7167\) is an approximation of \(e\) generated by taking the first \(6\) terms in the infinite sum that defines it.  Every computational device knows the number \(e\) and we will normally work with this number by using technology appropriately.
+
+Initially, it's important to note that \(2 \lt e \lt 3\), and thus we expect the function \(e^t\) to lie between \(2^t\) and \(3^t\).
+
+\begin{image}
+\includegraphics{ExpText14}
+\end{image}
+%make into a table
+
+\begin{image}
+\includegraphics{ExpText13}
+\end{image}
+
+If we compare the graphs and some selected outputs of each function, as in \hyperref[T-e-2-e-3]{Table~\ref{T-e-2-e-3}} and \hyperref[F-e-2-e-3]{Figure~\ref{F-e-2-e-3}}, we see that the function \(e^t\) satisfies the inequality%
+\begin{equation*}
+2^t \lt e^t \lt 3^t
+\end{equation*}
+for all positive values of \(t\).  When \(t\) is negative, we can view the values of each function as being reciprocals of powers of \(2\), \(e\), and \(3\).  For instance, since \(2^2 \lt e^2 \lt 3^2\), it follows \(\frac{1}{3^2} \lt \frac{1}{e^2} \lt \frac{1}{2^2}\), or%
+\begin{equation*}
+3^{-2} \lt e^{-2} \lt 2^{-2}\text{.}
+\end{equation*}
+Thus, for any \(t \lt 0\),%
+\begin{equation*}
+3^t \lt e^t \lt 2^t
+\end{equation*}
+Like \(2^t\) and \(3^t\), the function \(e^t\) passes through \((0,1)\) is always increasing and always concave up, and its range is the set of all positive real numbers.
+
+
+\begin{exploration}
+Recall that the average rate of change of a function \(f\) on an interval \([a,b]\) is%
+\begin{equation*}
+AV_{[a,b]} = \frac{f(b)-f(a)}{b-a}\text{.}
+\end{equation*}
+In this activity we explore the average rate of change of \(f(t) = e^t\) near the points where \(t = 1\) and \(t = 2\).%
+\par
+\hypertarget{p-1392}{}%
+In a new \emph{Desmos} worksheet, let \(f(t) = e^t\) and define the function \(A\) by the rule%
+\begin{equation*}
+A(t) = \frac{f(t)-f(1)}{t-1}\text{.}
+\end{equation*}
+\begin{enumerate}[label=\alph*.]
+\item What is the meaning of \(A(1.5)\) in terms of the function \(f\) and its graph?%
+\item Compute the value of \(A(t)\) for at least \(6\) difference values of \(t\) that are close to 1, both above and below 1.  For instance, one value to try might be \(h = 1.0001\).  Record a table of your results.%
+\item\hypertarget{li-634}{}\hypertarget{p-1396}{}%
+What do you notice about the values you found in (b)?  How do they compare to an important number?%
+\item\hypertarget{li-635}{}\hypertarget{p-1397}{}%
+Explain why the following sentence makes sense: ``The function \(e^t\) is increasing at an average rate that is about the same as its value on small intervals near \(t = 1\).''%
+\item\hypertarget{li-636}{}\hypertarget{p-1398}{}%
+Adjust your definition of \(A\) in \emph{Desmos} by changing \(1\) to \(2\) so that%
+\begin{equation*}
+A(t) = \frac{f(t)-f(2)}{t-2}\text{.}
+\end{equation*}
+How does the value of \(A(t)\) for values of \(t\) near 2 compare to \(f(2)\)?%
+\end{enumerate}
+
+\end{exploration}
+
+
+%\typeout{************************************************}
+%\typeout{Subsection 3.3.2 Why any exponential function can be written in terms of \(e\)}
+%\typeout{************************************************}
+
+Earlier, we saw graphical evidence that any exponential function \(f(t) = b^t\) can be written as a horizontal scaling of the function \(g(t) = 2^t\), plus we observed that there wasn't anything particularly special about \(2^t\).    Because of the importance of \(e^t\) in calculus, we will choose instead to use the natural exponential function, 	\(E(t) = e^t\) as the function we scale to generate any other exponential function \(f(t) = b^t\).  We claim that for any choice of \(b \gt 0\) (with \(b \ne 1\)), there exists a horizontal scaling factor \(k\) such that \(b^t = f(t) = E(kt) = e^{kt}\).
+
+By the rules of exponents, we can rewrite this last equation equivalently as%
+\begin{equation*}
+b^t = (e^k)^t\text{.}
+\end{equation*}
+Since this equation has to hold for every value of \(t\), it follows that \(b = e^k\).  Thus, our claim that we can scale \(E(t)\) to get \(f(t)\) requires us to show that regardless of the choice of the positive number \(b\), there exists a single corresponding value of \(k\) such that \(b = e^k\).
+
+Given \(b \gt 0\), we can always find a corresponding value of \(k\) such that \(e^k = b\) because the function \(f(t) = e^t\) passes the Horizontal Line Test, as seen in the figure below.
+
+\begin{image}
+\includegraphics{ExpText14}
+\end{image}
+
+In this figure, we can think of \(b\) as a point on the positive vertical axis.  From there, we draw a horizontal line over to the graph of \(f(t) = e^t\), and then from the (unique) point of intersection we drop a vertical line to the \(x\)-axis.  At that corresponding point on the \(x\)-axis we have found the input value \(k\) that corresponds to \(b\).  We see that there is always exactly one such \(k\) value that corresponds to each chosen \(b\) because \(f(t) = e^t\) is always increasing, and any always increasing function passes the Horizontal Line Test.
+
+It follows that the function \(f(t) = e^t\) has an inverse function, and hence there must be some other function \(g\) such that writing \(y = f(t)\) is the same as writing \(t = g(y)\).  This important function \(g\) will be be developed more later and will enable us to find the value of \(k\) exactly for a given \(b\).  For now, we are content to work with these observations graphically and to hence find estimates for the value of \(k\).
+
+\begin{exploration}
+By graphing \(f(t) = e^t\) and appropriate horizontal lines, estimate the solution to each of the following equations.  Note that in some parts, you may need to do some algebraic work in addition to using the graph.
+\begin{enumerate}[label=\alph*.]
+\item \(e^t = 2\)
+\item \(e^{3t} = 5\)
+\item \(2e^t - 4 = 7\)
+\item \(3e^{0.25t} + 2 = 6\)
+\item \(4 - 2e^{-0.7t} = 3\)
+\item \(2e^{1.2t} = 1.5e^{1.6t}\)
+\end{enumerate}
+\end{exploration}
+
+Let's give a name to the inverse function of $f(x)=e^x$.
+
+\begin{definition}
+The \dfn{natural logarithm} is the inverse function of $f(x)=e^x$.  This function is written $f(x)=\ln(x)$.
+\end{definition}
+
+You will notice that this is one of the functions from our Famous Functions list.  We will explore this function further later in the course.
+
+\begin{summary}
+\item Any exponential function \(f(t) = b^t\) can be viewed as a horizontal scaling of \(E(t) = e^t\) because there exists a unique constant \(k\) such that \(E(kt) = e^{kt} = b^t = f(t)\) is true for every value of \(t\).  This holds since the exponential function \(e^t\) is always increasing, so given an output \(b\) there exists a unique input \(k\) such that \(e^k = b\), from which it follows that \(e^{kt} = b^t\).
+\item The natural base \(e\) is the special number that defines an increasing exponential function whose rate of change at any point is the same as its height at that point, a fact that is established using calculus.  The number \(e\) turns out to be given exactly by an infinite sum and approximately by \(e \approx 2.7182818\).
+\end{summary}
+
+
+
+
+\end{document}
