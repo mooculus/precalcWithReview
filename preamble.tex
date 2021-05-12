@@ -84,7 +84,6 @@
       \BODY
   \end{tcolorbox}
 }
-% use \dfn{}  for bolding vocabulary words
 
 \let\summary\relax
 \let\endsummary\relax
@@ -192,10 +191,6 @@
 \newcommand{\pp}[2][]{\frac{\partial #1}{\partial #2}}
 \renewcommand{\l}{\ell}
 \newcommand{\ddx}{\frac{d}{\d x}}
-
-
-\newcommand{\dfn}{\textbf}
-
 
 
 
@@ -460,3 +455,13 @@
 \newcommand{\gt}{>}
 \newcommand{\amp}{&}
 
+
+
+
+%%%%% INDEX STUFF
+\newcommand{\dfn}[1]{\textbf{#1}\index{#1}}
+\usepackage{imakeidx}
+\makeindex[intoc]
+\makeatletter
+\gdef\ttl@savemark{\sectionmark{}}
+\makeatother
