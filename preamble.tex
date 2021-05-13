@@ -125,15 +125,24 @@
 %\typeout{************************************************}
 
 
+%% Edit this to change the font style
+\newcommand{\sectionHeadStyle}{\sffamily\bfseries}
+
+
 \makeatletter
+
+%% part uses arabic numerals
+\renewcommand*\thepart{\arabic{part}}
+
+
 
 \renewcommand\chapterstyle{%
   \def\maketitle{%
     \addtocounter{titlenumber}{1}%
     \phantomsection
-    \addcontentsline{toc}{section}{\textbf{\thetitlenumber\hspace{1em}\@title}}%
-                    {\flushleft\small\sffamily\bfseries\@pretitle\par\vspace{-1.5em}}%
-                    {\flushleft\LARGE\sffamily\bfseries\thetitlenumber\hspace{1em}\@title \par }%
+    \addcontentsline{toc}{section}{\textbf{\thepart.\thetitlenumber\hspace{1em}\@title}}%
+                    {\flushleft\small\sectionHeadStyle\@pretitle\par\vspace{-1.5em}}%
+                    {\flushleft\LARGE\sectionHeadStyle\thepart.\thetitlenumber\hspace{1em}\@title \par }%
                     {\setcounter{problem}{0}\setcounter{sectiontitlenumber}{0}}%
                     \par}}
 
@@ -141,9 +150,9 @@
   \def\maketitle{%
     \addtocounter{sectiontitlenumber}{1}
     \phantomsection
-    \addcontentsline{toc}{subsection}{\thetitlenumber.\thesectiontitlenumber\hspace{1em}\@title}%
-    {\flushleft\small\sffamily\bfseries\@pretitle\par\vspace{-1.5em}}%
-    {\flushleft\Large\sffamily\bfseries\thetitlenumber.\thesectiontitlenumber\hspace{1em}\@title \par}%
+    \addcontentsline{toc}{subsection}{\thepart.\thetitlenumber.\thesectiontitlenumber\hspace{1em}\@title}%
+    {\flushleft\small\sectionHeadStyle\@pretitle\par\vspace{-1.5em}}%
+    {\flushleft\Large\sectionHeadStyle\thepart.\thetitlenumber.\thesectiontitlenumber\hspace{1em}\@title \par}%
     \par}}
 
 
@@ -151,11 +160,68 @@
 \renewcommand\section{\@startsection{paragraph}{10}{\z@}%
                                      {-3.25ex\@plus -1ex \@minus -.2ex}%
                                      {1.5ex \@plus .2ex}%
-                                     {\normalfont\large\sffamily\bfseries}}
+                                     {\normalfont\large\sectionHeadStyle}}
 \renewcommand\subsection{\@startsection{subparagraph}{10}{\z@}%
                                     {3.25ex \@plus1ex \@minus.2ex}%
                                     {-1em}%
-                                    {\normalfont\normalsize\sffamily\bfseries}}
+                                    {\normalfont\normalsize\sectionHeadStyle}}
+
+
+
+%% redefine Part
+\renewcommand\part{%
+  \if@openright
+    \cleardoublepage
+  \else
+    \clearpage
+  \fi
+  \thispagestyle{plain}%
+  \if@twocolumn
+    \onecolumn
+    \@tempswatrue
+  \else
+    \@tempswafalse
+  \fi
+  \null\vfil
+  \secdef\@part\@spart}
+
+\def\@part[#1]#2{%
+    \ifnum \c@secnumdepth >-2\relax
+      \refstepcounter{part}%
+      \addcontentsline{toc}{part}{\thepart\hspace{1em}#1}%
+    \else
+      \addcontentsline{toc}{part}{#1}%
+    \fi
+    \markboth{}{}%
+    {\centering
+     \interlinepenalty \@M
+     \normalfont
+     \ifnum \c@secnumdepth >-2\relax
+       \huge\sffamily\bfseries \partname\nobreakspace\thepart
+       \par
+       \vskip 20\p@
+     \fi
+     \Huge \bfseries #2\par}%
+    \@endpart}
+\def\@spart#1{%
+    {\centering
+     \interlinepenalty \@M
+     \normalfont
+     \Huge \bfseries #1\par}%
+    \@endpart}
+\def\@endpart{\vfil\newpage
+              \if@twoside
+               \if@openright
+                \null
+                \thispagestyle{empty}%
+                \newpage
+               \fi
+              \fi
+              \if@tempswa
+                \twocolumn
+                \fi}
+
+
 
 \makeatother
 
