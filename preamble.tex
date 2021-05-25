@@ -149,6 +149,10 @@
                     {\setcounter{problem}{0}\setcounter{sectiontitlenumber}{0}}%
                     \par}}
 
+
+
+
+
 \renewcommand\sectionstyle{%
   \def\maketitle{%
     \addtocounter{sectiontitlenumber}{1}
@@ -156,6 +160,7 @@
     \addcontentsline{toc}{subsection}{\thepart.\thetitlenumber.\thesectiontitlenumber\hspace{1em}\@title}%
     {\flushleft\small\sectionHeadStyle\@pretitle\par\vspace{-1.5em}}%
     {\flushleft\Large\sectionHeadStyle\thepart.\thetitlenumber.\thesectiontitlenumber\hspace{1em}\@title \par}%
+    %{\setcounter{subsectiontitlenumber}{0}}%
     \par}}
 
 
@@ -173,6 +178,7 @@
 
 %% redefine Part
 \renewcommand\part{%
+   {\setcounter{titlenumber}{0}}
   \if@openright
     \cleardoublepage
   \else
