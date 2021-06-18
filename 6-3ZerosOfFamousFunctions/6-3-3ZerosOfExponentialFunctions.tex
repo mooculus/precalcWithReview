@@ -1,0 +1,265 @@
+\documentclass[nooutcomes]{ximera}
+\input{../preamble}
+
+
+\author{Bobby Ramsey}
+\license{Creative Commons Attribution 4.0 International License}
+%\acknowledgement{}
+
+\title{Zeros of Exponential Functions}
+% Learning Objectives for this section
+%\begin{itemize}
+%	\item Recall that $\ln(x)$ is the inverse of $e^x$
+%	\item Defining the logarithm of a general base, by reflection of the graph.
+%	\item Problems you can do without rules of logarithms.
+%\end{itemize}
+
+
+\begin{document}
+
+\begin{abstract}
+ 	We examine the zeros of exponential and logarithmic functions.
+\end{abstract}
+\maketitle
+
+
+%\typeout{************************************************}
+%\typeout{Review Questions}
+%\typeout{************************************************}
+
+%\section{Review Materials}
+%    \begin{itemize}[label=\textbullet]
+%	\item \link[Combining Like Terms]{https://spot.pcc.edu/math/orcca/ed2/html/section-combining-like-terms.html}
+%	\item \link[Algebraic Properties and Simplifying Expressions]{https://spot.pcc.edu/math/orcca/ed2/html/section-algebraic-properties-and-simplifying-expressions.html}
+%   \end{itemize}
+%\begin{motivatingQuestions}
+	%Often start a section. 
+%	\item 
+%	\item 
+%\end{motivatingQuestions}
+
+\section{Introduction}
+
+	
+
+%	\begin{exploration}
+%		\begin{enumerate}[label=\alph*.]
+%			\item 
+%			\item
+%		\end{enumerate}
+%	\end{exploration}
+
+
+\section{Zeros of Exponential Functions}
+
+	As we saw previously, there are two varieties of elementary exponential functions: Increasing and Decreasing. The exponential function $f$ given by 
+	$f(x) = b^x$ is increasing if $b>1$ and decreasing if $0 < b < 1$. Graphically, the two situations resemble the following. 
+
+	\begin{minipage}{.5\textwidth}
+ 		\begin{center}
+			\begin{tikzpicture}
+				\begin{axis}[
+		    			width=0.75\linewidth,
+                			xmin=-3.25,xmax=3.25,
+               				ymin=-0.25,ymax=6.25,
+                			minor ytick=,minor xtick=,
+		                	xtick={-3,...,3}, ytick={0,...,6},
+                			clip=false,
+                			]	
+					\addplot[domain=-3:2.585, color=penColor]{(2)^x} node[above left, pos=0.25]{\Large{$y=b^x$}};
+				\end{axis}
+			\end{tikzpicture}
+		\end{center}
+	\end{minipage}% This must go next to `\end{minipage}`
+	\begin{minipage}{.5\textwidth}
+		\begin{center}
+			\begin{tikzpicture}
+				\begin{axis}[
+		    			width=0.75\linewidth,
+                			xmin=-3.25,xmax=3.25,
+               				ymin=-0.25,ymax=6.25,
+                			minor ytick=,minor xtick=,
+		                	xtick={-3,...,3}, ytick={0,...,6},
+                			clip=false,
+                			]	
+					\addplot[domain=-2.585:3, color=penColor]{(0.5)^x} node[above right, pos=0.75]{\Large{$y=b^x$}};
+				\end{axis}
+			\end{tikzpicture}
+		\end{center}
+	\end{minipage}
+	
+	These functions have domain $(-\infty, \infty)$ and range $(0, \infty)$. Notice that $0$ is not in the range. That means the exponential function 
+	$f(x)=b^x$ has no zeros. The translated exponential functions, however, $g(x) = b^x + c$ will have a zero if $c$ is negative. 
+	
+	\begin{callout}
+		Remember that the natural logarithm, $\ln(x)$, is the inverse of the exponential function $e^x$. 
+	\end{callout}
+		That means the composition $\ln( e^x ) = x$ for all 
+		values of $x$. If we isolate the exponential on one side of our equation, we can use the logarithm to ``undo'' it.
+	\begin{example}
+
+		Let $f$ be the function given by $f(x) = 4e^x-5$. Find the zeros of $f$. 
+		
+		\begin{explanation}
+			
+			\begin{align*}
+				f(x) &= 0 \\
+					4e^x-5 &= 0 \\
+					4e^x &= 5\\
+					e^x &= \frac{5}{4}\\
+					\ln(e^x) &= \ln\left( \frac{5}{4} \right)\\
+					x  &= \ln\left( \frac{5}{4} \right)
+			\end{align*}
+			
+			This function has only a single zero, at $x = \ln\left( \frac{5}{4} \right)$.
+		\end{explanation}
+	\end{example}
+	
+	The key to finding the zero in this example was being able to use the inverse function of $e^x$ to bring down that variable. By examining the graphs of 
+	the exponentials above, you will notice that they pass the horizontal line test. That is, the exponential function $f(x) = b^x$ is a one-to-one function
+	for any $b > 0$, $b\neq 1$. This means each of those exponential functions has an inverse, not just the base $e$ exponential. These inverses are 
+	called logarithms.
+	
+	\begin{definition}
+		For a constant $b > 0$, $b \neq 1$, the \dfn{logarithm} with base $b$, $\log_b(x)$, is the inverse of the exponential function $b^x$. The domain of $\log_b(x)$ is
+		$(0, \infty)$ and the range of $\log_b(x)$ is $(-\infty, \infty)$.
+	\end{definition}	
+		
+	Remember that if $f$ and $f^{-1}$ are inverse functions, the domain of $f$ is the range of $f^{-1}$, and the range of $f$ is the domain of $f^{-1}$.
+	
+	That the functions given by $\log_b(x)$ and $b^x$ are inverses means:
+	\begin{enumerate}
+		 \item $\displaystyle \log_b( b^x ) = x$ for all  $x$ in $ (-\infty, \infty)$ \\
+		 \item $\displaystyle b^{\log_b(x)} = x$ for all  $x$ in $ (0, \infty)$
+	\end{enumerate}
+	
+	The graphs of the exponentials $b^x$ allow us to find the graphs of the corresponding logarithms by reflecting across the line $y=x$. For $b > 1$ we have this graph.
+ 		\begin{center}
+			\begin{tikzpicture}
+				\begin{axis}[
+		    			width=0.75\linewidth,
+                			xmin=-6.25,xmax=6.25,
+               				ymin=-6.25,ymax=6.25,
+                			minor ytick=,minor xtick=,
+		                	xtick={-6,...,6}, ytick={-6,...,6},
+                			clip=false,
+                			]	
+					\addplot[domain=-6:2.585, color=penColor3]{(2)^x} node[above left, pos=0.25]{\Large{$y=b^x$}};
+					\addplot[domain=-6:6, dashed, color=penColor2]{x} node[above left, pos=0.15]{\Large{$y=x$}};					
+					\addplot[domain=0.02:6, samples=200, color=penColor]{(ln(x)/ln(2)} node[below right, pos=0.75]{\Large{$y=\log_b(x)$}};
+				\end{axis}
+			\end{tikzpicture}
+		\end{center}
+
+	For $0 < b < 1$ we have this graph.
+ 		\begin{center}
+			\begin{tikzpicture}
+				\begin{axis}[
+		    			width=0.75\linewidth,
+                			xmin=-6.25,xmax=6.25,
+               				ymin=-6.25,ymax=6.25,
+                			minor ytick=,minor xtick=,
+		                	xtick={-6,...,6}, ytick={-6,...,6},
+                			clip=false,
+                			]	
+					\addplot[domain=-2.585:6, color=penColor3]{(1/2)^x} node[below left, pos=0.25]{\Large{$y=b^x$}};
+					\addplot[domain=-6:6, dashed, color=penColor2]{x} node[above left, pos=0.15]{\Large{$y=x$}};					
+					\addplot[domain=0.02:6, samples=200, color=penColor]{(ln(x)/ln(1/2)} node[below left, pos=0.85]{\Large{$y=\log_b(x)$}};
+				\end{axis}
+			\end{tikzpicture}
+		\end{center}
+
+	Here is a link to exponential functions and logarithms plotted on the same graph in Desmos. Move the slider for the base value of $b$ 
+	and see how the two graphs respond.	
+	\desmos{q0aivjmasd}{600}{400}.
+
+
+
+	\begin{example}
+
+		Let $g$ be the function given by $g(x) =  2 \cdot 6^x - 5$. Find the zeros of the function $g$.
+	
+		\begin{explanation} 
+
+			Be careful with the order of operations here. Remember that $2\cdot 6^x$ is not the same as $12^x$.
+			\begin{align*}
+				g(x) & =  0 \\
+				2 \cdot 6^x - 5 & =  0 \\
+				2 \cdot 6^x &= 5\\
+				6^x &= \frac{5}{2}\\
+				\log_6( 6^x ) &= \log_6\left( \frac{5}{2} \right) \\
+				x &= \log_6\left( \frac{5}{2} \right)
+			\end{align*}			
+					
+			The function $g$ has a zero at $x = \log_6\left( \frac{5}{2} \right)$.
+		\end{explanation}
+	\end{example}
+	
+	\begin{example}
+		Let $h$ be the function given by $h(t) =  \left(\frac{1}{2}\right)^t + 3$. Find the zeros of $h$.
+	
+		\begin{explanation} 
+			
+			\begin{align*}
+				h(t) & = 0\\
+				\left(\frac{1}{2}\right)^t + 3 &= 0\\
+				\left(\frac{1}{2}\right)^t &= - 3
+			\end{align*}			
+			Our next step would be to take the logarithm, base $\frac{1}{2}$, of both sides to isolate the variable $t$, but that would mean taking the logarithm of $-3$. 
+			The domain of $\log_{1/2}(t)$ is $(0,\infty)$, so the logarithm of $-3$ does not exist. Said another way, the function $\left( \frac{1}{2} \right)^t$ has
+			range $(0,\infty)$, so there is no value of $t$ for which $\left( \frac{1}{2} \right)^t$ is $-3$.
+			
+			This function has no zeros.
+
+		\end{explanation}
+	\end{example}
+
+	Notice that $0$ is in the range of the logarithms. The fact that $b^0 = 1$ for all $b \neq 0$, means that for each logarithm, $\log_b(1) = 0$. Each logarithm $\log_b(x)$ has a zero at $x=1$. 
+	If the function is modified, we can use the fact that $b^{\log_b(x)} = x$ for all $x$ in $(-\infty, \infty)$ to find the zeros.
+		
+	\begin{example}
+
+		Let $f$ be the function given by $f(x) = 3\log_5(x)+7$. Find the zeros of $f$.
+	
+		\begin{explanation}
+
+			\begin{align*}
+				f(x) &= 0\\
+				3\log_5(x)+7 &= 0\\
+				3\log_5(x) &= -7\\
+				\log_5(x) &= -\frac{7}{3}\\
+				5^{\log_5(x)} &= 5^{-\frac{7}{3}}\\
+				x &= 5^{-\frac{7}{3}}\\
+			\end{align*}
+
+			The function $f$ has a zero at $x=5^{-\frac{7}{3}}$.
+			
+		\end{explanation}
+	\end{example}
+	
+	\begin{example}
+
+		Let $k$ be the function given by $k(t) = \frac{2t\log_5(t)}{3e^t+1}$. Find the zeros of $f$.
+	
+		\begin{explanation}
+			We know that a fraction is zero precisely when the numerator is zero.
+			\begin{align*}
+				k(t) &= 0\\
+				2t\log_5(t) &= 0
+			\end{align*}
+			Setting these factors equal to zero we find either $2t=0$, giving us the possible zero at $t=0$, or $\log_5(t)=0$, giving us the possible zero at $t=1$. Let us check them.
+			
+			\begin{align*}
+				k(1) &= \frac{2(1)\log_5(1)}{3e^1+1}\\
+					&= \frac{2 (0) }{3e+1} = 0
+			\end{align*}
+			
+			However, $t=0$ is not in the domain of $k$, since the $\log_5(t)$ factor would be undefined. 
+			
+			The function $k$ has a zero at $x=1$.
+			
+		\end{explanation}
+	\end{example}	
+	
+	
+\end{document}

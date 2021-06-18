@@ -1,0 +1,101 @@
+\documentclass{ximera}
+
+\input{../preamble}
+\author{Elizabeth Miller}
+\license{Creative Commons Attribution-ShareAlike 4.0 International License}
+\acknowledgement{https://spot.pcc.edu/math/orcca/ed2/html/section-technical-definition-of-a-function.html, https://activecalculus.org/prelude/sec-changing-functions-models.html, https://openstax.org/books/college-algebra/pages/3-1-functions-and-function-notation}
+
+\title{What is a Function?}
+
+\begin{document}
+\begin{abstract}
+  
+\end{abstract}
+\maketitle
+
+
+%\typeout{************************************************}
+%\typeout{Motivating Questions}
+%\typeout{************************************************}
+
+\begin{motivatingQuestions}
+\item What is a function?
+\item How can functions be represented?
+\item When is a relation not a function?
+\end{motivatingQuestions}
+
+
+%\typeout{************************************************}
+%\typeout{Subsection Introduction}
+%\typeout{************************************************}
+
+\section{Mathematical Models}
+A mathematical model is an abstract concept through which we use mathematical language and notation to describe a phenomenon in the world around us.  One example of a mathematical model is found in \link[Dolbear's Law]{https://en.wikipedia.org/wiki/Dolbear\%27s_law}, which has proven to be remarkably accurate for the behavior of snowy tree crickets.  For even more of the story, including a reference to this phenomenon on the popular show\link[The Big Bang Theory]{https://priceonomics.com/how-to-tell-the-temperature-using-crickets/}.  In the late 1800s, the physicist Amos Dolbear was listening to crickets chirp and noticed a pattern: how frequently the crickets chirped seemed to be connected to the outside temperature.  
+
+\begin{image}
+\includegraphics{CompositionText3.jpg}
+\end{image}
+
+If we let \(T\) represent the temperature in degrees Fahrenheit and \(N\) the number of chirps per minute, we can summarize Dolbear's observations in the following table.
+
+\[
+\begin{array}{cc}
+N \text{(chirps per minute)} & V \text{(degrees Fahrenheit)}\\
+\hline
+40&50\\
+80&60\\
+120&70\\
+160&80
+\end{array}
+\]
+
+For a mathematical model, we often seek an algebraic formula that captures observed behavior accurately and can be used to predict behavior not yet observed.  For the data in the table above, we observe that each of the ordered pairs in the table make the equation%
+\begin{equation}
+T = 40 + 0.25N
+\end{equation}
+true.  For instance, \(70 = 40 + 0.25(120)\).  Indeed, scientists who made many additional cricket chirp observations following Dolbear's initial counts found that the formula above holds with remarkable accuracy for the snowy tree cricket in temperatures ranging from about \(50^\circ\) F to \(85^\circ\) F.
+
+This model captures a pattern that is found in the world, and can be used to predict the temperature if only the number of chirps per minute is known.  Not all phenomenon in the world that can be measured mathematically occur in a predictable pattern.  In this section, we will study functions which are mathematical ways of formally studying situations where for a given input, such as the number of chirps above, there is one consistant output.  For situations where the output is not fixed, we encourage you to study statistics!
+
+\section{Functions}
+The mathematical concept of a function is one of the most central ideas in all of mathematics, in part since functions provide an important tool for representing and explaining patterns.  At its core, a function is a repeatable process that takes a collection of input values and generates a corresponding collection of output values with the property that if we use a particular single input, the process always produces exactly the same single output.
+
+For instance, Dolbear's Law provides a process that takes a given number of chirps between \(40\) and \(180\) per minute and reliably produces the corresponding temperature that corresponds to the number of chirps, and thus this equation generates a function.  We often give functions shorthand names; using ``\(D\)'' for the ``Dolbear'' function, we can represent the process of taking inputs (observed chirp rates) to outputs (corresponding temperatures) using arrows:%
+\begin{align*}
+80 &\xrightarrow{D} 60\\
+120 &\xrightarrow{D} 70\\
+N &\xrightarrow{D} 40 + 0.25 N
+\end{align*}
+
+Alternatively, for the relationship ``\(80 \xrightarrow{D} 60\)'' we can also use the equivalent notation ``\(D(80) = 60\)'' to indicate that Dolbear's Law takes an input of \(80\) chirps per minute and produces a corresponding output of \(60\) degrees Fahrenheit.  More generally, we write ``\(T = D(N) = 40 + 0.25N\)'' to indicate that a certain temperature, \(T\), is determined by a given number of chirps per minute, \(N\), according to the process \(D(N) = 40 + 0.25N\).
+
+
+We will define a function informally and formally.  The informal definition corresponds to the way we will most often think of functions, as a process with inputs and outs.  
+
+\begin{definition}[Informal Definition of a Function]
+A \dfn{function} is a process that may be applied to a collection of input values to produce a corresponding collection of output values in such a way that the process produces one and only one output value for any single input value.
+\end{definition}
+
+The formal definition of a function will establish a function as a special type of relation.  Recall that a \emph{relation} is a collection of points of the form $(x,y)$.  If the point $(x_0,y_0)$ is in the relation, then we say $x_0$ and $y_0$ are \emph{related}.
+
+\begin{definition}[Formal Definition of a Function]
+A \dfn{function} is a collection of ordered pairs $(x,y)$ such that any particular value of $x$ is paired with at most one value for $y$. That is, a relation in which each $x$-coordinate is matched with only one $y$-coordinate is said to describe $y$ as a \dfn{function} of $x$.
+\end{definition}
+
+How is this definition consistent with the informal , which describes a function as a process? Well, if you have a collection of ordered pairs $(x,y)$, you can choose to view the left number as an input, and the right value as the output. If the function's name is $f$ and you want to find $f(x)$  for a particular number $x$, look in the collection of ordered pairs to see if $x$ appears among the first coordinates. If it does, then $f(x)$ is the (unique) $y$-value it was paired with. If it does not, then that $x$ is just not in the domain of $f$, because you have no way to determine what $f(x)$ would be.
+
+
+%\typeout{************************************************}
+%\typeout{Summary}
+%\typeout{************************************************}
+
+\begin{summary}
+\item 
+\item 
+\item
+\end{summary}
+
+
+
+
+\end{document}

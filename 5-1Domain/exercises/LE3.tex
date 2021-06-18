@@ -1,0 +1,65 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\author{Bobby Ramsey}
+\license{Creative Commons Attribution-ShareAlike 4.0 International License}
+
+%\outcome{Calculating the rate of change.}
+%\outcome{Discuss the meaning of antiderivatives of a position function.}
+
+\begin{document}
+\begin{exercise}
+
+
+\begin{image}
+\begin{tikzpicture}
+    \begin{axis}
+    		[
+    		width=0.75\linewidth,
+                xmin=-6.25,xmax=6.25,
+                ymin=-6.25,ymax=6.25,
+                minor ytick=,
+                minor xtick=,
+                xtick={-6,...,6},
+                ytick={-6,...,6},
+                clip=false,
+                ]
+	\addplot+[domain=-6.25:6.25]{(2/5)*x+2};		
+        \addplot[soliddot] coordinates {(-5,0)} node[above left] {$(-5,0)$};
+        \addplot[soliddot] coordinates {(5,4)} node[above left] {$(5,4)$};
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+
+\begin{enumerate}
+\item The slope of this line is
+	\begin{multipleChoice}
+		\choice[correct]{positive because $y$ is increasing}
+		\choice{positive because $y$ is decreasing}
+		\choice{negative because $y$ is increasing}
+		\choice{negative because $y$ is decreasing}
+	\end{multipleChoice}
+
+\item The slope of this line is $m = \answer{2/5}$.
+	\begin{hint}
+		Recall that the slope of the line is the rate of change between any two data points on the line, $m = \dfrac{\Delta y}{\Delta x}$.
+	\end{hint}
+
+\item The $y$-value of the point corresponding to $x=9$ is $\answer{28/5}$.
+	\begin{hint}
+		How much $y$ increases if $x$ increases by $1$? How much does $y$ increase if $x$ increases by $4$?
+	\end{hint}
+
+\end{enumerate}
+%\begin{multipleChoice}
+%\choice{constant function.}
+%\choice{positive function. }
+%\choice{negative function.}
+%\choice{position function.}
+%\choice[correct]{velocity function.}
+%\end{multipleChoice}
+
+
+\end{exercise}
+\end{document}

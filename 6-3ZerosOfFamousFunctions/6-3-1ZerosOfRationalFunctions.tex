@@ -1,0 +1,247 @@
+\documentclass[nooutcomes]{ximera}
+\input{../preamble}
+
+
+\author{Bobby Ramsey}
+\license{Creative Commons Attribution 4.0 International License}
+\acknowledgement{https://spot.pcc.edu/math/orcca/ed2/html/section-solving-rational-equations.html}
+\acknowledgement{https://spot.pcc.edu/math/orcca/ed2/html/section-comparison-symbols-and-notation-for-intervals.html}
+
+\title{Zeros of Rational Functions}
+% Learning Objectives for this section
+%\begin{itemize}
+%	\item Definition of the Domain
+%	\item Interval Notation 
+%	\item The Domains of Famous Functions 
+%	\item Spotting Values not in the Domain
+%	\item Piecewise Defined Functions and Restricted Domains 
+%\end{itemize}
+
+
+\begin{document}
+
+\begin{abstract}
+ 	We find the zeros of a rational function.
+\end{abstract}
+\maketitle
+
+
+%\typeout{************************************************}
+%\typeout{Review Questions}
+%\typeout{************************************************}
+
+%\section{Review Materials}
+%    \begin{itemize}[label=\textbullet]
+%	\item \link[Combining Like Terms]{https://spot.pcc.edu/math/orcca/ed2/html/section-combining-like-terms.html}
+%	\item \link[Algebraic Properties and Simplifying Expressions]{https://spot.pcc.edu/math/orcca/ed2/html/section-algebraic-properties-and-simplifying-expressions.html}
+%   \end{itemize}
+%\begin{motivatingQuestions}
+	%Often start a section. 
+%	\item 
+%	\item 
+%\end{motivatingQuestions}
+
+\section{Introduction}
+
+	Suppose Julia is taking her family on a boat trip $12$ miles down the river and back.
+	The river flows at a speed of $2$ miles per hour and she wants to drive the boat at a constant speed,
+	$v$ miles per hour downstream and back upstream. Due to the current of the river,
+	the actual speed of travel is $v+2$ miles per hour going downstream, and $v-2$ miles per hour going upstream.
+	If Julia plans to spend $8$ hours for the whole trip, how fast should she drive the boat?
+
+	The time it takes Julia to drive the boat downstream is $\frac{12}{v+2}$ hours and upstream is $\dfrac{12}{v-2}$ hours.
+	The function to model the whole trip's time is \[ t(v)=\frac{12}{v-2}+\frac{12}{v+2} \]
+	where $t$ stands for time in hours. The trip will take $8$ hours, so we want $t(v)$ to equal $8$, and we have:
+	\[ \frac{12}{v-2}+\frac{12}{v+2}=8. \]
+
+	To solve this equation algebraically, we would start by subtracting $8$ from both sides to obtain:
+	\[ \frac{12}{v-2}+\frac{12}{v+2}-8 = 0. \]
+	
+	This has taken our equation involving rational functions, and converted it into the problem of determining the zeros of a single rational function. 
+	Namely, we are really just finding the zeros of $s(v) = \frac{12}{v-2}+\frac{12}{v+2}-8$. 
+	(Notice that the function was changed by subtracting the $8$, so we had to use a new name for it.)
+	
+	In the same way, whenever we are asked to find the solution of a rational equation, it is equivalent to finding the zeros of a rational function instead.
+
+%	\begin{exploration}
+%		\begin{enumerate}[label=\alph*.]
+%			\item 
+%			\item
+%		\end{enumerate}
+%	\end{exploration}
+
+
+\section{Zeros of Rational Functions}
+
+		
+	\begin{example}
+
+		Let us finish the calculation started in the Introduction. Find the zeros of $s(v) = \frac{12}{v-2}+\frac{12}{v+2}-8$. 
+		
+		\begin{explanation}
+		
+			We will begin by combining the left-hand side into a single fraction. Notice the fractions that appear
+			have a common denominator of $(v-2)(v+2) = v^2 - 4$.
+			\begin{align*}
+				s(v) &= \frac{12}{v-2}+\frac{12}{v+2}-8 \\
+					&= \frac{12}{v-2} \cdot \left(\frac{v+2}{v+2}\right)+\frac{12}{v+2}\cdot \left(\frac{v-2}{v-2}\right)-8\left(\frac{(v+2)(v-2)}{(v+2)(v-2)}\right) \\
+					&= \frac{12(v+2)}{(v-2)(v+2)}+\frac{12(v-2)}{(v+2)(v-2)}-\frac{8(v^2-4)}{(v+2)(v-2)} \\
+					&= \frac{12v+24}{(v+2)(v-2)}+\frac{12v-24}{(v+2)(v-2)}-\frac{8v^2-32}{(v+2)(v-2)} \\
+					&= \frac{(12v+24)+(12v-24)-(8v^2-32)}{(v+2)(v-2)}\\
+					&= \frac{-8v^2+(12v+12v)+(24-24+32)}{(v+2)(v-2)}\\
+					&= \frac{-8v^2+24v+32}{(v+2)(v-2)}.
+			\end{align*}
+			That means $s(v) = 0$ is equivalent to the equation $\frac{-8v^2+24v+32}{(v+2)(v-2)} = 0$.
+			
+			Since a fraction is zero if and only if the numerator is zero (and the denominator is nonzero), we need to look at
+			$-8v^2+24v+32 = 0$. We'll start by factoring, since we see a common factor of $8$ in the coefficients. Actually, let's factor out $-8$ to
+			clean up the sign of the leading term: $-8v^2+24v+32 = -8( v^2 - 3v - 4 )$.  The quadratic factor $v^2-3v-4$ can be factored to
+			$(v-4)(v+1)$. That means:
+			\begin{align*}
+				\frac{-8v^2+24v+32}{(v+2)(v-2)} &= 0 \\
+				-8v^2+24v+32 &= 0\\
+				-8(v^2-3v-4) &= 0\\
+				-8(v-4)(v+1) &= 0.
+			\end{align*}
+			Setting each factor equal to $0$ we see that either $-8 = 0$ (which is impossible), $v-4=0$ (which gives a possible solution of $v=4$), and
+			$v+1=0$ (which gives a possible solution of $v=-1$.
+			
+			There are two POSSIBLE solutions, $v=-1$ and $v=4$. The process of solving a rational equation like this can sometimes introduce 
+			extraneous solution. That is, a number that appears to be a solution, but doesn't actually satisfy the original equation.
+	
+			Let's plug both of these possibilities back into our original formula for $s(v)$ to verify that they are actually solutions.
+			\begin{align*}
+				s(-1) &= \frac{12}{(-1)-2}+\frac{12}{(-1)+2}-8\\
+					&= \frac{12}{-3} + \frac{12}{1}-8\\
+					&= -4 + 12 - 8 = 0 \\ \\
+				s(4) &= \frac{12}{(4)-2}+\frac{12}{(4)+2}-8\\
+					&= \frac{12}{2} + \frac{12}{6}-8\\
+					&= 6 + 2 - 8 = 0.
+			\end{align*}	
+			That means both $v=-1$ and $v=4$ are solutions to the rational equation $\frac{12}{v-2}+\frac{12}{v+2}-8 = 0$. 
+
+			Let's remember where this example came from. In the example, $v$ represented a speed, so it cannot be negative. The only solution is $v = 4$ miles per hour.
+
+		\end{explanation}
+	\end{example}
+
+
+	\begin{example}
+
+		Let $f$ be the function given by $f(x) =  \frac{1}{x-4} + x -\frac{x-3}{x-4}$. Find the zeros of the rational function $f$.
+	
+		\begin{explanation} 
+
+			We are being asked to solve the equation \[ \frac{1}{x-4} + x -\frac{x-3}{x-4} =0 \]
+			Notice that the only denominators appearing in the fractions are $x-4$, so the common denominator is $x-4$. We start by combining 
+			these terms into a single fraction with that denominator.
+			\begin{align*}
+				f(x) & =  \frac{1}{x-4} + x -\frac{x-3}{x-4} \\
+					& =  \frac{1}{x-4} + x\cdot\left(\frac{x-4}{x-4}\right) -\frac{x-3}{x-4} \\
+					& =  \frac{1}{x-4} + \frac{x(x-4)}{x-4} -\frac{x-3}{x-4} \\
+					& =  \frac{1}{x-4} + \frac{x^2-4x}{x-4} -\frac{x-3}{x-4} \\
+					& =  \frac{(1)+(x^2-4x)-(x-3)}{x-4}\\	
+					& =  \frac{x^2 + (-4x-x) + (1+3)}{x-4}\\	
+					& =  \frac{x^2 - 5x + 4}{x-4}\\	
+			\end{align*}			
+			Setting the numerator equal to zero and factoring gives the following.
+			\begin{align*}
+				f(x) & = 0 \\
+				\frac{x^2 - 5x + 4}{x-4} &= 0\\	
+				x^2-5x+4 &= 0\\
+				(x-4)(x-1) &= 0.
+			\end{align*}
+
+			By setting each of these factors equal to $0$ we see that either $x-4=0$ (which gives a possible solution of $x=4$) and 
+			$x-1=0$ (which gives a possible solution of $x=1$). The two possible solutions are $x=4$ and $x=1$. Let's check them.
+			
+			\begin{align*}
+				f(1) &= \frac{1}{(1)-4} + (1) -\frac{(1)-3}{(1)-4}	\\
+					&= \frac{1}{-3} + 1 - \frac{-2}{-3}\\
+					&= -\frac{1}{3} + 1 - \frac{2}{3} = 0.
+			\end{align*}
+			
+			However, $x=4$ is not in the domain of $f$, since it makes the denominators of the first and third terms zero. That is, $x=4$ 
+			is an extraneous solution.
+			
+			The only solution is $x=1$.
+		\end{explanation}
+	\end{example}
+	
+	\begin{example}
+		Let $g$ be the function given by $g(p) =  \frac{3}{p-2} + \frac{5}{p+2}- \frac{12}{p^2-4}$. Find the zeros of the rational function $g$.
+	
+		\begin{explanation} 
+			
+			Since $p^2-4 = (p+2)(p-2)$, the least common denominator between these three fractions is $(p+2)(p-2) = p^2-4$.
+			As before, we start by combining into a single fraction with that denominator.
+			\begin{align*}
+				g(p) & =  \frac{3}{p-2} + \frac{5}{p+2}- \frac{12}{p^2-4} \\
+					& =  \frac{3}{p-2} \cdot \left( \frac{p+2}{p+2}\right)+ \frac{5}{p+2}\cdot \left( \frac{p-2}{p-2}\right)- \frac{12}{p^2-4} \\
+					& =  \frac{3(p+2)}{(p-2)(p+2)}+ \frac{5(p-2)}{(p+2)(p-2)} - \frac{12}{p^2-4} \\
+					& =  \frac{3p+6}{(p+2)(p-2)}+ \frac{5p-10}{(p+2)(p-2)} - \frac{12}{(p+2)(p-2)} \\
+					& =  \frac{(3p+6)+(5p-10)-(12)}{(p+2)(p-2)}\\
+					& =  \frac{(3p+5p)+(6-10-12)}{(p+2)(p-2)}\\
+					& =  \frac{8p-16}{(p+2)(p-2)}\\
+			\end{align*}			
+			Setting the numerator equal to zero gives the following.
+			\begin{align*}
+				8p-16 & = 0 \\
+				8p &= 16\\	
+				p &= \frac{16}{8}=2.
+			\end{align*}
+
+			There is one possible solution, at $p = 2$. 			
+			
+			However, $p=2$ is not in the domain of $g$, since it makes the denominators of the first and third terms zero. That is, $p=2$ 
+			is an extraneous solution.
+			
+			The function $g$ does not have any zeros.
+		\end{explanation}
+	\end{example}
+
+	Let's look at this last example a bit more. We combined the three terms of $g(p)$ into a single fraction, but that fraction was not in its reduced form.
+	\begin{align*}
+		g(p) &= \frac{3}{p-2} + \frac{5}{p+2}- \frac{12}{p^2-4} \\
+			&= \frac{8p-16}{(p+2)(p-2)} \\
+			&= \frac{8(p-2)}{(p+2)(p-2)} \\
+			&= \frac{8\cancel{(p-2)}}{(p+2)\cancel{(p-2)}} \\
+			&= \frac{8}{(p+2)} \, \text{ , for  } p \neq 2.
+	\end{align*}
+	Why was $p=-2$ not a zero of the function? Because it was also a zero of the denominator. 
+	(Notice the common factor of $p-2$ in both the numerator and denominator.) 
+	Rewriting the fraction in lowest terms, we see that the numerator is never zero, since it's a constant $8$.
+
+	From this example, it may seem that reducing the rational function to lowest terms will always help you bypass the extraneous solutions. 
+	That is not the case.
+	
+	\begin{example}
+
+		Let $r$ be the function given by $r(t) = \frac{(t+3)(t^2-2t+1)}{t^2-1}$. Find the zeros of $r$.
+	
+		\begin{explanation}
+
+			Since we are already given the formula for $r$ as a single fraction, let us simplify.
+			\begin{align*}
+				r(t) &= \frac{(t+3)(t^2-2t+1)}{t^2-1}\\
+					&= \frac{(t+3)(t-1)^2}{(t+1)(t-1)}\\
+					&= \frac{(t+3)(t-1)(t-1)}{(t+1)(t-1)}\\
+					&= \frac{(t+3)(t-1)\cancel{(t-1)}}{(t+1)\cancel{(t-1)}}\\
+					&= \frac{(t+3)(t-1)}{(t+1)}
+			\end{align*}
+			The fraction will be zero when the numerator is zero. Setting each of the factors of the numerator equal to zero gives
+			$t+3=0$ (which gives a possible solution of $t=-3$), and $t-1=0$ (which gives a possible solution of $t=1$).
+			
+			When we cancelled out the common factor of $t-1$ from the numerator and the denominator, we changed the function without 
+			mentioning it. This new fraction $\frac{(t+3)(t-1)}{(t+1)}$ has $t=1$ in its domain, but it is not in the domain of $r$. 
+			To be thorough, after that cancellation we should have written
+			\[ r(t) = \frac{(t+3)(t-1)}{(t+1)}  \, \text{, for } t \neq 1 \]
+			to indicate that we're still using the original domain of $r$.
+			
+			The function $r$ has a single zero, at $x=-3$.
+			
+		\end{explanation}
+	\end{example}
+	
+	
+\end{document}

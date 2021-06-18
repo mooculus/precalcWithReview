@@ -1,0 +1,313 @@
+\documentclass[nooutcomes]{ximera}
+\input{../preamble}
+
+
+\author{Bobby Ramsey}
+\license{Creative Commons Attribution 4.0 International License}
+\acknowledgement{https://spot.pcc.edu/math/orcca/ed2/html/section-domain-and-range.html}
+\acknowledgement{https://spot.pcc.edu/math/orcca/ed2/html/section-comparison-symbols-and-notation-for-intervals.html}
+
+\title{Range}
+% Learning Objectives for this section
+%\begin{itemize}
+%	\item Definition of the Range
+%	\item Ranges of Famous Functions 
+%	\item Spotting Values not in the Range
+%\end{itemize}
+
+
+\begin{document}
+
+\begin{abstract}
+ 	We examine the outputs that are actually achieved.
+\end{abstract}
+\maketitle
+
+
+%\typeout{************************************************}
+%\typeout{Review Questions}
+%\typeout{************************************************}
+
+%\section{Review Materials}
+%    \begin{itemize}[label=\textbullet]
+%	\item \link[Combining Like Terms]{https://spot.pcc.edu/math/orcca/ed2/html/section-combining-like-terms.html}
+%	\item \link[Algebraic Properties and Simplifying Expressions]{https://spot.pcc.edu/math/orcca/ed2/html/section-algebraic-properties-and-simplifying-expressions.html}
+%   \end{itemize}
+\begin{motivatingQuestions}
+	%Often start a section. 
+	\item If $f$ is a function from a set $A$ to a set $B$, does every item in $B$ actually get related to something from $A$?
+\end{motivatingQuestions}
+
+\section{Introduction}
+
+	In the last section, for a function from $A$ to $B$,  we called the set $A$ the \emph{domain} and we called the set $B$ the \emph{codomain}.
+	
+	Let $f$ be the function defined by $f(x) = x^2$. We can consider this a function from the set of all real numbers $(-\infty, \infty)$ to the set of all 
+	real numbers $(-\infty, \infty)$. In this case, the domain is $(-\infty, \infty)$ and the codomain is also $(-\infty, \infty)$.
+	We know that for any real number $x$, the value of $x^2$ is never negative. That means there is no input to $f$ that ever gives a negative output.
+		
+	Let $g$ be the function from the set of capital letters to the set of natural numbers, which assigns each letter to its placement in the alphabet. 
+	This means $g(A)=1$ since `A' is the first letter of the alphabet. Similarly $g(B) = 2$ and $g(Z)=26$. In this case the domain is the set of capital
+	letters $\{ A, B, C, \ldots, Z\}$ and the codomain is the set of natural numbers $\{1, 2, 3, 4, \ldots \}$. For the function $g$
+	there are only 26 capital letters in the alphabet, so no number past greater than 26 is ever an output of $g$.  
+	
+	For both the function $f$ and $g$ just given, not every number in the codomain is actually achieved as the output of the function. 
+	There is a difference between the codomain, which measures the ``possible outputs'' and the actual outputs that are achieved.	
+	
+	
+	\begin{exploration}
+		\begin{enumerate}[label=\alph*.]
+			\item Suppose the quadratic function $f$ is given by $f(x) = x^2$. Are there any values that are never achieved as an output?
+			\item Explain the difference in finding the domain of a function and finding the range of the function, if you are given the graph of the function. What if you're given a formula for the function instead?
+		\end{enumerate}
+	\end{exploration}
+
+
+\section{The Range of a Function}
+	
+
+	
+	
+	% From https://spot.pcc.edu/math/orcca/ed2/html/section-domain-and-range.html
+	\begin{definition}
+		Let $f$ be a function from $A$ to $B$. The \dfn{range} of $f$ is the collection of the outputs of $f$.
+	\end{definition}
+	This means the \emph{range} consists of the outputs that are actually achieved. Not everything that is ``possible'', but only those outputs that actually
+	come out of the function. For each $b$ in the range of the function $f$, there is actually an $a$ in the domain with $f(a) = b$.
+
+	\begin{example}
+		The entire graph of a function $g$ is given in the graph below. Find the range of $g$.
+		\begin{image}
+			\begin{tikzpicture}
+				\begin{axis}[
+		    			width=0.75\linewidth,
+                			xmin=-6.25,xmax=6.25,
+               				ymin=-6.25,ymax=6.25,
+                			minor ytick=,minor xtick=,
+		                	xtick={-6,...,6}, ytick={-6,...,6},
+                			clip=false,
+                			]
+	
+					\addplot[domain=-6:0, color=penColor]{(1/6)*x^2} node[above right, pos=0.25]{\Large{$y=g(x)$}};
+					\addplot[domain=0:2, color=penColor]{2*x-4};
+					\addplot[domain=2:4, color=penColor]{4};
+					\addplot[hollowdot] coordinates {(0,0)};
+					\addplot[hollowdot] coordinates {(-6,6)};
+        				\addplot[hollowdot] coordinates {(0,-4)};
+        				\addplot[soliddot] coordinates {(2,0)};
+ 					\addplot[hollowdot] coordinates {(2,4)};
+        				\addplot[soliddot] coordinates {(4,4)};
+        				\addplot[soliddot] coordinates {(6,-1)};
+    				\end{axis}
+			\end{tikzpicture}
+		\end{image}
+		
+		\begin{explanation}
+			
+			\begin{center}
+				\desmos{fsdehrzpe6}{800}{600}
+			\end{center}
+				
+			Notice that as $x$ changes between $-6$ to $0$, the graph takes all outputs from $6$ to $0$ (not including the endpoints). As $x$
+			changes from $0$ to $2$, all the numbers from $-4$ to $0$ show up as outputs (including $0$). Together, this means that every
+			number in the interval $(-4, 6)$ is in the range. The last two pieces of the graph have outputs $4$ and $-1$, which are already included
+			in this interval.
+			
+			The range is $(-4, 6)$.
+			
+		\end{explanation}
+	\end{example}
+
+
+	\begin{example}
+		Let $f$ be the function given by $f(x) = 3x-5$. Find the range of $f$.
+		
+		\begin{explanation}
+			We know the domain of $f$ is $(-\infty, \infty)$, so any real number is a valid input. We also know that $f$ is a linear polynomial function
+			(a polynomial of degree 1) so we know what its graph is a straight line with slope $m = 3$.
+			\begin{image}
+				\begin{tikzpicture}
+					\begin{axis}[
+			    			width=0.75\linewidth,
+	                			xmin=-6.25,xmax=6.25,
+	               				ymin=-6.25,ymax=6.25,
+	                			minor ytick=,minor xtick=,
+			                	xtick={-6,...,6}, ytick={-6,...,6},
+	                			clip=false,
+	                			]
+		
+						\addplot+[domain=-0.25:3.75, color=penColor]{3*x-5} node[below right, pos=0.75]{\Large{$y=f(x)$}};
+	    				\end{axis}
+				\end{tikzpicture}
+			\end{image}
+			Since this graph goes higher and higher as $x$ travels to the right, and lower as $x$ travels to the left, we believe that every number is 
+			eventually an output of this function. 
+			
+			To make that a bit more formal, we'll take an arbitrary real number and show that it's actually an output of $f$.
+			If $a$ and $b$ are real numbers with $f(a)=b$, then
+			\begin{align*}
+				f(a) &= b\\
+				3a-5 &= b\\
+				3a &= b + 5\\
+				a &= \dfrac{b+5}{3}.
+			\end{align*}
+			
+			That means that if $b$ is any arbitrary real number, then $f\left( \frac{b+5}{3} \right) = b$ so that $b$ is achieved as an output of the
+			function, so $b$ is in the range.This means the range of $f$ is $(-\infty, \infty)$.
+
+		\end{explanation}
+	\end{example}
+	
+
+\section{The Range of Famous Functions}
+	
+	\begin{callout}
+		\begin{enumerate}	
+			\item The Absolute Value function - The average value of a number is never negative. The Absolute Value function has range $[0, \infty)$.
+	
+			\item Polynomial functions -  This depends on the degree of the polynomial.
+				\begin{enumerate}
+					\item Odd degree - The range is $(-\infty, \infty)$.
+					\item Even degree - We can only be precise with monomials (polynomials with only one term) like $5x^2$ or $-6x^8$. 
+						\begin{enumerate}
+							\item If the monomial has positive coefficient, the range is $[0, \infty)$.
+							\item If the monomial has negative coefficient, the range is $(-\infty, 0]$.
+						\end{enumerate}
+				\end{enumerate}
+					
+			\item The Square Root function - Even-index radicals never have negative outputs. Their range is $[0, \infty)$.		
+	
+			\item Exponential functions - Exponential functions $b^x$, for $b >0$ with $b \neq 1$,  have range $(0, \infty)$. Notice that $0$ is
+					never an output for these kinds of functions.
+	
+			\item Logarithms - Logarithms have range $(-\infty, \infty)$.
+				
+			\item The Sine function - The sine function $\sin(x)$ has range $[-1,1]$.
+		\end{enumerate}
+	\end{callout}
+
+\section{Spotting Values not in the Range}
+	Finding the range of a function is quite a bit more involved than finding the domain. Here are some guidelines if you are given a formula for the function instead of its graph.
+	\begin{callout}
+		\begin{enumerate}
+			\item The output of an even-index radical is never negative.
+			\item The output of $x^n$ is never negative if $n$ is an even natural number.
+			\item The output of an exponential function $b^x$ is always positive.
+		\end{enumerate}
+	\end{callout}
+	
+	\begin{example}
+		Find the range of the following functions 
+		\begin{enumerate}
+			\item $\displaystyle f(x) = 2 - 4 \sqrt{x}$.
+			\item $\displaystyle g(x) = e^x + \frac{1}{2}$.
+			\item $\displaystyle h(x) = 3 + 5\sin(x)$.
+		\end{enumerate}
+
+		\begin{explanation}
+
+			You'll notice in these calculations, that finding the range of a function is a great deal more complicated than finding the domain, unless we have an accurate graph of the
+			function, as above.
+						
+			For each of these calculations, we will follow the same two steps. 
+			The idea is that the first step shows that the range is ``no more than'' the interval we build, and the second step shows that the range is ``no less than'' that interval. The
+			only possibility left to us is that the range is exactly the interval we have constructed.
+
+			More specifically, in the first step will find a bound on the range. We'll determine if any numbers are too big or too small to be a valid output of the function. 
+			This will give us an interval that the range will have to be inside.
+			In the second step, we'll see that everything inside that interval is actually attained by the function, by constructing an input value that gets assigned to that output.
+			
+			
+			\begin{enumerate}
+				\item We know that the range of $\sqrt{x}$ is $[0, \infty)$ so for any $x$ in the domain of $f$,
+					\begin{align*}
+						\sqrt{x} &\geq 0\\
+						-4 \sqrt{x} &\leq 0 \\
+						2 - 4\sqrt{x} &\leq 2 \\
+						f(x) &\leq 2
+					\end{align*}
+					The outputs of $f$ are never larger than $2$, so the only numbers in the range are less than or equal to $2$. That is, the range must be inside the interval $(-\infty, 2]$.
+		
+					To verify that the range is exactly $(-\infty, 2]$, suppose $b \leq 2$, then:
+					\begin{align*}
+						f(a) &= b\\
+						2 - 4\sqrt{a} &= b\\
+						-4\sqrt{a} & = b-2\\
+						\sqrt{a} &= \frac{b-2}{-4}\\
+							\sqrt{a}&= \frac{-(b-2)}{4}\\
+							\sqrt{a}&= \frac{-b+2}{4}\\
+							\left(\sqrt{a}\right)^2&= \left(\frac{-b+2}{4}\right)^2\\
+						a &= \left( \frac{-b+2}{4} \right)^2.
+					\end{align*}
+					
+					For this value of $a$, we have $f\left( a \right) = b$. That means $b$ is in the range of $f$. That means every number in the interval $(-\infty, 2]$
+					is in the range of $f$. 
+					
+					The range of $f$ is $(-\infty, 2]$.
+	
+				\item The range of $e^x$ is $(0, \infty)$.
+					That means for any value of $x$,
+					\begin{align*}
+						e^x &> 0\\
+						e^x + \frac{1}{2} &> \frac{1}{2}
+					\end{align*}
+					The outputs of $g$ are greater than $\frac{1}{2}$, so the range of $g$ is in the interval	$\left( \frac{1}{2}, \infty\right)$.
+					
+					To verify that the range is exactly $\left( \frac{1}{2}, \infty\right)$, suppose $b > \frac{1}{2}$, then:
+					\begin{align*}
+						g(a) &= b\\
+						e^a + \frac{1}{2} &= b\\
+						e^a & = b-\frac{1}{2}
+					\end{align*}
+					Since the range of $e^x$ is $(0, \infty)$, and $b-\frac{1}{2} > 0$, there is a value for $a$ with $e^a = b-\frac{1}{2}$.
+					
+					(For instance, if $b=1$, that would mean $b-\frac{1}{2} = \frac{1}{2}$, so we would be looking to see if there is a value of $a$  with $e^a = \frac{1}{2}$. This is 
+					illustrated in the graph below.)
+					\begin{image}
+						\begin{tikzpicture}
+							\begin{axis}[
+					    			width=0.75\linewidth,
+			                			xmin=-2.25,xmax=2.25,
+			               				ymin=-0.25,ymax=6.25,
+			                			minor ytick=,minor xtick=,
+					                	xtick={-2,...,2}, ytick={0,...,6},
+			                			clip=false,
+			                			]
+				
+								\addplot+[domain=-2.25:1.8, color=penColor]{e^x} node[below right, pos=0.75]{\Large{$y=e^x$}};
+			    					\addplot[soliddot] coordinates {(-0.6931,0.5)};
+			    					\draw[color=penColor2] (axis cs:-0.6931, 0.5) -- (axis cs: 0, 0.5) node[pos=1, right]{$\frac{1}{2}$};
+			    					\draw[color=penColor2] (axis cs:-0.6931, 0.5) -- (axis cs: -0.6931, 0) node[pos=1, below]{$a$};
+			    				\end{axis}
+						\end{tikzpicture}
+					\end{image}
+					
+					For this value of $a$, we have $g\left( a \right) = b$, meaning that $b$ is in the range of $g$.
+					The range of $g$ is $\left( \frac{1}{2}, \infty\right)$.
+
+				\item The range of $\sin$ is $[-1, 1]$. That means for any $x$
+					\begin{align*}
+						-1 &\leq \sin(x) \leq 1\\
+						-5 &\leq 5\sin(x) \leq 5\\
+						3+(-5) &\leq 3+5\sin(x) \leq 3+5\\
+						-2 &\leq 3+5\sin(x) \leq 8
+					\end{align*}
+					That means the outputs of $h$ are in the interval $[-2, 8]$. To verify that the range is exactly $[-2, 8]$, suppose $b$ is a number with $-2 \leq b \leq 8$. Then:
+					\begin{align*}
+						h(a) &= b\\
+						3 + 5\sin(a) &= b\\
+						5\sin(a)& = b-3\\
+						\sin(a) &= \frac{b-3}{5}.
+					\end{align*}
+					Because $-2 \leq b \leq 8$, we know $-1 \leq \frac{b-3}{5} \leq 1$. That means there is a number $a$ with $\sin(a) = \frac{b-3}{5}$, since the range of 
+					$\sin$ is $[-1,1]$.
+					
+					(For instance, if $b=3$ then $\frac{b-3}{5} = 0$ so we would be looking for a value of $a$ with $\sin(a) = 0$. We know that $\sin(0) = 0$, so this means we'd take $a=0$.)
+					For this value of $a$, we have $h(a) = b$, so $b$ is in the range of $h$. The range of $h$ is then $[-2, 8]$.
+			\end{enumerate}
+		\end{explanation}
+	\end{example}
+
+
+
+\end{document}

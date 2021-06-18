@@ -219,7 +219,186 @@ Simplify the following expression.
         We cannot simplify an expression like $x^2y^3$ using the Product Rule,
         as the factors $x^2$ and $y^3$ do not have the same base.
 \end{remark}
+%%%%%%%%%
+\section{Quotient to a Power Rule}
+  One rule we have learned is the product to a power rule,
+      as in $(2x)^{3}=2^{3}x^{3}$.
+      When two factors are multiplied and the product is raised to a power,
+      we may apply the exponent to each of those factors individually.
+      We can use the rules of fractions to extend this property to a
+      quotient raised to a power.\\
+   Let $y$ be a real number, where $y \neq 0$.\\
+          Find another way to write $\left(\frac{5}{y}\right)^4$.\\
+     Writing the expression without an exponent and then simplifying, we have:
+  \begin{center}
+            $\left( \frac{5}{y} \right)^4 = \left( \frac{5}{y} \right) \left( \frac{5}{y} \right) \left( \frac{5}{y} \right) \left( \frac{5}{y} \right)$\\
+            $= \frac{5 \cdot 5 \cdot 5 \cdot 5}{y \cdot y \cdot y \cdot y}$\\
+            $= \frac{5^4}{y^4}$\\
+            $= \frac{625}{y^4}$\\
+\end{center}
+        Similar to the product to a power rule,
+          we essentially applied the outer exponent to the factors
+          inside the parentheses to factors of the numerator and
+          factors of the denominator.
+\begin{callout}
+          The general rule is:
+       For real numbers $a$ and $b$
+          (with $b \neq 0$)
+          and natural number $m$,
+        $
+            \left( \frac{a}{b}  \right)^{m} = \frac{a^{m}}{b^{m}}
+          $
+\end{callout}
+ This rule says that when you raise a fraction to a power,
+      you may separately raise the numerator and denominator to that power.
+      In Example,
+      this means that we can directly calculate $\left( \frac{5}{y} \right)^4$:
+   \begin{center}
+        $\left( \frac{5}{y} \right)^4 = \frac{5^4}{y^4}$\\
+        $=\frac{625}{y^4}$
+\end{center}
+\begin{example}
+\begin{enumerate}
+\item Simplify $\left(\dfrac{p}{2}\right)^6$.
+        \item  Simplify $\left(\frac{5^6w^7}{5^2w^4}\right)^9$.
+                  If you end up with a large power of a specific number,
+                  leave it written that way.
+\item     Simplify $\frac{\left(2r^5\right)^7}{\left(2^2 r^8\right)^3}$.
+                  If you end up with a large power of a specific number,
+                  leave it written that way.
+\end{enumerate}
+\begin{explanation}
+\begin{enumerate}
+\item    We can use the quotient to a power rule:
+\begin{center}
+                    $\left(\frac{p}{2}\right)^6=\frac{p^6}{2^6}$\\
+                    $=\frac{p^6}{64}$
+\end{center}
+        \item If we stick closely to the order of operations,
+                  we should first simplify inside the parentheses and then work with the outer exponent.
+                  Going this route,
+                  we will first use the quotient rule:
+\begin{center}
+                   $\left(\frac{5^6w^7}{5^2w^4}\right)^9 = \left(5^{6-2}w^{7-4}\right)^9$\\
+                    $=  \left(5^{4}w^{3}\right)^9$\\
+                    Now we can apply the outer exponent to each factor inside the parentheses using theproduct to a power rule. \\
+                    $= \left(5^{4}\right)^9\cdot \left(w^{3}\right)^9$ \\
+                    To finish, we need to use the >power to a power rule.\\
+                    $= 5^{4\cdot 9}\cdot w^{3 \cdot 9}$\\
+                    $= 5^{36}\cdot w^{27}$
+\end{center}
+       \item According to the order of operations,
+                  we should simplify inside parentheses first,
+                  then apply exponents, then divide.
+                  Since we cannot simplify inside the parentheses,
+                  we must apply the outer exponents to each factor inside the respective set of parentheses first:
+              \begin{center}
+                    $\frac{\left(2r^5\right)^7}{\left(2^2 r^8\right)^3}
+                    =  \frac{2^7 \left(r^5\right)^7}{\left(2^2\right)^3 \left(r^8\right)^3}$\\
+                   At this point, we need to use the power-to-a-power rule:\\
+                    $\phantom{\frac{\left(2r^5\right)^7}{\left(2^2 r^8\right)^3}}
+                    = \frac{2^{7} r^{5\cdot 7}}{ 2^{2\cdot 3} r^{8 \cdot 3}}$\\
+                    $= \frac{2^{7} r^{35}}{ 2^{6} r^{24}}$\\
+                   To finish simplifying, we'll conclude with the quotient rule:\\
+                    $\phantom{\frac{\left(2r^5\right)^7}{\left(2^2 r^8\right)^3}}
+                    = 2^{7-6} r^{35-24}$\\
+                    $= 2^{1} r^{11}$\\
+                    $= 2 r^{11}$
+\end{center}
+\end{enumerate}
+\end{explanation}
+\end{example}
+%%%%%%%%%%
+\section{Zero as an Exponent}
+So far, we have been working with exponents that are natural numbers
+      ($1, 2, 3, \ldots$).
+      By the end of this section,
+      we will expand our understanding to include exponents that are any integer,
+      as with $5^{0}$ and $12^{-2}$.
+      As a first step,
+      let's explore how $0$ should behave as an exponent
+      by considering the pattern of decreasing powers of $2$ in <xref ref="figure-descending-powers-of-two">Figure</xref>.    
+ Simplify the following expressions.
+              Assume all variables represent non-zero real numbers
 
 
+To simplify any of these expressions,
+              it is critical that we remember an exponent only applies to what it is touching or immediately next to.
+
+
+     In the expression $\left(173 x^4 y^{251}\right)^0$,
+                    the exponent $0$ applies to everything inside the parentheses.
+$
+                      \left(173 x^4 y^{251}\right)^0 =  1
+                    $
+
+       In the expression $(-8)^0$ the exponent applies to everything inside the parentheses,
+                    $-8$.
+                    $
+                      (-8)^0  =  1
+                    $
+
+       In contrast to the previous example,
+                    the exponent only applies to the $8$.
+                    The exponent has a higher priority than negation in the order of operations.
+                    We should consider that $-8^0 = -\left(8^0\right)$, and so:
+                   
+                      $-8^0  =  -\left(8^0\right)$
+                      $=  -1$
+
+      In the expression $3x^0$,
+                    the exponent $0$ only applies to the $x$:
+                      $3x^0 = 3\cdot x^0$
+                      $= 3\cdot 1$
+                      $= 3$
+%%%%%%%%
+\section{Negative Exponents}
+   We understand what it means for a variable to have a natural number exponent.
+      For example, $x^5$ means $\overbrace{x\cdot x\cdot x\cdot x\cdot x}^{\text{five times}}$.
+      Now we will try to give meaning to an exponent that is a negative integer,
+      like in $x^{-5}$.
+
+        To consider what it could possibly mean to have a negative integer exponent,
+        let's extend the pattern we saw in <xref ref="figure-descending-powers-of-two">Figure</xref>.
+        In that table, each time we move down a row,
+        we reduce the power by $1$ and we divide the value by $2$.
+        We can continue this pattern in the power and value columns,
+        going all the way down into when the exponent is negative.
+\begin{center}
+$
+  \begin{array}{ccc}
+            Power & Result & \\
+        \hline
+            2^3 & 8 & \\
+\\
+              2^2 & 4 & \text{(divide by 2)} \\
+\\
+               2^1 & 2 & \text{(divide by 2)} \\
+\\
+                     2^0 & 1 & \text{(divide by 2)} \\
+\\
+           2^{-1} & \frac{1}{2}=\frac{1}{2^1} & \text{(divide by 2)} \\   
+\\       
+           2^{-2} & \frac{1}{4}=\frac{1}{2^2} & \text{(divide by 2)} \\
+\\
+                   2^{-3} & \frac{1}{8}=\frac{1}{2^3} & \text{(divide by 2)} \\          
+     \end{array}
+$
+\end{center}
+
+  We see a pattern where $2^{\text{negative number}}$ is equal to $\frac{1}{2^{\text{positive number}}}$.
+      Note that the choice of base $2$ was arbitrary,
+      and this pattern works for all bases except $0$,
+      since we cannot divide by $0$ in moving from one row to the next.
+
+\begin{remark}
+     Negative Integers as Exponents
+          For any non-zero real number $a$ and any natural number $n$,
+          we define $a^{-n}$ to mean the reciprocal of $a^n$. That is,
+\[      
+ a^{-n} = \frac{1}{a^n}
+   \]
+     
+    \end{remark}
 
 \end{document}

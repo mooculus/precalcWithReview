@@ -1,0 +1,88 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\author{Kenneth Berglund}
+
+\begin{document}
+\begin{exercise}
+
+Let $f(x) = \sin(x)$. The following information about the sine function may be helpful. 
+\begin{image}
+\begin{tikzpicture}
+    \begin{axis}[ymin=-2, ymax=2,
+		   %xtick={-6.28318, -4.7123889, -3.14159, -1.5708, 1.5708, 3.14159, 4.7123889, 6.28318},
+    xticklabels={
+         $-\frac{3\pi}{2}$, $-\pi$, $-\frac{\pi}{2}$, $0$,
+        $\frac{\pi}{2}$, $\pi$, $\frac{3\pi}{2}$, $2\pi$
+    },title={$f(x) = \sin(x)$} ]
+        \addplot[samples=200]{sin(pi/4*deg(x))};
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+
+% something's up with the xticklabels here
+
+\begin{center}
+\(
+\begin{array}{ |c || c|  }
+ \hline
+ \multicolumn{2}{|c|}{\text{\normalfont Important Values of } f(x) = \sin(x)} \\
+\hline
+ \hline
+ x & f(x)\\
+ \hline
+
+ -\pi&0\\
+
+ \frac{-\pi}{2}&-1\\[2ex]
+
+ 0&0\\
+
+ \frac{\pi}{2}&1\\[2ex]
+
+ \pi&0\\
+
+\frac{3\pi}{2}&-1\\[2ex]
+
+ 2 \pi&0\\
+\hline
+\end{array}
+\)
+\end{center}
+
+\begin{enumerate}
+\item Compute $AV_{\left[-\pi, \frac{3\pi}{2}\right]}$. Give an exact answer. 
+
+$AV_{\left[-\pi, \frac{3\pi}{2}\right]} = \answer{-\frac{2}{5\pi}}$.
+
+\item Based on your answer above, the sine function is
+\begin{multipleChoice}
+\choice{increasing on the interval $\left[-\pi, \frac{3\pi}{2}\right]$.}
+\choice{decreasing on the interval $\left[-\pi, \frac{3\pi}{2}\right]$.}
+\choice{constant on the interval $\left[-\pi, \frac{3\pi}{2}\right]$.}
+\choice{increasing on average on the interval $\left[-\pi, \frac{3\pi}{2}\right]$.}
+\choice[correct]{decreasing on average on the interval $\left[-\pi, \frac{3\pi}{2}\right]$.}
+\choice{constant on average on the interval $\left[-\pi, \frac{3\pi}{2}\right]$.}
+\end{multipleChoice}
+
+\item Compute $AV_{[0, 2\pi]}$. 
+
+$AV_{[0, 2\pi]} = \answer{0}$.
+
+\item Based on your answer above, the sine function is
+\begin{multipleChoice}
+\choice{increasing on the interval $[0, 2\pi]$.}
+\choice{decreasing on the interval $[0, 2\pi]$.}
+\choice{constant on the interval $[0, 2\pi]$.}
+\choice{increasing on average on the interval $[0, 2\pi]$.}
+\choice{decreasing on average on the interval $[0, 2\pi]$.}
+\choice[correct]{constant on average on the interval $[0, 2\pi]$.}
+\end{multipleChoice}
+
+
+	
+\end{enumerate}
+
+\end{exercise}
+\end{document}

@@ -34,7 +34,7 @@
 \section{Introduction}
 If a quantity changes so that its growth or decay occurs at a constant percentage rate with respect to time, the function is exponential.  This is because if the growth or decay rate is \(r\), the total amount of the quantity at time \(t\) is given by \(A(t) = a(1+r)^t\), where \(a\) is the amount present at time \(t = 0\).  Many different natural quantities change according to exponential models:  money growth through compounding interest, the growth of a population of cells, and the decay of radioactive elements
 
-A related situation arises when an object's temperature changes in response to its surroundings.  For instance, if we have a cup of coffee at an initial temperature of \(186^\circ\) Fahrenheit and the cup is placed in a room where the surrounding temperature is \(71^\circ\), our intuition and experience tell us that over time the coffee will cool and eventually tend to the \(71^\circ\) temperature of the surroundings.  From an \link[experiment]{http://gvsu.edu/s/0SB} with an actual temperature probe, we have the data inthe table below.
+A related situation arises when an object's temperature changes in response to its surroundings.  For instance, if we have a cup of coffee at an initial temperature of \(186^\circ\) Fahrenheit and the cup is placed in a room where the surrounding temperature is \(71^\circ\), our intuition and experience tell us that over time the coffee will cool and eventually tend to the \(71^\circ\) temperature of the surroundings.  From an \link[experiment]{http://gvsu.edu/s/0SB} with an actual temperature probe, we have the data in the table below.
 
 
 \[
@@ -62,7 +62,7 @@ t&F(t)\\
 Here is a graph of these points.
 
 \begin{image}
-\includegraphics{ExpText5.jpg}
+\includegraphics{modeling-exp-coffee}
 \end{image}
 
 
@@ -84,11 +84,11 @@ In \link[\emph{Desmos}]{desmos.com}, define \(g(t) = ab^t+c\) and accept the pro
 %\typeout{************************************************}
 
 \section{Long-term behavior of exponential functions}
-We have already established that any exponential function of the form \(f(t) = ab^t\) where \(a\) and \(b\) are positive real numbers with \(b \ne 1\) is always concave up and is either always increasing or always decreasing.  We next introduce precise language to describe the behavior of an exponential function's value as \(t\) gets bigger and bigger.  To start, let's consider the two basic exponential functions \(p(t) = 2^t\) and \(q(t) = (\frac{1}{2})^t\) and their respective values at \(t = 10\), \(t = 20\), and \(t = 30\), as displayed below.
+We have already established that any exponential function of the form \(f(t) = ab^t\) where \(a\) and \(b\) are positive real numbers with \(b \ne 1\) is always concave up and is either always increasing or always decreasing.  We next introduce precise language to describe the behavior of an exponential function's value as \(t\) gets bigger and bigger.  To start, let's consider the two basic exponential functions \(p(t) = 2^t\) and \(q(t) = \left(\frac{1}{2}\right)^t\) and their respective values at \(t = 10\), \(t = 20\), and \(t = 30\), as displayed below.
 %talks about concave up, which we haven't defined!
 
 \[
-\begin{array}{cccccc}
+%\begin{array}{cccccc}
 %\(
 {\begin{array}{cc}
 t&p(t)\\
@@ -96,11 +96,13 @@ t&p(t)\\
 10&2^10=1026\\
 20&2^20=1048576\\
 30&2^30=1073741824
-\end{array}}&&&&&
+\end{array}}%&&&&& 
+\]
 %\)
 %\end{center}
 %\begin{center}
 %\(
+\[
 {\begin{array}{cc}
 t&q(t)\\
 \hline
@@ -108,16 +110,16 @@ t&q(t)\\
 10&\left(\frac{1}{2}\right)^20=\frac{1}{1048576} \approx 0.00000095367\\
 10&\left(\frac{1}{2}\right)^30=\frac{1}{1073741824} \approx 0.00000000093192
 \end{array}}\\
-\end{array}
+%\end{array}
 \]
 
 For the increasing function \(p(t) = 2^t\), we see that the output of the function gets very large very quickly.  In addition, there is no upper bound to how large the function can be.  Indeed, we can make the value of \(p(t)\) as large as we'd like by taking \(t\) sufficiently big.  We thus say that as \(t\) increases, \(p(t)\) \dfn{increases without bound}.
 
-For the decreasing function \(q(t) = (\frac{1}{2})^t\), we see that the output \(q(t)\) is always positive but getting closer and closer to \(0\).  Indeed, becasue we can make \(2^t\) as large as we like, it follows that we can make its reciprocal \(\frac{1}{2^t} = (\frac{1}{2})^t\) as small as we'd like.  We thus say that as \(t\) increases, \(q(t)\) \dfn{approaches \(0\)}. \index{approaching \(0\)}
+For the decreasing function \(q(t) =\left(\frac{1}{2}\right)^t\), we see that the output \(q(t)\) is always positive but getting closer and closer to \(0\).  Indeed, becasue we can make \(2^t\) as large as we like, it follows that we can make its reciprocal \(\frac{1}{2^t} =\left(\frac{1}{2}\right)^t\) as small as we'd like.  We thus say that as \(t\) increases, \(q(t)\) \dfn{approaches \(0\)}. \index{approaching \(0\)}
 
 To represent these two common phenomena with exponential functions the value increasing without bound or the value approaching \(0\), we will use shorthand notation.  First, it is natural to write ``\(q(t) \to 0\)'' as \(t\) increases without bound.  Moreover, since we have the notion of the infinite to represent quantities without bound, we use the symbol for infinity \index{infinity} (\(\infty\)) and write ``\(p(t) \to \infty\)'' as \(t\) increases without bound in order to indicate that \(p(t)\) increases without bound.
 
-In the exploration above, we saw how the value of \(b\) affects the steepness of the graph of \(f(t) = ab^t\), as well as how all graphs with \(b \gt 1\) have the similar increasing behavior, and all graphs with \(0 \lt b \lt 1\) have similar decreasing behavior.  For instance, by taking \(t\) sufficiently large, we can make \((1.01)^t\) as large as we want; it just takes much larger \(t\) to make \((1.01)^t\) big in comparison to \(2^t\).  In the same way, we can make \((0.99)^t\) as close to \(0\) as we wish by taking \(t\) sufficiently big, even though it takes longer for \((0.99)^t\) to get close to \(0\) in comparison to \((\frac{1}{2})^t\).  For an arbitrary choice of \(b\), we can say the following.
+In the exploration above, we saw how the value of \(b\) affects the steepness of the graph of \(f(t) = ab^t\), as well as how all graphs with \(b \gt 1\) have the similar increasing behavior, and all graphs with \(0 \lt b \lt 1\) have similar decreasing behavior.  For instance, by taking \(t\) sufficiently large, we can make \((1.01)^t\) as large as we want; it just takes much larger \(t\) to make \((1.01)^t\) big in comparison to \(2^t\).  In the same way, we can make \((0.99)^t\) as close to \(0\) as we wish by taking \(t\) sufficiently big, even though it takes longer for \((0.99)^t\) to get close to \(0\) in comparison to \(\left(\frac{1}{2}\right)^t\).  For an arbitrary choice of \(b\), we can say the following.
 
 \begin{callout}
 \textbf{\Large Long-term behavior of exponential functions.}
@@ -128,14 +130,14 @@ Let \(f(t) = b^t\) with \(b \gt 0\) and \(b \ne 1\).
 \end{itemize}
 \end{callout}
 
-In addition, we make a key observation about the use of exponents.  For the function \(q(t) = (\frac{1}{2})^t\), there are three equivalent ways we may write the function:%
+In addition, we make a key observation about the use of exponents.  For the function \(q(t) = \left(\frac{1}{2}\right)^t\), there are three equivalent ways we may write the function:%
 \begin{equation*}
 \left( \frac{1}{2} \right)^t = \frac{1}{2^t} = 2^{-t}\text{.}
 \end{equation*}
-In our work with transformations involving horizontal scaling in \hyperlink{ez-circular-sinusoidal-horiz-reflection}{Exercise~2.4.5.3}, we saw that the graph of \(y = h(-t)\) is the reflection of the graph of \(y = h(t)\) across the \(y\)-axis.  Therefore, we can say that the graphs of \(p(t) = 2^t\) and \(q(t) = (\frac{1}{2})^t = 2^{-t}\) are reflections of one another in the \(y\)-axis since \(p(-t) = 2^{-t} = q(t)\).  We see this fact verified in the graph below.
+In our work with transformations involving horizontal scaling in \hyperlink{ez-circular-sinusoidal-horiz-reflection}{Exercise~2.4.5.3}, we saw that the graph of \(y = h(-t)\) is the reflection of the graph of \(y = h(t)\) across the \(y\)-axis.  Therefore, we can say that the graphs of \(p(t) = 2^t\) and \(q(t) = \left(\frac{1}{2}\right)^t = 2^{-t}\) are reflections of one another in the \(y\)-axis since \(p(-t) = 2^{-t} = q(t)\).  We see this fact verified in the graph below.
 
 \begin{image}
-\includegraphics{ExpText6.jpg}
+\includegraphics{modeling-exp-reflection}
 \end{image}
 
 Similar observations hold for the relationship between the graphs of \(b^{t}\) and \(\frac{1}{b^t} = b^{-t}\) for any positive \(b \ne 1\).
@@ -150,11 +152,11 @@ Similar observations hold for the relationship between the graphs of \(b^{t}\) a
 The function \(g(t) = ab^t + c\) is a vertical translation of the function \(f(t) = ab^t\).  We now have extensive understanding of the behavior of \(f(t)\) and how that behavior depends on \(a\) and \(b\).  Since a vertical translation by \(c\) does not change the shape of any graph, we expect that \(g\) will exhibit very similar behavior to \(f\).  Indeed, we can compare the two functions' graphs as shown in the graphs belowA and then make the following general observations.
 
 \begin{image}
-\includegraphics{ExpText7.jpg}
+\includegraphics{modeling-vert-transl-0}
 \end{image}
 
 \begin{image}
-\includegraphics{ExpText8.jpg}
+\includegraphics{modeling-vert-transl-c}
 \end{image}
 
 \begin{callout}
@@ -226,11 +228,11 @@ The data in the last row of the table appears exponential, and if we test the da
 Of course there is some measurement error in the data (plus it is only recorded to accuracy of whole degrees), so these computations provide convincing evidence that the underlying function is exponential.  In addition, we expect that if the data continued in the last of the table, the values would approach \(0\) because \(F(t)\) will approach \(71\).
 
 \begin{image}
-\includegraphics{ExpText9.jpg}
+\includegraphics{modeling-coffee-shifted}
 \end{image}
 
 \begin{image}
-\includegraphics{ExpText10.jpg}
+\includegraphics{modeling-coffee-original}
 \end{image}
 
 If we choose two of the data points, say \((18,64)\) and \((23,56)\), and assume that \(f(t) = ab^t\), we can determine the values of \(a\) and \(b\).  Doing so, it turns out that \(a \approx 103.503\) and \(b \approx 0.974\), so \(f(t) = 103.503 ( 0.974)^t\).  Since \(f(t) = F(t) - 71\), we see that \(F(t) = f(t) + 71\), so \(F(t) = 103.503 (0.974)^t + 71\).  Plotting \(f\) against the shifted data and \(F\) along with the original data in the graphs above, we see that the curves go exactly through the points where \(t = 18\) and \(t = 23\) as expected, but also that the function provides a reasonable model for the observed behavior at any time \(t\).  If our data was even more accurate, we would expect that the curve's fit would be even better.
@@ -247,7 +249,7 @@ F(t) = 42 + 30(0.95)^{t}\text{.}
 \item For the slightly more complicated function \(r(t) = 30 (0.95)^{t}\), how do you expect this function to look in comparison to \(p\)?  What is the long-range behavior of this function as \(t\) increases? Without using graphing technology, sketch a rough graph of \(r\) and write a sentence of explanation.
 \item Finally, how do you expect the graph of \(F(t) = 42 + 30(0.95)^{t}\) to appear? Why?  First sketch a rough graph without graphing technology, and then use technology to check your thinking and report an accurate, labeled graph on the axes provided.
 \begin{image}
-\includegraphics{ExpText11.jpg}
+\includegraphics{modeling-F-t-blank-axes}
 \end{image}
 \item What is the temperature of the refrigerator? What is the room temperature of the surroundings outside the refrigerator? Why?
 \item Determine the average rate of change of \(F\) on the intervals \([10,20]\), \([20,30]\), and \([30,40]\). Write at least two careful sentences that explain the meaning of the values you found, including units, and discuss any overall trend in how the average rate of change is changing.
@@ -264,7 +266,7 @@ A potato initially at room temperature (\(68^\circ\)) is placed in an oven (at \
 \item What is the value of \(b\)?  Why?%
 \item Check your work above by plotting the function \(F\) using graphing technology in an appropriate window. Record your results on the axes provided, labeling the scale on the axes. Then, use the graph to estimate the time at which the potato's temperature reaches \(325\) degrees.
 \begin{image}
-\includegraphics{ExpText11.jpg}
+\includegraphics{modeling-F-t-blank-axes}
 \end{image}
 \item How can we view the function \(F(t) = a - b(0.98)^t\) as a transformation of the parent function \(f(t) = (0.98)^t\)?  Explain.
 \end{enumerate}

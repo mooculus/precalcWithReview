@@ -1,0 +1,617 @@
+\documentclass[nooutcomes]{ximera}
+
+\input{../preamble}
+\author{David Kish}
+\license{Creative Commons Attribution-ShareAlike 4.0 International License}
+\acknowledgement{url of source material}
+
+\title{Solving Systems of Equations Algebraically}
+
+\begin{document}
+\begin{abstract}
+This section explores using an algebraic approach to solving a system of linear equations.
+\end{abstract}
+\maketitle
+
+
+
+%\typeout{************************************************}
+%\typeout{Subsection Introduction}
+%\typeout{************************************************}
+
+\section{Substituion}
+
+      In the previous section,
+      we focused on solving systems of equations by graphing.
+      In addition to being time consuming,
+      graphing can be an awkward method to determine the exact solution
+      when the solution has large numbers, fractions, or decimals.
+      There are two symbolic methods for solving systems of linear equations,
+      and in this section we will use one of them:
+      substitution.
+\begin{example}
+   In 2014, the New York Times
+     posted the following about the movie, ``The Interview'':
+\begin{quote}
+ ``The Interview'' generated roughly $\$15$ million in online sales and rentals during its first four days of availability, Sony Pictures said on Sunday.
+  Sony did not say how much of that total represented $\$6$ digital rentals versus $\$15$ sales.
+          The studio said there were about two million transactions overall.
+\end{quote}
+
+     A few days later, Joey Devilla cleverly pointed out in his blog, that there is enough information given to find the amount of sales versus rentals.
+        Using algebra,
+        we can write a system of equations and solve it to find the two quantities.
+        Although since the given information uses approximate values,
+        the solutions we will find will only be approximations too.
+
+    First, we will define variables.
+        We need two variables, because there are two unknown quantities:
+        how many sales there were and how many rentals there were.
+        Let $r$ be the number of rental transactions and let $s$ be the number of sales transactions.
+
+If you are unsure how to write an equation from the background information,
+        use the units to help you.
+        The units of each term in an equation must match because we can only add like quantities.
+        Both $r$ and $s$ are in transactions.
+        The article says that the total number of transactions is $2$ million.
+        So our first equation will add the total number of rental and sales transactions and set that equal to $2$ million.
+        Our equation is:
+\[
+  (r\,\text{transactions})+(s\,\text{transactions})=2{,}000{,}000\,\text{transactions}
+\]
+ Without the units:
+\[
+r+s=2{,}000{,}000
+\]
+
+  The price of each rental was $\$6$.
+        That means the problem has given us a \textit{rate}
+        of $6\,\frac{\text{dollars}}{\text{transaction}}$ to work with.
+        The rate unit suggests this should be multiplied by something measured in transactions.
+        It makes sense to multiply by $r$,
+        and then the number of dollars generated from rentals was $6r$.
+        Similarly, the price of each sale was $\$15$,
+        so the revenue from sales was $15s$.
+        The total revenue was $\$15$ million,
+        which we can represent with this equation:
+\[
+          \left(6\,\tfrac{\text{dollars}}{\text{transaction}}\right)(r\,\text{transactions})+\left(15\,\tfrac{\text{dollars}}{\text{transaction}}\right)(s\,\text{transactions})=\$15{,}000{,}000
+\]
+        Without the units:
+    \[
+          6r+15s=15{,}000{,}000
+     \]
+
+        Here is our system of equations:
+\begin{center}
+  $
+          \begin{array}{ccccc}
+          r&+& s&=&2{,}000{,}000 \\
+          6r&+& 15s&=&15{,}000{,}000
+          \end{array}
+$
+       \end{center}
+        To solve the system, we will use the
+        \textbf{substitution} method.
+        The idea is to use \textit{one}
+        equation to find an expression that is equal to $r$ but,
+        cleverly, does not use the variable ``$r$.'' Then,
+        substitute this for $r$ into the
+        \textit{other} equation.
+        This leaves you with \textit{one}
+        equation that only has \textit{one} variable.
+
+        The first equation from the system is an easy one to solve for $r$:
+\begin{center}
+$
+\begin{array}{rl}
+          r+s &=2{,}000{,}000\\
+          r &=2{,}000{,}000-s
+\end{array}
+$
+\end{center}
+        This tells us that the expression
+        $2{,}000{,}000-s$ is equal to $r$,
+        so we can \textit{substitute} it for $r$ in the second equation:
+\begin{center}
+        $
+\begin{array}{rl}
+          6r+15s &=15{,}000{,}000\\
+          6(\substitute{2{,}000{,}000-s})+15s &=15{,}000{,}000
+\end{array}
+$
+\end{center}
+          Now we have an equation with only one variable, $s$, which we will solve for:
+\begin{center}
+$
+\begin{array}{rl}
+          6(2{,}000{,}000-s)+15s &=15{,}000{,}000\\
+          12{,}000{,}000-6s+15s &=15{,}000{,}000\\
+          12{,}000{,}000+9s &= 15{,}000{,}000\\
+              9s &= 3{,}000{,}000\\
+          \divideunder{9s}{9} &= \divideunder{3{,}000{,}000}{9}\\
+          s &= 333{,}333.\overline{3}
+\end{array}
+$
+\end{center}
+        At this point, we know that $s=333{,}333.\overline{3}$.
+        This tells us that out of the $2$ million transactions,
+        roughly $333{,}333$ were from online sales.
+        Recall that we solved the first equation for $r$,
+        and found $r=2{,}000{,}000-s$.
+\begin{center}
+$
+\begin{array}{rl}
+          r &=2{,}000{,}000-s \\
+          r &=2{,}000{,}000-\substitute{333{,}333.\overline{3}}\\
+          r &=1{,}666{,}666.\overline{6}
+\end{array}
+$
+\end{center}
+        To check our answer, we will see if $s=333{,}333.\overline{3}$ and
+        $r=1{,}666{,}666.\overline{6}$ make the original equations true:
+\begin{center}
+$
+      \begin{array}{rl}
+          r+s &=2{,}000{,}000\\ 
+          \substitute{1{,}666{,}666.\overline{6}}+\substitute{333{,}333.\overline{3}} &=2{,}000{,}000\\ 
+          2{,}000{,}000&=2{,}000{,}000\\
+6r+15s &=15{,}000{,}000\\
+6\left(\substitute{1{,}666{,}666.\overline{6}}\right)+15\left(\substitute{333{,}333.\overline{3}}\right) &=15{,}000{,}000\\
+ 10{,}000{,}000+5{,}000{,}000 & =15{,}000{,}000
+      \end{array}
+$
+\end{center}
+        In summary, there were roughly
+        $333{,}333$ copies sold and roughly $1{,}666{,}667$ copies rented.
+\end{example}
+
+
+%\typeout{************************************************}
+%\typeout{Subsection Introduction}
+%\typeout{************************************************}
+
+\section{Elimination}
+
+ We just  learned how to solve a system of linear equations using substitution above. Now, 
+      we will learn a second symbolic method for solving systems of linear equations.
+\begin{example}
+ Alicia has $\$1000$ to give to her two grandchildren for New Year's.
+        She would like to give the older grandchild $\$120$ more than the younger grandchild,
+        because that is the cost of the older grandchild's college textbooks this term.
+        How much money should she give to each grandchild?
+
+    To answer this question, we will demonstrate a new technique.
+        You may have a very good way for finding how much money Alicia should give to each grandchild,
+        but right now we will try to see this new method.
+
+ Let $A$ be the dollar amount she gives to her older grandchild,
+        and $B$ be the dollar amount she gives to her younger grandchild.
+        (As always, we start solving a word problem like this by defining the variables,
+        including their units.)
+        Since the total she has to give is $\$1000$,
+        we can say that $A+B=1000$.
+        And since she wants to give $\$120$ more to the older grandchild,
+        we can say that $A-B=120$.
+        So we have the system of equations:
+    \begin{center}
+$
+          \begin{aligned}
+          A+B & = 1000 \\
+          A-B & = 120
+          \end{aligned}
+$
+\end{center}
+ We could solve this system by substitution as we learned in <xref ref="section-substitution">Section</xref>,
+        but there is an easier method.
+        If we add together the \textit{left}
+        sides from the two equations,
+        it should equal the sum of the \textit{right} sides:
+\begin{center}
+$
+           \begin{array}{rcl}
+A+B &=&1000\\
++A-B & & +120
+\end{array}
+          $
+\end{center}
+So we have:
+\[
+          2A=1120
+\]
+Note that the variable $B$ is eliminated.
+        This happened because the $+B$
+        and the $-B$
+        perfectly cancel each other out when they are added.
+        With only one variable left, it doesn't take much to finish:
+\begin{center}
+$    
+    \begin{array}{rl}
+          2A&=1120\\
+ A&=560
+\end{array}
+$
+\end{center}
+To finish solving this system of equations,
+        we need the value of $B$.
+        For now, an easy way to find $B$ is to substitute in our value of $A$ into one of the original equations:
+\begin{center}
+$   
+\begin{array}{rl}
+          A+B&=1000\\
+          \substitute{560}+B&=1000\\
+B&=440
+\end{array}
+$
+\end{center}  
+
+ To check our work,
+        substitute $A=560$ and $B=440$ into the original equations:
+\begin{center}
+$
+\begin{array}{rl}
+       A+B&=1000\\ 
+          \substitute{560}+\substitute{440}&=1000\\
+          1000&=1000\\
+A-B&=120\\
+\substitute{560}-\substitute{440}&=120\\
+120&=120
+\end{array}
+$
+\end{center}
+        This confirms that our solution is correct.
+        In summary, Alicia should give $\$560$ to her older grandchild,
+        and $\$440$ to her younger grandchild.
+\end{example}
+
+ This method for solving the system of equations in <xref ref="example-system-of-equations-elimination-intro">Example</xref>
+      worked because $B$ and $-B$ add to zero.
+      Once the $B$-terms were eliminated we were able to solve for $A$.
+      This method is called the \textbf{elimination method}.
+      Some people call it the \textbf{addition method},
+      because we added the corresponding sides from the two equations to eliminate a variable.
+
+If neither variable can be immediately eliminated,
+      we can still use this method but it will require that we first adjust one or both of the equations.
+      Let's look at an example where we need to adjust one of the equations.
+\begin{example}
+Solve the system of equations using the elimination method.
+\begin{center}
+$
+            \begin{array}{ccccc}
+            3x& - & 4y & = & 2 \\
+            5x& + & 8y & = & 18
+            \end{array}
+            $
+\end{center}
+\begin{explanation}
+To start, we want to see whether it will be easier to eliminate $x$ or $y$.
+          We see that the coefficients of $x$ in each equation are $3$ and $5$,
+          and the coefficients of $y$ are $-4$ and $8$.
+          Because $8$ is a multiple of $4$ and the coefficients already have opposite signs,
+          the $y$ variable will be easier to eliminate.
+
+ To eliminate the $y$ terms,
+          we will multiply each side of the first equation by $2$ so that we will have $-8y$.
+          We can call this process scaling
+          the first equation by $2$.
+\begin{center}
+$
+            \begin{array}{ccccc}
+            \multiplyleft{2}(3x& - & 4y) & = & \multiplyleft{2}(2) \\
+            5x& + & 8y & = & 18
+            \end{array}
+$
+\end{center}
+\begin{center}
+ $        
+            \begin{array}{ccccc}
+            6x& - & 8y & = & 4 \\
+            5x& + & 8y & = & 18
+            \end{array}
+  $
+\end{center}
+ We now have an equivalent system of equations where the $y$-terms can be eliminated:
+\begin{center}
+$\begin{array}{rcl}
+6x-8y &= & 4\\
++5x+8y& &+18\\
+\end{array}
+$
+\end{center}
+            So we have:
+\begin{center}
+$\begin{array}{rl}
+            11x&=22\\
+x&=2
+\end{array}
+$
+\end{center}
+To solve for $y$,
+          we can substitute $2$ for $x$ into either of the original equations or the new one.
+          We use the first original equation, $3x-4y=2$:
+\begin{center}
+$
+\begin{array}{rl}
+ 3x-4y&=2\\
+            3(\substitute{2})-4y&=2\\
+            6-4y&=2\\
+            -4y&=-4\\
+            y&=1
+\end{array}
+$
+\end{center}
+ Our solution is $x=2$ and $y=1$.
+          We will check this in both of the original equations:
+\begin{center}
+$
+\begin{array}{rl}
+5x+8y&=18\\
+            5(\substitute{2})+8(\substitute{1})&=18\\
+            10+8&=18\\
+  3x-4y&=2\\
+3(\substitute{2})-4(\substitute{1})&=2\\
+ 6-4&=2
+\end{array}
+$
+\end{center}
+The solution to this system is $(2,1)$ and the solution set is $\{(2,1)\}$.
+\end{explanation}
+\end{example}
+%
+%
+%%\typeout{************************************************}
+%%\typeout{Motivating Questions}
+%%\typeout{************************************************}
+%
+%\begin{motivatingQuestions}
+%%Often start a section. 
+%\item Question 1
+%\item Question 2
+%\end{motivatingQuestions}
+%
+%
+%%\typeout{************************************************}
+%%\typeout{Introduction}
+%%\typeout{************************************************}
+%
+%
+%
+%%\typeout{************************************************}
+%%\typeout{section}
+%%\typeout{************************************************}
+%
+%\section{Subsection Title}
+%Start every file with a section.
+%
+%%\typeout{************************************************}
+%%\typeout{Problem Types in the Text}
+%%\typeout{************************************************}
+%
+%\section{Problem Types in the Text}
+%
+%\begin{exploration}
+%This is a question where the answer is not proviced in the text.  The idea is that students will work on together in lecture.  It often motivates the upcoming content.
+%	\begin{enumerate}[label=\alph*.]
+%	\item Problem 1
+%	\item Problem 2
+%	\end{enumerate}
+%\end{exploration}
+%
+%
+%\begin{problem}
+%Use a Problem when students are supposed to enter an answer.  These should be straightforward things or the answer should be in a hint or explanation.  And the answer should be given in the printed text.  
+%$y=\answer{10x}$
+%	\begin{hint}
+%	Hint here
+%	\end{hint}
+%	\begin{explanation}
+%	One approach to pattern recognition is to look for a relationship in each row. Here, the $y$-value in each row is always 10 more than the $x$-value. So the pattern is described by the equation $y=10x$
+%	\end{explanation}
+%\end{problem}
+%
+%
+%\begin{example}
+%A standard example with solution in the text.
+%	\begin{explanation}
+%	Every example should have an explanation.
+%	\end{explanation}
+%\end{example}
+%
+%
+%%\typeout{************************************************}
+%%\typeout{Other Environments in Text}
+%%\typeout{************************************************}
+%
+%\section{Other Environmentsin the Text}
+%
+%\begin{remark}
+%Something you want to call attention to in the text.
+%\end{remark}
+%
+%
+%\begin{definition}
+%Define a word or words.  Be sure to use the dfn command around your \dfn{vocab words}.
+%\end{definition}
+%
+%
+%\begin{callout}
+%Something that you want to standout that is not a remark.  Basically just puts it in a blue box.
+%\end{callout}
+%
+%\begin{summary}
+%%Often ends a section
+%\item First point
+%\item Second point
+%\end{summary}
+%
+%
+%%\typeout{************************************************}
+%%\typeout{Tables and Graphs}
+%%\typeout{************************************************}
+%
+%\section{Tables and Graphs}
+%
+%How to make a table:
+%
+%
+%\[
+%\begin{array}{cc}
+%t&V\\
+%\hline
+%0&0.0\\
+%1&0.5\\
+%2&1.0\\
+%3&1.5\\
+%4&2.0\\
+%5&2.5
+%\end{array}
+%\]
+%
+%
+%Side-by-side tables (or images or whatever):
+%
+%
+%\[
+%\begin{array}{cccccc}
+%%\(
+%{\begin{array}{cc}
+%t&r(t)\\
+%\hline
+%0&12\\
+%3&10\\
+%6&8\\
+%9&6
+%\end{array}}&&&&&
+%%\)
+%%\end{center}
+%%\begin{center}
+%%\(
+%{\begin{array}{cc}
+%t&s(t)\\
+%\hline
+%0&12\\
+%3&9\\
+%6&6.75\\
+%9&5.0625
+%\end{array}}\\
+%\end{array}
+%\]
+%
+%
+%How to make an image:
+%\begin{image}
+%\includegraphics{ColumbusChicago.png}
+%\end{image}
+%
+%
+%Draw graphs in tikzi when possible.  Here are two.
+%
+%\begin{image}
+%\begin{tikzpicture}
+%    \begin{axis}
+%        \addplot[samples=200,domain=0.01:8]{ln(x)};
+%    \end{axis}
+%\end{tikzpicture}
+%\end{image}
+%
+%\begin{image}
+%\begin{tikzpicture}
+%    \begin{axis}[xlabel=,ylabel=,width=0.75\linewidth,
+%                xmin=-5,xmax=5,
+%                ymin=-5,ymax=5,
+%                xtick={-4,4},
+%                ytick={-4,4},
+%                clip=false]
+%        \addplot[soliddot] coordinates {(0,0)} node[pin=240:{Carl's house}] ;
+%        \addplot[soliddot] coordinates {(2, 3)} node[pin=-30:{restaurant}] ;
+%        \addplot[soliddot] coordinates {(-3, 2)} node[pin=100:{pet shop}] ;
+%        \addplot[soliddot] coordinates {(-2, -4)} node[pin=150:{gas station}] ;
+%        \addplot[soliddot] coordinates {(3, -3)} node[pin=120:{bar}] ;
+%        \addplot[mark=none] coordinates {(5, 0)} node[above left] {east};
+%        \addplot[mark=none] coordinates {(-5, 0)} node[above right] {west};
+%        \addplot[mark=none] coordinates {(0, 5)} node[below right] {north};
+%        \addplot[mark=none] coordinates {(0, -5)} node[above right] {south};
+%    \end{axis}
+%\end{tikzpicture}
+%\end{image}
+%
+%
+%You can also add Desmos interactives.  Create them in a Desmos account (I think we have an OSU one.  We should look into that!).  Save them.  Then pull the graph number out of the url.
+%\begin{center}  
+%\desmos{lxllnpdi6w}{800}{600}  
+%\end{center}
+%
+%%\typeout{************************************************}
+%%\typeout{Online Features}
+%%\typeout{************************************************}
+%
+%\section{Online Features}
+%
+%To add a url, use the link command.
+%For more about formatting in Ximera see \link[this url]{https://ximera.osu.edu/intro/gettingStarted/graphicsAndVideos/graphicsAndVideos}.
+%
+%
+%You can also embed \link[YouTube]{https://www.youtube.com/} videos.
+%\begin{center}
+%\youtube{0aQpLSu2fMs}
+%\end{center}
+%
+%
+%
+%
+%
+%\newpage
+%
+%%\typeout{************************************************}
+%%\typeout{Overviews}
+%%\typeout{************************************************}
+%
+%\section{Overviews}
+%
+%Each Unit has an overview with the organization and learning objectives
+%
+%\begin{overview}
+%\item Generally a folder %(author if relevant)
+%	\begin{enumerate}
+%	\item some stuff covered in these sections
+%		\textit{a subtopic} 
+%		\textit{another subtopic} 
+%	\item More stuff	
+%	\end{enumerate}	
+%\item Another Folder 
+%	\begin{enumerate}	
+%	\item Stuff 
+%	\end{enumerate} 
+%\end{overview}
+%
+%
+%\begin{objectives}
+%\item Learning Objectives Category (Course level learning objective)
+%	\begin{itemize}
+%	\item more specific goal
+%	\item another one 
+%	\end{itemize}
+%\item Another Category
+%	\begin{itemize}
+%	\item Linear 
+%	\item Parabolas 
+%	\item Polynomials 
+%	\end{itemize}
+%\end{objectives}
+%
+%
+%
+%
+%\newpage
+%
+%%\typeout{************************************************}
+%%\typeout{Homeworks}
+%%\typeout{************************************************}
+%
+%\section{Homework}
+%Each homework problem should be it's own file.  Then the homework is put together using an exerciselist file.  See a Unit 1 folder for an example.  Be sure to keep all the same conventions, just changing the actual problem.  
+%
+%Some Ximera problem types are available \link[in the footnote]{https://ximera.osu.edu/intro/gettingStarted/questionAndAnswerTypes/questionAndAnswerTypes}.  We can add more here as we come across them.
+
+\end{document}

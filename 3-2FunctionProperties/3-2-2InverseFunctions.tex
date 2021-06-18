@@ -1,0 +1,228 @@
+\documentclass[nooutcomes]{ximera}
+
+\input{../preamble}
+\author{Kenneth Berglund}
+\license{Creative Commons Attribution-ShareAlike 4.0 International License}
+\acknowledgement{https://activecalculus.org/, stitz-zeager}
+
+\title{Inverse Functions}
+
+\begin{document}
+\begin{abstract}
+  
+\end{abstract}
+\maketitle
+
+
+%\typeout{************************************************}
+%\typeout{Motivating Questions}
+%\typeout{************************************************}
+
+\begin{motivatingQuestions}
+\item What does it mean to say that a function has an inverse? 
+\item How can we identify when we can find inverse functions?
+\item What are the properties of an inverse function compared to the original function?
+\end{motivatingQuestions}
+
+
+%\typeout{************************************************}
+%\typeout{Introduction}
+%\typeout{************************************************}
+
+Because every function is a process that converts a collection of inputs to a corresponding collection of outputs, a natural question is: for a particular function, can we change perspective and think of the original function's outputs as the inputs for a reverse process? If we phrase this question algebraically, it is analogous to asking: given an equation that defines $y$ is a function of $x$, is it possible to find a corresponding equation where $x$ is a function of $y$?
+
+
+%\typeout{************************************************}
+%\typeout{Inverse functions}
+%\typeout{************************************************}
+
+\section{Inverse functions}
+Let's think about the problem in a more concrete way. Consider a situation in which Jessica is running a candle company. Say she starts the day with \$15, but makes \$4 for every candle she sells. A linear function $f$ representing the amount of money in dollars she has after selling $x$ candles is given by $f(x) = 4x + 15$. To find out how much money she has after selling 20 candles, we can plug in 20 to the equation above:
+$$
+f(20) = 4\cdot 20 + 15 = 95.
+$$
+
+Now suppose that Jessica tells us that at the end of the day, she ended up with \$135. Would it be possible to figure out how many candles she sold? This type of ``inverse question'' is common in math. Notice that above, when we started with an amount of candles and wanted to find an amount of money, we first multiplied by 4, then added 15. Now, since we're starting with an amount of money, we need to undo the processes we did before: first we subtract 15, and then divide by 4.  We can represent this process by a function $g$, which represents the number of candles sold if Jessica has $y$ dollars:
+$$
+g(y) = \frac{1}{4}(y - 15).
+$$
+
+When we plug in \$135 to this function, we find that Jessica has sold
+$$
+g(135) = \frac{1}{4}(135 - 15) = 30
+$$
+candles. 
+
+\begin{exploration}
+Let $f$ be a function defined by $f(x) = 4x + 15$. Let $g$ be a function defined by $g(y) = \frac{1}{4}(y - 15)$.
+\begin{enumerate}[label=\alph*.]
+\item Recall that $f(20) = 95$. What is $g(95)$?
+\item Recall that $g(135) = 30$. What is $f(30)$?
+\end{enumerate}
+\end{exploration}
+
+After plugging in, we see that when we plug 20 into $f$, we get $f(20) = 95$, and when we plug 95 into $g$ (that is, we plug $f(20)$ into $g$), we get back 20. Similarly, when we plug in the value $g(135)$ into $f$, we get back 135. The following diagram illustrates the situation:
+\begin{image}
+\begin{tikzpicture}[
+roundnode/.style={shape=circle,font=\fontsize{12}{12}\selectfont, draw=black, thick}
+]
+%Nodes
+\node[roundnode]      (20)                              {20};
+\node[roundnode]        (95)       [right=of 20] {95};
+\node[roundnode]      (30)       [below=of 20] {30};
+\node[roundnode]        (135)       [right=of 30] {135};
+
+%Lines
+\draw[->, color=penColor] (20) to [out=20,in=160]node[above]{$f$} (95) ;
+\draw[->, color=penColor2] (95) to [out=200,in=340]node[below]{$g$}(20) ;
+\draw[->, color=penColor] (30) to [out=20,in=160]node[above]{$f$} (135) ;
+\draw[->, color=penColor2] (135) to [out=200,in=340]node[below]{$g$} (30) ;
+\end{tikzpicture}
+\end{image}
+
+In the above exploration, $f$ and $g$ are examples of \emph{inverse functions}. 
+
+\begin{definition}
+Let $f$ be a function. If there exists a function $g$ such that
+$$
+g(f(a)) = a \text{ and } f(g(b)) = b
+$$
+for each $a$ and $b$, then we say that $f$ has an \index{function ! inverse}\index{inverse function}\index{inverse}\dfn{inverse function} and that the function $g$ is the \dfn{inverse} of $f$. We also say that $f$ is \index{function ! invertible}\index{invertible}\dfn{invertible}. 
+\end{definition}
+
+Note particularly what the equation $g(f(a)) = a$ says:  for any input $a$, the function $g$ will reverse the process of $f$ (which converts $a$ to $f(a)$) because $g$ converts $f(a)$ back to $a$.
+
+When a given function $f$ has a corresponding inverse function $g$, we usually rename $g$ as $f^{-1}$, which we read aloud as ``$f$-inverse''. The equation $g(f(a)) = a$ now reads as $f^{-1}(f(a)) = a$, which we interpret as saying ``$f$-inverse converts $f(a)$ back to $a$''. We similarly write that $f(f^{-1}(b)) = b$. 
+
+\begin{exploration}
+Dolbear's function $F = D(N) = 40 + \frac{1}{4}N$ is used to model the number $N$ of snowy tree cricket chirps per minute to a corresponding Fahrenheit temperature. 
+\begin{enumerate}[label=\alph*.]
+\item Solve the equation $F = 40 + \frac{1}{4}N$ for $N$ in terms of $F$. Call the resulting function $N = E(F)$. 
+\item Explain in words the process or effect of the function $N = E(F)$. What does it take as input? What does it generate as output?
+\item Use the function $E$ that you found above to compute $j(N) = E(D(N))$. Simplify your result as much as possible. Do likewise for $k(F) = D(E(F))$. What do you notice about these two functions $j$ and $k$?
+\item Consider the equations $F = 40 + \frac{1}{4}N$ and $N = 4(F - 40)$. Do these equations express different relationships between $F$ and $N$, or do they express the same relationship in two different ways? Explain. 
+\end{enumerate}
+\end{exploration}
+
+When a given function has an inverse function, it allows us to express the same relationship from two different points of view.  For instance, if $y = f(t) = 2t + 1$, we can show that the function $t = g(y) = \frac{y-1}{2}$ reverses the effect of $f$ (and vice versa), and thus $g = f^{-1}$.  We observe that 
+$$
+y = f(t) = 2t + 1 \text{ and } t = f^{-1}(y) = \frac{y-1}{2}
+$$
+are equivalent forms of the same equation, and thus they say the same thing from two different perspectives.  The first version of the equation is solved for $y$ in terms of $t$, while the second equation is solved for $t$ in terms of $y$.  This important principle holds in general whenever a function has an inverse function.
+
+If $y = f(t)$ has an inverse function, then the equations
+$$
+y = f(t) \text{ and } t = f^{-1}(y)
+$$
+say the exact same thing but from two different perspectives. 
+
+%\typeout{************************************************}
+%\typeout{When can we find inverses?}
+%\typeout{************************************************}
+
+\section{When can we find inverses?}
+ It's important to note in the above definition of inverse functions that we say ``\emph{If} there exists $\ldots$''.  That is, we don't guarantee that an inverse function exists for a given function.  Thus, we might ask: how can we determine whether or not a given function has a corresponding inverse function?  As with many questions about functions, there are often three different possible ways to explore such a question:  through a table, through a graph, or through an algebraic formula.
+
+Consider the functions $f$ and $g$ given in the following tables. 
+
+\begin{center}
+\(
+\begin{array}{ |c || c|  }
+ \hline
+ x & f(x)\\
+ \hline
+ 0&6\\
+ 1&4\\
+ 2&3\\
+ 3&4\\
+ 4&6\\
+ \hline
+\end{array} 
+\)
+\hspace{2cm}
+\(
+\begin{array}{ |c || c|  }
+ \hline
+ x & g(x)\\
+ \hline
+ 0&3\\
+ 1&1\\
+ 2&4\\
+ 3&2\\
+ 4&0\\
+ \hline
+\end{array} 
+\)
+\end{center}
+
+For any function, the question of whether or not it has an inverse comes down to whether or not the process of the function can be reliably reversed.  For functions given in table form such as $f$ and $g$, we essentially ask if it's possible to swich the input and output columns and have the new resulting table also represent a function.
+
+The function $f$ does not have an inverse function because there are two different inputs that lead to the same output:  $f(0) = 6$ and $f(4) = 6$.  If we attempt to reverse this process, we have a situation where the input $6$ would correspond to \emph{two} potential outputs, $4$ and $6$.
+
+However, the function $g$ does have an inverse function because when we reverse the columns in the table each input (in order, $3$, $1$, $4$, $2$, $0$) indeed corresponds to one and only one output (in order, $0$, $1$, $2$, $3$, $4$).  We can thus make observations such as $g^{-1}(4) = 2$, which is the same as saying that $g(2) = 4$, just from a different perspective.
+
+Now, consider the functions  $p$ and $q$ represented by the following graphs.
+
+\begin{image}
+\includegraphics{inverse-does-it-1.pdf}
+\includegraphics{inverse-does-it-2.pdf}
+\end{image}
+
+Recall that when a point such as $(a,c)$ lies on the graph of a function $p$, this means that the input $x = a$, which represents to a value on the horizontal axis, corresponds with the output $y = c$ that is represented by a value on the vertical axis.  In this situation, we write $p(a) = c$.  We note explicitly that $p$ is a function because its graph passes the vertical line test: any vertical line intersects the graph of $p$ exactly, and thus each input corresponds to one and only one output.
+
+If we attempt to change perspective and use the graph of $p$ to view $x$ as a function of $y$, we see that this fails because the output value $c$ is associated with two different inputs, $a$ and $b$.  Said differently, because the horizontal line $y = c$ intersects the graph of $p$ at both $(a,c)$ and $(b,c)$ (as shown in the figure), we cannot view $y$ as the input to a function process that produces the corresonding $x$-value.  Therefore, $p$ does not have an inverse function.
+
+On the other hand, provided that the behavior seen in the figure continues, the function $q$ does have an inverse because we can view $x$ as a function of $y$ via the graph.  This is because for any choice of $y$, there corresponds one and only one $x$ that results from $y$.  We can think of this visually by starting at a value such as $y = c$ on the $y$-axis, moving horizontally to where the line intersects the graph of $p$, and then moving down to the corresonding location (here $x = a$) on the horizontal axis.  From the behavior of the graph of $q$ (a straight line that is always increasing), we see that this correspondence will hold for any choice of $y$, and thus indeed $x$ is a function of $y$.  From this, we can say that $q$ indeed has an inverse function.  We thus can write that $q^{-1}(c) = a$, which is a different way to express the equivalent fact that $q(a) = c$.
+
+The two examples above illustrate an important requirement for a function to have an inverse function. For a function to have an inverse, different inputs must go to different outputs, or else we will run into the same problems as we did in the examples of $f$ and $p$ above.
+
+\begin{definition}
+A function $f$ is said to be  \index{function ! one-to-one}\index{one-to-one function}\index{one-to-one}\dfn{one-to-one} if $f$ matches different inputs to different
+outputs. Equivalently, $f$ is one-to-one if and only if whenever $f(a) = f(b)$, then $a = b$. If a function is one-to-one, it has an inverse.
+\end{definition}
+
+In particular, the graphical observations that we made for the function $q$ in the last example provide a general test for whether or not a function given by a graph has a corresponding inverse function. 
+
+\begin{remark}
+A function whose graph lies in the $x$-$y$ plane is one-to-one if and only if every horizontal line intersects the graph at most once.  When the graph passes this test, the horizontal coordinate of each point on the graph can be viewed as a function of the vertical coordinate of the point. This is sometimes referred to as \index{horizontal line test}\emph{the horizontal line test}.
+\end{remark}
+
+
+
+\begin{exploration}
+Consider the functions $r$ and $s$ defined by
+$$
+y = r(t) = 3 - \frac{1}{5}(t-1)^3 \text{ and } y = s(t) = 3 - \frac{1}{5}(t-1)^2.
+$$
+
+
+\begin{enumerate}[label=\alph*.]
+\item Solve the equation $y = r(t)$ for $t$. Can $t$ be expressed as a single function of $y$? What could go wrong?
+\item Is $r$ one-to-one?
+\item Find $s(2)$ and $s(0)$. Compare them; is $s$ is one-to-one?
+\item Solve the equation $y = s(t)$ for $t$. Can $t$ be expressed as a single function of $y$? What could go wrong?
+\end{enumerate}
+\end{exploration}
+
+To check your answers for b. and c. above, you could try graphing $r$ and $s$ and applying the horizontal line test. 
+
+%\typeout{************************************************}
+%\typeout{Graphical properties of inverse functions}
+%\typeout{************************************************}
+
+\section{Graphical properties of inverse functions}
+Finally, we mention an important relationship between the graph of a function and the graph of its inverse function. If $f$ is one-to-one, then recall that a point $(x, y)$ lies on the graph of $f$ if and only if $y = f(x)$. From this, since $f$ is one-to-one, we can equivalently say that $x = f^{-1}(y)$.  Hence, the point $(y,x)$ lies on the graph of $x = f^{-1}(y)$.
+
+The last item above leads to a special relationship between the graphs of $f$ and $f^{-1}$ when viewed on the same coordinate axes.  In that setting, we need to view $x$ as the input of each function (since it's the horizontal coordinate) and $y$ as the output.  If we know a particular input-output relationship for $f$, say $f(-1) = \frac{1}{2}$, then it follows that $f^{-1} \left( \frac{1}{2} \right) = -1$.  We observe that the points $\left(-1, \frac{1}{2} \right)$ and $\left(\frac{1}{2}, -1 \right)$ are reflections of each other across the line $y = x$.  Because such a relationship holds for every point $(x,y)$ on the graph of $f$, this means that the graphs of $f$ and $f^{-1}$ are reflections of one another across the line $y = x$, as seen in the figure below.
+
+\begin{image}
+\includegraphics{inverse-plot-reflection.pdf}
+\end{image}
+
+\begin{summary}
+\item We say a function $f$ has an inverse function $g$ if $g(f(a)) = a$ and $f(g(b)) = b$ for all $a$ and $b$. We often use the notation $f^{-1}$ for $g$.
+\item We say a function is one-to-one if it matches different inputs to different outputs. We can check graphically if a function is one-to-one with the horizontal line test. All one-to-one functions have inverses, and vice versa. 
+\item The graph of $f^{-1}$ is the graph of $f$ reflected across the line $y = x$.
+\end{summary}
+
+\end{document}
