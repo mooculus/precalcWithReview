@@ -162,15 +162,15 @@
 %% Header and footers
 
 
-
-
+\newcommand{\licenseAcknowledgement}{SOME LICENSE WORDS}
+\newcommand{\licenseEN}{\renewcommand{\licenseAcknowledgement}{Emmy Noether}}
 
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
 \fancyhead[RO,LE]{\sectionmark}
 \fancyfoot[RO,LE]{\thepage}
-\fancyfoot[C]{HERE I AM!}
+\fancyfoot[C]{\licenseAcknowledgement}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 
