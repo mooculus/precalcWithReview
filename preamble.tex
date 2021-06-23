@@ -158,6 +158,27 @@
 %Notes on what envirnoment to use:  Example with Explanation in text; if they are supposed to answer- Problem; no answer - Exploration
 
 
+
+%% Header and footers
+
+
+
+
+
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[RO,LE]{\sectionmark}
+\fancyfoot[RO,LE]{\thepage}
+\fancyfoot[C]{HERE I AM!}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+
+%%%%%%%%%%%%%%%%
+
+
+
 %\typeout{************************************************}
 %\typeout{Table of Contents}
 %\typeout{************************************************}
@@ -177,6 +198,7 @@
 \renewcommand\chapterstyle{%
   \def\maketitle{%
     \addtocounter{titlenumber}{1}%
+    \pagestyle{fancy}
     \phantomsection
     \addcontentsline{toc}{section}{\textbf{\thepart.\thetitlenumber\hspace{1em}\@title}}%
                     {\flushleft\small\sectionHeadStyle\@pretitle\par\vspace{-1.5em}}%
@@ -191,6 +213,7 @@
 \renewcommand\sectionstyle{%
   \def\maketitle{%
     \addtocounter{sectiontitlenumber}{1}
+    \pagestyle{fancy}
     \phantomsection
     \addcontentsline{toc}{subsection}{\thepart.\thetitlenumber.\thesectiontitlenumber\hspace{1em}\@title}%
     {\flushleft\small\sectionHeadStyle\@pretitle\par\vspace{-1.5em}}%
@@ -269,13 +292,17 @@
 
 \makeatother
 
+
+
+
+
 %\typeout{************************************************}
 %\typeout{Stuff from Ximera}
 %\typeout{************************************************}
 
 
 
-\usepackage{array}
+\usepackage{array}  %% This is for typesetting long division
 \setlength{\extrarowheight}{+.1cm}
 \newdimen\digitwidth
 \settowidth\digitwidth{9}
