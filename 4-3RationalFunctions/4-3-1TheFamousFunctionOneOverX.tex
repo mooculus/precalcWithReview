@@ -20,7 +20,7 @@
 
 \begin{motivatingQuestions}
 \item What is a possible explanation, in terms of functions, for the fact that one cannot divide by zero? 
-\item Are $\sin$, $\cos$ and $\tan$ really the only relevant trigonometric functions? Are there others? If so, how to understand them?
+\item Are sine, cosine, and tangent really the only relevant trigonometric functions? Are there others? If so, how to understand them?
 \end{motivatingQuestions}
 
 
@@ -46,7 +46,7 @@ The same reasoning as before would tempt us to say that $1/0$ equals $-\infty$. 
 
 \section{Graph and asymptotics}
 
-To continue our discussion in a more precise way, let's consider the function $f$, defined for all real numbers \emph{except for zero}, given by $f(x) = 1/x$. This is a very famous function, particularly useful as the building block for \emph{rational functions}, which we'll discuss soon. Note that essentially what we have just done in the introduction was to consider the values \[   f(0.1), f(0.01), f(0.001) \mbox{ and } f(0.0001),\]as well as \[f(-0.1), f(-0.01), f(-0.001), \mbox{ and } f(-0.0001).  \]
+To continue our discussion in a more precise way, let's consider the function $f$, defined for all real numbers \emph{except for zero}, given by $f(x) = 1/x$. This is a very famous function, particularly useful as the building block for \emph{rational functions}, which we'll discuss soon. Note that essentially what we have just done in the introduction was to consider the values \[   f(0.1), f(0.01), f(0.001), \mbox{ and } f(0.0001),\]as well as \[f(-0.1), f(-0.01), f(-0.001), \mbox{ and } f(-0.0001).  \]
 To get a good idea of the behavior a function has, our main strategy so far has been to just consider its graph. Naturally, plugging a handful of values won't cut it. Let's see what happens when we go to the other extreme and make divisions by very large numbers:
 
 \begin{align*}
@@ -62,6 +62,17 @@ And from the negative side:
 
 Here's what the graph looks like.
 
+
+\begin{image}
+\begin{tikzpicture}
+    \begin{axis}
+      \addplot[samples=200,domain=0.01:7]{1/x};
+      \addplot[samples=200,domain=-7:-0.01]{1/x};
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
 % \begin{image}
 % \begin{tikzpicture}
 %                     \begin{axis}[]
@@ -72,21 +83,6 @@ Here's what the graph looks like.
 
 % [IS THIS A BUILT-IN MACRO? PROBLEM WITH 0 OUTSIDE DOMAIN]
 
-
-
-\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
-\draw[->,color=black] (-4.93,0) -- (5.72,0);
-\foreach \x in {-4.5,-4,-3.5,-3,-2.5,-2,-1.5,-1,-0.5,0.5,1,1.5,2,2.5,3,3.5,4,4.5,5,5.5}
-\draw[shift={(\x,0)},color=black] (0pt,2pt) -- (0pt,-2pt) node[below] {\footnotesize $\x$};
-\draw[->,color=black] (0,-4.1) -- (0,4.18);
-\foreach \y in {-4,-3.5,-3,-2.5,-2,-1.5,-1,-0.5,0.5,1,1.5,2,2.5,3,3.5,4}
-\draw[shift={(0,\y)},color=black] (2pt,0pt) -- (-2pt,0pt) node[left] {\footnotesize $\y$};
-\draw[color=black] (0pt,-10pt) node[right] {\footnotesize $0$};
-\clip(-4.93,-4.1) rectangle (5.72,4.18);
-\draw[smooth,samples=100,domain=-4.930790040223839:5.722239807143025] plot(\x,{1/(\x)});
-\end{tikzpicture}
-
-[MAKE BETTER GRAPH, WILL FIX TIKZ AFTER DRAFTS ARE DONE]
 
 Here's what we can immediately see from the graph, confirming our intuition from the several divisions previously done:
 
@@ -102,30 +98,64 @@ Here's what we can immediately see from the graph, confirming our intuition from
 
 We say that the line $x=0$ is a \emph{vertical asymptote} for $f(x) = 1/x$, while the line $y=0$ is a \emph{horizontal asymptote}. We will discuss asymptotes of rational functions in general in the next unit. Next, as far as symmetries go, we can see that the graph is symmetric about the line $y=x$:
 
-[ADD GRAPH AGAIN WITH ANTI-DIAGONAL INCLUDED]
+\begin{image}
+\begin{tikzpicture}
+    \begin{axis}
+      \addplot[samples=200,domain=0.01:7]{1/x};
+      \addplot[samples=200,domain=-7:-0.01]{1/x};
+      \addplot[dashed,samples=200,domain=-7:7]{-x};
+    \end{axis}
+\end{tikzpicture}
+\end{image}
 
 This indicates that $f(x) = 1/x$ is an odd function. You can also see this algebraically via \[  f(-x) = \frac{1}{-x} = -\frac{1}{x} = -f(x).  \]
 By the way, the graph of $f(x) = 1/x$ is called a \emph{hyperbola}.
 
-\section{Application: Inverses of trigonometric functions}
+\section{Application: Reciprocals of trigonometric functions}
 
-It turns out that applying $f$ to some famous functions, such as the usual trigonometric functions $\sin$, $\cos$ and $\tan$, usually produces new interesting functions which can help to model several situations in a perhaps simpler way.
+It turns out that applying $f$ to some famous functions, such as the usual trigonometric functions sine, cosine, and tangent, usually produces new interesting functions which can help to model several situations in a perhaps simpler way. Or, in other words, reciprocals of famous or useful functions also deserve some of our attention.
 
 \begin{definition}
   The \emph{cosecant}, \emph{secant} and \emph{cotangent} functions are defined, respectively, by \[   \csc x = \frac{1}{\sin x}, \quad \sec x = \frac{1}{\cos x} \quad\mbox{and}\quad \cot x = \frac{1}{\tan x}.  \]
 \end{definition}
 
-\begin{exploration}
-  \begin{enumerate}[label=\alph*.]
-  \item For which values of $x$ do we have that $\sin x = 0$? Draw the graph of $\sin$. 
-  \item For which values of $x$ is $\csc$ undefined? Recall that one cannot divide by zero.
-  \item Repeat items (a) and (b) replacing $\sin$ and $\csc$ with $\cos$ and $\sec$, respectively. What about $\tan$ and $\cot$?
-  \end{enumerate}
-  [THIS IS PROBABLY NOT VERY ADEQUATE. CHANGE LATER]
-\end{exploration}
+\begin{example}
+  Let's look at the cosecant function in more detail. We know that the expression $1/\sin(x)$ will be undefined whenever $\sin(x) = 0$. Recall that this happens when $x$ is one of the values in the infinite list \[   \ldots, -3\pi, -2\pi, -\pi, 0, \pi, 2\pi, 3\pi, \ldots   \]You can see this on the graph of the sine function:
+
+  \begin{image}
+\begin{tikzpicture}
+    \begin{axis}
+      \addplot[samples=200,domain=-7:7]{sin(deg(x))};
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+
+This means that such values make the cosecant function undefined. Here's its graph:
+
+\begin{image}
+\begin{tikzpicture}
+    \begin{axis}
+      \addplot[samples=200,domain=-7:7]{1/sin(deg(x))};
+    \end{axis}
+\end{tikzpicture}
+\end{image}
 
 \begin{callout}
-  {\bf Warning:} Do not confuse inverses of trigonometric functions, as discussed above, with inverse trigonometric functions such as $\arcsin$, $\arccos$ and $\arctan$ (as in ``inverse functions'', as discussed in Section 3-2).
+  {\bf Note:} the vertical lines in the above picture are not part of the graph of $y=\csc(x)$. They represent the vertical asymptotes for the graph. We will discuss asymptotes in more detail in the next couple of units.
+\end{callout}
+
+\end{example}
+
+\begin{exploration} Repeat the discussion made above for the secant and cotangent functions. Namely:
+  \begin{enumerate}[label=\alph*.]
+  \item For which values of $x$ do we have that $\cos x = 0$? And for which values of $x$ do we have $\tan x = 0$?  
+  \item For which values of $x$ is $\sec(x)$ undefined? And for which values o $x$ is $\cot(x)$ undefined?
+  \end{enumerate}
+\end{exploration}
+
+
+\begin{callout}
+  {\bf Warning:} Do not confuse reciprocals of trigonometric functions, as discussed above, with inverse trigonometric functions such as $\arcsin$, $\arccos$ and $\arctan$ (as in ``inverse functions'', as discussed in Section 3-2).
 \end{callout}
 
 
