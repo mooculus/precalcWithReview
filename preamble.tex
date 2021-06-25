@@ -70,20 +70,6 @@
 
 
 
-\ifxake
-\else
-\let\exploration\relax
-\let\endexploration\relax
-
-\NewEnviron{exploration}{
-  \begin{tcolorbox}[colback=yellow!15, breakable,pad at break*=1mm]
-    \noindent\textbf{Exploration}~
-      \BODY
-  \end{tcolorbox}
-}
-\fi
-
-
 \NewEnviron{objectives}{  
     \vspace{.5in}
       \begin{tcolorbox}[colback=orange!5, breakable,pad at break*=1mm]
@@ -130,21 +116,36 @@
 \NewEnviron{summary}{
   \begin{tcolorbox}[ breakable,pad at break*=1mm]
     \textbf{\Large Summary}
-    \begin{itemize}[label=\textbullet]
+    %\begin{itemize}[label=\textbullet] %% breaks Xake
       \BODY
-    \end{itemize}
+    %\end{itemize}
   \end{tcolorbox}
 }
 
 
+
+
+\ifxake
+\else
 \let\explanation\relax
 \let\endexplanation\relax
-
 \NewEnviron{explanation}{
     \normalfont
     \noindent\textbf{Explanation}~
       \BODY
 }
+\let\exploration\relax
+\let\endexploration\relax
+\NewEnviron{exploration}{
+  \begin{tcolorbox}[colback=yellow!15, breakable,pad at break*=1mm]
+    \noindent\textbf{Exploration}~
+      \BODY
+  \end{tcolorbox}
+}
+\fi
+
+
+
 
 \NewEnviron{callout}{
   \begin{tcolorbox}[colback=blue!5, breakable,pad at break*=1mm]
