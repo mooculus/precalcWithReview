@@ -89,15 +89,7 @@
   \end{tcolorbox}
 }
 
-\let\remark\relax
-\let\endremark\relax
 
-\NewEnviron{remark}{
-  \begin{tcolorbox}[colback=blue!5, breakable,pad at break*=1mm]
-    \noindent\textbf{Remark}~
-      \BODY
-  \end{tcolorbox}
-}
 
 
 \let\definition\relax
@@ -127,6 +119,15 @@
 
 \ifxake
 \else
+\let\remark\relax
+\let\endremark\relax
+
+\NewEnviron{remark}{
+  \begin{tcolorbox}[colback=blue!5, breakable,pad at break*=1mm]
+    \noindent\textbf{Remark}~
+      \BODY
+  \end{tcolorbox}
+}
 \let\explanation\relax
 \let\endexplanation\relax
 \NewEnviron{explanation}{
