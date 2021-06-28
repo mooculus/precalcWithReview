@@ -37,7 +37,7 @@ If a quantity changes so that its growth or decay occurs at a constant percentag
 A related situation arises when an object's temperature changes in response to its surroundings.  For instance, if we have a cup of coffee at an initial temperature of \(186^\circ\) Fahrenheit and the cup is placed in a room where the surrounding temperature is \(71^\circ\), our intuition and experience tell us that over time the coffee will cool and eventually tend to the \(71^\circ\) temperature of the surroundings.  From an \link[experiment]{http://gvsu.edu/s/0SB} with an actual temperature probe, we have the data in the table below.
 
 
-\[
+$$
 \begin{array}{cc}
 \multicolumn{2}{c}{\text{Data for cooling coffee}}\\
 \multicolumn{2}{c}{\text{(measured in degrees Fahrenheit at the time t in minutes)}}\\
@@ -57,7 +57,7 @@ t&F(t)\\
 43&107\\
 48&104
 \end{array}
-\]
+$$
 
 Here is a graph of these points.
 
@@ -87,7 +87,7 @@ In \link[\emph{Desmos}]{desmos.com}, define \(g(t) = ab^t+c\) and accept the pro
 We have already established that any exponential function of the form \(f(t) = ab^t\) where \(a\) and \(b\) are positive real numbers with \(b \ne 1\) is always concave up and is either always increasing or always decreasing.  We next introduce precise language to describe the behavior of an exponential function's value as \(t\) gets bigger and bigger.  To start, let's consider the two basic exponential functions \(p(t) = 2^t\) and \(q(t) = \left(\frac{1}{2}\right)^t\) and their respective values at \(t = 10\), \(t = 20\), and \(t = 30\), as displayed below.
 %talks about concave up, which we haven't defined!
 
-\[
+$$
 %\begin{array}{cccccc}
 %\(
 {\begin{array}{cc}
@@ -97,12 +97,12 @@ t&p(t)\\
 20&2^20=1048576\\
 30&2^30=1073741824
 \end{array}}%&&&&& 
-\]
+$$
 %\)
 %\end{center}
 %\begin{center}
 %\(
-\[
+$$
 {\begin{array}{cc}
 t&q(t)\\
 \hline
@@ -111,7 +111,7 @@ t&q(t)\\
 10&\left(\frac{1}{2}\right)^30=\frac{1}{1073741824} \approx 0.00000000093192
 \end{array}}\\
 %\end{array}
-\]
+$$
 
 For the increasing function \(p(t) = 2^t\), we see that the output of the function gets very large very quickly.  In addition, there is no upper bound to how large the function can be.  Indeed, we can make the value of \(p(t)\) as large as we'd like by taking \(t\) sufficiently big.  We thus say that as \(t\) increases, \(p(t)\) \dfn{increases without bound}.
 
@@ -199,7 +199,7 @@ In addition, state the \(y\)-intercept and the range of the function.  For each 
 \section{Modeling temperature data}
 Newton's Law of Cooling \index{Newton's Law of Cooling} states that the rate that an object warms or cools occurs in direct proportion to the difference between its own temperature and the temperature of its surroundings.  If we return to the coffee temperature data  and recall that the room temperature in that experiment was \(71^\circ\), we can see how to use a transformed exponential function to model the data.  In the table below, we add a row of information to the table where we compute \(F(t)-71\) to subtract the room temperature from each reading.
 
-\[
+$$
 \begin{array}{ccc}
 \multicolumn{3}{c}{\text{Data for cooling coffee}}\\
 \multicolumn{3}{c}{\text{(measured in degrees Fahrenheit at the time t in minutes)}}\\
@@ -219,7 +219,7 @@ t&F(t)&f(t)=F(t)-71\\
 43&107&36\\
 48&104&33
 \end{array}
-\]
+$$
 
 The data in the last row of the table appears exponential, and if we test the data by computing the quotients of output values that correspond to equally-spaced input, we see a nearly constant ratio.  In particular,%
 \begin{equation*}

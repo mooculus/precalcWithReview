@@ -31,14 +31,14 @@
 
 \section{Introduction}
 
-Let's recall how division works. Say you need to divide $25$ by $4$ --- the quotient is $6$ and the remainder is $1$. In other words, we have that $25 = 4\cdot 6 + 1$, which can be also written as \[  \frac{25}{4} = 6+\frac{1}{4}. \]In general, when $a$ and $b$ are positive integers, performing the division of $a$ by $b$ gives us some quotient $q$ and some remainder $r$, which is less than $b$. We write $a = bq+r$ for this. This sort of idea also works if, instead of numbers, we consider polynomials. If $f(x)$ and $g(x)$ are polynomials, we'll understand how to find polynomials $q(x)$ and $r(x)$ such that \[  f(x) = g(x)q(x)+r(x),  \]with the degree of $r(x)$ less than the degree of $g(x)$. As for the degree of $q(x)$, it should be the difference between the degrees of $f(x)$ and $g(x)$. This is extremely useful when trying to study rational functions (built from $1/x$, previously discussed) and their asymptotes. We will do this in the next unit.
+Let's recall how division works. Say you need to divide $25$ by $4$ --- the quotient is $6$ and the remainder is $1$. In other words, we have that $25 = 4\cdot 6 + 1$, which can be also written as $$  \frac{25}{4} = 6+\frac{1}{4}. $$In general, when $a$ and $b$ are positive integers, performing the division of $a$ by $b$ gives us some quotient $q$ and some remainder $r$, which is less than $b$. We write $a = bq+r$ for this. This sort of idea also works if, instead of numbers, we consider polynomials. If $f(x)$ and $g(x)$ are polynomials, we'll understand how to find polynomials $q(x)$ and $r(x)$ such that $$  f(x) = g(x)q(x)+r(x),  $$with the degree of $r(x)$ less than the degree of $g(x)$. As for the degree of $q(x)$, it should be the difference between the degrees of $f(x)$ and $g(x)$. This is extremely useful when trying to study rational functions (built from $1/x$, previously discussed) and their asymptotes. We will do this in the next unit.
 
 \section{Long division of polynomials}
 
 The best way to understand this is through guided examples.
 
 \begin{example}
-  Find the quotient and remainder of the division of \[f(x) = x^3+3x^2+x+1\quad\mbox{by}\quad g(x) = x^2+1.\]
+  Find the quotient and remainder of the division of $$f(x) = x^3+3x^2+x+1\quad\mbox{by}\quad g(x) = x^2+1.$$
   
   \begin{explanation}
     We need to find $q(x)$ and $r(x)$. Since the degree of $r(x)$ should be less than the degree of $g(x)$, which is $1$, we know that the degree of $r(x)$ must be $0$ --- so $r(x)$ will be a constant. And since the degree of $g(x)$ equals $2$, we know that the degree of $q(x)$ will be $1$. So, think of steps:
@@ -49,14 +49,14 @@ The best way to understand this is through guided examples.
     \item Subtract $3(x^2+1)$ from $3x^2+1$ to get $-2$. This is the remainder. 
     \end{itemize}
 All of this is summarized with the diagram \begin{align*}
-   & \underline{~~~x+3\phantom{somethings}} \\[-4pt]  x^2+1~&\Big)~ x^3+3x^2+x+1 \\[-4pt] &\phantom{\big)~} \underline{-x^3\phantom{+3x^2}\!-x\phantom{+1...}} \\[-4pt] &\phantom{\Big)~}\phantom{0n\!}+3x^2\phantom{+0~}~+1 \\[-4pt] &\phantom{\big)~} \phantom{nn}\underline{-\,3x^2\phantom{+xn}-3\phantom{n}} \\ &\phantom{nnnnnnnnnnn}-2
+   & \underline{~~~x+3\phantom{somethings}} \$$-4pt]  x^2+1~&\Big)~ x^3+3x^2+x+1 \$$-4pt] &\phantom{\big)~} \underline{-x^3\phantom{+3x^2}\!-x\phantom{+1...}} \$$-4pt] &\phantom{\Big)~}\phantom{0n\!}+3x^2\phantom{+0~}~+1 \$$-4pt] &\phantom{\big)~} \phantom{nn}\underline{-\,3x^2\phantom{+xn}-3\phantom{n}} \\ &\phantom{nnnnnnnnnnn}-2
 \end{align*}
-as expected. Hence the quotient is $x+3$ and the remainder is $-2$. In other words, we may write \[   x^3+3x^2+x+1 =(x^2+1)(x+3) - 2, \]which in particular implies that \[  \frac{x^3+3x^2+x+1}{x^2+1} = x+3 - \frac{2}{x^2+1}.  \]
+as expected. Hence the quotient is $x+3$ and the remainder is $-2$. In other words, we may write $$   x^3+3x^2+x+1 =(x^2+1)(x+3) - 2, $$which in particular implies that $$  \frac{x^3+3x^2+x+1}{x^2+1} = x+3 - \frac{2}{x^2+1}.  $$
   \end{explanation}
 \end{example}
 
 \begin{example}
-  Find the quotient and remainder of the division of \[f(x) = 6x^5+9x^4+3x^3+10x^2+19x+7\quad\mbox{by}\quad g(x) = 2x^2+3x+1.\]
+  Find the quotient and remainder of the division of $$f(x) = 6x^5+9x^4+3x^3+10x^2+19x+7\quad\mbox{by}\quad g(x) = 2x^2+3x+1.$$
   
   \begin{explanation}
     We need to find $q(x)$ and $r(x)$. Since the degree of $r(x)$ should be less than the degree of $g(x)$, which is $2$, we know that the degree of $r(x)$ must be $0$ (i.e., $r(x)$ is constant) or $1$. And since the degree of $g(x)$ equals $2$, we know that the degree of $q(x)$ will be $3$. Again, let's carry out steps:
@@ -67,7 +67,7 @@ as expected. Hence the quotient is $x+3$ and the remainder is $-2$. In other wor
     \item Subtract $5(2x^2+3x+1)$ from $10x^2+19x+7$, to get $4x+2$. This is the remainder.
     \end{itemize}
 All of this is summarized with the diagram \begin{align*}
-   & \underline{~~~3x^3+5\phantom{somethingssomethingssom}} \\[-4pt]  2x^2+3x+1~&\Big)~6x^5+9x^4+3x^3+10x^2+19x+7 \\[-4pt] &\phantom{\big)~} \underline{-6x^5-9x^4-3x^3\phantom{............................}} \\[-4pt] &\phantom{\Big)~}\phantom{..........................}+10x^2+19x+7 \\[-4pt] &\phantom{\big).............................}\underline{-10x^2-15x-5\phantom{..}} \\[-3pt] &\phantom{...............................................}4x+2
+   & \underline{~~~3x^3+5\phantom{somethingssomethingssom}} \$$-4pt]  2x^2+3x+1~&\Big)~6x^5+9x^4+3x^3+10x^2+19x+7 \$$-4pt] &\phantom{\big)~} \underline{-6x^5-9x^4-3x^3\phantom{............................}} \$$-4pt] &\phantom{\Big)~}\phantom{..........................}+10x^2+19x+7 \$$-4pt] &\phantom{\big).............................}\underline{-10x^2-15x-5\phantom{..}} \$$-3pt] &\phantom{...............................................}4x+2
 \end{align*}
 
     

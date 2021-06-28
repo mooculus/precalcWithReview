@@ -37,25 +37,25 @@ We have previously discussed the function $1/x$. Note that both the numerator $1
 
 \begin{example} Are the following functions rational? For which values of $x$ is the function undefined?
   \begin{enumerate}
-  \item $f(x) = \frac{x^2-2}{x+1}$. \\[1em]
+  \item $f(x) = \frac{x^2-2}{x+1}$. \$$1em]
     \begin{explanation}
       It is a rational function. It is defined for all values of $x$, except for $x = -1$, because this makes the denominator $x+1$ be zero.
     \end{explanation}
-  \item $f(x) = \frac{x^4-3x+1}{x^2-5x+6}$. \\[1em]
+  \item $f(x) = \frac{x^4-3x+1}{x^2-5x+6}$. \$$1em]
     \begin{explanation}
       It is a rational function. It is defined for all values of $x$, except for $x=2$ and $x=3$, because $x^2-5x+6 = (x-2)(x-3)$. 
     \end{explanation}
-  \item $f(x) = \frac{x-1}{\sqrt{x^4+1}}$. \\[1em]
+  \item $f(x) = \frac{x-1}{\sqrt{x^4+1}}$. \$$1em]
     \begin{explanation}
       It is \emph{not} a rational function, because the denominator $\sqrt{x^4+1}$ is \emph{not a polynomial}. Note that even though this does not define a rational function, it is defined for all possible values of $x$, since $\sqrt{x^4+1} \geq 1 > 0$ for all $x$.
     \end{explanation}
-  \item A polynomial function $p(x)$. \\[1em]
+  \item A polynomial function $p(x)$. \$$1em]
     \begin{explanation}
       Any polynomial function is a rational function, simply because we can write $p(x) = p(x)/1$, and $1$ is a polynomial. And it is defined for every real value of $x$.
     \end{explanation}
-  \item $f(x) = x^2-1 + \frac{x^3}{x^5-1}$. \\[1em]
+  \item $f(x) = x^2-1 + \frac{x^3}{x^5-1}$. \$$1em]
     \begin{explanation}
-      It is a rational function, which is defined for all $x$ except for $x=1$. To see that this is a rational function, you can either say that it is the sum of the rational functions $x^2-1$ and $x^3/(x^5-1)$, or rewrite it as \[  f(x) = \frac{(x^2-1)(x^5-1) + x^3}{x^5-1} = \frac{x^7-x^5-x^2+x^3-1}{x^5-1},  \]which is manifestly rational.
+      It is a rational function, which is defined for all $x$ except for $x=1$. To see that this is a rational function, you can either say that it is the sum of the rational functions $x^2-1$ and $x^3/(x^5-1)$, or rewrite it as $$  f(x) = \frac{(x^2-1)(x^5-1) + x^3}{x^5-1} = \frac{x^7-x^5-x^2+x^3-1}{x^5-1},  $$which is manifestly rational.
     \end{explanation}
   \end{enumerate}
 \end{example}
@@ -101,7 +101,7 @@ We have seen that the function $1/x$ has the line $x=0$ as a vertical asymptote,
     f(1000) &\approx 0.001... \\
     f(1000) &\approx 0.000...
   \end{align*}
-  This suggests that $f(x) \to 0$ as $x \to +\infty$. Similarly, you can convince yourself that $f(x) \to 0$ as $x \to -\infty$, so that $y=0$ is the only horizontal asymptote. And for vertical asymptotes, we'll again find the $x$-values for which $f(x)$ is undefined, and see whether any of those indicates a vertical asymptote. Noting that $x^2-3x+2 = (x-1)(x-2)$, we can see that $f(x)$ is undefined for $x=1$ and $x=2$. However, we may write that \[   f(x) = \frac{x-1}{x^2-3x+2} = \frac{x-1}{(x-1)(x-2)} = \frac{1}{x-2},  \]\emph{provided $x \neq 1$}. And $1/(x-2)$ does not increase (or decrease) without bound as $x$ approaches $1$ from either side --- in fact, it approaches $-1$. So, even though $f(x)$ is undefined for the value $x=1$, the line $x=1$ is \emph{not} a vertical asymptote for $f(x)$. But comparing the expression $f(x) = 1/(x-2)$ (again, valid for $x \neq 1$) with what we have previously seen for the function $1/x$, we see that $f(x) \to +\infty$ as $x \to 2^+$ and $f(x) \to -\infty$ as $x \to 2^-$, so that the line $x=2$ is a vertical asymptote for $f(x)$. Here's the graph:
+  This suggests that $f(x) \to 0$ as $x \to +\infty$. Similarly, you can convince yourself that $f(x) \to 0$ as $x \to -\infty$, so that $y=0$ is the only horizontal asymptote. And for vertical asymptotes, we'll again find the $x$-values for which $f(x)$ is undefined, and see whether any of those indicates a vertical asymptote. Noting that $x^2-3x+2 = (x-1)(x-2)$, we can see that $f(x)$ is undefined for $x=1$ and $x=2$. However, we may write that $$   f(x) = \frac{x-1}{x^2-3x+2} = \frac{x-1}{(x-1)(x-2)} = \frac{1}{x-2},  $$\emph{provided $x \neq 1$}. And $1/(x-2)$ does not increase (or decrease) without bound as $x$ approaches $1$ from either side --- in fact, it approaches $-1$. So, even though $f(x)$ is undefined for the value $x=1$, the line $x=1$ is \emph{not} a vertical asymptote for $f(x)$. But comparing the expression $f(x) = 1/(x-2)$ (again, valid for $x \neq 1$) with what we have previously seen for the function $1/x$, we see that $f(x) \to +\infty$ as $x \to 2^+$ and $f(x) \to -\infty$ as $x \to 2^-$, so that the line $x=2$ is a vertical asymptote for $f(x)$. Here's the graph:
 
       \begin{image}
         \begin{tikzpicture}
@@ -144,7 +144,7 @@ Now, you must be asking yourself if every time we want to test for vertical or h
 \end{callout}
 
 
-The above theorem essentially says that one can detect horizontal asymptotes by looking at degrees and leading coefficients. Only the leading terms of $p(x)$ and $q(x)$ matter, and it makes no difference whether one considers $x\to +\infty$ or $x\to -\infty$. For example, how would you apply this to study horizontal asymptotes for the following function? \[ f(x) =  \frac{3x^6-5x^4+3x^3-3x^2 + 10x + 1}{5x^6 + 10000x^5 - 5x+2}\]
+The above theorem essentially says that one can detect horizontal asymptotes by looking at degrees and leading coefficients. Only the leading terms of $p(x)$ and $q(x)$ matter, and it makes no difference whether one considers $x\to +\infty$ or $x\to -\infty$. For example, how would you apply this to study horizontal asymptotes for the following function? $$ f(x) =  \frac{3x^6-5x^4+3x^3-3x^2 + 10x + 1}{5x^6 + 10000x^5 - 5x+2}$$
 
 \begin{explanation}
   The degree of the numerator $p(x) = 3x^6-5x^4+3x^3-3x^2 + 10x + 1$ and the degree of the denominator $q(x) = 5x^6 + 10000x^5 - 5x+2$ are equal, namely, to $6$. Thus, since the leading coefficient of $p(x)$ is $3$ and the leading coefficient of $q(x)$ is $5$, we conclude that the line $y=3/5$ is the only horizontal asymptote for this rational function.
@@ -158,10 +158,10 @@ The above theorem essentially says that one can detect horizontal asymptotes by 
   \end{itemize}
 \end{callout}
 
-The above theorem tells us how to distinguish vertical asymptotes and holes in the graph of a rational function. For example, consider \[  f(x) = \frac{x^2-4x+3}{x^2-3x+2}.  \]Is $f(x)$ in lowest terms? For which values of $x$ is this function undefined? How to go from there?
+The above theorem tells us how to distinguish vertical asymptotes and holes in the graph of a rational function. For example, consider $$  f(x) = \frac{x^2-4x+3}{x^2-3x+2}.  $$Is $f(x)$ in lowest terms? For which values of $x$ is this function undefined? How to go from there?
 
 \begin{explanation}
-You can find out if $f(x)$ is in lowest terms by just factoring both numerator and denominator, and by factoring the denominator, you will also find out which values of $x$ we have $f(x)$ undefined. Since \[   f(x) = \frac{x^2-4x+3}{x^2-3x+2} = \frac{(x-1)(x-3)}{(x-1)(x-2)} = \frac{x-3}{x-2},  \]we see that the values $f(1)$ and $f(2)$ are undefined, while the above equality holds for all $x$ except for $x=1$. In this simplified form, we may recognize $q(x) = x-2$. Since $q(1) = -1 \neq 0$, the graph of $y=f(x)$ has a hole at the point $(1,f(1))$, but since $q(2) = 0$, we have that the line $x=2$ is a vertical asymptote for the graph of $y=f(x)$.
+You can find out if $f(x)$ is in lowest terms by just factoring both numerator and denominator, and by factoring the denominator, you will also find out which values of $x$ we have $f(x)$ undefined. Since $$   f(x) = \frac{x^2-4x+3}{x^2-3x+2} = \frac{(x-1)(x-3)}{(x-1)(x-2)} = \frac{x-3}{x-2},  $$we see that the values $f(1)$ and $f(2)$ are undefined, while the above equality holds for all $x$ except for $x=1$. In this simplified form, we may recognize $q(x) = x-2$. Since $q(1) = -1 \neq 0$, the graph of $y=f(x)$ has a hole at the point $(1,f(1))$, but since $q(2) = 0$, we have that the line $x=2$ is a vertical asymptote for the graph of $y=f(x)$.
 \end{explanation}
 
 \section{Slant asymptotes}
@@ -176,9 +176,9 @@ Note that saying that $y=mx+b$ is a slant asymptote for the graph of $y=f(x)$ is
 
 \begin{example} Do the following rational functions have slant asymptotes? If so, what are their line equations?
   \begin{enumerate}
-  \item $f(x) = \frac{x^2-4x+2}{1-x}$. \\[1em]
+  \item $f(x) = \frac{x^2-4x+2}{1-x}$. \$$1em]
     \begin{explanation}
-      When trying to find slant asymptotes, long division is the way to go. Performing it, we see that \[    \frac{x^2-4x+2}{1-x} = -x+3 - \frac{1}{1-x}.  \]Since $1/(1-x) \to 0$ as $x \to \infty$ or $x \to -\infty$ and $y=-x+3$ describes a line, we conclude that $y=-x+3$ is a slant asymptote for the graph of $y=f(x)$.
+      When trying to find slant asymptotes, long division is the way to go. Performing it, we see that $$    \frac{x^2-4x+2}{1-x} = -x+3 - \frac{1}{1-x}.  $$Since $1/(1-x) \to 0$ as $x \to \infty$ or $x \to -\infty$ and $y=-x+3$ describes a line, we conclude that $y=-x+3$ is a slant asymptote for the graph of $y=f(x)$.
   \begin{image}
  \begin{tikzpicture}
      \begin{axis}
@@ -190,9 +190,9 @@ Note that saying that $y=mx+b$ is a slant asymptote for the graph of $y=f(x)$ is
  \end{image}
     \end{explanation}
     
-  \item $f(x) = \frac{x^2-4}{x-2}$. \\[1em]
+  \item $f(x) = \frac{x^2-4}{x-2}$. \$$1em]
     \begin{explanation}
-      We may just simplify it to $f(x) = x+2$, valid for all $x \neq 2$. We may regard this as a long division for which the remainder is zero, as in \[  f(x) = x+2+\frac{0}{x-2},  \]and since $0/(x-2) \to 0$ as $x\to +\infty$ or $x\to -\infty$, it follows that $y=x+2$ is a slant asymptote for the graph of $y=f(x)$, even though the graph is just said line with a hole!
+      We may just simplify it to $f(x) = x+2$, valid for all $x \neq 2$. We may regard this as a long division for which the remainder is zero, as in $$  f(x) = x+2+\frac{0}{x-2},  $$and since $0/(x-2) \to 0$ as $x\to +\infty$ or $x\to -\infty$, it follows that $y=x+2$ is a slant asymptote for the graph of $y=f(x)$, even though the graph is just said line with a hole!
       \begin{image}
         \begin{tikzpicture}
           \begin{axis}
@@ -202,9 +202,9 @@ Note that saying that $y=mx+b$ is a slant asymptote for the graph of $y=f(x)$ is
         \end{tikzpicture}
       \end{image}      
     \end{explanation}
-  \item $f(x)=\frac{x^3-4x^2+5x-1}{x-1}$. \\[1em]
+  \item $f(x)=\frac{x^3-4x^2+5x-1}{x-1}$. \$$1em]
     \begin{explanation}
-      Performing the long division, as before, we see that \[   f(x) = \frac{x^3-4x^2+5x-1}{x-1} = x^2-3x+2 + \frac{1}{x-1}.  \]As expected, $1/(x-1) \to 0$ when $x \to +\infty$ or $x\to -\infty$, but $y=x^2-3x+2$ is not a line equation. Hence there are no slant asymptotes for the graph of $f(x)$ (loosely speaking, the graph cannot be simultaneously asymptotic to a parabola and to a straight line).
+      Performing the long division, as before, we see that $$   f(x) = \frac{x^3-4x^2+5x-1}{x-1} = x^2-3x+2 + \frac{1}{x-1}.  $$As expected, $1/(x-1) \to 0$ when $x \to +\infty$ or $x\to -\infty$, but $y=x^2-3x+2$ is not a line equation. Hence there are no slant asymptotes for the graph of $f(x)$ (loosely speaking, the graph cannot be simultaneously asymptotic to a parabola and to a straight line).
       \begin{image}
         \begin{tikzpicture}
           \begin{axis}
@@ -215,9 +215,9 @@ Note that saying that $y=mx+b$ is a slant asymptote for the graph of $y=f(x)$ is
         \end{tikzpicture}
       \end{image}
     \end{explanation}
-  \item $f(x) = \frac{x^3+2x^2+x+1}{x^3-2x^2-x+1}$. \\[1em]
+  \item $f(x) = \frac{x^3+2x^2+x+1}{x^3-2x^2-x+1}$. \$$1em]
    \begin{explanation}
-      Long division shows that: \[   f(x) = \frac{x^3+2x^2+x+1}{x^3-2x^2-x+1} = 1 + \underbrace{\frac{4x^2+2x}{x^3-2x^2-x+1}}_{\to 0}.  \]The indicated remainder goes to zero when $x \to +\infty$ or $x\to -\infty$ simply because the degree of the numerator is lower than the degree of the numerator. The remaining quotient does give us the asymptote $y=1$. But this is not a slant asymptote, it is a horizontal asymptote (as you might have expected).
+      Long division shows that: $$   f(x) = \frac{x^3+2x^2+x+1}{x^3-2x^2-x+1} = 1 + \underbrace{\frac{4x^2+2x}{x^3-2x^2-x+1}}_{\to 0}.  $$The indicated remainder goes to zero when $x \to +\infty$ or $x\to -\infty$ simply because the degree of the numerator is lower than the degree of the numerator. The remaining quotient does give us the asymptote $y=1$. But this is not a slant asymptote, it is a horizontal asymptote (as you might have expected).
 %            \begin{image}
 %        \begin{tikzpicture}
 %          \begin{axis}
@@ -231,9 +231,9 @@ Note that saying that $y=mx+b$ is a slant asymptote for the graph of $y=f(x)$ is
 %      \end{image}
       Note that asymptotes are really concerned about the end behavior of the function. In the above example, the line $y=1$ does intersect the graph of $y=f(x)$, but this is fine --- the graph still only approaches said line as $x \to +\infty$ and $x \to -\infty$.
    \end{explanation}
-  \item $f(x) = \frac{x^2+1}{x^5-4}$. \\[1em]
+  \item $f(x) = \frac{x^2+1}{x^5-4}$. \$$1em]
     \begin{explanation}
-      Since the degree of the numerator is smaller than the degree of the denominator, you can think of the long division as already having been performed, as in \[ f(x) = \frac{x^2+1}{x^5-4} = 0 + \frac{x^2+1}{x^5-4}.  \]Again, the remainder goes to zero when $x \to +\infty$ or $x\to -\infty$. So, the line $y=0$ would be an asymptote, but it is horizontal, not slant, as in the previous item.
+      Since the degree of the numerator is smaller than the degree of the denominator, you can think of the long division as already having been performed, as in $$ f(x) = \frac{x^2+1}{x^5-4} = 0 + \frac{x^2+1}{x^5-4}.  $$Again, the remainder goes to zero when $x \to +\infty$ or $x\to -\infty$. So, the line $y=0$ would be an asymptote, but it is horizontal, not slant, as in the previous item.
 
   \begin{image}
  \begin{tikzpicture}
