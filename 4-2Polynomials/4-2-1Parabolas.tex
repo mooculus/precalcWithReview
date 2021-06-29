@@ -21,8 +21,7 @@ We explore polynomial functions.
       where $t$ is how many seconds had passed since the launch.
       To see the shape of the graph made by this equation,
       we make a table of values and plot the points.\\
-\begin{center}
-        $
+$$
 \begin{array}{ccc}
                 t & -16t^2+64t & Point\\
 \hline
@@ -32,8 +31,7 @@ We explore polynomial functions.
 3&-16(3)^2+64(3)=48 &(3,48)\\
             4 & -16(4)^2+64(4)=0  &(4,0)
     \end{array}
-$
-\end{center}
+$$
 \begin{image}
 \begin{tikzpicture}
                     \begin{axis}[xmin=-2,xmax=6,ymin=-15,ymax=75,
@@ -50,6 +48,8 @@ $
                 \end{tikzpicture}
 \end{image}
 \end{example}
+
+
  A curve with the shape that we see in the above figure
       is called a \textbf{parabola}.
       Notice the symmetry in figure,
@@ -130,6 +130,9 @@ $
       It is possible for a quadratic graph to have zero, one, or two horizontal intercepts.
       The figures below show an example of each.
 
+
+
+      
  \begin{example}
           Use technology to graph and make a table of the quadratic function $f$ defined by
           $f(x)=2x^2+4x-3$ and find each of the key points or features.
@@ -145,8 +148,8 @@ $
            The specifics of how to use any one particular technology tool vary.
             Whether you use an app, a physical calculator,
             or something else, a table and graph should look like:\\
-\begin{center}
-          $\begin{array}{cc}
+  $$
+  \begin{array}{cc}
 x & f(x) \\
 \hline
 -2 & -3 \\
@@ -154,8 +157,9 @@ x & f(x) \\
  0 & -3 \\
  1 &  3 \\
  2 & 13 \\
- \end{array}$
-\end{center}
+  \end{array}
+  $$
+
 \begin{image}
 \begin{tikzpicture}
                 \begin{axis}
@@ -189,6 +193,8 @@ x & f(x) \\
 \end{enumerate}
 \end{explanation}
 \end{example}
+
+
 \section{The Vertex Form of a Quadratic}
 
       We have learned the standard form of a quadratic function's formula, which is $f(x)=ax^2+bx+c$.
@@ -208,15 +214,16 @@ x & f(x) \\
 
        Graph of $f(x)=x^2-6x+7$ and $g(x)=(x-3)^2-2$
        the graphs of the two parabolas overlap each other completely
-\begin{image}
+
+       \begin{image}
 \begin{tikzpicture}
                 \begin{axis}[]
-                    \addplot+[firstcurve, domain=0:6] {x^2-6*x+7};
-                    \addplot+[secondcurve, domain=0:6] {(x-3)^2-2+0.1};
+                    \addplot [firstcurve, domain=0:6] {x^2-6*x+7};
+                    \addplot [secondcurve, domain=0:6] {(x-3)^2-2+0.1};
                     \addplot [soliddot, color=fourthcolor] coordinates {(3,-2)} node[below] {$(3,-2)$};
                 \end{axis}
             \end{tikzpicture}
-     \end{image}
+       \end{image}
 
 
 
@@ -229,6 +236,8 @@ x & f(x) \\
       added at the end.
 
 
+
+      
 \begin{example}
       Here are the graphs of three more functions with formulas in vertex form.
       Compare each function with the vertex of its graph.
@@ -239,7 +248,7 @@ x & f(x) \\
            \begin{image}
 \begin{tikzpicture}
                     \begin{axis}[]
-                        \addplot+[domain=-0.449:4.449] {(x-2)^2+1};
+                        \addplot [domain=-0.449:4.449] {(x-2)^2+1};
                         \addplot [firstcurve,soliddot] coordinates {(2,1)} node[right, firstcolor] {$(2,1)$};
                         \end{axis}
                 \end{tikzpicture}
@@ -250,7 +259,7 @@ $$
            \begin{image}
 \begin{tikzpicture}
                     \begin{axis}[]
-                        \addplot+[domain=-7:5.325] {-1/4*(x+1)^2+3};
+                        \addplot[domain=-7:5.325] {-1/4*(x+1)^2+3};
                         \addplot [firstcurve,soliddot] coordinates {(-1,3)} node[above left, firstcolor] {$(-1,3)$};
                     \end{axis}
                 \end{tikzpicture}
@@ -261,7 +270,7 @@ $$
 \begin{image}
 \begin{tikzpicture}
                     \begin{axis}[]
-                        \addplot+[domain=-4.62:-1.38] {4*(x+3)^2-3.5};
+                        \addplot [domain=-4.62:-1.38] {4*(x+3)^2-3.5};
                         \addplot [firstcurve,soliddot] coordinates {(-3,-3.5)} node[below, firstcolor] {$(-3,-3.5)$};
                     \end{axis}
                 \end{tikzpicture}
