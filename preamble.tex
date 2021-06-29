@@ -69,6 +69,7 @@
 \let\endsummary\relax
 \newtheorem*{summary}{Summary}
 \newtheorem*{callout}{Callout}
+\newtheorem*{overview}{Overview}  
 \newtheorem*{objectives}{Objectives}
 \newtheorem*{motivatingQuestions}{Motivating Questions}
 \else
@@ -104,6 +105,17 @@
   \begin{tcolorbox}[ breakable,pad at break*=1mm]
     \noindent\textbf{Definition}~
       \BODY
+  \end{tcolorbox}
+}
+%% OVERVIEW
+\let\overview\relax
+\let\overview\relax
+\NewEnviron{overview}{
+  \begin{tcolorbox}[ breakable,pad at break*=1mm]
+    \textbf{\Large Overview}
+    %\begin{itemize}[label=\textbullet] %% breaks Xake
+      \BODY
+    %\end{itemize}
   \end{tcolorbox}
 }
 %% SUMMARY
