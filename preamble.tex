@@ -59,17 +59,35 @@
 %\typeout{************************************************}
 
 
-\NewEnviron{motivatingQuestions}{
-  \begin{tcolorbox}[ breakable,pad at break*=1mm]
-    \textbf{\Large Motivating Questions}
-    \begin{itemize}[label=\textbullet]
-      \BODY
-    \end{itemize}
-  \end{tcolorbox}
+\NewEnviron{folder}{
+      \addcontentsline{toc}{section}{\textbf{\BODY}}
 }
 
 
-
+\ifxake
+\let\summary\relax
+\let\endsummary\relax
+\newtheorem*{summary}{Summary}
+\newtheorem*{callout}{Callout}
+\newtheorem*{objectives}{Objectives}
+\newtheorem*{motivatingQuestions}{Motivating Questions}
+\else
+%% CALLOUT
+\NewEnviron{callout}{
+  \begin{tcolorbox}[colback=blue!5, breakable,pad at break*=1mm]
+      \BODY
+  \end{tcolorbox}
+}
+%% MOTIVATING QUESTIONS
+\NewEnviron{motivatingQuestions}{
+  \begin{tcolorbox}[ breakable,pad at break*=1mm]
+    \textbf{\Large Motivating Questions}
+    %\begin{itemize}[label=\textbullet]
+      \BODY
+    %\end{itemize}
+  \end{tcolorbox}
+}
+%% OBJECTIVES
 \NewEnviron{objectives}{  
     \vspace{.5in}
       \begin{tcolorbox}[colback=orange!5, breakable,pad at break*=1mm]
@@ -79,32 +97,18 @@
     \end{itemize}
     \end{tcolorbox}
 }
-
-\NewEnviron{overview}{
-  \begin{tcolorbox}[colback=blue!5, breakable,pad at break*=1mm]
-    \textbf{\LARGE Unit Overview}
-    \begin{enumerate}[label=\textbullet]
-      \BODY
-    \end{enumerate}
-  \end{tcolorbox}
-}
-
-
-
-
+%% DEFINITION
 \let\definition\relax
 \let\enddefinition\relax
-
 \NewEnviron{definition}{
   \begin{tcolorbox}[ breakable,pad at break*=1mm]
     \noindent\textbf{Definition}~
       \BODY
   \end{tcolorbox}
 }
-
+%% SUMMARY
 \let\summary\relax
 \let\endsummary\relax
-
 \NewEnviron{summary}{
   \begin{tcolorbox}[ breakable,pad at break*=1mm]
     \textbf{\Large Summary}
@@ -113,21 +117,16 @@
     %\end{itemize}
   \end{tcolorbox}
 }
-
-
-
-
-\ifxake
-\else
+%% REMARK
 \let\remark\relax
 \let\endremark\relax
-
 \NewEnviron{remark}{
   \begin{tcolorbox}[colback=blue!5, breakable,pad at break*=1mm]
     \noindent\textbf{Remark}~
       \BODY
   \end{tcolorbox}
 }
+%% EXPLANATION
 \let\explanation\relax
 \let\endexplanation\relax
 \NewEnviron{explanation}{
@@ -135,6 +134,7 @@
     \noindent\textbf{Explanation}~
       \BODY
 }
+%% EXPLORATION
 \let\exploration\relax
 \let\endexploration\relax
 \NewEnviron{exploration}{
@@ -148,15 +148,6 @@
 
 
 
-\NewEnviron{callout}{
-  \begin{tcolorbox}[colback=blue!5, breakable,pad at break*=1mm]
-      \BODY
-  \end{tcolorbox}
-}
-
-\NewEnviron{folder}{
-      \addcontentsline{toc}{section}{\textbf{\BODY}}
-}
 
 %Notes on what envirnoment to use:  Example with Explanation in text; if they are supposed to answer- Problem; no answer - Exploration
 
