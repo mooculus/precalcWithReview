@@ -20,8 +20,8 @@
 
 \begin{motivatingQuestions}\begin{itemize}
 \item How does the process of function composition produce a new function from two other functions?
-\item In the composite function \(h(x) = f(g(x))\), what do we mean by the ``inner'' and ``outer'' function?  
-\item How does the expression for \(AV_{[a,a+h]}\) involve a composite function?
+\item In the composite function $h(x) = f(g(x))$, what do we mean by the ``inner'' and ``outer'' function?  
+\item How does the expression for $AV_{[a,a+h]}$ involve a composite function?
 \end{itemize}\end{motivatingQuestions}
 
 
@@ -33,49 +33,49 @@
 Recall that a function, by definition, is a process that takes a collection of inputs and produces a corresponding collection of outputs in such a way that the process produces one and only one output value for any single input value.  Because every function is a process, it makes sense to think that it may be possible to take two function processes and do one of the processes first, and then apply the second process to the result.
 
 \begin{example}
-Suppose we know that \(y\) is a function of \(x\) according to the process defined by \(y = f(x) = x^2 - 1\) and, in turn, \(x\) is a function of \(t\) via \(x = g(t) = 3t-4\).  Is it possible to combine these processes to generate a new function so that \(y\) is a function of \(t\)?
+Suppose we know that $y$ is a function of $x$ according to the process defined by $y = f(x) = x^2 - 1$ and, in turn, $x$ is a function of $t$ via $x = g(t) = 3t-4$.  Is it possible to combine these processes to generate a new function so that $y$ is a function of $t$?
 
 \begin{explanation}
-Since \(y\) depends on \(x\) and \(x\) depends on \(t\), it follows that we can also think of \(y\) depending directly on \(t\).  Let's looks at this as an arrow diagram with a few sample points.
+Since $y$ depends on $x$ and $x$ depends on $t$, it follows that we can also think of $y$ depending directly on $t$.  Let's looks at this as an arrow diagram with a few sample points.
 
 \begin{image}
 \includegraphics{CompositionText}
 \end{image}
 
-Notice that if we take a point such as $t=2$, we can put that value in for $t$ in the function \(x = g(t) = 3t-4\).  This will give $$x = g(-2) = 3(-2)-4=-6-4-10.$$.  Now we have an $x$-value of $-10$.  $g(x)$ take in $x$-values so we can put $-10$ into $f(x)=x^2-1$.  This will give $$f(-10)=(-10)^2-1=100-1=99.$$
+Notice that if we take a point such as $t=2$, we can put that value in for $t$ in the function $x = g(t) = 3t-4$.  This will give $$x = g(-2) = 3(-2)-4=-6-4-10.$$.  Now we have an $x$-value of $-10$.  $g(x)$ take in $x$-values so we can put $-10$ into $f(x)=x^2-1$.  This will give $$f(-10)=(-10)^2-1=100-1=99.$$
 
 You should verify that the arrow diagram above gives the correct values of $y$ that cooresponds to $t=0$ and $t=3$.
 
 Now, we would like to create a new function that will directly take in any $t$ value and give us the corresponding $y$ value.  We can use substitution and the notation of functions to determine this function.
 
-First, it's important to realize what the rule for \(f\) tells us.  In words, \(f\) says ``to generate the output that corresponds to an input, take the input and square it, and then subtract \(1\).''  In symbols, we might express \(f\) more generally by writing ``\(f(\Box) = \Box^2 - 1\).''
+First, it's important to realize what the rule for $f$ tells us.  In words, $f$ says ``to generate the output that corresponds to an input, take the input and square it, and then subtract $1$.''  In symbols, we might express $f$ more generally by writing ``$f(\Box) = \Box^2 - 1$.''
 
-Now, observing that \(y = f(x) = x^2 - 1\) and that \(x = g(t) = 3t - 4\), we can substitute the expression \(g(t)\) for \(x\) in \(f\).  Doing so,%
+Now, observing that $y = f(x) = x^2 - 1$ and that $x = g(t) = 3t - 4$, we can substitute the expression $g(t)$ for $x$ in $f$.  Doing so,%
 \begin{align*}
 y &= f(x)\\
 &= f(g(t))\\
 &= f(3t-4)\text{.}
 \end{align*}
 
-Applying the process defined by the function \(f\) to the input \(3t-4\), we see that%
+Applying the process defined by the function $f$ to the input $3t-4$, we see that%
 \begin{equation*}
 y = (3t-4)^2 - 1\text{,}
 \end{equation*}
-which defines \(y\) as a function of \(t\).
+which defines $y$ as a function of $t$.
 
-One way to think about the substitution above is that we are putting the entire expression $3t-4$ inside the input box in ``\(f(\Box) = \Box^2 - 1\).''   That is, $f \left( \boxed{3t-4} \right) = \left( \boxed{3t-4} \right) ^2 -1$.  For the substitution, we are thinking of $3t-4$ as a single object! 
+One way to think about the substitution above is that we are putting the entire expression $3t-4$ inside the input box in ``$f(\Box) = \Box^2 - 1$.''   That is, $f \left( \boxed{3t-4} \right) = \left( \boxed{3t-4} \right) ^2 -1$.  For the substitution, we are thinking of $3t-4$ as a single object! 
 
 \end{explanation}
 \end{example}
 
-When we have a situation such as in the example above where we use the output of one function as the input of another, we often say that we have \dfn{composed} two functions.  In addition, we use the notation \(h(t) = f(g(t))\) to denote that a new function, \(h\), results from composing the two functions \(f\) and \(g\).
+When we have a situation such as in the example above where we use the output of one function as the input of another, we often say that we have \dfn{composed} two functions.  In addition, we use the notation $h(t) = f(g(t))$ to denote that a new function, $h$, results from composing the two functions $f$ and $g$.
 
 
 \begin{exploration}
 \begin{enumerate}[label=\alph*.]
-\item Let \(y = p(x) = 3x - 4\) and \(x = q(t) = t^2\).   Determine a formula for \(r\) that depends only on \(t\) and not on \(p\) or \(q\).  What is the biggest difference between your work in this problem compared to the example above?
-\item Let \(t = s(z) = \frac{1}{t+4}\) and recall that \(x = q(t) = t^2\).  Determine a formula for \(x = q(s(z))\) that depends only on \(z\).
-\item Suppose that \(h(t) = \sqrt{2t^2 + 5}\).  Determine formulas for two related functions, \(y = f(x)\) and \(x = g(t)\), so that \(h(t) = f(g(t))\).
+\item Let $y = p(x) = 3x - 4$ and $x = q(t) = t^2$.   Determine a formula for $r$ that depends only on $t$ and not on $p$ or $q$.  What is the biggest difference between your work in this problem compared to the example above?
+\item Let $t = s(z) = \frac{1}{t+4}$ and recall that $x = q(t) = t^2$.  Determine a formula for $x = q(s(z))$ that depends only on $z$.
+\item Suppose that $h(t) = \sqrt{2t^2 + 5}$.  Determine formulas for two related functions, $y = f(x)$ and $x = g(t)$, so that $h(t) = f(g(t))$.
 \end{enumerate}
 \end{exploration}
 
@@ -86,20 +86,20 @@ When we have a situation such as in the example above where we use the output of
 
 \section{Composing Two Functions}
 
-Whenever we have two functions, $g$ and $f$, where the outputs of $g$ match inputs of $f$, it is possible to link the two processes together to create a new process that we call the \emph{composition} of \(f\) and \(g\).
+Whenever we have two functions, $g$ and $f$, where the outputs of $g$ match inputs of $f$, it is possible to link the two processes together to create a new process that we call the \emph{composition} of $f$ and $g$.
 
 \begin{definition}
-If \(f\) and \(g\) are functions, we define the \dfn{composition of \(f\) and \(g\)} to be the new function \(h\) given by
+If $f$ and $g$ are functions, we define the \dfn{composition of $f$ and $g$} to be the new function $h$ given by
 $$ h(t) = f(g(t)). $$
-This composition is denoted by \(h = f \circ g\), where \(f \circ g\) means the single function defined by \((f \circ g)(t) = f(g(t))\).
+This composition is denoted by $h = f \circ g$, where $f \circ g$ means the single function defined by $(f \circ g)(t) = f(g(t))$.
 \end{definition}
 
-We sometimes call \(g\) the ``inner function'' and \(f\) the ``outer function''.  It is important to note that the inner function is actually the first function that gets applied to a given input, and then then outer function is applied to the output of the inner function.  In addition, in order for a composite function to make sense, we need to ensure that the outputs of the inner function are values that it makes sense to put into the outer function so that the resulting composite function is defined.
+We sometimes call $g$ the ``inner function'' and $f$ the ``outer function''.  It is important to note that the inner function is actually the first function that gets applied to a given input, and then then outer function is applied to the output of the inner function.  In addition, in order for a composite function to make sense, we need to ensure that the outputs of the inner function are values that it makes sense to put into the outer function so that the resulting composite function is defined.
 
 In addition to the possibility that functions are given by formulas, functions can be given by tables or graphs. We can think about composite functions in these settings as well, and the following activities prompt us to consider functions given in this way.
 
 \begin{exploration}
-Let functions \(p\) and \(q\) be given by the graphs below (which are each piecewise linear - that is, parts that look like straight lines are straight lines) and let \(f\) and \(g\) be given by the table below.
+Let functions $p$ and $q$ be given by the graphs below (which are each piecewise linear - that is, parts that look like straight lines are straight lines) and let $f$ and $g$ be given by the table below.
 
 \begin{image}
 \includegraphics{composite-act-graphs}
@@ -120,14 +120,14 @@ $$
 Compute each of the following quantities or explain why they are not defined.
 
 \begin{enumerate}[label=\alph*.]
-\item \(p(q(0))\)
-\item \(q(p(0))\)
-\item \((p \circ p)(-1)\)
-\item \((f \circ g)(2)\)
-\item\((g \circ f)(3)\)
-\item \(g(f(0))\)
-\item For what value(s) of \(x\) is \(f(g(x)) = 4\)?
-\item For what value(s) of \(x\) is \(q(p(x)) = 1\)?
+\item $p(q(0))$
+\item $q(p(0))$
+\item $(p \circ p)(-1)$
+\item $(f \circ g)(2)$
+\item$(g \circ f)(3)$
+\item $g(f(0))$
+\item For what value(s) of $x$ is $f(g(x)) = 4$?
+\item For what value(s) of $x$ is $q(p(x)) = 1$?
 \end{enumerate}
 \end{exploration}
 
@@ -137,25 +137,25 @@ Compute each of the following quantities or explain why they are not defined.
 %\typeout{************************************************}
 
 \section{Composing functions in content}
-In the late 1800s, the physicist Amos Dolbear was listening to crickets chirp and noticed a pattern: how frequently the crickets chirped seemed to be connected to the outside temperature. If we let $T$ represent the temperature in degrees Fahrenheit and $N$ the number of chirps per minute, we can summarize Dolbear's observations with the following function, $T=D(N)=40+0.25T$.  Scientists who made many additional cricket chirp observations following Dolbear's initial counts found that this formauls holds with remarkable accuracy for the snowy tree cricket in temperatures ranging from \(50^\circ\) to \(85^\circ\).  This function is called Dolbear's Law.
+In the late 1800s, the physicist Amos Dolbear was listening to crickets chirp and noticed a pattern: how frequently the crickets chirped seemed to be connected to the outside temperature. If we let $T$ represent the temperature in degrees Fahrenheit and $N$ the number of chirps per minute, we can summarize Dolbear's observations with the following function, $T=D(N)=40+0.25T$.  Scientists who made many additional cricket chirp observations following Dolbear's initial counts found that this formauls holds with remarkable accuracy for the snowy tree cricket in temperatures ranging from $50^\circ$ to $85^\circ$.  This function is called Dolbear's Law.
 
 \begin{image}
 \includegraphics{CompositionText3.jpg}
 \end{image}
 %source https://en.wikipedia.org/wiki/Oecanthus_fultoni#/media/File:Snowytreecricket.JPG, public domain
 
-In what follows, we replace \(T\) with \(F\) to emphasize that temperature is measured in Fahrenheit degrees.
+In what follows, we replace $T$ with $F$ to emphasize that temperature is measured in Fahrenheit degrees.
 
 The Celcius and Fahrenheit temperature scales are connected by a linear function.  Indeed, the function that converts Fahrenheit to Celcius is%
 \begin{equation*}
 C = G(F) = \frac{5}{9}(F-32)\text{.}
 \end{equation*}
-For instance, a Fahrenheit temperature of \(32\) degrees corresponds to \(C = G(32) =\frac{5}{9}(32-32)= 0\) degrees Celcius.
+For instance, a Fahrenheit temperature of $32$ degrees corresponds to $C = G(32) =\frac{5}{9}(32-32)= 0$ degrees Celcius.
 
 \begin{exploration}
-Let \(D(N) = 40 + 0.25N\) be Dolbear's function that converts an input of number of chirps per minute to degrees Fahrenheit, and let \(G(F) = \frac{5}{9}(F-32)\) be the function that converts an input of degrees Fahrenheit to an output of degrees Celcius.
+Let $D(N) = 40 + 0.25N$ be Dolbear's function that converts an input of number of chirps per minute to degrees Fahrenheit, and let $G(F) = \frac{5}{9}(F-32)$ be the function that converts an input of degrees Fahrenheit to an output of degrees Celcius.
 \begin{enumerate}[label=\alph*.]
-\item Determine a formula for the new function \((G \circ D)(N)\) that depends only on the variable \(N\).
+\item Determine a formula for the new function $(G \circ D)(N)$ that depends only on the variable $N$.
 \item What is the meaning of the function you found in (a)?
 \item Let $H= G \circ D$. How does a plot of the function $H$ compare to the that of Dolbear's function?  Sketch a plot of $H$ on the blank axes to the right of the plot of Dolbear's function, and discuss the similarities and differences between them.  Be sure to label the vertical scale on your axes.
 \begin{image}
@@ -176,39 +176,39 @@ Let \(D(N) = 40 + 0.25N\) be Dolbear's function that converts an input of number
 
 \section{Function Composition and Average Rate of Change}
 
-Recall that the average rate of change of a function \(f\) on the interval \([a,b]\) is given by%
+Recall that the average rate of change of a function $f$ on the interval $[a,b]$ is given by%
 \begin{equation*}
 AV_{[a,b]} = \frac{f(b) - f(a)}{b-a}\text{.}
 \end{equation*}
-In the graph below, we see the familiar representation of \(AV_{[a,b]}\) as the slope of the line joining the points \((a,f(a))\) and \((b,f(b))\) on the graph of \(f\). 
+In the graph below, we see the familiar representation of $AV_{[a,b]}$ as the slope of the line joining the points $(a,f(a))$ and $(b,f(b))$ on the graph of $f$. 
 
 \begin{image}
 \includegraphics{composite-aroc-a-b}
 \end{image}
 
- In the study of calculus, we progress from the \emph{average rate of change on an interval} to the \emph{instantaneous rate of change of a function at a single value}; the core idea that allows us to move from an \emph{average} rate to an \emph{instantaneous} one is letting the interval \([a,b]\) shrink in size.
+ In the study of calculus, we progress from the \emph{average rate of change on an interval} to the \emph{instantaneous rate of change of a function at a single value}; the core idea that allows us to move from an \emph{average} rate to an \emph{instantaneous} one is letting the interval $[a,b]$ shrink in size.
 
-To think about the interval \([a,b]\) shrinking while \(a\) stays fixed, we often change our perspective and think of \(b\) as \(b = a + h\), where \(h\) measures the horizontal difference from \(b\) to \(a\).  
+To think about the interval $[a,b]$ shrinking while $a$ stays fixed, we often change our perspective and think of $b$ as $b = a + h$, where $h$ measures the horizontal difference from $b$ to $a$.  
 
 \begin{image}
 \includegraphics{composite-aroc-a-h}
 \end{image}
 
-This allows us to eventually think about \(h\) getting closer and closer to \(0\), and in that context we consider the equivalent expression%
+This allows us to eventually think about $h$ getting closer and closer to $0$, and in that context we consider the equivalent expression%
 \begin{equation*}
 AV_{[a,a+h]} = \frac{f(a+h) - f(a)}{a+h-a} = \frac{f(a+h) - f(a)}{h} 
 \end{equation*}
-for the average rate of change of \(f\) on	\([a,a+h]\).%
+for the average rate of change of $f$ on	$[a,a+h]$.%
 
 \begin{example}
-Suppose that \(f(x) = x^2\).  Determine the simplest possible expression you can find for \(AV_{[3,3+h]}\), the average rate of change of \(f\) on the interval \([3,3+h]\).
+Suppose that $f(x) = x^2$.  Determine the simplest possible expression you can find for $AV_{[3,3+h]}$, the average rate of change of $f$ on the interval $[3,3+h]$.
 
 \begin{explanation}
 By definition, we know that%
 \begin{equation*}
 AV_{[3,3+h]} = \frac{f(3+h)-f(3)}{h}.
 \end{equation*}
-Using the formula for \(f\), we see that%
+Using the formula for $f$, we see that%
 \begin{equation*}
 AV_{[3,3+h]} = \frac{(3+h)^2-(3)^2}{h}.
 \end{equation*}
@@ -217,23 +217,23 @@ Expanding the numerator and combining like terms, it follows that%
 AV_{[3,3+h]} &= \frac{(9+6h+h^2)-9}{h}\\
 &= \frac{6h + h^2}{h}\text{.}
 \end{align*}
-Removing a factor of \(h\) in the numerator and observing that \(h \ne 0\), we can simplify and find that%
+Removing a factor of $h$ in the numerator and observing that $h \ne 0$, we can simplify and find that%
 \begin{align*}
 AV_{[3,3+h]} &= \frac{h(6 + h)}{h}\\
 &= 6+h\text{.}
 \end{align*}
-Hence, \(AV_{[3,3+h]} = 6+h\), which is the average rate of change of \(f(x) = x^2\) on the interval \([3,3+h]\).  
+Hence, $AV_{[3,3+h]} = 6+h$, which is the average rate of change of $f(x) = x^2$ on the interval $[3,3+h]$.  
 \end{explanation}
 
 \end{example}
 
 \begin{exploration}
-Let \(f(x) = 2x^2 - 3x + 1\) and \(g(x) = \frac{5}{x}\).%
+Let $f(x) = 2x^2 - 3x + 1$ and $g(x) = \frac{5}{x}$.%
 \begin{enumerate}[label=\alph*.]
-\item Compute \(f(1+h)\) and expand and simplify the result as much as possible by combining like terms.
-\item Determine the most simplified expression you can for the average rate of change of \(f\) on the interval \([1,1+h]\). That is, determine \(AV_{[1,1+h]}\) for \(f\) and simplify the result as much as possible.
-\item Compute \(g(1+h)\). Is there any valid algebra you can do to write \(g(1+h)\) more simply?
-\item Determine the most simplified expression you can for the average rate of change of \(g\) on the interval \([1,1+h]\). That is, determine \(AV_{[1,1+h]}\) for \(g\) and simplify the result.
+\item Compute $f(1+h)$ and expand and simplify the result as much as possible by combining like terms.
+\item Determine the most simplified expression you can for the average rate of change of $f$ on the interval $[1,1+h]$. That is, determine $AV_{[1,1+h]}$ for $f$ and simplify the result as much as possible.
+\item Compute $g(1+h)$. Is there any valid algebra you can do to write $g(1+h)$ more simply?
+\item Determine the most simplified expression you can for the average rate of change of $g$ on the interval $[1,1+h]$. That is, determine $AV_{[1,1+h]}$ for $g$ and simplify the result.
 \end{enumerate}
 \end{exploration}
 
@@ -243,13 +243,13 @@ Let \(f(x) = 2x^2 - 3x + 1\) and \(g(x) = \frac{5}{x}\).%
 %\typeout{************************************************}
 
 \begin{summary}\begin{itemize}
-\item When defined, the composition of two functions \(f\) and \(g\) produces a single new function \(f \circ g\) according to the rule \((f \circ g)(x) = f(g(x))\).  We note that \(g\) is applied first to the input \(x\), and then \(f\) is applied to the output \(g(x)\) that results from \(g\).
-\item In the composite function \(h(x) = f(g(x))\), the ``inner'' function is \(g\) and the \(outer\) function is \(f\).  Note that the inner function gets applied to \(x\) first, even though the outer function appears first when we read from left to right. 
-\item Because the expression \(AV_{[a,a+h]}\) is defined by%
+\item When defined, the composition of two functions $f$ and $g$ produces a single new function $f \circ g$ according to the rule $(f \circ g)(x) = f(g(x))$.  We note that $g$ is applied first to the input $x$, and then $f$ is applied to the output $g(x)$ that results from $g$.
+\item In the composite function $h(x) = f(g(x))$, the ``inner'' function is $g$ and the $outer$ function is $f$.  Note that the inner function gets applied to $x$ first, even though the outer function appears first when we read from left to right. 
+\item Because the expression $AV_{[a,a+h]}$ is defined by%
 \begin{equation*}
 AV_{[a,a+h]} = \frac{f(a+h) - f(a)}{h} 
 \end{equation*}
-and this includes the quantity \(f(a+h)\), the average rate of change of a function on the interval \([a,a+h]\) always involves the evaluation of a composite function expression.  This idea plays a crucial role in the study of calculus.
+and this includes the quantity $f(a+h)$, the average rate of change of a function on the interval $[a,a+h]$ always involves the evaluation of a composite function expression.  This idea plays a crucial role in the study of calculus.
 \end{itemize}\end{summary}
 
 
