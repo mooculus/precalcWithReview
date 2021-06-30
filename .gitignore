@@ -35,6 +35,7 @@
 *.sagetex.scmd
 #*
 *.synctex.gz(busy)
+*.term
 auto/
 *.fdb_latexmk
 *.fls
