@@ -81,14 +81,14 @@ Let $I(t)$ denote the value of the \textdollar{}$20000$ after $t$ years if it is
 
 In the exploration above, we encountered the functions $I(t)$ and $V(t)$ that had the same basic structure.  Each can be written in the form $g(t) = ab^t$ where $a$ and $b$ are positive constants and $b \ne 1$.  Based on our earlier work with transformations, we know that the constant $a$ is a vertical scaling factor, and thus the main behavior of the function comes from $b^t$, which we call an ``exponential function''.%
 \begin{definition}
-Let $b$ be a real number such that $b \gt 0$ and $b \ne 1$.  We call the function defined by%
+Let $b$ be a real number such that $b > 0$ and $b \ne 1$.  We call the function defined by%
 $$f(t) = b^t$$
 an \dfn{exponential function} with \dfn{base} $b$.%
 \end{definition}
 
 For an exponential function $f(t) = b^t$, we note that $f(0) = b^0 = 1$, so an exponential function of this form always passes through $(0,1)$.  In addition, because a positive number raised to any power is always positive (for instance, $2^{10} = 1096$ and $2^{-10} = \frac{1}{2^{10}} = \frac{1}{2096}$), the output of an exponential function is also always positive.  In particular, $f(t) = b^t$ is never zero and thus has no $x$-intercepts.
 
-Because we will be frequently interested in functions such as $I(t)$ and $V(t)$ with the form $ab^t$, we will also refer to functions of this form as ``exponential'', understanding that technically these are vertical stretches of exponential functions according to our definition of exponential function.  In the exploration above, we found that $I(t) = 20000(1.08)^t$ and $V(t) = 20000(0.88)^t$.  It is natural to call $1.08$ the ``growth factor''  of $I$ and similarly $0.88$ the growth factor of $V$.  In addition, we note that these values stem from the actual growth rates:  $0.08$ for $I$ and $-0.12$ for $V$, the latter being negative because value is depreciating.  In general, for a function of form $f(t) = ab^t$, we call $b$ the \dfn{growth factor}. \index{exponential function!growth factor}  Moreover, if $b = 1+r$, we call $r$ the \dfn{growth rate}. \index{exponential function!growth rate}  Whenever $b \gt 1$, we often say that the function $f$ is exhibiting ``exponential growth'', wherease if $0 \lt b \lt 1$, we say $f$ exhibits ``exponential decay''. \index{exponential function!exponential decay}
+Because we will be frequently interested in functions such as $I(t)$ and $V(t)$ with the form $ab^t$, we will also refer to functions of this form as ``exponential'', understanding that technically these are vertical stretches of exponential functions according to our definition of exponential function.  In the exploration above, we found that $I(t) = 20000(1.08)^t$ and $V(t) = 20000(0.88)^t$.  It is natural to call $1.08$ the ``growth factor''  of $I$ and similarly $0.88$ the growth factor of $V$.  In addition, we note that these values stem from the actual growth rates:  $0.08$ for $I$ and $-0.12$ for $V$, the latter being negative because value is depreciating.  In general, for a function of form $f(t) = ab^t$, we call $b$ the \dfn{growth factor}. \index{exponential function!growth factor}  Moreover, if $b = 1+r$, we call $r$ the \dfn{growth rate}. \index{exponential function!growth rate}  Whenever $b > 1$, we often say that the function $f$ is exhibiting ``exponential growth'', wherease if $0 < b < 1$, we say $f$ exhibits ``exponential decay''. \index{exponential function!exponential decay}
 
 \begin{exploration}
 Suppose that at age $20$ you have \textdollar{}$20000$ and you can choose between one of two ways to use the money:  you can invest it in a mutual fund that will, on average, earn $8$\% interest annually, or you can purchase a new automobile that will, on average, depreciate $12$\% annually.  Let's explore how the $20000$ changes over time.%
@@ -207,7 +207,7 @@ Recall that a function is increasing on an interval if its value always increasi
 \includegraphics{growth-decr-CCU.pdf}
 \end{image}
 
-If we consider an exponential function $f$ with a growth factor $b > 1$, such as the function pictured in the left-hand graph above, then the function is always increasing because higher powers of $b$ are greater than lesser powers (for example, $(1.2)^3 \gt (1.2)^2$).  On the other hand, if $0 \lt b \lt 1$, then the exponential function will be decreasing because higher powers of positive numbers less than $1$ get smaller (e.g., $(0.9)^3 \lt (0.9)^2$), as seen for the exponential function in the right-hand graph above.
+If we consider an exponential function $f$ with a growth factor $b > 1$, such as the function pictured in the left-hand graph above, then the function is always increasing because higher powers of $b$ are greater than lesser powers (for example, $(1.2)^3 > (1.2)^2$).  On the other hand, if $0 < b < 1$, then the exponential function will be decreasing because higher powers of positive numbers less than $1$ get smaller (e.g., $(0.9)^3 < (0.9)^2$), as seen for the exponential function in the right-hand graph above.
 
 An additional trend is apparent in the graphs in above.  Each graph bends upward and is therefore concave up.  We can better understand why this is so by considering the average rate of change of both $f$ and $g$ on consecutive intervals of the same width.  We choose adjacent intervals of length $1$ and note particularly that as we compute the average rate of change of each function on such intervals,%
 \begin{equation*}
@@ -253,9 +253,9 @@ From the data in the first table about $f(t)$ we see that the average rate of ch
 For an exponential function of the form $f(t) = ab^t$ where $a$ and $b$ are both positive with $b \ne 1$,\leavevmode%
 \begin{itemize}[label=\textbullet]
 \item{}\hypertarget{p-1228}{}%
-if $b \gt 1$, then $f$ is always increasing and always increases at an increasing rate;%
+if $b > 1$, then $f$ is always increasing and always increases at an increasing rate;%
 \item{}\hypertarget{p-1229}{}%
-if $0 \lt b \lt 1$, then $f$ is always decreasing and always decreases at an increasing rate.%
+if $0 < b < 1$, then $f$ is always decreasing and always decreases at an increasing rate.%
 \end{itemize}
 \end{callout}
 
@@ -268,7 +268,7 @@ For each of the following prompts, give an example of a function that satisfies 
 \begin{enumerate}[label=\alph*.]
 \item A function $p$ that is always decreasing and decreases at a constant rate.
 \item A function $q$ that is always increasing and increases at an increasing rate.
-\item A function $r$ that is always increasing for $t \lt 2$, always decreasing for $t \gt 2$, and is always changing at a decreasing rate.
+\item A function $r$ that is always increasing for $t < 2$, always decreasing for $t > 2$, and is always changing at a decreasing rate.
 \item A function $s$ that is always increasing and increases at a decreasing rate.  (Hint: to find a formula, think about how you might use a transformation of a familiar function.)
 \item A function $u$ that is always decreasing and decreases at a decreasing rate.
 
@@ -287,7 +287,7 @@ For each of the following prompts, give an example of a function that satisfies 
 \begin{itemize}
 \item The domain of any exponential function is the set of all real numbers and the range of any exponential function is the set of all positive real numbers.
 \item The $y$-intercept of the exponential function $f(t) = ab^t$ is $(0,a)$ and the function has no $x$-intercepts.
-\item If $b \gt 1$, then the exponential function is always increasing and always increases at an increasing rate.  If $0 \lt b \lt 1$, then the exponential function is always decreasing and always decreases at an increasing rate.
+\item If $b > 1$, then the exponential function is always increasing and always increases at an increasing rate.  If $0 < b < 1$, then the exponential function is always decreasing and always decreases at an increasing rate.
 \end{itemize}
 \end{itemize}\end{summary}
 
