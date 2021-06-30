@@ -1,28 +1,37 @@
 \documentclass{ximera}
 
 \input{../preamble}
-\author{}
+\author{Bobby Ramsey}
 \license{Creative Commons Attribution-ShareAlike 4.0 International License}
-\acknowledgement{}
+
+\acknowledgement{https://activecalculus.org/prelude/sec-changing-combining.html}
 
 \title{Algebra of Functions}
+
+
+%\item Algebra of Functions
+%\begin{itemize}
+%	\item Add, subtract, multiply, and divide functions 
+%	\item Think of complicated functions as objects in their own right 
+%	\item Evaluate complicated functions 
+%	\item Break more complicated functions into famous function %(prep for product and quotient rule) 
+%	\item Undertand functions via graphs, tables, algebraically, and abstractly 
+%\end{itemize}
 
 \begin{document}
 \begin{abstract}
   
 \end{abstract}
+\licenseAPC
 \maketitle
-
 
 %\typeout{************************************************}
 %\typeout{Motivating Questions}
 %\typeout{************************************************}
 
-\begin{motivatingQuestions}\begin{itemize}
-\item 
-\item 
-\item 
-\end{itemize}\end{motivatingQuestions}
+\begin{motivatingQuestions} \begin{itemize}
+	\item We know that we can add, subtract, multiply, and divide numbers. What kinds of operations can we perform on functions?
+\end{itemize} \end{motivatingQuestions}
 
 
 %\typeout{************************************************}
@@ -31,19 +40,349 @@
 
 \section{Introduction}
 
+	In arithmetic, we execute processes where we take two numbers to generate a new number. For example, 
+	$2 + 3 = 5$. The number $5$ results from adding the numbers $2$ and $3$.
+	Similarly, we can multiply two numbers to generate a new one: $2 \cdot 3 = 6$.
+	
+	We can work similarly with functions. Just as we can add, subtract, multiply, and divide numbers, we can also add, subtract, multiply, and divide 
+	functions to create a new function from two or more given functions.
+
+\section{Algebra of Functions}
+
+	In most mathematics up until calculus, the main object we study is \emph{numbers}. We ask questions such as
+	\begin{itemize}[label=\textbullet]
+		\item ``What number(s) form solutions to the equation $x^2 - 4x - 5 = 0$?''\\
+		\item ``What number is the slope of the line $3x - 4y = 7$?''\\
+		\item ``What number is generated as output by the function $f(x) = \sqrt{x^2 + 1}$ by the input $x = -2$?''
+	\end{itemize}
+	
+	Certainly we also study overall patterns as seen in functions and equations, but this usually occurs through an examination of numbers themselves, 
+	and we think of numbers as the main objects being acted upon.
+	
+	This changes in calculus.  In calculus, the fundamental objects being studied are functions themselves.  A function is a much more sophisticated 
+	mathematical object than a number, in part because a function can be thought of in terms of its graph, which is an infinite collection of ordered 
+	pairs of the form $(x,f(x))$.
+	
+	It is often helpful to look at a function's formula and observe algebraic structure.  For instance, given the quadratic function
+	\[ q(x) = -3x^2 + 5x - 7 \]
+	we might benefit from thinking of this as the sum of three simpler functions:  the constant function $c(x) = -7$, the linear function $s(x) = 5x$ that 
+	passes through the point $(0,0)$ with slope $m = 5$, and the concave down basic quadratic function $w(x) = -3x^2$.  
+	Indeed, each of the simpler functions $c$, $s$, and $w$ contribute to making $q$ be the function that it is.  Likewise, if we were interested in 
+	the function $p(x) = (3x^2 + 4)(9 - 2x^2)$, it might be natural to think about the two simpler functions $f(x) = 3x^2 + 4$ and $g(x) = 9 - 2x^2$ 
+	that are being multiplied to produce $p$.
+	
+	We thus naturally arrive at the ideas of adding, subtracting, multiplying, or dividing two or more functions, and hence introduce the following definitions and notation.
+	\begin{definition}
+		Let $f$ and $g$ be functions. 
+		\begin{itemize}[label=\textbullet]
+			\item The \dfn{sum of $f$ and $g$} is the function $f + g$ defined by $(f+g)(x) = f(x) + g(x)$.\\
+			\item The \dfn{difference of $f$ and $g$} is the function $f - g$ defined by $(f-g)(x) = f(x) - g(x)$.\\
+			\item The \dfn{product of $f$ and $g$} is the function $f \cdot g$ defined by $(f \cdot g)(x) = f(x) \cdot g(x)$.\\
+			\item The \dfn{quotient of $f$ and $g$} is the function $\dfrac{f}{g}$ defined by $\left( \dfrac{f}{g} \right)(x) = \dfrac{f(x)}{g(x)}$ for all $x$ such that $g(x) \neq 0$.
+		\end{itemize}
+	\end{definition}
+	We are thinking here about $f$ and $g$ being functions with real numbers as outputs. Performing these operations on the functions means applying 
+	the corresponding operation to the output values of the functions.
+	
+	\begin{example}
+		Consider the functions $f$ and $g$ defined by the table of values below. \\
+		\begin{minipage}{.5\textwidth}
+		  	\begin{center}
+				$\begin{array}{||c|c||}
+					\hline 
+					\hline
+					x & f(x)\\
+					\hline
+					2&0\\
+					\hline
+					4&3\\
+					\hline
+					6&7\\
+					\hline
+					8& -2\\
+					\hline 
+					\hline
+				\end{array}$
+			\end{center}
+		\end{minipage}% This must go next to `\end{minipage}`
+		\begin{minipage}{.5\textwidth}
+		  	\begin{center}
+				$\begin{array}{||c|c||}
+					\hline 
+					\hline
+					x & g(x)\\
+					\hline
+					1&5\\
+					\hline
+					2&9\\
+					\hline
+					3&-1\\
+					\hline
+					4& 4\\
+					\hline 
+					\hline
+				\end{array}$
+			\end{center}
+		\end{minipage}
+		\begin{enumerate}
+			\item Determine the value of $(f+g)(2)$.\\
+			\item Determine the value of $(f-g)(4)$.\\
+			\item Determine the value of $(f \cdot g)(2)$.\\
+			\item Determine the value of  $\left( \dfrac{f}{g} \right)(4)$.\\
+			\item What can we say about the value of $(f+g)(3)$?\\
+		\end{enumerate}
+		\begin{explanation}
+			\begin{enumerate}
+				\item We know that $(f+g)(2) = f(2)+g(2)$. From the tables above $f(2) = 0$ and $g(2)=9$, so $(f+g)(2)=0+9 = 9$.
+				
+				\item Since $f(4)=3$ and $g(4)=4$, we know $(f-g)(4)=3-4 = -1$.
+
+				\item $(f\cdot g)(2) = f(2)\cdot g(2) = 0 \cdot 9 = 0$.
+
+				\item $\left( \dfrac{f}{g}\right)(4) = \dfrac{f(4)}{g(4)}=\dfrac{3}{4}$.
+				
+				\item The value of $(f+g)(3)$ would be given by $f(3)+g(3)$. we are given the value of $g(3)$ in the table above, but there is no listed
+					value for $f(3)$. That means $f(3)$ is undefined, since $3$ is not a valid input. $(f+g)(3)$ is undefined.
+			\end{enumerate}
+		\end{explanation}
+	\end{example}	
+
+
+	\begin{example}
+		Consider the functions $f$ and $g$ defined by \\
+		
+		\begin{minipage}{.5\textwidth}
+		  	\begin{center}
+				\begin{tikzpicture}
+					\begin{axis}[
+						xmin=-3.3, xmax=3.3, ymin=-2.3,ymax=5.3,    
+						width=0.75\linewidth,
+		                		minor ytick=,minor xtick=,
+			                	xtick={-3,...,3}, ytick={-2,...,5},
+		                		clip=false,
+						grid style={dashed, gray!40}
+						]
+						\addplot[color=penColor, very thick, domain=-3.3:-1]{-0.5*x+2.5} node[pos=0.5, above]{\Large{$f$}}; 
+		        			\addplot[soliddot] coordinates {(-1,3)};
+		
+						\path[draw, color=penColor, very thick] (axis cs:-1,1) --  (axis cs:1,4);
+		               			\addplot[hollowdot] coordinates {(-1,1)};
+		        			\addplot[soliddot, color=penColor] coordinates {(1,4)};
+		
+						\addplot[color=penColor, very thick, domain=1:3.3]{(-3/2)*(x-1)+1}; 
+						\addplot[hollowdot] coordinates {(1,1)};
+		               			\addplot[hollowdot] coordinates {(2,-0.5)};
+					\end{axis}
+				\end{tikzpicture}
+			\end{center}
+		\end{minipage}% This must go next to `\end{minipage}`
+		\begin{minipage}{.5\textwidth}
+		  	\begin{center}
+				\begin{tikzpicture}
+					\begin{axis}[
+						xmin=-3.3, xmax=3.3, ymin=-2.3,ymax=5.3,    
+						width=0.75\linewidth,
+		                		minor ytick=,minor xtick=,
+			                	xtick={-3,...,3}, ytick={-2,...,5},
+		                		clip=false,
+						grid style={dashed, gray!40}
+						]
+						\addplot[color=penColor, very thick, domain=-2.5:1]{-x^2+4} node[pos=0.55, above left]{\Large{$g$}}; 
+		        			\addplot[soliddot] coordinates {(1,3)};
+		               			\addplot[hollowdot] coordinates {(0,4)};
+		        			\addplot[soliddot, color=penColor] coordinates {(0,1)};
+		
+						\addplot[color=penColor, very thick, domain=1:3.3]{-x+3}; 
+		               			\addplot[hollowdot] coordinates {(1,2)};
+	             				\addplot[hollowdot] coordinates {(2,1)};    					
+					\end{axis}
+				\end{tikzpicture}
+			\end{center}
+		\end{minipage}
+		\begin{enumerate}
+			\item Determine the exact value of $(f+g)(0)$.\\
+			\item Determine the exact value of $(g-f)(1)$.\\
+			\item Determine the exact value of $(f \cdot g)(-1)$.\\
+			\item Are there any values of $x$ for which $\left( \dfrac{f}{g} \right)(x)$ is undefined?  
+				If not, explain why.  If so, determine the values and justify your answer.\\
+			\item For what values of $x$ is $(f \cdot g)(x) = 0$?  Why?\\
+		\end{enumerate}
+		\begin{explanation}
+			\begin{enumerate}
+				\item The notation $(f+g)(0)$ means we are plugging the input $0$ into both functions $f$ and $g$, then \emph{adding} the results.
+					That is, $(f+g)(0) = f(0) + g(0)$. From the graphs above we see $f(0) = \frac{5}{2}$ and $g(0) = 1$. That means
+					$(f+g)(0) = \frac{5}{2} + 1 = \frac{7}{2}$.
+
+				\item The notation $(g-f)(1)$ means we are plugging the input $1$ into both functions $g$ and $f$, then \emph{subtracting} the
+					 results.That is, $(g-f)(1) = g(1) - f(1)$. From the graphs above we see $f(1) = 4$ and $g(1) = 3$. That means
+					$(g-f)(1) = 3 - 4 = -1$.					
+
+				\item The notation $(f\cdot g)(-1)$ means we are plugging the input $-1$ into both functions $f$ and $g$, then \emph{multiplying}
+					 the results. That is, $(f\cdot g)(-1) = f(-1) \cdot g(-1)$. 
+					 From the graphs above we see $f(-1) = 3$ and $g(-1) = 3$, which tells us 
+					$(f\cdot g)(-1) = 3 \cdot 3 = 9$.
+
+				\item For any valid value of the input $x$,  $\left(\dfrac{f}{g}\right)(x) = \dfrac{f(x)}{g(x)}$. In order for that fraction to be defined
+					$f(x)$ has to exist, $g(x)$ has to exist, and $g(x) \neq 0$ since division by zero is undefined. 
+					From the graphs above, $f$ is defined for all $x$-values except $x=2$, and $g$ is defined for all $x$-values except $x=2$. That
+					tells us that $\left( \dfrac{f}{g} \right)(2)$ is undefined. Notice that $g(-2)=0$ and $g(3)=0$? That means 
+					$\left( \dfrac{f}{g}\right)(x)$ is undefined at $x=-2$ and $x=3$ as well
+					
+				\item Since $( f \cdot g)(x) = f(x) \cdot g(x)$, if an $x$-value makes $(f \cdot g)(x)=0$, then $f(x)\cdot g(x)= 0$. The only
+					way a product of two real numbers can be zero is if at least one of the factors is itself zero. That means we are looking
+					for all of the $x$-values satisfying either $f(x)=0$ or $g(x)=0$. (In other words, we're looking for the $x$-intercepts of 
+					these graphs.)\\
+					
+					From the graph of $g$ we see that $g(-2)=0$ and $g(3)=0$. The graph of $f$ crosses the $x$-axis somewhere between the
+					points $(1,0)$ and $(2,0)$, but we will have to be more careful to find the exact value we are looking for. \\
+					
+					Notice that the graph of $f$ looks to be a straight line if we only look at those $x$-values with $x>1$. The straight line that
+					$f$ follows travels through the point $(1,1)$ and $(3, -2)$. Its slope is given by $m = \frac{-2 - 1}{3 - 1} = -\frac{3}{2}$. Since
+					the line contains the point $(1,1)$, the point-slope form of the equation of the line can be written as $y-1 = -\frac{3}{2}(x-1)$.
+					This line crosses the $x$-axis when its $y$-coordinate is zero. Solving for the corresponding $x$-value gives us:
+					\begin{align*}
+						0 - 1 &= -\frac{3}{2}(x-1)\\
+						-1 &= -\frac{3}{2}(x-1)\\
+						-\frac{2}{3} \cdot (-1) &= -\frac{2}{3} \cdot \left( -\frac{3}{2}(x-1) \right)\\
+						\frac{2}{3} &= x-1\\
+						\frac{2}{3} + 1 &= x\\
+						\frac{5}{3} &= x.
+					\end{align*}
+					That means the point $\left( \frac{5}{3}, 0 \right)$ is on the graph of $f$, so $f\left( \frac{5}{3} \right) = 0$.\\
+					
+					The $x$-values with $(f \cdot g)(x) = 0$ are $x=-2$, $x=\frac{5}{3}$, and $x=3$.
+			\end{enumerate}
+		\end{explanation}	
+	\end{example}
+
+	Consider the functions $f(x) = 2x$ and $g(x) = x$. These are functions whose graphs are straight lines with slopes $2$ and $1$ respectively.
+
+  	\begin{image}
+		\begin{tikzpicture}
+			\begin{axis}[
+				xmin=-4.3, xmax=4.3, ymin=-10.3,ymax=10.3,    
+				width=0.75\linewidth,
+                		minor ytick=,minor xtick=,
+	                	xtick={-4,...,4}, ytick={-10,-8,...,10},
+                		clip=false,
+				grid style={dashed, gray!40}
+				]
+				\addplot+[color=penColor, very thick, domain=-4.3:4.3]{2*x} node[pos=0.85, above]{\Large{$f$}}; 
+				\addplot+[color=penColor2, very thick, domain=-4.3:4.3]{x} node[pos=0.85, below right]{\Large{$g$}}; 
+			\end{axis}
+		\end{tikzpicture}
+	\end{image}
+
+	Let's look at a few points on these graphs. Since $f(1)=2$ and $g(1)=1$, the sum of those output values is $3$, so we'll mark the point $(1,3)$.
+	Similarly $f(2)=4$ and $g(2)=2$, with $4+2=6$ so we'll mark the point $(2,6)$. As $f(3)=6$ and $g(3)=3$, we'll also mark $(3,9)$.
+  	\begin{image}
+		\begin{tikzpicture}
+			\begin{axis}[
+				xmin=-4.3, xmax=4.3, ymin=-10.3,ymax=10.3,    
+				width=0.75\linewidth,
+                		minor ytick=,minor xtick=,
+	                	xtick={-4,...,4}, ytick={-10,-8,...,10},
+                		clip=false,
+				grid style={dashed, gray!40}
+				]
+				\addplot+[color=penColor, very thick, domain=-4.3:4.3]{2*x} node[pos=0.85, above]{\Large{$f$}}; 
+				\addplot+[color=penColor2, very thick, domain=-4.3:4.3]{x} node[pos=0.85, below right]{\Large{$g$}}; 
+%				\addplot+[color=penColor3, very thick, domain=-3.3:3.3]{3*x} node[pos=0.85, above left]{\Large{$f+g$}}; 
+								
+        			\addplot[soliddot, color=penColor] coordinates {(2,4)};
+         			\addplot[soliddot, color=penColor2] coordinates {(2,2)};
+         			\addplot[soliddot, color=penColor3] coordinates {(2,6)};
+
+        			\addplot[soliddot, color=penColor] coordinates {(1,2)};
+         			\addplot[soliddot, color=penColor2] coordinates {(1,1)};
+         			\addplot[soliddot, color=penColor3] coordinates {(1,3)};
+	
+	       			\addplot[soliddot, color=penColor] coordinates {(3,6)};
+         			\addplot[soliddot, color=penColor2] coordinates {(3,3)};
+         			\addplot[soliddot, color=penColor3] coordinates {(3,9)};
+			\end{axis}
+		\end{tikzpicture}
+	\end{image}
+	Notice that the points we've marked $(1,3)$, $(2, 6)$, and $(3,9)$ are starting to form a straight line. 
+	Let's connect those dots to examine the line constructed this way.
+  	\begin{image}
+		\begin{tikzpicture}
+			\begin{axis}[
+				xmin=-4.3, xmax=4.3, ymin=-10.3,ymax=10.3,    
+				width=0.75\linewidth,
+                		minor ytick=,minor xtick=,
+	                	xtick={-4,...,4}, ytick={-10,-8,...,10},
+                		clip=false,
+				grid style={dashed, gray!40}
+				]
+				\addplot+[color=penColor, very thick, domain=-4.3:4.3]{2*x} node[pos=0.85, above]{\Large{$f$}}; 
+				\addplot+[color=penColor2, very thick, domain=-4.3:4.3]{x} node[pos=0.85, below right]{\Large{$g$}}; 
+				\addplot+[color=penColor3, very thick, domain=-3.3:3.3]{3*x} node[pos=0.85, above left]{\Large{$f+g$}}; 
+								
+        			\addplot[soliddot, color=penColor] coordinates {(2,4)};
+         			\addplot[soliddot, color=penColor2] coordinates {(2,2)};
+         			\addplot[soliddot, color=penColor3] coordinates {(2,6)};
+
+        			\addplot[soliddot, color=penColor] coordinates {(1,2)};
+         			\addplot[soliddot, color=penColor2] coordinates {(1,1)};
+         			\addplot[soliddot, color=penColor3] coordinates {(1,3)};
+	
+	       			\addplot[soliddot, color=penColor] coordinates {(3,6)};
+         			\addplot[soliddot, color=penColor2] coordinates {(3,3)};
+         			\addplot[soliddot, color=penColor3] coordinates {(3,9)};
+			\end{axis}
+		\end{tikzpicture}
+	\end{image}
+	The graph obtained this way is the graph of $f+g$.  This graph is a straight line passing through the points $(0,0)$ and $(1,3)$, so the line has
+	equation $y=3x$.
+	
+	For a given value of $x$, we know $(f+g)(x) = f(x)+g(x)$. This means $(f+g)(x) =2x + x = 3x$ by combining the like terms. Notice that this 
+	aligns with the graph we found above.
+
+	
+	When we work in applied settings with functions that model phenomena in the world around us, it is often useful to think carefully about the units of 
+	various quantities. Analyzing units can help us both understand the algebraic structure of functions and the variables involved, as well as assist us in 
+	assigning meaning to quantities we compute. We have already seen this with the notion of average rate of change: if a function $P(t)$ measures the 
+	population in a city in year $t$ and we compute $AV_{[5, 11]}$, then the units on $AV_{[5, 11]}$ are ``people per year,'' and the value of 
+	$AV_{[5, 11]}$ is telling us the average rate at which the population changes in people per year on the time interval from year $5$ to year $11$.
+
+
+	\begin{example}
+		Say that an investor is regularly purchasing stock in a particular company. Let $N(t)$ represent the number of shares owned on day $t$,
+		 where $t = 0$ represents the first day on which shares were purchased. Let $S(t)$ give the value of one share of the stock on day $t$; 
+		 note that the units on $S(t)$ are dollars per share. How is the total value, $V(t)$, of the held stock on day $t$ determined?
+		\begin{explanation}
+			Observe that the units on $N(t)$ are ``shares'' and the units on $S(t)$ are ``dollars per share''.  Thus when we compute the product
+			\[N(t) \, \text{shares}  \cdot S(t) \, \text{dollars per share}\text{,}\]
+			it follows that the resulting units are ``dollars'', which is the total value of held stock.  Hence,
+			\[V(t) = N(t) \cdot S(t)\text{.} \]
+		\end{explanation}
+	\end{example}
 
 
 
-
+	\begin{exploration}
+		Let $f$ be a function that measures a car's fuel economy in the following way. Given an input velocity $v$ in miles per hour, $f(v)$ is the number 
+		of gallons of fuel that the car consumes per mile (i.e., ``gallons per mile''). We know that $f(60) = 0.04$.
+		\begin{enumerate}
+			\item What is the meaning of the statement ``$f(60) = 0.04$'' in the context of the problem? That is, what does this say about 
+				the car's fuel economy? Write a complete sentence.
+			\item Consider the function $g(v) = \frac{1}{f(v)}$. What is the value of $g(60)$? What are the units on $g$? What does $g$ measure? 
+			\item Consider the function $h(v) = v \cdot f(v)$. What is the value of $h(60)$? What are the units on $h$? What does $h$ measure?
+			\item Do $f(60)$, $g(60)$, and $h(60)$ tell us fundamentally different information, or are they all essentially saying the same thing?  Explain.
+			\item Suppose we also know that $f(70) = 0.045$. Find the average rate of change of $f$ on the interval $[60,70]$. What are the units 
+				on the average rate of change of $f$? What does this quantity measure? Write a complete sentence to explain.
+		\end{enumerate}
+	\end{exploration}	
 %\typeout{************************************************}
 %\typeout{Summary}
 %\typeout{************************************************}
 
-\begin{summary}\begin{itemize}
-\item 
-\item 
-\item
-\end{itemize}\end{summary}
+%\begin{summary}
+%\item 
+%\item 
+%\item
+%\end{summary}
 
 
 

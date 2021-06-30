@@ -1,0 +1,55 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\author{Bobby Ramsey}
+\license{Creative Commons Attribution-ShareAlike 4.0 International License}
+\acknowledgement{https://github.com/mooculus/calculusWithReview}
+
+\begin{document}
+\begin{exercise}
+
+	The function given by $f(x)=3(x-2)^2+1$ (graphed below) is not a one-to-one function on $(-\infty, \infty)$.  If we restrict the domain, however,
+	it can be made to be one-to-one.
+	
+	\begin{image}
+		\begin{tikzpicture}
+			\begin{axis}[
+			            xmin=-2, xmax=5, ymin=0,ymax=5,    
+			            unit vector ratio*=1 1 1,
+			            axis lines =middle, xlabel=$x$, ylabel=$y$,
+			            every axis y label/.style={at=(current axis.above origin),anchor=south},
+			            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+			            xtick={-2,...,5}, ytick={0,...,5},
+			            grid=major,width=4in,
+			            grid style={dashed, gridColor},
+			          ]
+			          \addplot+[color=penColor,very thick,smooth,domain=0:4] {3(x-2)^2+1};
+		        \end{axis}
+		\end{tikzpicture}
+	\end{image}
+	
+	Find a formula for $f^{-1}(x)$ when $f$ is restricted to $(-\infty, 2]$.
+	
+	
+	\[ f^{-1}(x) = \answer{2-\sqrt{\frac{x-1}{3}}}\]
+	\begin{hint}
+		We're starting with $y = f(x)$, so that's:
+		\[ y = \answer{3(x-2)^2+1} \]
+		
+		Swap $x$ and $y$.
+		\[ x = \answer{3(y-2)^2+1} \]
+		
+		Solving for $y$ you find two solutions.  They are:
+		\begin{align*}
+			y &= 2-\sqrt{\answer{\frac{x-1}{3}}} \\
+			y &= 2+\sqrt{\answer{\frac{x-1}{3}}}
+		\end{align*}
+		
+		The domain of $f$ was restricted to $(-\infty, 2]$, which means we want the range of $f^{-1}$ to be $(-\infty, 2]$.
+		Which of the two solutions you found give outputs which are not greater than $2$?
+	\end{hint}
+
+
+\end{exercise}
+\end{document}

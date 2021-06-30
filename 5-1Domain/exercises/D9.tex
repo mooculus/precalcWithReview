@@ -1,0 +1,43 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\author{Bobby Ramsey}
+\license{Creative Commons Attribution-ShareAlike 4.0 International License}
+
+\begin{document}
+
+	A right circular cone has a \textbf{fixed slant height} of  7 m.  Call $h$ the height of the cone and $r$ the radius, as in the figure below.
+	\begin{image}
+		\begin{tikzpicture}[scale=0.5]
+			%\draw[penColor,very thick] (0,4) ellipse (4 and 1);
+			\draw[very thick,penColor!20!background] (2,2) arc (0:180:2 and .5);% top half of ellipse
+			\draw[very thick,penColor] (-2,2) arc (180:360:2 and .5);% bottom half of ellipse
+			%\draw[penColor, very thick] (0,4) -- (4,4);
+			\draw[dashed,penColor!50!background, very thick] (0,2) -- (2,2);
+			  \draw[decoration={brace,mirror,raise=0.07cm},decorate,thin] (2,2)--(0,6.25);
+			\draw[ penColor,very thick] (-2,2) -- (0,6.25);
+			\draw[ penColor,very thick] (2,2) -- (0,6.25);
+			\draw[ dashed,penColor2,very thick] (0,2) -- (0,6.25);
+			\node[above, penColor] at (1,2.05) {$r$ };
+			\node[right, penColor2] at (0,4.1) {$h$ };
+			\node[right, penColor2] at (1.1,4.25) {$7$ m };
+		\end{tikzpicture}
+	\end{image}
+
+\begin{exercise}	
+	$h$ is a function of $r$. The formula for $h(r)$ is given by:
+	$$ h(r) = \answer{\sqrt{49-r^2}} $$.
+	\begin{hint}
+		Notice that $h$ and $r$  form the legs of a right triangle with the slant height of the cone as its hypotenuse. 
+		Think about the Pythagorean Theorem $a^2 + b^2 = c^2$.
+	\end{hint}
+	\begin{exercise}
+		The domain of $h$ is: $\left[ \answer{-7} , \answer{7} \right]$.
+		\begin{hint}
+			You know that $49-r^2$ can not be negative. Try plotting the parabola $y=49-x^2$ and seeing where the graph is above the $x$-axis.
+		\end{hint}
+	\end{exercise}
+	
+\end{exercise}
+\end{document}
