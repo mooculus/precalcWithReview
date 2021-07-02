@@ -9,25 +9,23 @@
 \begin{exercise}
 Look at the following graph:
 
-%\begin{image}
-%\begin{tikzpicture}
-%    \begin{axis}[xlabel={age of car (in years)},
-%                    ylabel={value (in dollars)},
-%                    xmin=-1,xmax=10,
-%                    ymin=-1,ymax=30000,
-%                    xtick={1,2,...,10},
-%                    minor xtick={1,2,...,10},
-%                    ytick={5000,10000,...,30000},
-%                    minor ytick={5000,10000,...,30000},
-%                    ]
-%        \addplot[soliddot] coordinates {(0, 25000)} node[right] {$(0,25000)$};
-%        \addplot[soliddot] coordinates {(2, 15750)} node[above] {$(2, 15750)$};
-%        \addplot[soliddot] coordinates {(4, 11309)} node[above] {$(4,11309)$};
-%        \addplot[soliddot] coordinates {(6, 7500)} node[above] {$(6,7500)$};
-%        \addplot[soliddot] coordinates {(8, 4800)} node[above] {$(8,4800)$};
-%    \end{axis}
-%\end{tikzpicture}
-%\end{image}
+\begin{image}
+\begin{tikzpicture}
+   \begin{axis}[xlabel={age of car (in years)},
+                   ylabel={value (in dollars)},
+                   xmin=-1,xmax=10,
+                   ymin=-1,ymax=30000,
+                   xtick={1,2,...,10},
+                   ytick={5000,10000,15000,20000,25000,30000},
+                   ]
+       \addplot[soliddot] coordinates {(0, 25000)} node[right] {$(0,25000)$};
+       \addplot[soliddot] coordinates {(2, 15750)} node[above] {$(2, 15750)$};
+       \addplot[soliddot] coordinates {(4, 11309)} node[above] {$(4,11309)$};
+       \addplot[soliddot] coordinates {(6, 7500)} node[above] {$(6,7500)$};
+       \addplot[soliddot] coordinates {(8, 4800)} node[above] {$(8,4800)$};
+   \end{axis}
+\end{tikzpicture}
+\end{image}
 
 Fill in the table below to give another representation of the relation given in the graph.
 
