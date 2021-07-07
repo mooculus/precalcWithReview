@@ -2,75 +2,57 @@
 
 \input{../../preamble.tex}
 
-\author{Nela Lakos \and Bart Snapp \and Bobby Ramsey}
-\acknowledgement{https://github.com/mooculus/calculus}
-
-\outcome{Perform basic operations on functions.}
+\author{Carl Stitz \and Jeff Zeager \and  Bobby Ramsey}
+\license{CC-By-SA-NC}
+\acknowledgement{http://www.stitz-zeager.com/}
 
 \begin{document}
+
 \begin{exercise}
-	  A box with an open top is to be constructed from a rectangular piece
-	  of cardboard with dimensions $12\unit{cm}$ by $20\unit{cm}$ by
-	  cutting out equal squares of side $x$ at each corner and then folding
-	  up the sides:
-	  \begin{image}
-	    \begin{tikzpicture}
-	      \draw [dashed] (0,0) rectangle (1,1);
-	      \draw [dashed] (6,0) rectangle (7,1);
-	      \draw [dashed] (6,4) rectangle (7,5);
-	      \draw [dashed] (0,4) rectangle (1,5);
+	The following is a rational function.
+	$$f(x) = \frac{x^3-2x+1}{x-1} - \frac{1}{2} x + 1.$$
 	
-	      \draw [penColor, very thick, fill=fill3] (0,1) rectangle (1,4);
-	      \draw [penColor, very thick, fill=fill3] (1,0) rectangle (6,1);
-	      \draw [penColor, very thick, fill=fill3] (1,4) rectangle (6,5);
-	      \draw [penColor, very thick, fill=fill3] (6,1) rectangle (7,4);
-	      
-	      \draw [penColor,very thick,fill=fill1] (1,1) rectangle (6,4);
-	
-	      \draw[decoration={brace,mirror,raise=.2cm},decorate,thin] (0,0)--(7,0);
-	      \draw[decoration={brace,raise=.2cm},decorate,thin] (0,0)--(0,5);
-	      
-	      \node [penColor] at (3.5,-.5) {$20$};
-	      \node [penColor] at (-.5,2.5) {$12$};
-	
-	      \draw[decoration={brace,mirror,raise=.2cm},decorate,thin] (7,4)--(7,5);
-	      \draw[decoration={brace,raise=.2cm},decorate,thin] (6,5)--(7,5);
-	      
-	      \node [penColor] at (7.5,4.5) {$x$};
-	      \node [penColor] at (6.5,5.5) {$x$};
-	    \end{tikzpicture}
-	  \end{image}
-	  Express the volume $V$ of the box as a function of $x$.  (In factored form)
-	  \[
-	  V(x) = \answer{x(20-2x)(12-2x)}
-	  \]
-	  \begin{feedback}
-	  	When folded up, what is the width of the box in terms of $x$?  The length?  The height?
-	  \end{feedback}
+	$$ \text{How many zeros does this function have? } \quad \answer{2} $$
 	\begin{exercise}
-		  Multiply out your answer above:
-		  \[
-		  V(x) = \answer{4}x^3 + \answer{-64}x^2 + \answer{240}x
-		  \]	
-		\begin{exercise}
-			The domain of $V$ is: \[ \left[ \answer{0} \, , \, \answer{6} \right] \]
-			\begin{feedback}
-				Think about what $x$ represents in the question. Can $x$ be negative? Can the width or length of the box be negative?
-			\end{feedback}
-		\end{exercise}	
+		List them in order from left to right.
+		\[ x = \answer{-1/2}  \quad \text{ and } \quad x=\answer{0} \]
 	\end{exercise}
+\end{exercise}
+\begin{hint}
+	Try rewriting the function as a single fraction.
+\end{hint}
+
+\begin{exercise}
+	The following is a rational function.
+	$$ g(x) = \frac{1}{x+3} + \frac{1}{x-3} - \frac{x^2-3}{x^2-9}. $$
+	
+	$$ \text{How many zeros does this function have? } \quad \answer{1} $$
+	\begin{exercise}
+		It is at $x = \answer{-1}$.
+		\begin{exercise}
+			Why is $x=3$ NOT a zero of $g$?
+			\begin{multipleChoice}
+				\choice{Because $g(3)$ is a nonzero number.}
+				\choice{Because $g(3)=0$.}
+				\choice[correct]{Because $x=3$ is not in the domain of $g$.}
+			\end{multipleChoice}
+		\end{exercise}
+	\end{exercise}
+\end{exercise}
+\begin{hint}
+	Make sure to check your possible solutions are actually solutions.
+\end{hint}
+
+\begin{exercise}
+	The following is a rational function.
+	$$ h(x) = 1 - \frac{x^2-2x+1}{x^3+x^2-2x}. $$
+	$$ \text{How many zeros does this function have? } \quad \answer{0} $$
+	\begin{feedback}
+		What are you left with if you rewrite $h$ as a single fraction and simplify? Are there any values of $x$ making that resulting fraction zero?	
+	\end{feedback}		
 \end{exercise}
 
 
-%\begin{exercise}
-%  If $x$ increases in value from $1$ to $(1+h)$, by how much will volume of the box change? Simplify.
-%  \[
-%  V(1+h) - V(1) = \answer{4}h^3 +\answer{-52}h^2 + \answer{124}h
-%  \]
-%\end{exercise}
-%\begin{hint}
-%	You found $V(x)$ above.  Plug in $x=1+h$ and $x=1$, then subtract and simplify.
-%\end{hint}
 
 
 \end{document}
