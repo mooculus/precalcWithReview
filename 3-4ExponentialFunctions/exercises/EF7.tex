@@ -1,0 +1,45 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\author{Ivo Terek}
+\license{Creative Commons Attribution-ShareAlike 4.0 International License}
+
+%\outcome{Calculating the rate of change.}
+%\outcome{Discuss the meaning of antiderivatives of a position function.}
+
+\begin{document}
+\begin{exercise}
+
+ Consider the graph of a function $f(x) = ab^x+c$. 
+
+ \begin{image}
+   \begin{tikzpicture}
+     \begin{axis}
+       \addplot[samples=200, thick,domain=-7:2, color=penColor]{-2* exp(2*x)+1};
+     \end{axis}
+   \end{tikzpicture}
+ \end{image}
+
+ From the graph, answer:
+
+ \begin{enumerate}
+ \item The value of $a$ is:
+   \begin{multipleChoice}
+     \choice{Positive}
+     \choice[correct]{Negative}
+   \end{multipleChoice}
+ \item The value of $b$ is:
+   \begin{multipleChoice}
+     \choice[correct]{Positive}
+     \choice{Negative}
+   \end{multipleChoice}
+ \item  The value of $c$ is:
+   \begin{multipleChoice}
+     \choice[correct]{Positive}
+     \choice{Negative}
+   \end{multipleChoice}
+ \end{enumerate}
+
+\end{exercise}
+\end{document}

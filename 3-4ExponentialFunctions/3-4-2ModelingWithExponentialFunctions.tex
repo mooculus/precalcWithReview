@@ -72,7 +72,7 @@ In \link[\emph{Desmos}]{desmos.com}, define $g(t) = ab^t+c$ and accept the promp
 \item Set $b = 1.1$ and explore the effects of changing the values of $a$ and $c$.  Write several sentences to summarize your observations.
 \item Follow the directions for (a) again, this time with $b = 0.9$
 \item Set $a = 5$ and $c = 4$. Explore the effects of changing the value of $b$; be sure to include values of $b$ both less than and greater than 1. Write several sentences to summarize your observations.
-\item When $0 \lt b \lt 1$, what happens to the graph of $g$ when we consider positive $t$-values that get larger and larger?
+\item When $0 < b < 1$, what happens to the graph of $g$ when we consider positive $t$-values that get larger and larger?
 \end{enumerate}
 \end{exploration}
 
@@ -117,14 +117,14 @@ For the decreasing function $q(t) =\left(\frac{1}{2}\right)^t$, we see that the 
 
 To represent these two common phenomena with exponential functions the value increasing without bound or the value approaching $0$, we will use shorthand notation.  First, it is natural to write ``$q(t) \to 0$'' as $t$ increases without bound.  Moreover, since we have the notion of the infinite to represent quantities without bound, we use the symbol for infinity \index{infinity} ($\infty$) and write ``$p(t) \to \infty$'' as $t$ increases without bound in order to indicate that $p(t)$ increases without bound.
 
-In the exploration above, we saw how the value of $b$ affects the steepness of the graph of $f(t) = ab^t$, as well as how all graphs with $b \gt 1$ have the similar increasing behavior, and all graphs with $0 \lt b \lt 1$ have similar decreasing behavior.  For instance, by taking $t$ sufficiently large, we can make $(1.01)^t$ as large as we want; it just takes much larger $t$ to make $(1.01)^t$ big in comparison to $2^t$.  In the same way, we can make $(0.99)^t$ as close to $0$ as we wish by taking $t$ sufficiently big, even though it takes longer for $(0.99)^t$ to get close to $0$ in comparison to $\left(\frac{1}{2}\right)^t$.  For an arbitrary choice of $b$, we can say the following.
+In the exploration above, we saw how the value of $b$ affects the steepness of the graph of $f(t) = ab^t$, as well as how all graphs with $b > 1$ have the similar increasing behavior, and all graphs with $0 < b < 1$ have similar decreasing behavior.  For instance, by taking $t$ sufficiently large, we can make $(1.01)^t$ as large as we want; it just takes much larger $t$ to make $(1.01)^t$ big in comparison to $2^t$.  In the same way, we can make $(0.99)^t$ as close to $0$ as we wish by taking $t$ sufficiently big, even though it takes longer for $(0.99)^t$ to get close to $0$ in comparison to $\left(\frac{1}{2}\right)^t$.  For an arbitrary choice of $b$, we can say the following.
 
 \begin{callout}
 \textbf{\Large Long-term behavior of exponential functions.}
-Let $f(t) = b^t$ with $b \gt 0$ and $b \ne 1$.
+Let $f(t) = b^t$ with $b > 0$ and $b \ne 1$.
 \begin{itemize}
-\item If $0 \lt b \lt 1$, then $b^t \to 0$ as $t \to \infty$.  We read this notation as ``$b^t$ tends to $0$ as $t$ increases without bound.
-\item If $b \gt 1$, then $b^t \to \infty$ as $t \to \infty$.  We read this notation as ``$b^t$ increases without bound as $t$ increases without bound.
+\item If $0 < b < 1$, then $b^t \to 0$ as $t \to \infty$.  We read this notation as ``$b^t$ tends to $0$ as $t$ increases without bound.
+\item If $b > 1$, then $b^t \to \infty$ as $t \to \infty$.  We read this notation as ``$b^t$ increases without bound as $t$ increases without bound.
 \end{itemize}
 \end{callout}
 
@@ -159,15 +159,15 @@ The function $g(t) = ab^t + c$ is a vertical translation of the function $f(t) =
 
 \begin{callout}
 \textbf{\Large Behavior of vertically shifted exponential functions.}
-Let $g(t) = ab^t + c$ with $a \gt 0$, $b \gt 0$ and $b \ne 1$, and $c$ any real number.
+Let $g(t) = ab^t + c$ with $a > 0$, $b > 0$ and $b \ne 1$, and $c$ any real number.
 \begin{itemize}
-\item If $0 \lt b \lt 1$, then $g(t) = ab^t + c \to c$ as $t \to \infty$.  The function $g$ is always decreasing, always concave up, and has $y$-intercept $(0,a+c)$.  The range of the function is all real numbers greater than $c$.
-\item If $b \gt 1$, then $g(t) = ab^t + c \to \infty$ as $t \to \infty$.  The function $g$ is always increasing, always concave up, and has $y$-intercept $(0,a+c)$.  The range of the function is all real numbers greater than $c$.
+\item If $0 < b < 1$, then $g(t) = ab^t + c \to c$ as $t \to \infty$.  The function $g$ is always decreasing, always concave up, and has $y$-intercept $(0,a+c)$.  The range of the function is all real numbers greater than $c$.
+\item If $b > 1$, then $g(t) = ab^t + c \to \infty$ as $t \to \infty$.  The function $g$ is always increasing, always concave up, and has $y$-intercept $(0,a+c)$.  The range of the function is all real numbers greater than $c$.
 \end{itemize}
 \end{callout}
 
 
-It is also possible to have $a \lt 0$.  In this situation, because $g(t) = ab^t$ is both a reflection of $f(t) = b^t$ across the $x$-axis and a vertical stretch by $|a|$, the function $g$ is always concave down.  If $0 \lt b \lt 1$ so that $f$ is always decreasing, then $g$ is always increasing; if instead $b \gt 1$ so $f$ is increasing, then $g$ is decreasing.  Moreover, instead of the range of the function $g$ having a lower bound as when $a \gt 0$, in this setting the range of $g$ has an upper bound.  These ideas are explored further below.
+It is also possible to have $a < 0$.  In this situation, because $g(t) = ab^t$ is both a reflection of $f(t) = b^t$ across the $x$-axis and a vertical stretch by $|a|$, the function $g$ is always concave down.  If $0 < b < 1$ so that $f$ is always decreasing, then $g$ is always increasing; if instead $b > 1$ so $f$ is increasing, then $g$ is decreasing.  Moreover, instead of the range of the function $g$ having a lower bound as when $a > 0$, in this setting the range of $g$ has an upper bound.  These ideas are explored further below.
 
 It's an important skill to be able to look at an exponential function of the form $g(t) = ab^t + c$ and form an accurate mental picture of the graph's main features in light of the values of $a$, $b$, and $c$.
 
@@ -271,10 +271,10 @@ A potato initially at room temperature ($68^\circ$) is placed in an oven (at $35
 \end{exploration}
 
 \begin{summary}\begin{itemize}
-\item For an exponential function of the form $f(t) = b^t$, the function either approaches zero or grows without bound as the input gets larger and larger.  In particular, if $0 \lt b \lt 1$, then $f(t) = b^t \to 0$ as $t \to \infty$, while if $b \gt 1$, then $f(t) = b^t \to \infty$ as $t \to \infty$.  Scaling $f$ by a positive value $a$ (that is, the transformed function $ab^t$) does not affect the long-range behavior:  whether the function tends to $0$ or increases without bound depends solely on whether $b$ is less than or greater than $1$.%
+\item For an exponential function of the form $f(t) = b^t$, the function either approaches zero or grows without bound as the input gets larger and larger.  In particular, if $0 < b < 1$, then $f(t) = b^t \to 0$ as $t \to \infty$, while if $b > 1$, then $f(t) = b^t \to \infty$ as $t \to \infty$.  Scaling $f$ by a positive value $a$ (that is, the transformed function $ab^t$) does not affect the long-range behavior:  whether the function tends to $0$ or increases without bound depends solely on whether $b$ is less than or greater than $1$.%
 \item{}\hypertarget{p-1350}{}%
 The function $f(t) = b^t$ passes through $(0,1)$, is always concave up, is either always increasing or always decreasing, and its range is the set of all positive real numbers.  Among these properties, a vertical stretch by a positive value $a$ only affects the $y$-intercept, which is instead $(0,a)$.  If we include a vertical shift and write $g(t) = ab^t + c$, the biggest changes is that the range of $g$ is the set of all real numbers greater than $c$.  In addition, the $y$-intercept of $g$ is $(0,a+c)$.
-\item In the situation where $a \lt 0$, several other changes are induced.  Here, because $g(t) = ab^t$ is both a reflection of $f(t) = b^t$ across the $x$-axis and a vertical stretch by $|a|$, the function $g$ is now always concave down.  If $0 \lt b \lt 1$ so that $f$ is always decreasing, then $g$ (the reflected function) is now always increasing; if instead $b \gt 1$ so $f$ is increasing, then $g$ is decreasing.  Finally, if $a \lt 0$, then the range of $g(t) = ab^t + c$ is the set of all real numbers $c$.
+\item In the situation where $a < 0$, several other changes are induced.  Here, because $g(t) = ab^t$ is both a reflection of $f(t) = b^t$ across the $x$-axis and a vertical stretch by $|a|$, the function $g$ is now always concave down.  If $0 < b < 1$ so that $f$ is always decreasing, then $g$ (the reflected function) is now always increasing; if instead $b > 1$ so $f$ is increasing, then $g$ is decreasing.  Finally, if $a < 0$, then the range of $g(t) = ab^t + c$ is the set of all real numbers $c$.
 \item An exponential function can be thought of as a function that changes at a rate proportional to itself, like how money grows with compound interest or the amount of a radioactive quantity decays.  Newton's Law of Cooling says that the rate of change of an object's temperature is proportional to the \emph{difference} between its own temperature and the temperature of its surroundings.  This leads to the function that measures the difference between the object's temperature and room temperature being exponential, and hence the object's temperature itself is a vertically-shifted exponential function of the form $F(t) = ab^t + c$.
 \end{itemize}\end{summary}
 

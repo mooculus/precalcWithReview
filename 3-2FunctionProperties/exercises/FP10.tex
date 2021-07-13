@@ -1,0 +1,84 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\author{Kenneth Berglund}
+\acknowledgement{}
+
+\begin{document}
+\begin{exercise}
+Look at the following graph of the one-to-one function $f$. Assume that all the important behavior of $f$ is shown on the graph below. 
+
+\begin{image}
+\begin{tikzpicture}
+    \begin{axis}[
+	title={$y = f(x)$},
+        	xlabel=$x$,
+    	ylabel=$y$,]
+    	\draw[thick, <-, penColor] (axis cs: -7,-2) -- (axis cs: 0,0); 
+	\draw[thick, ->, penColor] (axis cs: 0,0) -- (axis cs: 7,6); 
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+
+Which of the following is the graph of $f^{-1}$? Assume that all the important behavior of the functions is shown on the graphs below. 
+
+\begin{image}
+\begin{tikzpicture}
+    \begin{axis}[
+	title=Graph A,
+        	xlabel=$x$,
+    	ylabel=$y$,]
+    	\draw[thick, <-, penColor] (axis cs: -7,2) -- (axis cs: 0,0); 
+	\draw[thick, ->, penColor] (axis cs: 0,0) -- (axis cs: 7,-6); 
+    \end{axis}
+\end{tikzpicture}
+\begin{tikzpicture}
+    \begin{axis}[
+	title=Graph B,
+        	xlabel=$x$,
+    	ylabel=$y$,]
+	
+	\draw[thick, <-, penColor] (axis cs: -7,6) -- (axis cs: 0,0); 
+	\draw[thick, ->, penColor] (axis cs: 0,0) -- (axis cs: 7,-2); 
+    \end{axis}
+	
+\end{tikzpicture}
+\end{image}
+
+\begin{image}
+\begin{tikzpicture}
+    \begin{axis}[
+	title=Graph C,
+        	xlabel=$x$,
+    	ylabel=$y$,]
+	
+    	\draw[thick, <-, penColor] (axis cs: -2,-7) -- (axis cs: 0,0); 
+	\draw[thick, ->, penColor] (axis cs: 0,0) -- (axis cs: 6,7); 
+    \end{axis}
+	
+\end{tikzpicture}
+\begin{tikzpicture}
+    \begin{axis}[
+	title=Graph D,
+        	xlabel=$x$,
+    	ylabel=$y$,]
+	
+	\draw[thick, <-, penColor] (axis cs: -2,7) -- (axis cs: 0,0); 
+	\draw[thick, ->, penColor] (axis cs: 0,0) -- (axis cs: 6,-7); 
+    \end{axis}
+	
+\end{tikzpicture}
+\end{image}
+
+\begin{multipleChoice}
+\choice{Graph A}
+\choice{Graph B}
+\choice[correct]{Graph C}
+\choice{Graph D}
+\end{multipleChoice}
+
+
+
+\end{exercise}
+\end{document}
