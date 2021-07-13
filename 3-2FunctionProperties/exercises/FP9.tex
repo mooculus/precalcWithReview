@@ -1,0 +1,109 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\author{Kenneth Berglund}
+\acknowledgement{https://www.stitz-zeager.com/szca07042013.pdf}
+
+\begin{document}
+\begin{exercise}
+In each part, you will be shown a graph of a function. Assume that all the important behavior of the functions is shown on the given graphs. 
+
+\begin{enumerate}
+\item The function corresponding to graph A below is
+\begin{image}
+\begin{tikzpicture}
+    \begin{axis}[
+	title=Graph A,
+        	xlabel=$x$,
+    	ylabel=$y$,]
+    	\draw[thick, <->, penColor] (axis cs: -7,1) -- (axis cs: 7,1); 
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+\begin{multipleChoice}
+\choice{one-to-one.}
+\choice[correct]{not one-to-one.}
+\end{multipleChoice}
+
+\item The function corresponding to graph B below is
+\begin{image}
+
+\begin{tikzpicture}
+    \begin{axis}[
+	title=Graph B,
+        	xlabel=$x$,
+    	ylabel=$y$,]
+	
+	\draw[thick, <->, penColor] (axis cs: -7,-3) -- (axis cs: 7,3); 
+    \end{axis}
+	
+\end{tikzpicture}
+\end{image}
+\begin{multipleChoice}
+\choice[correct]{one-to-one.}
+\choice{not one-to-one.}
+\end{multipleChoice}
+
+\item The function corresponding to graph C below is
+\begin{image}
+\begin{tikzpicture}
+    \begin{axis}[
+	title=Graph C,
+        	xlabel=$x$,
+    	ylabel=$y$,]
+	
+    	\draw[thick, <->, penColor] (axis cs: -7,5) -- (axis cs: 7,-1); 
+    \end{axis}
+	
+\end{tikzpicture}
+\end{image}
+\begin{multipleChoice}
+\choice[correct]{one-to-one.}
+\choice{not one-to-one.}
+\end{multipleChoice}
+
+\item The function corresponding to graph D below is
+\begin{image}
+
+\begin{tikzpicture}
+    \begin{axis}[
+	title=Graph D,
+        	xlabel=$x$,
+    	ylabel=$y$,]
+	
+	\draw[thick, <-, penColor] (axis cs: -4, 7) -- (axis cs: 0, -1); 
+	\draw[thick, ->, penColor] (axis cs: 0, -1) -- (axis cs: 4, 7);
+    \end{axis}
+	
+\end{tikzpicture}
+\end{image}
+\begin{multipleChoice}
+\choice{one-to-one.}
+\choice[correct]{not one-to-one.}
+\end{multipleChoice}
+
+\item The function corresponding to graph E below is
+\begin{image}
+\begin{tikzpicture}
+    \begin{axis}[
+	title=Graph E,
+        	xlabel=$x$,
+    	ylabel=$y$,]
+	
+	\draw[thick, <-, penColor] (axis cs: -7, 2) -- (axis cs: -2, 0); 
+	\draw[very thick, penColor] (axis cs: -2, 0) -- (axis cs: 2, 0); 
+	\draw[thick, ->, penColor] (axis cs: 2, 0) -- (axis cs: 7, -2); 
+    \end{axis}
+	
+\end{tikzpicture}
+ 
+\end{image}
+\begin{multipleChoice}
+\choice{one-to-one.}
+\choice[correct]{not one-to-one.}
+\end{multipleChoice}
+\end{enumerate}
+
+\end{exercise}
+\end{document}

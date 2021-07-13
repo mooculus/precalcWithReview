@@ -6,7 +6,7 @@
 
 \begin{document}
 \begin{exercise}
-	The following is the graph of which exponential function?
+	The following is the graph of an exponential function, $f$.
 	\begin{center}
 		\begin{tikzpicture}
 			\begin{axis}[
@@ -16,12 +16,13 @@
 				every axis x label/.style={at=(current axis.right of origin),anchor=west},
 				xtick={-5,...,5}, ytick={-4,...,2},
 				grid=major, width=4in,
+		                grid style={dashed, gridColor},
 				]
-				\addplot[color=red, very thick, smooth, domain=-5:5]{-2^x+1};
+				\addplot[color=red, very thick, smooth, domain=-5:5]{-2^x+1} node[pos=0.02, above right]{\Large{$y=f(x)$}};
 			\end{axis}
 		\end{tikzpicture}
 	\end{center}
-	
+	Which of the following could be a formula for $f(x)$?	
 	\begin{multipleChoice}
 		\choice[correct]{$-2^x+1$}
 		\choice{$\left(\frac{1}{2}\right)^x - 1$}

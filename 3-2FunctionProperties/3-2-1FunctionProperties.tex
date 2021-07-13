@@ -155,7 +155,97 @@ are each the set of all real numbers. We say that $f$ is \index{function ! perio
 
 For our ferris wheel example above, the period is the circumference of the circle that generates the curve. In the graph, we see how the curve has completed one full cycle of behavior every 24 units, regardless of where we start on the curve.
 
-Later in the course, you will encounter and study many other examples of periodic functions.
+Two important periodic functions are the sine function, which you have seen, and the cosine function, which resembles the sine function. You will study these functions and learn about their relationship with circles in trigonometry.
+
+As a reminder, here is a graph of the sine function along with a table listing some of its values.
+
+\begin{image}
+\begin{tikzpicture}
+    \begin{axis}[ymin=-2, ymax=2,
+		   %xtick={-6.28318, -4.7123889, -3.14159, -1.5708, 1.5708, 3.14159, 4.7123889, 6.28318},
+    xticklabels={
+        $-\frac{3\pi}{2}$, $-\pi$, $\frac{\pi}{2}$, $0$,
+        $\frac{\pi}{2}$, $\pi$, $\frac{3\pi}{2}$, $2\pi$
+    }, ]
+        \addplot[samples=200]{sin(pi/4*deg(x))};
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+
+\begin{center}
+\(
+\begin{array}{ |c || c|  }
+ \hline
+ \multicolumn{2}{|c|}{\text{\normalfont Important Values of } y=\sin(x)} \\
+\hline
+ \hline
+ x & y\\
+ \hline
+
+ -\pi&0\\
+
+ -\frac{\pi}{2}&-1\\[2ex]
+
+ 0&0\\
+
+ \frac{\pi}{2}&1\\[2ex]
+
+ \pi&0\\
+
+\frac{3\pi}{2}&-1\\[2ex]
+
+ 2 \pi&0\\
+\hline
+\end{array}
+\)
+\end{center} 
+
+Notice that $\sin\left(-\frac{\pi}{2}\right) = -1$ and $\sin\left(\frac{3\pi}{2}\right) = -1$ as well. In fact, the sine function is periodic with period $2\pi$. 
+
+Now, here is a graph of the cosine function along with a table listing some of its values.
+
+\begin{image}
+\begin{tikzpicture}
+    \begin{axis}[ymin=-2, ymax=2,
+		   %xtick={-6.28318, -4.7123889, -3.14159, -1.5708, 1.5708, 3.14159, 4.7123889, 6.28318},
+    xticklabels={
+        $-\frac{3\pi}{2}$, $-\pi$, $\frac{\pi}{2}$, $0$,
+        $\frac{\pi}{2}$, $\pi$, $\frac{3\pi}{2}$, $2\pi$
+    }, ]
+        \addplot[samples=200]{cos(pi/4*deg(x))};
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+
+\begin{center}
+\(
+\begin{array}{ |c || c|  }
+ \hline
+ \multicolumn{2}{|c|}{\text{\normalfont Important Values of } y=\cos(x)} \\
+\hline
+ \hline
+ x & y\\
+ \hline
+
+ -\pi&-1\\
+
+ -\frac{\pi}{2}&0\\[2ex]
+
+ 0&1\\
+
+ \frac{\pi}{2}&0\\[2ex]
+
+ \pi&-1\\
+
+\frac{3\pi}{2}&0\\[2ex]
+
+ 2 \pi&1\\
+\hline
+\end{array}
+\)
+\end{center} 
+
+Notice that $\cos\left(-\pi\right) = -1$ and $\cos\left(\pi\right) = -1$ as well. In fact, the cosine function is also periodic with period $2\pi$. 
  
 
 

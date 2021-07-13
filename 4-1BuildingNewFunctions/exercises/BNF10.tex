@@ -1,0 +1,63 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\author{Kenneth Berglund}
+\acknowledgement{}
+
+\begin{document}
+\begin{exercise}
+Look at the following graphs of the functions $f$ (on the left) and $g$ (on the right). 
+
+\begin{image}
+\begin{tikzpicture}
+    \begin{axis}
+        \addplot[smooth]{(x - 1)^2 - 2} node{$$};
+    \end{axis}
+\end{tikzpicture}
+\hspace{3mm}
+\begin{tikzpicture}
+    \begin{axis}
+        \addplot[smooth]{.5*x} node{$$};
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+
+Which of the following is the graph of $f \cdot g$?
+\begin{image}
+\begin{tikzpicture}
+    \begin{axis}[title=Graph A]
+        \addplot[smooth]{(-.5)*x^3 + x^2 + .5*x} node{$$};
+    \end{axis}
+\end{tikzpicture}
+\hspace{3mm}
+\begin{tikzpicture}
+    \begin{axis}[title=Graph B]
+        \addplot[smooth]{.5*x^3 - x^2 - .5*x} node{$$};
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+
+\begin{image}
+\begin{tikzpicture}
+    \begin{axis}[title=Graph C]
+        \addplot[smooth]{.5*x^3 + x^2 - .5*x} node{$$};
+    \end{axis}
+\end{tikzpicture}
+\hspace{3mm}
+\begin{tikzpicture}
+    \begin{axis}[title=Graph D]
+        \addplot[smooth]{.5*x^3 + x^2 + .5*x} node{$$};
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+
+\begin{multipleChoice}
+\choice{Graph A}
+\choice[correct]{Graph B}
+\choice{Graph C}
+\choice{Graph D}
+\end{multipleChoice}
+
+\end{exercise}
+\end{document}
