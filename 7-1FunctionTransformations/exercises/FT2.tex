@@ -12,16 +12,27 @@
 \begin{exercise}
 
 
+<<<<<<< HEAD
 If the graph of $y=f(x) = x\sin(x)$ is given in black below, which of the following graphs could be the graph of $y = f(x-2)$?
+=======
+If the graph of $y=f(x) = x\sin(x)$ is given in black below (namely, the only one below with $f(0)=0$), which of the following graphs could be the graph of $y = f(x-2)$?
+>>>>>>> origin/cleaning
 
   \begin{image}
  \begin{tikzpicture}
    \begin{axis}
      \addplot[samples=200,thick, domain=-7:7]{x*sin(deg(x))};
+<<<<<<< HEAD
      \addplot[samples=200,thick,domain=-7:7, color=blue]{(x+2)*sin(deg(x+2))};
      \addplot[samples=200,thick,domain=-7:7, color=red]{(x-2)*sin(deg(x-2))};
      \addplot[samples=200,thick,domain=-7:7, color=orange]{x*sin(deg(x)) + 1};
      \addplot[samples=200,thick,domain=-7:7, color=green]{x*sin(deg(x))-2};
+=======
+     \addplot[samples=200,thick,domain=-7:7, color=blue]{(x+2)*sin(deg(x+2))} node[pos=0.8,right]{\text{(a)}};
+     \addplot[samples=200,thick,domain=-7:7, color=red]{(x-2)*sin(deg(x-2))} node[pos=0.2,right]{\text{(b)}};
+     \addplot[samples=200,thick,domain=-7:7, color=orange]{x*sin(deg(x)) + 1} node[pos=0.43,above]{\text{(c)}};
+     \addplot[samples=200,thick,domain=-7:7, color=green]{x*sin(deg(x))-2} node[pos=0.25,right]{\text{(d)}}; 
+>>>>>>> origin/cleaning
    \end{axis}
  \end{tikzpicture}
  \end{image}

@@ -14,7 +14,7 @@
   
 \end{abstract}
 \maketitle
-
+\licenseSZ
 
 %\typeout{************************************************}
 %\typeout{Motivating Questions}
@@ -38,7 +38,11 @@ Let's consider the two quadratic functions $f(x) = x^2$ and $g(x) = x^2-2x+1$, d
   \begin{image}
  \begin{tikzpicture}
      \begin{axis}
+<<<<<<< HEAD
        \addplot[samples=200,domain=-7:7, color=blue]{x^2};
+=======
+       \addplot[samples=200,thick,domain=-7:7, color=blue]{x^2} node[pos=0.53,right]{\text{$y=x^2$}};
+>>>>>>> origin/cleaning
        %\addplot[samples=200,domain=-7:7, color=red]{(x-1)^2};
      \end{axis}
  \end{tikzpicture}
@@ -47,7 +51,11 @@ Let's consider the two quadratic functions $f(x) = x^2$ and $g(x) = x^2-2x+1$, d
  \begin{tikzpicture}
      \begin{axis}
       % \addplot[samples=200,domain=-7:7, color=blue]{x^2};
+<<<<<<< HEAD
        \addplot[samples=200,domain=-7:7, color=red]{(x-1)^2};
+=======
+       \addplot[samples=200,thick, domain=-7:7, color=red]{(x-1)^2} node[pos=0.68,right]{\text{$y=(x-1)^2$}};
+>>>>>>> origin/cleaning
      \end{axis}
  \end{tikzpicture}
  \end{image}
@@ -57,8 +65,13 @@ The graphs are very similar, down to the horizontal ``width''. In fact, drawing 
   \begin{image}
  \begin{tikzpicture}
      \begin{axis}
+<<<<<<< HEAD
        \addplot[samples=200,domain=-7:7, color=blue]{x^2};
        \addplot[samples=200,domain=-7:7, color=red]{(x-1)^2};
+=======
+       \addplot[samples=200, thick, domain=-7:7, color=blue]{x^2} node[pos=0.457,left]{\text{$y=x^2$}};
+       \addplot[samples=200, thick, domain=-7:7, color=red]{(x-1)^2} node[pos=0.68,right]{\text{$y=(x-1)^2$}};
+>>>>>>> origin/cleaning
        \addplot[dashed, thick, color=penColor] coordinates {(1,-7) (1,7)};
      \end{axis}
  \end{tikzpicture}
@@ -74,7 +87,11 @@ Let's consider a very simple situation, where we have two functions $f(x) = x^2$
   \begin{image}
  \begin{tikzpicture}
      \begin{axis}
+<<<<<<< HEAD
        \addplot[samples=200,domain=-7:7, color=blue]{x^2};
+=======
+       \addplot[samples=200, thick, domain=-7:7, color=blue]{x^2} node[pos=0.53,right]{\text{$y=x^2$}};
+>>>>>>> origin/cleaning
        %\addplot[samples=200,domain=-7:7, color=red]{(x-1)^2};
      \end{axis}
  \end{tikzpicture}
@@ -83,7 +100,11 @@ Let's consider a very simple situation, where we have two functions $f(x) = x^2$
  \begin{tikzpicture}
      \begin{axis}
       % \addplot[samples=200,domain=-7:7, color=blue]{x^2};
+<<<<<<< HEAD
        \addplot[samples=200,domain=-7:7, color=red]{x^2+4};
+=======
+       \addplot[samples=200, thick,domain=-7:7, color=red]{x^2+4} node[pos=0.52, right]{\text{$y=x^2+4$}};
+>>>>>>> origin/cleaning
      \end{axis}
  \end{tikzpicture}
  \end{image}
@@ -93,8 +114,13 @@ Let's consider a very simple situation, where we have two functions $f(x) = x^2$
    \begin{image}
  \begin{tikzpicture}
      \begin{axis}
+<<<<<<< HEAD
        \addplot[samples=200,domain=-7:7, color=blue]{x^2};
        \addplot[samples=200,domain=-7:7, color=red]{x^2+4};
+=======
+       \addplot[samples=200,thick,domain=-7:7, color=blue]{x^2} node[pos=0.53,right]{\text{$y=x^2$}};
+       \addplot[samples=200,thick,domain=-7:7, color=red]{x^2+4} node[pos=0.52, right]{\text{$y=x^2+4$}};
+>>>>>>> origin/cleaning
        \addplot[dashed, thick,, domain=-7:7, color=penColor]{4};
      \end{axis}
  \end{tikzpicture}
@@ -125,8 +151,13 @@ In the above setting, it is useful to call $f$ the {\bf parent function}.
       \begin{image}
         \begin{tikzpicture}
           \begin{axis}
+<<<<<<< HEAD
             \addplot[samples=200,domain=-3:7, color=blue]{2*exp(-x)};
             \addplot[samples=200,domain=-3:7, color=red]{2*exp(-x)-1};
+=======
+            \addplot[samples=200,thick,domain=-3:7, color=blue]{2*exp(-x)} node[pos=0.95,above]{\text{$y=2e^{-x}$}};
+            \addplot[samples=200,thick,domain=-3:7, color=red]{2*exp(-x)-1} node[pos=0.95,below]{\text{$y=2e^{-x}-1$}};
+>>>>>>> origin/cleaning
             \addplot[dashed, thick, domain=-7:7,color=penColor]{1};
           \end{axis}
         \end{tikzpicture}
@@ -138,8 +169,13 @@ In the above setting, it is useful to call $f$ the {\bf parent function}.
       \begin{image}
         \begin{tikzpicture}
           \begin{axis}
+<<<<<<< HEAD
             \addplot[samples=200,domain=-7:7, color=blue]{sin(deg(x))};
             \addplot[samples=200,domain=-7:7, color=red]{sin(deg(x))+2};
+=======
+            \addplot[samples=200,thick,domain=-7:7, color=blue]{sin(deg(x))} node[pos=0.85,below]{\text{$y=\sin(x)$}};
+            \addplot[samples=200,thick,domain=-7:7, color=red]{sin(deg(x))+2} node[pos=0.65,above]{\text{$y=\sin(x)+2$}};
+>>>>>>> origin/cleaning
             \addplot[dashed, thick, domain=-7:7,color=penColor]{2};
           \end{axis}
         \end{tikzpicture}
@@ -151,8 +187,13 @@ In the above setting, it is useful to call $f$ the {\bf parent function}.
             \begin{image}
         \begin{tikzpicture}
           \begin{axis}
+<<<<<<< HEAD
             \addplot[domain=-7:7, color=blue]{2*x};
             \addplot[,domain=-7:7, color=red]{2*x-3};
+=======
+            \addplot[domain=-7:7, thick, color=blue]{2*x} node[pos=0.7, left]{\text{$y=2x$}};
+            \addplot[domain=-7:7, thick, color=red]{2*x-3} node[pos=0.7, right]{\text{$y=2x-3$}};
+>>>>>>> origin/cleaning
             \addplot[dashed, thick, domain=-7:7,color=penColor]{-3};
           \end{axis}
         \end{tikzpicture}
@@ -168,6 +209,11 @@ Consider again the example given in the introduction, where we have $f(x) = x^2$
 
 Here is one safe way to think about it: imagine that you are standing on the $x$-axis and, say, at the origin of the cartesian plane, but that the graph of $y=f(x)$ is already drawn. Replacing $x$ with $x-1$ \emph{does move} the $x$-axis to the left. But \emph{you, the observer}, standing on the $x$-axis, sees the graph move to the right!
 
+<<<<<<< HEAD
+=======
+Alternatively, compare this with what happened with vertical shifts, but switching the roles of the $x$-axis and $y$-axis. More precisely, start with the graph of $y=f(x)$, then rotate it by $90^\circ$ clockwise (this switches the axes). Replacing $x$ with $x-1$ now brings the graph down by $1$ unit. Finally, rotate everything back by $90^\circ$ counterclockwise (this undoes the switching of the axes). The resulting graph is obtained from the original one by shifting it to the \emph{right}, not left. 
+
+>>>>>>> origin/cleaning
 \begin{callout}
   {\bf Theorem (horizontal shifts):} Suppose $f$ is a function and $a$ is a positive number.
   \begin{itemize}
@@ -187,8 +233,13 @@ As before we'll continue to call $f$ the {\bf parent function}, whose graph will
       \begin{image}
         \begin{tikzpicture}
           \begin{axis}
+<<<<<<< HEAD
            \addplot[samples=200,domain=-7:3, color=blue]{4*exp(x)};
            \addplot[samples=200,domain=-7:2, color=red]{4*exp(x+3)};
+=======
+           \addplot[samples=200,thick,domain=-7:3, color=blue]{4*exp(x)} node[pos=0.11, right]{\text{$y=4e^x$}};
+           \addplot[samples=200,thick,domain=-7:2, color=red]{4*exp(x+3)} node[pos=0.01, left]{\text{$y=4e^{x+3}$}};
+>>>>>>> origin/cleaning
          \addplot[dashed, thick, color=penColor] coordinates {(-3,-7) (-3,7)};
           \end{axis}
         \end{tikzpicture}
@@ -200,8 +251,13 @@ As before we'll continue to call $f$ the {\bf parent function}, whose graph will
             \begin{image}
         \begin{tikzpicture}
           \begin{axis}
+<<<<<<< HEAD
             \addplot[samples=200,domain=-7:7, color=blue]{sin(deg(x))};
             \addplot[samples=200,domain=-7:7, color=red]{sin(deg(x - pi/2))};
+=======
+            \addplot[samples=200,thick,domain=-7:7, color=blue]{sin(deg(x))} node[pos=0.8, below]{\text{$y=\sin(x)$}};
+            \addplot[samples=200,thick,domain=-7:7, color=red]{sin(deg(x - pi/2))} node[pos=0.78, above]{\text{$y=\sin(x-(\pi/2))$}};
+>>>>>>> origin/cleaning
             \addplot[dashed, thick, color=penColor] coordinates {(pi/2,-7) (pi/2,7)};
           \end{axis}
         \end{tikzpicture}
@@ -214,8 +270,13 @@ As before we'll continue to call $f$ the {\bf parent function}, whose graph will
       \begin{image}
         \begin{tikzpicture}
           \begin{axis}
+<<<<<<< HEAD
             \addplot[samples=200,domain=-7:7, color=blue]{x^2-5*x+6};
             \addplot[samples=200,domain=-7:7, color=red]{(x-2)^2-5*(x-2)+6};
+=======
+            \addplot[samples=200,thick,domain=-7:7, color=blue]{x^2-5*x+6} node[pos=0.775, left]{\text{$y=f(x)$}};
+            \addplot[samples=200,thick,domain=-7:7, color=red]{(x-2)^2-5*(x-2)+6}node[pos=0.9, right]{\text{$y=g(x)$}};
+>>>>>>> origin/cleaning
             \addplot[dashed, thick, color=penColor] coordinates {(4.5,-7) (4.5,7)};
           \end{axis}
         \end{tikzpicture}

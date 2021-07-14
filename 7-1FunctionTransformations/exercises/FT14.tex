@@ -16,8 +16,13 @@
     \begin{image}
  \begin{tikzpicture}
    \begin{axis}
+<<<<<<< HEAD
      \addplot[samples=200,thick, domain=-7:7, color=blue]{x^2};
      \addplot[samples=200,thick,domain=-7:7, color=red]{-(x^2)/4 + x-3};
+=======
+     \addplot[samples=200,thick, domain=-7:7, color=blue]{x^2} node[pos=0.55,right]{\text{$y=f(x)$}};
+     \addplot[samples=200,thick,domain=-7:7, color=red]{-(x^2)/4 + x-3} node[pos=0.73,above]{\text{$y=g(x)$}};
+>>>>>>> origin/cleaning
    \end{axis}
  \end{tikzpicture}
  \end{image}
