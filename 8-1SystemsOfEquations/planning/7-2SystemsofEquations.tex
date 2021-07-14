@@ -13,78 +13,78 @@
 \end{abstract}
 \maketitle
 
-     We have learned how to graph a line given its equation.
-      In this section, we will learn what a <em>system</em>
-      of <em>two</em> linear equations is,
-      and how to use graphing to solve such a system.
-\begin{example}
-Fabiana and David are running at constant speeds in parallel lanes on a track.
-            David starts out ahead of Fabiana,
-            but Fabiana is running faster.
-            We want to determine when Fabiana will catch up with David.
-            Let's start by looking at the graph of each runner's distance over time,
-            in 
-   Each of the two lines has an equation,
-            as discussed in <xref ref="chapter-graphing-lines">Chapter</xref>.
-            The line representing David appears to have <m>y</m>-intercept <m>(0,4)</m> and slope <m>\frac{4}{3}</m>,
-            so its equation is <m>y=\frac{4}{3}t+4</m>.
-            The line representing Fabiana appears to have <m>y</m>-intercept <m>(0,0)</m> and slope <m>2</m>,
-            so its equation is <m>y=2t</m>.
-\begin{tikzpicture}
-                \begin{axis}[xlabel={$t$, time (in seconds)},
-                            ylabel={$y$, distance (in meters)},
-                            xmin=-1,xmax=10,
-                            ymin=-1,ymax=15,
-                            xtick={1,2,...,9},
-                            minor xtick={1,2,...,9},
-                            ytick={2,4,...,14},
-                            minor ytick={2,4,...,14},
-                            ]
-                    \addplot[firstcurve,domain = 0:8.25,->]{4/3*x+4} node[pos=0.15,sloped,above] {David};
-                    \addplot[soliddot,color=firstcolor] coordinates {(0,4)};
-                    \addplot[secondcurve,domain = 0:7.5,->]{2*x} node[pos=0.2,sloped,above] {Fabiana};
-                    \addplot[soliddot,color=secondcolor] coordinates {(0,0)};
-                    \addplot[soliddot,color=thirdcolor] coordinates {(6, 12)} node[pos=0.25,below right] {$(6,12)$};
-                \end{axis}
-            \end{tikzpicture}
-When these two equations are together as a package,
-        we have what is called a <q>system of linear equations</q>:
-        <me permid="URC">
-          \left\{
-          \begin{alignedat}{4}
-          y \amp {}={} \tfrac{4}{3}t \amp {}+{} \amp 4 \\
-          y \amp {}={} 2t
-          \end{alignedat}
-          \right.
-        </me>
-        The large left brace indicates that this is a collection of two distinct equations,
-        not one equation that was somehow algebraically manipulated into an equivalent equation.
-        As we can see in <xref ref="figure-solving-systems-by-graphing-intro">Figure</xref>,
-        the graphs of the two equations cross at the point <m>(6,12)</m>.
-        We refer to the point <m>(6,12)</m> as the
-        solution to this system of linear equations.
-        To denote the solution set,
-        we write <m>\{(6,12)\}</m>.
-        It's more valuable to interpret these numbers in context whenever possible:
-        it took <m>6</m> seconds for the two runners to meet up,
-        and when they met they were <m>12</m> meters up the track.
-\end{example}
+%%      We have learned how to graph a line given its equation.
+%%       In this section, we will learn what a <em>system</em>
+%%       of <em>two</em> linear equations is,
+%%       and how to use graphing to solve such a system.
+%% \begin{example}
+%% Fabiana and David are running at constant speeds in parallel lanes on a track.
+%%             David starts out ahead of Fabiana,
+%%             but Fabiana is running faster.
+%%             We want to determine when Fabiana will catch up with David.
+%%             Let's start by looking at the graph of each runner's distance over time,
+%%             in 
+%%    Each of the two lines has an equation,
+%%             as discussed in <xref ref="chapter-graphing-lines">Chapter</xref>.
+%%             The line representing David appears to have <m>y</m>-intercept <m>(0,4)</m> and slope <m>\frac{4}{3}</m>,
+%%             so its equation is <m>y=\frac{4}{3}t+4</m>.
+%%             The line representing Fabiana appears to have <m>y</m>-intercept <m>(0,0)</m> and slope <m>2</m>,
+%%             so its equation is <m>y=2t</m>.
+%% \begin{tikzpicture}
+%%                 \begin{axis}[xlabel={$t$, time (in seconds)},
+%%                             ylabel={$y$, distance (in meters)},
+%%                             xmin=-1,xmax=10,
+%%                             ymin=-1,ymax=15,
+%%                             xtick={1,2,...,9},
+%%                             minor xtick={1,2,...,9},
+%%                             ytick={2,4,...,14},
+%%                             minor ytick={2,4,...,14},
+%%                             ]
+%%                     \addplot[firstcurve,domain = 0:8.25,->]{4/3*x+4} node[pos=0.15,sloped,above] {David};
+%%                     \addplot[soliddot,color=firstcolor] coordinates {(0,4)};
+%%                     \addplot[secondcurve,domain = 0:7.5,->]{2*x} node[pos=0.2,sloped,above] {Fabiana};
+%%                     \addplot[soliddot,color=secondcolor] coordinates {(0,0)};
+%%                     \addplot[soliddot,color=thirdcolor] coordinates {(6, 12)} node[pos=0.25,below right] {$(6,12)$};
+%%                 \end{axis}
+%%             \end{tikzpicture}
+%% When these two equations are together as a package,
+%%         we have what is called a <q>system of linear equations</q>:
+%%         <me permid="URC">
+%%           \left\{
+%%           \begin{alignedat}{4}
+%%           y \amp {}={} \tfrac{4}{3}t \amp {}+{} \amp 4 \\
+%%           y \amp {}={} 2t
+%%           \end{alignedat}
+%%           \right.
+%%         </me>
+%%         The large left brace indicates that this is a collection of two distinct equations,
+%%         not one equation that was somehow algebraically manipulated into an equivalent equation.
+%%         As we can see in <xref ref="figure-solving-systems-by-graphing-intro">Figure</xref>,
+%%         the graphs of the two equations cross at the point <m>(6,12)</m>.
+%%         We refer to the point <m>(6,12)</m> as the
+%%         solution to this system of linear equations.
+%%         To denote the solution set,
+%%         we write <m>\{(6,12)\}</m>.
+%%         It's more valuable to interpret these numbers in context whenever possible:
+%%         it took <m>6</m> seconds for the two runners to meet up,
+%%         and when they met they were <m>12</m> meters up the track.
+%% \end{example}
 
-A <term>system of linear equations</term> is any pairing of two (or more) linear equations.
-          A <term>solution to a system of linear equations</term>
-          is any point that is a solution for all of the equations in the system.
-          The <term>solution set to a system of linear equations</term> is the collection of all solutions to the system.
-\begin{remark}
-        In <xref ref="example-solving-systems-by-graphing-intro">Example</xref>,
-        we stated that the solution was the point <m>(6,12)</m>.
-        It makes sense to write this as an ordered pair when we're given a graph.
-        In some cases when we have no graph,
-        particularly when our variables are not <m>x</m> and <m>y</m>,
-        it might not be clear which variable <q>comes first</q>
-        and we won't be able to write an ordered pair.
-        Nevertheless,
-        given the context we can write meaningful summary statements.
-\end{remark}
+%% A <term>system of linear equations</term> is any pairing of two (or more) linear equations.
+%%           A <term>solution to a system of linear equations</term>
+%%           is any point that is a solution for all of the equations in the system.
+%%           The <term>solution set to a system of linear equations</term> is the collection of all solutions to the system.
+%% \begin{remark}
+%%         In <xref ref="example-solving-systems-by-graphing-intro">Example</xref>,
+%%         we stated that the solution was the point <m>(6,12)</m>.
+%%         It makes sense to write this as an ordered pair when we're given a graph.
+%%         In some cases when we have no graph,
+%%         particularly when our variables are not <m>x</m> and <m>y</m>,
+%%         it might not be clear which variable <q>comes first</q>
+%%         and we won't be able to write an ordered pair.
+%%         Nevertheless,
+%%         given the context we can write meaningful summary statements.
+%% \end{remark}
 
 
 
