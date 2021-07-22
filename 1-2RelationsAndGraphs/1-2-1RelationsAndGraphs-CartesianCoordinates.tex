@@ -12,7 +12,7 @@
 \begin{document}
 
 \begin{abstract}
-We graph points on a 2-dimensional Cartesian graph.  
+We plot points on a 2-dimensional Cartesian graph.  
 \end{abstract}
 \maketitle
 
@@ -22,6 +22,13 @@ We graph points on a 2-dimensional Cartesian graph.
 
 \section{Graphing 2-D Cartesian Coordinates} 
 % From https://spot.pcc.edu/math/orcca/ed2/html/section-cartesian-coordinates.html 
+
+\begin{MM}
+The purpose of math is to make sense of the world around up and phenomena we encounter. We use analogies to ground our learning in familiar situations to help us understand mathematics through connections between math and the world.
+
+
+
+\end{MM}
 
 When we model a relationship between two variables visually, we use the Cartesian coordinate system. We begin with the basic vocabulary and ideas that come with the Cartesian coordinate system.
 
@@ -38,6 +45,7 @@ The Cartesian coordinate system identifies the location of every point in a plan
         \addplot[soliddot] coordinates {(0,0)} node[pin=240:{Carl's house}] {};
         \addplot[soliddot] coordinates {(2, 3)} node[pin=-30:{restaurant}] {};
         \addplot[soliddot] coordinates {(-3, 2)} node[pin=100:{pet shop}] {};
+        \addplot[soliddot] coordinates {(3.5, 2)} node[pin=100:{school}] {};
         \addplot[soliddot] coordinates {(-2, -4)} node[pin=150:{gas station}] {};
         \addplot[soliddot] coordinates {(3, -3)} node[pin=120:{bar}] {};
         \addplot[mark=none] coordinates {(5, 0)} node[above left] {east};
@@ -48,9 +56,9 @@ The Cartesian coordinate system identifies the location of every point in a plan
 \end{tikzpicture}
 \end{image}
 
-If Carl has an out-of-town guest who asks him how to get to the restaurant, Carl could say, ``First go 2 blocks east (to the right on the map), then go 3 blocks north (up on the map).''
+If Carl has an out-of-town guest who asks him how to get to the restaurant, Carl could say, ``First go 2 blocks east (to the right on the map), then go 3 blocks north (up on the map).'' Altnernatively, we could say, ``First go 3 blocks north (up on the map), then go 2 blocks east (to the right on the map).'' (There are actually many different paths, especially if we consider the blocks as open fields the friend can walk through.)
 
-Two numbers are used to locate the restaurant. In the Cartesian coordinate system, these numbers are called coordinates and they are written as the ordered pair (2,3). The first coordinate, 2, represents distance traveled from Carl's house to the east (or to the right horizontally on the graph). The second coordinate, 3, represents distance to the north (up vertically on the graph).
+Two numbers are used to locate the restaurant. In the Cartesian coordinate system, these two numbers together are called coordinates and they are written as an ordered pair. The ordered pair (2,3) represents the location of the restaurant. The first coordinate, 2, represents distance traveled from Carl's house to the east (or to the right horizontally on the graph). The second coordinate, 3, represents distance to the north (up vertically on the graph).
 
 \begin{image} 
 \begin{tikzpicture}
@@ -105,7 +113,7 @@ In the Cartesian coordinate system, the positive directions are to the right hor
 
 
 \begin{problem}
-Use the graph above about Carl's neighborhood to answer the following questions.
+Use the graph of Carl's neighborhood above to answer the following questions.
 \begin{itemize}
 \item What are the coordinates of the bar? $\answer[given]{(3,-3)}$
 \item What are the coordinates of the gas station? $\answer[given]{(-2,-4)}$
@@ -165,7 +173,7 @@ In a Cartesian coordinate system, the map of Carl's neighborhood would look like
 
 
 \begin{definition}
-The \dfn{Cartesian coordinate system} is a coordinate system that specifies each point uniquely in a plane by a pair of numerical coordinates, which are the signed (positive/negative) distances to the point from two fixed perpendicular directed lines, measured in the same unit of length. Those two reference lines are called the \dfn{horizontal axis} and \dfn{vertical axis}, and the point where they meet is the \dfn{origin}. The horizontal and vertical axes are often called the \dfn{$x$-axis} and \dfn{$y$-axis}.  \\
+The \dfn{Cartesian coordinate system} is a coordinate system that specifies each point uniquely in a plane by a pair of numerical coordinates, which are the signed (positive/negative) distances to the point from two fixed perpendicular directed lines. Those two reference lines are called the \dfn{horizontal axis} and \dfn{vertical axis}, and the point where they meet is the \dfn{origin}. The horizontal and vertical axes are often called the \dfn{$x$-axis} and \dfn{$y$-axis}.  \\
 
 The plane based on the $x$-axis and $y$-axis is called a \dfn{coordinate plane}. The ordered pair used to locate a point is called the point's \dfn{coordinates}, which consists of an $x$-coordinate and a $y$-coordinate. For example, the point $(1,2)$, has $x$-coordinate 1,  and $y$-coordinate 2.   The origin has coordinates $(0,0)$. \\
 
