@@ -1,5 +1,5 @@
 \documentclass[nooutcomes]{ximera}
-\input{../preamble}
+\input{../preamble.tex}
 
 
 
@@ -13,7 +13,7 @@
 \begin{document}
 
 \begin{abstract}
-We define relations and graph examples of examples. 
+We define relations and graph examples of relations. 
 \end{abstract}
 \maketitle
 
@@ -22,7 +22,7 @@ We define relations and graph examples of examples.
 %\typeout{************************************************}
 
 %\subsection{Relations} 
-In the last section, we discussed graphing points using the Cartesian coordinate system. While individual points can be useful, we often want to study collections of points.
+In the last section, we discussed plotting points using the Cartesian coordinate system. While individual points can be useful, we often want to study collections of points.
 
 \begin{definition}
 A \dfn{relation} is a collection of points of the form $(x,y)$.  If the point $(x_0,y_0)$ is in the relation, then we say $x_0$ and $y_0$ are \dfn{related}.
@@ -33,6 +33,10 @@ examples will you see the relationship (pun intended!) between the
 mathematical definitions of the words ``relation'' and ``related'' and the
 way we often use these words in everyday speech.
 
+\begin{MM}
+What is this $(x_0,y_0)$ notation?  When we write $(x,y)$, we are usually talking about a generic point.  When we write $(x_0,y_0)$, we have a specific point in mind.  $x_0$ and $y_0$ essentially serve as placeholders for a point such as $(-1.5, 2)$ or $(0,5)$. We read $(x_0,y_0)$ as ``$x$ knot, $y$ knot."
+\end{MM}
+
 \begin{example}
 Let's look at the relationship between the number of chicken nuggets
 you can buy in a single container at a local fast food store and the
@@ -41,7 +45,7 @@ price for that container of nuggets.
 $$
  \begin{array}{||c c||} 
  \hline
- \text{Amount of Nuggets} & \text{Price} \\[0.5ex] 
+ \text{Number of Nuggets} & \text{Price} \\[0.5ex] 
  \hline\hline
  4 & 1.99\\ 
  \hline
@@ -57,7 +61,7 @@ $$
 $$
 
 \begin{explanation}
-Now this table defines a relation because we can think of these as the points $(4,1.99)$, $(6,2.99)$, $(10,4.49)$, $(20,5.00)$, and $(40, 8.99)$.  We say that 4 nuggets is related to \$1.99.  And 40 nuggets is related to \$8.99.  We can also represent this relationship using a graph.
+This table defines a relation because we can list these as the points $(4,1.99)$, $(6,2.99)$, $(10,4.49)$, $(20,5.00)$, and $(40, 8.99)$.  We say that 4 nuggets is related to \$1.99 and 40 nuggets is related to \$8.99.  We can also represent this relationship using a graph.
 
 \begin{image}
 \begin{tikzpicture}
@@ -79,21 +83,26 @@ Now this table defines a relation because we can think of these as the points $(
 \end{tikzpicture}
 \end{image}
 
-We could ask lots of mathematical questions about this relation.  One such example might be, ``What's the cheapest way to buy 100 nuggets?"  But for now, its enough to know it is a relation and to know you can represent that relation in multiple ways such as a table, a list, or a graph.
+We could ask many mathematical questions about this relation.  For example, ``What's the cheapest way to buy 100 nuggets?"  But for now, its enough to know it is a relation and to know you can represent that relation using multiple representations such as a table, a list, or a graph.
 \end{explanation}
 \end{example}
 
+\begin{MM}
+Representations are important in math. There are often many different ways information can be displayed or described. Common representations include tables, graphs, formulas/algebra, or drawings. Representations help us make sense of mathematics in different ways. Key for mathematical understanding is making connections between different representations and being able to move or `translate' between them.
+\end{MM}
+
+
 
 \begin{example}
-It's important to note that nothing about our definition of relation restricts what points can be included.  Assume that in our chicken nugget example above, there is a coupon that allows you to buy 10 chicken nuggets for \$3.00.  Assume there is also an option to buy a chicken nugget meal which includes 10 chicken nuggets (and fries and a drink but we don't care about those) for \$6.49.  
+It's important to note that nothing about our definition of relation restricts what points can be included.  Assume that in our chicken nugget example above, there is a coupon that allows you to buy 10 chicken nuggets for \$3.00 and there an option to buy a chicken nugget meal which includes 10 chicken nuggets (and fries and a drink) for \$6.49.  
 
 \begin{explanation}
-Then we could modify the table of our relation to be:
+We could modify the table of our relation to be:
 \begin{center}
 $
  \begin{array}{||c c||} 
  \hline
- \text{Amount of Nuggets} & \text{Price} \\ [0.5ex] 
+ \text{Number of Nuggets} & \text{Price} \\ [0.5ex] 
  \hline\hline
  4 & 1.99\\ 
  \hline
@@ -114,7 +123,7 @@ $
 \end{center}
 
 
-Now this table still defines a relation and we can say that 10 nuggets is related to \$4.49 and \$3.00 and \$6.49. Here is the graph of this relation.
+This table still defines a relation and we can say that 10 nuggets is related to \$4.49 and \$3.00 and \$6.49. Here is the graph of this relation.
 
 \begin{image}
 \begin{tikzpicture}
@@ -142,11 +151,14 @@ Now this table still defines a relation and we can say that 10 nuggets is relate
 
 
 \begin{remark}
-There is a special type of relation called a \textbf{function} where each $x$-coordinate is only allowed to be related to one unique $y$-coordinate.  In the examples above, the first relation is a function but the second relation which includes the coupon and a meal is not a function because 10 nuggets is related to more than one cost.  Functions are going to be extremely important and we will come back to them later in the course.
+There is a special type of relation called a \textbf{function} where each $x$-coordinate is only allowed to be related to one unique $y$-coordinate.  The relation in example 1 is a function but the relation in example 2, which includes the coupon and a meal, is not a function because 10 nuggets is related to more than one cost.  Functions are going to be extremely important and we will come back to them later in the course.
 \end{remark}
 
+\begin{MM}
+In example 2, we were given information (fries and drink) that wasn't used when describing the relation.  This type of `extra' information is usually present when using math to make decisons or answer questions in our every day life. One aspect of mathematics is determining what information to include or is relrevant.
+\end{MM}
 
-The two examples we have seen so far have been a relations given by a list of points.  This does not have to be the case.  Relations can contain an infinite number of points.  Some of the relations we will be studying the most are given by an equation relating two variables.
+The two examples we have seen so far have been a relations given by a list of points.  This does not have to be the case.  Relations can contain an infinite number of points.  Some of the relations we will focus on are given by an equation relating two variables.
 
 \begin{example}
 Let's consider the relation that is the collection of all points $(x,y)$ where $x^2+y^2=4$. 
@@ -187,10 +199,8 @@ x^2+y^2&=4 \\
 \end{align}
 \end{explanation}
 \end{example}
-
 \begin{example}
 A relation can also be intitally given by a graph.  For example, this is a relation.
-
 \begin{image}
 \begin{tikzpicture}
     \begin{axis}
@@ -198,10 +208,8 @@ A relation can also be intitally given by a graph.  For example, this is a relat
     \end{axis}
 \end{tikzpicture}
 \end{image}
-
 \begin{explanation}
 We can list some of the points on this graph.  It looks like $(0,0)$ and $(1,2)$ are points on this curve, but there are many other points we cannot explicitly list.
 \end{explanation}
 \end{example}
-
 \end{document}
