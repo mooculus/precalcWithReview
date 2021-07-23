@@ -1,0 +1,208 @@
+\documentclass[nooutcomes]{ximera}
+
+\input{../preamble}
+\author{Kenneth Berglund}
+\license{Creative Commons Attribution-ShareAlike 4.0 International License}
+\acknowledgement{https://www.stitz-zeager.com/szca07042013.pdf}
+
+\title{Eliminating Variables}
+
+%This is so the pictures show up
+\pgfplotsset{compat=1.5.1}
+
+%This is also for pictures
+\usetikzlibrary{calc}
+
+
+\begin{document}
+\begin{abstract}
+  
+\end{abstract}
+\maketitle
+
+%\begin{motivatingQuestions}\begin{itemize}
+%	\item 
+%	\item 
+%	\item 
+%\end{itemize}\end{motivatingQuestions}
+
+%\typeout{************************************************}
+%\typeout{Solving Non-linear Systems Algebraically}
+%\typeout{************************************************}
+\section{Solving Non-linear Systems Algebraically}
+Algebraically, we can use the methods of substitution and elimination outlined in Section 8.1 to solve non-linear systems of equations. However, we need to exercise care when solving non-linear systems, especially since the operations involved may not always result in valid solutions! 
+
+For example, consider the system given by 
+$$
+\begin{cases}
+y - x^2 & = 0\\
+x^2 + y^2 &= 1
+\end{cases}.
+$$
+
+Let's try to use substitution here. From the top equation, we can see that $y = x^2$. Substituting this into the bottom equation results in $x^2 + (x^2)^2 = 1$, or $x^4 + x^2 = 1$, which we can rewrite as $x^4 + x^2 - 1 = 0$. We can now use the quadratic formula on $x^4 + x^2 - 1$ to find that $x^2 = \frac{-1 \pm \sqrt{5}}{2}$. Taking a square root, we find that $x = \pm \sqrt{\frac{-1 \pm \sqrt{5}}{2}}$ are possible values of $x$. Note that there are actually \emph{four} separate possible values of $x$, one for each choice of plus or minus in the expression above: $\sqrt{\frac{-1 + \sqrt{5}}{2}}, \sqrt{\frac{-1 - \sqrt{5}}{2}}, -\sqrt{\frac{-1 + \sqrt{5}}{2}}$, and $-\sqrt{\frac{-1 - \sqrt{5}}{2}}$. 
+
+However, $\frac{-1 - \sqrt{5}}{2}$ is actually negative! Since the square root of a negative number is not a real number, $\sqrt{\frac{-1 - \sqrt{5}}{2}}$ and $-\sqrt{\frac{-1 - \sqrt{5}}{2}}$ are not valid $x$-values of a solution to this system. The other two solutions are fine. Therefore, keeping in mind that $y = x^2$, the solutions to our system are given by $\left(\sqrt{\frac{-1 + \sqrt{5}}{2}}, \frac{-1 + \sqrt{5}}{2}\right)$ and $\left(-\sqrt{\frac{-1 + \sqrt{5}}{2}}, \frac{-1 + \sqrt{5}}{2}\right)$. We can plug these back into the original equations to make sure that they satisfy both. 
+
+Taking a look at the graphs of these equations should shed some light on what's happening here. 
+\begin{image}
+  \begin{tikzpicture}
+    \begin{axis}[axis equal image]
+       
+	\addplot[penColor, mark=o, only marks] coordinates {(-.786, .618) (.786, .618)};
+	\draw (axis cs:0, 0) circle [color=penColor, x radius=1, y radius=1,thick];
+	\addplot[penColor2, no marks, samples=200] {x^2};
+
+    \end{axis}
+  \end{tikzpicture}
+\end{image}
+
+The only intersection points of the two graphs have a positive $y$-coordinate. This could have tipped us off earlier that some of the $x$-values we got wouldn't be valid. Indeed, from the first equation, we have that $x = \sqrt{y}$, and this ensures that $y$ must be positive. 
+
+The above example illustrates the importance of always checking that the solutions you find are real numbers, and also checking that the solutions you find are actually solutions to the system. 
+
+%\typeout{************************************************}
+%\typeout{Eliminating Variables}
+%\typeout{************************************************}
+\section{Eliminating Variables}
+
+Now we illustrate the method of elimination, which can be used when you notice that the equations in the system have like terms. The difference from before is that we now may have non-linear terms that we can eliminate.
+
+Let's apply this technique to a system we saw previously.
+\begin{example}
+Find all solutions to the following system of equations:
+$$
+\begin{cases}
+x^2 + y^2 & =  4 \\
+4x^2 + 9y^2 & = 36
+\end{cases}.
+$$
+\end{example}
+\begin{explanation}
+We can multiply the top equation by $-4$, so we get the equivalent system of equations
+$$
+\begin{cases}
+-4x^2 - 4y^2 & =  -16 \\
+4x^2 + 9y^2 & = 36
+\end{cases}.
+$$
+Now we can eliminate the $x^2$ terms to obtain $5y^2 = 20$. From here, we see that $y^2 = 4$, so $y = \pm 2$.  To find the associated $x$ values, we substitute each value of $y$ into one of the equations to find the resulting value of $x$. Choosing $x^2 + y^2 = 4$,
+we find that for both $y = -2$ and $y = 2$, we get $x = 0$. Our solution set is thus $\{(0, 2),(0, -2)\}$.
+\end{explanation}
+
+\begin{example}
+Find all solutions to the following system of equations:
+$$
+\begin{cases}
+x^2 + y^2 & =  4 \\
+4x^2 - 9y^2 & = 36
+\end{cases}.
+$$
+\end{example}
+\begin{explanation}
+We proceed as before to eliminate one of the variables. We can multiply the top equation by $-4$, so we get the equivalent system of equations
+$$
+\begin{cases}
+-4x^2 - 4y^2 & =  -16 \\
+4x^2 - 9y^2 & = 36
+\end{cases}.
+$$
+Now we can eliminate the $x^2$ terms to obtain $-13y^2 = 20$. From here, we see that $y^2 = -\frac{20}{13}$. Since the square root of a negative number is not a real number, we see that there are no real values of $y$ that solve this equation. Therefore, we conclude that this system has no solution. Recall that a system that has no solution is called inconsistent. 
+\end{explanation}
+
+\begin{example}
+Find all solutions to the following system of equations:
+$$
+\begin{cases}
+x^2 + 2xy - 16 & =  0 \\
+y^2 + 2xy - 16 & = 0
+\end{cases}.
+$$
+\end{example}
+\begin{explanation}
+At first glance, it doesn’t appear as though elimination will do us any good since it’s clear
+that we cannot completely eliminate one of the variables. The alternative, solving one of
+the equations for one variable and substituting it into the other, is full of unpleasantness.
+Returning to elimination, we note that it is possible to eliminate the troublesome $xy$ term,
+and the constant term as well, by elimination and doing so we get a more tractable relationship between $x$ and $y$. We can multiply the top equation by $-1$, so we get the equivalent system of equations
+$$
+\begin{cases}
+-x^2 - 2xy + 16 & =  0 \\
+y^2 + 2xy - 16 & = 0
+\end{cases}.
+$$
+Eliminating, we find that $y^2 - x^2 = 0$, so $y^2 = x^2$, and $y = \pm x$. Substituting $y = x$ into the top equation, we get $x^2 + 2x^2 - 16 = 0$, so that $x^2 = \frac{16}{3}$ or $x = \pm \frac{4\sqrt{3}}{3}$.  On the other hand, when we substitute $y = -x$ into the top equation, we get $x^2 - 2x^2 - 16 = 0$ or $x^2 = -16$, which gives no real solutions. Substituting each of $x = \pm \frac{4\sqrt{3}}{3}$ into the substitution equation $y = x$ yields the solution set $\left\{\left(\frac{4\sqrt{3}}{3}, \frac{4\sqrt{3}}{3}\right), \left(-\frac{4\sqrt{3}}{3}, -\frac{4\sqrt{3}}{3}\right)\right\}$. Try plugging these into the original system to see that they are actually solutions. Verifying this graphically would be a fun exercise, but we leave that up to you. 
+\end{explanation}
+
+
+
+%\typeout{************************************************}
+%\typeout{Some Common Issues and Techniques}
+%\typeout{************************************************}
+\section{Some Common Issues and Techniques}
+\begin{example}
+Find all solutions to the following system of equations:
+$$
+\begin{cases}
+x^2 + y & =  12 \\
+3xy & = 0
+\end{cases}.
+$$
+\end{example}
+\begin{explanation}
+Notice that this is, in fact, a non-linear system, since the second equation contains an $xy$ term. Since we can't see any like terms in the two equations, it makes sense to try to use substitution. We might be tempted to divide both sides of the bottom equation by $3x$, so as to isolate $y$, but as always with division, we need to be careful! Indeed, $x = 0$ is still a possibility, so we cannot divide through by $3x$, since we'd then be dividing by $0$. 
+
+Instead, it helps to think about what it means for the product of two numbers to equal 0. In fact, the product of two nonzero numbers can never be 0. In our situation, we know that $3xy= 0$, so either $3x = 0$ or $y = 0$. 
+
+If $3x = 0$, then dividing by 3 (since $3 \ne 0$) gives us $x = 0$. We can plug that into the top equation and find that $0^2 + y = 12$, so $y = 12$. We can then check that $(0, 12)$ is a solution to our original system. 
+
+If $y = 0$, we can plug that into the top equation to find that $x^2 + 0 = 12$. Solving for $x$ yields $x = \pm \sqrt{12} = \pm 2\sqrt{3}$. We can then check that $(2\sqrt{3}, 0)$ and $(-2\sqrt{3}, 0)$ are solutions to the system. 
+
+Our final solution set is $\{(2\sqrt{3}, 0), (-2\sqrt{3}, 0), (0, 12)\}$. 
+\end{explanation}
+
+\begin{example}
+Find all solutions to the following system of equations:
+$$
+\begin{cases}
+\frac{4}{x} + \frac{3}{y} & =  1 \\
+& \\
+\frac{3}{x} + \frac{2}{y} & =  -1
+\end{cases}.
+$$
+\end{example}
+\begin{explanation}
+Notice that this is, in fact, a non-linear system, since both equations divide by the variables we're using.
+
+If we define new (but related) variables by letting $u = \frac{1}{x}$ and $v = \frac{1}{y}$ then the system becomes 
+$$
+\begin{cases}
+4u + 3v & =  1 \\
+3u + 2v & =  -1
+\end{cases}.
+$$
+
+This associated system of linear equations can then be solved using any of the techniques you've learned earlier to find that $u = -5$ and $v = 7$. Therefore, $x = \frac{1}{u} = -\frac{1}{5}$ and $y = \frac{1}{v} = \frac{1}{7}$, and our solution set is $\left\{\left(-\frac{1}{5}, \frac{1}{7}\right)\right\}$.
+\end{explanation}
+
+We say that the original system is linear in form because its equations are not linear, but a few
+substitutions reveal a structure that we can treat like a system of linear equations. 
+
+\begin{exploration}
+Consider the following system.
+$$
+\begin{cases}
+4\ln(x) + 3y^2 & =  1 \\
+
+3\ln(x) + 2y^2 & =  -1
+\end{cases}.
+$$
+\begin{enumerate}
+\item Is the system linear in form?
+\item If so, make substitutions by defining variables $u$ and $v$ so that the system in terms of $u$ and $v$ is linear. What is $u$? What is $v$? What is our new associated linear system?
+\item What is the solution set to our associated linear system?
+\item What is the solution set to our original system?
+\end{enumerate}
+\end{exploration}
+
+\end{document}
