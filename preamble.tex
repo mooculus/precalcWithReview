@@ -63,6 +63,13 @@
 %\typeout{New Environments}
 %\typeout{************************************************}
 
+%% to fix for web can be removed when deployed offically with ximera2
+\let\image\relax\let\endimage\relax
+\NewEnviron{image}{% 
+  \begin{center}\BODY\end{center}% center
+}
+
+
 
 \NewEnviron{folder}{
       \addcontentsline{toc}{section}{\textbf{\BODY}}
