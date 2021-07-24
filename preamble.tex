@@ -206,6 +206,7 @@ math content, and other information freely available at pcc.edu/orcca.}}
 \newcommand{\licenseY}{\renewcommand{\licenseAcknowledgement}{\textbf{Acknowledgements:} Yoshiwara Books (https://yoshiwarabooks.org/)}}
 \newcommand{\licenseOS}{\renewcommand{\licenseAcknowledgement}{\textbf{Acknowledgements:} OpenStax College Algebra (https://openstax.org/details/books/college-algebra)}}
 
+\ifweb\else %% do nothing on the website
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
@@ -214,7 +215,7 @@ math content, and other information freely available at pcc.edu/orcca.}}
 \fancyfoot[C]{\licenseAcknowledgement}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
-
+\fi
 
 %%%%%%%%%%%%%%%%
 
