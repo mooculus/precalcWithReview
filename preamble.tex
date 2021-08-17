@@ -49,11 +49,12 @@
 \DeclareGraphicsExtensions{.pdf,.png,.jpg,.eps}
 
 
+
 \newcommand{\mooculus}{\textsf{\textbf{MOOC}\textnormal{\textsf{ULUS}}}}
 
 \usepackage[makeroom]{cancel} %% for strike outs
 
-\ifweb
+\ifxake
 \else
 \usepackage[most]{tcolorbox}
 \fi
@@ -76,7 +77,7 @@
 }
 
 
-\ifweb
+\ifxake
 \let\summary\relax
 \let\endsummary\relax
 \newtheorem*{summary}{Summary}
@@ -206,7 +207,7 @@ math content, and other information freely available at pcc.edu/orcca.}}
 \newcommand{\licenseY}{\renewcommand{\licenseAcknowledgement}{\textbf{Acknowledgements:} Yoshiwara Books (https://yoshiwarabooks.org/)}}
 \newcommand{\licenseOS}{\renewcommand{\licenseAcknowledgement}{\textbf{Acknowledgements:} OpenStax College Algebra (https://openstax.org/details/books/college-algebra)}}
 
-\ifweb\else %% do nothing on the website
+\ifxake\else %% do nothing on the website
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
@@ -236,7 +237,7 @@ math content, and other information freely available at pcc.edu/orcca.}}
 \renewcommand*\thepart{\arabic{part}}
 
 
-\ifweb\else
+\ifxake\else
 \renewcommand\chapterstyle{%
   \def\maketitle{%
     \addtocounter{titlenumber}{1}%
@@ -445,7 +446,7 @@ math content, and other information freely available at pcc.edu/orcca.}}
 \usetikzlibrary{positioning,3d,shapes.geometric}            %needed for 3d number sets tower
 
 %% NEEDED FOR XIMERA 1
-\usetkzobj{all}       %NO LONGER VALID
+%\usetkzobj{all}       %NO LONGER VALID
 %%%%%%%%%%%%%%
 
 \usepackage{tikz-3dplot}
@@ -455,7 +456,7 @@ math content, and other information freely available at pcc.edu/orcca.}}
 \usetikzlibrary{positioning}                                %function diagrams
 \usetikzlibrary{shapes}                                     %function diagrams
 %%% global colors from https://www.pcc.edu/web-services/style-guide/basics/color/ %%%
-\definecolor{ruby}{HTML}{9e0c0f}
+\definecolor{ruby}{HTML}{9E0C0F}
 \definecolor{turquoise}{HTML}{008099}
 \definecolor{emerald}{HTML}{1c8464}
 \definecolor{amber}{HTML}{c7502a}
