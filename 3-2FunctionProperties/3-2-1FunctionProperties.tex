@@ -4,11 +4,12 @@
 \author{Kenneth Berglund}
 \license{Creative Commons Attribution-ShareAlike 4.0 International License}
 \acknowledgement{https://activecalculus.org/, stitz-zeager}
+\acknowledgement{https://ximera.osu.edu/csccmathematics/precalculus1/precalculus1/graphicalAnalysis/evenOddPeriodic}
 
 \title{Function Properties}
 
 \begin{document}
-\licenseAPCSZ
+\licenseAPCSZCSCC
 \begin{abstract}
   
 \end{abstract}
@@ -291,24 +292,20 @@ Consider the function $h$ defined by $h(x) = x^2$. We'll try to prove that $h$ i
 \end{enumerate}
 \end{exploration}
 
-Notice that to test an equation's graph for symmetry about the origin, we replaced $x$ and $y$ with $-x$ and $-y$, respectively.  Doing this substitution in the equation $y = f(x)$ results in $-y = f(-x)$.  Solving the latter equation for $y$ gives $y = -f(-x)$.  In order for this equation to be equivalent to the original equation $y=f(x)$ we need $-f(-x) = f(x)$, or, equivalently, $f(-x) = -f(x)$. In the exploration, you checked whether the graph of an equation was symmetric about the $y$-axis by replacing $x$ with $-x$ and checking to see if an equivalent equation results.  If we are graphing the equation $y=f(x)$, substituting $-x$ for $x$ results in the equation $y=f(-x)$.  In order for this equation to be equivalent to the original equation $y=f(x)$ we need $f(-x) = f(x)$. These results are summarized below.
-
-The graph of a function $f$ is symmetric \index{symmetry ! testing a function graph for}
-
-\begin{itemize}
-
-\item  about the $y$-axis if and only if $f(-x) = f(x)$ for all $x$ in the domain of $f$.
-
-\item  about the origin if and only if $f(-x) = -f(x)$ for all $x$ in the domain of $f$.
-
-\end{itemize}
+Notice that to test an equation's graph for symmetry about the origin, we replaced $x$ and $y$ with $-x$ and $-y$, respectively.  Doing this substitution in the equation $y = f(x)$ results in $-y = f(-x)$.  Solving the latter equation for $y$ gives $y = -f(-x)$.  In order for this equation to be equivalent to the original equation $y=f(x)$ we need $-f(-x) = f(x)$, or, equivalently, $f(-x) = -f(x)$. In the exploration, you checked whether the graph of an equation was symmetric about the $y$-axis by replacing $x$ with $-x$ and checking to see if an equivalent equation results.  If we are graphing the equation $y=f(x)$, substituting $-x$ for $x$ results in the equation $y=f(-x)$.  In order for this equation to be equivalent to the original equation $y=f(x)$ we need $f(-x) = f(x)$. This leads us to the definition of an even function and an odd function.
 
 \begin{definition}
-We call a function \index{function ! even}\index{even function}\dfn{even} if its graph is symmetric about the $y$-axis or \index{function ! odd}\index{odd function}\dfn{odd} if its graph is symmetric about the origin.  Apart from a very specialized family of functions which are both even and odd, functions fall into one of three distinct categories: even, odd, or neither even nor odd.  
+
+A function $f$ is\dfn{even} if $f(-x) = f(x)$ for all $x$ in the domain of $f$.
+
+A function $f$ is \dfn{odd} if $f(-x) = -f(x)$ for all $x$ in the domain of $f$.
+
 \end{definition}
 
+A function is even if and only if its graph is symmetric about the $y$-axis.  A function is odd if and only if its graph is symmetric about the origin.  
+
 \begin{example}
-Determine analytically if the following functions are even, odd, or neither even nor odd. 
+Determine if the following functions are even, odd, or neither even nor odd using the definition of even and odd functions. 
 \begin{enumerate}
 \item $f(x) = \frac{5}{2 - x^2}$ 
 \item $g(x) = \frac{5x}{2 - x^2}$ 
@@ -318,19 +315,21 @@ Determine analytically if the following functions are even, odd, or neither even
 
 
 \begin{explanation}
-The first step in all these problems is to replace $x$ with $-x$ and simplify.
+The defintion of even and odd functions gives information about $f(-x)$, the first step in all these problems is to replace input $-x$ into the function and simplify.
 
 \begin{enumerate}
-\item Here, $f(x) = \frac{5}{2 - x^2}$. Replacing $x$ with $-x$, we find that
+\item Here, $f(x) = \frac{5}{2 - x^2}$. Inputting $-x$ into $f$, we find that
 
 \begin{align*}
 f(-x) & = \frac{5}{2 - (-x)^2}\\
+f(-x) & = \frac{5}{2 - (-1 \cdot x)^2}\\
+f(-x) & = \frac{5}{2 - (-1)^2 \cdot x^2}\\
 f(-x) & = \frac{5}{2 - x^2},
 \end{align*}
 
 so $f(-x) = f(x)$. This shows that $f$ is \emph{even}. 
 
-\item Here, $g(x) = \frac{5x}{2 - x^2}$. Replacing $x$ with $-x$, we find that
+\item Here, $g(x) = \frac{5x}{2 - x^2}$. Inputting $-x$ into $g$, we find that
 
 \begin{align*}
 g(-x) & = \frac{5(-x)}{2 - (-x)^2}\\
@@ -346,17 +345,200 @@ It doesn't appear that $g(-x)$ is equal to $g(x)$. To prove this, we check with 
 \end{align*}
 Since $-g(x) = g(-x)$, $g$ is \emph{odd}.
 
-\item Here, $h(x) = \frac{5x}{2 - x^3}$. Replacing $x$ with $-x$, we find that 
+\item Here, $h(x) = \frac{5x}{2 - x^3}$. Inputting $-x$ into $h$, we find that 
 
 \begin{align*}
 h(-x) & = \frac{5(-x)}{2 - (-x)^3} \\
 h(-x) & = \frac{-5x}{2 + x^3}.
 \end{align*}
 
-Once again, $h(-x)$ doesn't appear to be equal to $h(x)$. We check with an $x$ value. For example, $h(1) = 5$, but $h(-1) = -\frac{5}{3}$. This proves that $h$ is not even and it also shows $h$ is not odd. (Why?)
+Once again, $h(-x)$ doesn't appear to be equal to $h(x)$. We check with an $x$ value. For example, $h(1) = 5$, but $h(-1) = -\frac{5}{3}$. This proves that $h$ is not even and it also shows $h$ is not odd. You may be wondering how we konw that $h$ is not odd.  Recall that when $h$ is odd, then if $(x_1,y_1)$ is a point on $h$, then $(-x_1,-y_1)$ must also be a point on $h$.  But that would mean that for $h$ to be odd, $h(-1)=-h(1)$.  But $-h(1)=-5$ and $h(-1)= -\frac{5}{3} \neq -5$.
 
 \end{enumerate}
 \end{explanation}
+
+\section{Completing the Graph of Even or Odd Functions}
+
+If we know a function is either even or odd, we can determine one half of the graph or function values if we are giving the other half.  This is because we know that:
+\begin{itemize}
+\item If a function is even and the point $(x_1,y_1)$ is on the function graph, then the point $(-x_1,y_1)$ is also on the function graph.
+\item If a function is even and the point $(x_1,y_1)$ is on the function graph, then the point $(-x_1,-y_1)$ is also on the function graph.
+\end{itemize}
+
+Try the two examples below and then compare your work with the solution. 
+
+
+\begin{example} \textit{Even} \\
+
+Half of the graph of $y = K(t)$ is displayed below.   If $K(t)$ is an even function, then think of what the other half of the graph would look like.
+
+
+
+\begin{image}
+\begin{tikzpicture}
+     \begin{axis}[
+                domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+                axis lines =center, xlabel=$t$, ylabel=${y=K(t)}$,
+                ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                ticklabel style={font=\scriptsize},
+                every axis y label/.style={at=(current axis.above origin),anchor=south},
+                every axis x label/.style={at=(current axis.right of origin),anchor=west},
+                axis on top,
+                ]
+
+        
+        %\addplot [draw=penColor, very thick, smooth, domain=(-7.5:3), <->] {1/(x-3) + 2};
+        \addplot [draw=penColor, very thick, smooth, domain=(3:6), <-] {1/(x-3) + 2};
+        \addplot [draw=penColor, very thick, smooth, domain=(6:8), ->] {2*x-14};
+
+        \addplot [line width=1, gray, dashed,samples=100,domain=(-9:9)] ({3},{x});
+        %\addplot [line width=1, gray, dashed,samples=100,domain=(-9:4)] ({x},{2});
+
+        %\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-6,5)};
+        %\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-6,1.88)};
+        \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(6,2.33)};
+        \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(6,-2)};
+
+    \end{axis}
+
+
+
+\end{tikzpicture}
+\end{image}
+
+Visualize what the full graph looks like, then click the arrow to compare with the solution below.
+
+\begin{expandable}
+
+\begin{explanation}
+
+\begin{image}
+\begin{tikzpicture}
+     \begin{axis}[
+                domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+                axis lines =center, xlabel=$t$, ylabel=${y=K(t)}$,
+                ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                ticklabel style={font=\scriptsize},
+                every axis y label/.style={at=(current axis.above origin),anchor=south},
+                every axis x label/.style={at=(current axis.right of origin),anchor=west},
+                axis on top,
+                ]
+
+        
+        \addplot [draw=penColor, very thick, smooth, samples=300, domain=(-6:-3.15), ->] {-1/(x+3) + 2};
+        \addplot [draw=penColor, very thick, smooth, samples=300, domain=(-8:-6), <-] {-2*x-14};
+        \addplot [draw=penColor, very thick, smooth, samples=300, domain=(3.15:6), <-] {1/(x-3) + 2};
+        \addplot [draw=penColor, very thick, smooth, samples=300, domain=(6:8), ->] {2*x-14};
+
+        \addplot [line width=1, gray, dashed,samples=100,domain=(-9:9)] ({3},{x});
+        \addplot [line width=1, gray, dashed,samples=100,domain=(-9:9)] ({-3},{x});
+
+        \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-6,2.33)};
+        \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-6,-2)};
+        \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(6,2.33)};
+        \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(6,-2)};
+
+    \end{axis}
+
+
+
+\end{tikzpicture}
+\end{image}
+
+\end{explanation}
+
+\end{expandable}
+
+\end{example}
+
+
+\begin{example} \textit{Odd} \\
+
+Half of the graph of $y = M(t)$ is displayed below.   If $M(t)$ is an odd function, then think of what the other half of the graph would look like.
+
+
+
+\begin{image}
+\begin{tikzpicture}
+     \begin{axis}[
+                domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+                axis lines =center, xlabel=$t$, ylabel=${y=M(t)}$,
+                ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                ticklabel style={font=\scriptsize},
+                every axis y label/.style={at=(current axis.above origin),anchor=south},
+                every axis x label/.style={at=(current axis.right of origin),anchor=west},
+                axis on top,
+                ]
+
+        
+        %\addplot [draw=penColor, very thick, smooth, domain=(-7.5:3), <->] {1/(x-3) + 2};
+        \addplot [draw=penColor, very thick, smooth, domain=(3:6), <-] {1/(x-3) + 2};
+        \addplot [draw=penColor, very thick, smooth, domain=(6:8), ->] {2*x-14};
+
+        \addplot [line width=1, gray, dashed,samples=100,domain=(-9:9)] ({3},{x});
+        %\addplot [line width=1, gray, dashed,samples=100,domain=(-9:4)] ({x},{2});
+
+        %\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-6,5)};
+        %\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-6,1.88)};
+        \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(6,2.33)};
+        \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(6,-2)};
+
+    \end{axis}
+
+
+
+\end{tikzpicture}
+\end{image}
+
+Visualize what the full graph looks like, then click the arrow to compare with the solution below.
+
+
+\begin{expandable}
+
+\begin{explanation}
+
+\begin{image}
+\begin{tikzpicture}
+     \begin{axis}[
+                domain=-10:10, ymax=10, xmax=10, ymin=-10, xmin=-10,
+                axis lines =center, xlabel=$t$, ylabel=${y=M(t)}$,
+                ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                ticklabel style={font=\scriptsize},
+                every axis y label/.style={at=(current axis.above origin),anchor=south},
+                every axis x label/.style={at=(current axis.right of origin),anchor=west},
+                axis on top,
+                ]
+
+        
+        \addplot [draw=penColor, very thick, smooth, samples=300, domain=(-6:-3.15), ->] {1/(x+3) - 2};
+        \addplot [draw=penColor, very thick, smooth, samples=300, domain=(-8:-6), <-] {2*x+14};
+        \addplot [draw=penColor, very thick, smooth, samples=300, domain=(3.15:6), <-] {1/(x-3) + 2};
+        \addplot [draw=penColor, very thick, smooth, samples=300, domain=(6:8), ->] {2*x-14};
+
+        \addplot [line width=1, gray, dashed,samples=100,domain=(-9:9)] ({3},{x});
+        \addplot [line width=1, gray, dashed,samples=100,domain=(-9:9)] ({-3},{x});
+
+        \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-6,-2.33)};
+        \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-6,2)};
+        \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(6,2.33)};
+        \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(6,-2)};
+
+    \end{axis}
+
+
+
+\end{tikzpicture}
+\end{image}
+
+\end{explanation}
+\end{expandable}
+
+
+\end{example}
 
 \begin{summary}\begin{itemize}
 \item For a function $f$ defined on the real numbers, we say $f$ is periodic if there exists some $k$ such that
