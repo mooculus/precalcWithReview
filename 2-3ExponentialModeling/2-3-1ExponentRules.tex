@@ -1,6 +1,6 @@
 \documentclass{ximera}
 
-\input{../preamble.tex}
+\input{../preamble}
 \author{David Kish}
 \license{Creative Commons Attribution-ShareAlike 4.0 International License}
 \acknowledgement{https://activecalculus.org/prelude/sec-changing-in-tandem.html}
@@ -11,7 +11,6 @@
 \begin{abstract}
 We review the rules of exponents.
 \end{abstract}
-\licenseAPC
 \maketitle
 
  
@@ -78,15 +77,16 @@ $$
         we'd have $3^5$ multiplied by itself:
    $$
          \left(3^5\right)^2 = \left(3^5\right)\cdot \left(3^5\right)
-         = \left(3\cdot 3\cdot 3\cdot 3 \cdot 3 \right) \cdot \left(3 \cdot 3\cdot 3\cdot 3\cdot 3\right)
+         = \left(3\cdot 3\cdot 3\cdot 3 \cdot 3 \right) \cdot \left(3 \cdot 3\cdot 3\cdot 3\cdot 3\right).
       $$ 
         If we again count how many $3$s are being multiplied,
-        we have a total of two groups each with five $3$s.
+        we have a total of two groups each with five $3$'s.
         So we'd have $2\cdot 5=10$ instances of a $3$.
         So $\left(3^5\right)^2$ simplifies like this:
-   
-          $\left(3^5\right)^2 = 3^{2\cdot 5}$
-          $= 3^{10}$
+   \begin{equation*}
+          \left(3^5\right)^2 = 3^{2\cdot 5}
+          = 3^{10}.
+          \end{equation*}
 
 
 \begin{example}
@@ -97,9 +97,10 @@ $$
           as a product of $x$'s, we have
             $\left(x^2\right)^3 =\left(x^2\right) \cdot \left(x^2\right)\cdot\left(x^2\right)$
             $=(x \cdot x)\cdot (x \cdot x)\cdot (x \cdot x)$
-            $=x^6$
+            $=x^6$.
      \end{explanation}
-          Note that we obtained the exponent of $6$ by multiplying $2$ and $3$.
+           
+           Note that we obtained the exponent of $6$ by multiplying $2$ and $3$.
 \end{example}
       This demonstrates our second exponent rule,
       the Power to a Power Rule:
@@ -113,7 +114,7 @@ $$
 \end{callout}
 
 %%%%%%%%%%%%%%%%%%
-      \section{ Product to a Power Rule}
+      \section{Product to a Power Rule}
         The third exponent rule deals with having multiplication inside a set of parentheses and an exponent outside the parentheses.
         If we write out $\left(3t\right)^5$ without using an exponent,
         we'd have $3t$ multiplied by itself five times:
@@ -179,7 +180,7 @@ $$
    $$
            (a^{m})^{n} = a^{m\cdot n}
    $$
- \textbf{ Product to a Power Rule}
+ \textbf{Product to a Power Rule}
    $$
            (ab)^{m} = a^{m} \cdot b^{m}
    $$  
@@ -222,7 +223,7 @@ $$
 \end{remark}
 %%%%%%%%%
 \section{Quotient to a Power Rule}
-  One rule we have learned is the product to a power rule,
+  One rule we have learned is the Product to a Power Rule,
       as in $(2x)^{3}=2^{3}x^{3}$.
       When two factors are multiplied and the product is raised to a power,
       we may apply the exponent to each of those factors individually.
@@ -231,28 +232,28 @@ $$
    Let $y$ be a real number, where $y \neq 0$.\\
           Find another way to write $\left(\frac{5}{y}\right)^4$.\\
      Writing the expression without an exponent and then simplifying, we have:
-  \begin{center}
-            $\left( \frac{5}{y} \right)^4 = \left( \frac{5}{y} \right) \left( \frac{5}{y} \right) \left( \frac{5}{y} \right) \left( \frac{5}{y} \right)$\\
-            $= \frac{5 \cdot 5 \cdot 5 \cdot 5}{y \cdot y \cdot y \cdot y}$\\
-            $= \frac{5^4}{y^4}$\\
-            $= \frac{625}{y^4}$\\
-\end{center}
-        Similar to the product to a power rule,
+  \begin{align*}
+            \left( \frac{5}{y} \right)^4 &= \left( \frac{5}{y} \right) \left( \frac{5}{y} \right) \left( \frac{5}{y} \right) \left( \frac{5}{y} \right)\\
+            &= \frac{5 \cdot 5 \cdot 5 \cdot 5}{y \cdot y \cdot y \cdot y}\\
+            &= \frac{5^4}{y^4}\\
+            &= \frac{625}{y^4}
+\end{align*}
+        Similar to the Product to a Power Rule,
           we essentially applied the outer exponent to the factors
           inside the parentheses to factors of the numerator and
           factors of the denominator.
 \begin{callout}
-          The general rule is:
+\textbf{ \Large Quotient to a Power Rule} \\
        For real numbers $a$ and $b$
           (with $b \neq 0$)
           and natural number $m$,
-        $
+        $$
             \left( \frac{a}{b}  \right)^{m} = \frac{a^{m}}{b^{m}}
-          $
+          $$
 \end{callout}
  This rule says that when you raise a fraction to a power,
       you may separately raise the numerator and denominator to that power.
-      In Example,
+      In the above example,
       this means that we can directly calculate $\left( \frac{5}{y} \right)^4$:
    \begin{center}
         $\left( \frac{5}{y} \right)^4 = \frac{5^4}{y^4}$\\
@@ -270,42 +271,53 @@ $$
 \end{enumerate}
 \begin{explanation}
 \begin{enumerate}
-\item    We can use the quotient to a power rule:
-\begin{center}
-                    $\left(\frac{p}{2}\right)^6=\frac{p^6}{2^6}$\\
-                    $=\frac{p^6}{64}$
-\end{center}
+\item    We can use the Quotient to a Power Rule:
+\begin{align*}
+                    \left(\frac{p}{2}\right)^6 &=\frac{p^6}{2^6}\\
+                    &=\frac{p^6}{64}
+\end{align*}
         \item If we stick closely to the order of operations,
                   we should first simplify inside the parentheses and then work with the outer exponent.
                   Going this route,
                   we will first use the quotient rule:
-\begin{center}
-                   $\left(\frac{5^6w^7}{5^2w^4}\right)^9 = \left(5^{6-2}w^{7-4}\right)^9$\\
-                    $=  \left(5^{4}w^{3}\right)^9$\\
-                    Now we can apply the outer exponent to each factor inside the parentheses using theproduct to a power rule. \\
-                    $= \left(5^{4}\right)^9\cdot \left(w^{3}\right)^9$ \\
-                    To finish, we need to use the >power to a power rule.\\
-                    $= 5^{4\cdot 9}\cdot w^{3 \cdot 9}$\\
-                    $= 5^{36}\cdot w^{27}$
-\end{center}
+\begin{align*}
+                   \left(\frac{5^6w^7}{5^2w^4}\right)^9 &= \left(5^{6-2}w^{7-4}\right)^9\\
+                    &=  \left(5^{4}w^{3}\right)^9
+                    \end{align*}
+            %
+                    Now we can apply the outer exponent to each factor inside the parentheses using the Product to a Power Rule: \\
+                     $= \left(5^{4}\right)^9\cdot \left(w^{3}\right)^9$ \\
+                    To finish, we need to use the Power to a Power Rule:
+         %
+                   \begin{align*}
+                    &= 5^{4\cdot 9}\cdot w^{3 \cdot 9}\\
+                    &= 5^{36}\cdot w^{27}
+\end{align*}
        \item According to the order of operations,
                   we should simplify inside parentheses first,
                   then apply exponents, then divide.
                   Since we cannot simplify inside the parentheses,
                   we must apply the outer exponents to each factor inside the respective set of parentheses first:
-              \begin{center}
-                    $\frac{\left(2r^5\right)^7}{\left(2^2 r^8\right)^3}
-                    =  \frac{2^7 \left(r^5\right)^7}{\left(2^2\right)^3 \left(r^8\right)^3}$\\
-                   At this point, we need to use the power-to-a-power rule:\\
-                    $\phantom{\frac{\left(2r^5\right)^7}{\left(2^2 r^8\right)^3}}
-                    = \frac{2^{7} r^{5\cdot 7}}{ 2^{2\cdot 3} r^{8 \cdot 3}}$\\
-                    $= \frac{2^{7} r^{35}}{ 2^{6} r^{24}}$\\
-                   To finish simplifying, we'll conclude with the quotient rule:\\
-                    $\phantom{\frac{\left(2r^5\right)^7}{\left(2^2 r^8\right)^3}}
-                    = 2^{7-6} r^{35-24}$\\
-                    $= 2^{1} r^{11}$\\
-                    $= 2 r^{11}$
-\end{center}
+                    \begin{equation*}
+                    \frac{\left(2r^5\right)^7}{\left(2^2 r^8\right)^3}
+                    =  \frac{2^7 \left(r^5\right)^7}{\left(2^2\right)^3 \left(r^8\right)^3} 
+                    \end{equation*}
+              %%
+                   At this point, we need to use the Power to a Power Rule:
+                %    
+                    \begin{align*}
+                    \frac{\left(2r^5\right)^7}{\left(2^2 r^8\right)^3}
+                    &= \frac{2^{7} r^{5\cdot 7}}{ 2^{2\cdot 3} r^{8 \cdot 3}}\\
+                    &= \frac{2^{7} r^{35}}{ 2^{6} r^{24}}
+                    \end{align*}
+%
+                   To finish simplifying, we'll conclude with the quotient rule:
+%
+                    \begin{align*}
+                    \frac{\left(2r^5\right)^7}{\left(2^2 r^8\right)^3} &= 2^{7-6} r^{35-24}\\
+                    &= 2^{1} r^{11}\\
+                    &= 2 r^{11}
+                    \end{align*}
 \end{enumerate}
 \end{explanation}
 \end{example}
@@ -317,8 +329,8 @@ So far, we have been working with exponents that are natural numbers
       we will expand our understanding to include exponents that are any integer,
       as with $5^{0}$ and $12^{-2}$.
       As a first step,
-      let's explore how $0$ should behave as an exponent
-      by considering the pattern of decreasing powers of $2$.    
+      let's explore how $0$ should behave as an exponent.
+     % by considering the pattern of decreasing powers of $2$ in <xref ref="figure-descending-powers-of-two">Figure</xref>.    
  Simplify the following expressions.
               Assume all variables represent non-zero real numbers
 
@@ -339,13 +351,9 @@ $
                       (-8)^0  =  1
                     $
 
-       In contrast to the previous example, in $-8^0$
+       In contrast to the previous example, if we have $-8^0$, 
                     the exponent only applies to the $8$.
-                    The exponent has a higher priority than negation in the order of operations.
-                   That is, $-8^0 = -\left(8^0\right)$, and so:
-                   
-                      $-8^0  =  -\left(8^0\right)$
-                      $=  -1$
+                    The exponent has a higher priority than negation in the order of operations: $-8^0 = -\left(8^0\right)$, and so $-8^0  =  -\left(8^0\right)=  -1$.
 
       In the expression $3x^0$,
                     the exponent $0$ only applies to the $x$:
@@ -360,10 +368,12 @@ $
       like in $x^{-5}$.
 
         To consider what it could possibly mean to have a negative integer exponent,
-        let's extend the pattern.  Each time we move down a row,
+        let's extend the pattern for powers of 2 in the table below.
+        In this table, each time we move down a row,
         we reduce the power by $1$ and we divide the value by $2$.
         We can continue this pattern in the power and value columns,
-        going all the way down into when the exponent is negative.  Consider the table below.
+        going all the way down to negative exponents.
+%
 \begin{center}
 $
   \begin{array}{ccc}
@@ -391,14 +401,62 @@ $
       and this pattern works for all bases except $0$,
       since we cannot divide by $0$ in moving from one row to the next.
 
-\begin{remark}
-     Negative Integers as Exponents
+\begin{callout}
+    \textbf{ \Large  Negative Integers as Exponents}\\
           For any non-zero real number $a$ and any natural number $n$,
           we define $a^{-n}$ to mean the reciprocal of $a^n$. That is,
 $$      
  a^{-n} = \frac{1}{a^n}
    $$
      
-    \end{remark}
+    \end{callout}
+    
+    \section{Fractional Exponents}
+    
+    So far, all exponents we have addressed are integers. Now we will consider fractional exponents. 
+        
+    Recall that we have described an $n^{th}$ power of $x$ as a value $x$ multiplied by itself $n$ times.
+    We begin with a common example: $x^2 = x \cdot x$, so $x$ multiplied twice. This implies that $\sqrt{x^2} = x$, since $y=\sqrt{x}$ means $y \cdot y=x$.
+    
+    We follow this logic in defining the $n^{th}$ root of $x$:\\
+    Given a number $x$ such that there is a number $y$ such that  $x=\overbrace{y\cdot y\cdots y}^{\text{n times}}$. Then $y$ is the $n^{th}$ root of $x$. \\
+    Equivalently, we may define the $n^{th}$ root of $x$ as the number $y$ such that $y^n=x$.
+   
+   Following the exponent rules we've described, we may write the $n^{th}$ root of $x$ as $x^{\frac{1}{n}}$. Then when we raise this value to the $n$, we get
+    $$\big(x^{\frac{1}{n}}\big)^n=x^{\frac{1}{n}\cdot n} = x^1 = x,$$
+    as expected, by using the Power to a Power rule. This works for all values $x \geq 0$.
+    
+    \begin{definition}
+    Fractional Exponents.\\
+          For any real number $a \geq 0$ and any natural number $n$ in $\{1,2,3,\dots\}$,
+          we define $a^{\frac{1}{n}}$ to mean the $n^{th}$ root of $a$. That is,
+$$      
+ a^{\frac{1}{n}} = x \text{ if and only if } x^n = a.
+   $$
+     Note that when $n$ is odd, it is also possible to find an $n^{th}$ root of $a<0$.
+    \end{definition}
+
+  The other exponent rules we have discussed above also apply as expected to fractional powers. In particular, we can use these other exponent rules to define $x^{\frac{m}{n}}$ for any integers $m,n$.
+  
+  \begin{callout}
+  Let $x\geq 0$, $y,m,n >0$, then \\
+
+ \textbf{Product Rule:}
+$$ x^{\frac{1}{n}} \cdot x^{\frac{1}{m}} = x^{\frac{1}{n} + \frac{1}{m}}
+$$
+  %
+  \textbf{Power to a Power Rule:}
+  $$ \big(x^{\frac{1}{n}}\big)^m = x^{\frac{m}{n}} $$
+   %
+   \textbf{Product to a Power Rule:}
+    $$\big(x \cdot y \big)^{\frac{1}{n}} = x^{\frac{1}{n}} \cdot y^{\frac{1}{n}}$$
+    %
+    \textbf{Quotient to a Power Rule:}
+  $$\left(\frac{x}{y}\right)^{\frac{1}{n}} = \frac{x^{\frac{1}{n}}}{y^{\frac{1}{n}}} $$
+  %
+ \textbf{Negative Exponents:}
+  $$\frac{x^{\frac{1}{n}}}{x^{\frac{2}{n}}} = \frac{1}{x^{\frac{1}{n}}} = x^{-\frac{1}{n}}$$
+ \end{callout}
+    
 
 \end{document}
