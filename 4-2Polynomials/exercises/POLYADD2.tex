@@ -1,0 +1,80 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\author{Kenneth Berglund}
+
+
+
+
+\begin{document}
+In this exercise, we will rewrite the following quadratic in vertex form $a(x - h)^2 + k$, using the method of completing the square:
+\[
+f(x)=5x^2+15x-2.
+\]
+\begin{exercise}
+
+Factoring the leading coefficient out of the $x^2$ and $x$ terms yields
+$$
+\answer{5}(x^2 - \answer{3}x) - \answer{2}.
+$$
+
+\begin{exercise}
+Notice that we can't rewrite $x^2 - 3x$ as a square of a linear polynomial. We need to add a constant term in order to make $x^2 - 3x$ into a square. 
+
+We want to find numbers $m$ and $n$ so $(x + m)^2 = x^2 - 3x + n$. That is, we want to find a number $n$ that we can add onto $x^2 - 3x$ so it is the square of the linear polynomial $x + m$. 
+
+$$
+m = \answer{\frac{-3}{2}} \text{ and } n = \answer{\frac{9}{4}}
+$$
+\begin{hint}
+Try multiplying out $(x + m)^2$ and matching the coefficients of each term with the coefficients of the corresponding term in $x^2 - 3x + n$. 
+\end{hint}
+
+
+\begin{exercise}
+Modify the quadratic so that the square appears, in the disguise of $x^2 - 3x + \frac{9}{4}$.
+$$
+5\left(x^2 - 3x + \answer{\frac{9}{4}} - \answer{\frac{9}{4}}\right) - 2
+$$ 
+
+Use positive numbers in your answer.
+
+\begin{hint}
+Remember that if you add a term to an expression, to preserve equality, you must subtract the same term.
+\end{hint}
+
+\begin{exercise}
+Now rewrite $x^2 - 3x + \frac{9}{4}$ as a square of a linear polynomial!
+$$
+5\left(\left(x + \answer{\frac{-3}{2}}\right)^2 - \frac{9}{4}\right) -2
+$$ 
+\begin{hint}
+What square is equal to $x^2 - 3x + \frac{9}{4}$? We found it before!
+\end{hint}
+
+\begin{exercise}
+Finally, distribute the 5 to each term in the parentheses and simplify to finish writing the quadratic in vertex form.
+$$
+5\left(x -\frac{3}{2}\right)^2 - \answer{\frac{53}{4}}
+$$ 
+
+\begin{exercise}
+As a bonus, here's what the manipulation would look like when done all at once:
+\begin{align*}
+5x^2 - 15x - 2 & = 5(x^2 - 3x) -2 \\
+& = 5\left(x^2 - 3x + \frac{9}{4} - \frac{9}{4}\right) -2 \\
+& = 5\left(\left(x - \frac{3}{2}\right)^2 - \frac{9}{4}\right) -2 \\
+& = 5\left(x -\frac{3}{2}\right)^2 - \frac{45}{4} -\frac{8}{4}\\
+& =5\left(x -\frac{3}{2}\right)^2 - \frac{53}{4}.
+\end{align*}
+\end{exercise}
+\end{exercise}
+\end{exercise}
+\end{exercise}
+\end{exercise}
+\end{exercise}
+
+
+
+\end{document}
