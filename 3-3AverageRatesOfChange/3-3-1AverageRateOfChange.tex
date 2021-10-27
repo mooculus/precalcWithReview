@@ -1,6 +1,6 @@
 \documentclass[nooutcomes]{ximera}
 
-\input{../preamble.tex}
+\input{../preamble}
 \author{Elizabeth Miller}
 \license{Creative Commons Attribution-ShareAlike 4.0 International License}
 \acknowledgement{https://activecalculus.org/}
@@ -8,7 +8,6 @@
 \title{Average Rate of Change}
 
 \begin{document}
-\licenseAPC
 \begin{abstract}
   
 \end{abstract}
@@ -87,7 +86,11 @@ AV_{[a,b]} = \frac{f(b) - f(a)}{b-a}\text{.}
 \end{image}
 
 \end{definition}
-In every situation, the units on the average rate of change help us interpret its meaning, and those units are always ``units of output per unit of input.'' \index{average rate of change!units}  Moreover, the average rate of change of $f$ on $[a,b]$ always corresponds to the slope of the line between the points $(a,f(a))$ and $(b,f(b))$.
+In every situation, the units on the average rate of change help us interpret its meaning, and those units are always ``units of output per unit of input.'' \index{average rate of change!units}  Moreover, the average rate of change of $f$ on $[a,b]$ always corresponds to the slope of the line between the points $(a,f(a))$ and $(b,f(b))$. Before we explore this concept further, we note that this line has a special name, it is the \textit{secant line} to the graph. 
+
+\begin{callout}
+  {\bf Definition:} Consider a function $y=f(x)$. A line passing through two points $(a,f(a))$ and $(b,f(b))$, with $a \neq b$, in the graph of $y=f(x)$, is called a \textbf{secant line} to the graph. The slope of a secant line is the average rate of change of the function on the interval $[a,b]$.
+\end{callout}
 
 \begin{exploration}
 According to the US census, the populations of Kent and Ottawa Counties (Grand Rapids is in Kent, Allenale in Ottawa) from 1960 to 2010 measured in $10$-year intervals are given in the following tables.
@@ -257,6 +260,8 @@ AV_{[a,b]} = \frac{f(b) - f(a)}{b-a}\text{.}
 \begin{image}
 \includegraphics{aroc-f-x-defn.pdf}
 \end{image}
+
+\item This line passing through these two points $(a,f(a))$ and $(b,f(b))$, is called a secant line to the graph, and its slope is equal to the average rate of change of the function on the interval $[a,b]$.
 
 \end{itemize}\end{summary}
 
