@@ -13,13 +13,13 @@
 
  Consider the graph of a function $f(x) = ab^x+c$.
 
-\begin{image}
+%\begin{image}
  \begin{tikzpicture}
- \begin{axis}
- \addplot[smooth,domain=-7:7]{2* e^{-3*x}-1};
- \end{axis}
+   \begin{axis}[clip=true,domain=-7:7,xmin=-7,xmax=7,ymin=-7,ymax=7]%\addplot {2*exp(-3*x)-1};
+     \addplot {1.2 * .5^x -1};
+   \end{axis}
  \end{tikzpicture}
-\end{image}
+ %\end{image}
 
  From the graph, answer:
 
