@@ -1,6 +1,6 @@
 \documentclass{ximera}
 
-\input{../preamble.tex}
+\input{../preamble}
 \author{Elizabeth Miller}
 \license{Creative Commons Attribution-ShareAlike 4.0 International License}
 \acknowledgement{https://activecalculus.org/prelude/sec-changing-composite.html}
@@ -8,7 +8,6 @@
 \title{Composition of Functions}
 
 \begin{document}
-\licenseAPC
 \begin{abstract}
   We explore how when can combine two functions by composing them.  That is, how we can plug one function into another to create a new function.
 \end{abstract}
@@ -43,9 +42,10 @@ Since $y$ depends on $x$ and $x$ depends on $t$, it follows that we can also thi
 \includegraphics{CompositionText.pdf}
 \end{image}
 
-Notice that if we take a point such as $t=2$, we can put that value in for $t$ in the function $x = g(t) = 3t-4$.  This will give $$x = g(-2) = 3(-2)-4=-6-4-10.$$.  Now we have an $x$-value of $-10$.  $g(x)$ take in $x$-values so we can put $-10$ into $f(x)=x^2-1$.  This will give $$f(-10)=(-10)^2-1=100-1=99.$$
+Notice that if we take a point such as $t=2$, we can put that value in for $t$ in the function $x = g(t) = 3t-4$.  This will give $$x = g(-2) = 3(-2)-4=-6-4-10.$$
+Now we have an $x$-value of $-10$.  $g(x)$ take in $x$-values so we can put $-10$ into $f(x)=x^2-1$.  This will give $$f(-10)=(-10)^2-1=100-1=99.$$
 
-You should verify that the arrow diagram above gives the correct values of $y$ that cooresponds to $t=0$ and $t=3$.
+You should verify that the arrow diagram above gives the correct values of $y$ that corresponds to $t=0$ and $t=3$.
 
 Now, we would like to create a new function that will directly take in any $t$ value and give us the corresponding $y$ value.  We can use substitution and the notation of functions to determine this function.
 
@@ -95,7 +95,7 @@ $$ h(t) = f(g(t)). $$
 This composition is denoted by $h = f \circ g$, where $f \circ g$ means the single function defined by $(f \circ g)(t) = f(g(t))$.
 \end{definition}
 
-We sometimes call $g$ the ``inner function'' and $f$ the ``outer function''.  It is important to note that the inner function is actually the first function that gets applied to a given input, and then then outer function is applied to the output of the inner function.  In addition, in order for a composite function to make sense, we need to ensure that the outputs of the inner function are values that it makes sense to put into the outer function so that the resulting composite function is defined.
+We sometimes call $g$ the ``inner function'' and $f$ the ``outer function''.  It is important to note that the inner function is actually the first function that gets applied to a given input, and then the outer function is applied to the output of the inner function.  In addition, in order for a composite function to make sense, we need to ensure that the outputs of the inner function are values that it makes sense to put into the outer function so that the resulting composite function is defined.
 
 In addition to the possibility that functions are given by formulas, functions can be given by tables or graphs. We can think about composite functions in these settings as well, and the following activities prompt us to consider functions given in this way.
 
