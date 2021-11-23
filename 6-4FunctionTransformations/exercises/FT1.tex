@@ -17,11 +17,11 @@ If the graph of $y=f(x)$ is given in black below, which of the following graphs 
   \begin{image}
  \begin{tikzpicture}
    \begin{axis}
-     \addplot [samples=200, thick, domain=-2:7] {exp(-x)+1.1}  node[pos=0.9,above]{\text{$y=f(x)$}};
-     \addplot [samples=200, thick,domain=-2:7, color=blue] {exp(-x-1)} node[pos=0.9,above]{\text{(a)}};
-     \addplot [samples=200, thick,domain=-7:2, color=red]{exp(x+1)}  node[pos=0.1,above]{\text{(b)}};
-     \addplot [samples=200, thick,domain=-2:7, color=orange]{exp(-x)+4.1}  node[pos=0.9,above]{\text{(c)}};
-     \addplot [samples=200, thick,domain=-2:7, color=green]{exp(-x)-2} node[pos=0.9,above]{\text{(d)}};
+     \addplot [smooth, thick, domain=-2:7] {exp(-x)+1.1}  node[pos=0.9,above]{\text{$y=f(x)$}};
+     \addplot [smooth,  thick,domain=-3:7, color=blue] {exp(-x-1)} node[pos=0.9,above]{\text{(a)}};
+     \addplot [smooth,  thick,domain=-7:2, color=red]{exp(x+1)}  node[pos=0.1,above]{\text{(b)}};
+     \addplot [smooth,  thick,domain=-2:7, color=orange]{exp(-x)+4.1}  node[pos=0.9,above]{\text{(c)}};
+     \addplot [smooth,  thick,domain=-3:7, color=green]{exp(-x)-2} node[pos=0.9,above]{\text{(d)}};
    \end{axis}
  \end{tikzpicture}
  \end{image}
