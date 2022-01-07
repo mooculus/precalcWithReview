@@ -1,0 +1,145 @@
+\documentclass[nooutcomes]{ximera}
+
+\input{../preamble}
+\author{Kenneth Berglund}
+\license{Creative Commons Attribution-ShareAlike 4.0 International License}
+\acknowledgement{https://www.stitz-zeager.com/szca07042013.pdf}
+
+\title{Solving Non-linear Systems Graphically}
+
+%This is so the pictures show up
+\pgfplotsset{compat=1.5.1}
+
+%This is also for pictures
+\usetikzlibrary{calc}
+
+%This makes hyperbolas. I found it at https://newbedev.com/can-one-draw-a-hyperbola-with-arguments-in-tikz
+%
+% #1 optional parameters for \draw
+% #2 angle of rotation in degrees
+% #3 offset of center as (pointx, pointy) or (name-o-coordinate)
+% #4 length of plus (semi)axis, that is axis which hyperbola crosses
+% #5 length of minus (semi)axis
+% #6 how much of hyperbola to draw in degrees, with 90 you’d reach infinity
+%
+\newcommand\tikzhyperbola[6][thick]{%
+    \draw [#1, rotate around={#2: (0, 0)}, shift=#3]
+        plot [variable = \t, samples=1000, domain=-#6:#6] ({#4 / cos( \t )}, {#5 * tan( \t )});
+    \draw [#1, rotate around={#2: (0, 0)}, shift=#3]
+        plot [variable = \t, samples=1000, domain=-#6:#6] ({-#4 / cos( \t )}, {#5 * tan( \t )});
+}
+
+\begin{document}
+\begin{abstract}
+  
+\end{abstract}
+\maketitle
+
+\begin{motivatingQuestions}\begin{itemize}
+	\item What is a non-linear system of equations?
+	\item How can we find solutions graphically?
+	\item What can we say about when solutions exist?
+\end{itemize}\end{motivatingQuestions}
+
+%\typeout{************************************************}
+%\typeout{Introduction}
+%\typeout{************************************************}
+\section{Introduction}
+In this section, we study systems of non-linear equations. Unlike the systems of linear equations for which we have developed several algorithmic solution techniques, there is no general algorithm to solve systems of non-linear equations. Moreover, all of the usual hazards of non-linear equations like extraneous solutions and unusual function domains are once again present. Along with the tried and true techniques of substitution and elimination, we shall often need equal parts tenacity and ingenuity to see a problem through to the end. You may find it necessary to review topics throughout the text which pertain to solving equations involving the various functions we have studied thus far. 
+
+
+
+
+%%\typeout{************************************************}
+%%\typeout{What are non-linear systems?}
+%%\typeout{************************************************}
+\section{What are non-linear systems of equations?}
+
+The key to identifying non-linear equations is to note that the variables involved are not necessarily to the first power, and the coefficients of the variables may not just be real numbers. Some examples of equations which are non-linear are $x^2+y = 1$, $xy = 5$ and $e^{2x} + \ln(y) = 1$. An example of a non-linear system of equations is given by 
+$$
+\begin{cases}
+x^2 + y^2 & =  4 \\
+4x^2 - 9y^2 & = 36
+\end{cases}.
+$$	
+
+Note that this system is non-linear because the variables $x$ and $y$ are raised to the second power. 
+
+Another example of a non-linear system of equations is given by 
+$$
+\begin{cases}
+x^2 + y^2 & =  4 \\
+y - 2x & = 0
+\end{cases}.
+$$
+
+Even though $y$ and $x$ are both raised to the first power in the second equation above, the first equation still contains second powers of variables, so this is a non-linear system. 
+
+%%\typeout{************************************************}
+%%\typeout{Solving systems graphically}
+%%\typeout{************************************************}
+\section{Solving systems graphically}
+Finding solutions to non-linear systems is the same concept as finding solutions to linear systems. This means that we can also think about finding solutions as finding intersections points of the graphs of the equations in our system.
+
+\begin{example}
+Find all solutions to the following system of equations:
+$$
+\begin{cases}
+x^2 + y^2 & =  4 \\
+4x^2 + 9y^2 & = 36
+\end{cases}.
+$$
+\end{example}
+\begin{explanation}
+We sketch the graphs of both equations and look for their points of intersection. The graph of $x^2 + y^2 = 4$ is a circle centered at $(0, 0)$ with a radius of 2, whereas the graph of $4x^2 + 9y^2 = 36$, when written in the standard form $\frac{x^2}{9} + \frac{y^2}{4} = 1$ can be recognized as an ellipse centered at $(0, 0)$ with a major axis along the $x$-axis of length 6 and a minor axis along the $y$-axis of length 4. This is illustrated in the figure below.
+
+\begin{image}
+  \begin{tikzpicture}
+    \begin{axis}[axis equal image]
+       
+	\addplot[penColor, mark=o, only marks] coordinates {(0,2) (0, -2)};
+	\draw (axis cs:0, 0) circle [color=penColor, x radius=2, y radius=2,thick];
+	%\draw (axis cs:0, 3) node[anchor=north] {$x^2 + y^2 = 4$};
+	\draw (axis cs:0, 0) circle [x radius=3, y radius=2, thick, color=penColor2];
+	%\draw (axis cs:-3, -3) node[anchor=south] {$4x^2 + 9y^2 = 36$};
+
+    \end{axis}
+  \end{tikzpicture}
+\end{image}
+
+We see from the figure that the two graphs intersect at their $y$-intercepts only, $(0, 2)$ and $(0, -2)$. Recalling that points of intersection correspond to solutions to the system of equations, $(0, 2)$ and $(0, -2)$ are the only solutions to the system. 
+\end{explanation}
+
+
+\begin{example}
+Find all solutions to the following system of equations:
+$$
+\begin{cases}
+x^2 + y^2 & =  4 \\
+4x^2 - 9y^2 & = 36
+\end{cases}.
+$$
+\end{example}
+\begin{explanation}
+First, notice that this system only differs from the previous example in that it has a minus sign in front of the $9y^2$ in the bottom equation.
+
+We again sketch the graphs of both equations and look for their points of intersection. The graph of $x^2 + y^2 = 4$ is a circle centered at $(0, 0)$ with a radius of 2, as in the previous example. However, the graph of $4x^2 - 9y^2 = 36$, when written in the standard form $\frac{x^2}{9} - \frac{y^2}{4} = 1$ can be recognized as a hyperbola centered at $(0, 0)$ opening to the left and right with a transverse axis of length 6 and a conjugate axis of length 4. This is illustrated in the figure below. 
+\begin{image}
+  \begin{tikzpicture}
+    \begin{axis}[axis equal image]
+	\draw (axis cs:0, 0) circle [color=penColor, x radius=2, y radius=2,thick];
+	\coordinate (center) at (axis cs:0, 0);
+	\tikzhyperbola[color=penColor2]{0}{(center)}{300}{200}{80};
+    \end{axis}
+  \end{tikzpicture}
+\end{image}
+
+We see that the circle and the hyperbola have no points in common. Recalling that points of intersection correspond to solutions to the system of equations, we say that the system has no solutions. 
+\end{explanation}
+
+
+Note that we can characterize systems of nonlinear equations as being consistent or inconsistent, just like their linear counterparts. Unlike systems of linear equations, however, it is possible for a system of non-linear equations to have more than one solution without having infinitely many solutions. Secondly, as we have seen above, sometimes making a quick sketch of the problem situation can save a lot of time and effort. While in general the graphs of equations in a non-linear system may not be easily visualized, it sometimes pays to take advantage of visualization when you are able.
+
+
+
+\end{document}

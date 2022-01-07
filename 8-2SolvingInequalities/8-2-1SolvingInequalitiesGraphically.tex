@@ -1,0 +1,218 @@
+\documentclass[noauthor, nooutcomes]{ximera}
+
+\input{../preamble}
+\author{Kenneth Berglund}
+\license{Creative Commons Attribution-ShareAlike 4.0 International License}
+\acknowledgement{https://www.stitz-zeager.com/szca07042013.pdf}
+
+\title{Solving Inequalities Graphically}
+
+%This is so the pictures show up
+\pgfplotsset{compat=1.5.1}
+
+%This is also for pictures
+\usetikzlibrary{calc}
+
+%This makes hyperbolas. I found it at https://newbedev.com/can-one-draw-a-hyperbola-with-arguments-in-tikz
+%
+% #1 optional parameters for \draw
+% #2 angle of rotation in degrees
+% #3 offset of center as (pointx, pointy) or (name-o-coordinate)
+% #4 length of plus (semi)axis, that is axis which hyperbola crosses
+% #5 length of minus (semi)axis
+% #6 how much of hyperbola to draw in degrees, with 90 you’d reach infinity
+%
+\newcommand\tikzhyperbola[6][thick]{%
+    \draw [#1, rotate around={#2: (0, 0)}, shift=#3]
+        plot [variable = \t, samples=1000, domain=-#6:#6] ({#4 / cos( \t )}, {#5 * tan( \t )});
+    \draw [#1, rotate around={#2: (0, 0)}, shift=#3]
+        plot [variable = \t, samples=1000, domain=-#6:#6] ({-#4 / cos( \t )}, {#5 * tan( \t )});
+}
+
+\begin{document}
+\begin{abstract}
+  
+\end{abstract}
+\maketitle
+\licenseSZ
+
+\begin{motivatingQuestions}\begin{itemize}
+	\item What is a solution to an inequality?
+	\item How can we use graphs to solve inequalities?
+\end{itemize}\end{motivatingQuestions}
+
+%\typeout{************************************************}
+%\typeout{Introduction}
+%\typeout{************************************************}
+\section{Introduction}
+Dabin and Melina are having a walking race. Dabin can walk 1 meter per second, but Melina can walk 2 meters per second. Since Melina is the faster walker, she gives Dabin a head start of 5 meters. At this point, we can ask a few questions about the race. Two questions we'll focus on are ``When is Dabin in the lead?'' and  ``When is Melina in the lead?'' both of which can be answered by considering inequalities. 
+
+To start, let's define some relevant functions. The function $D$ defined by $D(t) = 5 + t$ represents how far (in meters) Dabin has walked $t$ seconds after the start of the race. Similarly, the function $M$ defined by $M(t) = 2t$ represents how far Melina has walked $t$ seconds after the start of the race. In our framework, asking when Dabin is in the lead is the same as asking for all $t$ such that $D(t) > M(t)$. In the vocabulary that we'll use, we want to solve the inequality $D(t) > M(t)$. 
+
+\begin{definition}
+Say $f$ and $g$ are functions. A \index{solution ! to an inequality}\dfn{solution} to the inequality $f(x) < g(x)$ is the set of $x$ values where $f(x) < g(x)$. Similarly, a solution to the inequality $f(x) > g(x)$ is the set of $x$ values where $f(x) > g(x)$.
+\end{definition}
+
+Note that we define a solution to an inequality as a set. We will often write the sets in interval notation. 
+
+%%\typeout{************************************************}
+%%\typeout{Solving inequalities graphically}
+%%\typeout{************************************************}
+\section{Solving inequalities graphically}
+\begin{example}
+Let $D$ be defined by $D(t) = 5 + t$, and $M$ be defined by $M(t) = 2t$. Find a solution to the inequality $D(t) < M(t)$. 
+\end{example}
+\begin{explanation}
+This example asks us to find the set of $t$ values where $D(t) < M(t)$. One approach to inequalities of this form is to look at the graphs of the equations involved. The following figure shows the graphs of $y = D(t)$ and $y = M(t)$. 
+
+\begin{image}
+\begin{tikzpicture}
+    \begin{axis}[xlabel=$t$,xmin=-1, xmax=10, ymin=-1, ymax=13, xtick={0, 1,..., 10},ytick={0, 1,..., 13}]
+         \addplot[dashed, domain=-1:8, <->]{5 + x} node{};
+	\addplot[domain=-0.5:6.5, <->]{2*x} node{}; 
+	\node (d) at (axis cs:1.5,8) {$y=D(t)$};
+	\node (m) at (axis cs:3.5,4) {$y=M(t)$};
+	\addplot[penColor, mark=*, only marks] coordinates {(5, 10)};
+	\node[left] (l) at (axis cs:5,10.2) {$(5, 10)$};
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+
+Because of the way we draw the graphs of functions, if $D(x) < M(x)$ for some $x$ if and only if the graph of $D$ lies below the graph of $M$ at the point $x$. Using this information, we can see that if $t > 5$, then the graph of $D$ lies below the graph of $M$. Therefore, the set of all $t$ such that $t > 5$ is the solution to $D(t) < M(t)$. Writing this in interval notation, the solution is $(5, \infty)$. 
+
+Putting this in terms of the scenario described at the beginning of the section, Melinda is in the lead after 5 seconds. 
+\end{explanation}
+
+\begin{exploration}
+Find a solution to the inequality $D(t) < M(t)$. 
+\end{exploration}
+
+\begin{example}
+Let $f$ and $g$ be functions whose graphs are shown below. Assume all important behavior of the functions is shown in the figure.
+
+\begin{image}
+\begin{tikzpicture}
+    \begin{axis}[xmin=-3, xmax=3, ymin=-3, ymax=5, xtick={-2,1,..., 2},ytick={-2, -1,...,4}]
+         \addplot[thick, domain=0:3, ->]{4-2*x} node{};
+	\addplot[thick, domain=-3:0, <-]{4+2*x} node{};
+	\addplot[domain=-1.55:1.55, <->, dashed]{2*x^2} node{}; 
+	\node (g) at (axis cs:2,4) {$y=g(x)$};
+	\node (f) at (axis cs:-1.5,-1) {$y=f(x)$};
+	\addplot[penColor, mark=*, only marks] coordinates {(-1,2)};
+	\addplot[penColor, mark=*, only marks] coordinates {(1,2)};
+	\node[left] (l) at (axis cs:-1,2) {$(-1, 2)$};
+	\node[right] (r) at (axis cs:1,2) {$(1,2)$};
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+ 
+\begin{enumerate}
+	\item Solve the inequality $f(x) < g(x)$.
+	\item Solve the inequality $f(x) \ge g(x)$.
+\end{enumerate}
+\end{example}
+
+
+\begin{explanation}
+\begin{enumerate}
+	\item  To solve $f(x) < g(x)$, we look for where the graph of $f$ is below the graph of $g$. This appears to happen for the $x$ values less than $-1$ and greater than $1$. Our solution is $(-\infty, -1) \cup (1,\infty)$.
+
+	\item To solve $f(x) \geq g(x)$, we look for solutions to $f(x)=g(x)$ as well as $f(x) > g(x)$. To solve the former equation we can look at the $x$-coordinates of the intersection points. This yields $x = \pm 1$. To solve $f(x) > g(x)$, we look for where the graph of $f$ is above the graph of $g$.  This appears to happen between $x=-1$ and $x=1$, on the interval $(-1,1)$. Hence, our solution to $f(x) \geq g(x)$ is $[-1,1]$. 
+\end{enumerate}
+\end{explanation}
+
+Now let's turn our attention to inequalities involving absolute values, which are often a source of confusion. The following theorem provides the complete story.
+
+\begin{theorem}
+Let $c$ be a real number.
+\begin{itemize}
+
+\item  For $c > 0$, $|x| < c$ is equivalent to $-c<x<c$.
+
+\item  For $c > 0$, $|x| \leq c$ is equivalent to $-c \leq x \leq c$.
+
+\item  For $c \leq 0$, $|x| < c$ has no solution, and for $c < 0$, $|x| \leq c$ has no solution.
+
+\item  For $c \geq 0$, $|x| > c$ is equivalent to $x<-c$ or $x>c$.
+
+\item  For $c \geq 0$, $|x| \geq c$ is equivalent to $x \leq -c$ or $x \geq c$.
+
+\item  For $c < 0$, $|x| > c$ and $|x| \geq c$ are true for all real numbers.
+
+\end{itemize}
+\end{theorem}
+
+In light of what we have developed in this section, we can understand these statements graphically. For instance, if $c > 0$, the graph of $y=c$ is a horizontal line which lies above the $x$-axis through $(0,c)$. To solve $|x| < c$, we are looking for the $x$ values where the graph of $y=|x|$ is below the graph of $y=c$. We know that the graphs intersect when $|x|=c$, which we know happens when $x=c$ or $x=-c$.  Graphing, we get
+
+\begin{image}
+\begin{tikzpicture}
+    \begin{axis}[axis equal image, ymin=-1, ymax=7,ticks=none]
+         \addplot[thick, domain=0:7, ->]{x} node{};
+	\addplot[thick, domain=-7:0, <-]{(-1)*x} node{};
+	\addplot[<->, dashed]{5} node{}; 
+	\node (g) at (axis cs:3,5.5) {$y=c$};
+	\node (f) at (axis cs:2,0.5) {$y=|x|$};
+	\addplot[penColor, mark=*, only marks] coordinates {(5,5)};
+	\addplot[penColor, mark=*, only marks] coordinates {(-5,5)};
+	\node[left] (l) at (axis cs:-5,4.5) {$(-c,c)$};
+	\node[right] (r) at (axis cs:5,4.5) {$(c,c)$};
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+
+We see that the graph of $y=|x|$ is below $y=c$ for $x$ between $-c$ and $c$, and hence we get $|x| < c$ is equivalent to $-c < x < c$. The other properties in the theorem can be shown similarly. You can try changing the value of $c$ using Desmos.
+\begin{center}  
+\desmos{dbpb01aybm}{800}{600}  
+\end{center}
+
+\begin{example}
+Solve the inequality $4 - 3|2x + 1| > -2$.
+\end{example}
+\begin{explanation}
+Let's start by graphing both sides of the inequality on the same axes. 
+\begin{image}
+\begin{tikzpicture}
+    \begin{axis}[xmin=-3,xmax=3,ymin=-5, ymax=5,xtick={-2,-1,...,2},ytick={-4,-3,...,4}]
+         \addplot[thick, domain=-0.5:1, ->]{(-6)*x + 1} node{};
+	\addplot[thick, domain=-2:-0.5, <-]{6*x + 7} node{};
+	\addplot[domain=-3:3,<->, dashed]{-2} node{}; 
+	\node (g) at (axis cs:2,-1.5) {$y = -2$};
+	\node (f) at (axis cs:-1.75,3) {$y=4 - 3|2x + 1|$};
+	\addplot[penColor, mark=*, only marks] coordinates {(0.5,-2)};
+	\addplot[penColor, mark=*, only marks] coordinates {(-1.5,-2)};
+	\node[left] (l) at (axis cs:-1.75,-3) {$\left(-\frac{3}{2}, -2\right)$};
+	\node[right] (r) at (axis cs:0.75,-3) {$\left(\frac{1}{2}, -2\right)$};
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+
+We see that the graph of $y=4-3|2x+1|$ is above $y=-2$ for $x$ values between $-\frac{3}{2}$ and $\frac{1}{2}$. Therefore, the solution in interval notation is $\left(-\frac{3}{2}, \frac{1}{2}\right)$.
+\end{explanation}
+
+\begin{example}
+Solve the inequality $x^2 \le x$.
+\end{example}
+\begin{explanation}
+We could start by graphing both sides of the inequality on the same graph, but here, we'll demonstrate another possible approach. Note that $x^2 \le x$ is equivalent to the inequality $x^2 - x \le 0$, by subtracting $x$ from both sides. Now, let's graph $y = x^2 - x$ and $y = 0$ on the same axes.
+
+\begin{image}
+\begin{tikzpicture}
+    \begin{axis}[xmin=-3, xmax=4]
+         \addplot[domain=-2.2:3.2, <->]{x^2 - x} node{};
+	\addplot[<->, dashed, very thick]{0} node{}; 
+	\node (g) at (axis cs:2,6) {$y=x^2 - x$};
+	\node (f) at (axis cs:-2,0.5) {$y=0$};
+	\addplot[penColor, mark=*, only marks] coordinates {(0,0)};
+	\addplot[penColor, mark=*, only marks] coordinates {(1,0)};
+	\node(l) at (axis cs:-.5,-1) {$(0,0)$};
+	\node(r) at (axis cs:1,-1) {$(1,0)$};
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+
+Notice that the two points of intersection are $(0, 0)$ and $(1, 0)$, so $x^2 - x = 0$ for $x = 0$ and $x = 1$. To find the solution to $x^2 - x < 0$, we can see that the graph of $y = x^2 - x$ lies below the graph of $y = 0$ between 0 and 1. Therefore, the solution is $[0, 1]$. 
+\end{explanation}
+
+The above example illustrates a common technique. Rather than considering two functions $f$ and $g$ and asking when one is greater than, less than, or equal to the other, we can move one function to the other side, and consider the function $f - g$. Now, the problem becomes one of finding when the function $f - g$ is positive, negative, or zero. 
+
+\end{document}

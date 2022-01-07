@@ -1,0 +1,49 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\author{Kenneth Berglund}
+\acknowledgement{}
+
+\begin{document}
+For each part, use the given figure to solve the inequality. Assume all important behavior is shown in the figure.
+
+\begin{image}
+\begin{tikzpicture}
+    \begin{axis}[xmin=-4, xmax=4]
+         \addplot[<->]{-x^2 + 2} node{};
+	\addplot[<->, dashed, very thick]{x + 2} node{}; 
+	\node (g) at (axis cs:1.2,-5) {$y=-x^2 + 2$};
+	\node (f) at (axis cs:3,4) {$y=x + 2$};
+	\addplot[penColor, mark=*, only marks] coordinates {(-1, 1)};
+	\addplot[penColor, mark=*, only marks] coordinates {(0, 2)};
+	\node(r) at (axis cs:-1.5, 1.2) {$(-1, 1)$};
+	\node(s) at (axis cs:-.5, 2.2) {$(0, 2)$};	
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+
+\begin{exercise}
+\begin{enumerate}
+\item Solve the inequality $-x^2 + 2 > x + 2$.
+
+\begin{multipleChoice}
+\choice{$[-1, 0]$}
+\choice[correct]{$(-1, 0)$}
+\choice{$(-\infty, -1) \cup (2, \infty)$}
+\choice{$(-\infty, -1] \cup [2, \infty)$}
+\end{multipleChoice}
+
+\item Solve the inequality $-x^2 + 2 \le x + 2$.
+
+\begin{multipleChoice}
+\choice{$[-1, 0]$}
+\choice{$(-1, 0)$}
+\choice{$(-\infty, -1) \cup (2, \infty)$}
+\choice[correct]{$(-\infty, -1] \cup [2, \infty)$}
+\end{multipleChoice}
+
+\end{enumerate}
+
+\end{exercise}
+\end{document}
