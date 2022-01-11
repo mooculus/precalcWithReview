@@ -38,7 +38,7 @@ For each part, use the given figure to solve the inequality. Assume all importan
 \begin{image}
 \begin{tikzpicture}
     \begin{axis}[xmin=-4, xmax=4]
-         \addplot[domain=0.0001:5, <->]{ln(x)} node{};
+         \addplot[domain=0.0001:5, <->, smooth]{ln(x)} node{};
 	\addplot[<->, dashed, very thick]{-x + 1} node{}; 
 	\node (g) at (axis cs:3,2) {$y=\ln(x)$};
 	\node (f) at (axis cs:-2,5) {$y=-x + 1$};
