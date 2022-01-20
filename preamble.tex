@@ -1,40 +1,386 @@
 \graphicspath{
   {./}
+  {1-1QuantitativeReasoning/}
+  {1-2RelationsAndGraphs/}
   {1-3ChangingInTandem/}
-  {1-3ChangingInTandem/exercises/}
+  {2-1LinearEquations/}
+  {2-2LinearModeling/}
+  {2-3ExponentialModeling/}
+  {3-1WhatIsAFunction/}
+  {3-2FunctionProperties/}
+  {3-3AverageRatesOfChange/}
+  {4-1BuildingNewFunctions/}
+  {4-2Polynomials/}
+  {5-1RationalFunctions/}
+   {5-2ExponentialFunctions/}
+  {6-1Domain/}
+  {6-2Range/}
+  {6-3CompositionOfFunctions/}
+  {7-1ZerosOfFunctions/}
+  {7-XZerosOfPolynomials/}
+  {7-2ZerosOfFamousFunctions/}
+  {8-0Review/}
+  {8-1FunctionTransformations/}
+  {8-2SolvingInequalities/}
+  {8-3FunctionTransformationsProject/}
+  {9-1RightTriangleTrig/}
+  {9-2TheUnitCircle/}
+  {9-3TrigIdentities/}
+  {10-1UnitCircleToFunctionGraph/}
+  {10-2TrigFunctions/}
+  {10-3SomeApplicationsOfTrig/}
+  {11-1InverseFunctionsRevisited/}
+  {11-2Logarithms/}
+  {11-3InverseTrig/}
+  {12-1SystemsOfEquations/}
+  {12-2NonlinearSystems/}
+  {12-3ApplicationsOfSystems/}
+  {13-1SecantLinesRevisited/}
+  {13-2Functions-TheBigPicture/}
+  {14-1DisplacementVsDistance/}
+  {1-1QuantitativeReasoning/exercises/}
+  {1-2RelationsAndGraphs/exercises/}
+  {../1-3ChangingInTandem/exercises/}
+  {../2-1LinearEquations/exercises/}
+  {../2-2LinearModeling/exercises/}
+  {../2-3ExponentialModeling/exercises/}
+  {../3-1WhatIsAFunction/exercises/}
+  {../3-2FunctionProperties/exercises/}
+  {../3-3AverageRatesOfChange/exercises/}
+  {../5-2ExponentialFunctions/exercises/}
+  {../4-1BuildingNewFunctions/exercises/}
+  {../4-2Polynomials/exercises/}
+  {../5-1RationalFunctions/exercises/}
+  {../6-1Domain/exercises/}
+  {../6-2Range/exercises/}
+  {../6-3CompositionOfFunctions/exercises/}
+  {../7-1ZerosOfFunctions/exercises/}
+  {../7-XZerosOfPolynomials/exercises/}
+  {../7-2ZerosOfFamousFunctions/exercises/}
+  {../8-1FunctionTransformations/exercises/}
+  {../12-1SystemsOfEquations/exercises/}
+  {../8-3FunctionTransformationsProject/exercises/}
+  {../8-0Review/exercises/}
+  {../8-2SolvingInequalities/exercises/}
+  {../8-3FunctionTransformationsProject/exercises/}
+  {../9-1RightTriangleTrig/exercises/}
+  {../9-2TheUnitCircle/exercises/}
+  {../9-3TrigIdentities/exercises/}
+  {../10-1UnitCircleToFunctionGraph/exercises/}
+  {../10-2TrigFunctions/exercises/}
+  {../10-3SomeApplicationsOfTrig/exercises/}
+  {../11-1InverseFunctionsRevisited/exercises/}
+  {../11-2Logarithms/exercises/}
+  {../11-3InverseTrig/exercises/}
+  {../12-1SystemsOfEquations/exercises/}
+  {../12-2NonlinearSystems/exercises/}
+  {../12-3ApplicationsOfSystems/exercises/}
+  {../13-1SecantLinesRevisited/exercises/}
+  {../13-2Functions-TheBigPicture/exercises/}
+  {../14-1DisplacementVsDistance/exercises/}
 }
+
+\DeclareGraphicsExtensions{.pdf,.png,.jpg,.eps}
 
 \newcommand{\mooculus}{\textsf{\textbf{MOOC}\textnormal{\textsf{ULUS}}}}
 
 \usepackage[makeroom]{cancel} %% for strike outs
 
+\ifxake
+\else
 \usepackage[most]{tcolorbox}
+\fi
 
 
-\NewEnviron{motivatingQuestions}{
-  \begin{tcolorbox}
-    \subsection{Motivating Questions}
-    \begin{itemize}[label=\textbullet]%STUFF ABOVE
-      \BODY
-    \end{itemize}
-  \end{tcolorbox}
+%\typeout{************************************************}
+%\typeout{New Environments}
+%\typeout{************************************************}
+
+%% to fix for web can be removed when deployed offically with ximera2
+\let\image\relax\let\endimage\relax
+\NewEnviron{image}{% 
+  \begin{center}\BODY\end{center}% center
 }
 
 
+
+\NewEnviron{folder}{
+      \addcontentsline{toc}{section}{\textbf{\BODY}}
+}
+
+\ifxake
+\let\summary\relax
+\let\endsummary\relax
+\newtheorem*{summary}{Summary}
+\newtheorem*{callout}{Callout}
+\newtheorem*{overview}{Overview}
+\newtheorem*{objectives}{Objectives}
+\newtheorem*{motivatingQuestions}{Motivating Questions}
+\newtheorem*{MM}{Metacognitive Moment}
+      
+%% NEEDED FOR XIMERA 2
+%\ximerizedEnvironment{summary}
+%\ximerizedEnvironment{callout}
+%\ximerizedEnvironment{overview} 
+%\ximerizedEnvironment{objectives}
+%\ximerizedEnvironment{motivatingQuestions}
+%\ximerizedEnvironment{MM}
+\else
+%% CALLOUT
+\NewEnviron{callout}{
+  \begin{tcolorbox}[colback=blue!5, breakable,pad at break*=1mm]
+      \BODY
+  \end{tcolorbox}
+}
+%% MOTIVATING QUESTIONS
+\NewEnviron{motivatingQuestions}{
+  \begin{tcolorbox}[ breakable,pad at break*=1mm]
+    \textbf{\Large Motivating Questions}\hfill
+    %\begin{itemize}[label=\textbullet]
+      \BODY
+    %\end{itemize}
+  \end{tcolorbox}
+}
+%% OBJECTIVES
+\NewEnviron{objectives}{  
+    \vspace{.5in}
+      %\begin{tcolorbox}[colback=orange!5, breakable,pad at break*=1mm]
+    \textbf{\Large Learning Objectives}
+    \begin{itemize}[label=\textbullet]
+      \BODY
+    \end{itemize}
+    %\end{tcolorbox}
+}
+%% DEFINITION
+\let\definition\relax
+\let\enddefinition\relax
+\NewEnviron{definition}{
+  \begin{tcolorbox}[ breakable,pad at break*=1mm]
+    \noindent\textbf{Definition}~
+      \BODY
+  \end{tcolorbox}
+}
+%% OVERVIEW
+\let\overview\relax
+\let\overview\relax
+\NewEnviron{overview}{
+  \begin{tcolorbox}[ breakable,pad at break*=1mm]
+    \textbf{\Large Overview}
+    %\begin{itemize}[label=\textbullet] %% breaks Xake
+      \BODY
+    %\end{itemize}
+  \end{tcolorbox}
+}
+%% SUMMARY
+\let\summary\relax
+\let\endsummary\relax
+\NewEnviron{summary}{
+  \begin{tcolorbox}[ breakable,pad at break*=1mm]
+    \textbf{\Large Summary}
+    %\begin{itemize}[label=\textbullet] %% breaks Xake
+      \BODY
+    %\end{itemize}
+  \end{tcolorbox}
+}
+%% REMARK
+\let\remark\relax
+\let\endremark\relax
+\NewEnviron{remark}{
+  \begin{tcolorbox}[colback=green!5, breakable,pad at break*=1mm]
+    \noindent\textbf{Remark}~
+      \BODY
+  \end{tcolorbox}
+}
+%% EXPLANATION
+\let\explanation\relax
+\let\endexplanation\relax
+\NewEnviron{explanation}{
+    \normalfont
+    \noindent\textbf{Explanation}~
+      \BODY
+}
+%% EXPLORATION
 \let\exploration\relax
 \let\endexploration\relax
-
 \NewEnviron{exploration}{
-  \begin{tcolorbox}[colback=yellow!15, breakable,pad at break*=1mm]
+  \begin{tcolorbox}[colback=yellow!10, breakable,pad at break*=1mm]
     \noindent\textbf{Exploration}~
       \BODY
   \end{tcolorbox}
 }
+%% METACOGNITIVE MOMENTS
+\let\MM\relax
+\let\endMM\relax
+\NewEnviron{MM}{
+  \begin{tcolorbox}[colback=pink!15, breakable,pad at break*=1mm]
+    \noindent\textbf{Metacognitive Moment}~
+      \BODY
+  \end{tcolorbox}
+}
+
+
+\fi
 
 
 
 
-\usepackage{array}
+
+%Notes on what envirnoment to use:  Example with Explanation in text; if they are supposed to answer- Problem; no answer - Exploration
+
+
+%\typeout{************************************************}
+%% Header and footers
+%\typeout{************************************************}
+
+\newcommand{\licenseAcknowledgement}{Licensed under Creative Commons 4.0}
+\newcommand{\licenseAPC}{\renewcommand{\licenseAcknowledgement}{\textbf{Acknowledgements:} Active Prelude to Calculus (https://activecalculus.org/prelude) }}
+\newcommand{\licenseSZ}{\renewcommand{\licenseAcknowledgement}{\textbf{Acknowledgements:} Stitz Zeager Open Source Mathematics (https://www.stitz-zeager.com/) }}
+\newcommand{\licenseAPCSZ}{\renewcommand{\licenseAcknowledgement}{\textbf{Acknowledgements:} Active Prelude to Calculus (https://activecalculus.org/prelude) and Stitz Zeager Open Source Mathematics (https://www.stitz-zeager.com/) }}
+\newcommand{\licenseORCCA}{\renewcommand{\licenseAcknowledgement}{\textbf{Acknowledgements:}Original source material, products with readable and accessible
+math content, and other information freely available at pcc.edu/orcca.}}
+\newcommand{\licenseY}{\renewcommand{\licenseAcknowledgement}{\textbf{Acknowledgements:} Yoshiwara Books (https://yoshiwarabooks.org/)}}
+\newcommand{\licenseOS}{\renewcommand{\licenseAcknowledgement}{\textbf{Acknowledgements:} OpenStax College Algebra (https://openstax.org/details/books/college-algebra)}}
+\newcommand{\licenseAPCSZCSCC}{\renewcommand{\licenseAcknowledgement}{\textbf{Acknowledgements:} Active Prelude to Calculus (https://activecalculus.org/prelude), Stitz Zeager Open Source Mathematics (https://www.stitz-zeager.com/), CSCC PreCalculus and Calculus texts (https://ximera.osu.edu/csccmathematics)}}
+
+\ifxake\else %% do nothing on the website
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[R]{\sectionmark}
+\fancyfoot[L]{\thepage}
+\fancyfoot[C]{\licenseAcknowledgement}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+\fi
+
+%%%%%%%%%%%%%%%%
+
+
+
+%\typeout{************************************************}
+%\typeout{Table of Contents}
+%\typeout{************************************************}
+
+
+%% Edit this to change the font style
+\newcommand{\sectionHeadStyle}{\sffamily\bfseries}
+
+
+\makeatletter
+
+%% part uses arabic numerals
+\renewcommand*\thepart{\arabic{part}}
+
+
+\ifxake\else
+\renewcommand\chapterstyle{%
+  \def\maketitle{%
+    \addtocounter{titlenumber}{1}%
+    \pagestyle{fancy}
+    \phantomsection
+    \addcontentsline{toc}{section}{\textbf{\thepart.\thetitlenumber\hspace{1em}\@title}}%
+                    {\flushleft\small\sectionHeadStyle\@pretitle\par\vspace{-1.5em}}%
+                    {\flushleft\LARGE\sectionHeadStyle\thepart.\thetitlenumber\hspace{1em}\@title \par }%
+                    {\setcounter{problem}{0}\setcounter{sectiontitlenumber}{0}}%
+                    \par}}
+
+
+
+
+
+\renewcommand\sectionstyle{%
+  \def\maketitle{%
+    \addtocounter{sectiontitlenumber}{1}
+    \pagestyle{fancy}
+    \phantomsection
+    \addcontentsline{toc}{subsection}{\thepart.\thetitlenumber.\thesectiontitlenumber\hspace{1em}\@title}%
+    {\flushleft\small\sectionHeadStyle\@pretitle\par\vspace{-1.5em}}%
+    {\flushleft\Large\sectionHeadStyle\thepart.\thetitlenumber.\thesectiontitlenumber\hspace{1em}\@title \par}%
+    %{\setcounter{subsectiontitlenumber}{0}}%
+    \par}}
+
+
+
+\renewcommand\section{\@startsection{paragraph}{10}{\z@}%
+                                     {-3.25ex\@plus -1ex \@minus -.2ex}%
+                                     {1.5ex \@plus .2ex}%
+                                     {\normalfont\large\sectionHeadStyle}}
+\renewcommand\subsection{\@startsection{subparagraph}{10}{\z@}%
+                                    {3.25ex \@plus1ex \@minus.2ex}%
+                                    {-1em}%
+                                    {\normalfont\normalsize\sectionHeadStyle}}
+
+\fi
+
+%% redefine Part
+\renewcommand\part{%
+   {\setcounter{titlenumber}{0}}
+  \if@openright
+    \cleardoublepage
+  \else
+    \clearpage
+  \fi
+  \thispagestyle{plain}%
+  \if@twocolumn
+    \onecolumn
+    \@tempswatrue
+  \else
+    \@tempswafalse
+  \fi
+  \null\vfil
+  \secdef\@part\@spart}
+
+\def\@part[#1]#2{%
+    \ifnum \c@secnumdepth >-2\relax
+      \refstepcounter{part}%
+      \addcontentsline{toc}{part}{\thepart\hspace{1em}#1}%
+    \else
+      \addcontentsline{toc}{part}{#1}%
+    \fi
+    \markboth{}{}%
+    {\centering
+     \interlinepenalty \@M
+     \normalfont
+     \ifnum \c@secnumdepth >-2\relax
+       \huge\sffamily\bfseries \partname\nobreakspace\thepart
+       \par
+       \vskip 20\p@
+     \fi
+     \Huge \bfseries #2\par}%
+    \@endpart}
+\def\@spart#1{%
+    {\centering
+     \interlinepenalty \@M
+     \normalfont
+     \Huge \bfseries #1\par}%
+    \@endpart}
+\def\@endpart{\vfil\newpage
+              \if@twoside
+               \if@openright
+                \null
+                \thispagestyle{empty}%
+                \newpage
+               \fi
+              \fi
+              \if@tempswa
+                \twocolumn
+                \fi}
+
+
+
+\makeatother
+
+
+
+
+
+%\typeout{************************************************}
+%\typeout{Stuff from Ximera}
+%\typeout{************************************************}
+
+
+
+\usepackage{array}  %% This is for typesetting long division
 \setlength{\extrarowheight}{+.1cm}
 \newdimen\digitwidth
 \settowidth\digitwidth{9}
@@ -54,16 +400,12 @@
 \newcommand{\sagemath}{\textsf{SageMath}}
 
 
-%\renewcommand{\d}{\,d\!}
-\renewcommand{\d}{\mathop{}\!d}
+\def\d{\,d}
+%\renewcommand{\d}{\mathop{}\!d}
 \newcommand{\dd}[2][]{\frac{\d #1}{\d #2}}
 \newcommand{\pp}[2][]{\frac{\partial #1}{\partial #2}}
 \renewcommand{\l}{\ell}
 \newcommand{\ddx}{\frac{d}{\d x}}
-
-
-\newcommand{\dfn}{\textbf}
-
 
 
 
@@ -120,7 +462,10 @@
 
 
 
-%% ORCCA PREAMBLE
+
+%\typeout{************************************************}
+%\typeout{ORCCA Preamble.Tex}
+%\typeout{************************************************}
 
 
 %% \usepackage{geometry}
@@ -134,27 +479,32 @@
 \usetikzlibrary{decorations.text}                           %needed for text following a curve
 \usetikzlibrary{arrows,arrows.meta}                         %needed for open/closed intervals
 \usetikzlibrary{positioning,3d,shapes.geometric}            %needed for 3d number sets tower
+
+%% NEEDED FOR XIMERA 1
+%\usetkzobj{all}       %NO LONGER VALID
+%%%%%%%%%%%%%%
+
 \usepackage{tikz-3dplot}
-%\usepackage{tkz-euclide}    \usetkzobj{all}                 %needed for triangle diagrams
+\usepackage{tkz-euclide}                     %needed for triangle diagrams
 \usepgfplotslibrary{fillbetween}                            %shade regions of a plot
 \usetikzlibrary{shadows}                                    %function diagrams
 \usetikzlibrary{positioning}                                %function diagrams
 \usetikzlibrary{shapes}                                     %function diagrams
 %%% global colors from https://www.pcc.edu/web-services/style-guide/basics/color/ %%%
-\definecolor{ruby}{HTML}{9e0c0f}
+\definecolor{ruby}{HTML}{9E0C0F}
 \definecolor{turquoise}{HTML}{008099}
 \definecolor{emerald}{HTML}{1c8464}
 \definecolor{amber}{HTML}{c7502a}
 \definecolor{amethyst}{HTML}{70485b}
 \definecolor{sapphire}{HTML}{263c53}
-\colorlet{firstcolor}{ruby}
+\colorlet{firstcolor}{sapphire}
 \colorlet{secondcolor}{turquoise}
 \colorlet{thirdcolor}{emerald}
 \colorlet{fourthcolor}{amber}
 \colorlet{fifthcolor}{amethyst}
-\colorlet{sixthcolor}{sapphire}
+\colorlet{sixthcolor}{ruby}
 \colorlet{highlightcolor}{green!50!black}
-\colorlet{graphbackground}{yellow!30}
+\colorlet{graphbackground}{white}
 \colorlet{wood}{brown!60!white}
 %%% curve, dot, and graph custom styles %%%
 \pgfplotsset{firstcurve/.style      = {color=firstcolor,  mark=none, line width=1pt, {Kite}-{Kite}, solid}}
@@ -188,7 +538,7 @@
                                         xtick={-10,-9,...,10},
                                         ytick={-10,-9,...,10},
                                         grid=major,
-                                        grid style={solid,gray!40},
+                                        grid style={solid,gray!20},
                                         xticklabels={,,},
                                         yticklabels={,,},
                                         minor xtick=,
@@ -255,7 +605,7 @@
   tick label style={font=\footnotesize},
   legend cell align=left,
   grid = both,
-  grid style = {solid,gray!40},
+  grid style = {solid,gray!20},
   axis background/.style={fill=graphbackground},
 }}
 \pgfplotsset{framed/.style={axis background/.style ={draw=gray}}}
@@ -316,12 +666,73 @@
 \newcommand{\cancelhighlight}[1]{\definecolor{sapphire}{RGB}{59,90,125}{\color{sapphire}{{\cancel{#1}}}}}
 \newcommand{\secondcancelhighlight}[1]{\definecolor{emerald}{RGB}{20,97,75}{\color{emerald}{{\bcancel{#1}}}}}
 \newcommand{\thirdcancelhighlight}[1]{\definecolor{amethyst}{HTML}{70485b}{\color{amethyst}{{\xcancel{#1}}}}}
-\newcommand{\apple}{\text{🍎}}
-\newcommand{\banana}{\text{🍌}}
-\newcommand{\pear}{\text{🍐}}
-\newcommand{\cat}{\text{🐱}}
-\newcommand{\dog}{\text{🐶}}
-\newcommand{\lt}{<}
-\newcommand{\gt}{>}
-\newcommand{\amp}{&}
+\newcommand{\lt}{<} %% Bart: WHY?
+\newcommand{\gt}{>} %% Bart: WHY?
+\newcommand{\amp}{&} %% Bart: WHY?
 
+
+%%% These commands break Xake
+%% \newcommand{\apple}{\text{🍎}}
+%% \newcommand{\banana}{\text{🍌}}
+%% \newcommand{\pear}{\text{🍐}}
+%% \newcommand{\cat}{\text{🐱}}
+%% \newcommand{\dog}{\text{🐶}}
+
+\newcommand{\apple}{PICTURE OF APPLE}
+\newcommand{\banana}{PICTURE OF BANANA}
+\newcommand{\pear}{PICTURE OF PEAR}
+\newcommand{\cat}{PICTURE OF CAT}
+\newcommand{\dog}{PICTURE OF DOG}
+
+
+%%%%% INDEX STUFF
+\newcommand{\dfn}[1]{\textbf{#1}\index{#1}}
+\usepackage{imakeidx}
+\makeindex[intoc]
+\makeatletter
+\gdef\ttl@savemark{\sectionmark{}}
+\makeatother
+
+
+
+
+
+
+
+
+
+
+
+
+ % for drawing cube in Optimization problem
+\usetikzlibrary{quotes,arrows.meta}
+\tikzset{
+  annotated cuboid/.pic={
+    \tikzset{%
+      every edge quotes/.append style={midway, auto},
+      /cuboid/.cd,
+      #1
+    }
+    \draw [every edge/.append style={pic actions, densely dashed, opacity=.5}, pic actions]
+    (0,0,0) coordinate (o) -- ++(-\cubescale*\cubex,0,0) coordinate (a) -- ++(0,-\cubescale*\cubey,0) coordinate (b) edge coordinate [pos=1] (g) ++(0,0,-\cubescale*\cubez)  -- ++(\cubescale*\cubex,0,0) coordinate (c) -- cycle
+    (o) -- ++(0,0,-\cubescale*\cubez) coordinate (d) -- ++(0,-\cubescale*\cubey,0) coordinate (e) edge (g) -- (c) -- cycle
+    (o) -- (a) -- ++(0,0,-\cubescale*\cubez) coordinate (f) edge (g) -- (d) -- cycle;
+    \path [every edge/.append style={pic actions, |-|}]
+    (b) +(0,-5pt) coordinate (b1) edge ["x"'] (b1 -| c)
+    (b) +(-5pt,0) coordinate (b2) edge ["y"] (b2 |- a)
+    (c) +(3.5pt,-3.5pt) coordinate (c2) edge ["x"'] ([xshift=3.5pt,yshift=-3.5pt]e)
+    ;
+  },
+  /cuboid/.search also={/tikz},
+  /cuboid/.cd,
+  width/.store in=\cubex,
+  height/.store in=\cubey,
+  depth/.store in=\cubez,
+  units/.store in=\cubeunits,
+  scale/.store in=\cubescale,
+  width=10,
+  height=10,
+  depth=10,
+  units=cm,
+  scale=.1,
+}

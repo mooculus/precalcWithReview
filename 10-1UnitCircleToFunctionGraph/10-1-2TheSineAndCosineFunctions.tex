@@ -1,0 +1,302 @@
+\documentclass[nooutcomes]{ximera}
+
+\input{../preamble.tex}
+\author{Elizabeth Miller}
+\license{Creative Commons Attribution-ShareAlike 4.0 International License}
+\acknowledgement{https://activecalculus.org/}
+
+\title{The Sine and Cosine Functions}
+
+\begin{document}
+\licenseAPC
+\begin{abstract}
+  
+\end{abstract}
+\maketitle
+
+
+%\typeout{************************************************}
+%\typeout{Motivating Questions}
+%\typeout{************************************************}
+
+\begin{motivatingQuestions}\begin{itemize}
+\item What are the sine and cosine functions and how do they arise from a point traversing the unit circle?%
+\item What important properties do the sine and cosine functions share?%
+\end{itemize}\end{motivatingQuestions}
+
+
+%\typeout{************************************************}
+%\typeout{Introduction}
+%\typeout{************************************************}
+
+In the last section, we saw how tracking the height of a point that is traversing a circle generates a periodic function.  Previously, we also identified a collection of special points on the unit circle.
+\begin{image}
+\includegraphics[width=\textwidth]{unit-circle-16-all-labeled.pdf}
+\end{image}
+
+You can also use the \emph{Desmos} file a
+
+\begin{center}  
+\desmos{jgddn7tzxg}{800}{600}  
+\end{center}
+
+\begin{exploration}
+
+If we consider the unit circle, start at \(t = 0\), and traverse the circle counterclockwise, we may view the height, \(h\), of the traversing point as a function of the angle, \(t\), in radians.  From there, we can plot the resulting \((t,h)\) ordered pairs and connect them to generate the circular function pictured below.
+
+\begin{image}
+\includegraphics{sine-labeling-graph.pdf}
+\end{image}
+
+\begin{enumerate}[label=\alph*.]
+\item
+What is the exact value of \(h\left( \frac{\pi}{4} \right)\)? of \(h\left( \frac{\pi}{3} \right)\)?%
+\item
+Complete the following table with the exact values of \(h\) that correspond to the stated inputs.%
+\[
+\begin{array}{llllllllll}
+t&0&\frac{\pi}{6}&\frac{\pi}{4}&\frac{\pi}{3}&\frac{\pi}{2}&\frac{2\pi}{3}&\frac{3\pi}{4}&\frac{5\pi}{6}&\pi\\
+\hline
+h&&&&&&&&&\\
+&&&&&&&&&\\
+t&\pi&\frac{7\pi}{6}&\frac{5\pi}{4}&\frac{4\pi}{3}&\frac{3\pi}{2}&\frac{5\pi}{3}&\frac{7\pi}{4}&\frac{11\pi}{6}&2\pi\\
+\hline
+h&&&&&&&&&
+\end{array}
+\]
+\item
+What is the exact value of \(h\left( \frac{11\pi}{4} \right)\)? of \(h\left( \frac{14\pi}{3} \right)\)?%
+\item
+Give four different values of \(t\) for which \(h(t) = -\frac{\sqrt{3}}{2}\).%
+\end{enumerate}
+
+\end{exploration}
+
+
+%\typeout{************************************************}
+
+\section{The Definition of the Sine Function}
+
+The circular function that tracks the height of a point on the unit circle traversing counterclockwise from \((1,0)\) as a function of the corresponding central angle (in radians) is one of the most important functions in mathematics.  As such, we give the function a name:  the \dfn{sine} function.%
+
+\begin{definition}
+\index{sine function}
+\begin{image}
+\includegraphics{sine-defn.pdf}
+\end{image}
+Given a central angle in the unit circle that measures \(t\) radians and that intersects the circle at both \((1,0)\) and \((a,b)\), we define the \dfn{sine of \(t\)}, denoted \(\sin(t)\), by the rule
+\begin{equation*}
+\sin(t) = b\text{.}
+\end{equation*}
+\end{definition}
+
+Because of the correspondence between radian angle measure and distance traversed on the unit circle, we can also think of \(\sin(t)\) as identifying the \(y\)-coordinate of the point after it has traveled \(t\) units counterclockwise along the circle from \((1,0)\).  Note particularly that we can consider the sine of negative inputs:  for instance, \(\sin(-\frac{\pi}{2}) = -1\).
+
+Based on our earlier work with the unit circle, we know many different exact values of the sine function, and summarize these in in the table below:
+\[
+\begin{array}{llllllllll}
+t&0&\frac{\pi}{6}&\frac{\pi}{4}&\frac{\pi}{3}&\frac{\pi}{2}&\frac{2\pi}{3}&\frac{3\pi}{4}&\frac{5\pi}{6}&\pi\\[8pt]
+\hline \\[-3ex]
+%&&&&&&&&&\\
+h&0&\frac{1}{2}&\frac{\sqrt{2}}{2}&\frac{\sqrt{3}}{2}&1&\frac{\sqrt{3}}{2}&\frac{\sqrt{2}}{2}&\frac{1}{2}&0\\[10pt]
+&&&&&&&&&\\
+%&&&&&&&&&\\
+t&\pi&\frac{7\pi}{6}&\frac{5\pi}{4}&\frac{4\pi}{3}&\frac{3\pi}{2}&\frac{5\pi}{3}&\frac{7\pi}{4}&\frac{11\pi}{6}&2\pi\\[8pt]
+%&&&&&&&&&\\
+\hline\\[-3ex]
+%&&&&&&&&&\\
+h&0&-\frac{1}{2}&-\frac{\sqrt{2}}{2}&-\frac{\sqrt{3}}{2}&-1&-\frac{\sqrt{3}}{2}&-\frac{\sqrt{2}}{2}&-\frac{1}{2}&0
+\end{array}
+\]
+
+Moreover, if we now plot these points in the usual way, we get the familiar circular wave function that comes from tracking the height of a point traversing a circle.  We often call this graph the \dfn{sine wave}.
+
+\begin{image}
+\includegraphics{sine-definition-graph.pdf}
+\end{image}
+
+At \link{https://www.desmos.com/calculator/f9foqx24ct}{https://www.desmos.com/calculator/f9foqx24ct} you can explore and investigate a helpful Desmos animation that shows how this motion around the circle generates the sine graph.
+
+\begin{center}  
+\desmos{f9foqx24ct}{800}{600}  
+\end{center} 
+
+%\typeout{************************************************}
+
+\section{The Definition of the Cosine Function}
+
+Given any central angle of radian measure \(t\) in the unit circle with one side passing through the point \((1,0)\), the angle generates a unique point \((a,b)\) that lies on the circle.  Just as we can view the \(y\)-coordinate as a function of \(t\), the \(x\)-coordinate is likewise a function of \(t\).  We therefore make the following definition.
+
+\begin{definition}
+\index{cosine function}
+\begin{image}
+\includegraphics{sine-defn-cosine.pdf}
+\end{image}
+Given a central angle in the unit circle that measures \(t\) radians and that intersects the circle at both \((1,0)\) and \((a,b)\), we define the \dfn{cosine of \(t\)}, denoted \(\cos(t)\), by the rule
+\begin{equation*}
+\cos(t) = a\text{.}
+\end{equation*}
+\end{definition}
+
+Again because of the correspondence between the radian measure of an angle and arc length along the unit circle, we can view the value of \(\cos(t)\) as tracking the \(x\)-coordinate of a point traversing the unit circle clockwise a distance of \(t\) units along the circle from \((1,0)\).  We now use the data and information we have developed about the unit circle to build a table of values of \(\cos(t)\) as well as a graph of the curve it generates.
+
+\begin{exploration}
+Let \(k = g(t)\) be the function that tracks the \(x\)-coordinate of a point traversing the unit circle counterclockwise from \((1,0)\).  That is, \(g(t) = \cos(t)\).  Use the information we know about the unit circle to respond to the following questions.
+
+\begin{image}
+\includegraphics{unit-circle-16-all-labeled.pdf}
+\end{image}
+
+\begin{enumerate}[label=\alph*.]
+\item What is the exact value of \(\cos(\frac{\pi}{6})\)?  of \(\cos(\frac{5\pi}{6})\)? \(\cos(-\frac{\pi}{3})\)?
+\item Complete the following table with the exact values of \(k\) that correspond to the stated inputs.
+\[
+\begin{array}{llllllllll}
+t&0&\frac{\pi}{6}&\frac{\pi}{4}&\frac{\pi}{3}&\frac{\pi}{2}&\frac{2\pi}{3}&\frac{3\pi}{4}&\frac{5\pi}{6}&\pi\\
+\hline
+h&&&&&&&&&\\
+&&&&&&&&&\\
+t&\pi&\frac{7\pi}{6}&\frac{5\pi}{4}&\frac{4\pi}{3}&\frac{3\pi}{2}&\frac{5\pi}{3}&\frac{7\pi}{4}&\frac{11\pi}{6}&2\pi\\
+\hline
+h&&&&&&&&&
+\end{array}
+\]
+\item On the axes provided, sketch an accurate graph of \(k = \cos(t)\).  Label the exact location of several key points on the curve.
+\begin{image}
+\includegraphics{sine-cosine-definition-axes.pdf}
+\end{image}
+\item What is the exact value of \(\cos( \frac{11\pi}{4} )\)? of \(\cos( \frac{14\pi}{3} )\)?
+\item Give four different values of \(t\) for which \(\cos(t) = -\frac{\sqrt{3}}{2}\).
+\item How is the graph of \(k = \cos(t)\) different from the graph of \(h = \sin(t)\)?  How are the graphs similar?
+\end{enumerate}
+
+\end{exploration}
+
+As we work with the sine and cosine functions, it's always helpful to remember their definitions in terms of the unit circle and the motion of a point traversing the circle.  At \link{https://www.desmos.com/calculator/9s1ms0nlyf}{https://www.desmos.com/calculator/9s1ms0nlyf} you can explore and investigate a helpful Desmos animation that shows how this motion around the circle generates the cosine graph.
+
+\begin{center}  
+\desmos{9s1ms0nlyf}{800}{600}  
+\end{center} 
+
+%\typeout{************************************************}
+
+\section{Properties of Sine and Cosine}
+Because the sine function results from tracking the \(y\)-coordinate of a point traversing the unit circle and the cosine function from the \(x\)-coordinate, the two functions have several shared properties of circular functions.
+
+\begin{callout}
+For both \(f(t) = \sin(t)\) and \(g(t) = \cos(t)\),%
+\begin{itemize}[label=\textbullet]
+\item
+the domain of the function is all real numbers;%
+\item
+the range of the function is \([-1,1]\);%
+\item
+the midline of the function is \(y = 0\);%
+\item
+the amplitude of the function is \(a = 1\);%
+\item
+the period of the function is \(p = 2\pi\).%
+\end{itemize}
+\end{callout}
+
+It is also insightful to juxtapose the sine and cosine functions' graphs on the same coordinate axes.  When we do, as seen in \hyperref[F-sine-cosine-both]{Figure~\ref{F-sine-cosine-both}}, we see that the curves can be viewed as horizontal translations of one another.%
+
+\begin{image}
+\includegraphics{sine-and-cosine-graphs.pdf}
+\end{image}
+
+In particular, since the sine graph can be viewed as the cosine graph shifted \(\frac{\pi}{2}\) units to the right, it follows that for any value of \(t\),%
+\begin{equation*}
+\sin(t) = \cos(t-\frac{\pi}{2})\text{.}
+\end{equation*}
+Similarly, since the cosine graph can be viewed as the sine graph shifted left,%
+\begin{equation*}
+\cos(t) = \sin(t + \frac{\pi}{2})\text{.}
+\end{equation*}
+Because each of the two preceding equations hold for every value of \(t\), they are often referred to as \emph{identities}.%
+\par
+\hypertarget{p-1054}{}%
+In light of the definitions of the sine and cosine functions, we can now view any point \((x,y)\) on the unit circle as being of the form \((\cos(t),\sin(t))\), where \(t\) is the measure of the angle whose vertices are \((1,0)\), \((0,0)\), and \((x,y)\).  Note particularly that since \(x^2 + y^2 = 1\), it is also true that \(\cos^2(t) + \sin^2(t) = 1\).  We call this fact the Fundamental Trigonometric Identity.%
+
+\begin{callout}
+For any real number \(t\),%
+\begin{equation*}
+\cos^2(t) + \sin^2(t) = 1\text{.}
+\end{equation*}
+\end{callout}
+
+There are additional trends and patterns in the two functions' graphs that we explore further in the following activity.
+
+\begin{exploration}
+Use the figure below to assist in answering the following questions.
+\begin{image}
+\includegraphics{sine-and-cosine-graphs.pdf}
+\end{image}
+
+\begin{enumerate}[label=\alph*.]
+\item
+Give an example of the largest interval you can find on which \(f(t) = \sin(t)\) is decreasing.%
+\item
+Give an example of the largest interval you can find on which \(f(t) = \sin(t)\) is decreasing and concave down.%
+\item
+Give an example of the largest interval you can find on which \(g(t) = \cos(t)\) is increasing.%
+\item
+Give an example of the largest interval you can find on which \(g(t) = \sin(t)\) is increasing and concave up.%
+\item
+Without doing any computation, on which interval is the average rate of change of \(g(t) = \cos(t)\) greater:  \(\left[\pi, \pi+0.1\right]\) or \(\left[\frac{3\pi}{2}, \frac{3\pi}{2} + 0.1\right]\)?  Why?%
+\item
+In general, how would you characterize the locations on the sine and cosine graphs where the functions are increasing or decreasingly most rapidly?%
+\item
+For which quadrants of the \(x\)-\(y\) plane is \(\cos(t)\) negative for an angle in that quadrant?%
+\end{enumerate}
+
+\end{exploration}
+
+%\typeout{************************************************}
+
+\section{Using Computing Technology}
+
+We have established that we know the exact value of \(\sin(t)\) and \(\cos(t)\) for any of the \(t\)-values labeled on the unit circle, as well as for any such \(t \pm 2j\pi\), where \(j\) is a whole number, due to the periodicity of the functions.  But what if we want to know \(\sin(1.35)\) or \(\cos(\frac{\pi}{5})\) or values for other inputs not in the table?%
+
+Any standard computing device a scientific calculator, \emph{Desmos}, \emph{Geogebra}, \emph{WolframAlpha}, etc. has the ability to evaluate the sine and cosine functions at any input we desire.  Because the input is viewed as an angle, each computing device has the option to consider the angle in radians or degrees.  \emph{It is always essential that you are sure which type of input your device is expecting.}  Our computational device of choice is \emph{Desmos}.  In \emph{Desmos}, you can change the input type between radians and degrees by clicking the wrench icon in the upper right and choosing the desired units.  Radians is the default, and radians is what we will primarily use in both this class and calculus.%
+
+It take substantial and sophisticated mathematics to enable a computational device to evaluate the sine and cosine functions at any value we want; the algorithms involve an idea from calculus known as an infinite series.  While your computational device is powerful, it's both helpful and important to understand the meaning of these values on the unit circle and to remember the special points for which we know the outputs of the sine and cosine functions exactly.%
+\begin{exploration}
+
+Answer the following questions exactly wherever possible.  If you estimate a value, do so to at least \(5\) decimal places of accuracy.%
+
+\begin{enumerate}[label=\alph*.]
+\item
+The \(x\) coordinate of the point on the unit circle that lies in the third quadrant and whose \(y\)-coordinate is \(y = -\frac{3}{4}\).%
+\item
+The \(y\)-coordinate of the point on the unit circle generated by a central angle in standard position that measures \(t = 2\) radians.%
+\item
+The \(x\)-coordinate of the point on the unit circle generated by a central angle in standard position that measures \(t = -3.05\) radians.%
+\item
+The value of \(\cos(t)\) where \(t\) is an angle in Quadrant II that satisfies \(\sin(t) = \frac{1}{2}\).%
+\item
+The value of \(\sin(t)\) where \(t\) is an angle in Quadrant III for which \(\cos(t) = -0.7\).%
+\item
+The average rate of change of \(f(t) = \sin(t)\) on the intervals \([0.1,0.2]\) and \([0.8,0.9]\).%
+\item
+The average rate of change of \(g(t) = \cos(t)\) on the intervals \([0.1,0.2]\) and \([0.8,0.9]\).%
+\end{enumerate}
+%
+\end{exploration}
+
+%\typeout{************************************************}
+
+\begin{summary}
+\begin{itemize}[label=\textbullet]
+\item
+The sine and cosine functions result from tracking the \(y\)- and \(x\)-coordinates of a point traversing the unit circle counterclockwise from \((1,0)\).  The value of \(\sin(t)\) is the \(y\)-coordinate of a point that has traversed \(t\) units along the circle from \((1,0)\) (or equivalently that corresponds to an angle of \(t\) radians), while the value of \(\cos(t)\) is the \(x\)-coordinate of the same point.%
+\item
+The sine and cosine functions are both periodic functions that share the same domain (the set of all real numbers), range (the interval \([-1,1]\)), midline (\(y = 0\)), amplitude (\(a = 1\)), and period (\(P = 2\pi\)).  In addition, the sine function is horizontal shift of the cosine function by \(\frac{\pi}{2}\) units to the right, so \(\sin(t) = \cos(t-\frac{\pi}{2})\) for any value of \(t\).%
+\item
+If \(t\) corresponds to one of the special angles that we know on the unit circle, we can compute the values of \(\sin(t)\) and \(\cos(t)\) exactly.  For other values of \(t\), we can use a computational device to estimate the value of either function at a given input; when we do so, we must take care to know whether we are computing in terms of radians or degrees.%
+\end{itemize}
+\end{summary}
+
+\end{document}
+
+

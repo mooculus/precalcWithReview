@@ -1,0 +1,268 @@
+\documentclass[nooutcomes]{ximera}
+
+\input{../preamble}
+\author{Elizabeth Miller}
+\license{Creative Commons Attribution-ShareAlike 4.0 International License}
+\acknowledgement{https://activecalculus.org/}
+
+\title{Average Rate of Change}
+
+\begin{document}
+\begin{abstract}
+  
+\end{abstract}
+\maketitle
+
+
+%\typeout{************************************************}
+%\typeout{Motivating Questions}
+%\typeout{************************************************}
+
+\begin{motivatingQuestions}\begin{itemize}
+\item What do we mean by the average rate of change of a function on an interval?
+\item What does the average rate of change of a function measure?  How do we interpret its meaning in context?
+\item How is the average rate of change of a function connected to a line that passes through two points on the curve?
+\end{itemize}\end{motivatingQuestions}
+
+
+%\typeout{************************************************}
+%\typeout{Introduction}
+%\typeout{************************************************}
+
+Given a function that models a certain phenomenon, it's natural to ask such questions as ``how is the function changing on a given interval'' or ``on which interval is the function changing more rapidly?'' The concept of \emph{average rate of change} enables us to make these questions more mathematically precise. Initially, we will focus on the average rate of change of an object moving along a straight-line path.
+
+First, let's define some notation for the intervals we will be referring to in this section and going forward.
+
+\begin{definition}
+$[a, b]$ represents the values of $x$ such that $a \leq x \leq b$.  We call this the \dfn{closed interval from $a$ to $b$}.
+$(a, b)$ represents the values of $x$ such that $a < x < b$.  We call this the \dfn{open interval from $a$ to $b$}.
+Notice that the major difference between these intervals is that $x=a$ and $x=b$ are included in the closed interval but not in the open interval.
+\end{definition}
+
+For a function $s$ that tells the location of a moving object along a straight path at time $t$, we define the average rate of change of $s$ on the interval $[a,b]$ to be the quantity%
+\begin{equation*}
+AV_{[a,b]} = \frac{s(b)-s(a)}{b-a}\text{.}
+\end{equation*}
+\index{average rate of change!of position} Note particularly that the average rate of change of $s$ on $[a,b]$ is measuring the \emph{change in position} divided by the \emph{change in time}.%
+
+\begin{exploration}
+Let the height function for a ball tossed vertically be given by $s(t) = 64 - 16(t-1)^2$, where $t$ is measured in seconds and $s$ is measured in feet above the ground.
+\begin{enumerate}[label=\alph*.]
+\item Compute the value of $AV_{[1.5,2.5]}$
+\item What are the units on the quantity $AV_{[1.5,2.5]}$? What is the meaning of this number in the context of the rising/falling ball?
+\item In \emph{Desmos}, plot the function $s(t) = 64 - 16(t-1)^2$ along with the points $(1.5,s(1.5))$ and $(2.5, s(2.5))$. Make a copy of your plot on the axes below, labeling key points as well as the scale on your axes. What is the domain of the model? The range? Why?
+\begin{image}
+\includegraphics{aroc-s-t-blank-axes.pdf}
+\end{image}
+\item Work by hand to find the equation of the line through the points $(1.5,s(1.5))$ and $(2.5, s(2.5))$. Write the line in the form $y = mt + b$ and plot the line in \emph{Desmos}, as well as on the axes above.
+\item What is a geometric interpretation of the value $AV_{[1.5,2.5]}$ in light of your work in the preceding questions?
+\item How do your answers in the preceding questions change if we instead consider the interval $[0.25, 0.75]$? $[0.5, 1.5]$? $[1,3]$?
+\end{enumerate}
+\end{exploration}
+
+
+%\typeout{************************************************}
+%\typeout{Defining and interpreting the average rate of change of a function}
+%\typeout{************************************************}
+
+\section{Defining and interpreting the average rate of change of a function}
+
+In the context of a function that measures height or position of a moving object at a given time, the meaning of the average rate of change of the function on a given interval is the \emph{average velocity of the moving object} because it is the ratio of \emph{change in position} to \emph{change in time}.  For example, in the exploration above, the units on $AV_{[1.5,2.5]} = -32$ are ``feet per second'' since the units on the numerator are ``feet'' and on the denominator ``seconds''.  Morever, $-32$ is numerically the same value as the slope of the line that connects the two corresponding points on the graph of the position function, as seen below.  The fact that the average rate of change is negative in this example indicates that the ball is falling.
+
+\begin{image}
+\includegraphics{aroc-s-t-ex-1.pdf}
+\end{image}
+
+While the average rate of change of a position function tells us the moving object's average velocity, in other contexts, the average rate of change of a function can be similarly defined and has a related interpretation.  We make the following formal definition.
+
+\begin{definition}
+For a function $f$ defined on an interval $[a,b]$, the \dfn{average rate of change of $f$ on $[a,b]$} is the quantity%
+\begin{equation*}
+AV_{[a,b]} = \frac{f(b) - f(a)}{b-a}\text{.}
+\end{equation*}
+
+\begin{image}
+\includegraphics{aroc-f-x-defn.pdf}
+\end{image}
+
+\end{definition}
+In every situation, the units on the average rate of change help us interpret its meaning, and those units are always ``units of output per unit of input.'' \index{average rate of change!units}  Moreover, the average rate of change of $f$ on $[a,b]$ always corresponds to the slope of the line between the points $(a,f(a))$ and $(b,f(b))$. Before we explore this concept further, we note that this line has a special name, it is the \textit{secant line} to the graph. 
+
+\begin{callout}
+  {\bf Definition:} Consider a function $y=f(x)$. A line passing through two points $(a,f(a))$ and $(b,f(b))$, with $a \neq b$, in the graph of $y=f(x)$, is called a \textbf{secant line} to the graph. The slope of a secant line is the average rate of change of the function on the interval $[a,b]$.
+\end{callout}
+
+\begin{exploration}
+According to the US census, the populations of Kent and Ottawa Counties (Grand Rapids is in Kent, Allenale in Ottawa) from 1960 to 2010 measured in $10$-year intervals are given in the following tables.
+
+\begin{center}
+
+\textbf{Kent County Population data}
+$
+\begin{array}{llllll}
+1960&1970&1980&1990&2000&2010\\
+\hline
+363,187&411,044&444,506&500,631&574,336&602,622
+\end{array}
+$
+
+\vspace{.2in}
+
+\textbf{Ottawa County Population data}
+$
+\begin{array}{llllll}
+1960&1970&1980&1990&2000&2010\\
+\hline
+98,719&128,181&157,174&187,768&238,313&263,801
+\end{array}
+$
+\end{center}
+
+Let $K(Y)$ represent the population of Kent County in year $Y$ and $W(Y)$ the population of Ottawa County in year Y.
+\begin{enumerate}[label=\alph*.]
+\item Compute $AV_{[1990,2010]}$ for both $K$ and $O$.
+\item What are the units on each of the quantities you computed in (a.)?
+\item Write a careful sentence that explains the meaning of the average rate of change of the Ottawa county population on the time interval $[1990,2010]$.  Your sentence should begin something like ``In an average year between 1990 and 2010, the population of Ottawa County was $\ldots$''
+\item Which county had a greater average rate of change during the time interval $[2000,2010]$? Were there any intervals in which one of the counties had a negative average rate of change?
+\item Using the given data, what do you predict will be the population of Ottawa County in 2018? Why?
+\end{enumerate}
+\end{exploration}
+
+The average rate of change of a function on an interval gives us an excellent way to describe how the function behaves, on average.  For instance, if we compute $AV_{[1970,2000]}$ for Kent County, we find that%
+\begin{equation*}
+AV_{[1970,2000]} = \frac{573,336 - 411,044}{30} = 5409.73\text{,}
+\end{equation*}
+which tells us that in an average year from 1970 to 2000, the population of Kent County increased by about $5410$ people.  Said differently, we could also say that from 1970 to 2000, Kent County was growing at an average rate of $5410$ people per year.  These ideas also afford the opportunity to make comparisons over time.  Since%
+\begin{equation*}
+AV_{[1990,2000]} = \frac{573,336 - 500,631}{30} = 7270.5\text{,}
+\end{equation*}
+we can not only say that the county's population increased by about $7270$ in an average year between 1990 and 2000, but also that the population was growing faster from 1990 to 2000 than it did from 1970 to 2000.%
+
+Finally, we can even use the average rate of change of a function to predict future behavior.  Since the population was changing on average by $7270.5$ people per year from 1990 to 2000, we can estimate that the population in 2002 is%
+\begin{equation*}
+K(2002) \approx K(2000) + 2 \cdot 7270.5 = 573,336 + 14,541 = 587,877\text{.}
+\end{equation*}
+
+
+%\typeout{************************************************}
+%\typeout{How average rate of change indicates function trends}
+%\typeout{************************************************}
+
+\section{How average rate of change indicates function trends}
+
+We have already seen that it is natural to use words such as ``increasing'' and ``decreasing'' to describe a function's behavior.  For instance, for the tennis ball whose height is modeled by $s(t) = 64 - 16(t-1)^2$, we computed that $AV_{[1.5,2.5]} = -32$, which indicates that on the interval $[1.5,2.5]$, the tennis ball's height is decreasing at an average rate of $32$ feet per second.  Similarly, for the population of Kent County, since $AV_{[1990,2000]} = 7270.5$, we know that on the interval $[1990,2000]$ the population is increasing at an average rate of $7270.5$ people per year.
+
+We make the following formal definitions to clarify what it means to say that a function is increasing or decreasing.
+
+\begin{definition}
+Let $f$ be a function defined on an interval $(a,b)$ (that is, on the set of all $x$ for which $a < x < b$).  We say that $f$ is \dfn{increasing on $(a,b)$} provided that the function is always rising as we move from left to right.  That is, for any $x$ and $y$ in $(a,b)$, if $x < y$, then $f(x) < f(y)$.%
+\\
+\\
+Similarly, we say that $f$ is \dfn{decreasing on $(a,b)$} provided that the function is always falling as we move from left to right.  That is, for any $x$ and $y$ in $(a,b)$,  if $x < y$, then $f(x) > f(y)$.%
+\end{definition}
+
+If we compute the average rate of change of a function on an interval, we can decide if the function is increasing or decreasing \emph{on average} on the interval, but it takes more work\footnote{Calculus offers one way to justify that a function is always increasing or always decreasing on an interval.\label{fn-7}} to decide if the function is increasing or decreasing \emph{always} on the interval.
+
+\begin{exploration}
+Let's consider two different functions and see how different computations of their average rate of change tells us about their respective behavior. Plots of $q$  and $h$ are shown below.
+
+\begin{enumerate}[label=\alph*.]
+\item Consider the function $q(x) = 4-(x-2)^2$. Compute $AV_{[0,1]}$, $AV_{[1,2]}$, $AV_{[2,3]}$, and $AV_{[3,4]}$. What do your last two computations tell you about the behavior of the function $q$ on $[2,4]$?
+
+
+\item Consider the function $h(t) = 3 - 2(0.95)^t$. Compute $AV_{[-1,1]}$, $AV_{[1,3]}$, and $AV_{[3,5]}$. What do your computations tell you about the behavior of the function $h$ on $[-1,5]$?
+
+\item On the graphs below, plot the line segments whose respective slopes are the average rates of change you computed in (a) and (b).
+
+\begin{image}
+\includegraphics{aroc-act-trends-q.pdf}
+\end{image}
+
+\begin{image}
+\includegraphics{aroc-act-trends-h.pdf}
+\end{image}
+
+\item True or false: Since $AV_{[0,3]} = 1$, the function $q$ is increasing on the interval $(0,3)$.  Justify your decision.
+\item Give an example of a function that has the same average rate of change no matter what interval you choose. You can provide your example through a table, a graph, or a formula; regardless of your choice, write a sentence to explain.
+\end{enumerate}
+
+\end{exploration}
+
+It is helpful be able to connect information about a function's average rate of change and its graph.  For instance, if we have determined that $AV_{[-3,2]} = 1.75$ for some function $f$, this tells us that, on average, the function rises between the points $x = -3$ and $x = 2$ and does so at an average rate of $1.75$ vertical units for every horizontal unit.  Moreover, we can even determine that the difference between $f(2)$ and $f(-3)$ is%
+\begin{equation*}
+f(2)-f(-3) = 1.75 \cdot 5 = 8.75
+\end{equation*}
+since $\frac{f(2)-f(-3)}{2-(-3)} = 1.75$.
+
+\begin{exploration}
+Sketch at least two different possible graphs that satisfy the criteria for the function stated in each part.  Make your graphs as significantly different as you can.  If it is impossible for a graph to satisfy the criteria, explain why.
+
+
+
+\begin{enumerate}[label=\alph*.]
+\item 
+$f$ is a function defined on $[-1,7]$ such that $f(1) = 4$ and $AV_{[1,3]} = -2$.
+
+	\begin{center}
+	$
+	\begin{array}{ccc}
+	{
+	\includegraphics[width=.4\textwidth]{functions-y-x-blank-axes.pdf}
+	}&&
+	{
+	\includegraphics[width=.4\textwidth]{functions-y-x-blank-axes.pdf}
+	}\\
+	\end{array}
+	$
+	\end{center}
+
+\item $g$ is a function defined on $[-1,7]$ such that $g(4) = 3$, $AV_{[0,4]}$, and $g$ is not always increasing on $(0,4)$.
+
+	\begin{center}
+	$
+	\begin{array}{ccc}
+	{
+	\includegraphics[width=.4\textwidth]{functions-y-x-blank-axes.pdf}
+	}&&
+	{
+	\includegraphics[width=.4\textwidth]{functions-y-x-blank-axes.pdf}
+	}\\
+	\end{array}
+	$
+	\end{center}
+
+
+\item $h$ is a function defined on $[-1,7]$ such that $h(2) = 5$, $h(4) = 3$ and $AV_{[2,4]} = -2$.
+
+	\begin{center}
+	$
+	\begin{array}{ccc}
+	{
+	\includegraphics[width=.4\textwidth]{functions-y-x-blank-axes.pdf}
+	}&&
+	{
+	\includegraphics[width=.4\textwidth]{functions-y-x-blank-axes.pdf}
+	}\\
+	\end{array}
+	$
+	\end{center}
+
+\end{enumerate}
+\end{exploration}
+
+\begin{summary}\begin{itemize}
+\item For a function $f$ defined on an interval $[a,b]$, the average rate of change of $f$ on $[a,b]$ is the quantity%
+\begin{equation*}
+AV_{[a,b]} = \frac{f(b) - f(a)}{b-a}\text{.}
+\end{equation*}
+\item The value of $AV_{[a,b]} = \frac{f(b) - f(a)}{b-a}$ tells us how much the function rises or falls, on average, for each additional unit we move to the right on the graph.  For instance, if $AV_{[3,7]} = 0.75$, this means that for additional $1$-unit increase in the value of $x$ on the interval $[3,7]$, the function increases, on average, by $0.75$ units.  In applied settings, the units of $AV_{[a,b]}$ are ``units of output per unit of input''.
+\item The value of $AV_{[a,b]} = \frac{f(b) - f(a)}{b-a}$ is also the slope of the line that passes through the points $(a,f(a))$ and $(b,f(b))$ on the graph of $f$, as shown in the graph below.
+\begin{image}
+\includegraphics{aroc-f-x-defn.pdf}
+\end{image}
+
+\item This line passing through these two points $(a,f(a))$ and $(b,f(b))$, is called a secant line to the graph, and its slope is equal to the average rate of change of the function on the interval $[a,b]$.
+
+\end{itemize}\end{summary}
+
+\end{document}

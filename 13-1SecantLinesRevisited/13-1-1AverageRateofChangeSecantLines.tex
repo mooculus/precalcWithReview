@@ -1,0 +1,192 @@
+\documentclass{ximera}
+
+\input{../preamble}
+\author{Ivo Terek and Elizabeth Campolongo}
+\license{Creative Commons Attribution-ShareAlike 4.0 International License}
+\acknowledgement{}
+
+\title{Average Rate of Change and Secant Lines}
+
+\begin{document}
+\begin{abstract}
+\end{abstract}
+\maketitle
+%
+%
+%
+\begin{motivatingQuestions}\begin{itemize}
+\item What does a line passing through two points of a function represent?
+\item How does this inform our understanding of the function?
+\end{itemize}\end{motivatingQuestions}
+%
+%
+%\typeout{************************************************}
+%\typeout{Subsection Introduction}
+%\typeout{************************************************}
+%
+\section{Introduction}
+%
+We begin by recalling the definitions of \textit{average rate of change} of a function and {\it secant line} to the graph of a function. 
+\begin{definition}
+For a function $f$ defined on an interval $[a,b]$, 
+\begin{itemize}
+\item the \dfn{average rate of change of $f$ on $[a,b]$} is the quantity%
+\begin{equation*}
+AV_{[a,b]} = \frac{f(b) - f(a)}{b-a}\text{.}
+\end{equation*}
+
+\item a \dfn{secant line} to the graph of $f$ is a line passing through two points $(a,f(a))$ and $(b,f(b))$, with $a \neq b$. \\
+\\
+%, in the graph of $y=f(x)$.\\
+  {\bf Recall:} The slope of a secant line is the average rate of change of the function on the interval $[a,b]$.
+\end{itemize}
+
+This is illustrated in the figure below, where the green line (between the red points on the graph) is the secant line of $f$ from $(a,f(a))$ to $(b,f(b))$.
+
+\begin{image}
+\includegraphics{aroc-f-x-defn.pdf}
+\end{image}
+
+\end{definition}
+
+
+
+
+
+Recall that given two points $(x_0,y_0)$ and $(x_1,y_1)$ in the plane, with $x_0 \neq x_1$, we can find the equation of the line passing through them by using the slope (``rise-over-run''): 
+%
+$$m= \frac{y_1-y_0}{x_1-x_0}.$$
+%
+Then the line equation is given by $y-y_0=m(x-x_0)$, simply because any given point $(x,y)$ in such line must realize the \emph{same} slope: 
+%
+$$m=\frac{y-y_0}{x-x_0}.$$
+%
+Of course, one may also use the point $(x_1,y_1)$ instead of $(x_0,y_0)$ and consider the equation $y-y_1=m(x-x_1)$, as it describes the same line.
+
+\begin{image}[3in]
+		  \begin{tikzpicture}
+		    \coordinate (C) at (-4,1);
+		    \coordinate (D) at (5,1);
+		    \coordinate (E) at (5,7.5);
+		     %\tkzMarkRightAngle(C,D,E)
+		    \draw[decoration={brace,mirror,raise=.2cm},decorate,thin] (-4,1)--(5,1);
+		    \draw[decoration={brace,mirror,raise=.2cm},decorate,thin] (5.6,1.2)--(5.6,7.7);
+		  %  \draw[decoration={brace,raise=.2cm},decorate,thin] (0,2)--(4,6.5);
+		    \draw[very thick] (C)--(E)--cycle;
+		    \draw[dotted] (C) edge (D);
+		    \draw[dotted] (E) edge (D);
+		    \node at (5.6,1.1) {$(x, y_1)$};
+		   % \node[rotate=-90] at (4+.5,4) {A'};
+		    \node[rotate=35] at (.8,4.8) {$y-y_1 = m(x-x_1)$};
+		    \node at (5.1,7.8) {$(x,y)$};
+		    \node at (-4.7, 1) {$(x_1,y_1)$};
+		    \node at (6.4,4.35) {$y-y_1$};
+		    \node at (.5,.4) {$x-x_1$};
+		  \end{tikzpicture}
+		\end{image}
+
+
+
+With this in place, we'll focus on the situation where two such points lie in the graph of some function $y=f(x)$.
+
+\begin{image}[2in]
+		  \begin{tikzpicture}
+		  \draw [thick, scale = 3, domain = -.5:2, smooth, variable =\x] plot ({\x},  {3/4*exp(\x)*cos(deg(\x)) + 1/2*exp(\x)*sin(deg(\x))});%{\x*(3-2*\x*\x)});
+		    \coordinate (C) at (0,2.8);
+		    \coordinate (D) at (5,1);
+		    \coordinate (E) at (5,7.5);
+		   % \draw[decoration={brace,mirror,raise=.2cm},decorate,thin] (0,2)--(4,2);
+		   % \draw[decoration={brace,mirror,raise=.2cm},decorate,thin] (4,2)--(4,6.5);
+		  %  \draw[decoration={brace,raise=.2cm},decorate,thin] (0,2)--(4,6.5);
+		    \draw[blue] (C)--(E)--cycle;
+		 %   \draw[dotted] (C) edge (D);
+		%    \draw[dotted] (E) edge (D);
+		      \node at (2,7) {$y= f(x)$};
+		   \node at (.4,4) {$(a, f(a))$};
+		   % \node[rotate=-90] at (4+.5,4) {A'};
+		 %   \node[rotate=35] at (.8,4.8) {$f(x)-f(x_1) = m(x-x_1)$};
+		    \node at (5.1,7.8) {$(b,f(b))$};
+		%    \node at (-4.7, 1) {$(x_1,y_1)$};
+		  \end{tikzpicture}
+		\end{image}
+
+
+\section{Definitions and examples}
+
+\begin{callout}
+  {\bf Definition:} Consider a function $y=f(x)$. A line passing through two points $(a,f(a))$ and $(b,f(b))$, with $a \neq b$, in the graph of $y=f(x)$, is called a \textbf{secant line} to the graph.\\
+  {\bf Recall:} The slope of a secant line is the average rate of change of the function on the interval $[a,b]$.
+\end{callout}
+
+\begin{example}
+  On the following situations, given a function $y=f(x)$ and two points in the graph, find the equation of the secant line they determine.
+  \begin{enumerate}[label=\alph*.]
+  \item $f(x) = x^2$, points $(1,f(1))$ and $(2,f(2))$.
+
+    \begin{explanation}
+      First, we have that $f(1) = 1^2=1$ and $f(2) = 2^2=4$, so the points given are actually $(1,1)$ and $(2,4)$. So $$m=\frac{4-1}{2-1}=  3$$means that the line equation we're looking for is $y-1=3(x-1)$, which may be rewritten simply as $y=3x-2$.
+
+\begin{image}[2in]
+		  \begin{tikzpicture}
+		  \draw [thick, scale = 1, domain = -2:2.5, smooth, variable =\x] plot ({\x},  {\x*\x});%{\x*(3-2*\x*\x)});
+		   \draw [blue, thick, scale = 1, domain = 1:2, smooth, variable =\x] plot ({\x},  {3*\x-2});
+		 %   \draw[dotted] (C) edge (D);
+		%    \draw[dotted] (E) edge (D);
+		      \node at (4,5.6) {\large $y= x^2$};
+		   \node [blue] at (.4,2) {$y = 3x-2$};
+		   % \node[rotate=-90] at (4+.5,4) {A'};
+		%    \node at (-4.7, 1) {$(x_1,y_1)$};
+		  \end{tikzpicture}
+		\end{image}
+
+      
+    \end{explanation}
+  \item $f(x) = \sin x$, points $(\pi/4, f(\pi/4))$ and $(3\pi/4, f(3\pi/4))$.
+
+    \begin{explanation}
+      This time, we have that $f(\pi/4) = \sin(\pi/4) = \sqrt{2}/2$ and also that $f(3\pi/4) = \sin(3\pi/4) = \sqrt{2}/2$, so the points given were in fact $(\pi/4,\sqrt{2}/2)$ and $(3\pi/4,\sqrt{2}/2)$. Hence the slope of the secant line is $$m=\frac{\sqrt{2}/2 - \sqrt{2}/2}{3\pi/4 - \pi/4} = \frac{0}{\pi/2} = 0,$$so the line equation $y-\sqrt{2}/2 = 0(x-\pi/4)$ boils down to $y = \sqrt{2}/2$. Again, you should see $y=\sqrt{2}/2$ not as a single value of $y$, but as a line equation for which it just happens that $x$ does not appear --- thus describing a horizontal line.
+
+\begin{image}[2in]
+		  \begin{tikzpicture}
+		  \draw [thick, scale = 2, domain = 0:6, smooth, variable = \x] plot ({\x}, {sin(deg(\x))});
+		    \coordinate (C) at (.4,.8);
+		    \coordinate (D) at (5,1);
+		    \coordinate (E) at (6,.8);
+		    \draw[blue, thick] (C)--(E)--cycle;
+	            \node at (9.4,.6) {\LARGE $y= \sin(x)$};
+		   \node at (0,1.5) {\large $y = \frac{\sqrt{2}}{2}$};
+		   % \node[rotate=-90] at (4+.5,4) {A'};
+		 %   \node[rotate=35] at (.8,4.8) {$f(x)-f(x_1) = m(x-x_1)$};
+		 %   \node at (5.1,7.8) {$(a+h,f(a+h))$};
+		%    \node at (-4.7, 1) {$(x_1,y_1)$};
+		  \end{tikzpicture}
+		\end{image}
+
+    \end{explanation}
+  \item $f(x)=2x+3$, points $(-1,f(-1))$ and $(3,f(3))$.
+
+    \begin{explanation}
+      Now, we have $f(-1) = 2(-1)+3=1$ and $f(3) = 2\cdot 3+3=9$, so the points given were $(-1,1)$ and $(3,9)$. The slope these points determine is $$m = \frac{9-1}{3-(-1)} = \frac{8}{4} = 2,$$so we obtain $y-1=2(x-(-1))$, which can be rewritten as $y=2x+3$. This is not a coincidence! The secant line to the graph of a line must be the line itself. This is because a line is determined by two points, and since both the original line and the secant line must share the two given points, they must be, in fact, equal.
+      
+%      \begin{image}[1in]
+%		  \begin{tikzpicture}
+%		  \draw [dotted, scale = .5, domain = -1.5:3.5, smooth, variable =\x] plot ({\x},  {2*\x+3});%{\x*(3-2*\x*\x)});
+%		   \draw [blue, dotted, scale = .5, domain = -1.5:3.5, smooth, variable =\x] plot ({\x},  {2*\x+3});
+%		 %   \draw[dotted] (C) edge (D);
+%		%    \draw[dotted] (E) edge (D);
+%		%      \node at (4,5.6) {\large $y= x^2$};
+%		%   \node [blue] at (.4,2) {$y = 3x-2$};
+%		   % \node[rotate=-90] at (4+.5,4) {A'};
+%		%    \node at (-4.7, 1) {$(x_1,y_1)$};
+%		  \end{tikzpicture}
+%		\end{image}
+%
+%
+%
+%      [FIGURE, MIX COLORS?]
+    \end{explanation}
+  \end{enumerate}
+\end{example}
+
+
+\end{document}

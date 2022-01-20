@@ -1,0 +1,288 @@
+\documentclass{ximera}
+
+\input{../preamble.tex}
+\author{Elizabeth Miller}
+\license{Creative Commons Attribution-ShareAlike 4.0 International License}
+\acknowledgement{https://activecalculus.org/prelude/sec-changing-in-tandem.html}
+
+\title{Changing in Tandem}
+
+\begin{document}
+\begin{abstract}
+  We explore how mathematics, and graphs in particular, allow us to describe and investigate the relationships between two variables changing in tandem.
+\end{abstract}
+\maketitle
+\licenseAPC
+
+%\typeout{************************************************}
+%\typeout{Motivating Questions}
+%\typeout{************************************************}
+
+\begin{motivatingQuestions}
+  \begin{itemize}
+\item If we have two quantities that are changing in tandem, how can
+  we connect the quantities and understand how change in one affects
+  the other?
+\item When the amount of water in a tank is changing, what behaviors
+  can we observe?
+  \end{itemize}
+\end{motivatingQuestions}
+
+
+%\typeout{************************************************}
+%\typeout{Subsection Introduction}
+%\typeout{************************************************}
+
+\section{Introduction}
+Mathematics is the art of making sense of patterns.  One way that patterns arise is when two quantities are changing in tandem.  In this setting, we may make sense of the situation by expressing the relationship between the changing quantities through words, through images, through data, or through a formula.%
+
+
+\begin{exploration}
+Suppose that a rectangular aquarium is being filled with water.  The tank is $4$ feet long by $2$ feet wide by $3$ feet high, and the hose that is filling the tank is delivering water at a rate of $0.5$ cubic feet per minute.
+
+\begin{image}
+\includegraphics{tandem-empty-aquarium.pdf}
+\includegraphics{tandem-filled-aquarium.pdf}
+%add alt text
+\end{image}
+
+\begin{enumerate}[label=\alph*.]
+\item What are some different quantities that are changing in this scenario?%
+\item After $1$ minute has elapsed, how much water is in the tank?  At this moment, how deep is the water?%
+\item How much water is in the tank and how deep is the water after $2$ minutes?  After $3$ minutes?%
+\item How long will it take for the tank to be completely full?  Why?%
+\end{enumerate}
+\end{exploration}
+
+
+%\typeout{************************************************}
+%\typeout{Subsection 1.1.1 Using Graphs to Represent Relationships}
+%\typeout{************************************************}
+
+\section{Using Graphs to Represent Relationships}
+In the previous activity, we saw how several changing quantities were related in the setting of an aquarium filling with water: time, the depth of the water, and the total amount of water in the tank are all changing, and any pair of these quantities changes in related ways.  One way that we can make sense of the situation is to record some data in a table.  For instance, observing that the tank is filling at a rate of $0.5$ cubic feet per minute, this tells us that after $1$ minute there will be $0.5$ cubic feet of water in the tank, and after $2$ minutes there will be $1$ cubic foot of water in the tank, and so on.  If we let $t$ denote the time in minutes and $V$ the amount of water in the tank at time $t$, we can represent the relationship between these quantities through a table.%
+
+$$
+\begin{array}{cc}
+t&V\\
+\hline
+0&0.0\\
+1&0.5\\
+2&1.0\\
+3&1.5\\
+4&2.0\\
+5&2.5
+\end{array}
+$$
+
+
+%\begin{image}
+%\includegraphics[width=\textwidth]{APCfigure1.1.3.jpg}
+%%draw with array and tikzi
+%\end{image}
+
+We can also represent this data in a graph by plotting ordered pairs $(t,V)$ on a system of coordinate axes, where $t$ represents the horizontal distance of the point from the origin, $(0,0)$, and $V$ represents the vertical distance from $(0,0)$.  The visual representation of the table of values is seen in the graph below.%
+
+\begin{image}
+\includegraphics{tandem-aquarium-V-t.pdf}
+\end{image}
+
+
+Sometimes it is possible to use variables and one or more equations to connect quantities that are changing in tandem.  In the aquarium example from the preview activity, we can observe that the volume, $V$, of a rectangular box that has length $l$, width $w$, and height $h$ is given by%
+\begin{equation*}
+V = l \cdot w \cdot h\text{,}
+\end{equation*}
+and thus, since the water in the tank will always have length $l = 4$ feet and width $w = 2$ feet, the volume of water in the tank is directly related to the depth of water in the tank by the equation%
+\begin{equation*}
+V = 4 \cdot 2 \cdot h = 8h\text{.}
+\end{equation*}
+Depending on which variable we solve for, we can either see how $V$ depends on $h$ through the equation $V = 8h$, or how $h$ depends on $V$ via the equation $h = \frac{1}{8}V$.  From either perspective, we observe that as depth or volume increases, so must volume or depth correspondingly increase.%
+
+\begin{exploration}
+Consider a tank in the shape of an inverted circular cone (point down) where the tank's radius is $2$ feet and its depth is $4$ feet.  Suppose that the tank is being filled with water that is entering at a constant rate of $0.75$ cubic feet per minute.%
+\begin{enumerate}[label=\alph*.]
+\item Sketch a labeled picture of the tank, including a snapshot of there being water in the tank prior to the tank being completely full.%
+\item What are some quantities that are changing in this scenario?  What are some quantities that are not changing?%
+\item Fill in the following table of values to determine how much water, $V$, is in the tank at a given time in minutes, $t$, and thus generate a graph of the relationship between volume and time by plotting the data on the provided axes.%
+
+$$
+\begin{array}{cc}
+t&V\\
+\hline
+0&\\
+1&\\
+2&\\
+3&\\
+4&\\
+5&
+\end{array}
+$$
+
+
+\begin{image}
+\includegraphics{tandem-V-t-blank-axes.pdf}
+\end{image}
+
+\item Finally, think about how the height of the water changes in tandem with time.  Without attempting to determine specific values of $h$ at particular values of $t$, how would you expect the data for the relationship between $h$ and $t$ to appear?  Use the provided axes to sketch at least two possibilities; write at least one sentence to explain how you think the graph should appear.%
+
+
+\begin{image}
+\includegraphics{tandem-h-t-blank-axes.pdf}
+\end{image}
+
+
+\begin{image}
+\includegraphics{tandem-h-t-blank-axes.pdf}
+\end{image}
+
+\end{enumerate}
+\end{exploration}
+
+
+
+%\typeout{************************************************}
+%\typeout{Subsection 1.1.2 Using A Table to Add Perspective}
+%\typeout{************************************************}
+
+\section{Using A Table to Add Perspective}
+
+One of the ways that we make sense of mathematical ideas is to view them from multiple perspectives.  Sometimes we use different means to establish a point of view:  words, numerical data, graphs, or symbols.  In addition, sometimes by changing our perspective within a particular approach we gain deeper insight.%
+
+\begin{image}
+\includegraphics{tandem-empty-conical-tank.pdf}
+\includegraphics{tandem-filled-conical-tank.pdf}
+\end{image}
+
+%If we consider the conical tank discussed in \hyperref[act-tandem-conical-tank]{Activity~\ref{act-tandem-conical-tank}}, as seen in \hyperref[F-tandem-empty-conical-tank]{Figure~\ref{F-tandem-empty-conical-tank}} and \hyperref[F-tandem-filled-conical-tank]{Figure~\ref{F-tandem-filled-conical-tank}}, we can use algebra to better understand some of the relationships among changing quantities.  The volume of a cone \index{volume!cone} with radius $r$ and height $h$ is given by the formula%
+%\begin{equation*}
+%V = \frac{1}{3}\pi r^2 h\text{.}
+%\end{equation*}
+%%
+%\par
+%\hypertarget{p-45}{}%
+%Note that at any time while the tank is being filled, $r$ (the radius of the surface of the water), $h$ (the depth of the water), and $V$ (the volume of the water) are all changing; moreover, all are connected to one another.  Because of the constraints of the tank itself (with radius $2$ feet and depth $4$ feet), it follows that as the radius and height of the water change, they always do so in the proportion%
+%\begin{equation*}
+%\frac{r}{h} = \frac{2}{4}\text{.}
+%\end{equation*}
+%Solving this last equation for $r$, we see that $r = \frac{1}{2}h$; substituting this most recent result in the equation for volume, it follows that%
+%\begin{equation*}
+%V = \frac{1}{3}\pi \left( \frac{1}{2}h \right)^2 h = \frac{\pi}{12} h^3\text{.}
+%\end{equation*}
+%%
+%\par
+%\hypertarget{p-46}{}%
+%This most recent equation helps us understand how $V$ and $h$ change in tandem.  We know from our earlier work that the volume of water in the tank increases at a constant rate of $0.75$ cubic feet per minute.  This leads to the data shown in \hyperref[T-tandem-cone-V-t]{Table~\ref{T-tandem-cone-V-t}}. \begin{table}
+%\centering
+%\begin{tabular}{lllllll}
+%$t$&$0$&$1$&$2$&$3$&$4$&$5$\tabularnewline\hrulethin
+%$V$&$0.0$&$0.75$&$1.5$&$2.25$&$3.0$&$3.75$
+%\end{tabular}
+%\caption{How time and volume change in tandem in a conical tank.\label{T-tandem-cone-V-t}}
+%\end{table}
+%%
+%\par
+%\hypertarget{p-47}{}%
+%With the equation $V = \frac{\pi}{12} h^3$, we can now also see how the height of the water changes in tandem with time.  Solving the equation for $h$, note that $h^3 = \frac{12}{\pi} V$, and therefore%
+%\begin{equation}
+%h = \sqrt[3]{\frac{12}{\pi} V}\text{.}\label{eq-height-from-volume}
+%\end{equation}
+%Thus, when $V = 0.75$, it follows that $h = \sqrt[3]{\frac{12}{\pi} 0.75} \approx 1.42$.  Executing similar computations with the other values of $V$ in \hyperref[T-tandem-cone-V-t]{Table~\ref{T-tandem-cone-V-t}}, we get the following updated data that now includes $h$.%
+
+%\hypertarget{p-48}{}%
+
+Here is a table of data obtained algebraically of the height of the water in the cone at different times.  For more information about how this table was derived, see \url{https://activecalculus.org/prelude/sec-changing-in-tandem.html}
+
+\begin{center}
+\textbf{Table} How time, volume, and height change in a conical tank
+$$
+\begin{array}{lllllll}
+t&0&1&2&3&4&5\\
+\hline
+V&0.0&0.75&1.5&2.25&3.0&3.75\\
+\hline
+h&0.0&1.42&1.79&2.05&2.25&2.43
+\end{array}
+$$
+\end{center}
+
+
+Plotting this data on two different sets of axes allows us to see the different ways that $V$ and $h$ change with $t$.  First we graph how volume changes over time.
+
+\begin{image}
+\includegraphics{tandem-cone-V-t.pdf}
+\end{image}
+
+Volume increases at a constant rate, as seen by the straight line appearance of the points in the graph above.  
+
+Now let's graph how height changes over time.
+
+\begin{image}
+\includegraphics{tandem-cone-h-t.pdf}
+\end{image}
+
+We observe that the water's height increases in a way that it rises more slowly as time goes on, as shown by the way the curve the points lie on in the graph below ``bends down'' as time passes. 
+
+These different behaviors make sense because of the shape of the tank.  Since at first there is less volume relative to depth near the cone's point, as water flows in at a constant rate, the water's height will rise quickly.  But as time goes on and more water is added at the same rate, there is more space for the water to fill in order to make the water level rise, and thus the water's heigh rises more and more slowly as time passes.%
+
+
+\begin{exploration}
+
+Consider a tank in the shape of a sphere where the tank's radius is $3$ feet.  Suppose that the tank is initially completely full and that it is being drained by a pump at a constant rate of $1.2$ cubic feet per minute.%
+
+\begin{enumerate}[label=\alph*.]
+\item Sketch a labeled picture of the tank, including a snapshot of some water remaining in the tank prior to the tank being completely empty.%
+\item What are some quantities that are changing in this scenario?  What are some quantities that are not changing?%
+\item Recall that the volume of a sphere of radius $r$ is $V = \frac{4}{3} \pi r^3$.  When the tank is completely full at time $t = 0$ right before it starts being drained, how much water is present?%
+\item How long will it take for the tank to drain completely?%
+\item Fill in the following table of values to determine how much water, $V$, is in the tank at a given time in minutes, $t$, and thus generate a graph of the relationship between volume and time.  Write a sentence to explain why the data's graph appears the way that it does.%
+
+\begin{center}
+$
+\begin{array}{cc}
+t&V\\
+\hline
+0&\\
+20&\\
+40&\\
+60&\\
+80&\\
+94.24&
+\end{array}
+$
+\end{center}
+
+\begin{image}
+\includegraphics{tandem-sphere-V-t.pdf}
+\end{image}
+
+\item Finally, think about how the height of the water changes in tandem with time. What is the height of the water when $t = 0$?  What is the height when the tank is empty?  How would you expect the data for the relationship between $h$ and $t$ to appear?  Use the provided axes to sketch at least two possibilities; write at least one sentence to explain how you think the graph should appear.%
+
+\begin{image}
+\includegraphics{tandem-h-t-blank-axes.pdf}
+\end{image}
+
+\begin{image}
+\includegraphics{tandem-h-t-blank-axes.pdf}
+\end{image}
+
+\end{enumerate}
+%%
+\end{exploration}
+
+\begin{summary}
+  \begin{itemize}
+\item When two related quantities are changing in tandem, we can
+  better understand how change in one affects the other by using data,
+  graphs, words, or algebraic symbols to express the relationship
+  between them. See, for instance, Table 1.1.10, Figure 1.1.11, and
+  1.1.12 that together help explain how the height and volume of water
+  in a conical tank change as time changes.
+\item When the amount of water in a tank is changing, we can observe
+  other quantities that change, depending on the shape of the tank.
+  For instance, if the tank is conical, we can consider both the
+  changing height of the water and the changing radius of the surface
+  of the water.  In addition, whenever we think about a quantity that
+  is changing as time passes, we note that time itself is changing.
+  \end{itemize}
+\end{summary}
+\end{document}

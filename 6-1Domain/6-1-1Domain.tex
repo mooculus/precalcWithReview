@@ -1,0 +1,600 @@
+\documentclass[nooutcomes]{ximera}
+\input{../preamble.tex}
+
+
+\author{Bobby Ramsey}
+\license{Creative Commons Attribution 4.0 International License}
+\acknowledgement{https://spot.pcc.edu/math/orcca/ed2/html/section-domain-and-range.html}
+\acknowledgement{https://spot.pcc.edu/math/orcca/ed2/html/section-comparison-symbols-and-notation-for-intervals.html}
+
+\title{Domain}
+% Learning Objectives for this section
+%\begin{itemize}
+%	\item Definition of the Domain
+%	\item Interval Notation 
+%	\item The Domains of Famous Functions 
+%	\item Spotting Values not in the Domain
+%	\item Piecewise Defined Functions and Restricted Domains 
+%\end{itemize}
+
+
+\begin{document}
+
+\begin{abstract}
+ 	We return to the notion of a function and examine the allowable inputs.
+\end{abstract}
+\licenseORCCA
+\maketitle
+
+
+%\typeout{************************************************}
+%\typeout{Review Questions}
+%\typeout{************************************************}
+
+%\section{Review Materials}
+%    \begin{itemize}[label=\textbullet]
+%	\item \link[Combining Like Terms]{https://spot.pcc.edu/math/orcca/ed2/html/section-combining-like-terms.html}
+%	\item \link[Algebraic Properties and Simplifying Expressions]{https://spot.pcc.edu/math/orcca/ed2/html/section-algebraic-properties-and-simplifying-expressions.html}
+%   \end{itemize}
+\begin{motivatingQuestions}\begin{itemize}
+	%Often start a section. 
+	\item Can a function ever have an input that is not allowed?
+	\item How do we denote the numbers that can be inputs?
+	\item What are the allowable inputs for our famous functions?
+\end{itemize}\end{motivatingQuestions}
+
+\section{Introduction}
+
+	We often think about functions as a process which transforms an input into
+	some output. Sometimes that process is known to us (such as when we have a formula for the function) and sometimes that process is unknown to us 
+	(such as when we only have a small table of values). 
+
+	\begin{exploration}
+		\begin{enumerate}[label=\alph*.]
+			\item Suppose the quadratic function $f$ is given by $f(x) = x^2$. Are there any input values that can't be plugged into $f$?
+			\item Suppose a square has side length denotes by the variable $s$, and area denoted by $A$. The area of the square is a function of the
+					side length, $A(s) = s^2$. Are there any values of $s$ that don't make sense?
+			\item Suppose that $g$ is the rational function given by $g(x) = \dfrac{x}{x}$ and that $h$ is the constant function given by $h(x) = 1$. 
+					Are these the same function? Why or why not?
+		\end{enumerate}
+	\end{exploration}
+
+
+\section{The Domain of a Function}
+		
+	% From https://spot.pcc.edu/math/orcca/ed2/html/section-domain-and-range.html
+	\begin{definition}
+		Let $f$ be a function from $A$ to $B$. The set $A$ of possible inputs to $f$ is called the \dfn{domain} of $f$. The set $B$ is called the \dfn{codomain} of $f$.
+	\end{definition}
+
+	\begin{example}
+		Let $P$ be the population of Columbus, OH as a function of the year. According to Google, the population of Columbus in 1990 was 632,910 and in the year 2010 the population was 787,033. That means we can say: 
+			$$ P(1990) = 632,910 \,\text{ and } \,P(2010) =  787,033. $$
+		What if we were asked to find $P(1200)$?
+		
+		\begin{explanation}
+			This question doesn't really make sense. There were \link[Mound Builder tribes]{https://en.wikipedia.org/wiki/History_of_Columbus,_Ohio} 
+			in the area around the year 1200, but the city of Columbus was not incorporated until the year 1816. We say that $P(1200)$ is \emph{undefined}. 
+			That is to say, $1200$ is not in the domain of $P$.
+		\end{explanation}
+	\end{example}
+
+
+	\begin{example}
+		Let $f$ be the function given by $f(x) = \dfrac{1}{x}$. Is there any number that cannot be used as an input to $f$?
+	
+		\begin{explanation}
+			There is only one number that is not a valid input, $0$. The number $1$ can be divided by any nonzero number. For instance $f(7) = \dfrac{1}{7}$ or $f(-3.7) = \dfrac{1}{-3.7}$ are perfectly valid outputs. However, if
+			someone attempted to plug $x=0$ into the formula $\dfrac{1}{x}$, they would end up with a division-by-zero, which is undefined.  The number $0$ is not in the domain of $f$.
+%			The domain of $f$ consists of all numbers except $0$.		
+		\end{explanation}
+	\end{example}
+	
+	
+	When we are given a function, sometimes the domain is given to us explicitly. Consider the function $f(x) = 2x+1$ for $x \geq 5$. The phrase ``for $x \geq 5$'' tells us the domain for this function. We may be able to plug any 
+	number into the expressio $2x+1$, but it's only when $x \geq 5$ that this gives our function. For instance, $2(0)+1 = 1$, but $f(0)$ is undefined.
+	
+	Sometimes, when we are given a function as a formula, we are not told the domain. In these circumstances we use the \emph{implied domain}.
+	\begin{definition}
+		Let $f$ be a function whose inputs are real numbers. The \dfn{implied domain} of $f$ is the collection of all real numbers $x$ for which $f(x)$ is a real number.
+	\end{definition}
+
+	\begin{example}
+		Let $g$ be the function given by $g(x) = \sqrt{3x-4}$. Find the domain of $g$.
+		
+		\begin{explanation}
+			The only information we are given about $g$ is the formula for $g(x)$. That means we are being asked to find the implied domain. Since the square root only exists (as a real number) when the radicand is non-negative,
+			we need to ensure that:
+			\begin{align*} 
+				3x-4 &\geq 0 \\
+				3x & \geq 4\\
+				x & \geq \dfrac{4}{3}.
+			\end{align*}			
+			The domain is the set of all $x$ for which $x \geq \dfrac{4}{3}$.
+		\end{explanation}
+	\end{example}
+
+
+	\section{Interval Notation}
+	As in the previous example, solutions of inequalities play an important role in expressing the domains of many types of functions. As a standard way of writing these solutions, we rely on \emph{interval notation}. Interval notation
+	is a short-hand way of representing the intervals as they appear when sketched on a number line. The previous example involved $x \geq \dfrac{4}{3}$ which, when sketched on a number line, is given by
+	\begin{image}
+		\begin{tikzpicture}
+  			\begin{axis}[numberline,
+                		xmin=-0.5,xmax=1.5,
+                		ticks=none,
+                		after end axis/.code={},
+                		width=200pt, %shrunken, because 4 in a row    
+                		]
+        			\addplot[closedinfiniteinterval, *->, color=penColor] coordinates {(0,0) (1.5,0)};
+        			\addplot[mark=none] coordinates {(0,0)} node[below] {$\dfrac{4}{3}$};
+  			\end{axis}
+		\end{tikzpicture}
+	\end{image}
+	This sketch consists of a single interval with left-hand endpoint at $\dfrac{4}{3}$ and no right-hand endpoint (it keeps going). In interval notation, this would be written as $\left[ \dfrac{4}{3}, \infty \right)$. This is an example of a \emph{closed infinite interval}, 
+	``closed'' because the point at $\dfrac{4}{3}$ (the only endpoint) is included and ``infinite'' because it has infinite width. The solid dot at $\dfrac{4}{3}$ indicates that the point is included in the interval.
+	
+	There are four different types of infinite intervals, two are closed infinite intervals (which contain their respective endpoint) and the other two are open infinite intervals (which do not contain the endpoint). For $a$ a fixed real number, these are:
+	\begin{enumerate}
+		\item $[a, \infty)$ represents $x \geq a$,
+		\item $(-\infty, a]$ represents $x \leq a$,
+		\item $(a, \infty)$ represents $x > a$, and
+		\item $(-\infty, a)$ represents $x < a$.
+	\end{enumerate}
+	The notation indicates uses the square bracket to indicate that the endpoint is included and the round parenthesis to indicate that the endpoint is not included. 
+
+	Not every interval is infinite, however. Consider the interval in the following sketch
+	\begin{image}
+		\begin{tikzpicture}
+  			\begin{axis}[numberline,
+                		xmin=-0.5,xmax=1.5,
+                		ticks=none,
+                		after end axis/.code={},
+                		width=200pt, %shrunken, because 4 in a row    
+                		]
+			        \addplot[openclosedinterval, o-*, color=penColor] coordinates {(-0.5,0) (1,0)};
+        			\addplot[mark=none] coordinates {(1,0)} node[below] {$3$};
+        			\addplot[mark=none] coordinates {(-0.5,0)} node[below] {$-2$};  			
+			\end{axis}
+		\end{tikzpicture}
+	\end{image}
+	which consists of all $x$ with $-2 < x \leq 3$. It is not an infinite interval, having endpoints at $-2$ and $3$. The endpoint at $-2$ is not included, but the endpoint at $3$ is included. In interval notation this would be written as $(-2, 3]$. As with the infinite intervals,
+	the square bracket indicates that the right-hand endpoint is included and the round parenthesis endicates that the left-hand endpoint is not included. (This is an example of a ``half-open interval''.)
+
+	For a bounded intervals (ones that are not infinite), there are also four possibilities. For $a$ and $b$ both fixed real numbers, these are:
+	\begin{enumerate}
+		\item $[a, b]$ represents $a \leq x \leq b$,
+		\item $[a, b)$ represents $a \leq x < b$,
+		\item $(a, b]$ represents $a < x \leq b$ and
+		\item $(a, b)$ represents $a < x < b$.
+	\end{enumerate}
+	Practically, this amounts to writing the left-hand endpoint, the right-hand endpoint, then indicating which endpoints are included in the interval. When neither endpoint is included, $(a,b)$ can be mistaken for a point on a graph. You will need to use the context
+	to know which is meant.
+
+	\begin{example}
+		Write the interval notation for $-\dfrac{3}{2} \leq x \leq \sqrt{5}$ and for $-\dfrac{3}{2} < x < \sqrt{5}$.
+		
+		\begin{explanation}
+			The interval $-\dfrac{3}{2} \leq x \leq \sqrt{5}$ has graph
+			\begin{image}
+				\begin{tikzpicture}
+		  			\begin{axis}[numberline,
+		                		xmin=-0.5,xmax=1.5,
+        		        		ticks=none,
+                				after end axis/.code={},
+              		  		width=200pt, %shrunken, because 4 in a row    
+                				]
+			        		\addplot[closedinterval, *-*, color=penColor] coordinates {(-0.5,0) (1,0)};
+        					\addplot[mark=none] coordinates {(1,0)} node[below] {$\sqrt{5}$};
+        					\addplot[mark=none] coordinates {(-0.5,0)} node[below] {$-\dfrac{3}{2}$};  			
+					\end{axis}
+				\end{tikzpicture}
+			\end{image}			
+			It has one interval with endpoints at $-\dfrac{3}{2}$ and $\sqrt{5}$, both of which are included. In interval notation it is given by $\left[ -\dfrac{3}{2}, \sqrt{5} \right]$.
+
+			The interval $-\dfrac{3}{2} < x < \sqrt{5}$ has graph
+			\begin{image}
+				\begin{tikzpicture}
+		  			\begin{axis}[numberline,
+		                		xmin=-0.5,xmax=1.5,
+        		        		ticks=none,
+                				after end axis/.code={},
+              			  		width=200pt, %shrunken, because 4 in a row    
+                				]
+			        		\addplot[openinterval, o-o, color=penColor] coordinates {(-0.5,0) (1,0)};
+        					\addplot[mark=none] coordinates {(1,0)} node[below] {$\sqrt{5}$};
+        					\addplot[mark=none] coordinates {(-0.5,0)} node[below] {$-\dfrac{3}{2}$};  			
+					\end{axis}
+				\end{tikzpicture}
+			\end{image}			
+			It has one interval with endpoints at $-\dfrac{3}{2}$ and $\sqrt{5}$, neither of which are included. In interval notation it is given by $\left( -\dfrac{3}{2}, \sqrt{5} \right)$.
+		\end{explanation}
+	\end{example}
+
+	\begin{example}
+		Find the domain of the function $f$ given by $f(x) = \sqrt{3x+7} - \sqrt{5-2x}$.
+		
+		\begin{explanation}
+			In order for the value of $f(x)$ to exist, we need BOTH $3x+7 \geq 0$ AND $5-2x \geq 0$. 
+			\begin{align*}
+				3x + 7 &\geq 0\\
+				3x &\geq -7\\
+				x & \geq -\dfrac{7}{3} \\ \\
+				5-2x &\geq 0\\
+				-2x &\geq -5\\
+				x & \leq \dfrac{5}{2}
+			\end{align*}
+			The inequaltiy $x \geq -\dfrac{7}{3}$ has graph
+			\begin{image}
+				\begin{tikzpicture}
+  					\begin{axis}[numberline,
+                				xmin=-0.5,xmax=1.5,
+        		        		ticks=none,
+                				after end axis/.code={},
+         		       			width=200pt, %shrunken, because 4 in a row    
+                				]
+        					\addplot[closedinfiniteinterval, color=penColor, *->] coordinates {(0,0) (2,0)};
+        					\addplot[mark=none] coordinates {(0,0)} node[below] {$-\dfrac{7}{3}$};
+  					\end{axis}
+				\end{tikzpicture}
+			\end{image}
+			and the graph of $x \leq \dfrac{5}{2}$ has graph			
+			\begin{image}
+				\begin{tikzpicture}
+  					\begin{axis}[numberline,
+                				xmin=-0.5,xmax=1.5,
+        		        		ticks=none,
+                				after end axis/.code={},
+         		       			width=200pt, 
+                				]
+        					\addplot[infiniteclosedinterval, color=penColor, <-*] coordinates {(-0.5,0) (1.5,0)};
+        					\addplot[mark=none] coordinates {(1.5,0)} node[below] {$\dfrac{5}{2}$};
+  					\end{axis}
+				\end{tikzpicture}
+			\end{image}
+			
+			The graph of the overlap (the interval where BOTH are true) is
+			\begin{image}
+				\begin{tikzpicture}
+		  			\begin{axis}[numberline,
+		                		xmin=-0.5,xmax=1.5,
+        		        		ticks=none,
+                				after end axis/.code={},
+              			  		width=200pt,    
+                				]
+			        		\addplot[closedinterval, *-*, color=penColor] coordinates {(0,0) (1.5,0)};
+        					\addplot[mark=none] coordinates {(1.5,0)} node[below] {$\dfrac{5}{2}$};
+        					\addplot[mark=none] coordinates {(0,0)} node[below] {$-\dfrac{7}{3}$};  			
+					\end{axis}
+				\end{tikzpicture}
+			\end{image}			
+			
+			The domain of $f$ is $\left[ -\dfrac{7}{3} , \dfrac{5}{2} \right]$.
+		\end{explanation}
+	\end{example}
+
+
+	Finally, isolated points are not included in intervals, but are written in the form $\{ a \}$, and multiple disjoint intervals are connected using the \emph{Union} symbol $\cup$.
+
+	\begin{example}
+		The entire graph of a function $g$ is given in the graph below. Find the domain of $g$.
+		\begin{image}
+			\begin{tikzpicture}
+				\begin{axis}[
+		    			width=0.75\linewidth,
+                			xmin=-6.25,xmax=6.25,
+               				ymin=-6.25,ymax=6.25,
+                			minor ytick=,minor xtick=,
+		                	xtick={-6,...,6}, ytick={-6,...,6},
+                			clip=false,
+                			]
+	
+					\addplot[domain=-6:0, color=penColor]{(1/6)*x^2} node[above right, pos=0.25]{\Large{$y=g(x)$}};
+					\addplot[domain=0:2, color=penColor]{2*x-4};
+					\addplot[domain=2:4, color=penColor]{4};
+					\addplot[hollowdot] coordinates {(0,0)};
+					\addplot[hollowdot] coordinates {(-6,6)};
+        				\addplot[hollowdot] coordinates {(0,-4)};
+        				\addplot[soliddot] coordinates {(2,0)};
+ 					\addplot[hollowdot] coordinates {(2,4)};
+        				\addplot[soliddot] coordinates {(4,4)};
+        				\addplot[soliddot] coordinates {(6,-1)};
+    				\end{axis}
+			\end{tikzpicture}
+		\end{image}
+		
+		\begin{explanation}
+			
+			\begin{center}
+				\desmos{re9re7dqew}{800}{600}
+			\end{center}
+				
+			Notice that $g(x)$ is defined for all $x$ in $-6 < x < 0$, in $0 < x \leq 4$, and at $x=6$. In interval notation, this is
+			$(-6, 0)\cup (0, 4] \cup \{ 6 \}$.
+			
+			
+			
+		\end{explanation}
+	\end{example}
+	
+	\begin{example}\label{examp:wirePerimeterDomain}
+		A piece of wire, 10 meters in length, is folded into a rectangle. Call $x$ the width of the rectangle, as in the image below, and call $h$ the height.
+		\begin{image}
+			\begin{tikzpicture}
+				\draw (0,0)  -| (5,3) 
+				    node[pos=0.25,below] {\small{$x$}} 
+				    node[pos=0.75,right] {\small{$h$}}
+				    -| (0,0);
+			\end{tikzpicture}
+		\end{image}
+		Find a formula for the height as a function of $x$, $h(x)$. What is the domain of $h$?
+		
+		\begin{explanation}
+		
+			The wire forms the perimeter of the rectangle. Since the wire has length 10 meters, that means $2x + 2h = 10$. Solving this formula 
+			for $h$ gives:
+			\begin{align*}
+				2x + 2h &= 10\\
+				2h &= 10 - 2x\\
+				h &= \frac{10-2x}{2}\\
+					&= \frac{10}{2}-\frac{2x}{2}\\
+					&= 5 - x.
+			\end{align*}
+			The function $h$ is given by $h(x) = 5-x$.
+			
+			Any number can be plugged into the formula $5-x$, but we have to take into account where these quantities came from in the story.
+			The value $x$ was a length of a side of a rectangle. That means $x$ cannot be negative. For a similar reason, $h(x)$ cannot be negative.
+			\begin{align*}
+				h(x) & \geq 0\\
+				5-x & \geq 0\\
+				-x & \geq -5\\
+				x &\leq 5
+			\end{align*}	
+			If $x$ has a value larger than $5$, it would force $h(x)$ to be negative, which is impossible. The domain of $h$ is $[0, 5]$.
+
+			\begin{callout}
+				Think about what it would mean for $x=0$ or $x=5$. The value $x=0$ would correspond to a rectangle with width zero, and $x=5$ 	
+				would correspond to a rectangle of height zero (since $h(5)=0$). For convenience, mathematicians often allow rectangles of width 
+				zero or height zero. If you are not comfortable with calling those things rectangles, you can use $(0,5)$ as your domain instead.
+			\end{callout}
+		\end{explanation}
+	
+	\end{example}
+	
+
+\section{The Domains of Famous Functions}
+	Earlier you were introduced to the graphs of several ``Famous Functions''.  We will revisit these functions over and over again throughout our studies. For now, we will formalize what we have seen with their graphs.
+
+	\begin{callout}
+		\begin{enumerate}	
+			\item The Absolute Value function - We can take the absolute value of any number. The Absolute Value function has domain $(-\infty, \infty)$.
+	
+			\item Polynomial functions - We can plug any number into a polynomial. All polynomials have domain $(-\infty, \infty)$.
+	
+			\item Rational functions - Remember that a rational function is one that can be written as fraction of two polynomials, with the 
+				denominator not the zero polynomial. The domain of a rational function consists of all real numbers for which the denominator is nonzero.
+				
+			\item The Square Root function - We can take the square root of any non-negative number. The square root function has domain $[0, \infty)$.		
+	
+			\item Exponential functions - Exponential functions $b^x$, for $b >0$ with $b \neq 1$,  have domain $(-\infty, \infty)$.
+	
+			\item Logarithms - Logarithms have domain $(0, \infty)$. This is similar to the domain of $\sqrt{x}$, except the endpoint is not included.
+	
+			\item The Sine function - The sine function $\sin(x)$ has domain $(-\infty, \infty)$.
+		\end{enumerate}
+	\end{callout}
+
+\section{Spotting Values not in the Domain}
+	Of our list of famous functions, notice that only rational functions, radicals, and logarithms have domain that is not the full set of all real numbers, $(-\infty, \infty)$. When trying to find the domain of a function 
+	constructed out of famous functions, this gives us some guidelines to follow. The following list is not exhaustive, but gives a good place to begin.
+	\begin{callout}
+		\begin{enumerate}
+			\item The input of an even-index radical must be non-negative.
+			\item The input of a logarithm must be positive.
+			\item The denominator of a fraction cannot be zero.
+			\item The real-world context. If a function has a real-world description, this may add additional restrictions on the input values. (You can see this in Example \ref{examp:wirePerimeterDomain} above.)
+		\end{enumerate}
+	\end{callout}
+	Remember that the number zero is neither positive nor negative. The non-negative numbers are $[0, \infty)$, while the positive numbers are $(0, \infty)$.
+	
+	\begin{example}
+		Find the domain of the function $$f(x) = 3|x| - 5x^3+7x + \dfrac{2x+5}{x-1} + \ln(3-x).$$
+
+		\begin{explanation}
+			Examine the individual terms. The first term is an absolute value function, while the second and third terms are polynomials. There is no restriction on their domain. The last two terms, however, are a fraction and a logarithm.
+			
+			The denominator of the fraction cannot be zero, so 
+			\begin{align*}
+				x-1 &\neq 0\\
+				x &\neq 1.
+			\end{align*}
+			
+			The input to the logarithm must be positive, so 
+			\begin{align*}
+				3-x &> 0\\
+				-x & > -3\\
+				x &< 3. 			
+			\end{align*}
+
+			In order for a number to be in the domain of the function, it must be in the domain of every term of the function. That means it must satisfy both $x \neq 1$ and $x < 3$.
+			Altogether, this means the domain is $(-\infty, 1) \cup (1, 3)$.
+		\end{explanation}
+	\end{example}
+
+	\begin{example}
+		Find the domain of the function $$s(t) = \dfrac{\ln(2t+3) - \sqrt{5t-1}}{t^2+1}$$
+
+		\begin{explanation}
+			The denominator of this fraction is $t^2 + 1$. The graph of $y = t^2 + 1$ is an upward-opening parabola with vertex at the point $(0,1)$. 
+			As such, the denominator does not have zero as an output. Our only restrictions will come from the numerator.
+			
+			The input to the logarithm must be positive, so 
+			\begin{align*}
+				2t+3 &> 0\\
+				2t & > -3\\
+				t &> -\dfrac{3}{2}. 			
+			\end{align*}
+			That inequality has graph given by
+			\begin{image}
+				\begin{tikzpicture}
+  					\begin{axis}[numberline,
+                				xmin=-0.5,xmax=1.5,
+        		        		ticks=none,
+                				after end axis/.code={},
+         		       			width=200pt, 
+                				]
+        					\addplot[openinfiniteinterval, o->, color=penColor] coordinates {(-0.5,0) (1.5,0)};
+        					\addplot[mark=none] coordinates {(-0.5,0)} node[below] {$-\dfrac{3}{2}$};
+  					\end{axis}
+				\end{tikzpicture}
+			\end{image}
+			
+			The radicand must be non-negative, so 
+			\begin{align*}
+				5t-1 &\geq 0\\
+				5t & \geq 1\\
+				t &\geq \dfrac{1}{5}. 			
+			\end{align*}
+			That inequality has graph given by
+			\begin{image}
+				\begin{tikzpicture}
+  					\begin{axis}[numberline,
+                				xmin=-0.5,xmax=1.5,
+        		        		ticks=none,
+                				after end axis/.code={},
+         		       			width=200pt, 
+                				]
+        					\addplot[closedinfiniteinterval, *->, color=penColor] coordinates {(0.5,0) (1.5,0)};
+        					\addplot[mark=none] coordinates {(0.5,0)} node[below] {$\dfrac{1}{5}$};
+  					\end{axis}
+				\end{tikzpicture}
+			\end{image}
+
+			In order for a number to be in the domain of this function, satisfy both $t > -\dfrac{3}{2}$ and $t \geq \dfrac{1}{5}$.
+			The points satisfying both inequalities are given in the graph
+			\begin{image}
+				\begin{tikzpicture}
+  					\begin{axis}[numberline,
+                				xmin=-0.5,xmax=1.5,
+        		        		ticks=none,
+                				after end axis/.code={},
+         		       			width=200pt, 
+                				]
+        					\addplot[closedinfiniteinterval, *->, color=penColor] coordinates {(0.5,0) (1.5,0)};
+        					\addplot[mark=none] coordinates {(0.5,0)} node[below] {$\dfrac{1}{5}$};
+  					\end{axis}
+				\end{tikzpicture}
+			\end{image}
+			
+			Altogether, this means the domain is $\left[ \dfrac{1}{5}, \infty \right)$
+		\end{explanation}
+	\end{example}
+
+
+\section{Piecewise Defined Functions and Restricted Domains}
+	Consider the function $f(x) = 2|x|+3$ for $x \geq -5$, and the function $g(x) = 2|x|+3$ (given without this restriction).  The implied domain of $g$ is $(-\infty, \infty)$, 
+	but what can we say about $f(-8)$? The formula $2|x|+3$ makes sense when $x=-8$, but the function 
+	definition for $f$ has the added statement ``for $x \geq -5$''. This is telling us the domain of $f$ is $[-5, \infty)$. In this case $f(-8)$ is undefined. 
+	
+	We can think of the function $f$ as coming from the function $g$ by deciding that some inputs are not valid. We have \emph{restricted the domain}.
+	
+	Suppose we have a function $f$ given by $f(x)=x^2$ for $0\leq x \leq 1$ (which has domain $[0,1]$) and a different function $g$ given by
+	$g(x) = 3x$ for $1 < x \leq 2$ (which has domain $(1, 2]$). If we are given an $x$-value in the interval $[0,2]$, that input can only be
+	plugged into one of these two functions. Let's create a new function $h$ by setting $h(x) = f(x) = x^2$ if $0\leq x \leq 1$ and by setting 
+	$h(x) = g(x)=3x$ if $1 < x \leq 2$. As a compact way of writing this, we would say:
+	$$ h(x) = \begin{cases} x^2 & \text{ for } 0 \leq x \leq 1 \\ 3x & \text{ for } 1 < x \leq 2\end{cases}$$
+	
+	\begin{definition}
+		A \dfn{piecewise defined function} is a function that is given by different formulas for different intervals in its domain. 
+		This is sometimes shortened to just \emph{piecewise function}.
+	\end{definition}
+
+	The function $h$ above is a piecewise defined function. On the interval $[0,1]$ it is given by the formula $x^2$, and on the interval $(1,2]$
+	it is given by the formula $3x$. It has two pieces, one piece is quadratic and the other piece is linear. The graph of the function $h$ is given below.
+
+		\begin{image}
+			\begin{tikzpicture}
+				\begin{axis}[
+		    			width=0.75\linewidth,
+                			xmin=-0.25,xmax=2.25,
+               				ymin=-0.25,ymax=6.25,
+                			minor ytick=,minor xtick=,
+		                	xtick={0,1,2}, ytick={0,...,6},
+                			clip=false,
+                			]
+	
+					\addplot[domain=0:1, color=penColor]{x^2};
+					\addplot[domain=1:2, color=penColor]{3*x} node[above left, pos=0.5]{\Large{$y=h(x)$}};
+					\addplot[soliddot] coordinates {(0,0)};
+					\addplot[soliddot] coordinates {(1,1)};
+        				\addplot[hollowdot] coordinates {(1,3)};
+        				\addplot[soliddot] coordinates {(2,6)};
+%        				\addplot[hollowdot] coordinates {(0,-4)};
+%        				\addplot[soliddot] coordinates {(2,0)};
+    				\end{axis}
+			\end{tikzpicture}
+		\end{image}
+
+	\begin{example}
+		Let $f$ be the piecewise defined function given by
+		$$ f(x) =  \begin{cases} 5 & \text{ for }  x \leq -2 \\ \sin(x) & \text{ for } -2 < x < 3\\ 2^x & \text{ for } x > 4 \end{cases}.$$
+				What is the domain of $f$? Evaluate the following: 
+		\begin{enumerate}
+			\item $f(-5)$
+			\item $f(0)$
+			\item $f\left( \dfrac{\pi}{2} \right)$
+			\item $f(4)$
+			\item $f(5)$
+		\end{enumerate}
+
+		\begin{explanation}
+		
+			The function $f$ is given as a piecewise defined function with three pieces. The first piece is used $x \leq -2$, the second piece is used 
+			when $-2 < x < 3$, and the third piece is used when $x > 4$. This function is defined for all numbers except those between 3 and 4.
+			
+			The domain of this function is $(-\infty, 3) \cup (4, \infty)$.
+			\begin{enumerate}
+				\item Since $-5 \leq -2$, this uses the first piece of the function, so $f(-5)=5$.
+				\item Since $-2 < 0 < 3$, $f(0)=\sin(0)=0$.
+				\item $\dfrac{\pi}{2}$ is between $1$ and $2$ (it's approximately 1.57), so $f\left( \dfrac{\pi}{2} \right) = \sin\left( \dfrac{\pi}{2} \right) = 1$.
+				\item $4$ is not in the domain of $f$, so $f(4)$ is undefined.
+				\item Since $5 > 4$, $f(5) = 2^5 = 32$.
+			\end{enumerate}
+		\end{explanation}
+	\end{example}
+
+	\begin{example}
+		Write the absolute value function as a piecewise defined function.
+
+		\begin{explanation}
+		
+			Let's examine the graph of $y=|x|$.
+			\begin{image}
+				\begin{tikzpicture}
+					\begin{axis}[
+			    			width=0.75\linewidth,
+	                			xmin=-6.25,xmax=6.25,
+	               				ymin=-6.25,ymax=6.25,
+	                			minor ytick=,minor xtick=,
+			                	xtick={-6,...,6}, ytick={-6,...,6},
+	                			clip=false,
+	                			]
+	
+						\addplot[domain=-6:0, color=penColor]{-x} node[above right, pos=0.25]{\Large{$y=|x|$}};
+						\addplot[domain=0:6, color=penColor]{x};
+					\end{axis}
+				\end{tikzpicture}
+			\end{image}
+			Do you notice that this graph looks like two straight lines, meeting at the origin? Let's focus on the right-hand side first. For $x \geq 0$, this is 
+			a line with slope $m=1$ and $y$-intercept at the origin $(0,0)$. This line has equation $y = 1x+0 = x$.
+			For $x < 0$, this is  a line with slope $m=-1$ and $y$-intercept at the origin $(0,0)$. This line has equation $y = -1x+0 = -x$.
+
+			That means $|x|$ agrees with $x$ if $x \geq 0$, and agrees with $-x$ if $x < 0$. Putting these together gives us:
+			$$ |x| = \begin{cases} -x & \text{ for } x < 0\\ x & \text{ for } x \geq 0.\end{cases}$$
+			
+			This formula tells us that the absolute value of a positive number is itself, while the absolute value of a negative number changes the sign.
+		\end{explanation}
+	\end{example}
+
+
+\end{document}

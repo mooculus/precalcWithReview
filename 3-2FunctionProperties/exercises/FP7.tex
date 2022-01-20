@@ -1,0 +1,65 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\author{Kenneth Berglund}
+\acknowledgement{https://www.stitz-zeager.com/szct07042013.pdf}
+
+\begin{document}
+\licenseSZ
+\begin{exercise}
+Recall from the chapter that sine and cosine are periodic functions with period $2\pi$. This means that for all inputs $x$, $\sin(x + 2\pi) = \sin(x)$ and $\cos(x + 2\pi) = \cos(x)$. 
+
+Many functions that can be built out of $\sin$ and $\cos$ are also periodic. In this exercise, we'll use Desmos to explore how the period can change. 
+
+\begin{enumerate}
+
+\item Consider the function $f$ defined by $f(x) = \sin(3x)$. For reference, here is a graph of $f$ on Desmos:
+\begin{center}
+\desmos{uc3meehtpv}{800}{600}
+\end{center}
+
+The period of $f$ is
+\begin{multipleChoice}
+\choice{$\pi$.}
+\choice{$2\pi$.}
+\choice{$3\pi$.}
+\choice{$6\pi$.}
+\choice{$\frac{\pi}{2}$.}
+\choice[correct]{$\frac{2\pi}{3}$.}
+\end{multipleChoice}
+
+\item Consider the function $g$ defined by $g(x) = \cos\left(\frac{x}{3}\right)$. For reference, here is a graph of $g$ on Desmos:
+\begin{center}
+\desmos{364oqkoauu}{800}{600}
+\end{center}
+
+The period of $g$ is
+\begin{multipleChoice}
+\choice{$\pi$.}
+\choice{$2\pi$.}
+\choice{$3\pi$.}
+\choice[correct]{$6\pi$.}
+\choice{$\frac{\pi}{2}$.}
+\choice{$\frac{2\pi}{3}$.}
+\end{multipleChoice}
+
+\item Consider the function $h$ defined by $h(x) = \sin(2x - \pi)$. For reference, here is a graph of $h$ on Desmos:
+\begin{center}
+\desmos{wha8ccbi93}{800}{600}
+\end{center}
+
+The period of $h$ is
+\begin{multipleChoice}
+\choice[correct]{$\pi$.}
+\choice{$2\pi$.}
+\choice{$3\pi$.}
+\choice{$6\pi$.}
+\choice{$\frac{\pi}{2}$.}
+\choice{$\frac{2\pi}{3}$.}
+\end{multipleChoice}
+
+\end{enumerate}
+
+\end{exercise}
+\end{document}

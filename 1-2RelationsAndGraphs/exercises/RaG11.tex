@@ -1,0 +1,300 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\author{Kenneth Berglund}
+\acknowledgement{stitz-zeager.com}
+
+\begin{document}
+\licenseSZ
+\begin{exercise}
+Look at the following graphs and match each to a description of a relation below:
+
+\begin{image}
+\begin{tikzpicture}
+    \begin{axis}[
+	title=Graph A,
+        	xlabel=$x$,
+    	ylabel=$y$,]
+    	\addplot+ [only marks] coordinates {(-4,-1) (-2,1) (0,3) (1,4)};
+    \end{axis}
+\end{tikzpicture}
+\begin{tikzpicture}
+    \begin{axis}[
+	title=Graph B,
+        	xlabel=$x$,
+    	ylabel=$y$,]
+	
+    	\addplot+[only marks] coordinates {(-3,3)};
+	\draw[thick, ->] (axis cs: -3,3) -- (axis cs: 7,3); 
+    \end{axis}
+	
+\end{tikzpicture}
+\end{image}
+
+\begin{image}
+\begin{tikzpicture}
+    \begin{axis}[
+	title=Graph C,
+        	xlabel=$x$,
+    	ylabel=$y$,]
+	
+    	\addplot+[only marks, mark=o] coordinates {(3,-2)};
+	\draw[thick, ->] (axis cs: 3,-2) -- (axis cs: 3,7); 
+    \end{axis}
+	
+\end{tikzpicture}
+\begin{tikzpicture}
+    \begin{axis}[
+	title=Graph D,
+        	xlabel=$x$,
+    	ylabel=$y$,]
+	
+    	\addplot+[only marks] coordinates {(-2,-4)};
+	\addplot+[only marks, mark=o] coordinates {(-2, 3)};
+	\draw[thick] (axis cs: -2, -4) -- (axis cs: -2,3); 
+    \end{axis}
+	
+\end{tikzpicture}
+\end{image}
+
+\begin{image}
+\begin{tikzpicture}
+    \begin{axis}[
+	title=Graph E,
+        	xlabel=$x$,
+    	ylabel=$y$,]
+	
+    	\addplot+[only marks] coordinates {(-4,2)};
+	\addplot+[only marks, mark=o] coordinates {(3,2)};
+	\draw[thick] (axis cs: -4, 2) -- (axis cs: 3,2); 
+    \end{axis}
+	
+\end{tikzpicture}
+\begin{tikzpicture}
+    \begin{axis}[
+	title=Graph F,
+        	xlabel=$x$,
+    	ylabel=$y$,]
+	\fill[color=gray!50,opacity=.7]
+		(axis cs: -7,0) -- (axis cs: -7,7) -- (axis cs: 7,7) -- (axis cs: 7,0) -- (axis cs: -7,0);
+	\draw[thick] (axis cs: -7,0) -- (axis cs: 7,0); 
+    \end{axis}
+	
+\end{tikzpicture}
+\end{image}
+
+\begin{image}
+\begin{tikzpicture}
+    \begin{axis}[
+	title=Graph G,
+        	xlabel=$x$,
+    	ylabel=$y$,]
+	\fill[color=gray!50,opacity=.7]
+		(axis cs: -2,-7) -- (axis cs: -2,7) -- (axis cs: 7,7) -- (axis cs: 7,-7) -- (axis cs: -2,-7);
+	\draw[thick,dashed,<->] (axis cs: -2,-7) -- (axis cs: -2,7); 
+    \end{axis}
+	
+\end{tikzpicture}
+\begin{tikzpicture}
+    \begin{axis}[
+	title=Graph H,
+        	xlabel=$x$,
+    	ylabel=$y$,]
+	\fill[color=gray!50,opacity=.7]
+		(axis cs: -3,-7) -- (axis cs: -3,7) -- (axis cs: 2,7) -- (axis cs: 2,-7) -- (axis cs: -3,-7);
+	\draw[thick,dashed,<->] (axis cs: -3,-7) -- (axis cs: -3,7); 
+	\draw[thick,<->] (axis cs: 2,-7) -- (axis cs: 2,7); 
+    \end{axis}
+	
+\end{tikzpicture}
+\end{image}
+
+\begin{image}
+\begin{tikzpicture}
+    \begin{axis}[
+	title=Graph I,
+        	xlabel=$x$,
+    	ylabel=$y$,]
+	\fill[color=gray!50,opacity=.7]
+		(axis cs: 0,0) -- (axis cs: 0,7) -- (axis cs: 7,7) -- (axis cs: 7,0) -- (axis cs: 0,0);
+	\draw[thick,->] (axis cs: 0,0) -- (axis cs: 7,0); 
+	\draw[thick,->] (axis cs: 0,0) -- (axis cs: 0,7); 
+    \end{axis}
+	
+\end{tikzpicture}
+\begin{tikzpicture}
+    \begin{axis}[
+	title=Graph J,
+        	xlabel=$x$,
+    	ylabel=$y$,]
+	\fill[color=gray!50,opacity=.7]
+		(axis cs: -4,-3) -- (axis cs: -4,2) -- (axis cs: 5,2) -- (axis cs: 5,-3) -- (axis cs: -4,-3);
+	\draw[thick, dashed] (axis cs: -4,-3) -- (axis cs: 5,-3); 
+	\draw[thick, dashed] (axis cs: -4,2) -- (axis cs: 5,2); 
+	\draw[thick, dashed] (axis cs: -4,-3) -- (axis cs: -4,2); 
+	\draw[thick, dashed] (axis cs: 5,-3) -- (axis cs: 5,2); 
+    \end{axis}
+	
+\end{tikzpicture}
+\end{image}
+
+
+
+
+\begin{enumerate}
+	\item The points $(x, y)$ with $-3 < x \le 2$.
+ 
+	\begin{multipleChoice}
+	\choice{A}
+	\choice{B}
+	\choice{C}
+	\choice{D}
+	\choice{E}
+	\choice{F}
+	\choice{G}
+	\choice[correct]{H}
+	\choice{I}
+	\choice{J}
+	\end{multipleChoice}
+
+	\item The points $(x, y)$ with $x = -2$ and $-4 \le y < 3$.
+
+	\begin{multipleChoice}
+	\choice{A}
+	\choice{B}
+	\choice{C}
+	\choice[correct]{D}
+	\choice{E}
+	\choice{F}
+	\choice{G}
+	\choice{H}
+	\choice{I}
+	\choice{J}
+	\end{multipleChoice}
+
+	\item The points $(x, y)$ with $x > -2$.
+
+	\begin{multipleChoice}
+	\choice{A}
+	\choice{B}
+	\choice{C}
+	\choice{D}
+	\choice{E}
+	\choice{F}
+	\choice[correct]{G}
+	\choice{H}
+	\choice{I}
+	\choice{J}
+	\end{multipleChoice}
+
+	\item The points $(x, y)$ with $x \ge 0$ and $y \ge 0$.
+
+	\begin{multipleChoice}
+	\choice{A}
+	\choice{B}
+	\choice{C}
+	\choice{D}
+	\choice{E}
+	\choice{F}
+	\choice{G}
+	\choice{H}
+	\choice[correct]{I}
+	\choice{J}
+	\end{multipleChoice}
+
+	\item The points $(x, y)$ with $-4 < x < 5$ and $-3 < y < 2$.
+
+	\begin{multipleChoice}
+	\choice{A}
+	\choice{B}
+	\choice{C}
+	\choice{D}
+	\choice{E}
+	\choice{F}
+	\choice{G}
+	\choice{H}
+	\choice{I}
+	\choice[correct]{J}
+	\end{multipleChoice}
+
+	\item The points $(x, y)$ with $-4 \le x < 3$ and $y = 2$.
+
+	\begin{multipleChoice}
+	\choice{A}
+	\choice{B}
+	\choice{C}
+	\choice{D}
+	\choice[correct]{E}
+	\choice{F}
+	\choice{G}
+	\choice{H}
+	\choice{I}
+	\choice{J}
+	\end{multipleChoice}
+
+	\item The points $(x, y)$ with $-3 \le x$ and $y = 3$.
+
+	\begin{multipleChoice}
+	\choice{A}
+	\choice[correct]{B}
+	\choice{C}
+	\choice{D}
+	\choice{E}
+	\choice{F}
+	\choice{G}
+	\choice{H}
+	\choice{I}
+	\choice{J}
+	\end{multipleChoice}
+
+	\item The points $(x, y)$ with $y \ge 0$.
+
+	\begin{multipleChoice}
+	\choice{A}
+	\choice{B}
+	\choice{C}
+	\choice{D}
+	\choice{E}
+	\choice[correct]{F}
+	\choice{G}
+	\choice{H}
+	\choice{I}
+	\choice{J}
+	\end{multipleChoice}
+
+	\item The points $(-4, -1)$, $(-2, 1)$, $(0, 3)$, and $(1, 4)$.
+
+	\begin{multipleChoice}
+	\choice[correct]{A}
+	\choice{B}
+	\choice{C}
+	\choice{D}
+	\choice{E}
+	\choice{F}
+	\choice{G}
+	\choice{H}
+	\choice{I}
+	\choice{J}
+	\end{multipleChoice}
+
+	\item The points $(x, y)$ with $x = 3$ and $y > -2$. 
+
+	\begin{multipleChoice}
+	\choice{A}
+	\choice{B}
+	\choice[correct]{C}
+	\choice{D}
+	\choice{E}
+	\choice{F}
+	\choice{G}
+	\choice{H}
+	\choice{I}
+	\choice{J}
+	\end{multipleChoice}
+
+\end{enumerate}
+
+
+\end{exercise}
+\end{document}

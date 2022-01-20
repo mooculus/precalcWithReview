@@ -1,0 +1,45 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\author{Bobby Ramsey}
+\license{Creative Commons Attribution-ShareAlike 4.0 International License}
+
+
+\begin{document}
+
+	The entire graph of a function $f$ is given below.  Use the graph of $f$
+	to answer the questions.
+	
+	\begin{image}
+		\begin{tikzpicture}
+			\begin{axis}[
+			    xmin=-3.2, xmax=5.2, ymin=-2.2,ymax=6.2,    
+		            unit vector ratio*=1 1 1,
+		            axis lines =middle, xlabel=$x$, ylabel=$y$,
+		            every axis y label/.style={at=(current axis.above origin),anchor=south},
+		            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+		            xtick={-3,...,5}, ytick={-2,...,6},
+		            grid=major,width=4in,
+		            grid style={dashed, gridColor},
+		          ]
+		          \addplot[color=penColor,very thick,smooth,domain=0:3] {-(x-1)^2+5} 
+		          	node[pos=0.8, above right]{\Large{$y = f(x)$}};
+	        	\addplot[hollowdot] coordinates {(0,4)};
+	        	\addplot[soliddot, color=penColor] coordinates {(3,1)};
+	        	\addplot[soliddot, color=penColor] coordinates {(-2,2)};
+		       \end{axis}
+		\end{tikzpicture}
+	\end{image}
+	
+\begin{exercise}
+		Find the domain of $f$. \[\{ \answer{-2}\} \cup (\answer{0},\answer{3}]\]
+\end{exercise}
+\begin{exercise}
+		Find the range of $f$. \[ [\answer{1}, \answer{5}] \]
+\end{exercise}
+\begin{exercise}
+		Find the interval on which $f$ is decreasing. \[ [\answer{1}, \answer{3}] \]
+\end{exercise}
+
+\end{document}

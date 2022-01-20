@@ -1,0 +1,224 @@
+\documentclass[nooutcomes]{ximera}
+
+\input{../preamble.tex}
+\author{Elizabeth Miller}
+\license{Creative Commons Attribution-ShareAlike 4.0 International License}
+
+
+\title{Zeros of Functions}
+
+\begin{document}
+\begin{abstract}
+ We explore what it means to find the zero of a function.
+\end{abstract}
+\maketitle
+
+
+%\typeout{************************************************}
+%\typeout{Motivating Questions}
+%\typeout{************************************************}
+
+\begin{motivatingQuestions}\begin{itemize}
+\item What does it mean to find the zero of a function?
+\item What are other terms used for zeros of functions?
+\item Why might we want to find the zero of a function?
+\end{itemize}\end{motivatingQuestions}
+
+
+%\typeout{************************************************}
+%\typeout{Subsection Introduction}
+%\typeout{************************************************}
+
+\section{Introduction}
+In this section, we will study zeros of functions. Let's start with a classic example of when we might want to find the zero of a function.  
+
+\begin{example}
+A ball is thrown straight upward from the ground.  The distance the ball is from the ground is given by the function $f(x)=4-(x-2)^2$ where $x$ is the time measured in seconds and $f(x)$ is the distance from the ground measured in feet.  What time will the ball hit the ground?
+
+\begin{explanation}
+First, it is important to understand what this problem is saying.  Consider this model of the situation.  Click the play button next to the $a$ to see an animation of the ball being thrown up.
+
+\begin{center}  
+\desmos{f9d7ngsznm}{800}{600}  
+\end{center}
+
+Notice that while the ball goes straight up and down, the graph of the distance from the ground vs. time makes an upside down parabola.  
+
+As the ball goes up, we see:
+\begin{image}
+\includegraphics{Zeros-BouncingBall1}
+%\includegraphics{Zeros-BouncingBall2}
+\includegraphics{Zeros-BouncingBall3}
+\end{image}
+
+
+At the ball's highest point, we have:
+\begin{image}
+\includegraphics{Zeros-BouncingBall4}
+\end{image}
+
+And as the ball goes down, we have:
+\begin{image}
+\includegraphics{Zeros-BouncingBall5}
+\includegraphics{Zeros-BouncingBall6}
+\end{image}
+
+It is also important to note that in this situation, we know this model only makes sense from the time we throw the ball to the time it hits the ground.  Having a negative distance would correspond with the ball going underground, which is not what we want to model.  That means our domain will be from $x=0$ to the $x$-value where the ball hits the ground.
+
+This means, once again, we are back to wanting to know when the ball will hit the ground.  Looking at the graph, we can focus on the time when the ball seems to hit the ground.
+
+\begin{image}
+\includegraphics{Zeros-BouncingBall7}
+\end{image}
+
+Notice that at the time the ball hits the ground, the function giving the distance vs. time graph, $f(x)=4-(x-2)^2$, is crossing the $x$-axis.  This means we are looking for \textbf{the $x$-value of the $x$-intercept}.  That is, we are looking for when this function equals 0.  We call an $x$-value where a function equals zero the \textbf{zero of a function}.  It can also be called the \textbf{root of a function} when the function is a polynomial.  Occasionally, people will also call it the \textbf{solution of a function} but techincally they should say \textbf{the solution of $f(x)=0$}.
+
+Let's formalize this with a definition.
+
+\begin{definition}
+We call an $x$-value where a function equals zero the \dfn{zero of a function}.  It can also be called the \dfn{root of a function} when the function is a polynomial. Another equivalent expression is \dfn{the solution of $f(x)=0$}.  Another label for the same value is \dfn{the $x$-coordinate of the $x$-intercept}.
+\end{definition}
+
+\subsection{Finding Zeros Graphically}
+One method for finding zeros or roots of functions is to read them off the graph. Since the zero is the $x$-coordinate of the $x$-intercept, we are looking for the places where the graph crosses the $x$-axis.  This is where the $y$-value or output will be zero.  In the image below, the two roots are colored blue and green.
+
+
+\begin{image}
+\includegraphics{Zeros-BouncingBall8}
+\end{image}
+
+The root $x=0$ cooresponds to the blue dot at $(0,0)$ and represents when the ball is first thrown.  The second root, labeled in green, is where $x=4$.  This root is the one we are looking for.  The time when the ball hits the ground is 4 seconds after the ball is thrown.
+
+\subsection{Finding Zeros Algebraically}
+
+Reading zeros graphically can be useful, but it is not very precise.  The root in our example could actually be at $x=3.99$ and we would not know from the graph.  When possible, it is best to find zeros algebraically.  To do this, we want to set $f(x)=0$ and solve for $x$.  This algebra can get tricky.  In this section, we will stick to relatively straightforward examples and in the next couple sections we will explore some more involved methods for solving equations where one side equals 0.  It is not always possible to solve for the zeros of a function algebraically in this manner.  In calculus, you will also learn methods to approximate zeros when it is not possible to solve for them exactly.
+
+In our current example, we will have:
+\begin{align*}
+f(x)&=0\\
+4-(x-2)^2&=0 \\
+4&=(x-2)^2 \\
+ \sqrt{4}&=\sqrt{(x-2)^2}
+\end{align*}  
+
+Recall that $\sqrt{x^2}=|x|$ from the section on domains and ranges of composite functions.
+
+Continuing, we have:
+
+\begin{align*}
+\sqrt{4}&= |x-2|\\
+\pm 2&= x-2\\
+2\pm 2&= x
+\end{align*}  
+
+That is, the zeros or roots of $f(x)=4-(x-2)^2$  are:
+$$
+x=2-2=0 \text{ or } x=2+2=4
+$$
+
+Considering our problem in context, we know that the root at time $x=0$ is when the ball was initially thrown, so the root at $x=4$ must be when the ball hits the ground.
+
+\end{explanation}
+
+\end{example}
+
+Let's look at a couple more examples:
+
+\begin{example}
+Find the zeros of the linear function $f(x)=7x+3$.
+
+\begin{explanation}
+We need to set $f(x)=7x+3=0$
+
+\begin{align*}
+7x+3&=0\\
+7x&=-3\\
+x&=\tfrac{-3}{7}
+\end{align*}  
+
+This linear function only has one zero.  This should make sense if we think about the graph of a line, as a line will only have one $x$-intercept.
+
+\begin{image}
+\begin{tikzpicture}
+    \begin{axis}
+        \addplot[firstcurve]{7*x+3};
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+
+In fact, all linear functions except constant functions will have one zero.  Constant functions will have no zeros except for the linear function $x=0$ in which every point is a zero.
+\end{explanation}
+\end{example}
+
+\begin{example}
+Write $g(x)=|7x+3|$ as a piecewise function and find its zeros.
+\begin{explanation}
+Recall that the absolute value makes all the outputs positive.  Multiplying a negative number by a $-1$ makes the value positive.  Therefore, $g(x)=|7x+3|$ is a piecewise function where
+$$
+  g(x) =|7x+3|=
+  \begin{cases}
+                                   7x+3 & \text{if $7x+3 \geq 0$} \\
+                                   -(7x+3) & \text{if $7x+3 <0$} \\
+  \end{cases}
+$$
+
+To simplify this expression, notice that we need to know when $7x+3=0$. This is what we did in the last example.  We know this happens at $x=\tfrac{-3}{7}$.  Now, we also need to know when $f(x)=7x+3$ is positive and when it is negative.  
+
+Since we have the graph of the function above, we could look at it and see that $7x+4>0$ when $x>\tfrac{-3}{7}$ and $7x+4<0$ when $x<\tfrac{-3}{7}$.
+
+Alternatively, if we wanted to figure this out algebraically (without the graph), we can plug values into the function  $f(x)=7x+3$ on either side of  $x=\tfrac{-3}{7}$.  This will work because we know a property about lines.  We know that it cannot switch from positive to negative without being equal to 0 in the middle.  This is a property that you will study more in calculus.  
+
+Let's choose to look at $x=0$ as a representative of values of $x>\tfrac{-3}{7}$ and $x=-1$ as a representive of values for $x<\tfrac{-3}{7}$.
+
+$$
+f(0)=7(0)+3=3>0
+$$
+
+This means that $f(x)=7x+3 >0$ when $x>\tfrac{-3}{7}$.
+
+$$
+f(-1)=7(-1)+3=-4<0 
+$$
+
+This means that $f(x)=7x+3 <0$ when $x<\tfrac{-3}{7}$.
+
+Putting this all together, we can now write  $g(x)=|7x+3|$ as a piecewise function:
+
+$$
+  g(x) =|7x+3|=
+  \begin{cases}
+                                   7x+3 & \text{if $x \geq \tfrac{-3}{7}$} \\
+                                   -(7x+3) & \text{if $x < \tfrac{-3}{7}$} \\
+  \end{cases}
+$$
+
+Now we can find the zeros of this function.  We know that an absolute value function is only zero where it switches from the positive branch to the negative branch of the piecewise function so the zero is when $x=\tfrac{-3}{7}$.  
+
+Let's look at the graph of this function to verify that this makes sense.
+
+\begin{image}
+\begin{tikzpicture}
+    \begin{axis}
+        \addplot[firstcurve,samples=300]{abs(7*x+3)};
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+\end{explanation}
+
+By looking at this graph, we can see that the zero, that is the $x$-intercept on $g(x)s=|7x+3|$ is the same as on $f(x)=7x+3$.
+\end{example}
+
+%\typeout{************************************************}
+%\typeout{Summary}
+%\typeout{************************************************}
+
+\begin{summary}\begin{itemize}
+\item We call an $x$-value where a function equals zero the \dfn{zero of a function}.  It can also be called the \dfn{root of a function} if the function is a polynomial. Another equivalent expression is \dfn{the solution of $f(x)=0$}.  Another label for the same value is \dfn{the $x$-coordinate of the $x$-intercept}.
+\item You can find this value graphically by looking for the $x$-value where the function crosses the $x$-axis.
+\item You can find this value algebraically by setting $f(x)=0$ and then solving for $x$.  This can sometimes be difficult (or even impossible!) to do.  
+\end{itemize}\end{summary}
+
+
+
+
+\end{document}

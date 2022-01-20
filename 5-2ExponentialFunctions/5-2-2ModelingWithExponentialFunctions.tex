@@ -1,0 +1,282 @@
+\documentclass[nooutcomes]{ximera}
+
+\input{../preamble.tex}
+\author{Elizabeth Miller}
+\license{Creative Commons Attribution-ShareAlike 4.0 International License}
+\acknowledgement{https://activecalculus.org/prelude/sec-exp-modeling.html}
+
+\title{Modeling with Exponential Functions Revisited}
+
+\begin{document}
+\licenseAPC
+\begin{abstract}
+  
+\end{abstract}
+\maketitle
+
+
+%\typeout{************************************************}
+%\typeout{Motivating Questions}
+%\typeout{************************************************}
+
+\begin{motivatingQuestions}\begin{itemize}
+\item What can we say about the behavior of an exponential function as the input gets larger and larger?
+\item How do vertical stretches and shifts of an exponontial function affect its behavior?
+\item Why is the temperature of a cooling or warming object modeled by a function of the form $F(t) = ab^t + c$?
+\end{itemize}\end{motivatingQuestions}
+
+
+%\typeout{************************************************}
+%\typeout{Introduction}
+%\typeout{************************************************}
+
+\section{Introduction}
+If a quantity changes so that its growth or decay occurs at a constant percentage rate with respect to time, the function is exponential.  This is because if the growth or decay rate is $r$, the total amount of the quantity at time $t$ is given by $A(t) = a(1+r)^t$, where $a$ is the amount present at time $t = 0$.  Many different natural quantities change according to exponential models:  money growth through compounding interest, the growth of a population of cells, and the decay of radioactive elements
+
+A related situation arises when an object's temperature changes in response to its surroundings.  For instance, if we have a cup of coffee at an initial temperature of $186^\circ$ Fahrenheit and the cup is placed in a room where the surrounding temperature is $71^\circ$, our intuition and experience tell us that over time the coffee will cool and eventually tend to the $71^\circ$ temperature of the surroundings.  From an \link[experiment]{http://gvsu.edu/s/0SB} with an actual temperature probe, we have the data in the table below.
+
+
+$$
+\begin{array}{cc}
+\multicolumn{2}{c}{\text{Data for cooling coffee}}\\
+\multicolumn{2}{c}{\text{(measured in degrees Fahrenheit at the time t in minutes)}}\\
+t&F(t)\\
+\hline
+0&186\\
+1&179\\
+2&175\\
+3&171\\
+8&156\\
+13&144\\
+18&135\\
+23&127\\
+28&120\\
+33&116\\
+38&111\\
+43&107\\
+48&104
+\end{array}
+$$
+
+Here is a graph of these points.
+
+\begin{image}
+\includegraphics{modeling-exp-coffee.pdf}
+\end{image}
+
+
+In one sense, the data looks exponential: the points appear to lie on a curve that is always decreasing and decreasing at an increasing rate.  However, we know that the function can't have the form $f(t) = ab^t$ because such a function's range is the set of all positive real numbers, and it's impossible for the coffee's temperature to fall below room temperature ($71^\circ$).  It is natural to wonder if a function of the form $g(t) = ab^t + c$ will work.  Thus, in order to find a function that fits the data in a situation such as this, we begin by investigating and understanding the roles of $a$, $b$, and $c$ in the behavior of $g(t) = ab^t + c$.
+
+\begin{exploration}
+In \link[\emph{Desmos}]{desmos.com}, define $g(t) = ab^t+c$ and accept the prompt for sliders for both $a$ and $b$. Edit the sliders so that $a$ has values from $a = 5$ to $a = 50$, $b$ has values from $b = 0.7$ to $b = 1.3$, and $c$ has values from $c = -5$ to $b = 5$ (also with a step-size of 0.01). In addition, in \emph{Desmos} let $P = (0, g(0))$ and check the box to show the label. Finally, zoom out so that the window shows an interval of $t$-values from $-30 \le t \le 30$
+\begin{enumerate}[label=\alph*.]
+\item Set $b = 1.1$ and explore the effects of changing the values of $a$ and $c$.  Write several sentences to summarize your observations.
+\item Follow the directions for (a) again, this time with $b = 0.9$
+\item Set $a = 5$ and $c = 4$. Explore the effects of changing the value of $b$; be sure to include values of $b$ both less than and greater than 1. Write several sentences to summarize your observations.
+\item When $0 < b < 1$, what happens to the graph of $g$ when we consider positive $t$-values that get larger and larger?
+\end{enumerate}
+\end{exploration}
+
+
+%\typeout{************************************************}
+%\typeout{Long-term behavior of exponential functions}
+%\typeout{************************************************}
+
+\section{Long-term behavior of exponential functions}
+We have already established that any exponential function of the form $f(t) = ab^t$ where $a$ and $b$ are positive real numbers with $b \ne 1$ is always concave up and is either always increasing or always decreasing.  We next introduce precise language to describe the behavior of an exponential function's value as $t$ gets bigger and bigger.  To start, let's consider the two basic exponential functions $p(t) = 2^t$ and $q(t) = \left(\frac{1}{2}\right)^t$ and their respective values at $t = 10$, $t = 20$, and $t = 30$, as displayed below.
+%talks about concave up, which we haven't defined!
+
+$$
+%\begin{array}{cccccc}
+%$
+{\begin{array}{cc}
+t&p(t)\\
+\hline
+10&2^10=1026\\
+20&2^20=1048576\\
+30&2^30=1073741824
+\end{array}}%&&&&& 
+$$
+%$
+%\end{center}
+%\begin{center}
+%$
+$$
+{\begin{array}{cc}
+t&q(t)\\
+\hline
+10&\left(\frac{1}{2}\right)^10=\frac{1}{1026} \approx 0.00097656\\
+10&\left(\frac{1}{2}\right)^20=\frac{1}{1048576} \approx 0.00000095367\\
+10&\left(\frac{1}{2}\right)^30=\frac{1}{1073741824} \approx 0.00000000093192
+\end{array}}\\
+%\end{array}
+$$
+
+For the increasing function $p(t) = 2^t$, we see that the output of the function gets very large very quickly.  In addition, there is no upper bound to how large the function can be.  Indeed, we can make the value of $p(t)$ as large as we'd like by taking $t$ sufficiently big.  We thus say that as $t$ increases, $p(t)$ \dfn{increases without bound}.
+
+For the decreasing function $q(t) =\left(\frac{1}{2}\right)^t$, we see that the output $q(t)$ is always positive but getting closer and closer to $0$.  Indeed, becasue we can make $2^t$ as large as we like, it follows that we can make its reciprocal $\frac{1}{2^t} =\left(\frac{1}{2}\right)^t$ as small as we'd like.  We thus say that as $t$ increases, $q(t)$ \dfn{approaches $0$}. \index{approaching $0$}
+
+To represent these two common phenomena with exponential functions the value increasing without bound or the value approaching $0$, we will use shorthand notation.  First, it is natural to write ``$q(t) \to 0$'' as $t$ increases without bound.  Moreover, since we have the notion of the infinite to represent quantities without bound, we use the symbol for infinity \index{infinity} ($\infty$) and write ``$p(t) \to \infty$'' as $t$ increases without bound in order to indicate that $p(t)$ increases without bound.
+
+In the exploration above, we saw how the value of $b$ affects the steepness of the graph of $f(t) = ab^t$, as well as how all graphs with $b > 1$ have the similar increasing behavior, and all graphs with $0 < b < 1$ have similar decreasing behavior.  For instance, by taking $t$ sufficiently large, we can make $(1.01)^t$ as large as we want; it just takes much larger $t$ to make $(1.01)^t$ big in comparison to $2^t$.  In the same way, we can make $(0.99)^t$ as close to $0$ as we wish by taking $t$ sufficiently big, even though it takes longer for $(0.99)^t$ to get close to $0$ in comparison to $\left(\frac{1}{2}\right)^t$.  For an arbitrary choice of $b$, we can say the following.
+
+\begin{callout}
+\textbf{\Large Long-term behavior of exponential functions.}
+Let $f(t) = b^t$ with $b > 0$ and $b \ne 1$.
+\begin{itemize}
+\item If $0 < b < 1$, then $b^t \to 0$ as $t \to \infty$.  We read this notation as ``$b^t$ tends to $0$ as $t$ increases without bound.
+\item If $b > 1$, then $b^t \to \infty$ as $t \to \infty$.  We read this notation as ``$b^t$ increases without bound as $t$ increases without bound.
+\end{itemize}
+\end{callout}
+
+In addition, we make a key observation about the use of exponents.  For the function $q(t) = \left(\frac{1}{2}\right)^t$, there are three equivalent ways we may write the function:%
+\begin{equation*}
+\left( \frac{1}{2} \right)^t = \frac{1}{2^t} = 2^{-t}\text{.}
+\end{equation*}
+In our work with transformations involving horizontal scaling in \hyperlink{ez-circular-sinusoidal-horiz-reflection}{Exercise~2.4.5.3}, we saw that the graph of $y = h(-t)$ is the reflection of the graph of $y = h(t)$ across the $y$-axis.  Therefore, we can say that the graphs of $p(t) = 2^t$ and $q(t) = \left(\frac{1}{2}\right)^t = 2^{-t}$ are reflections of one another in the $y$-axis since $p(-t) = 2^{-t} = q(t)$.  We see this fact verified in the graph below.
+
+\begin{image}
+\includegraphics{modeling-exp-reflection.pdf}
+\end{image}
+
+Similar observations hold for the relationship between the graphs of $b^{t}$ and $\frac{1}{b^t} = b^{-t}$ for any positive $b \ne 1$.
+
+
+%\typeout{************************************************}
+%\typeout{Subsection 3.2.2 The role of $c$ in $g(t) = ab^t + c$}
+%\typeout{************************************************}
+
+\section{The role of $c$ in $g(t) = ab^t + c$}
+
+The function $g(t) = ab^t + c$ is a vertical translation of the function $f(t) = ab^t$.  We now have extensive understanding of the behavior of $f(t)$ and how that behavior depends on $a$ and $b$.  Since a vertical translation by $c$ does not change the shape of any graph, we expect that $g$ will exhibit very similar behavior to $f$.  Indeed, we can compare the two functions' graphs as shown in the graphs belowA and then make the following general observations.
+
+\begin{image}
+\includegraphics{modeling-vert-transl-0.pdf}
+\end{image}
+
+\begin{image}
+\includegraphics{modeling-vert-transl-c.pdf}
+\end{image}
+
+\begin{callout}
+\textbf{\Large Behavior of vertically shifted exponential functions.}
+Let $g(t) = ab^t + c$ with $a > 0$, $b > 0$ and $b \ne 1$, and $c$ any real number.
+\begin{itemize}
+\item If $0 < b < 1$, then $g(t) = ab^t + c \to c$ as $t \to \infty$.  The function $g$ is always decreasing, always concave up, and has $y$-intercept $(0,a+c)$.  The range of the function is all real numbers greater than $c$.
+\item If $b > 1$, then $g(t) = ab^t + c \to \infty$ as $t \to \infty$.  The function $g$ is always increasing, always concave up, and has $y$-intercept $(0,a+c)$.  The range of the function is all real numbers greater than $c$.
+\end{itemize}
+\end{callout}
+
+
+It is also possible to have $a < 0$.  In this situation, because $g(t) = ab^t$ is both a reflection of $f(t) = b^t$ across the $x$-axis and a vertical stretch by $|a|$, the function $g$ is always concave down.  If $0 < b < 1$ so that $f$ is always decreasing, then $g$ is always increasing; if instead $b > 1$ so $f$ is increasing, then $g$ is decreasing.  Moreover, instead of the range of the function $g$ having a lower bound as when $a > 0$, in this setting the range of $g$ has an upper bound.  These ideas are explored further below.
+
+It's an important skill to be able to look at an exponential function of the form $g(t) = ab^t + c$ and form an accurate mental picture of the graph's main features in light of the values of $a$, $b$, and $c$.
+
+\begin{exploration}
+For each of the following functions, \emph{without} using graphing technology, determine whether the function is
+\begin{enumerate}[label=\roman*.]
+\item always increasing or always decreasing;
+\item always concave up or always concave down; and
+\item increasing without bound, decreasing without bound, or increasing/decreasing toward a finite value.
+\end{enumerate}
+In addition, state the $y$-intercept and the range of the function.  For each function, write a sentence that explains your thinking and sketch a rough graph of how the function appears.
+\begin{enumerate}[label=\alph*.]
+\item $p(t) = 4372 (1.000235)^t + 92856$
+\item $q(t) = 27931 (0.97231)^t + 549786$
+\item $r(t) = -17398 (0.85234)^t$
+\item $s(t) = -17398 (0.85234)^t + 19411$%
+\item $u(t) = -7522 (1.03817)^t$%
+\item $v(t) = -7522 (1.03817)^t + 6731$%
+\end{enumerate}
+\end{exploration}
+
+
+%\typeout{************************************************}
+%\typeout{Subsection 3.2.3 Modeling temperature data}
+%\typeout{************************************************}
+
+\section{Modeling temperature data}
+Newton's Law of Cooling \index{Newton's Law of Cooling} states that the rate that an object warms or cools occurs in direct proportion to the difference between its own temperature and the temperature of its surroundings.  If we return to the coffee temperature data  and recall that the room temperature in that experiment was $71^\circ$, we can see how to use a transformed exponential function to model the data.  In the table below, we add a row of information to the table where we compute $F(t)-71$ to subtract the room temperature from each reading.
+
+$$
+\begin{array}{ccc}
+\multicolumn{3}{c}{\text{Data for cooling coffee}}\\
+\multicolumn{3}{c}{\text{(measured in degrees Fahrenheit at the time t in minutes)}}\\
+t&F(t)&f(t)=F(t)-71\\
+\hline
+0&186&115\\
+1&179&108\\
+2&175&104\\
+3&171&100\\
+8&156&85\\
+13&144&73\\
+18&135&64\\
+23&127&56\\
+28&120&49\\
+33&116&45\\
+38&111&40\\
+43&107&36\\
+48&104&33
+\end{array}
+$$
+
+The data in the last row of the table appears exponential, and if we test the data by computing the quotients of output values that correspond to equally-spaced input, we see a nearly constant ratio.  In particular,%
+\begin{equation*}
+\frac{73}{85} \approx 0.86, \ \frac{64}{73} \approx 0.88, \ \frac{56}{64} \approx 0.88, \ \frac{49}{56} \approx 0.88, \ \frac{45}{49} \approx 0.92, \text{and} \frac{40}{45} \approx 0.89 \text{.}
+\end{equation*}
+Of course there is some measurement error in the data (plus it is only recorded to accuracy of whole degrees), so these computations provide convincing evidence that the underlying function is exponential.  In addition, we expect that if the data continued in the last of the table, the values would approach $0$ because $F(t)$ will approach $71$.
+
+\begin{image}
+\includegraphics{modeling-coffee-shifted.pdf}
+\end{image}
+
+\begin{image}
+\includegraphics{modeling-coffee-original.pdf}
+\end{image}
+
+If we choose two of the data points, say $(18,64)$ and $(23,56)$, and assume that $f(t) = ab^t$, we can determine the values of $a$ and $b$.  Doing so, it turns out that $a \approx 103.503$ and $b \approx 0.974$, so $f(t) = 103.503 ( 0.974)^t$.  Since $f(t) = F(t) - 71$, we see that $F(t) = f(t) + 71$, so $F(t) = 103.503 (0.974)^t + 71$.  Plotting $f$ against the shifted data and $F$ along with the original data in the graphs above, we see that the curves go exactly through the points where $t = 18$ and $t = 23$ as expected, but also that the function provides a reasonable model for the observed behavior at any time $t$.  If our data was even more accurate, we would expect that the curve's fit would be even better.
+
+Our preceding work with the coffee data can be done similarly with data for any cooling or warming object whose temperature initially differs from its surroundings.  Indeed, it is possible to show that Newton's Law of Cooling implies that the object's temperature is given by a function of the form $F(t) = ab^t + c$.
+
+\begin{exploration}
+A can of soda (at room temperature) is placed in a refrigerator at time $t = 0$ (in minutes) and its temperature, $F(t)$, in degrees Fahrenheit, is computed at regular intervals. Based on the data, a model is formulated for the object's temperature, given by
+\begin{equation*}
+F(t) = 42 + 30(0.95)^{t}\text{.}
+\end{equation*}
+\begin{enumerate}[label=\alph*.]
+\item Consider the simpler (parent) function $p(t) = (0.95)^t$. How do you expect the graph of this function to appear? How will it behave as time increases? Without using graphing technology, sketch a rough graph of $p$ and write a sentence of explanation.
+\item For the slightly more complicated function $r(t) = 30 (0.95)^{t}$, how do you expect this function to look in comparison to $p$?  What is the long-range behavior of this function as $t$ increases? Without using graphing technology, sketch a rough graph of $r$ and write a sentence of explanation.
+\item Finally, how do you expect the graph of $F(t) = 42 + 30(0.95)^{t}$ to appear? Why?  First sketch a rough graph without graphing technology, and then use technology to check your thinking and report an accurate, labeled graph on the axes provided.
+\begin{image}
+\includegraphics{modeling-F-t-blank-axes.pdf}
+\end{image}
+\item What is the temperature of the refrigerator? What is the room temperature of the surroundings outside the refrigerator? Why?
+\item Determine the average rate of change of $F$ on the intervals $[10,20]$, $[20,30]$, and $[30,40]$. Write at least two careful sentences that explain the meaning of the values you found, including units, and discuss any overall trend in how the average rate of change is changing.
+\end{enumerate}
+\end{exploration}
+
+
+\begin{exploration}
+A potato initially at room temperature ($68^\circ$) is placed in an oven (at $350^\circ$) at time $t = 0$. It is known that the potato's temperature at time $t$ is given by the function $F(t) = a - b(0.98)^t$ for some positive constants $a$ and $b$, where $F$ is measured in degrees Fahrenheit and $t$ is time in minutes.
+
+\begin{enumerate}[label=\alph*.]
+\item What is the numerical value of $F(0)$? What does this tell you about the value of $a - b$?
+\item Based on the context of the problem, what should be the long-range behavior of the function $F(t)$? Use this fact along with the behavior of $(0.98)^t$ to determine the value of $a$.  Write a sentence to explain your thinking.
+\item What is the value of $b$?  Why?%
+\item Check your work above by plotting the function $F$ using graphing technology in an appropriate window. Record your results on the axes provided, labeling the scale on the axes. Then, use the graph to estimate the time at which the potato's temperature reaches $325$ degrees.
+\begin{image}
+\includegraphics{modeling-F-t-blank-axes.pdf}
+\end{image}
+\item How can we view the function $F(t) = a - b(0.98)^t$ as a transformation of the parent function $f(t) = (0.98)^t$?  Explain.
+\end{enumerate}
+\end{exploration}
+
+\begin{summary}\begin{itemize}
+\item For an exponential function of the form $f(t) = b^t$, the function either approaches zero or grows without bound as the input gets larger and larger.  In particular, if $0 < b < 1$, then $f(t) = b^t \to 0$ as $t \to \infty$, while if $b > 1$, then $f(t) = b^t \to \infty$ as $t \to \infty$.  Scaling $f$ by a positive value $a$ (that is, the transformed function $ab^t$) does not affect the long-range behavior:  whether the function tends to $0$ or increases without bound depends solely on whether $b$ is less than or greater than $1$.%
+\item{}\hypertarget{p-1350}{}%
+The function $f(t) = b^t$ passes through $(0,1)$, is always concave up, is either always increasing or always decreasing, and its range is the set of all positive real numbers.  Among these properties, a vertical stretch by a positive value $a$ only affects the $y$-intercept, which is instead $(0,a)$.  If we include a vertical shift and write $g(t) = ab^t + c$, the biggest changes is that the range of $g$ is the set of all real numbers greater than $c$.  In addition, the $y$-intercept of $g$ is $(0,a+c)$.
+\item In the situation where $a < 0$, several other changes are induced.  Here, because $g(t) = ab^t$ is both a reflection of $f(t) = b^t$ across the $x$-axis and a vertical stretch by $|a|$, the function $g$ is now always concave down.  If $0 < b < 1$ so that $f$ is always decreasing, then $g$ (the reflected function) is now always increasing; if instead $b > 1$ so $f$ is increasing, then $g$ is decreasing.  Finally, if $a < 0$, then the range of $g(t) = ab^t + c$ is the set of all real numbers $c$.
+\item An exponential function can be thought of as a function that changes at a rate proportional to itself, like how money grows with compound interest or the amount of a radioactive quantity decays.  Newton's Law of Cooling says that the rate of change of an object's temperature is proportional to the \emph{difference} between its own temperature and the temperature of its surroundings.  This leads to the function that measures the difference between the object's temperature and room temperature being exponential, and hence the object's temperature itself is a vertically-shifted exponential function of the form $F(t) = ab^t + c$.
+\end{itemize}\end{summary}
+
+\end{document}

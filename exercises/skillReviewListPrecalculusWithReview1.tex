@@ -1,0 +1,25 @@
+\documentclass[ handout]{xourse}
+%newpage,
+\input{../preamble.tex}
+\makeatletter
+\newcommand{\exerciseCollection}[2]{
+\def\input@path{{#1}}
+\activity{#1#2}}
+\makeatother
+
+\title{Complete exercise list for Precalculus with Review 1}
+
+\begin{document}
+
+%Variables and CoVariation
+\exerciseCollection{../SkillReview1/exercises/}{exerciseList}
+\exerciseCollection{../SkillReview2/exercises/}{exerciseList}
+\exerciseCollection{../SkillReview3/exercises/}{exerciseList}
+\exerciseCollection{../SkillReview4/exercises/}{exerciseList}
+\exerciseCollection{../SkillReview5/exercises/}{exerciseList}
+
+%\exerciseCollection{../8-1SystemsOfEquations/exercises/}{exerciseList}
+
+
+
+\end{document}

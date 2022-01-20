@@ -1,0 +1,60 @@
+\documentclass{ximera}
+\input{../../preamble.tex}
+
+\author{Kenneth Berglund}
+\acknowledgement{}
+
+\begin{document}
+\begin{exercise}
+Look at the following graphs of the functions $f$ (on the left) and $g$ (on the right). 
+\begin{image}
+  \begin{tikzpicture}
+    \begin{axis}
+        \addplot{(-2)*x - 1} node{$y=(-2)*x - 1$};
+    \end{axis}
+\end{tikzpicture}
+\hspace{3mm}
+\begin{tikzpicture}
+    \begin{axis}
+        \addplot{3*x} node{$y=3*x$};
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+Which of the following is the graph of $f \cdot g$?
+\begin{image}
+\begin{tikzpicture}
+    \begin{axis}[title=Graph A]
+        \addplot[smooth]{(-6)*x^2 - 3*x} node{$y=(-6)*x^2 - 3*x$};
+    \end{axis}
+\end{tikzpicture}
+\hspace{3mm}
+\begin{tikzpicture}
+    \begin{axis}[title=Graph B]
+        \addplot[smooth]{6*x^2 - 3*x} node{$y = 6*x ^2- 3*x$};
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+
+\begin{image}
+\begin{tikzpicture}
+    \begin{axis}[title=Graph C]
+        \addplot[smooth]{(-6)*x^2 + 3*x} node{$y=(-6)*x^2 + 3*x$};
+    \end{axis}
+\end{tikzpicture}
+\hspace{3mm}
+\begin{tikzpicture}
+    \begin{axis}[title=Graph D]
+        \addplot[smooth]{6*x^2 + 3*x} node{$y = 6*x ^2 + 3*x$};
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+
+\begin{multipleChoice}
+\choice[correct]{Graph A}
+\choice{Graph B}
+\choice{Graph C}
+\choice{Graph D}
+\end{multipleChoice}
+
+\end{exercise}
+\end{document}

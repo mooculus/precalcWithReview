@@ -1,0 +1,54 @@
+\documentclass[ handout]{xourse}
+%newpage,
+\input{../preamble.tex}
+\makeatletter
+\newcommand{\exerciseCollection}[2]{
+\def\input@path{{#1}}
+\activity{#1#2}}
+\makeatother
+
+\title{Complete exercise list for Precalculus with Review 1}
+
+\begin{document}
+
+%Variables and CoVariation
+\exerciseCollection{../1-1QuantitativeReasoning/exercises/}{exerciseList}
+\exerciseCollection{../1-2RelationsAndGraphs/exercises/}{exerciseList}
+\exerciseCollection{../1-3ChangingInTandem/exercises/}{exerciseList}
+
+%Comparing Lines and Exponentials
+\exerciseCollection{../2-1LinearEquations/exercises/}{exerciseList}
+\exerciseCollection{../2-2LinearModeling/exercises/}{exerciseList}
+\exerciseCollection{../2-3ExponentialModeling/exercises/}{exerciseList}
+%
+%Functions
+\exerciseCollection{../3-1WhatIsAFunction/exercises/}{exerciseList}
+\exerciseCollection{../3-2FunctionProperties/exercises/}{exerciseList}
+\exerciseCollection{../3-3AverageRatesOfChange/exercises/}{exerciseList}
+
+
+%Building New Functions from Famous Functions
+\exerciseCollection{../4-1BuildingNewFunctions/exercises/}{exerciseList}
+\exerciseCollection{../4-2Polynomials/exercises/}{exerciseList}
+\exerciseCollection{../4-3RationalFunctions/exercises/}{exerciseList}
+
+%
+\exerciseCollection{../5-2ExponentialFunctions/exercises/}{exerciseList}
+\exerciseCollection{../5-3FamousInverseFunctions/exercises/}{exerciseList}
+
+%Domain and Range
+\exerciseCollection{../6-1Domain/exercises/}{exerciseList}
+\exerciseCollection{../6-2Range/exercises/}{exerciseList}
+\exerciseCollection{../6-3CompositionOfFunctions/exercises/}{exerciseList}
+\exerciseCollection{../6-4FunctionTransformations/exercises/}{exerciseList}
+
+%Zeros
+\exerciseCollection{../7-1ZerosOfFunctions/exercises/}{exerciseList}
+%\exerciseCollection{../7-2ZerosOfPolynomials/exercises/}{exerciseList}
+\exerciseCollection{../7-2ZerosOfFamousFunctions/exercises/}{exerciseList}
+
+%\exerciseCollection{../8-1SystemsOfEquations/exercises/}{exerciseList}
+
+
+
+\end{document}

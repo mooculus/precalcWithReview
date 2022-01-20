@@ -1,0 +1,219 @@
+\documentclass{ximera}
+
+\input{../preamble}
+\author{Elizabeth Campolongo}
+\license{Creative Commons Attribution-ShareAlike 4.0 International License}
+\acknowledgement{https://activecalculus.org/prelude/sec-trig-inverse.htmll}
+
+\title{Applications of Inverse Trigonometry}
+
+\begin{document}
+\begin{abstract}
+  
+\end{abstract}
+\maketitle
+
+
+%\typeout{************************************************}
+%\typeout{Motivating Questions}
+%\typeout{************************************************}
+
+\begin{motivatingQuestions}\begin{itemize}
+%Often start a section. 
+\item How can we use inverse trigonometric functions to determine missing angles in right triangles?
+\item What other situations may require us to use inverse trignometric functions?
+\end{itemize}\end{motivatingQuestions}
+
+
+%\typeout{************************************************}
+%\typeout{Introduction}
+%\typeout{************************************************}
+\section{Introduction}
+When we learned about trig functions in Section 10, we observed that in any right triangle, if we know the measure of one additional angle and the length of one additional side, we can determine all of the other parts of the triangle.  With the inverse trigonometric functions that we developed in the last two sections, we are now also able to determine the missing angles in any right triangle where we know the lengths of two sides.%
+\par
+While the original trigonometric functions take a particular angle as input and provide an output that can be viewed as the ratio of two sides of a right triangle, the inverse trigonometric functions take an input that can be viewed as a ratio of two sides of a right triangle and produce the corresponding angle as output. Indeed, it's imperative to remember that statements such as%
+\begin{equation*}
+\arccos(x) = \theta \text{ and } \cos(\theta) = x
+\end{equation*}
+say the exact same thing from two different perspectives, and that we read ``$\arccos(x)$'' as ``the angle whose cosine is $x$''.%
+\begin{exploration}
+%
+Consider a right triangle that has one leg of length $3$ and another leg of length $\sqrt{3}$.  Let $\theta$ be the angle that lies opposite the shorter leg.  Sketch a labeled picture of the triangle.%
+%
+\begin{enumerate}
+\item What is the exact length of the triangle's hypotenuse?
+%
+\item What is the exact value of $\sin(\theta)$?
+%
+\item Rewrite your equation from (b) using the arcsine function in the form $\arcsin(\Box) = \Delta$, where $\Box$ and $\Delta$ are numerical values.
+%
+\item What special angle from the unit circle is $\theta$?%
+\end{enumerate}
+\end{exploration}
+
+
+\section{Evaluating Inverse Trigonometric Functions}
+%
+Like the trigonometric functions themselves, there are a handful of important values of the inverse trigonometric functions that we can determine exactly without the aid of a computer. For instance, we know from the unit circle that $\arcsin(-\frac{\sqrt{3}}{2}) = -\frac{\pi}{3}$, $\arccos(-\frac{\sqrt{3}}{2}) = \frac{5\pi}{6}$, and $\arctan(-\frac{1}{\sqrt{3}}) = -\frac{\pi}{6}$.  In these evaluations, we have to be careful to remember that the range of the arccosine function is $[0,\pi]$, while the range of the arcsine function is $[-\frac{\pi}{2},\frac{\pi}{2}]$ and the range of the arctangent function is $(-\frac{\pi}{2},\frac{\pi}{2})$, in order to ensure that we choose the appropriate angle that results from the inverse trigonometric function. This is why our emphasis is now turning to the {\it graphs} of these functions. 
+%
+\par
+\hypertarget{p-1956}{}%
+In addition, there are many other values at which we may wish to know the angle that results from an inverse trigonometric function. To determine such values, one can use a computational device (such as \emph{Desmos}) in order to evaluate the function; however, in this class we leave it in the form $\arccos(a)$, as this is the exact value.%
+\begin{example}
+%
+Consider the right triangle pictured below and assume we know that the vertical leg has length $1$ and the hypotenuse has length $3$.  Let $\alpha$ be the angle opposite the known leg.  Determine exact values for all of the remaining parts of the triangle.%
+%
+\begin{image}
+\includegraphics[width=1\linewidth]{finding-angles-ex-1}
+\end{image}
+
+\begin{explanation}
+Because we know the hypotenuse and the side opposite $\alpha$, we observe that $\sin(\alpha) = \frac{1}{3}$.  Rewriting this statement using inverse function notation, we have equivalently that $\alpha = \arcsin\!\bigg(\frac{1}{3}\bigg)$, which is the exact value of $\alpha$.  Since this is not one of the known special angles on the unit circle, we leave it in this form.%
+\par
+%
+We can now find the remaining leg's length and the remaining angle's measure.  If we let $x$ represent the length of the horizontal leg, by the Pythagorean Theorem we know that
+%
+\begin{equation*}
+x^2 + 1^2 = 3^2\text{,}
+\end{equation*}
+and thus $x^2 = 8$ so $x = \sqrt{8}$.  Calling the remaining angle $\beta$, since $\alpha + \beta = \frac{\pi}{2}$, it follows that
+%
+\begin{equation*}
+\beta = \frac{\pi}{2} - \arcsin\!\bigg(\frac{1}{3}\bigg) \text{.}
+\end{equation*}
+
+\end{explanation}
+\end{example}
+
+\begin{example}
+
+Let's consider the composite function $h(x) = \cos(\arcsin(x))$.  \\
+Does it makes sense to consider this function? Let's think $\dots$ \\
+This function makes sense to consider since the arcsine function has range $[-1,1]$, on which we may evaluate the cosine function. In the questions that follow, we investigate how to express $h$ without using trigonometric functions at all.%
+\par
+%
+\begin{enumerate}
+
+\item What is the domain of $h$?  The range of $h$?
+%
+\item Since the arcsine function produces an angle, let's say that $\theta = \arcsin(x)$,  so that $\theta$ is the angle whose sine is $x$.  By definition, we can picture $\theta$ as an angle in a right triangle with hypotenuse $1$ and a vertical leg of length $x$, as shown in the image on the left below.  Use the Pythagorean Theorem to determine the length of the horizontal leg as a function of $x$.
+%
+\begin{image}
+\includegraphics[width=1\linewidth]{inv-trig-cosarcsin.pdf}
+\includegraphics[width=1\linewidth]{inv-trig-cosarctan.pdf}
+\end{image}%
+
+
+The right triangle on the left corresponds to the angle $\theta = \arcsin(x)$.
+%
+The right triangle on the right corresponds to the angle $\alpha = \arctan(x)$.
+%
+\item What is the value of $\cos(\theta)$ as a function of $x$?  What have we shown about $h(x) = \cos(\arcsin(x))$?
+%
+\item How about the function $p(x) = \cos(\arctan(x))$?  How can you reason similarly to write $p$ in a way that doesn't involve any trigonometric functions at all?  (Hint:  let $\alpha = \arctan(x)$ and consider the right triangle on the right above.)%
+\end{enumerate}
+
+\end{example}
+
+\section{Using Inverse Trig in Applied Contexts}
+%
+Now that we have developed the (restricted) sine, cosine, and tangent functions and their respective inverses, in any setting in which we have a right triangle together with one side length and any one additional piece of information (another side length or a non-right angle measurement), we can determine all of the remaining pieces of the triangle. In the example that follows and the homework, we explore these possibilities in a variety of different applied contexts.
+%
+\begin{example}%
+A roof is being built with a ``7-12 pitch.'' This means that the roof rises $7$ inches vertically for every $12$ inches of horizontal span; in other words, the slope of the roof is $\frac{7}{12}$. 
+%
+\begin{enumerate}
+\item What is the exact measure of the angle the roof makes with the horizontal? \\
+\begin{explanation}
+
+\end{explanation}
+\item What is the exact measure of the angle at the peak of the roof (made by the front and back portions of the roof that meet to form the ridge)?\\
+%
+\begin{explanation}
+
+\end{explanation}
+\end{enumerate}
+\end{example}
+
+\begin{exploration}
+On a baseball diamond (which is a square with $90$-foot sides), the third baseman fields the ball right on the line from third base to home plate and $10$ feet away from third base (towards home plate).  
+Give exact solutions without using a computational device.%
+%
+\begin{enumerate}
+\item When he throws the ball to first base, what angle does the line the ball travels make with the first base line?
+%
+\item What angle does it make with the third base line? Draw a well-labeled diagram.
+%
+\item What angles arise if he throws the ball to second base instead?
+%
+\end{enumerate}
+\end{exploration}
+
+\begin{exploration}
+Give exact solutions without using a computational device.
+%
+A camera is tracking the launch of a SpaceX rocket. The camera is located $4000$' from the rocket's launching pad, and the camera elevates in order to keep the rocket in focus. 
+\begin{enumerate}
+\item At what angle is the camera tilted when the rocket is $3000$' off the ground?
+%
+\item[] Now, rather than considering the rocket at a fixed height of $3000$ ft, let its height vary and call the rocket's height $h$. 
+
+\item Determine the camera's angle, $\theta$ as a function of $h$, and compute the average rate of change of $\theta$ on the intervals $[3000,3500]$, $[5000,5500]$, and $[7000,7500]$. 
+%
+\item What do you observe about how the camera angle is changing?
+%
+\end{enumerate}
+\end{exploration}
+
+
+%\typeout{************************************************}
+%\typeout{section}
+%\typeout{************************************************}
+
+
+
+\section{Further Exploration}
+
+Inverse trig expressions can be rewritten as algebraic expressions of $x$...
+
+\begin{example}
+Rewrite the following values as algebraic expressions of $x$ and give the domain on which these equivalences are valid.
+\begin{enumerate}
+\item $\cos(\arctan(x)) = \frac{1}{\sqrt{1+x^2}}$ for all $x$ \\
+%
+\begin{explanation}
+
+\end{explanation}
+%
+\item $\sin(\arccos(2x))= \sqrt{1-4x^2}$ given $x \in \Big[-\!\frac{1}{2}, \frac{1}{2}\Big]$\\
+%
+\begin{explanation}
+
+\end{explanation}
+%
+\end{enumerate}
+\end{example}
+
+We can now use trigonometry to find angles of right triangles if we know the side lengths and side lengths of right triangles if we know the angles.  You might be wondering, ``What about triangles that are not right triangles? Can we use trig to learn anything about those?''  It turns out that the Law of Sines and the Law of Cosines gives use a way to analyze other triangles beyond just right triangles using trig functions.  For more information about this topic, see \link[Laws of Sines and Cosines by Katherine Yoshiwara]{https://yoshiwarabooks.org/trig/chap3.html}.
+
+
+\begin{summary}
+Anytime we know two side lengths in a right triangle, we can use one of the inverse trigonometric functions to determine the measure of one of the non-right angles.  For instance, if we know the values of $\text{opp}$ and $\text{adj}$ in the triangle pictured below, then since%
+\begin{equation*}
+\tan(\theta) = \frac{\text{opp}}{\text{adj}}\text{,}
+\end{equation*}
+it follows that $\theta = \arctan\!\bigg(\frac{\text{opp}}{\text{adj}}\bigg)$.%
+%
+\begin{image}
+\includegraphics[width=.5\linewidth]{right-triangle-SOH-CAH-TOA.pdf}
+\end{image}
+%
+\par
+%
+If we instead know the hypotenuse and one of the two legs, we can use either the arcsine or arccosine function accordingly.%
+%
+%For situations other than angles or ratios that involve the $16$ special points on the unit circle, technology is required in order to evaluate inverse trignometric functions.  For instance, from the unit circle we know that $\arccos(\frac{1}{2}) = \frac{2\pi}{3}$ (exactly), but if we want to know $\arccos(\frac{1}{3})$, we have to estimate this value using a computational device such as \emph{Desmos}.  We note that ``$\arccos(\frac{1}{3})$'' is the exact value of the angle whose cosine is $1/3$.%
+
+\end{summary}
+
+\end{document}

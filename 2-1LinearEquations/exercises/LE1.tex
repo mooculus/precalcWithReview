@@ -1,0 +1,74 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\author{Bobby Ramsey}
+\license{Creative Commons Attribution-ShareAlike 4.0 International License}
+
+%\outcome{Calculating the rate of change.}
+%\outcome{Discuss the meaning of antiderivatives of a position function.}
+
+\begin{document}
+\begin{exercise}
+The graph below shows the temperature $T$, in degrees Celsius, of an object at time $t$, in minutes. 
+
+\begin{image}
+\begin{tikzpicture}
+    \begin{axis}
+    		[
+    		xlabel={time, in minutes},
+    		ylabel={temperature, in degrees C},
+    		width=0.75\linewidth,
+                xmin=-0.25,xmax=6.25,
+                ymin=0,ymax=100,
+                minor ytick=,
+                minor xtick=,
+		xtick={0,1,...,6},
+                ytick={0,10,...,100},
+                clip=false,
+                ]
+	
+	\addplot[color=blue, ultra thick, smooth, samples=200, domain=0:6.25]{21 + 64*(0.5)^x};
+						
+        \addplot[soliddot] coordinates {(0,85)} node[color = blue, above right] {$(0,85)$};
+        \addplot[soliddot] coordinates {(3,29)} node[color = blue, above right] {$(3,29)$};
+        \addplot[soliddot] coordinates {(6,22)} node[color = blue, above right] {$(6,22)$};
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+\begin{enumerate}
+\item Based on the graph above, is this object heating up or cooling down?
+	\begin{multipleChoice}
+		\choice{Heating Up}
+		\choice[correct]{Cooling Down}
+	\end{multipleChoice}
+
+\item What is the rate of change in this data between the point corresponding to $t=0$ minutes, and the point corresponding to $t=3$ minutes?
+$\answer{-56/3}$ degrees Celsius/minute.
+	\begin{hint}
+		Recall that the rate of change between two data points is given by $\dfrac{\Delta T}{\Delta t}$.
+	\end{hint}
+
+\item What is the rate of change in this data between the point corresponding to $t=3$ minutes, and the point corresponding to $t=6$ minutes?
+	$\answer{-7/3}$ degrees Celsius/minute.
+
+\item Based on the your answers above, does this data always have the same rate of change?
+	\begin{multipleChoice}
+		\choice{Yes}
+		\choice[correct]{No}
+	\end{multipleChoice}
+\end{enumerate}
+
+%\begin{multipleChoice}
+%\choice{constant function.}
+%\choice{positive function. }
+%\choice{negative function.}
+%\choice{position function.}
+%\choice[correct]{velocity function.}
+%\end{multipleChoice}
+
+
+\end{exercise}
+\end{document}
