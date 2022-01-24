@@ -13,98 +13,15 @@
 \end{abstract}
 \maketitle
 
-%\typeout{************************************************}
-%\typeout{Subsection Pythagorean Identities and Conjugates}
-%\typeout{************************************************}
-\section{Pythagorean Identities and Conjugates}
-From the previous section, we have found some identities. We will now summarize what we have already found and begin to introduce new identities. These will help us to breakdown and simplify trigonometric equations that will hopefully make our lives easier.
-\begin{callout}
- \textbf{The Pythagorean Identities:} \index{Pythagorean Identities}
 
-\begin{enumerate}
 
-\item $\cos^{2}(\theta) + \sin^{2}(\theta) = 1$.
-
-\textbf{Common Alternate Forms:}
-
-\begin{itemize}
-
-\item  $1 - \sin^{2}(\theta) = \cos^{2}(\theta)$
-
-\item  $1 - \cos^{2}(\theta) = \sin^{2}(\theta)$
-
-\end{itemize}
-
-\item $1 + \tan^{2}(\theta) = \sec^{2}(\theta)$, provided $\cos(\theta) \neq 0$.
-
-\textbf{Common Alternate Forms:}
-
-\begin{itemize}
-
-\item  $\sec^{2}(\theta) - \tan^{2}(\theta) = 1$
-
-\item  $\sec^{2}(\theta) - 1 = \tan^{2}(\theta)$
-
-\end{itemize}
-
-\item $1 + \cot^{2}(\theta) = \csc^{2}(\theta)$, provided $\sin(\theta) \neq 0$.
-
-\textbf{Common Alternate Forms:}
-
-\begin{itemize}
-
-\item  $\csc^{2}(\theta) - \cot^{2}(\theta) = 1$
-
-\item  $\csc^{2}(\theta) - 1 = \cot^{2}(\theta)$
-
-\end{itemize}
-
-\end{enumerate}
-\end{callout}
-
-\begin{callout}
-\textbf{Reciprocal and Quotient Identities:} \index{Reciprocal Identities} \index{Quotient Identities} 
-
-\begin{itemize}
-
-\item $\sec(\theta) = \dfrac{1}{\cos(\theta)}$, provided $\cos(\theta) \neq 0$;\\  if $\cos(\theta) = 0$, $\sec(\theta)$ is undefined.
-
-\item $\csc(\theta) = \dfrac{1}{\sin(\theta)}$, provided $\sin(\theta) \neq 0$;\\  if $\sin(\theta) = 0$, $\csc(\theta)$ is undefined.
-
-\item $\tan(\theta) = \dfrac{\sin(\theta)}{\cos(\theta)}$, provided $\cos(\theta) \neq 0$;\\  if $\cos(\theta) = 0$, $\tan(\theta)$ is undefined.
-
-\item $\cot(\theta) = \dfrac{\cos(\theta)}{\sin(\theta)}$, provided $\sin(\theta) \neq 0$;\\  if $\sin(\theta) = 0$, $\cot(\theta)$ is undefined.
-
-\end{itemize}
-\end{callout}
-
-\begin{callout}
-\centerline{\textbf{Pythagorean Conjugates}}  \index{Pythagorean Conjugates}
-
-\begin{itemize}
-
-\item $1 - \cos(\theta)$ and  $1+\cos(\theta)$:\\  $(1-\cos(\theta))(1+\cos(\theta)) = 1 - \cos^{2}(\theta) = \sin^{2}(\theta)$
-
-\item  $1-\sin(\theta)$ and $1 + \sin(\theta)$: \\ $(1-\sin(\theta))(1+\sin(\theta)) = 1 - \sin^{2}(\theta) = \cos^{2}(\theta)$
-
-\item  $\sec(\theta)-1$ and $\sec(\theta)+1$: \\ $(\sec(\theta)-1)(\sec(\theta)+1) = \sec^{2}(\theta) - 1 =  \tan^{2}(\theta)$
-
-\item  $\sec(\theta)-\tan(\theta)$ and $\sec(\theta)+\tan(\theta)$: \\ $(\sec(\theta)-\tan(\theta))(\sec(\theta)+\tan(\theta)) = \sec^{2}(\theta) - \tan^{2}(\theta) = 1$
-
-\item  $\csc(\theta)-1$ and $\csc(\theta)+1$:\\  $(\csc(\theta)-1)(\csc(\theta)+1) = \csc^{2}(\theta) - 1 =  \cot^{2}(\theta)$
-
-\item  $\csc(\theta)-\cot(\theta)$ and $\csc(\theta)+\cot(\theta)$:\\  $(\csc(\theta)-\cot(\theta))(\csc(\theta)+\cot(\theta)) = \csc^{2}(\theta) - \cot^{2}(\theta) = 1$
-
-\smallskip
-
-\end{itemize}
-\end{callout}
 
 %\typeout{************************************************}
 %\typeout{Subsection Verifying Identities}
 %\typeout{************************************************}
 
 \section{Verifying Identities}
+In this section, we will look at strategies to verify identities.
 \begin{remark}
 \centerline{\textbf{Strategies for Verifying Identities}} 
 
@@ -127,57 +44,81 @@ Conjugates in order to take advantage of the Pythagorean Identities.
 \end{itemize}
 \end{remark}
 \begin{example}
+Verify the following:\\
+\[
+\tan{\theta}\cos{\theta}=\sin{\theta}
+\]
+\\
+\begin{explanation}
+Let's start with the more complicated side. We know that we want to end up with $\sin{\theta}$ in the end, so using the Quotient identity to replace $\tan{\theta}$ with $\frac{\sin{\theta}}{\cos{\theta}}$ is a reasonable place to start.
+\[
+\tan{\theta}\cos{\theta}=(\frac{\sin{\theta}}{\cos{\theta}})\cos{\theta}
+\]
+We can now cancel our $\cos{\theta}$ terms.
+\[
+\tan{\theta}\cos{\theta}=(\frac{\sin{\theta}}{\cancel{\cos{\theta}}})\cancel{\cos{\theta}}
+\]
+This, thankfully, leaves us with our original equation, so we have verified this identity.
+\[
+\tan{\theta}\cos{\theta}=\sin{\theta}
+\]
+\end{explanation}
 \end{example}
 
-%\typeout{************************************************}
-%\typeout{Subsection More Identities}
-%\typeout{************************************************}
-
-\section{More Identities}
-In the previous sections, we saw the utility of the Pythagorean Identities.  Not only did these identities help us compute the values of the circular functions for angles, they were also useful in simplifying expressions involving the circular functions.  In this section, we introduce several collections of identities which have uses in this course and beyond.  Our first set of identities is the `Even / Odd' identities.
-
-\begin{callout}
- \textbf{Even / Odd Identities:}  For all applicable angles $\theta$, 
-\begin{itemize}
-
-\item  $\cos(-\theta) = \cos(\theta)$
-
-\item  $\sec(-\theta) = \sec(\theta)$
-
-\item  $\sin(-\theta) = -\sin(\theta)$
-
-\item  $\csc(-\theta) = -\csc(\theta)$
-
-\item  $\tan(-\theta) = -\tan(\theta)$
-
-\item  $\cot(-\theta) = -\cot(\theta)$
-
-\end{itemize}
-\end{callout}
-
-
-\begin{callout}
-\textbf{Sum and Difference Identities for Cosine:} For all angles $\alpha$ and $\beta$, 
-\begin{itemize}
-
-\item  $\cos(\alpha + \beta) = \cos(\alpha) \cos(\beta) - \sin(\alpha) \sin(\beta)$
-
-\item $\cos(\alpha - \beta) = \cos(\alpha) \cos(\beta) + \sin(\alpha) \sin(\beta)$
-
-\end{itemize}
-\end{callout}
-
-
-\begin{callout}
- \textbf{Sum and Difference Identities for Sine:} For all angles $\alpha$ and $\beta$, 
-\begin{itemize}
-
-\item  $\sin(\alpha + \beta) = \sin(\alpha) \cos(\beta) + \cos(\alpha) \sin(\beta)$
-
-\item $\sin(\alpha - \beta) = \sin(\alpha) \cos(\beta) - \cos(\alpha) \sin(\beta)$
-
-\end{itemize}
-\end{callout}
+\begin{example}
+Verify the following:\\
+\[
+\frac{\sec{x}-cos{x}}{\sec{x}}=sin^2{x}
+\]
+\\
+\begin{explanation}
+Let's start with the more complicated side. Since $\sec{x}$ is the reciprocal of $\cos{x}$, rewriting this side completely in terms of $\cos{x}$ could help us verify this identity.
+\[
+\frac{\sec{x}-cos{x}}{\sec{x}} = \frac{\frac{1}{\cos{x}}-\cos{x}}{\frac{1}{\cos{x}}}
+\]
+We can now simplify the fractional division by inverting and multiplying.
+\[
+\frac{\frac{1}{\cos{x}}-\cos{x}}{\frac{1}{\cos{x}}} = (\frac{1}{\cos{x}}-\cos{x}) \cdot \cos{x}
+\]
+We continue by distributing our $\cos{x}$ term and then simplify.
+\[
+(\frac{1}{\cos{x}}-\cos{x}) \cdot \cos{x} = \frac{\cos{x}}{\cos{x}}-\cos^2{x} = 1 - \cos^2{x}
+\]
+Using an alternate form of the Pythagorean Identity, we can make the following substitution.
+\[
+1 - \cos^2{x} = sin^2{x}
+\]
+We have now verified our original equation.
+\[
+\frac{\sec{x}-cos{x}}{\sec{x}}=sin^2{x}
+\]
+\end{explanation}
+\end{example}
+\begin{example}
+Verify the following:\\
+\[
+\tan{\theta}+ \cot{\theta}=\csc{\theta}\sec{\theta}
+\]
+\\
+\begin{explanation}
+Let's start with the left side.
+\[
+\tan{\theta}+ \cot{\theta}=\frac{\sin{\theta}}{\cos{\theta}} + \frac{\cos{\theta}}{\sin{\theta}}
+\]
+\[
+\frac{\sin{\theta}}{\cos{\theta}} + \frac{\cos{\theta}}{\sin{\theta}} = \frac{\sin^2{\theta}}{\sin{\theta}\cos{\theta}} + \frac{\cos^2{\theta}}{\sin{\theta}\cos{\theta}}
+\]
+\[
+ \frac{\sin^2{\theta}}{\sin{\theta}\cos{\theta}} + \frac{\cos^2{\theta}}{\sin{\theta}\cos{\theta}} = \frac{\sin^2{\theta} + \cos^2{\theta}}{\sin{\theta}\cos{\theta}} = \frac{1}{\sin{\theta}\cos{\theta}}
+\]
+\[
+\frac{1}{\sin{\theta}\cos{\theta}} = \frac{1}{\sin{\theta}} \cdot \frac{1}{\cos{\theta}}
+\]
+\[
+\frac{1}{\sin{\theta}} \cdot \frac{1}{\cos{\theta}} = \csc{\theta}\sec{\theta}
+\]
+\end{explanation}
+\end{example}
 
 
 %\typeout{************************************************}
