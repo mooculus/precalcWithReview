@@ -34,8 +34,7 @@ For any real angle \(\theta\),%
 %
 
 Identities are important because they enable us to view the same idea from multiple perspectives.  For example, the fundamental trigonometric identity allows us to think of \(\cos^2(\theta) + \sin^2(\theta)\) as simply \(1\), or alternatively, to view \(\cos^2(\theta)\) as the same quantity as \(1 - \sin^2(\theta)\).%
-\par
-\hypertarget{p-2068}{}%
+
 There are two related Pythagorean identities that involve the tangent, secant, cotangent, and cosecant functions, which we previously derived from the fundamental trigonometric identity by dividing both sides by either \(\cos^2(\theta)\) or \(\sin^2(\theta)\).  We will take another look at this identity before going deeper. If we divide both sides of $\cos^2(\theta) + \sin^2(\theta) = 1$ by \(\cos^2(\theta)\) (and assume that \(\cos(\theta) \ne 0\), we see that%
 \[
 1 + \frac{\sin^2(\theta)}{\cos^2(\theta)} = \frac{1}{\cos^2(\theta)} \text{,}
@@ -149,7 +148,7 @@ In calculus, it is also beneficial to know a couple of other standard identities
 
 \begin{enumerate}
 
-\item  As in the earlier example, we need to write the angle $\frac{19 \pi}{12}$ as a sum or difference of common angles.  The denominator of $12$ suggests a combination of angles with denominators $3$ and $4$.  One such combination is $\; \frac{19 \pi}{12} = \frac{4 \pi}{3} + \frac{\pi}{4}$.  Applying Theorem \ref{sinesumdifference}, we get
+\item  As in the earlier example, we need to write the angle $\frac{19 \pi}{12}$ as a sum or difference of common angles.  The denominator of $12$ suggests a combination of angles with denominators $3$ and $4$.  One such combination is $\; \frac{19 \pi}{12} = \frac{4 \pi}{3} + \frac{\pi}{4}$.  Applying what we know about sum and difference with Sine, we get
 
 \vspace{-.15in}
 
@@ -205,8 +204,6 @@ Naturally, this formula is limited to those cases where all of the tangents are 
 
 \begin{enumerate}
 
-\item Suppose $P(-3,4)$ lies on the terminal side of $\theta$ when $\theta$ is plotted in standard position.  Find $\cos(2\theta)$ and $\sin(2\theta)$ and determine the quadrant in which the terminal side of the angle $2\theta$ lies when it is plotted in standard position.
-
 \item  If $\sin(\theta) = x$ for $-\frac{\pi}{2} \leq \theta \leq \frac{\pi}{2}$, find an expression for $\sin(2\theta)$ in terms of $x$.
 
 \item  \label{doubleanglesinewtan} Verify the identity:  $\sin(2\theta) = \dfrac{2\tan(\theta)}{1 + \tan^{2}(\theta)}$.
@@ -221,10 +218,7 @@ Naturally, this formula is limited to those cases where all of the tangents are 
 
 \begin{enumerate}
 
-\item  Using Theorem \ref{cosinesinecircle} from Section \ref{TheUnitCircle} with  $x = -3$ and $y=4$, we find $r = \sqrt{x^2+y^2} = 5$.  Hence, $\cos(\theta) = -\frac{3}{5}$ and $\sin(\theta) = \frac{4}{5}$.  Applying Theorem \ref{doubleangle}, we get $\cos(2\theta) = \cos^{2}(\theta) - \sin^{2}(\theta) = \left(-\frac{3}{5}\right)^2 - \left(\frac{4}{5}\right)^2 = -\frac{7}{25}$, and $\sin(2\theta) = 2 \sin(\theta) \cos(\theta) = 2 \left(\frac{4}{5}\right)\left(-\frac{3}{5}\right) = -\frac{24}{25}$.  Since both cosine and sine of $2\theta$ are negative, the terminal side of $2\theta$, when plotted in standard position, lies in Quadrant III.
-
-
-\item  If your first reaction to `$\sin(\theta) = x$' is `No it's not, $\cos(\theta) = x$!' then you have indeed learned something, and we take comfort in that. However, context is everything.  Here, `$x$' is just a variable - it does not necessarily represent the $x$-coordinate of the point on The Unit Circle which lies on the terminal side of $\theta$, assuming $\theta$ is drawn in standard position.  Here, $x$ represents the quantity $\sin(\theta)$, and what we wish to know is how to express $\sin(2\theta)$ in terms of $x$.  We will see more of this kind of thing in Section \ref{ArcTrig}, and, as usual, this is something we need for Calculus.  Since $\sin(2\theta) = 2 \sin(\theta) \cos(\theta)$, we need to write $\cos(\theta)$ in terms of $x$ to finish the problem.  We substitute $x = \sin(\theta)$ into the Pythagorean Identity, $\cos^{2}(\theta) + \sin^{2}(\theta) = 1$, to get $\cos^{2}(\theta) + x^2 = 1$, or $\cos(\theta) = \pm \sqrt{1-x^2}$.  Since  $-\frac{\pi}{2} \leq \theta \leq \frac{\pi}{2}$, $\cos(\theta) \geq 0$, and thus $\cos(\theta) = \sqrt{1-x^2}$.  Our final answer is  $\sin(2\theta) = 2 \sin(\theta) \cos(\theta) = 2x\sqrt{1-x^2}$.
+\item  If your first reaction to `$\sin(\theta) = x$' is `No it's not, $\cos(\theta) = x$!' then you have indeed learned something, and we take comfort in that. However, context is everything.  Here, `$x$' is just a variable - it does not necessarily represent the $x$-coordinate of the point on The Unit Circle which lies on the terminal side of $\theta$, assuming $\theta$ is drawn in standard position.  Here, $x$ represents the quantity $\sin(\theta)$, and what we wish to know is how to express $\sin(2\theta)$ in terms of $x$.  We will see more of this kind of thing in future sections, and, as usual, this is something we need for Calculus.  Since $\sin(2\theta) = 2 \sin(\theta) \cos(\theta)$, we need to write $\cos(\theta)$ in terms of $x$ to finish the problem.  We substitute $x = \sin(\theta)$ into the Pythagorean Identity, $\cos^{2}(\theta) + \sin^{2}(\theta) = 1$, to get $\cos^{2}(\theta) + x^2 = 1$, or $\cos(\theta) = \pm \sqrt{1-x^2}$.  Since  $-\frac{\pi}{2} \leq \theta \leq \frac{\pi}{2}$, $\cos(\theta) \geq 0$, and thus $\cos(\theta) = \sqrt{1-x^2}$.  Our final answer is  $\sin(2\theta) = 2 \sin(\theta) \cos(\theta) = 2x\sqrt{1-x^2}$.
 
 \item  We start with the right hand side of the identity and note that $1 + \tan^{2}(\theta) = \sec^{2}(\theta)$.  From this point, we use the Reciprocal and Quotient Identities to rewrite $\tan(\theta)$ and $\sec(\theta)$ in terms of $\cos(\theta)$ and $\sin(\theta)$:
 
@@ -238,7 +232,7 @@ Naturally, this formula is limited to those cases where all of the tangents are 
 
 \end{array} \]
 
-\item In Theorem \ref{doubleangle}, one of the formulas for $\cos(2\theta)$, namely $\cos(2\theta) = 2\cos^{2}(\theta) - 1$, expresses $\cos(2\theta)$ as a polynomial in terms of $\cos(\theta)$.  We are  now asked to find such an  identity for $\cos(3\theta)$.  Using the sum formula for cosine, we begin with 
+\item In our list of identities, one of the formulas for $\cos(2\theta)$, namely $\cos(2\theta) = 2\cos^{2}(\theta) - 1$, expresses $\cos(2\theta)$ as a polynomial in terms of $\cos(\theta)$.  We are  now asked to find such an  identity for $\cos(3\theta)$.  Using the sum formula for cosine, we begin with 
 
 \vspace{-.1in}
 
@@ -392,7 +386,7 @@ as \(h\) gets close to \(0\).  What happens?  Similarly, how does \(\frac{\sin(h
 %\typeout{************************************************}
 
 \section{More Identities}
-In the previous sections, we saw the utility of the Pythagorean Identities.  Not only did these identities help us compute the values of the circular functions for angles, they were also useful in simplifying expressions involving the circular functions.  In this section, we introduce several collections of identities which have uses in this course and beyond.  Our first set of identities is the `Even / Odd' identities.
+In the previous sections, we saw the utility of the Pythagorean Identities.  Not only did these identities help us compute the values of the circular functions for angles, they were also useful in simplifying expressions involving the circular functions. We will introduce this set of identities as the `Even / Odd' identities and we will discuss them further with trigonometric transformations in a later section.
 
 \begin{callout}
  \textbf{Even / Odd Identities:}  For all applicable angles $\theta$, 

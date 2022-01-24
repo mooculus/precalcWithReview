@@ -46,21 +46,21 @@ Conjugates in order to take advantage of the Pythagorean Identities.
 \begin{example}
 Verify the following:\\
 \[
-\tan{\theta}\cos{\theta}=\sin{\theta}
+\tan{(\theta)}\cos{(\theta)}=\sin{(\theta)}
 \]
 \\
 \begin{explanation}
-Let's start with the more complicated side. We know that we want to end up with $\sin{\theta}$ in the end, so using the Quotient identity to replace $\tan{\theta}$ with $\frac{\sin{\theta}}{\cos{\theta}}$ is a reasonable place to start.
+Let's start with the more complicated side. We know that we want to end up with $\sin{(\theta)}$ in the end, so using the Quotient identity to replace $\tan{(\theta)}$ with $\frac{\sin{(\theta)}}{\cos{(\theta)}}$ is a reasonable place to start.
 \[
-\tan{\theta}\cos{\theta}=(\frac{\sin{\theta}}{\cos{\theta}})\cos{\theta}
+\tan{(\theta)}\cos{(\theta)}=(\frac{\sin{(\theta)}}{\cos{(\theta)}})\cos{(\theta)}
 \]
-We can now cancel our $\cos{\theta}$ terms.
+We can now cancel our $\cos{(\theta)}$ terms.
 \[
-\tan{\theta}\cos{\theta}=(\frac{\sin{\theta}}{\cancel{\cos{\theta}}})\cancel{\cos{\theta}}
+\tan{(\theta)}\cos{(\theta)}=\left(\frac{\sin{(\theta)}}{\cancel{\cos{(\theta)}}}\right)\cancel{\cos{(\theta)}}
 \]
 This, thankfully, leaves us with our original equation, so we have verified this identity.
 \[
-\tan{\theta}\cos{\theta}=\sin{\theta}
+\tan{(\theta)}\cos{(\theta)}=\sin{(\theta)}
 \]
 \end{explanation}
 \end{example}
@@ -68,58 +68,79 @@ This, thankfully, leaves us with our original equation, so we have verified this
 \begin{example}
 Verify the following:\\
 \[
-\frac{\sec{x}-cos{x}}{\sec{x}}=sin^2{x}
+\frac{\sec{(x)}-cos{(x)}}{\sec{(x)}}=sin^2{(x)}
 \]
 \\
 \begin{explanation}
-Let's start with the more complicated side. Since $\sec{x}$ is the reciprocal of $\cos{x}$, rewriting this side completely in terms of $\cos{x}$ could help us verify this identity.
+Let's start with the more complicated side. Since $\sec{(x)}$ is the reciprocal of $\cos{(x)}$, rewriting this side completely in terms of $\cos{(x)}$ could help us verify this identity.
 \[
-\frac{\sec{x}-cos{x}}{\sec{x}} = \frac{\frac{1}{\cos{x}}-\cos{x}}{\frac{1}{\cos{x}}}
+\frac{\sec{(x)}-\cos{(x)}}{\sec{(x)}} = \frac{\frac{1}{\cos{(x)}}-\cos{(x)}}{\frac{1}{\cos{(x)}}}
 \]
 We can now simplify the fractional division by inverting and multiplying.
 \[
-\frac{\frac{1}{\cos{x}}-\cos{x}}{\frac{1}{\cos{x}}} = (\frac{1}{\cos{x}}-\cos{x}) \cdot \cos{x}
+\frac{\frac{1}{\cos{(x)}}-\cos{(x)}}{\frac{1}{\cos{(x)}}} = \left(\frac{1}{\cos{(x)}}-\cos{(x)}\right) \cdot \cos{(x)}
 \]
-We continue by distributing our $\cos{x}$ term and then simplify.
+We continue by distributing our $\cos{(x)}$ term and then simplify.
 \[
-(\frac{1}{\cos{x}}-\cos{x}) \cdot \cos{x} = \frac{\cos{x}}{\cos{x}}-\cos^2{x} = 1 - \cos^2{x}
+\left(\frac{1}{\cos{(x)}}-\cos{(x)}\right) \cdot \cos{(x)} = \frac{\cos{(x)}}{\cos{(x)}}-\cos^2{(x)} = 1 - \cos^2{(x)}
 \]
 Using an alternate form of the Pythagorean Identity, we can make the following substitution.
 \[
-1 - \cos^2{x} = sin^2{x}
+1 - \cos^2{(x)} = sin^2{(x)}
 \]
 We have now verified our original equation.
 \[
-\frac{\sec{x}-cos{x}}{\sec{x}}=sin^2{x}
+\frac{\sec{(x)}-cos{(x)}}{\sec{(x)}}=sin^2{(x)}
 \]
 \end{explanation}
 \end{example}
 \begin{example}
 Verify the following:\\
 \[
-\tan{\theta}+ \cot{\theta}=\csc{\theta}\sec{\theta}
+\tan{(\theta)}+ \cot{(\theta)}=\csc{(\theta)}\sec{(\theta)}
 \]
 \\
 \begin{explanation}
 Let's start with the left side.
 \[
-\tan{\theta}+ \cot{\theta}=\frac{\sin{\theta}}{\cos{\theta}} + \frac{\cos{\theta}}{\sin{\theta}}
+\tan{(\theta)}+ \cot{(\theta)}=\frac{\sin{(\theta)}}{\cos{(\theta)}} + \frac{\cos{(\theta)}}{\sin{(\theta)}}
 \]
 \[
-\frac{\sin{\theta}}{\cos{\theta}} + \frac{\cos{\theta}}{\sin{\theta}} = \frac{\sin^2{\theta}}{\sin{\theta}\cos{\theta}} + \frac{\cos^2{\theta}}{\sin{\theta}\cos{\theta}}
+\frac{\sin{(\theta)}}{\cos{(\theta)}} + \frac{\cos{(\theta)}}{\sin{(\theta)}} = \frac{\sin^2{(\theta)}}{\sin{(\theta)}\cos{(\theta)}} + \frac{\cos^2{(\theta)}}{\sin{(\theta)}\cos{(\theta)}}
 \]
 \[
- \frac{\sin^2{\theta}}{\sin{\theta}\cos{\theta}} + \frac{\cos^2{\theta}}{\sin{\theta}\cos{\theta}} = \frac{\sin^2{\theta} + \cos^2{\theta}}{\sin{\theta}\cos{\theta}} = \frac{1}{\sin{\theta}\cos{\theta}}
+ \frac{\sin^2{(\theta)}}{\sin{(\theta)}\cos{(\theta)}} + \frac{\cos^2{(\theta)}}{\sin{(\theta)}\cos{(\theta)}} = \frac{\sin^2{(\theta)} + \cos^2{(\theta)}}{\sin{(\theta)}\cos{(\theta)}} = \frac{1}{\sin{(\theta)}\cos{(\theta)}}
 \]
 \[
-\frac{1}{\sin{\theta}\cos{\theta}} = \frac{1}{\sin{\theta}} \cdot \frac{1}{\cos{\theta}}
+\frac{1}{\sin{(\theta)}\cos{(\theta)}} = \frac{1}{\sin{(\theta)}} \cdot \frac{1}{\cos{(\theta)}}
 \]
 \[
-\frac{1}{\sin{\theta}} \cdot \frac{1}{\cos{\theta}} = \csc{\theta}\sec{\theta}
+\frac{1}{\sin{(\theta)}} \cdot \frac{1}{\cos{(\theta)}} = \csc{(\theta)}\sec{(\theta)}
 \]
 \end{explanation}
 \end{example}
-
+\begin{example}
+Verify the following:\\
+\[
+\sin{(x)}=\tan{(x)}+\cos{(x)}
+\]
+\\
+\begin{explanation}
+Let's start with the more complicated side.
+\[
+\tan{(x)}+\cos{(x)}
+\]
+\[
+\tan{(x)}+\cos{(x)}= \frac{\sin{(x)}}{\cos{(x)}}+\cos{(x)}
+\]
+\[
+\frac{\sin{(x)}}{\cos{(x)}}+\cos{(x)} = \frac{\sin{(x)}}{\cos{(x)}} + \frac{\cos^2{(x)}}{\cos{(x)}}
+\]
+\[
+\frac{\sin{(x)}}{\cos{(x)}} + \frac{\cos^2{(x)}}{\cos{(x)}} =  \frac{\sin{(x)} + \cos^2{(x)}}{\cos{(x)}} 
+\]
+\end{explanation}
+\end{example}
 
 %\typeout{************************************************}
 %\typeout{Motivating Questions}
