@@ -52,7 +52,7 @@ Verify the following:\\
 \begin{explanation}
 Let's start with the more complicated side. We know that we want to end up with $\sin{(\theta)}$ in the end, so using the Quotient identity to replace $\tan{(\theta)}$ with $\frac{\sin{(\theta)}}{\cos{(\theta)}}$ is a reasonable place to start.
 \[
-\tan{(\theta)}\cos{(\theta)}=(\frac{\sin{(\theta)}}{\cos{(\theta)}})\cos{(\theta)}
+\tan{(\theta)}\cos{(\theta)}=\left(\frac{\sin{(\theta)}}{\cos{(\theta)}}\right)\cos{(\theta)}
 \]
 We can now cancel our $\cos{(\theta)}$ terms.
 \[
@@ -101,21 +101,29 @@ Verify the following:\\
 \]
 \\
 \begin{explanation}
-Let's start with the left side.
+Let's start with the left side. By using the Quotient identities we can change both of our terms to be in the form of $\sin{(\theta})$ and  $\cos{(\theta})$ 
 \[
 \tan{(\theta)}+ \cot{(\theta)}=\frac{\sin{(\theta)}}{\cos{(\theta)}} + \frac{\cos{(\theta)}}{\sin{(\theta)}}
 \]
+We can find a common demoninator to begin combining our terms.
 \[
 \frac{\sin{(\theta)}}{\cos{(\theta)}} + \frac{\cos{(\theta)}}{\sin{(\theta)}} = \frac{\sin^2{(\theta)}}{\sin{(\theta)}\cos{(\theta)}} + \frac{\cos^2{(\theta)}}{\sin{(\theta)}\cos{(\theta)}}
 \]
+Now we combine our terms and simplify.
 \[
  \frac{\sin^2{(\theta)}}{\sin{(\theta)}\cos{(\theta)}} + \frac{\cos^2{(\theta)}}{\sin{(\theta)}\cos{(\theta)}} = \frac{\sin^2{(\theta)} + \cos^2{(\theta)}}{\sin{(\theta)}\cos{(\theta)}} = \frac{1}{\sin{(\theta)}\cos{(\theta)}}
 \]
+We are now left with two terms being multiplied together. We will split them up to better show the next step.
 \[
 \frac{1}{\sin{(\theta)}\cos{(\theta)}} = \frac{1}{\sin{(\theta)}} \cdot \frac{1}{\cos{(\theta)}}
 \]
+We can use the Reciprocal identies for these two terms and we have found what we wanted.
 \[
 \frac{1}{\sin{(\theta)}} \cdot \frac{1}{\cos{(\theta)}} = \csc{(\theta)}\sec{(\theta)}
+\]
+The identity is verified.
+\[
+\tan{(\theta)}+ \cot{(\theta)}=\csc{(\theta)}\sec{(\theta)}
 \]
 \end{explanation}
 \end{example}
@@ -126,18 +134,45 @@ Verify the following:\\
 \]
 \\
 \begin{explanation}
-Let's start with the more complicated side.
-\[
-\tan{(x)}+\cos{(x)}
-\]
+Let's start with the more complicated side.  By using the Quotient identities we can change both of our terms to be in the form of $\sin{(\theta})$ and  $\cos{(\theta})$ 
 \[
 \tan{(x)}+\cos{(x)}= \frac{\sin{(x)}}{\cos{(x)}}+\cos{(x)}
 \]
+We can find a common demoninator to begin combining our terms.
 \[
 \frac{\sin{(x)}}{\cos{(x)}}+\cos{(x)} = \frac{\sin{(x)}}{\cos{(x)}} + \frac{\cos^2{(x)}}{\cos{(x)}}
 \]
+We combine our terms.
 \[
 \frac{\sin{(x)}}{\cos{(x)}} + \frac{\cos^2{(x)}}{\cos{(x)}} =  \frac{\sin{(x)} + \cos^2{(x)}}{\cos{(x)}} 
+\]
+We use a Pythagorean identity.
+\[
+\frac{\sin{(x)} + \cos^2{(x)}}{\cos{(x)}} = \frac{\sin{(x)} + 1- \sin^2{(x)}}{\cos{(x)}}
+\]
+We are now at a difficult point. The equation does not seem to be simplifying and we are not making any progress. It is possible that this is \textbf{NOT} equal. In order, to prove that we have to go back and use a test value in our original equation. Let's try $\frac{\pi}{6}$.
+\[
+\sin{(\frac{\pi}{6})}=\tan{(\frac{\pi}{6})}+\cos{(\frac{\pi}{6})}
+\]
+Since this is a trig value, we can go ahead and evaluate it.
+\[
+\frac{1}{2}= \frac{\sqrt{3}}{3} + \frac{\sqrt{3}}{2}
+\]
+We again find a common denominator
+\[
+\frac{1}{2}= \frac{2\sqrt{3}}{6} + \frac{3\sqrt{3}}{6}
+\]
+With a little simplifying, we have the following equation.
+\[
+\frac{1}{2}= \frac{5\sqrt{3}}{6}
+\]
+$\frac{5\sqrt{3}}{6}$ is definitely larger than $\frac{1}{2}$ (verify with a calculator) and thus not equal.
+\[
+\frac{1}{2}\neq \frac{5\sqrt{3}}{6}
+\]
+We have proved that this is equation \textbf{NOT} equal. 
+\[
+\sin{(x)}\neq \tan{(x)}+\cos{(x)}
 \]
 \end{explanation}
 \end{example}
