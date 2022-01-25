@@ -54,13 +54,13 @@ In this section, we'll explore inverse functions more in-depth. In particular, b
 
   \begin{explanation}
     Recall here that $f$ is one-to-one if $f(x_1) = f(x_2)$ always implies that $x_1=x_2$. What happens in this case? We start with the equality $$4x_1^3+1 = 4x_2^3+1,$$ and if we can arrive at $x_1=x_2$, then our function $f$ is one-to-one. Subtracting $1$ from both sides gives $4x_1^3=4x_2^3$. Dividing both sides by $4$, we have that $x_1^3 = x_2^3$. As the function ``taking the third power'' is one-to-one (namely, its inverse is ``taking cube roots''), it follows that $x_1=x_2$. This means that one can start with $y=4x^3+1$ and solve for $x$ as a function of $y$. When this is finished, one replaces $x$ and $y$ with $f^{-1}(x)$ and $x$, respectively, for the sake of conventions. We have that $$y=4x^3+1 \implies y-1 = 4x^3 \implies \frac{y-1}{4} = x^3 \implies \sqrt[3]{\frac{y-1}{4}} = x.$$Therefore, we conclude that $$f^{-1}(x) = \sqrt[3]{\frac{x-1}{4}}.$$Observe that the domain of $f^{-1}$ is precisely the set of all real numbers, as there is no positivity restriction for taking ``odd roots''. This turns out to be exactly the range of the original function $f$, suitably read in the $y$ variable: namely, the range of $f$ consists of all real numbers $y$, as the graph shows:
-% \begin{image}
-% \begin{tikzpicture}
-%     \begin{axis}
-%       \addplot[samples=200,domain=-7:7]{4*x^3+1};
-%     \end{axis}
-% \end{tikzpicture}
-% \end{image}
+\begin{image}
+\begin{tikzpicture}
+    \begin{axis}
+      \addplot[samples=200,domain=-5:5]{4*x^3+1};
+    \end{axis}
+\end{tikzpicture}
+\end{image}
 Observe that the graph also shows that $f$ passes the Horizontal Line Test, an useful sanity-check.
   \end{explanation}
 \end{example}
