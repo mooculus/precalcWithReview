@@ -2,8 +2,9 @@
 
 \input{../preamble}
 \author{Elizabeth Campolongo}
-\license{Creative Commons Attribution-ShareAlike 4.0 International License}
-\acknowledgement{https://activecalculus.org/prelude/sec-trig-inverse.htmll}
+\licenseAPCSZ
+%\license{Creative Commons Attribution-ShareAlike 4.0 International License}
+%\acknowledgement{https://activecalculus.org/prelude/sec-trig-inverse.htmll}
 
 \title{Applications of Inverse Trigonometry}
 
@@ -125,6 +126,7 @@ A roof is being built with a ``7-12 pitch.'' This means that the roof rises $7$ 
 \begin{enumerate}
 \item What is the exact measure of the angle the roof makes with the horizontal? \\
 \begin{explanation}
+Looking at a side view of the house, we may divide the triangle of the roof in half to get a right triangle with legs 7 and 12 feet long. We want to find the angle of inclination ($\theta$ in the diagram below), which satisfies the equation $\tan(\theta) = \frac{7}{12}$. In other words, we wish to find $\theta = \arctan(\frac{7}{12})$. 
 
 \end{explanation}
 \item What is the exact measure of the angle at the peak of the roof (made by the front and back portions of the roof that meet to form the ridge)?\\
@@ -179,21 +181,37 @@ Inverse trig expressions can be rewritten as algebraic expressions of $x$...
 \begin{example}
 Rewrite the following values as algebraic expressions of $x$ and give the domain on which these equivalences are valid.
 \begin{enumerate}
-\item $\cos(\arctan(x)) = \frac{1}{\sqrt{1+x^2}}$ for all $x$ \\
+\item $\cos(\arctan(x))$.\\
 %
 \begin{explanation}
+$\cos(\arctan(x)) = \frac{1}{\sqrt{1+x^2}}$ for all $x$  \\
+%
+To see this, we start by simplifying $\cos(\arctan(x))$ by letting $t = \arctan(x)$, so that $\tan(t) = x$ for $t$ in the domain of restricted tangent, $(-\pi/2,\pi/2)$. We now need a formula for $\cos(t)$, which is defined for all $t$ in this domain.
 
+Use $1 + \tan^2(t) = \sec^2(t) = \frac{1}{\cos^2(t)}$
 \end{explanation}
 %
-\item $\sin(\arccos(2x))= \sqrt{1-4x^2}$ given $x \in \Big[-\!\frac{1}{2}, \frac{1}{2}\Big]$\\
+\item $\sin(\arccos(2x))$. \\
 %
 \begin{explanation}
+$\sin(\arccos(2x)) = \sqrt{1-4x^2}$ given $x \in \Big[-\!\frac{1}{2}, \frac{1}{2}\Big]$\\
+%
+Again, to see this, we begin by setting $t = \arccos(2x)$, so that $\cos(t) = 2x$ for $t$ in the domain of restricted cosine, $[0,\pi]$. In other words, we have $\cos(t) = 2x$ for $t \in [0, \pi]$, and must find a formula for $\sin(t)$. Now, we must relate sine and cosine, for which we use the well-known trigonometric identity $\sin^2(t) + \cos^2(t) = 1$. Re-writing this to solve our equation, we see that we have $\sin^2(t) + (2x)^2 =1$, which is equivalent to 
+%
+$$\sin(t) = \pm \sqrt{1-4x^2}.$$
+%
+Since sine is positive on the interval $[0,\pi]$, where we defined $t$, we choose the positive square root, and observe that $\sin(\arccos(2x)) = \sqrt{1-4x^2}$, as desired.
+
+Finally, to establish the domain on which this equivalence holds, we
+recall that the domain of arccosine is $[-1,1]$. Since we consider $\arccos(2x)$, we want $2x \in [-1,1]$. This is equivalent to $x \in \Big[-\frac{1}{2}, \frac{1}{2} \Big]$, and so our work is done.
 
 \end{explanation}
 %
 \end{enumerate}
 \end{example}
 
+
+\subsection{A Note on Triangles}
 We can now use trigonometry to find angles of right triangles if we know the side lengths and side lengths of right triangles if we know the angles.  You might be wondering, ``What about triangles that are not right triangles? Can we use trig to learn anything about those?''  It turns out that the Law of Sines and the Law of Cosines gives use a way to analyze other triangles beyond just right triangles using trig functions.  For more information about this topic, see \link[Laws of Sines and Cosines by Katherine Yoshiwara]{https://yoshiwarabooks.org/trig/chap3.html}.
 
 
