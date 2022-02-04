@@ -2,9 +2,9 @@
 
 \input{../preamble}
 \author{Elizabeth Campolongo}
-\license{Creative Commons Attribution-ShareAlike 4.0 International License}
-\acknowledgement{https://activecalculus.org/prelude/sec-trig-inverse.htmll}
-\acknowledgement{https://www.stitz-zeager.com/szprecalculus07042013.pdf}
+\licenseAPCSZ
+%\license{Creative Commons Attribution-ShareAlike 4.0 International License}
+%\acknowledgement{https://activecalculus.org/prelude/sec-trig-inverse.html, https://www.stitz-zeager.com/szprecalculus07042013.pdf}
 
 \title{Other Inverse Trig Functions}
 
@@ -21,8 +21,8 @@
 
 \begin{motivatingQuestions}\begin{itemize}
 %Often start a section. 
-\item For the restricted sine and tangent functions, how do we define the corresponding arcsine and arctangent functions?
-\item What are the key properties of arcsine and arctangent?
+\item For the restricted sine, tangent, and secant functions, how do we define the corresponding arcsine, arctangent, and arcsecant functions?
+\item What are the key properties of arcsine, arctangent, and arcsecant?
 \end{itemize}\end{motivatingQuestions}
 
 
@@ -37,7 +37,7 @@
 %\typeout{************************************************}
 
 \section{Introduction}
-In the last section we defined {\it arccosine}, the inverse for cosine restricted to a single period. In this section we will explore the definition of similar inverse functions on restricted domains of sine and tangent. 
+In the last section we defined {\it arccosine}, the inverse for cosine restricted to a single period. In this section we will explore the definition of similar inverse functions on restricted domains of sine, tangent, and secant. 
 
 As we recalled last time,
 \begin{itemize}
@@ -50,7 +50,7 @@ A function $f$ has an inverse function if and only if there exists a function $g
 \end{itemize}
 %
 \par
-As with the cosine function, the trigonometric functions $f(t) = \sin(t)$ and $h(t) = \tan(t)$ are periodic, so they fail the horizontal line test. Hence, considering these functions on their full domains, neither has an inverse function. At the same time, it is reasonable to think about changing perspective and viewing angles as outputs in certain restricted settings, as we did with cosine. 
+As with the cosine function, the trigonometric functions $f(t) = \sin(t)$, $h(t) = \tan(t)$, and $k(t) = \sec(t)$ are periodic, so they fail the horizontal line test. Hence, considering these functions on their full domains, neither has an inverse function. At the same time, it is reasonable to think about changing perspective and viewing angles as outputs in certain restricted settings, as we did with cosine. 
 
 
 \section{The Arcsine Function}
@@ -243,8 +243,7 @@ Below we have a plot of the restricted tangent function (in light blue) and its 
 \begin{example}
 Let's solve the following equations analytically, then we can consider the graph of arctangent.	
 \begin{enumerate}
-\item
-
+%
 \item $\tan(\arctan(-\sqrt{3}))$\\
 \begin{explanation}
 We start by finding $\arctan(-\sqrt{3})$. Remember that for $x$ in $(-\infty,\infty)$, $\arctan(x)$ is the value $y$ in $\Big(\!-\frac{\pi}{2},\frac{\pi}{2}\Big)$ such that $\tan(y) = x$. 
@@ -307,21 +306,139 @@ which is further equivalent to $x=-1$
 \end{enumerate}
 \end{example}
 
+%%%%%%%%%%%%%%%%%%%ARCSECANT
+\section{The Arcsecant Function}
+%
+We will also consider the inverse function for a restricted version of the secant function. 
+As with the cosine and sine functions, we need to choose an interval on which the secant function is always increasing or always decreasing in order to have the function pass the horizontal line test. In the case of secant, this means choosing two distinct intervals. A word of caution in working with the restricted secant function and its associated inverse, there is not a ``standard" choice for the domain of restricted secant. {\it However}, we will establish a convention in this course. 
 
+We Restrict the domain of the function $k(t) = \sec(t)$ to $[0,\pi/2) \cup (\pi/2,\pi ]$, where secant is increasing on each interval and attains all the values within the range of the secant function. By reflecting across the line $y=t$ and switching the $t$ and $y$ coordinates we are able to define the function $k^{-1}(t)=\arcsec(t)$ as follows.
+
+\begin{definition}
+Let $y = k(t) = \sec(t)$ be defined on the domain $[0,\pi/2) \cup (\pi/2,\pi ]$, and observe that 
+$$k: \Big[0,\frac{\pi}{2}\Big) \cup \Big(\frac{\pi}{2},\pi \Big] \rightarrow (-\infty,-1] \cup [1,\infty).$$ 
+For any real number $y$, the {\bf arcsecant of y}, denoted
+$$\arcsec(y)$$
+is the angle $t$ satisfying $0 \leq t < \frac{\pi}{2}$ or $\frac{\pi}{2} < t \leq \pi$. Note that we use $t = \sec^{-1}(y)$ interchangeably with $t = \arcsec(y)$.
+\end{definition}
+
+\begin{problem}
+Take the lead Watson, and we will deduce the key properties of the arcsecant function as we did above for arcsine and arctangent.
+\begin{enumerate}
+\item
+Using the definition of arcsecant given above, what are the domain and range of the arcsecant function? \\
+\begin{itemize}
+\item The domain of arcsecant is $\answer{(-\infty,-1]} \cup \answer{[1,\infty)}$.
+%
+\item The range of arcsecant is $\answer{[0,\frac{\pi}{2})} \cup \answer{(\frac{\pi}{2},\pi]}$.
+\end{itemize}
+%
+\item Determine the following values exactly: 
+\begin{itemize}
+%
+\item $\arcsec(1) = \answer{0}$
+%
+\item $\arcsec(-1) = \answer{\pi}$
+%
+\item $\arcsec(2) = \answer{\frac{\pi}{3}}$ 
+%\item $\arcsin\Big(\frac{\sqrt{3}}{2}\Big) = \answer{\frac{\pi}{3}}$
+\end{itemize}
+%
+\item
+On the axes provided below, sketch a careful plot of the restricted secant function on the intervals $\Big[0, \frac{\pi}{2}\Big)$ and $\Big(\frac{\pi}{2}, \pi\Big]$ along with its corresponding inverse, the arcsecant function.  Label at least three points on each curve so that each point on the secant graph corresponds to a point on the arcsecant graph.  %In addition, sketch the line $y = t$ to demonstrate how the graphs are reflections of one another across this line.
+
+Can we get axes with $\pm 1$ and $\pi$ and $\frac{\pi}{2}$ labeled?
+%
+%
+\item True or false: $\arcsec(\sec(2\pi)) = 2\pi$? $\wordChoice{\choice{\text{true}}\choice[correct]{\text{false}}}$ \\
+Write a complete sentence to explain your reasoning.%
+\end{enumerate}
+\end{problem}
+
+\begin{callout}{\bf Properties of the arcsecant function.}%
+\begin{itemize}
+\item
+The restricted secant function, $y = k(t) = \sec(t)$, is defined on the domain $\Big[0,\frac{\pi}{2}\Big) \cup \Big(\frac{\pi}{2},\pi \Big]$ with range $(-\infty, -1] \cup [1,\infty)$.  This function has an inverse function that we call the arcsecant function, denoted $t = k^{-1}(y) = \arcsec(y)$.
+%
+\item
+The domain of $y = k^{-1}(t) = \arcsec(t)$ is $(-\infty, -1] \cup [1,\infty)$ with range $\Big[0,\frac{\pi}{2}\Big) \cup \Big(\frac{\pi}{2},\pi \Big]$.
+%
+\item
+The arcsecant function is always increasing on each interval in its domain.
+%
+\item Recall that $\sec(\theta) = \frac{1}{\cos(\theta)}$. Arcsecant and arccosine maintain a relationship as well, though they are {\it not} reciprocals: \\
+For $x$ in the domain of arcsecant, $\arcsec(x) = \arccos\!\Big(\frac{1}{x}\Big)$.
+%
+\item {\em Do we have a graph to include?}
+%Below we have a plot of the restricted tangent function (in light blue) and its corresponding inverse, the arctangent function (in dark blue).%
+\end{itemize}
+%\includegraphics[width=1\linewidth]{inverse-trig-arctan-graph.pdf}
+\end{callout}
+
+\section{Exploring Arcsecant} 
+
+\begin{example}
+Sometimes we must rely on other properties of these functions and their relations to more familiar functions to find solutions. In the following examples, we wish to find $x$ in the range of arcsecant such that
+\begin{enumerate}
+\item $x = \arcsec(-\sqrt{2})$ \\
+\begin{explanation}
+We may use the relationship between arcsecant and arccosine to rewrite this equation in terms of arccosine. In other words, since $\arcsec(y) = \arccos\!\Big(\frac{1}{y}\Big)$, for $y$ in the domain of arcsecant,
+$$\arcsec(-\sqrt{2}) = \arccos\!\Big(\!\!-\frac{\sqrt{2}}{2}\Big) = \frac{3\pi}{4}.$$
+\end{explanation}
+
+\item $x=\arcsec \!\Big(\!\! - \frac{2\sqrt{3}}{3}\Big)$\\
+\begin{explanation}
+Again, we use the relationship $\arcsec(y) = \arccos\!\Big(\frac{1}{y}\Big)$, for $y$ in the domain of arcsecant:
+%
+$$\arcsec \!\Big(\!\! - \frac{2\sqrt{3}}{3}\Big) = \arccos\!\Big(\!\! - \frac{\sqrt{3}}{2}\Big),$$
+%
+since the reciprocal of $\frac{2\sqrt{3}}{3} = \frac{3}{2\sqrt{3}} = \frac{\sqrt{3}}{2}$. Thus, we have 
+%
+$$\arcsec \!\Big(\!\! - \frac{2\sqrt{3}}{3}\Big)=\frac{5\pi}{6}.$$
+\end{explanation}
+
+Let's consider a couple more traditional problems combining secant and arcsecant. Remember that we must be cautious of their respective domains and ranges as with combinations of sine and arcsine and tangent and cotangent explored above.
+\item $\sec(\arcsec(-\sqrt{2}))$\\
+\begin{explanation}
+Recall from part (a), that we already solved the equation $x = \arcsec(-\sqrt{2})$, and found that $x = \frac{3\pi}{4}$. Hence, we can now plug that in to solve our current equation:
+%
+$$\sec(\arcsec(-\sqrt{2})) = \sec\!\Big(\frac{3\pi}{4}\Big) = \sqrt{2}.$$
+%
+As we have observed previously with other trig inverses, we have $\sec(\arcsec(x)) = x$ for $x$ in the domain of arcsecant. However, we must be careful in our application of this, as exemplified by the next example.
+\end{explanation}
+
+\item $\arcsec\!\Big(\!\sec\!\Big(\frac{5\pi}{4}\Big)\Big)$\\
+\begin{explanation}
+Remember that we had to restrict the domain of secant in order to define the inverse function, arcsecant. Arcsecant is thus the inverse of the {\it restricted} secant function, which has domain $[0, \pi/2)\cup (\pi/2,\pi]$. Observing that $\frac{5\pi}{4} >\pi$, and is therefore not in the domain of the restricted secant function, we cannot simply treat arcsecant as the inverse.
+
+Instead, we begin by finding $\sec\!\Big(\frac{5\pi}{4}\Big)$, which is equal to $-\sqrt{2}$.
+
+We now have  $\arcsec\!\Big(\!\sec\!\Big(\frac{5\pi}{4}\Big)\Big) = \arcsec(-\sqrt{2})$, which we found to be equal to $\frac{3\pi}{4}$ in part (a). Thus, we may conclude that 
+%
+$$\arcsec\!\Big(\!\sec\!\Big(\frac{5\pi}{4}\Big)\Big) =\frac{3\pi}{4}.$$
+\end{explanation}
+\end{enumerate}
+\end{example}
 
 \begin{summary}
   %Often ends a section
   \begin{itemize}
-\item We choose to define the restricted cosine, sine, and tangent functions on the respective domains $[0,\pi]$, $[-\frac{\pi}{2}, \frac{\pi}{2}]$, and $(-\frac{\pi}{2}, \frac{\pi}{2})$.  On each such interval, the restricted function is strictly decreasing (cosine) or strictly increasing (sine and tangent), and thus has an inverse function.  The restricted sine and cosine functions each have range $[-1,1]$, while the restricted tangent's range is the set of all real numbers.  We thus define the inverse function of each as follows:%
+\item We choose to define the restricted cosine, sine, tangent, and secant functions on the respective domains $[0,\pi]$, $[-\pi/2, \pi/2]$, $(-\pi/2, \pi/2)$, and $[0,\pi/2) \cup (\pi/2, \pi]$.
+On each such interval, the restricted function is strictly decreasing (cosine) or strictly increasing (sine,  tangent, and secant), and thus has an inverse function.  The restricted sine and cosine functions each have range $[-1,1]$, while the restricted tangent's range is the set of all real numbers, and the restricted secant's range is $(-\infty,1] \cup [1,\infty)$. 
+We thus define the inverse function of each as follows:%
 %
 \begin{enumerate}[label=\roman*.]
 \item
 For any $y$ such that $-1 \le y \le 1$, the arccosine of $y$ (denoted $\arccos(y)$) is the angle $t$ in the interval $[0,\pi]$ such that $\cos(t) = y$.  That is, $t$ is the angle whose cosine is $y$.
 %
 \item%
-For any $y$ such that $-1 \le y \le 1$, the arcsine of $y$ (denoted $\arcsin(y)$) is the angle $t$ in the interval $[-\frac{\pi}{2}, \frac{\pi}{2}]$ such that $\sin(t) = y$.  That is, $t$ is the angle whose sine is $y$.%
+For any $y$ such that $-1 \le y \le 1$, the arcsine of $y$ (denoted $\arcsin(y)$) is the angle $t$ in the interval $[-\pi/2, \pi/2]$ such that $\sin(t) = y$.  That is, $t$ is the angle whose sine is $y$.
+%
 \item
-For any real number $y$, the arctangent of $y$ (denoted $\arctan(y)$) is the angle $t$ in the interval $(-\frac{\pi}{2}, \frac{\pi}{2})$ such that $\tan(t) = y$.  That is, $t$ is the angle whose tangent is $y$.%
+For any real number $y$, the arctangent of $y$ (denoted $\arctan(y)$) is the angle $t$ in the interval $(-\pi/2, \pi/2)$ such that $\tan(t) = y$.  That is, $t$ is the angle whose tangent is $y$.
+%
+\item
+For any real number $y$, the arcsecant of $y$ (denoted $\arcsec(y)$) is the angle $t$ in the interval $[0,\pi/2) \cup (\pi/2,\pi]$ such that $\sec(t) = y$.  That is, $t$ is the angle whose secant is $y$.%
 \end{enumerate}
 %
 \item
@@ -333,12 +450,16 @@ The domain of $y = g^{-1}(t) = \arccos(t)$ is $[-1,1]$ with corresponding range 
 \includegraphics{inverse-trig-arcsin-graph.pdf}
 \end{image}
 \par
-The domain of $y = f^{-1}(t) = \arcsin(t)$ is $[-1,1]$ with corresponding range $[-\frac{\pi}{2}, \frac{\pi}{2}]$, and the arcsine function is always increasing.  These facts correspond to the domain and range of the restricted sine function and the fact that the restricted sine function is increasing on $[-\frac{\pi}{2},\frac{\pi}{2}]$.%
+The domain of $y = f^{-1}(t) = \arcsin(t)$ is $[-1,1]$ with corresponding range $[-\pi/2, \pi/2]$, and the arcsine function is always increasing.  These facts correspond to the domain and range of the restricted sine function and the fact that the restricted sine function is increasing on $[-\pi/2,\pi/2]$.%
 \par
-The domain of $y = f^{-1}(t) = \arctan(t)$ is the set of all real numbers with corresponding range $(-\frac{\pi}{2}, \frac{\pi}{2})$, and the arctangent function is always increasing.  These facts correspond to the domain and range of the restricted tangent function and the fact that the restricted tangent function is increasing on $(-\frac{\pi}{2},\frac{\pi}{2})$.%
+The domain of $y = h^{-1}(t) = \arctan(t)$ is the set of all real numbers with corresponding range $(-\pi/2, \pi/2)$, and the arctangent function is always increasing.  These facts correspond to the domain and range of the restricted tangent function and the fact that the restricted tangent function is increasing on $(-\pi/2,\pi/2)$.%
 \begin{image}
 \includegraphics{inverse-trig-arctan-graph.pdf}
 \end{image}
+\par
+The domain of $y = k^{-1}(t) = \arcsec(t)$ is $(-\infty,-1] \cup [1,\infty)$,\footnote{We note that this may also be written as $\{x: |x| \geq 1\}$.} with corresponding range $[0,\pi/2) \cup (\pi/2, \pi]$. These facts correspond to the domain and range of the restricted secant function.
+
+Do we have a graph of arcsecant to include?
   \end{itemize}
 \end{summary}
 
