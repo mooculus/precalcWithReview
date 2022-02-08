@@ -72,9 +72,9 @@ The goal of this activity is to understand key properties of the arcsine functio
 \item
 Using the definition of arcsine given above, what are the domain and range of the arcsine function? \\
 \begin{itemize}
-\item The domain of arcsine is $\answer{[-\frac{\pi}{2},\frac{\pi}{2}]}$.
+\item The domain of arcsine is $\Big[\answer{-\frac{\pi}{2}},\answer{\frac{\pi}{2}}\Big]$.
 %
-\item The range of arcsine is $\answer{[-1,1]}$.
+\item The range of arcsine is $[\answer{-1} , \answer{1}]$.
 \end{itemize}
 %
 \item Determine the following values exactly: 
@@ -201,9 +201,9 @@ Let us once again channel our inner Sherlock Holmes to understand key properties
 \item Using the definition given above, what are the domain and range of the arctangent function?
 %
 \begin{itemize}
-\item The domain of arctangent is $\answer{(-\frac{\pi}{2}, \frac{\pi}{2})}$.
+\item The domain of arctangent is $\Big(\answer{-\frac{\pi}{2}} , \answer{\frac{\pi}{2}} \Big)$.
 %
-\item The range of arctangent is $\answer{(-\infty,\infty)}$.
+\item The range of arctangent is $(\answer{-\infty} , \answer{\infty})$.
 \end{itemize}
 %
 \item Determine the following values exactly: 
@@ -328,9 +328,9 @@ Take the lead Watson, and we will deduce the key properties of the arcsecant fun
 \item
 Using the definition of arcsecant given above, what are the domain and range of the arcsecant function? \\
 \begin{itemize}
-\item The domain of arcsecant is $\answer{(-\infty,-1]} \cup \answer{[1,\infty)}$.
+\item The domain of arcsecant is $(\answer{-\infty} , \answer{-1}] \cup [\answer{1} , \answer{\infty})$.
 %
-\item The range of arcsecant is $\answer{[0,\frac{\pi}{2})} \cup \answer{(\frac{\pi}{2},\pi]}$.
+\item The range of arcsecant is $\Big[\answer{0} , \answer{\frac{\pi}{2}}\Big) \cup \Big(\answer{\frac{\pi}{2}} , \answer{\pi}\Big]$.
 \end{itemize}
 %
 \item Determine the following values exactly: 
@@ -347,12 +347,16 @@ Using the definition of arcsecant given above, what are the domain and range of 
 \item
 On the axes provided below, sketch a careful plot of the restricted secant function on the intervals $\Big[0, \frac{\pi}{2}\Big)$ and $\Big(\frac{\pi}{2}, \pi\Big]$ along with its corresponding inverse, the arcsecant function.  Label at least three points on each curve so that each point on the secant graph corresponds to a point on the arcsecant graph.  %In addition, sketch the line $y = t$ to demonstrate how the graphs are reflections of one another across this line.
 
-Can we get axes with $\pm 1$ and $\pi$ and $\frac{\pi}{2}$ labeled?
+%Can we get axes with $\pm 1$ and $\pi$ and $\frac{\pi}{2}$ labeled?
 %
 %
 \item True or false: $\arcsec(\sec(2\pi)) = 2\pi$? $\wordChoice{\choice{\text{true}}\choice[correct]{\text{false}}}$ \\
 Write a complete sentence to explain your reasoning.%
 \end{enumerate}
+
+\begin{image}
+\includegraphics[width=1\linewidth]{SecArcsecAxis.pdf}
+\end{image}
 \end{problem}
 
 \begin{callout}{\bf Properties of the arcsecant function.}%
@@ -367,12 +371,58 @@ The domain of $y = k^{-1}(t) = \arcsec(t)$ is $(-\infty, -1] \cup [1,\infty)$ wi
 The arcsecant function is always increasing on each interval in its domain.
 %
 \item Recall that $\sec(\theta) = \frac{1}{\cos(\theta)}$. Arcsecant and arccosine maintain a relationship as well, though they are {\it not} reciprocals: \\
-For $x$ in the domain of arcsecant, $\arcsec(x) = \arccos\!\Big(\frac{1}{x}\Big)$.
+For $t$ in the domain of arcsecant, $\arcsec(t) = \arccos\!\Big(\frac{1}{t}\Big)$.
 %
-\item {\em Do we have a graph to include?}
+%
+% %\includegraphics[width=1\linewidth]{arcsecantGraph.pdf}
+% 
+%  \includegraphics[width=1\linewidth]{arcsecantGraph2.pdf}
+%
+%CODE FROM STITZ ZEAGER...not sure how to make this work: 
+% \[ \begin{array}{ccc}
+%
+%\begin{mfpic}[25][20]{-0.5}{4}{-4}{4}
+%\point[3pt]{(0,1), (3.1416, -1)}
+%\axes
+%\tlabel[cc](4,-0.25){\scriptsize $x$}
+%\tlabel[cc](0.25,4){\scriptsize $y$}
+%\tcaption{\scriptsize  $f(x) = \sec(x)$ on  $\left[0, \frac{\pi}{2}\right) \cup \left( \frac{\pi}{2}, \pi\right]$}
+%\xmarks{1.5708, 3.1416}
+%\ymarks{-1,1}
+%\tlpointsep{4pt}
+%\axislabels {x}{{\scriptsize $\frac{\pi}{2}$} 1.5708,  {\scriptsize $\pi$} 3.1416}
+%\axislabels {y}{{\scriptsize $-1$} -1, { \scriptsize $1$} 1}
+%\dashed \polyline{(1.5708, -4), (1.5708, 4)}
+%\arrow \function{0, 1.3181, 0.1}{1/cos(x)}
+%\arrow  \reverse  \function{1.8235, 3.1416, 0.1}{1/cos(x)}
+%\end{mfpic}
+%
+%&
+%
+%\stackrel{\stackrel{\mbox{\scriptsize reflect across $y=x$}}{\xrightarrow{\hspace{1in}}}}{\mbox{ \scriptsize switch $x$ and $y$ coordinates}} 
+%
+%&
+%
+%\begin{mfpic}[20][25]{-4}{4}{-0.5}{4}
+%\point[3pt]{(1,0), (-1,3.1416)}
+%\axes
+%\tlabel[cc](4,-0.25){\scriptsize $x$}
+%\tlabel[cc](0.25,4){\scriptsize $y$}
+%\tcaption{\scriptsize  $f^{-1}(x) = \mbox{arcsec}(x)$}
+%\ymarks{1.5708, 3.1416}
+%\xmarks{-1,1}
+%\tlpointsep{4pt}
+%\axislabels {y}{{\scriptsize $\frac{\pi}{2}$} 1.5708,  {\scriptsize $\pi$} 3.1416}
+%\axislabels {x}{{\scriptsize $-1 \hspace{7pt}$} -1, { \scriptsize $1$} 1}
+%\dashed \polyline{(-4, 1.5708), (4, 1.5708)}
+%\arrow \parafcn{0, 1.3181, 0.1}{(1/cos(t),t)}
+%\arrow  \reverse  \parafcn{1.8235, 3.1416, 0.1}{(1/cos(t),t)}
+%\end{mfpic}
+%
+%\end{array}\]
 %Below we have a plot of the restricted tangent function (in light blue) and its corresponding inverse, the arctangent function (in dark blue).%
 \end{itemize}
-%\includegraphics[width=1\linewidth]{inverse-trig-arctan-graph.pdf}
+\includegraphics[width=1\linewidth]{secArcsecGraphst.pdf}
 \end{callout}
 
 \section{Exploring Arcsecant} 
@@ -446,21 +496,21 @@ For any real number $y$, the arcsecant of $y$ (denoted $\arcsec(y)$) is the angl
 %\par
 The domain of $y = g^{-1}(t) = \arccos(t)$ is $[-1,1]$ with corresponding range $[0,\pi]$, and the arccosine function is always decreasing.  These facts correspond to the domain and range of the restricted cosine function and the fact that the restricted cosine function is decreasing on $[0,\pi]$.
 \begin{image}
-\includegraphics{inverse-trig-arccos-graph.pdf}
-\includegraphics{inverse-trig-arcsin-graph.pdf}
+\includegraphics[width = .49\linewidth]{inverse-trig-arccos-graph.pdf}
+\includegraphics[width = .49\linewidth]{inverse-trig-arcsin-graph.pdf}
 \end{image}
 \par
 The domain of $y = f^{-1}(t) = \arcsin(t)$ is $[-1,1]$ with corresponding range $[-\pi/2, \pi/2]$, and the arcsine function is always increasing.  These facts correspond to the domain and range of the restricted sine function and the fact that the restricted sine function is increasing on $[-\pi/2,\pi/2]$.%
 \par
 The domain of $y = h^{-1}(t) = \arctan(t)$ is the set of all real numbers with corresponding range $(-\pi/2, \pi/2)$, and the arctangent function is always increasing.  These facts correspond to the domain and range of the restricted tangent function and the fact that the restricted tangent function is increasing on $(-\pi/2,\pi/2)$.%
 \begin{image}
-\includegraphics{inverse-trig-arctan-graph.pdf}
+\includegraphics[width = .49\linewidth]{inverse-trig-arctan-graph.pdf}
+\includegraphics[width=.49\linewidth]{secArcsecGraphst.pdf}
 \end{image}
 \par
 The domain of $y = k^{-1}(t) = \arcsec(t)$ is $(-\infty,-1] \cup [1,\infty)$,\footnote{We note that this may also be written as $\{x: |x| \geq 1\}$.} with corresponding range $[0,\pi/2) \cup (\pi/2, \pi]$. These facts correspond to the domain and range of the restricted secant function.
-
-Do we have a graph of arcsecant to include?
-  \end{itemize}
+%
+\end{itemize}
 \end{summary}
 
 
