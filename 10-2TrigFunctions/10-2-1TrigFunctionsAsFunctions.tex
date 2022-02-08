@@ -16,22 +16,123 @@
 %\typeout{************************************************}
 %\typeout{Subsection }
 %\typeout{************************************************}
-\section{Trig Functions as Functions}
+
 
 \begin{motivatingQuestions}
 \begin{itemize}
 \item How do trigonometric functions interact with other functions?
 \item How do we find zeros of trigonometric functions?
+\item How does average rate of change look like with trigonometric functions?
 \end{itemize}
 \end{motivatingQuestions}
+\section{Trig Function Compositions}
+
+Trigonometric functions can be composed with any of the types of functions that we have already seen. Just as with other function compostions, we need to be mindful of the domains and ranges of our functions.
 
 \begin{example}
 Let's consider the following functions: $f(x)=\sin{(x)}$ and $g(x)=3x^2$.
 \\
+Find the function below and state its domain and range
+\begin{enumerate}
+\item $f(g(x))$
+\item $g(f(x))$
+\item $f(f(x))$
+\end{enumerate}
+
 \begin{explanation}
-First, lets look at the domain.
+First let's find the domain and range of $f(x)$ and $g(x)$.\\
+The domain for both $f(x)$ and $g(x)$ is $(-\inf , \inf)$. The range for $f(x)$ is $[-1,1]$ and the range for $g(x)$ is $[0,\inf)$. Now we can look at the compositions.
+\begin{enumerate}
+\item $f(g(x))= \sin(3x^2)$\\
+The domain is $(-\infty , \infty)$ and the range is $[-1,1]$.
+\item $g(f(x)) =3\sin(x^2)$\\
+The domain is $(-\infty , \infty)$. The range is $[0,3]$
+\item $f(f(x))= \sin(\sin(x))$\\
+The domain is $(-\infty , \infty)$. The range is $[-\sin(1), \sin(1)]$.
+\end{enumerate}
 \end{explanation}
 \end{example}
+
+\section{Finding Zeros of Trigonometric Funtions.}
+\begin{example}
+$f(x)=\sin^2(x)-1$\\
+Find the zeros of $f$ for $0\leq x \leq 2\pi$\\
+\begin{explanation}
+First we need to set $f$ to equal $0$\\
+\[
+\sin^2(x)-1=0
+\]
+Now we can recognize that we have a difference of squares, so we have the following:
+\[
+\sin^2(x)-1=(\sin(x)+1)(\sin(x)-1)
+\]
+Now we can set each part equal to zero. So we have
+\[
+\sin(x)+1=0 \text{ and } \sin(x)-1 =0
+\]
+After simplifying them a bit we  have
+\[
+\sin(x) =-1 \text{ and } \sin(x)=1
+\]
+Because these are famous values of $\sin(x)$, we can find values for $x$ without using inverse trigonometry.\\
+$x=-\frac{\pi}{2},\frac{\pi}{2}$
+
+\end{explanation}
+\end{example}
+
+\begin{example}
+$f(x)=\sin^2(x)+\frac{5}{2}\sin(x)-\frac{3}{2}$\\
+Find the zeros of $f$ for $0\leq x \leq 2\pi$\\
+\begin{explanation}
+First we need to set $f$ to equal $0$\\
+$\sin^2(x)+\frac{5}{2}\sin(x)-\frac{3}{2}=0$\\
+Thankfully $f$ can factor nicely, so we have\\
+\[
+\sin^2(x)+\frac{5}{2}\sin(x)-\frac{3}{2}= (\sin(x)-\frac{1}{2})(\sin(x)+3)
+\]
+Now we set each part equal to zero.
+\[
+\sin(x)-\frac{1}{2}=0 \text{ and } \sin(x)+3 =0
+\]
+After simplifying them a bit we  have
+\[
+\sin(x) = \frac{1}{2} \text{ and } \sin(x)=-3
+\]
+$-3$ is outside of the range of $\sin(x)$ so we can disregard that term. Our only concern is the famous value where $sin(x)$ is $\frac{1}{2}$. This happens to occur in two places for $0\leq x \leq 2\pi$, so our answer is $x=\frac{\pi}{6},\frac{5\pi}{6}$
+\end{explanation}
+\end{example}
+
+
+\section{Average Rate of Change with Trigonometry}
+
+We can still find average rate of change with trigonometric functions, but because they are periodic there can be some interesting results.
+
+\begin{example}
+Let $f(x) =\sin(x)$
+\begin{enumerate}
+\item $AV_{[\frac{\pi}{6},\frac{3\pi}{4}]} $
+\item $AV_{[\frac{\pi}{3},\frac{2\pi}{3}]} $
+\end{enumerate}
+\begin{explanation}
+\begin{enumerate}
+\item $AV_{[\frac{\pi}{6},\frac{3\pi}{4}]}  = \frac{\sin(\frac{3\pi}{4})-\sin(\frac{\pi}{6})}{\frac{3\pi}{4} - \frac{\pi}{6}}$\\
+First we substitute our trig values\\
+$\frac{\sin(\frac{3\pi}{4})-\sin(\frac{\pi}{6})}{\frac{3\pi}{4} - \frac{\pi}{6}}=\frac{-\frac{\sqrt{2}}{2}-\frac{\sqrt{3}}{2}}{\frac{3\pi}{4} - \frac{\pi}{6}}$\\
+Now we simplify our fractions\\
+$\frac{-\frac{\sqrt{2}}{2}-\frac{\sqrt{3}}{2}}{\frac{3\pi}{4} - \frac{\pi}{6}}= \frac{\frac{\sqrt{2}-\sqrt{3}}{2}}{\frac{9\pi}{12} - \frac{2\pi}{12}}= \frac{\frac{\sqrt{2}-\sqrt{3}}{2}}{\frac{7\pi}{12}}$\\
+$\frac{\frac{\sqrt{2}-\sqrt{3}}{2}}{\frac{7\pi}{12}}=\frac{6(\sqrt{2}-\sqrt{3})}{7\pi}$\\
+$AV_{[\frac{\pi}{6},\frac{3\pi}{4}]} =\frac{6(\sqrt{2}-\sqrt{3})}{7\pi}$
+
+\item $AV_{[\frac{\pi}{3},\frac{2\pi}{3}]} = \frac{\sin(\frac{2\pi}{3})-\sin(\frac{\pi}{3})}{\frac{2\pi}{3} - \frac{\pi}{3}}$\\
+First we substitute our trig values\\
+$\frac{\sin(\frac{2\pi}{3})-\sin(\frac{\pi}{3})}{\frac{2\pi}{3} - \frac{\pi}{3}} = \frac{\frac{\sqrt{3}}{2}-\frac{\sqrt{3}}{2}}{\frac{2\pi}{3} - \frac{\pi}{3}}$\\
+Now we simplify\\
+$\frac{\frac{\sqrt{3}}{2}-\frac{\sqrt{3}}{2}}{\frac{2\pi}{3} - \frac{\pi}{3}}=\frac{0}{\frac{\pi}{3}}$\\
+We can see that we have $0$ in the numerator, which means that our average rate of change will be $0$. This is because we are working with a periodic function and picked values in similar positions. Even though we had positive and negative rates of change at some point between $\frac{\pi}{3}$ and $\frac{2\pi}{3}$, we ended up with the same $y$ value, so \textit{on average} there was no change.
+\end{enumerate}
+\end{explanation}
+\end{example}
+
 
 
 \end{document}
