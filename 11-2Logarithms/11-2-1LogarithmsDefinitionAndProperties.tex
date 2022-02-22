@@ -1,7 +1,7 @@
 \documentclass[nooutcomes]{ximera}
 
 \input{../preamble}
-\author{Kenneth Berglund}
+\author{David Kish}
 \license{Creative Commons Attribution-ShareAlike 4.0 International License}
 \acknowledgement{}
 
@@ -14,26 +14,310 @@
 \maketitle
 
 
+%
+%
 %\typeout{************************************************}
-%\typeout{Motivating Questions}
+%\typeout{Section 3.4 What a logarithm is}
 %\typeout{************************************************}
+%
 
-%\begin{motivatingQuestions}\begin{itemize}
-%\item What are inverse functions?
-%\end{itemize}\end{motivatingQuestions}
+\begin{motivatingQuestions}
+\begin{itemize}
+\item
+How is the base-\(10\) logarithm defined?%
+\item
+What is the ``natural logarithm'' and how is it different from the base-\(10\) logarithm?%
+\item
+How can we solve an equation that involves \(e\) to some unknown quantity?%
+\end{itemize}
+\end{motivatingQuestions}
 
+In previous sections, we introduced the idea of an inverse function.  The fundamental idea is that \(f\) has an inverse function if and only if there exists another function \(g\) such that \(f\) and \(g\) ``undo'' one another's respective processes.  In other words, the process of the function \(f\) is reversible to generate a related function \(g\).%
 
+More formally, recall that a function \(y = f(x)\) (where \(f : A \to B\)) has an inverse function if and only if there exists another function \(g : B \to A\) such that \(g(f(x)) = x\) for every \(x\) in the domain of \(f\) and \(f(g(y)) = y\).    We know that given a function \(f\), we can use the Horizontal Line Test to determine whether or not \(f\) has an inverse function.  Finally, whenever a function \(f\) has an inverse function, we call its inverse function \(f^{-1}\) and know that the two equations \(y = f(x)\) and \(x = f^{-1}(y)\) say the same thing from different perspectives.%
+\begin{exploration}
+
+Let \(P(t)\) be the ``powers of 10'' function, which is given by \(P(t) = 10^t\).%
+
+\begin{enumerate}[label=\alph*.]
+\item
+Completethe following table to generate certain values of \(P\).%
+\\
+$
+\begin{array}{llllllll}
+t&-3&-2&-1&0&1&2&3\\
+\hline
+y = P(t) = 10^t&~&~&~&~&~&~&
+\end{array}
+$
+\item
+Why does \(P\) have an inverse function?%
+\item
+Since \(P\) has an inverse function, we know there exists some other function, say \(L\), such that writing ``\(y = P(t)\)'' says the exact same thing as writing ``\(t = L(y)\)''.  In words, where \(P\) produces the result of raising \(10\) to a given power, the function \(L\) reverses this process and instead tells us the power to which we need to raise \(10\), given a desired result.  Complete the table to generate a collection of values of \(L\).%
+\\
+$
+\begin{array}{llllllll}
+y&10^{-3}&10^{-2}&10^{-1}&10^{0}&10^{1}&10^{2}&10^{3}\\
+\hline
+L(y)&~&~&~&~&~&~&
+\end{array}
+$
+\item
+What are the domain and range of the function \(P\)?  What are the domain and range of the function \(L\)?%
+\end{enumerate}
+%
+\end{exploration}
+
+%
+%
 %\typeout{************************************************}
-%\typeout{Introduction}
+%\typeout{Subsection 3.4.1 The base-\(10\) logarithm}
 %\typeout{************************************************}
-In Section 3-2-2, we briefly introduced the concept of \emph{inverse functions}. Recall that for a one-to-one function $f$, we can define the inverse function $f^{-1}$. If we think of $f$ as a process that takes some input $x$ and produces some output $f(x)$, then providing $f(x)$ as an input to $f^{-1}$ produces the original input $x$, and vice versa. Symbolically, we wrote that $f^{-1}(f(x)) = x$ and $f(f^{-1}(x)) = x$. 
+%
+\section{The base-\(10\) logarithm}
 
-For a more down-to-earth example, consider the function $b$, which has as its domain the set of all students in the class. The rule for $b$ is that if $x$ is a student, then $b(x)$ is the student's birthdate. The inverse function $b^{-1}$, then, takes a birthdate and outputs the student who was born on that date. Notice that the domain of $b^{-1}$ is not the set of all days of the year! It is only able to be defined for dates that are someone's birthday, that is, dates that are in the range of $b$. This highlights an important property of functions and their inverses: the range of $f$ is the domain of $f^{-1}$!
+The powers-of-\(10\) function \(P(t) = 10^t\) is an exponential function with base \(b \gt 1\).  As such, \(P\) is always increasing, and thus its graph passes the Horizontal Line Test, so \(P\) has an inverse function.  We therefore know there exists some other function, \(L\), such that writing \(y = P(t)\) is equivalent to writing \(t = L(y)\).  For instance, we know that \(P(2)=100\) and \(P(-3)=\frac{1}{1000}\), so it's equivalent to say that \(L(100) = 2\) and \(L(\frac{1}{1000}) = -3\).  This new function \(L\) we call the \emph{base \(10\) logarithm}, which is formally defined as follows.%
+
+Given a positive real number \(y\), the \emph{base-\(10\) logarithm of \(y\)} is the power to which we raise \(10\) to get \(y\).  We use the notation ``\(\log_{10}(y)\)'' to denote the base-\(10\) logarithm of \(y\).%
+
+The base-\(10\) logarithm is therefore the inverse of the powers of \(10\) function.  Whereas \(P(t) = 10^t\) takes an input whose value is an exponent and produces the result of taking \(10\) to that power, the base-\(10\) logarithm takes an input number we view as a power of \(10\) and produces the corresponding exponent such that \(10\) to that exponent is the input number.%
+
+In the notation of logarithms, we can now update our earlier observations with the functions \(P\) and \(L\) and see how exponential equations can be written in two equivalent ways.  For instance,%
+\begin{equation}
+10^2 = 100 \text{ and } \log_{10}(100) = 2\label{eq-exp-log-base-10-2}
+\end{equation}
+each say the same thing from two different perspectives.  The first says \(100\) is \(10\) to the power \(2\) , while the second says \(2\) is the power to which we raise \(10\) to get \(100\).  Similarly,%
+\begin{equation}
+10^{-3} = \frac{1}{1000} \text{ and } \log_{10} \left( \frac{1}{1000} \right) = -3\text{.}\label{eq-exp-log-base-10-minus-3}
+\end{equation}
+
+If we rearrange the statements of the facts in \hyperref[eq-exp-log-base-10-2]{Equation~(\ref{eq-exp-log-base-10-2})}, we can see yet another important relationship between the powers of \(10\) and base-\(10\) logarithm function.  Noting that \(\log_{10}(100) = 2\) and \(100 = 10^2\) are equivalent statements, and substituting the former equation into the latter shows, we see that%
+\begin{equation}
+\log_{10}(10^2) = 2\text{.}
+\end{equation}
+In words, the equation says that ``the power to which we raise \(10\) to get \(10^2\), is \(2\)''.  That is, the base-\(10\) logarithm function undoes the work of the powers of \(10\) function.%
+
+In a similar way, if we rearrange the statements in \hyperref[eq-exp-log-base-10-minus-3]{Equation~(\ref{eq-exp-log-base-10-minus-3})}, we can observe that by replacing \(-3\) with \(\log_{10}(\frac{1}{1000})\) we have%
+\begin{equation}
+10^{\log_{10}(\frac{1}{1000})} = \frac{1}{1000}\text{.}\label{eq-exp-log-base-10-minus-3-undo}
+\end{equation}
+In words, \hyperref[eq-exp-log-base-10-minus-3-undo]{Equation~(\ref{eq-exp-log-base-10-minus-3-undo})} says that ``when \(10\) is raised to the power to which we raise \(10\) in order to get \(\frac{1}{1000}\), we get \(\frac{1}{1000}\)''.%
+
+We summarize the key relationships between the powers-of-\(10\) function and its inverse, the base-\(10\) logarithm function, more generally as follows.%
+{\(P(t) = 10^t\) and \(L(y) = \log_{10}(y)\).}
+\begin{itemize}[label=\textbullet]
+\item
+The domain of \(P\) is the set of all real numbers and the range of \(P\) is the set of all positive real numbers.%
+\item
+The domain of \(L\) is the set of all positive real numbers and the range of \(L\) is the set of all real numbers.%
+\item
+For any real number \(t\), \(\log_{10}(10^t) = t\).  That is, \(L(P(t)) = t\).%
+\item
+For any positive real number \(y\), \(10^{\log_{10}(y)} = y\).  That is, \(P(L(y)) = y\).%
+\item
+\(10^0 = 1\) and \(\log_{10}(1) = 0\).%
+\end{itemize}
+
+The base-\(10\) logarithm function is like the sine or cosine function in this way:  for certain special values, it's easy to know by heart the value of the logarithm function.  While for sine and cosine the familiar points come from specially placed points on the unit circle, for the base-\(10\) logarithm function, the familiar points come from powers of \(10\). In addition, like sine and cosine, for all other input values, (a) calculus ultimately determines the value of the base-\(10\) logarithm function at other values, and (b) we use computational technology in order to compute these values.  For most computational devices, the command $\log(y)$ produces the result of the base-\(10\) logarithm of \(y\).%
+
+It's important to note that the logarithm function produces exact values.  For instance, if we want to solve the equation \(10^t = 5\), then it follows that \(t = \log_{10}(5)\) is the exact solution to the equation.  Like \(\sqrt{2}\) or \(\cos(1)\), \(\log_{10}(5)\) is a number that is an exact value.  A computational device can give us a decimal approximation, and we normally want to distinguish between the exact value and the approximate one.  For the three different numbers here, \(\sqrt{2} \approx 1.414\), \(\cos(1) \approx 0.540\), and \(\log_{10}(5) \approx 0.699\).%
+\begin{exploration}
+
+For each of the following equations, determine the exact value of the unknown variable.  If the exact value involves a logarithm, use a computational device to also report an approximate value.  For instance, if the exact value is \(y = \log_{10}(2)\), you can also note that \(y \approx 0.301\).%
 
 
+\begin{enumerate}[label=\alph*.]
+\item\hypertarget{li-671}{}\hypertarget{p-1473}{}%
+\(10^t = 0.00001\)%
+\item\hypertarget{li-672}{}\hypertarget{p-1474}{}%
+\(\log_{10}(1000000) = t\)%
+\item\hypertarget{li-673}{}\hypertarget{p-1475}{}%
+\(10^t = 37\)%
+\item\hypertarget{li-674}{}\hypertarget{p-1476}{}%
+\(\log_{10}(y) = 1.375\)%
+\item\hypertarget{li-675}{}\hypertarget{p-1477}{}%
+\(10^t = 0.04\)%
+\item\hypertarget{li-676}{}\hypertarget{p-1478}{}%
+\(3 \cdot 10^t + 11 = 147\)%
+\item\hypertarget{li-677}{}\hypertarget{p-1479}{}%
+\(2\log_{10}(y) + 5 = 1\)%
+\end{enumerate}
 
-\begin{summary}\begin{itemize}
-\item a
-\end{itemize}\end{summary}
+%
+\end{exploration}
+
+%
+%
+%\typeout{************************************************}
+%\typeout{Subsection 3.4.2 The natural logarithm}
+%\typeout{************************************************}
+%
+\section{The natural logarithm}
+The base-\(10\) logarithm is a good starting point for understanding how logarithmic functions work because powers of \(10\) are easy to mentally compute.  We could similarly consider the powers of \(2\) or powers of \(3\) function and develop a corresponding logarithm of base \(2\) or \(3\).  But rather than have a whole collection of different logarithm functions, in the same way that we now use the function \(e^t\) and appropriate scaling to represent any exponential function, we develop a single logarithm function that we can use to represent any other logarithmic function through scaling.  In correspondence with the natural exponential function, \(e^t\), we now develop its inverse function, and call this inverse function the \emph{natural logarithm}.%
+
+Given a positive real number \(y\), the \emph{natural logarithm of \(y\)} is the power to which we raise \(e\) to get \(y\).  We use the notation ``\(\ln(y)\)'' to denote the natural logarithm of \(y\).%
+
+We can think of the natural logarithm, \(\ln(y)\), as the ``base-\(e\) logarithm''.  For instance,%
+\begin{equation*}
+\ln(e^2) = 2
+\end{equation*}
+and%
+\begin{equation*}
+e^{\ln(-1)} = -1\text{.}
+\end{equation*}
+The former equation is true because ``the power to which we raise \(e\) to get \(e^2\) is \(2\)''; the latter equation is true since ``when we raise \(e\) to the power to which we raise \(e\) to get \(-1\), we get \(-1\)''.  The key relationships between the natural exponential and the natural logarithm function are investigated in \hyperref[act-exp-log-natural]{Activity~\ref{act-exp-log-natural}}.%
+\begin{exploration}
+Let \(E(t) = e^t\) and \(N(y) = \ln(y)\) be the natural exponential function and the natural logarithm function, respectively.%
+
+\begin{enumerate}[label=\alph*.]
+\item\hypertarget{li-678}{}\hypertarget{p-1487}{}%
+What are the domain and range of \(E\)?%
+\item\hypertarget{li-679}{}\hypertarget{p-1488}{}%
+What are the domain and range of \(N\)?%
+\item\hypertarget{li-680}{}\hypertarget{p-1489}{}%
+What can you say about \(\ln(e^t)\) for every real number \(t\)?%
+\item\hypertarget{li-681}{}\hypertarget{p-1490}{}%
+What can you say about \(e^{\ln(y)}\) for every positive real number \(y\)?%
+\item\hypertarget{li-682}{}\hypertarget{p-1491}{}%
+Complete the following tables with both exact and approximate of \(E\) and \(N\).  Then, plot the corresponding ordered pairs from each table on the axes below and connect the points in an intuitive way.  When you plot the ordered pairs on the axes, in both cases view the first line of the table as generating values on the horizontal axis and the second line of the table as producing values on the vertical axis label each ordered pair you plot appropriately.%
+%
+\\
+$
+\begin{array}{llllll}
+\multicolumn{1}{c}{t}&\multicolumn{1}{c}{-2}&\multicolumn{1}{c}{-1}&\multicolumn{1}{c}{0}&\multicolumn{1}{c}{1}&\multicolumn{1}{c}{2}\\
+\hline
+E(t)=e^t&e^{-2} \approx 0.135&&&&
+\end{array}
+$
+\\
+$
+\begin{array}{llllll}
+\multicolumn{1}{c}{y}&\multicolumn{1}{c}{e^{-2}}&\multicolumn{1}{c}{e^{-1}}&\multicolumn{1}{c}{1}&\multicolumn{1}{c}{e^1}&\multicolumn{1}{c}{e^2}\\
+\hline
+N(y)=\ln(y)&-2&&&&
+\end{array}
+$
+%
+
+\includegraphics[width=1\linewidth]{images/exp-log-blank-axes}
+
+\end{enumerate}
+%
+\end{exploration}
+%
+%
+%\typeout{************************************************}
+%\typeout{Subsection 3.4.3 \(f(t) = b^t\) revisited}
+%\typeout{************************************************}
+%
+\section{Revisiting $f(t) = b^t$}
+
+In earlier sections, we saw that that function \(f(t) = b^t\) plays a key role in modeling exponential growth and decay, and that the value of \(b\) not only determines whether the function models growth (\(b \gt 1\)) or decay (\(0 \lt b \lt 1\)), but also how fast the growth or decay occurs.  Furthermore, once we introduced the natural base \(e\), we realized that we could write every exponential function of form \(f(t) = b^t\) as a horizontal scaling of the function \(E(t) = e^t\) by writing%
+\begin{equation*}
+b^t = f(t) = E(kt) = e^{kt}
+\end{equation*}
+for some value \(k\).  Our development of the natural logarithm function in the current section enables us to now determine \(k\) exactly.%
+\begin{example}
+
+Determine the exact value of \(k\) for which \(f(t) = 3^t = e^{kt}\).%
+
+\begin{explanation} Since we want \(3^t = e^{kt}\) to hold for every value of \(t\) and \(e^{kt} = (e^k)^t\), we need to have \(3^t = (e^k)^t\), and thus \(3 = e^k\).  Therefore, \(k\) is the power to which we raise \(e\) to get \(3\), which by definition means that \(k = \ln(3)\).%
+\end{explanation}
+\end{example}
+
+In modeling important phenomena using exponential functions, we will frequently encounter equations where the variable is in the exponent, like in the example where we had to solve \(e^k = 3\).  It is in this context where logarithms find one of their most powerful applications.  
+\begin{example}
+Solve each of the following equations for the exact value of the unknown variable.  If there is no solution to the equation, explain why not.%
+
+\begin{enumerate}[label=\alph*.]
+\item
+\(e^t = \frac{1}{10}\)%
+\item
+\(5e^{t}=7\)%
+\item
+\(\ln(t) = -\frac{1}{3}\)%
+\item
+\(e^{1-3t} = 4\)%
+\item
+\(2\ln(t) + 1 = 4\)%
+\item
+\(4 - 3e^{2t} = 2\)%
+\item
+\(4 + 3e^{2t} = 2\)%
+\item
+\(\ln(5 - 6t) = -2\)%
+\end{enumerate}
+\begin{explanation}
+\begin{enumerate}[label=\alph*.]
+\item
+\(e^t = \frac{1}{10}\)\\
+$t=\ln{\left(\frac{1}{10}\right)}$
+\item
+\(5e^{t}=7\)\\
+$t=\ln{\left(\frac{5}{7}\right)}$
+\item
+\(\ln(t) = -\frac{1}{3}\)\\
+$t=e^{\frac{1}{3}}$
+\item
+\(e^{1-3t} = 4\)\\
+$1-3t = \ln(4)$\\
+$-3t = \ln(4)-1$\\
+$t = \frac{\ln(4)-1}{-3}$
+\item
+\(2\ln(t) + 1 = 4\)\\
+$2\ln(t) = 3$\\
+$\ln(t) = \frac{3}{2}$\\
+$t = e^{\frac{3}{2}}$
+\item
+\(4 - 3e^{2t} = 2\)\\
+$-3e^{2t} = -2$\\
+$e^{2t} = \frac{2}{3}$\\
+$2t = \ln\left({\frac{2}{3}}\right)$\\
+$t = \frac{\ln\left({\frac{2}{3}}\right)}{2}$
+\item
+\(4 + 3e^{2t} = 2\)\\
+$3e^{2t} = -2$\\
+$e^{2t} = \frac{-2}{3}$\\
+No solution, because $\frac{-2}{3}$ is outside of the range of $e^{2t}$
+\item
+\(\ln(5 - 6t) = -2\)\\
+$\ln(5 - 6t) = -2$\\
+$5-6t=e^{-2}$\\
+$t=\frac{e^{-2}-5}{-6}$
+\end{enumerate}
+\end{explanation}
+%
+\end{example}
+
+%
+%
+%\typeout{************************************************}
+%\typeout{Subsection 3.4.4 Summary}
+%\typeout{************************************************}
+%
+
+\begin{summary}
+\begin{enumerate}
+\item
+The base-\(10\) logarithm of \(y\), denoted \(\log_{10}(y)\) is defined to be the power to which we raise \(10\)  to get \(y\).  For instance, \(\log_{10}(1000) = 3\), since \(10^3 = 1000\).  The function \(L(y) = \log_{10}(y)\) is thus the inverse of the powers-of-\(10\) function, \(P(t) = 10^t\).%
+\item
+The natural logarithm \(N(y) = \ln(y)\)  differs from the base-\(10\) logarithm in that it is the logarithm with base \(e\) instead of \(10\), and thus \(\ln(y)\) is the power to which we raise \(e\) to get \(y\).  The function \(N(y) = \ln(y)\) is the inverse of the natural exponential function \(E(t) = e^t\).%
+\item
+The natural logarithm often enables us solve an equation that involves \(e\) to some unknown quantity.  For instance, to solve \(2e^{3t-4} + 5 = 13\), we can first solve for \(e^{3t-4}\) by subtracting \(5\) from each side and dividing by \(2\) to get%
+\begin{equation*}
+e^{3t-4} = 4\text{.}
+\end{equation*}
+This last equation says ``\(e\) to some power is \(4\)''.  We know that it is equivalent to say%
+\begin{equation*}
+\ln(4) = 3t-4\text{.}
+\end{equation*}
+Since \(\ln(4)\) is a number, we can solve this most recent linear equation for \(t\).  In particular, \(3t = 4 + \ln(4)\), so%
+\begin{equation*}
+t = \frac{1}{3}(4 + \ln(4))\text{.}
+\end{equation*}
+%
+\end{enumerate}
+\end{summary}
+
 
 \end{document}
