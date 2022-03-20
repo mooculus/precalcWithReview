@@ -1,7 +1,7 @@
 \documentclass{ximera}
 
 \input{../preamble.tex}
-\author{Elizabeth Miller}
+\author{Elizabeth Campolongo}
 \license{Creative Commons Attribution-ShareAlike 4.0 International License}
 \acknowledgement{https://spot.pcc.edu/math/orcca/ed2/html/section-technical-definition-of-a-function.html, https://activecalculus.org/prelude/sec-changing-functions-models.html, https://openstax.org/books/college-algebra/pages/3-1-functions-and-function-notation}
 
@@ -14,5 +14,67 @@
 \maketitle
 
 Coming Soon.
+
+Recall in Section 3-2-3 that we briefly discussed the square root function..
+
+
+%This exemplifies the fact that, 
+In general, the square root is not one-to-one when used for {\em solving} equations. Instead, the output must be chosen. For instance, the square root of 9 is 3, since the square root {\em function} is only defined on $[0,\infty)$. However, if we wish to solve the equation $x^2=9$, the solution is not $x=3$, or, to be more precise, there are \textbf{two} solutions: $x=3$ \textbf{and} $x = -3$, since both $3^2$ and $(-3)^2$ are equal to 9. This can be demonstrated by solving the equation through factoring:
+$$0=x^2-9 =(x+3)(x-3),$$
+which has {\em two} solutions: $x=3$ and $x = -3$.
+
+$\sqrt{}$ is not one-to-one so you must {\em choose} which value makes sense in the context, or list both.
+
+\begin{definition}
+For any real number $x$, the $n^{th}$ root of $x$ is denoted by 
+$$\sqrt[n]{x} = x^{\frac{1}{n}}.$$
+%
+It is further defined as the real number $y$ such that 
+$$y^n = x.$$
+Note that if $n$ is \textbf{even}, then both $y^n$ and $(-y)^n$ will be equal to $x$, so the $n^{th}$ root is actually $|y|$, since we define the $n^{th}$ root {\em function} to produce values in $[0,\infty)$ for $n$ even as with the more-common square root. Further note that the input of an even $n^{th}$ root (the $x$ in $\sqrt[n]{x}$) must be in $[0,\infty)$ as well.
+
+However, if $n$ is \textbf{odd}, then there is only one such $y$, and {\em both} the input and output of the $n^{th}$ root function are in $(-\infty,\infty)$.
+\end{definition}
+
+\begin{example}
+We demonstrate a few common even and odd $n^{th}$ roots to highlight this distinction.
+\begin{enumerate}
+\item $\sqrt[3]{8} = 2$, since $2 \cdot 2 \cdot 2 = 8$.
+
+\item $\sqrt[3]{-8} = - 2$, since $-2 \cdot (-2) \cdot (-2) = 4 \cdot (-2) = -8$.
+
+\item $\sqrt[4]{16} = 2$, since $2 \cdot 2 \cdot 2 \cdot 2 \cdot 2 = 4 \cdot 4 = 16$. However, the $4^{th}$ root of -16 is not defined.
+
+\item $\sqrt[4]{0} =0$, since zero times any number is always zero. This is {\em the} example of an even $n^{th}$ root that has only {\em one} solution.
+
+\item Likewise, $\sqrt[125]{0} = 0$.
+\end{enumerate}
+\end{example}
+
+Generally speaking, we use $n^{th}$ roots to solve equations, in which case we must be careful to understand the context of application as explained above with the square root.
+
+If we are asked to find all values $x$ such that $x^2=4$, then the question is asking which values of $x$ multiplied by themselves give 4. In other words, find $x$ such that $x \cdot x$ is equal to 4. It is simple to see that there are two values which make this true:
+$$x\cdot x = 1\cdot x \cdot x = (-1)^2 \cdot x \cdot x = -1 \cdot x \cdot (-1)\cdot x = -x \cdot (-x),$$
+by the distributive property of multiplication. Thus, both $x$ and $-x$ will be solutions. In solving an equation, it is common to express this as follows.
+\begin{align*}
+x^2 &= 4 \\
+\sqrt{x^2} &= \sqrt{4} \\
+\pm x &= 2,
+\end{align*}
+which translates to $x = \pm 2$. This is because the square root of a number is always non-negative; {\em however}, we are looking for the value that makes this equation true, and since $f(x)=x^2$ is \textbf{not} one-to-one, there are two values of $x$ which make it equal to any positive number, as demonstrated above.
+%do \textbf{not} restrict the range of the $n^{th}$ root to $[0,\infty)$, but allow it to produce a negative value. In this case, the $n^{th}$ root is no longer one-to-one for even $n$.
+
+
+\begin{callout}
+{\bf Warning:} Solving an equation like $x^2 = 4$ is very different than computing $\sqrt{4} = 2$. To solve the equation, one rewrites it as $x^2-4=0$, then factors it as $(x-2)(x+2) = 0$, and concludes that $x=-2$ or $x=2$. However, people often write this sloppily as $x = \pm 2$, and proceed to say {\bf wrong} things such as $\sqrt{4} = \pm 2$. Square roots are always non-negative, so $\sqrt{4}=2$ is the only correct equality. To relate this back with solving the equation $x^2=4$, one could alternatively take the square root of both sides, leading to $\sqrt{x^2} = \sqrt{4}$. The square root of a square is not the original number, but its absolute value instead. This means that instead of writing the next step as $x=2$ (which would lead us to miss the solution $x=-2$), we should write $|x| = 2$. Which real numbers have absolute value equal to $2$? Just $x=2$ and $x=-2$.
+
+This is true for any {\em even} root, for instance, consider the equation $x^4 = 16$. If we take the fourth root ($\sqrt[4]{}$) of both sides, we then have $x = \pm 2$. However, if we have $x^3 = 8$, when we take the third root, we get only one solution, $x=2$. Factoring, we can see why this is the case: $x^3=8$ is equivalent to 
+$$0=x^3 - 8=(x-2)(x^2+2x+4),$$
+which has only one real solution, $x=2$.
+
+However, {\em odd} roots have the unique property that they can be applied to {\em negative} numbers. Following the pattern above, $x^2=-4$ has no real solutions since the square root is only defined for values greater or equal to zero. However, $x^3=-8$ does have a solution: $x=-2$, we can check this easily by multiplying out 
+$$(-2)^3=(-2)\cdot(-2)\cdot(-2) = 4 \cdot (-2) = -8.$$
+It is important to note that the partentheses around the ``-2" terms are {\bf not} optional. 
+\end{callout}
 
 \end{document}
