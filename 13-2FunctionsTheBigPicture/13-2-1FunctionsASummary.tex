@@ -98,7 +98,28 @@ One application of the logistic function is to model population growth. At time 
 
 A very reasonable question to ask would be ``How can this be used to model populations if its range is $(0, 1)$?'' The answer is that function transformations allow us to fit the function to our specific need. For example, if the carrying capacity is 5000, instead of using $f(x)$ to model the population, we would use $5000f(x)$. We can use horizontal stretches and compressions to adjust how steep the growth is and use horizontal shifts to adjust the starting population. 
 
+A more general form of the logistic function would then be something of the form $$Kf(r(x - h)) = \frac{K}{1 + e^{-r(x - h)}}.$$ The value $K$ adjusts the vertical stretch and therefore the carrying capacity. The value $r$ corresponds to a horizontal compression or stretch. For the logistic function, this affects the steepness of the graph. As usual, $h$ represents a horizontal shift. 
+
+\begin{exploration}
+Here is a table containing Columbus population data from Wikipedia. 
+
+
+Use the following Desmos link to answer the following questions. 
+\begin{center}
+\desmos{ymiuslnbqw}{800}{600} 
+\end{center}
+\begin{enumerate}[label=\alph*.]
+\item Experiment with the sliders to find values of $K$, $r$, and $h$ that make $\frac{K}{1 + e^{-r(x - h)}}$ a model for the data above that is as suitable as possible. Answers may vary. 
+\item Based on your values of $K$, $r$, and $h$, what is the carrying capacity of the population of Columbus?
+\item Use your model to estimate the population of Columbus in 2020. 
+\item The actual population of Columbus in 2020 was 905,748. Does this agree with the model you found? Why do you think this is the case?
+\end{enumerate}
+
+\end{exploration}
+
 \subsection{Inverse Function}
 Another fun fact about the function $f$ is that it is one-to-one, and therefore, invertible. 
+
+
 
 \end{document}
