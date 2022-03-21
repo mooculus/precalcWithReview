@@ -15,7 +15,7 @@ For the following word problems, determine what type of function is needed to so
 %ex2.3.4 in stitz-zeager
 
 She wants to maximize the area of the pasture. What type of function will she need to do this calculation?\\
-$\answer{quadratic}$
+$\wordChoice{\choice{linear}\choice[correct]{quadratic}\choice{cubic}\choice{logarithmic}\choice{exponential}}$
 \begin{exercise}
 She will need a quadratic equation to maximize the Area. If we let $\ell$ denote the length adjacent to the river and $w$ denote the width of the pasture, the formula for the area in terms of width is
 $$A(w) = \answer{-2}w^2 + \answer{200w}.$$
@@ -27,16 +27,88 @@ $A(w) = \answer{-}w^2 + \answer{100w}$.
 \end{exercise}
 
 %%%%%%%%%%%%%%%%%%%%%%
+\item  Iodine-131 is a commonly used radioactive isotope used to help detect how well
+the thyroid is functioning. Suppose the decay of Iodine-131 follows the model $A(t) = A_0e^{kt}$,
+and that the half-life10 of Iodine-131 is approximately 8 days. 
+If 5 grams of Iodine-131 is present
+initially, find a function which gives the amount of Iodine-131, $A$, in grams, $t$ days later.
+
+What type of equation would be needed to solve this?\\
+$\wordChoice{\choice{linear}\choice{quadratic}\choice{cubic}\choice{logarithmic}\choice[correct]{exponential}}$.
+\begin{exercise}
+The model is $A(t) = A_0e^{kt}$, where $A(0)=A_0$ the initial amount of the element, $k<0$. is the constant of proportionality which satisfies the equation. \\
+Now, find the function to represent the amount of Iodine-131, in grams, after $t$ days. \\
+$A(t) = \answer{5}e^{-\answer{t} \frac{\answer{\ln(2)}}{\answer{8}}}$
+\end{exercise}
+
+
+%%%%%%%%%%%%%%%%%%%%%%
+\item The half-life of the radioactive isotope Carbon-14 is about 5730 years.
+
+Express the amount of Carbon-14 left from an initial $N$ milligrams
+as a function of time $t$ in years.
+
+What type of equation would be needed to solve this?\\
+$\wordChoice{\choice{linear}\choice{quadratic}\choice{cubic}\choice{logarithmic}\choice[correct]{exponential}}$.
+\begin{exercise}
+The model is $A(t) = A_0e^{kt}$, where $A(0)=A_0$ the initial amount of the element, $k<0$. is the constant of proportionality which satisfies the equation. \\
+Now, find the function to represent the amount of Carbon-14, in grams, after $t$ years. \\
+$A(t) = \answer{N}\answer{e}^{-\answer{t} \frac{\answer{\ln(2)}}{\answer{5730}}}$
+\end{exercise}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%
 \item To mail a rectangular box with USPS Parcel Post, the box must satisfy the inequality ``Length $+$ Girth $\leq 130$ inches." Assuming we want to ship a rectangular box with a square face of side-length $x$. The length is the longest side of the box (not the square part). The girth is the sum of the four sides of the square ($4x$).
 
 We are looking to maximize the volume of such a box. What type of equation would be needed to solve this?\\
-$\answer{\text{cubic}}$.
+$\wordChoice{\choice{linear}\choice{quadratic}\choice[correct]{cubic}\choice{logarithmic}\choice{exponential}}$.
 %
 \begin{exercise}
 We maximize the volume with a cubic equation given by $V(x) = \answer{-4}x^3+\answer{130x^2}$.
 \begin{exercise}
 If we instead wanted to ship via another method where the ``Length $+$ Girth $\leq 130$ inches," what would be our new volume function for the same square-faced rectangular box?\\
 We maximize the volume with a cubic equation given by $V(x) = \answer{-4}x^3+\answer{108x^2}$.
+\end{exercise}
+\end{exercise}
+
+%%%%%%%%%%%%%%%%%%%%%%
+\item The information entropy $H$, in bits, of a randomly generated password consisting
+of $n$ characters is given by $H = n\log_2(N)$, where $N$ is the number of possible symbols for each
+character in the password. In general, the higher the entropy, the stronger the password.
+
+If a 7 character case-sensitive password is comprised of letters and numbers only, find the
+associated information entropy.
+What type of equation would be needed to solve this?\\
+$\wordChoice{\choice{linear}\choice{quadratic}\choice{cubic}\choice[correct]{logarithmic}\choice{exponential}}$.
+\begin{exercise}
+Write out the equation to solve this question.\\
+$H = \answer{7}\log_{\answer{2}}(\answer{62}) = \answer{7}\frac{\answer{\ln(62)}}{\ln(\answer{2})}$.
+
+\begin{exercise}
+How many possible symbol options per character is required to produce a 7 character password
+with an information entropy of 50 bits?\\
+Again, write out the equation to solve this question.\\
+$\answer{50} = \answer{7}\log_{\answer{2}}(\answer{N})$.
+\end{exercise}
+\end{exercise}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%
+\item Suppose you invest \$2000 in an account which offers 7.125\% compounded monthly. Without adding to your initial investment, you want to know how much will be in the account after $t$ years. 
+
+What type of equation would be needed to solve this?\\
+$\wordChoice{\choice{linear}\choice{quadratic}\choice{cubic}\choice{logarithmic}\choice[correct]{exponential}}$.
+\begin{exercise}
+Compound interest can be represented by the function
+$$A(t) = P\left(1+\frac{r}{n}\right)^{nt},$$
+where $P$ is the principal invested at an annual rate $r$, and the interest is compounded $n$ times per year. Then $A(t)$ represents the amount in the account after
+%
+$\wordChoice{\choice{n \ months}\choice{t \ months}\choice{n \ years}\choice[correct]{t \ years}}$.
+
+\begin{exercise}
+Express the amount in the account $A$ as a function of the term of the investment in $t$ years.\\
+$A(t) = \answer{2000}(\answer{1}+ \answer{\frac{0.07125}{12}})^{\answer{12t}}$
 \end{exercise}
 \end{exercise}
 

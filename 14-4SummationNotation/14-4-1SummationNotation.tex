@@ -1,0 +1,220 @@
+\documentclass[nooutcomes]{ximera}
+
+\input{../preamble}
+\author{Ivo Terek}
+\license{Creative Commons Attribution-ShareAlike 4.0 International License}
+%\acknowledgement{https://www.stitz-zeager.com/szca07042013.pdf}
+
+\title{Summation Notation}
+
+\begin{document}
+\begin{abstract}
+  
+\end{abstract}
+\maketitle
+
+\begin{motivatingQuestions}\begin{itemize}
+  \item What is the sum of the the first $n$ integers, $1+2+3+\cdots + n$?
+  \item Is there an efficient way of dealing with sums of lots of numbers, without having to write them out one by one?
+  \item How to make sense of complicated mathematical expressions like $\sum_{k=1}^n (3k-2^k+1)$, and what does $\sum$ mean?
+\end{itemize}\end{motivatingQuestions}
+
+%\typeout{************************************************}
+%\typeout{Introduction}
+%\typeout{************************************************}
+\section{Introduction}
+
+Germany, 1787. Imagine a very rowdy middle school classroom. The math teacher, out of patience, tells the students to add all integers from $1$ to $100$, in the hopes that he would finally be able get some silence and hear his own thoughts. Just a few seconds after the problem was posed, Carl, one of his students, simply walks to the board and writes ``$5050$'' as the answer. The teacher, completely surprised, asked Carl to explain his reasoning. And the trick, in hindsight, was rather simple. Writing $$S=1+2+3+\cdots + 98+99+100$$for the desired sum, Carl rewrote the sum backwards: $$S = 100+99+98+\cdots+3+2+1,$$and noted that twice the sum $S$ was equal to a sum of $100$ pairs, which add to $101$ each: $$2S = (1+100)+(2+99)+(3+98)+\cdots +(98+3)+(99+1)+(100+1).$$So $2S = 100 \times 101  =10100$, and hence $S=5050$.
+
+Johann Carl Friedrich Gauss (1777--1855) grew up to be one of the greatest mathematicians to have ever lived. In this unit, we will learn how \emph{summation notation} -- a powerful device to deal more easily with sums of a large number of terms -- works, and we'll apply it to understand how to obtain actual formulas giving the result of adding all integers from $1$ to $100$, and more.
+
+\subsection{Basic Properties}
+
+
+Assume that $a_1, a_2, \ldots, a_9$ and $a_{10}$ are all real numbers, and say we want to consider their sum. Instead of painstakingly writing every single term, we write $$\sum_{i=1}^{10} a_i = a_1+a_2+\cdots + a_9 + a_{10}.$$Here's how to read this: the symbol $\sum$ stands for the capital Greek letter \emph{sigma} (so ``s'' for ``sum'') and $i$ is a \emph{dummy index} which will take the values from $1$ to $10$, as indicated in the notation. In other words, it's the ``sum of the $a_i$'s as $i$ ranges from $1$ to $10$''.
+
+There is no reason to stop at $10$, however. For any positive integer $n$, we write $$\sum_{i=1}^na_i = a_1+\cdots + a_n.$$
+
+Let's elaborate further on what we meant by saying that $i$ is a dummy index: the value of the actual sum doesn't depend on what we actually named the index $i$. More precisely, how does writing $\sum_{i=1}^n a_i$ in full works?
+
+\begin{itemize}
+\item Substitute $i$ with $1$, so we have $a_1$.
+\item  Then substitute $i$ with $2$, and add to the previous result, so we have $a_1+a_2$.
+\item Then subsitute $i$ with $3$, and add to the previous result, so we have $a_1+a_2+a_3$.
+\item Keep going until we reach $i=n$, and then stop.
+\end{itemize}
+
+The index $i$ itself does not appear in the full sum $a_1+\cdots+a_n$, as it only worked as a placeholder to indicate the integers we would plug for $i$ in $a_i$. We could have used a different index, as in $$\sum_{i=1}^na_i = \sum_{j=1}^na_j = \sum_{k=1}^na_k = \sum_{\ell=1}^na_\ell = \sum_{m=1}^n a_m = \cdots = a_1+\cdots+a_n.$$What really matters here is the integer $n$, which tells us when we should stop adding. The ``bounds of summation'' $1$ and $n$ could have been some other numbers, so writing things such as $$\sum_{j=3}^{n-2}a_j = a_3+\cdots + a_{n-2}$$also makes perfect sense.
+
+\begin{example}
+  Write the sum $\sum_{i=1}^4 (2^i + 3i)$ in full and evaluate it.
+
+  \begin{explanation}
+    We have that $$\sum_{i=1}^4(2^i+3i) = (2^1+3\cdot 1) + (2^2+3\cdot 2)+(2^3+3\cdot 3) + (2^4+3\cdot 4) = 60. $$
+  \end{explanation}
+\end{example}
+
+\begin{example}
+  Write the sum $\sum_{j=1}^5 \frac{3}{j+1}$ in full and evaluate it.
+
+  \begin{explanation}
+    We have that $$\sum_{j=1}^5 \frac{3}{j+1} = \frac{3}{1+1}+\frac{3}{2+1}+\frac{3}{3+1}+\frac{3}{4+1}+\frac{3}{5+1} = \frac{87}{20}$$Observe that this is the same thing as computing the sum $\sum_{k=2}^6 \frac{3}{k}$, as if we let $k=j+1$, then $k=2$ when $j=1$, and $k=6$ when $j=5$. At this point, $k$ is again a dummy index, which we may just as well rename as $j$, so that $$\sum_{j=1}^5 \frac{3}{j+1}=\sum_{j=2}^6\frac{3}{j}.$$We will see later how renaming indices, as silly as it may seem, will turn out to be a useful technique for deriving some nice closed formulas for certain sums.
+  \end{explanation}
+\end{example}
+
+\begin{example}
+  Write $$\sum_{k=4}^6 \frac{2k}{k-3}$$ in full and evaluate it.
+
+  \begin{explanation}
+    We have that $$\sum_{k=4}^6 \frac{2k}{k-3} = \frac{2\cdot 4}{4-3}+\frac{2\cdot 5}{5-3} + \frac{2\cdot 6}{6-3} = 17.$$
+  \end{explanation}
+\end{example}
+
+\begin{exploration}
+  Write the following sums in full and evaluate them:
+
+  \begin{enumerate}
+  \item $\sum_{k=3}^6 (k+1)$
+  \item $\sum_{\ell=2}^5 3^{k-2}$
+  \item $\sum_{j=1}^4 j^2$
+  \end{enumerate}
+\end{exploration}
+
+There are some basic properties of the summation notation which will allow us to manipulate those symbols more easily.
+
+\begin{callout}
+  {\bf Theorem:} Let $n$ be a positive integer, and $a_1,\ldots,a_n,b_1,\ldots,b_n,c$ be all real numbers. Then we have that
+  \begin{itemize}
+  \item $\sum_{i=1}^n (a_i+b_i) = \sum_{i=1}^n a_i + \sum_{i=1}^n b_i$;
+  \item $\sum_{i=1}^n ca_i = c\sum_{i=1}^na_i$;
+  \item $\sum_{i=1}^n 1 = n$.
+  \end{itemize}
+\end{callout}
+
+Let's justify these properties properly. For the first one, we have:
+\begin{align*}
+  \sum_{i=1}^n(a_i+b_i) &= (a_1+b_1) + \cdots + (a_n+b_n) \\ &= a_1+b_1+\cdots + a_n+b_n \\ &\stackrel{(\ast)} = a_1+\cdots + a_n+b_1+\cdots + b_n \\ &= \sum_{i=1}^n a_i+\sum_{i=1}^nb_i.
+\end{align*}where in $(\ast)$ we have used that addition is ``commutative'', that is, the order in which we add the numbers doesn't matter. For the second one, we just have to literally factor $c$ out of all the terms in a sum: $$\sum_{i=1}^n ca_i = ca_1+ \cdots + ca_n = c(a_1+\cdots+a_n)=c\sum_{i=1}^n a_i.$$As for the last property stated, it might seem a bit unnerving to consider $\sum_{i=1}^n 1$ as $i$ doesn't appear in the expression ``$1$'' being added. But don't let this throw you off your game: for $i=1$, we have $1$. For $i=2$, we have $1$ to be added to the previous result, so $1+1$. Then for $i=3$, we have $1$ yet again to be added to the previous result, so $1+1+1$. Going on and on, we see that $\sum_{i=1}^n1$ is just a contrived way to add $1$ to itself $n$ times, so the result is (not surprisingly), $n$.
+
+\begin{example}
+  Write the sum $\sum_{i=1}^n(3a_i-4b_i+5)$ in terms of the sums $\sum_{i=1}^na_i$ and $\sum_{i=1}^n b_i$.
+
+  \begin{explanation}
+    We just have to use all properties just established together:
+    \begin{align*}
+      \sum_{i=1}^n(3a_i-4b_i+5) &= \sum_{i=1}^n(3a_i) + \sum_{i=1}^n (-4b_i) + \sum_{i=1}^n 5 \\ &= 3\sum_{i=1}^n a_i - 4\sum_{i=1}^nb_i + 5\sum_{i=1}^n 1 \\ &= 3\sum_{i=1}^n a_i - 4\sum_{i=1}^nb_i + 5n.
+    \end{align*}
+
+  \end{explanation}
+\end{example}
+
+\subsection{Sum of consecutive integers, squares, and cubes}
+
+Let's compute the sum $S = 1+2+\cdots +(n-1)+ n$, where $n$ is a fixed positive integer. We have already seen how Gauss solved the case $n=100$ in the introduction to this unit. Repeating his argument, we have that $$S = n + (n-1)+\cdots +2+1,$$so twice the sum $S$ equals to a sum of $n$ pairs, which added to $n+1$ each: $$2S = (1+n) + (2+n-1)+\cdots + (n-1+2) + (n+1),$$so $2S = n(n+1)$, and so $S = n(n+1)/2$. Understanding how this works with summation notation will help us obtain other formulas of the sort later (for which a direct calculation like the one did here may not be so simple). So, we want to compute the sum $$S = \sum_{k=1}^n k.$$Start writing$$\sum_{k=1}^n (k+1)^2 = \sum_{k=1}^n (k^2 + 2k+1) = \sum_{k=1}^n k^2 + 2\sum_{k=1}^n k + \sum_{k=1}^n 1.$$We wish to solve for the second term in the very last right hand side, but we have no idea what is the value of the sum of squares. Note, however, that $k$ on the left side is a dummy index. So let, say, $m=k+1$. Then $m=2$ when $k=1$ and $m=n+1$ when $k=n$, meaning that $$\sum_{k=1}^n(k+1)^2 = \sum_{m=2}^{n+1} m^2 = -1 + \sum_{m=1}^n m^2 + (n+1)^2.$$On the summation of the right side, we may rename $m$ back to $k$, after all, it is a dummy index. Putting everything together leads to $$-1+\sum_{k=1}^nk^2+(n+1)^2 = \sum_{k=1}^n k^2+2\sum_{k=1}^nk+n,$$as $\sum_{k=1}^n 1=n$. Now, we may solve for $\sum_{k=1}^nk$:
+\begin{align*} 2\sum_{k=1}^nk &= (n+1)^2-n-1 \\ &= n^2+2n+1-n-1 \\ &= n^2+n =n(n+1)\end{align*}Hence, we conclude that:
+\begin{callout}
+The sum of the first $n$ integers equals $$\sum_{k=1}^n k = \frac{n(n+1)}{2}.$$  
+\end{callout}
+
+\begin{example}
+  Evaluate the sum $\sum_{i=1}^6 (4i-2)$.
+
+  \begin{explanation}
+  This time, we have that
+  \begin{align*}
+    \sum_{i=1}^6 (4i-2) &= \sum_{i=1}^64i + \sum_{i=1}^6(-2) \\ &= 4\sum_{i=1}^ni - 2\sum_{i=1}^61 \\ &= 4\frac{6(6-1)}{2} - 2\cdot 6 \\ &= 60-12 \\ &= 48.
+  \end{align*}
+  \end{explanation}
+\end{example}
+
+\begin{exploration}
+  Evaluate the sum $\sum_{j=1}^{15} (6j+5)$.
+\end{exploration}
+
+
+And what about the sum of squares $$\sum_{k=1}^n k^2 = 1^2+2^2+\cdots + (n-1)^2 + n^2,$$where a positive integer $n$ is fixed,  which appeared in the previous derivation? There, we managed to do an ``index substitution'' to cancel it, but let's agree that it doesn't feel too great to simply not know what that sum would turn out to be. We will morally repeat the trick used last time, of doing a binomial expansion with a higher power. Namely, we start with $$\sum_{k=1}^n (k+1)^3 = \sum_{k=1}^n (k^3+3k^2+3k+1) = \sum_{k=1}^n k^3+3\sum_{k=1}^nk^2+3\sum_{k=1}^n k + \sum_{k=1}^n1.$$We're looking for the sum of squares, but a sum of cubes has appeared! And we will eliminate it with the same index substituion as before: let $m=k+1$, so that $m=2$ when $k=1$ and $m=n+1$ when $k=n$, leading to $$\sum_{k=1}^n (k+1)^3 = \sum_{m=2}^{n+1}m^3 = -1+\sum_{m=1}^nm^3 + (n+1)^3.$$Rename back $m$ to $k$, and use the formula previously obtained for the sum of the first $n$ integers, $\sum_{k=1}^nk=\frac{n(n+1)}{2}$, to get $$-1+\sum_{m=1}^nk^3 + (n+1)^3 = \sum_{k=1}^nk^3 + 3\sum_{k=1}^nk^2 + 3\frac{n(n+1)}{2} + n.$$Then the sum of cubes gets cancelled on both sides, so that
+\begin{align*}
+  3\sum_{k=1}^n k^2 &= (n+1)^3-3\frac{n(n+1)}{2}-n-1 \\ &= (n+1)^3 - \frac{3n}{2}(n+1) - (n+1) \\ &= (n+1)\left((n+1)^2 - \frac{3n}{2} -1\right) \\ &= (n+1)\left(n^2+2n+1-\frac{3n}{2}-1\right) \\ &= (n+1)\left(n^2+\frac{n}{2}\right) \\ &= (n+1)n\left(n+\frac{1}{2}\right) \\ &= \frac{n(n+1)(2n+1)}{2}.
+\end{align*}Hence, we conclude that:
+\begin{callout}
+The sum of the squares of the first $n$ integers equals $$\sum_{k=1}^n k^2 = \frac{n(n+1)(2n+1)}{6}.$$  
+\end{callout}
+
+\begin{example}
+  Evaluate the sum $\sum_{j=1}^{12} (j^2-2j+1)$.
+
+  \begin{explanation}
+    There are (at least) two ways to go about it. We can use properties of the summation notation and the formulas found out so far:
+    \begin{align*}
+      \sum_{j=1}^{12} (j^2-2j+1) &= \sum_{j=1}^{12}j^2 - 2\sum_{j=1}^{12}j + \sum_{j=1}^{12}1 \\ &= \frac{12(12+1)(2\cdot 12+1)}{6} - 2\frac{12(12+1)}{2} + 12 \\ &= 2\cdot 13\cdot 25 - 12\cdot 13 + 12 \\ &= 650-156+12 \\ &= 506.
+    \end{align*}Alternatively, we may employ an index substituion, as $j^2-2j+1 = (j-1)^2$. Namely, let $m=j-1$, so that $m=0$ when $j=1$ and $m=11$ when $j=12$. So:
+    \begin{align*}
+      \sum_{j=1}^{12}(j^2-2j+1) &= \sum_{j=1}^{12} (j-1)^2 \\ &= \sum_{m=0}^{11} m^2 \\ &= \sum_{m=1}^{11} m^2 \\ &= \frac{11(11+1)(2\cdot 11+1)}{6} \\ &= \frac{11\cdot 12\cdot 23}{6} \\ &= 506.
+    \end{align*}
+Which way do you think was easier?
+  \end{explanation}
+\end{example}
+
+\begin{exploration}
+  Evaluate the sum $\sum_{k=1}^8 (k^2-4k+4)$ in two different ways, as in the previous example.
+\end{exploration}
+
+We are perfectly able to go one step further. What is the value of the sum of the first $n$ cubes, where $n$ is a positive integer? The same trick will continue to work. We start considering a binomial expansion of a higher power:
+\begin{align*}
+  \sum_{k=1}^n (k+1)^4 &= \sum_{k=1}^n (k^4+4k^3+6k^2+4k+1) \\ &= \sum_{k=1}^n k^4 + 4\sum_{k=1}^n k^3 + 6\sum_{k=1}^nk^2 + 4\sum_{k=1}^nk + \sum_{k=1}^n1 \\ &= \sum_{k=1}^nk^4 + 4\sum_{k=1}^nk^3 + n(n+1)(2n+1) + 2n(n+1) + n,
+\end{align*}where in the last step we use all the formulas we have deduced so far. Having started with $k+1$ on the left side begs for the substitution $m=k+1$, so yet again $m=2$ when $k=1$ and $m=n+1$ when $k=n$. Now $$\sum_{k=1}^n (k+1)^4 = \sum_{m=2}^{n+1}m^4 = -1+\sum_{m=1}^n m^4 + (n+1)^4,  $$so renaming the dummy index $m$ back to $k$ and substituting it back, we have that $$-1+\sum_{k=1}^n k^4 + (n+1)^4=  \sum_{k=1}^nk^4 + 4\sum_{k=1}^nk^3 + n(n+1)(2n+1) + 2n(n+1) + n. $$The sum of fourth powers, not surprisingly, gets cancelled, so we may directly solve for the sum of cubes: $$ \sum_{k=1}^n k^3 = \frac{1}{4}\left((n+1)^4 - 1 - n(n+1)(2n+1)-2n(n+1)-n\right).$$ With a slightly more laborious (but not completely unreasonable) computation, we may simplify the above:
+
+\begin{callout}
+The sum of the cubes of the first $n$ integers equals $$\sum_{k=1}^n k^3 = \left(\frac{n(n+1)}{2}\right)^2.$$  
+\end{callout}
+
+The fact that this turned out to be the square of the sum of the first $n$ integers was a coincidence and you shouldn't think too much of it, or try to use it to extrapolate formulas for sum of higher powers. But let's make more formal the recursive process used to deduce formulas so far. Namely, for any positive integers $n$ and $p$, write \[  S(n,p) = \sum_{k=1}^n k^p  \]for the sum of the $p$-th powers of the first $n$ integers. On one hand, by the binomial theorem, we have that $$\sum_{k=1}^n (k+1)^{p+1} = \sum_{k=1}^n \sum_{j=0}^{p+1} {{p+1}\choose j} k^j = \sum_{j=0}^{p+1} {{p+1}\choose j}\sum_{k=1}^n k^j = \sum_{j=0}^{p+1} {{p+1}\choose j} S(n,j),$$ where $${{p+1}\choose j} = \frac{(p+1)!}{j!(p+1-j)!}.$$Expecting that $S(n,p+1)$ will be cancelled to allows us to solve for $S(n,p)$ directly, we go one step further and write $$\sum_{k=1}^n (k+1)^{p+1} = S(n,p+1) + (p+1)S(n,p) + \sum_{j=0}^{p-1} {{p+1}\choose j}S(n,j).$$Now, we let $m=k+1$ on the left side, so that $m=2$ when $k=1$ and $m=n+1$ when $k=n$, to obtain  $$ \sum_{k=1}^n(k+1)^{p+1} = \sum_{m=2}^{n+1} m^{p+1} = -1+S(n,p+1) + (n+1)^{p+1}.  $$Comparing everything, we see that $$-1+S(n,p+1)+(n+1)^{p+1} = S(n,p+1) + (p+1)S(n,p) + \sum_{j=0}^{p-1} {{p+1}\choose j}S(n,j).$$
+
+\begin{callout}
+  The sum of the $p$-th powers of the first $n$ integers is recursively given by $$S(n,p) = \frac{1}{p+1} \left((n+1)^{p+1} - 1 -\sum_{j=0}^{p-1} {{p+1}\choose j}S(n,j)\right).$$This is called {\bf Faulhaber's formula}.
+\end{callout}
+In other words, if one knows $S(n,0)$, $S(n,1)$, $S(n,2)$, ..., $S(n,p-1)$, one may find $S(n,p)$ from that. We have given explicit formulas for
+\begin{align*}
+  S(n,0) &= n \\ S(n,1) &= \frac{n(n+1)}{2} \\ S(n,2) &= \frac{n(n+1)(2n+1)}{6} \\ S(n,3) &= \left(\frac{n(n+1)}{2}\right)^2.
+\end{align*}
+
+\begin{exploration}
+  Find $S(n,4)$ and check your result for $n=5$, $n=6$, and $n=7$, using a calculator.
+\end{exploration}
+
+\subsection{Arithmetic and geometric sequences}
+
+There are two types of sequences that appear all the time in geometry, algebra, and (as you will eventually find out) Calculus.
+
+\begin{itemize}
+\item Arithmetic sequences: one starts with real numbers $a$ and $d$ ($d$ for ``difference''), and considers $$a_0 = a, \quad a_1 = a+d, \quad a_2 = a+2d, \quad a_3 = a+3d,...$$succesively adding $d$ on each step. Why the name ``difference'' for $d$? Because the difference between any term in this sequence and its predecessor is $d$.
+\item Geometric sequences: one starts with real numbers $a$ and $r$ ($r$ for ``ratio'') and considers $$a_0 = a, \quad a_1 = ar, \quad a_2 = ar^2, \quad a_3 = ar^3,...$$succesively multiplying by $r$ on each step. Why the name ``ratio'' for $r$? Because the ratio between any term in this sequence and its predecessor is $r$.
+\end{itemize}
+
+\begin{example}
+  The sequence $$a_0 = 2, \quad a_1 = 5, \quad a_3 = 8, \quad a_4 = 11,...$$is an arithmetic sequence with initial term $a=2$ and difference $d=3$.
+\end{example}
+
+\begin{example}
+  The sequence $$a_0 = 6, \quad a_1 = 12, \quad a_3 = 24, \quad a_4 = 48,...$$is a geometric sequence with initial term $a=6$ and ratio $r=2$.
+\end{example}
+
+\begin{exploration}
+  Among the following sequences, which of them are arithmetic? And geometric? Are there sequences which are neither?
+
+  \begin{itemize}
+  \item $(1,3,5,7,8,9,9,...)$
+  \item $(3,6,9,12,15,18,...)$
+  \item $(5,25,125,625,3125,...)$
+  \end{itemize}
+\end{exploration}
+
+How to compute sums of arithmetic and geometric sequences, using what we have learned so far? Let's start with arithmetic sequences. If $$a_0 = a, \quad a_1 = a+d, \quad a_2 = a+2d, \quad a_3 = a+3d,...$$we may simply write $a_k = a+kd$, as $k$ goes from $0$ until the integer $n$ for which we decide to stop the sum.  We have that
+\begin{align*}
+  \sum_{k=0}^n a_k &= \sum_{k=0}^n (a+kd)  \\ &= a + \sum_{k=1}^n (a+kd) \\ &= a+a\sum_{k=1}^n1 + d\sum_{k=1}^nk \\ &= a+na + d\frac{n(n+1)}{2} \\ &= (n+1)a + d\frac{n(n+1)}{2}.
+\end{align*}
+
+And what about geometric sequences?
+
+[CONTINUE]
+\end{document}
