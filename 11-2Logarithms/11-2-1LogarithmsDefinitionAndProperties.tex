@@ -91,17 +91,17 @@ each say the same thing from two different perspectives.  The first says \(100\)
 10^{-3} = \frac{1}{1000} \text{ and } \log_{10} \left( \frac{1}{1000} \right) = -3\text{.}\label{eq-exp-log-base-10-minus-3}
 \end{equation}
 
-If we rearrange the statements of the facts in \hyperref[eq-exp-log-base-10-2]{Equation~(\ref{eq-exp-log-base-10-2})}, we can see yet another important relationship between the powers of \(10\) and base-\(10\) logarithm function.  Noting that \(\log_{10}(100) = 2\) and \(100 = 10^2\) are equivalent statements, and substituting the former equation into the latter shows, we see that%
+If we rearrange the statements of the facts, we can see yet another important relationship between the powers of \(10\) and base-\(10\) logarithm function.  Noting that \(\log_{10}(100) = 2\) and \(100 = 10^2\) are equivalent statements, and substituting the former equation into the latter shows, we see that%
 \begin{equation}
 \log_{10}(10^2) = 2\text{.}
 \end{equation}
 In words, the equation says that ``the power to which we raise \(10\) to get \(10^2\), is \(2\)''.  That is, the base-\(10\) logarithm function undoes the work of the powers of \(10\) function.%
 
-In a similar way, if we rearrange the statements in \hyperref[eq-exp-log-base-10-minus-3]{Equation~(\ref{eq-exp-log-base-10-minus-3})}, we can observe that by replacing \(-3\) with \(\log_{10}(\frac{1}{1000})\) we have%
+In a similar way, we can observe that by replacing \(-3\) with \(\log_{10}(\frac{1}{1000})\) we have%
 \begin{equation}
 10^{\log_{10}(\frac{1}{1000})} = \frac{1}{1000}\text{.}\label{eq-exp-log-base-10-minus-3-undo}
 \end{equation}
-In words, \hyperref[eq-exp-log-base-10-minus-3-undo]{Equation~(\ref{eq-exp-log-base-10-minus-3-undo})} says that ``when \(10\) is raised to the power to which we raise \(10\) in order to get \(\frac{1}{1000}\), we get \(\frac{1}{1000}\)''.%
+In words, this says that ``when \(10\) is raised to the power to which we raise \(10\) in order to get \(\frac{1}{1000}\), we get \(\frac{1}{1000}\)''.%
 
 We summarize the key relationships between the powers-of-\(10\) function and its inverse, the base-\(10\) logarithm function, more generally as follows.%
 {\(P(t) = 10^t\) and \(L(y) = \log_{10}(y)\).}
@@ -127,19 +127,19 @@ For each of the following equations, determine the exact value of the unknown va
 
 
 \begin{enumerate}[label=\alph*.]
-\item\hypertarget{li-671}{}\hypertarget{p-1473}{}%
+\item
 \(10^t = 0.00001\)%
-\item\hypertarget{li-672}{}\hypertarget{p-1474}{}%
+\item
 \(\log_{10}(1000000) = t\)%
-\item\hypertarget{li-673}{}\hypertarget{p-1475}{}%
+\item
 \(10^t = 37\)%
-\item\hypertarget{li-674}{}\hypertarget{p-1476}{}%
+\item
 \(\log_{10}(y) = 1.375\)%
-\item\hypertarget{li-675}{}\hypertarget{p-1477}{}%
+\item
 \(10^t = 0.04\)%
-\item\hypertarget{li-676}{}\hypertarget{p-1478}{}%
+\item
 \(3 \cdot 10^t + 11 = 147\)%
-\item\hypertarget{li-677}{}\hypertarget{p-1479}{}%
+\item
 \(2\log_{10}(y) + 5 = 1\)%
 \end{enumerate}
 
@@ -165,20 +165,20 @@ and%
 \begin{equation*}
 e^{\ln(-1)} = -1\text{.}
 \end{equation*}
-The former equation is true because ``the power to which we raise \(e\) to get \(e^2\) is \(2\)''; the latter equation is true since ``when we raise \(e\) to the power to which we raise \(e\) to get \(-1\), we get \(-1\)''.  The key relationships between the natural exponential and the natural logarithm function are investigated in \hyperref[act-exp-log-natural]{Activity~\ref{act-exp-log-natural}}.%
+The former equation is true because ``the power to which we raise \(e\) to get \(e^2\) is \(2\)''; the latter equation is true since ``when we raise \(e\) to the power to which we raise \(e\) to get \(-1\), we get \(-1\)''.
 \begin{exploration}
 Let \(E(t) = e^t\) and \(N(y) = \ln(y)\) be the natural exponential function and the natural logarithm function, respectively.%
 
 \begin{enumerate}[label=\alph*.]
-\item\hypertarget{li-678}{}\hypertarget{p-1487}{}%
+\item
 What are the domain and range of \(E\)?%
-\item\hypertarget{li-679}{}\hypertarget{p-1488}{}%
+\item
 What are the domain and range of \(N\)?%
-\item\hypertarget{li-680}{}\hypertarget{p-1489}{}%
+\item
 What can you say about \(\ln(e^t)\) for every real number \(t\)?%
-\item\hypertarget{li-681}{}\hypertarget{p-1490}{}%
+\item
 What can you say about \(e^{\ln(y)}\) for every positive real number \(y\)?%
-\item\hypertarget{li-682}{}\hypertarget{p-1491}{}%
+\item
 Complete the following tables with both exact and approximate of \(E\) and \(N\).  Then, plot the corresponding ordered pairs from each table on the axes below and connect the points in an intuitive way.  When you plot the ordered pairs on the axes, in both cases view the first line of the table as generating values on the horizontal axis and the second line of the table as producing values on the vertical axis label each ordered pair you plot appropriately.%
 %
 \\
@@ -250,40 +250,66 @@ Solve each of the following equations for the exact value of the unknown variabl
 \begin{explanation}
 \begin{enumerate}[label=\alph*.]
 \item
-\(e^t = \frac{1}{10}\)\\
-$t=\ln{\left(\frac{1}{10}\right)}$
+\begin{align*}
+e^t &= \frac{1}{10}\\
+\ln(e^t) &= \ln{\left(\frac{1}{10}\right)}\\
+t&=\ln{\left(\frac{1}{10}\right)}
+\end{align*}
 \item
-\(5e^{t}=7\)\\
-$t=\ln{\left(\frac{5}{7}\right)}$
+\begin{align*}
+5e^{t}&=7\\
+e^{t}&=\frac{7}{5}\\
+\ln{(e^{t})}&=\ln{\left(\frac{7}{5}\right)}\\
+t &=\ln{\left(\frac{7}{5}\right)}
+\end{align*}
 \item
-\(\ln(t) = -\frac{1}{3}\)\\
-$t=e^{\frac{1}{3}}$
+\begin{align*}
+\ln(t) &= -\frac{1}{3}\\
+e^{\ln(t)} &=e^{-\frac{1}{3}}\\
+t &=e^{-\frac{1}{3}}
+\end{align*}
 \item
-\(e^{1-3t} = 4\)\\
-$1-3t = \ln(4)$\\
-$-3t = \ln(4)-1$\\
-$t = \frac{\ln(4)-1}{-3}$
+
+\begin{align*}
+e^{1-3t} &= 4\\
+\ln(e^{1-3t}) &= \ln(4)\\
+1-3t &= \ln(4)\\
+-3t &= \ln(4)-1\\
+t &= \frac{\ln(4)-1}{-3}
+\end{align*}
+
 \item
-\(2\ln(t) + 1 = 4\)\\
-$2\ln(t) = 3$\\
-$\ln(t) = \frac{3}{2}$\\
-$t = e^{\frac{3}{2}}$
+\begin{align*}
+2\ln(t) + 1 &= 4\\
+2\ln(t) &= 3\\
+\ln(t) &= \frac{3}{2}\\
+e^{ln(t)} &= e^{\frac{3}{2}}\\
+t &= e^{\frac{3}{2}}
+\end{align*}
 \item
-\(4 - 3e^{2t} = 2\)\\
-$-3e^{2t} = -2$\\
-$e^{2t} = \frac{2}{3}$\\
-$2t = \ln\left({\frac{2}{3}}\right)$\\
-$t = \frac{\ln\left({\frac{2}{3}}\right)}{2}$
+\begin{align*}
+4 - 3e^{2t} &= 2\\
+-3e^{2t} &= -2\\
+e^{2t} &= \frac{2}{3}\\
+\ln(e^{2t}) &= \ln\left({\frac{2}{3}}\right)\\
+2t &= \ln\left({\frac{2}{3}}\right)\\
+t &= \frac{\ln\left({\frac{2}{3}}\right)}{2}
+\end{align*}
 \item
-\(4 + 3e^{2t} = 2\)\\
-$3e^{2t} = -2$\\
-$e^{2t} = \frac{-2}{3}$\\
+\begin{align*}
+4 + 3e^{2t} &= 2\\
+3e^{2t} &= -2\\
+e^{2t} &= \frac{-2}{3}\\
+\end{align*}
 No solution, because $\frac{-2}{3}$ is outside of the range of $e^{2t}$
 \item
-\(\ln(5 - 6t) = -2\)\\
-$\ln(5 - 6t) = -2$\\
-$5-6t=e^{-2}$\\
-$t=\frac{e^{-2}-5}{-6}$
+\begin{align*}
+\ln(5 - 6t) &= -2\\
+\ln(5 - 6t) &= -2\\
+e^{\ln(5-6t)} &=e^{-2}\\
+5-6t &=e^{-2}\\
+t &=\frac{e^{-2}-5}{-6}
+\end{align*}
 \end{enumerate}
 \end{explanation}
 %
