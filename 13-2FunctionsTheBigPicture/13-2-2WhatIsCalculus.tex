@@ -41,6 +41,30 @@ Some of the questions calculus can help to answer are:
 \section{Rates of Change}
 One extremely useful topic in calculus is the idea of instantaneous rates of change. We've often computed average rates of change in this course, so it's important to understand the difference.
 
+Imagine you are in a car making the 73-mile trip from Columbus to Dayton. Google Maps says this takes about 1 hour and 8 minutes, so your average speed during the trip would be 
+$$
+\frac{73}{1\frac{8}{60}} = \frac{73}{\frac{68}{60}} = \frac{73}{1} \cdot \frac{60}{68} = \frac{4380}{68} \approx 64.4 \text{miles per hour}.
+$$
+
+However, you aren't going 64.4 miles per hour for the entire duration of the trip! At stoplights, your instantaneous speed is 0 miles per hour, and on the highway, your instantaneous speed may be higher than 65 miles per hour. Instantaneous speed captures your speed at a precise moment in time, rather than over an interval of time. 
+
+Up until now, we have only been able to calculate the average rate of change of a function. Calculus gives us the tools to be able to calculate the instantaneous rate of change. One very important tool is the idea of the limit. 
+
+\section{Limits}
+\begin{problem}
+Consider the function $f(x) = \frac{x^2}{x}$. Calculate the following values. Enter DNE if the value does not exist.
+
+$f(3) = \answer{3}$
+
+$f(-7) = \answer{-7}$
+
+For $x \ne 0$, $f(x) = \answer{x}$.
+
+$f(0) = \answer{DNE}$.
+\end{problem}
+
+Notice that the function $f$ is defined everywhere except at $x = 0$, that is, its domain is $(-\infty, 0) \cup (0, \infty)$. Where the function \emph{is} defined, though, $f(x) = x$. Thus, the graph of $f$ looks like a line with slope 1 passing through the origin, but with a hole at the origin. It's reasonable to say then, that as $x$ approaches 0, the value of $f(x)$ approaches 0. This motivates the idea of limits. Our function is doing something crazy at $x = 0$, but we can still make a statement about what is happening nearby. 
+
 
 
 \end{document}
