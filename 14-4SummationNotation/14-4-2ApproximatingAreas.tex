@@ -1,11 +1,11 @@
 \documentclass[nooutcomes]{ximera}
 
 \input{../preamble}
-\author{Kenneth Berglund}
+\author{Ivo Terek}
 \license{Creative Commons Attribution-ShareAlike 4.0 International License}
-\acknowledgement{https://www.stitz-zeager.com/szca07042013.pdf}
+%\acknowledgement{https://www.stitz-zeager.com/szca07042013.pdf}
 
-\title{Finding Distance}
+\title{Approximating areas}
 
 \begin{document}
 \begin{abstract}
@@ -14,7 +14,7 @@
 \maketitle
 
 \begin{motivatingQuestions}\begin{itemize}
-	\item What is distance?
+	\item How to approximate areas of regions not geometrically ``simple'' as rectangles and triangles?
 \end{itemize}\end{motivatingQuestions}
 
 %\typeout{************************************************}
@@ -22,5 +22,104 @@
 %\typeout{************************************************}
 \section{Introduction}
 
+We have known how to compute areas of rectangles and triangles for a long time. Namely, the area of a rectangle with base length $b$ and height $h$ is simply $A=bh$, while the area of a triangle with base length $b$ and height $h$ is $A = bh/2$:
+
+[ADD FIGURES]
+
+By decomposing any polygon into triangles, one may also find (with considerable additional effort) the area it encloses: $$A = \sum_{k=1}^n A_k = A_1+\cdots + A_n.$$
+
+[ADD FIGURE]
+
+The question remains, however, of how to find the area of a region more complicated regions, with ``curved boundaries'', such as
+
+[ADD FIGURE]
+
+The most adequate tools to deal with this problem are studied in a first Calculus class, but we already have enough tools to understand the idea of what is behind them. For simplicity, we will focus on computing areas bounded by the graph of a positive function $y=f(x)$:
+
+[ADD FIGURE]
+
+\section{Approximating areas under graphs}
+
+Let's fix, as mentioned in the introduction, a positive function $y=f(x)$ defined on some interval $a \leq x \leq b$. The strategy we'll adopt here to aproximate the area bounded between the graph of $f$ and the $x$-axis will be to use thin rectangles. We choose a positive integer $n$, and set $\Delta x = (b-a)/n$. With this in place, we may divide the interval $a\leq x \leq b$ into $n$ parts, by writing $$x_0 = a+0\cdot \Delta x = a, \quad x_1 = a+1\cdot \Delta x,\quad \ldots\quad, x_n = a + n\cdot \Delta x = b.$$In short, $x_k = a+k\cdot \Delta x$, for $0\leq k \leq n$. The length of each interval $[x_0,x_1]$, $[x_1,x_2]$, ..., $[x_{n-1},x_n]$ is the same, and equal to $\Delta x$. See the following figure:
+
+[ADD FIGURE]
+
+We will approximate the area $A$ under the graph of $f$ by adding the areas of the indicated rectangles: $$\mbox{area under graph} \approx \sum_{k=0}^{n-1} f(x_k)\Delta x = \sum_{k=0}^{n-1} f\left(a+k\frac{b-a}{n}\right) \Delta x $$
+
+Observe that each individual term $f(x_k)\Delta x$ is the area of the rectangle with base length $\Delta x$ and height $f(x_k)$. This is called a \emph{left Riemann sum}. As the name suggests, one could have considered a \emph{right Riemann sum} instead, by looking at the other possibility of rectangles:
+
+[ADD FIGURE]
+
+so that $$\mbox{area under graph} \approx \sum_{k=1}^n f(x_k)\Delta x = \sum_{k=1}^n f\left(a+k\frac{b-a}{n}\right) \Delta x$$
+
+It doesn't stop here, as one could have chosen the middle road and set up a \emph{middle Riemann sum}, by taking the midpoints of each interval $[x_k,x_{k+1}]$ instead of either of the endpoints. Here's a picture:
+
+[ADD FIGURE]
+
+In this case, since the midpoint of $[x_k,x_{k+1}]$ is \begin{align*}\frac{x_k+x_{k+1}}{2} &= \frac{1}{2}(a+k \Delta x + a + (k+1)\Delta x) \\ &= \frac{1}{2}(2a+(2k+1)\Delta x) \\ &= a+ \frac{2k+1}{2}\Delta x \\ &= a + \left(k+\frac{1}{2}\right)\Delta x,\end{align*}we would have that $$\mbox{area under graph} \approx \sum_{k=0}^{n-1} f\left(a + \left(k+\frac{1}{2}\right)\Delta x\right) \Delta x$$
+
+If one decided, for any reason, to divide the interval $[a,b]$ into $n$ parts not necessarily of equal length, the approximation would still work when one takes the number $n$ of subintervals to be larger and larger, the only difference being that we would no longer have $\Delta x = (b-a)/n$, but instead a different ``$\Delta x$'' for each interval, as in $\Delta x_1 = x_1-x_0$, $\Delta x_2= x_2-x_1$, and so on, so that $\Delta x_k = x_k-x_{k-1}$ for every $k=1,\ldots, n$, with $\Delta x_1+\cdots + \Delta x_n = b-a$ (as the sum of the lengths of all subintervals $[x_k,x_{k+1}]$ would add up to the length of the original interval $[a,b]$, which is $b-a$).
+
+\begin{callout}
+ {\bf Important:} At the end of the day, it doesn't matter which way of approximating the area we choose, as all of the resulting sums get closer and closer to the actual desired area, as $n$ gets larger and larger.  
+\end{callout}
+
+So, we will focus on left Riemann sums instead, and illustrate the indicated procedure with the functions $y=x$, $y=x^2$, and $x^3$, on the interval $[0,1]$, using the formulas established in the previous section.
+
+\begin{example}
+  Approximate the area of the graph of $f(x) = x$ over the interval $[0,1]$ by using left Riemann sums. What is the exact area?
+
+
+  \begin{explanation}
+    It helps to make a picture first, say, dividing $[0,1]$ into five parts.
+
+    [ADD FIGURE]
+
+    In this case, we have in general that $$\Delta x = \frac{b-a}{n} = \frac{1-0}{n} = \frac{1}{n},$$with $x_k = k/n$, as $k=0,1,\ldots, n$. The area of the ``left'' rectangle over the interval $[x_k,x_{k+1}]$ determined by the graph is $(k/n)(1/n) = k/n^2$ (this is base times height, as usual). Therefore, an approximation for the desired area is $$\sum_{k=0}^{n-1}\frac{k}{n^2} = \frac{1}{n^2}\sum_{k=0}^{n-1} k = \frac{1}{n^2} \frac{(n-1)n}{2} = \frac{n^2-n}{2n^2} = \frac{1}{2} - \frac{1}{2n}$$
+As $n$ gets larger and larger, $1/(2n)$ gets smaller and smaller, which suggests that the actual area is simply $1/2$. This turns out to be the case, as you can easily check: the region in question is a triangle with both base length and height equal to $1$. For more complicated graphs, doing a sanity-check like this isn't necessarily so easy, but this at least illustrated that our approximation method is reliable.    
+  \end{explanation}
+\end{example}
+
+\begin{example}
+  Approximate the area of the graph of $f(x) = x^2$ over the interval $[0,1]$ by using left Riemann sums. What is the suggested exact area?
+
+  \begin{explanation}
+    We again start with a sketch, to gain intuition:
+
+    [ADD FIGURE]
+
+    As in the previous example, we have that $\Delta x = 1/n$ and $x_k = k/n$, as $k=0,1,\ldots, n$. The area of the ``left'' rectangle over the interval $[x_k,x_{k+1}]$ determined by the graph is $(k/n)^2(1/n) = k^2/n^3$ (again using ``base times height''). So, an approximation for the desired area is
+    \begin{align*}
+      \sum_{k=0}^{n-1}\frac{k^2}{n^3} &= \frac{1}{n^3}\sum_{k=0}^{n-1} k^2 \\ &= \frac{1}{n^3} \frac{(n-1)n(2(n-1)+1)}{6} \\ &= \frac{(n^2-n)(2n-1)}{6n^3} \\ &= \frac{2n^3 - 3n^2+n}{6n^3} \\ &= \frac{1}{3} -\frac{1}{2n} + \frac{1}{6n^2}
+    \end{align*}
+As $n$ gets larger and larger, $1/(2n)$ and $1/(6n^2)$ get smaller and smaller, which suggests that the actual area is simply $1/3$.
+  \end{explanation}
+\end{example}
+
+\begin{exploration}
+  Repeat the previous problem using a right Riemann sum instead and again obtain that the suggested actual area equals $1/3$.
+\end{exploration}
+
+\begin{example}
+  Approximate the area of the graph of $f(x) = x^3$ over the interval $[0,1]$ by using left Riemann sums. What is the suggested exact area?
+
+  \begin{explanation}
+    Here's what the situation looks like this time:
+
+    [ADD FIGURE]
+
+    Dividing $[0,1]$ into $n$ parts, we have that $\Delta x = 1/n$ and $x_k = k/n$, as $k=0,1,\ldots, n$. The area of the ``left'' rectangle over the interval $[x_k,x_{k+1}]$ determined by the graph is $(k/n)^3(1/n) = k^3/n^4$, so that an approximation for the desired area is
+    \begin{align*}
+      \sum_{k=0}^{n-1}\frac{k^3}{n^4} &= \frac{1}{n^4}\sum_{k=0}^{n-1} k^3 \\ &= \frac{1}{n^4} \left(\frac{n(n-1)}{2}\right)^2 \\ &= \frac{1}{n^4} \frac{n^2(n^2-2n+1)}{4} \\ &= \frac{n^2-2n+1}{4n^2} \\ &= \frac{1}{4} -\frac{1}{2n} + \frac{1}{4n^2}.
+    \end{align*}
+As $n$ gets larger and larger, the terms $1/(2n)$ and $1/(4n^2)$ get smaller and smaller, which suggests that the actual area is simply $1/4$.
+  \end{explanation}
+\end{example}
+
+\begin{exploration}
+  Approximate the area under the graph of $f(x)=x^3$, over the interval $[2,3]$.
+\end{exploration}
+
+Using Faulhaber's recursion formula from the last section, one can approximate the area under the of the graph $f(x) = x^p$ over the interval $[0,1]$ as $1/(p+1)$.
 
 \end{document}
