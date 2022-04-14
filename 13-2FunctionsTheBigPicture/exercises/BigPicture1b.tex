@@ -8,22 +8,142 @@
 \begin{document}
 \begin{exercise}
 Select all of the relations which represent  $y$ as a function of $x$.
+%%%%%%%%%%%%%%%%%
 \begin{enumerate}
-%  \item{\includegraphics{WiaFgraphs1-1}}
-%\item{\includegraphics{WiaFgraphs1-2}}
-\item{\includegraphics[width=.5\linewidth]{petalgraph.png}}
-%\item{\includegraphics{WiaFgraphs1-4}}
-%\item{\includegraphics{WiaFgraphs1-6}}
-%\item{\includegraphics{WiaFgraphs1-5}}
+\item \begin{image}
+\begin{tikzpicture}
+    \begin{axis}[ymin=-1.9, ymax=1.9,
+		   %xtick={-6.28318, -4.7123889, -3.14159, -1.5708, 1.5708, 3.14159, 4.7123889, 6.28318},
+    xticklabels={
+        $-\frac{3\pi}{2}$, $-\pi$, $\frac{\pi}{2}$, $0$,
+        $\frac{\pi}{2}$, $\pi$, $\frac{3\pi}{2}$, $2\pi$
+    }] %title={$y = \sin(x)$}]
+        \addplot[samples=200]{sin(pi/4*deg(x))};
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+
+%%%%%%%%%%%%%%%%%
+\item {\includegraphics[width=.5\linewidth]{petalgraph.png}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item \begin{image}
+ \begin{tikzpicture}
+    \begin{axis}
+        \addplot[smooth]{x^2}; %node{$y=x^2$};
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\item \begin{image}
+\begin{tikzpicture}
+     \begin{axis}[
+                domain=-10:10, ymax=9.9, xmax=10, ymin=-9.9, xmin=-10,
+                axis lines =center, %xlabel=$t$, ylabel=$y$,
+                ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                ticklabel style={font=\scriptsize},
+                ]
+
+        
+        \addplot [draw=penColor, very thick, smooth, samples=300, domain=(-6:-3.15), ->] {1/(x+3) - 2};
+        \addplot [draw=penColor, very thick, smooth, samples=300, domain=(-8:-6), <-] {2*x+14};
+        \addplot [draw=penColor, very thick, smooth, samples=300, domain=(3.15:6), <-] {1/(x-3) + 2};
+        \addplot [draw=penColor, very thick, smooth, samples=300, domain=(6:8), ->] {2*x-14};
+         \addplot [draw=penColor, very thick, smooth, samples=300, domain=(-2:2)] {4*x^2};
+
+        \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-6,-2.33)};
+        \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-6,2)};
+        \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(6,2.33)};
+        \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(6,-2)};
+
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+\item \begin{image}
+\begin{tikzpicture}
+     \begin{axis}[
+                domain=-10:10, ymax=9.9, xmax=10, ymin=-9.9, xmin=-10,
+                axis lines =center, %xlabel=$t$, ylabel=$y$,
+                ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                ticklabel style={font=\scriptsize},
+                ]
+        
+        \addplot [draw=penColor, very thick, smooth, samples=300, domain=(-3:10)] {sqrt(x+3)};
+        \addplot [draw=penColor, very thick, smooth, samples=300, domain=(-3:10)] {-sqrt(x+3};
+        
+       \end{axis}
+\end{tikzpicture}
+\end{image}
+
+
+%%%%%%%%%%%%%%%%%
+\item \begin{image}
+\begin{tikzpicture}
+     \begin{axis}[
+                domain=-10:10, ymax=9.9, xmax=10, ymin=-9.9, xmin=-10,
+                axis lines =center, %xlabel=$t$, ylabel=$y$,
+                ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                ticklabel style={font=\scriptsize},
+                ]
+        
+        \addplot [draw=penColor, very thick, smooth, samples=300, domain=(-6:1.49)] {(x^2-1)/(2*x-3)};
+%      \addplot [draw=penColor, very thick, smooth, samples=500, domain=(-1.5:-3/4)] {(x^2-1)/(2*x+3)};
+%        \addplot [draw=penColor, very thick, smooth, samples=500, domain=(-6:-1.7)] {(x^2-1)/(2*x+3)};
+        \addplot [draw=penColor, very thick, smooth, samples=300, domain=(-8:-6), <-] {-2*x-9};
+        %\addplot [draw=penColor, very thick, smooth, samples=300, domain=(3.15:6), <-] {2*x^2+8*x};
+        \addplot [draw=penColor, very thick, smooth, samples=300, domain=(1.5:8), ->] {(x-3/2)^2+3};
+
+
+        \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-6,-35/15)};
+        \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-6,3)};
+       % \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-3/4,-3)};
+        \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(3/2,3)};
+
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+ 
+%%%%%%%%%%%%%%%%%
+\item \begin{image}
+\begin{tikzpicture}
+     \begin{axis}[
+                domain=-10:10, ymax=9.9, xmax=10, ymin=-9.9, xmin=-10,
+                axis lines =center, %xlabel=$t$, ylabel=$y$,
+                ytick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                xtick={-10,-8,-6,-4,-2,2,4,6,8,10},
+                ticklabel style={font=\scriptsize},
+                ]
+        
+        \addplot [draw=penColor, very thick, smooth, samples=300, domain=(-8:-6), <-] {-.5*x+4};
+        \addplot [draw=penColor, very thick, smooth, samples=300, domain=(0:10)] {-sqrt(x+1)};
+        \addplot [draw=penColor, very thick, smooth, samples=300, domain=(-6:8), ->] {(x+3)^2-3};
+
+
+        \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-6,6)};
+        \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-6,7)};
+%        \addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-3/4,-3)};
+        \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(0,-1)};
+
+    \end{axis}
+\end{tikzpicture}
+\end{image}
 \end{enumerate}
 
 \begin{selectAll}
-\choice{(a)}
-\choice[correct]{(b)}
-\choice{(c)}
-\choice[correct]{(d)}
-\choice[correct]{(e)}
-\choice{(f)}
+\choice[correct]{}
+\choice{}
+\choice[correct]{}
+\choice[correct]{}
+\choice{}
+\choice[correct]{}
+\choice{}
 \end{selectAll}
 
 \end{exercise}
