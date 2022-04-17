@@ -28,7 +28,27 @@ We have known how to compute areas of rectangles and triangles for a long time. 
 
 By decomposing any polygon into triangles, one may also find (with considerable additional effort) the area it encloses: $$A = \sum_{k=1}^n A_k = A_1+\cdots + A_n.$$
 
-[ADD FIGURE]
+ \begin{image}
+      \begin{tikzpicture}
+        \begin{axis}
+          \addplot[soliddot, color=penColor] coordinates {(-4,1.5)};
+          \addplot[soliddot, color=penColor] coordinates {(-2,5)};
+          \addplot[soliddot, color=penColor] coordinates {(3,4)};
+          \addplot[soliddot, color=penColor] coordinates {(5,-2)};
+          \addplot[soliddot, color=penColor] coordinates {(0,-4)};
+          \addplot[guideline,-] coordinates {(-4,1.5) (-2,5)};
+          \addplot[guideline,-] coordinates {(-2,5) (3,4)};
+          \addplot[guideline,-] coordinates {(3,4) (5,-2)};
+          \addplot[guideline,-] coordinates {(5,-2) (0,-4)};
+          \addplot[guideline,-] coordinates {(0,-4) (-4,1.5)};
+          \addplot[guideline,-] coordinates {(1,1) (-2,5)};
+          \addplot[guideline,-] coordinates {(1,1) (3,4)};
+          \addplot[guideline,-] coordinates {(1,1) (5,-2)};
+          \addplot[guideline,-] coordinates {(1,1) (0,-4)};
+          \addplot[guideline,-] coordinates {(1,1) (-4,1.5)};
+        \end{axis}
+      \end{tikzpicture}
+\end{image}
 
 The question remains, however, of how to find the area of a region more complicated regions, with ``curved boundaries'', such as
 
@@ -36,25 +56,103 @@ The question remains, however, of how to find the area of a region more complica
 
 The most adequate tools to deal with this problem are studied in a first Calculus class, but we already have enough tools to understand the idea of what is behind them. For simplicity, we will focus on computing areas bounded by the graph of a positive function $y=f(x)$:
 
-[ADD FIGURE]
+ \begin{image}
+      \begin{tikzpicture}
+        \begin{axis}
+          \addplot[color=penColor, thick, samples=200,domain=-3:5]{e^(x/3)+1.5};
+          \addplot[guideline,-] coordinates {(-3,0) (-3,1.9)};
+          \addplot[guideline,-] coordinates {(-3,0) (5,0)};
+          \addplot[guideline,-] coordinates {(5,0) (5,6.8)};
+          \addplot[mark=none] coordinates {(2.5,6)} node[below] {$y=f(x)$};
+        \end{axis}
+      \end{tikzpicture}
+\end{image}
+
 
 \section{Approximating areas under graphs}
 
 Let's fix, as mentioned in the introduction, a positive function $y=f(x)$ defined on some interval $a \leq x \leq b$. The strategy we'll adopt here to aproximate the area bounded between the graph of $f$ and the $x$-axis will be to use thin rectangles. We choose a positive integer $n$, and set $\Delta x = (b-a)/n$. With this in place, we may divide the interval $a\leq x \leq b$ into $n$ parts, by writing $$x_0 = a+0\cdot \Delta x = a, \quad x_1 = a+1\cdot \Delta x,\quad \ldots\quad, x_n = a + n\cdot \Delta x = b.$$In short, $x_k = a+k\cdot \Delta x$, for $0\leq k \leq n$. The length of each interval $[x_0,x_1]$, $[x_1,x_2]$, ..., $[x_{n-1},x_n]$ is the same, and equal to $\Delta x$. See the following figure:
 
-[ADD FIGURE]
+ \begin{image}
+      \begin{tikzpicture}
+        \begin{axis}
+          \addplot[color=penColor, thick, samples=200,domain=0:5]{(x/1.5)^2-2*x+5};
+          \addplot[guideline,-] coordinates {(4,0) (4,4.11)};
+          \addplot[guideline,-] coordinates {(4,4.11) (5,4.11)};
+          \addplot[guideline,-] coordinates {(5,0) (5,4.11)};
+          \addplot[guideline,-] coordinates {(4,0) (5,0)};
+          \addplot[guideline,-] coordinates {(3,0) (3,3)};
+          \addplot[guideline,-] coordinates {(3,3) (4,3)};
+          \addplot[guideline,-] coordinates {(3,0) (4,0)};
+          \addplot[guideline,-] coordinates {(2,0) (2,3.44)};
+          \addplot[guideline,-] coordinates {(2,2.78) (3,2.78)};
+          \addplot[guideline,-] coordinates {(2,0) (3,0)};
+          \addplot[guideline,-] coordinates {(1,0) (1,5)};
+          \addplot[guideline,-] coordinates {(1,3.44) (2,3.44)};
+          \addplot[guideline,-] coordinates {(1,0) (2,0)};
+          \addplot[guideline,-] coordinates {(0,0) (1,0)};
+          \addplot[guideline,-] coordinates {(0,5) (1,5)};
+          \addplot[guideline,-] coordinates {(0,0) (0,5)};
+        \end{axis}
+      \end{tikzpicture}
+\end{image}
 
 We will approximate the area $A$ under the graph of $f$ by adding the areas of the indicated rectangles: $$\mbox{area under graph} \approx \sum_{k=0}^{n-1} f(x_k)\Delta x = \sum_{k=0}^{n-1} f\left(a+k\frac{b-a}{n}\right) \Delta x $$
 
 Observe that each individual term $f(x_k)\Delta x$ is the area of the rectangle with base length $\Delta x$ and height $f(x_k)$. This is called a \emph{left Riemann sum}. As the name suggests, one could have considered a \emph{right Riemann sum} instead, by looking at the other possibility of rectangles:
 
-[ADD FIGURE]
+ \begin{image}
+      \begin{tikzpicture}
+        \begin{axis}
+          \addplot[color=penColor, thick, samples=200,domain=0:5]{(x/1.5)^2-2*x+5};
+          \addplot[guideline,-] coordinates {(4,0) (4,6.11)};
+          \addplot[guideline,-] coordinates {(4,6.11) (5,6.11)};
+          \addplot[guideline,-] coordinates {(5,0) (5,6.11)};
+          \addplot[guideline,-] coordinates {(4,0) (5,0)};
+          \addplot[guideline,-] coordinates {(3,0) (3,4.11)};
+          \addplot[guideline,-] coordinates {(3,4.11) (4,4.11)};
+          \addplot[guideline,-] coordinates {(3,0) (4,0)};
+          \addplot[guideline,-] coordinates {(2,0) (2,3)};
+          \addplot[guideline,-] coordinates {(2,3) (3,3)};
+          \addplot[guideline,-] coordinates {(2,0) (3,0)};
+          \addplot[guideline,-] coordinates {(1,0) (1,3.44)};
+          \addplot[guideline,-] coordinates {(1,2.78) (2,2.78)};
+          \addplot[guideline,-] coordinates {(1,0) (2,0)};
+          \addplot[guideline,-] coordinates {(0,0) (1,0)};
+          \addplot[guideline,-] coordinates {(0,3.44) (1,3.44)};
+          \addplot[guideline,-] coordinates {(0,0) (0,3.44)};
+        \end{axis}
+      \end{tikzpicture}
+\end{image}
 
 so that $$\mbox{area under graph} \approx \sum_{k=1}^n f(x_k)\Delta x = \sum_{k=1}^n f\left(a+k\frac{b-a}{n}\right) \Delta x$$
 
 It doesn't stop here, as one could have chosen the middle road and set up a \emph{middle Riemann sum}, by taking the midpoints of each interval $[x_k,x_{k+1}]$ instead of either of the endpoints. Here's a picture:
 
-[ADD FIGURE]
+ \begin{image}
+      \begin{tikzpicture}
+        \begin{axis}
+          \addplot[color=penColor, thick, samples=200,domain=0:5]{(x/1.5)^2-2*x+5};
+          \addplot[guideline,-] coordinates {(4,0) (4,5)};
+          \addplot[guideline,-] coordinates {(4,5) (5,5)};
+          \addplot[guideline,-] coordinates {(5,0) (5,5)};
+          \addplot[guideline,-] coordinates {(4,0) (5,0)};
+          \addplot[guideline,-] coordinates {(3,0) (3,3.44)};
+          \addplot[guideline,-] coordinates {(3,3.44) (4,3.44)};
+          \addplot[guideline,-] coordinates {(3,0) (4,0)};
+          \addplot[guideline,-] coordinates {(2,0) (2,3)};
+          \addplot[guideline,-] coordinates {(2,2.78) (3,2.78)};
+          \addplot[guideline,-] coordinates {(2,0) (3,0)};
+          \addplot[guideline,-] coordinates {(1,0) (1,4.11)};
+          \addplot[guideline,-] coordinates {(1,3) (2,3)};
+          \addplot[guideline,-] coordinates {(1,0) (2,0)};
+          \addplot[guideline,-] coordinates {(0,0) (1,0)};
+          \addplot[guideline,-] coordinates {(0,4.11) (1,4.11)};
+          \addplot[guideline,-] coordinates {(0,0) (0,4.11)};
+        \end{axis}
+      \end{tikzpicture}
+\end{image}
+
 
 In this case, since the midpoint of $[x_k,x_{k+1}]$ is \begin{align*}\frac{x_k+x_{k+1}}{2} &= \frac{1}{2}(a+k \Delta x + a + (k+1)\Delta x) \\ &= \frac{1}{2}(2a+(2k+1)\Delta x) \\ &= a+ \frac{2k+1}{2}\Delta x \\ &= a + \left(k+\frac{1}{2}\right)\Delta x,\end{align*}we would have that $$\mbox{area under graph} \approx \sum_{k=0}^{n-1} f\left(a + \left(k+\frac{1}{2}\right)\Delta x\right) \Delta x$$
 
@@ -73,7 +171,28 @@ So, we will focus on left Riemann sums instead, and illustrate the indicated pro
   \begin{explanation}
     It helps to make a picture first, say, dividing $[0,1]$ into five parts.
 
-    [ADD FIGURE]
+    \begin{image}
+      \begin{tikzpicture}
+        \begin{axis}
+          \addplot[color=penColor, thick, samples=200,domain=0:5]{x};
+          \addplot[guideline,-] coordinates {(4,0) (4,4)};
+          \addplot[guideline,-] coordinates {(4,4) (5,4)};
+          \addplot[guideline,-] coordinates {(5,0) (5,4)};
+          \addplot[guideline,-] coordinates {(4,0) (5,0)};
+          \addplot[guideline,-] coordinates {(3,0) (3,3)};
+          \addplot[guideline,-] coordinates {(3,3) (4,3)};
+          \addplot[guideline,-] coordinates {(3,0) (4,0)};
+          \addplot[guideline,-] coordinates {(2,0) (2,2)};
+          \addplot[guideline,-] coordinates {(2,2) (3,2)};
+          \addplot[guideline,-] coordinates {(2,0) (3,0)};
+          \addplot[guideline,-] coordinates {(1,0) (1,1)};
+          \addplot[guideline,-] coordinates {(1,1) (2,1)};
+          \addplot[guideline,-] coordinates {(1,0) (2,0)};
+          \addplot[guideline,-] coordinates {(0,0) (1,0)};
+        \end{axis}
+      \end{tikzpicture}
+\end{image}
+
 
     In this case, we have in general that $$\Delta x = \frac{b-a}{n} = \frac{1-0}{n} = \frac{1}{n},$$with $x_k = k/n$, as $k=0,1,\ldots, n$. The area of the ``left'' rectangle over the interval $[x_k,x_{k+1}]$ determined by the graph is $(k/n)(1/n) = k/n^2$ (this is base times height, as usual). Therefore, an approximation for the desired area is $$\sum_{k=0}^{n-1}\frac{k}{n^2} = \frac{1}{n^2}\sum_{k=0}^{n-1} k = \frac{1}{n^2} \frac{(n-1)n}{2} = \frac{n^2-n}{2n^2} = \frac{1}{2} - \frac{1}{2n}$$
 As $n$ gets larger and larger, $1/(2n)$ gets smaller and smaller, which suggests that the actual area is simply $1/2$. This turns out to be the case, as you can easily check: the region in question is a triangle with both base length and height equal to $1$. For more complicated graphs, doing a sanity-check like this isn't necessarily so easy, but this at least illustrated that our approximation method is reliable.    
@@ -84,9 +203,30 @@ As $n$ gets larger and larger, $1/(2n)$ gets smaller and smaller, which suggests
   Approximate the area of the graph of $f(x) = x^2$ over the interval $[0,1]$ by using left Riemann sums. What is the suggested exact area?
 
   \begin{explanation}
-    We again start with a sketch, to gain intuition:
+    We again start with a sketch (of $x^2/4$, for scaling reasons), to gain intuition:
 
-    [ADD FIGURE]
+    \begin{image}
+      \begin{tikzpicture}
+    \begin{axis}
+      \addplot[color=penColor, thick, samples=200,domain=0:5]{x^2/4};
+      \addplot[guideline,-] coordinates {(5,0) (5,4)};
+      \addplot[guideline,-] coordinates {(4,0) (4,4)};
+      \addplot[guideline,-] coordinates {(4,4) (5,4)};
+      \addplot[guideline,-] coordinates {(4,0) (5,0)};
+      \addplot[guideline,-] coordinates {(3,0) (3,9/4)};
+      \addplot[guideline,-] coordinates {(3,9/4) (4,9/4)};
+      \addplot[guideline,-] coordinates {(3,0) (4,0)};
+      \addplot[guideline,-] coordinates {(2,0) (2,1)};
+      \addplot[guideline,-] coordinates {(2,1) (3,1)};
+      \addplot[guideline,-] coordinates {(2,0) (3,0)};
+      \addplot[guideline,-] coordinates {(1,0) (1,1/4)};
+      \addplot[guideline,-] coordinates {(1,1/4) (2,1/4)};
+      \addplot[guideline,-] coordinates {(1,0) (2,0)};
+      \addplot[guideline,-] coordinates {(0,0) (1,0)};
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+
 
     As in the previous example, we have that $\Delta x = 1/n$ and $x_k = k/n$, as $k=0,1,\ldots, n$. The area of the ``left'' rectangle over the interval $[x_k,x_{k+1}]$ determined by the graph is $(k/n)^2(1/n) = k^2/n^3$ (again using ``base times height''). So, an approximation for the desired area is
     \begin{align*}
@@ -104,9 +244,29 @@ As $n$ gets larger and larger, $1/(2n)$ and $1/(6n^2)$ get smaller and smaller, 
   Approximate the area of the graph of $f(x) = x^3$ over the interval $[0,1]$ by using left Riemann sums. What is the suggested exact area?
 
   \begin{explanation}
-    Here's what the situation looks like this time:
+    Here's what the situation looks like this time (with the graph of $x^3/12$ for scaling reasons):
 
-    [ADD FIGURE]
+    \begin{image}
+      \begin{tikzpicture}
+    \begin{axis}
+      \addplot[color=penColor, thick, samples=200,domain=0:5]{x^3/12};
+      \addplot[guideline,-] coordinates {(4,0) (4,64/12)};
+      \addplot[guideline,-] coordinates {(4,64/12) (5,64/12)};
+      \addplot[guideline,-] coordinates {(5,0) (5,64/12)};
+      \addplot[guideline,-] coordinates {(4,0) (5,0)};
+      \addplot[guideline,-] coordinates {(3,0) (3,27/12)};
+      \addplot[guideline,-] coordinates {(3,27/12) (4,27/12)};
+      \addplot[guideline,-] coordinates {(3,0) (4,0)};
+      \addplot[guideline,-] coordinates {(2,0) (2,8/12)};
+      \addplot[guideline,-] coordinates {(2,8/12) (3,8/12)};
+      \addplot[guideline,-] coordinates {(2,0) (3,0)};
+      \addplot[guideline,-] coordinates {(1,0) (1,1/12)};
+      \addplot[guideline,-] coordinates {(1,1/12) (2,1/12)};
+      \addplot[guideline,-] coordinates {(1,0) (2,0)};
+      \addplot[guideline,-] coordinates {(0,0) (1,0)};
+    \end{axis}
+\end{tikzpicture}
+\end{image}
 
     Dividing $[0,1]$ into $n$ parts, we have that $\Delta x = 1/n$ and $x_k = k/n$, as $k=0,1,\ldots, n$. The area of the ``left'' rectangle over the interval $[x_k,x_{k+1}]$ determined by the graph is $(k/n)^3(1/n) = k^3/n^4$, so that an approximation for the desired area is
     \begin{align*}
