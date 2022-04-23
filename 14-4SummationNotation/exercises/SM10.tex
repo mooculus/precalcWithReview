@@ -7,6 +7,15 @@
 
 \begin{document}
 \begin{exercise}
-  LATER
+  Let's approximate the are under the graph of $f(x) = x+2$, over the interval $[5,6]$.
+
+  \begin{enumerate}
+  \item Dividing $[5,6]$ into $n$ equal subintervals, the length of each one of them is $\Delta x = \frac{\answer{1}}{n}$.
+  \item Writing $$x_0 = 5,\quad x_1 = 5+\Delta x, \quad x_2 = 5+2\Delta x,\quad\ldots,\quad, x_n = 5+ n\Delta x = 6,$$ we have that $x_k = 1+\frac{\answer{1}k}{n}$.
+  \item Setting up a left Riemann sum, we have that $$\mbox{area under curve} \approx\sum_{k=0}^{n-1} f(x_k)\Delta x = \sum_{k=0}^{n-1} \left(5+\frac{\answer{1}k}{n}+\answer{2}\right)^2 \frac{\answer{1}}{n}.$$
+  \item We may reorganize this sum as $$\frac{\answer{7}}{n^{\answer{1}}} \sum_{k=0}^{n-1} 1 + \frac{\answer{1}}{n^{\answer{2}}}\sum_{k=0}^{n-1}k$$
+  \item Using formulas for sums of powers, this boils down to $$\frac{\answer{15}}{\answer{2}} +\frac{\answer{-9}}{n}.$$
+  \item The desired area equals $\frac{\answer{15}}{\answer{2}}$.
+  \end{enumerate}
 \end{exercise}
 \end{document}
