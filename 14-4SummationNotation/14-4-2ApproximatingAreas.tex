@@ -24,7 +24,27 @@
 
 We have known how to compute areas of rectangles and triangles for a long time. Namely, the area of a rectangle with base length $b$ and height $h$ is simply $A=bh$, while the area of a triangle with base length $b$ and height $h$ is $A = bh/2$:
 
-[ADD FIGURES]
+ \begin{image}
+      \begin{tikzpicture}
+        \begin{axis}
+          \addplot[soliddot, color=penColor] coordinates {(-4,1)};
+          \addplot[soliddot, color=penColor] coordinates {(-1,2)};
+          \addplot[soliddot, color=penColor] coordinates {(-2,6)};
+          \addplot[guideline,-] coordinates {(-4,1) (-1,2)};
+          \addplot[guideline,-] coordinates {(-1,2) (-2,6)};
+          \addplot[guideline,-] coordinates {(-2,6) (-4,1)};
+          \addplot[soliddot, color=penColor] coordinates {(2,-2)};
+          \addplot[soliddot, color=penColor] coordinates {(2,-4)};
+          \addplot[soliddot, color=penColor] coordinates {(6,-2)};
+          \addplot[soliddot, color=penColor] coordinates {(6,-4)};
+          \addplot[guideline,-] coordinates {(2,-2) (2,-4)};
+          \addplot[guideline,-] coordinates {(2,-4) (6,-4)};
+          \addplot[guideline,-] coordinates {(6,-4) (6,-2)};
+          \addplot[guideline,-] coordinates {(6,-2) (2,-2)};          
+        \end{axis}
+      \end{tikzpicture}
+    \end{image}
+    
 
 By decomposing any polygon into triangles, one may also find (with considerable additional effort) the area it encloses: $$A = \sum_{k=1}^n A_k = A_1+\cdots + A_n.$$
 
@@ -52,7 +72,15 @@ By decomposing any polygon into triangles, one may also find (with considerable 
 
 The question remains, however, of how to find the area of a region more complicated regions, with ``curved boundaries'', such as
 
-[ADD FIGURE]
+
+ \begin{image}
+      \begin{tikzpicture}
+        \begin{axis}
+          \addplot[color=penColor, thick, samples=200,domain=-2:2]{x^2-4};
+          \addplot[color=penColor, thick, samples=200,domain=-2:2]{-x^2+4};
+        \end{axis}
+      \end{tikzpicture}
+\end{image}
 
 The most adequate tools to deal with this problem are studied in a first Calculus class, but we already have enough tools to understand the idea of what is behind them. For simplicity, we will focus on computing areas bounded by the graph of a positive function $y=f(x)$:
 
