@@ -100,7 +100,7 @@ $(\answer{-\infty} , \answer{\infty})$
 \item As $x$ goes to $-\infty$, $y$ goes to $\answer{-\infty}$.
 
 \item Does this function have any vertical asymptotes?
-$\wordChoice{\choice{yes}\choice[correct]{no}}$
+\wordChoice{\choice{yes}\choice[correct]{no}}
 \end{enumerate}
 \end{exercise}
 
@@ -121,7 +121,7 @@ Below, we have an example of the graph of $y=x^5$ and the two functions
        % \addplot [draw=black, thick, smooth, domain=(-2.5:2.5)] {x^3};
          \addplot [draw=blue, thick, smooth, domain=(-1.8:1.8)] {x^5};
           \addplot [draw=purple, samples=200,thick, smooth, domain=(0:6)] {x^(1/5)};
-            \addplot [draw=purple, samples=200, thick, smooth, domain=(-6:0)] {x^(1/5)};
+            \addplot [draw=purple, samples=400, thick, smooth, domain=(-6:0)] {-(-x)^(1/5)};
         %   \addplot [draw=orange, thick, smooth, domain=(-1.4:1.4)] {x^9};
 
        \addplot [line width=1, gray, dashed,samples=100,domain=(-6:6)] {x};
