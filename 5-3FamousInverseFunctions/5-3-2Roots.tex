@@ -13,17 +13,307 @@
 \end{abstract}
 \maketitle
 
-Coming Soon.
+\begin{motivatingQuestions}\begin{itemize}
+\item Can we invert a polynomial?
+\item What does it mean to take the $n^{th}$ root of a value?
+\end{itemize}\end{motivatingQuestions}
 
-Recall in Section 3-2-3 that we briefly discussed the square root function..
+
+%Recall in Section 3-2-3 that we briefly discussed the square root function..
+
+%Pulling from Elizabeth's lecture notes:
+
+A {\em root} function is the inverse function of a polynomial of the form $p(x)=x^n$, written $r(x)=\sqrt[n]{x}$. There are two types of root functions: {\em even} roots (where $n$ is even) and {\em odd} roots (where $n$ is odd).
+
+$$\underbrace{\sqrt[n]{x} \cdot \sqrt[n]{x} \cdot \sqrt[n]{x} \cdot \sqrt[n]{x} \cdots \sqrt[n]{x}}_n =x.$$
+
+%%%%%%%%%%%%ODD ROOTS
+\section{Odd Roots}
+
+Recall that every polynomial $p(x) = x^n$, where $n$ is odd, has the same basic shape. This is demonstrated in the figure below by the graphs of $y = x^n$ for $n = 3, 5,7,9$.
+
+\begin{image}
+\begin{tikzpicture}
+     \begin{axis}[
+                domain=-4:4, ymax=15, xmax=5, ymin=-15, xmin=-5,
+                axis lines =center, xlabel=$x$, ylabel=${y}$,
+                ytick={-14,-10,-6,-2,2,6,10,14},
+                xtick={-4,-2,2,4},
+                ticklabel style={font=\scriptsize},
+%                every axis y label/.style={at=(current axis.above origin),anchor=south},
+%                every axis x label/.style={at=(current axis.right of origin),anchor=west},
+%                axis on top,
+                ]
+        
+        %\addplot [draw=penColor, very thick, smooth, domain=(-7.5:3), <->] {1/(x-3) + 2};
+        \addplot [draw=black, thick, smooth, domain=(-2.5:2.5)] {x^3};
+         \addplot [draw=blue, thick, smooth, domain=(-1.8:1.8)] {x^5};
+          \addplot [draw=purple, thick, smooth, domain=(-1.5:1.5)] {x^7};
+           \addplot [draw=orange, thick, smooth, domain=(-1.4:1.4)] {x^9};
+
+     %   \addplot [line width=1, gray, dashed,samples=100,domain=(-9:9)] ({3},{x});
+        %\addplot [line width=1, gray, dashed,samples=100,domain=(-9:4)] ({x},{2});
+    \end{axis}
+
+\end{tikzpicture}
+\end{image}
 
 
-%This exemplifies the fact that, 
-In general, the square root is not one-to-one when used for {\em solving} equations. Instead, the output must be chosen. For instance, the square root of 9 is 3, since the square root {\em function} is only defined on $[0,\infty)$. However, if we wish to solve the equation $x^2=9$, the solution is not $x=3$, or, to be more precise, there are \textbf{two} solutions: $x=3$ \textbf{and} $x = -3$, since both $3^2$ and $(-3)^2$ are equal to 9. This can be demonstrated by solving the equation through factoring:
-$$0=x^2-9 =(x+3)(x-3),$$
-which has {\em two} solutions: $x=3$ and $x = -3$.
+Now, are these functions invertible? Looking at the graphs, we see that these functions pass the horizontal line test, i.e., each value of $y$ occurs only once. Thus, the functions are one-to-one, and therefore invertible.
 
-$\sqrt{}$ is not one-to-one so you must {\em choose} which value makes sense in the context, or list both.
+Let's delve more deeply into the $p(x) = x^3$ example. We have now established that it is invertible, and it's inverse is $r(x)=\sqrt[3]{x}$. 
+
+\begin{exercise}
+Draw both functions on the axes provided, then answer the following questions about the function $r(x)$.
+
+\begin{image}
+\begin{tikzpicture}
+     \begin{axis}[
+                domain=-4:4, ymax=9, xmax=9, ymin=-9, xmin=-9,
+                axis lines =center, xlabel=$x$, ylabel=${y}$,
+               ytick={-8,-6,-4,-2,2,4,6,8},
+                xtick={-8,-6,-4,-2,2,4,6,8},
+                ticklabel style={font=\scriptsize}
+                ]           
+           
+    \end{axis}
+
+\end{tikzpicture}
+\end{image}
+
+
+\begin{enumerate}
+\item What is the $x$-intercept of $r(x)$? 
+$(\answer{0} , \answer{0})$
+
+\item What is the $y$-intercept of $r(x)$? 
+$(\answer{0} , \answer{0})$
+
+\item What is the domain of $r(x)$? 
+$(\answer{-\infty} , \answer{\infty})$
+
+\item What is the range of $r(x)$? 
+$(\answer{-\infty} , \answer{\infty})$
+
+\item As $x$ goes to $\infty$, $y$ goes to $\answer{\infty}$.
+
+\item As $x$ goes to $-\infty$, $y$ goes to $\answer{-\infty}$.
+
+\item Does this function have any vertical asymptotes?
+$\wordChoice{\choice{yes}\choice[correct]{no}}$
+\end{enumerate}
+\end{exercise}
+
+\begin{example}
+Below, we have an example of the graph of $y=x^5$ and the two functions
+
+\begin{image}
+\begin{tikzpicture}
+     \begin{axis}[
+                domain=-4:4, ymax=6, xmax=6, ymin=-6, xmin=-6,
+                axis lines =center, xlabel=$x$, ylabel=${y}$,
+               ytick={-4,-2,2,4},
+                xtick={-4,-2,2,4},
+                ticklabel style={font=\scriptsize}
+                ]
+        
+        %\addplot [draw=penColor, very thick, smooth, domain=(-7.5:3), <->] {1/(x-3) + 2};
+       % \addplot [draw=black, thick, smooth, domain=(-2.5:2.5)] {x^3};
+         \addplot [draw=blue, thick, smooth, domain=(-1.8:1.8)] {x^5};
+          \addplot [draw=purple, samples=200,thick, smooth, domain=(0:6)] {x^(1/5)};
+            \addplot [draw=purple, samples=200, thick, smooth, domain=(-6:0)] {x^(1/5)};
+        %   \addplot [draw=orange, thick, smooth, domain=(-1.4:1.4)] {x^9};
+
+       \addplot [line width=1, gray, dashed,samples=100,domain=(-6:6)] {x};
+        %\addplot [line width=1, gray, dashed,samples=100,domain=(-9:4)] ({x},{2});
+    \end{axis}
+
+\end{tikzpicture}
+\end{image}
+
+\end{example}
+
+Recall that a function $f$ is {\em even} if $f(-x) = f(x)$ for all $x$ in its domain, and $f$ is {\em odd} if $f(-x) = -f(x)$ for all $x$. Otherwise, the function is neither. % Recall that these properties are reflected in the graph of the function. An even function is reflected across a single axis, while an odd function is reflected across both.
+Let's consider an example. Given $x=8$, $r(x) = \sqrt[3]{8}=2$ and $r(-x) = \sqrt[3]{-8} = -2$, since $(-2)\cdot(-2)\cdot(-2) =(4)\cdot(-2) = -8$. Based on this example, do you think $r(x)$ is even, odd, or neither?
+
+If you guessed odd, then you are correct! All odd root functions are odd functions. We can show this through the associativity and commutativity of multiplication. 
+Consider $r(x) = \sqrt[n]{x} = y$ for $n$ odd, then we know that $\underbrace{y \cdot y \cdot y \cdots y}_n=x$, so
+\begin{align*}
+\underbrace{(-y) \cdot (-y) \cdot (-y) \cdots (-y)}_n 
+&= \underbrace{(-1) \cdot (-1) \cdot (-1) \cdots (-1)}_n \cdot \underbrace{y \cdot y \cdot y \cdots y}_n \\
+&= (-1) \cdot x = -x.
+\end{align*}
+Thus, $r(-x) = \sqrt[n]{-x} = -y = -\sqrt[n]{x} = -r(x)$, meaning $r$ is an odd function.
+It is important to note that the parentheses around the ``-1" terms are {\bf not} optional. 
+
+
+
+%%%%%%%%%%%%EVEN ROOTS
+\section{Even Roots}
+We again begin by recalling the general shape of $p(x) = x^n$, but this time for $n$ {\em even}. These functions also have the same basic shape for all even $n$. This is demonstrated by the graphs of $y = x^n$ for $n = 2,4,6,8$ given below.
+
+\begin{image}
+\begin{tikzpicture}
+     \begin{axis}[
+                domain=-4:4, ymax=7, xmax=5, ymin=-2, xmin=-5,
+                axis lines =center, xlabel=$x$, ylabel=${y}$,
+                ytick={-1,1,2,3,4,5,6},
+                xtick={-4,-3,-2,-1,1,2,3,4},
+                ticklabel style={font=\scriptsize},
+%                every axis y label/.style={at=(current axis.above origin),anchor=south},
+%                every axis x label/.style={at=(current axis.right of origin),anchor=west},
+%                axis on top,
+                ]
+        
+        %\addplot [draw=penColor, very thick, smooth, domain=(-7.5:3), <->] {1/(x-3) + 2};
+        \addplot [draw=black, thick, smooth, domain=(-2.8:2.8)] {x^2};
+         \addplot [draw=blue, thick, smooth, domain=(-1.8:1.8)] {x^4};
+          \addplot [draw=purple, thick, smooth, domain=(-1.5:1.5)] {x^6};
+           \addplot [draw=orange, thick, smooth, domain=(-1.4:1.4)] {x^8};
+           
+           
+         %  \node[label = right:{$y=x^2$}] at (5,4) {};
+
+     %   \addplot [line width=1, gray, dashed,samples=100,domain=(-9:9)] ({3},{x});
+        %\addplot [line width=1, gray, dashed,samples=100,domain=(-9:4)] ({x},{2});
+        
+          %\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-6,5)};
+        %\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-6,1.88)};
+        \addplot[label = right:{$y=x^2$}] coordinates{(2,5)};
+        \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(6,-2)};
+    \end{axis}
+
+\end{tikzpicture}
+\end{image}
+
+Now, are these functions invertible? All of the graphs in the figure above are symmetric about the $y$-axis (example $2^2 = 4 = (-2)^2$), so they do {\em not} pass the horizontal line test. Thus, these functions are {\em not} one-to-one, and therefore {\em not} invertible.
+
+So, how do we define an even root function?
+
+Let's start with $n=2$. Consider the polynomial $p(x)=x^2$, graphed below with its ``inverse." 
+% to the polynomial $p(x) = x^2$. Observing the graph below, we see that by restricting the domain of $p$ to $x \geq 0$, we now have a function which passes the horizontal line test, and can thus be inverted.
+\begin{image}
+\begin{tikzpicture}
+     \begin{axis}[
+                domain=-4:4, ymax=8, xmax=8, ymin=-4, xmin=-4,
+                axis lines =center, xlabel=$x$, ylabel=${y}$,
+               ytick={-2,2,4, 6},
+                xtick={-2,2,4,6},
+                ticklabel style={font=\scriptsize}
+                ]
+        
+        %\addplot [draw=penColor, very thick, smooth, domain=(-7.5:3), <->] {1/(x-3) + 2};
+       % \addplot [draw=black, thick, smooth, domain=(-2.5:2.5)] {x^3};
+         \addplot [draw=black, thick, smooth, domain=(-3:3)] {x^2};
+          \addplot [draw=purple, samples=200,thick, smooth, domain=(0:8)] {x^(1/2)};
+            \addplot [draw=purple, samples=200, thick, smooth, domain=(0:8)] {-x^(1/2)};
+        %   \addplot [draw=orange, thick, smooth, domain=(-1.4:1.4)] {x^9};
+
+       \addplot [line width=1, gray, dashed,samples=100,domain=(-6:8)] {x};
+        %\addplot [line width=1, gray, dashed,samples=100,domain=(-9:4)] ({x},{2});
+    \end{axis}
+
+\end{tikzpicture}
+\end{image}
+
+Observe that by restricting the domain of $p$ to $x \geq 0$, we now have a function which passes the horizontal line test, and can thus be inverted.
+
+%
+%\begin{image}
+%\begin{tikzpicture}
+%     \begin{axis}[
+%                domain=-4:4, ymax=7, xmax=5, ymin=-2, xmin=-5,
+%                axis lines =center, xlabel=$x$, ylabel=${y}$,
+%                ytick={-1,1,2,3,4,5,6},
+%                xtick={-4,-3,-2,-1,1,2,3,4},
+%                ticklabel style={font=\scriptsize},
+%%                every axis y label/.style={at=(current axis.above origin),anchor=south},
+%%                every axis x label/.style={at=(current axis.right of origin),anchor=west},
+%%                axis on top,
+%                ]
+%        
+%        %\addplot [draw=penColor, very thick, smooth, domain=(-7.5:3), <->] {1/(x-3) + 2};
+%        \addplot [draw=black, thick, smooth, domain=(-2.8:2.8)] {x^2};
+%%         \addplot [draw=blue, thick, smooth, domain=(-1.8:1.8)] {x^4};
+%%          \addplot [draw=purple, thick, smooth, domain=(-1.5:1.5)] {x^6};
+%%           \addplot [draw=orange, thick, smooth, domain=(-1.4:1.4)] {x^8};
+%           
+%           
+%         %  \node[label = right:{$y=x^2$}] at (5,4) {};
+%
+%     %   \addplot [line width=1, gray, dashed,samples=100,domain=(-9:9)] ({3},{x});
+%        %\addplot [line width=1, gray, dashed,samples=100,domain=(-9:4)] ({x},{2});
+%        
+%          %\addplot[color=penColor,fill=penColor,only marks,mark=*] coordinates{(-6,5)};
+%        %\addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(-6,1.88)};
+%        \addplot[label = right:{$y=x^2$}] coordinates{(2,5)};
+%        \addplot[color=penColor,fill=white,only marks,mark=*] coordinates{(6,-2)};
+%    \end{axis}
+%
+%\end{tikzpicture}
+%\end{image}
+
+The relation to find this inverse is $x=y^2$, but the function will be $y = \sqrt{x}$. Specifically, we let $p(x) = x^2$ for $x \geq 0$, then define $r(x) = \sqrt[2]{x} = \sqrt{x}$ as the inverse function of $p(x)$ on this restricted domain.
+
+\begin{exercise}
+We now repeat Exercise 1 for $r(x) = \sqrt[4]{x}$. Draw both functions on the axes provided, then answer the following questions about the function $r(x)$.
+
+\begin{image}
+\begin{tikzpicture}
+     \begin{axis}[
+                 domain=-4:4, ymax=7, xmax=5, ymin=-2, xmin=-5,
+                axis lines =center, xlabel=$x$, ylabel=${y}$,
+                ytick={-1,1,2,3,4,5,6},
+                xtick={-4,-3,-2,-1,1,2,3,4},
+                ticklabel style={font=\scriptsize},
+                ]           
+           
+    \end{axis}
+
+\end{tikzpicture}
+\end{image}
+
+\begin{enumerate}
+\item What is the $x$-intercept of $r(x)$? 
+$(\answer{0} , \answer{0})$
+
+\item What is the $y$-intercept of $r(x)$? 
+$(\answer{0} , \answer{0})$
+
+\item What is the domain of $r(x)$? 
+$[\answer{0} , \answer{\infty})$
+
+\item What is the range of $r(x)$? 
+$[\answer{0} , \answer{\infty})$
+
+\item As $x$ goes to $\infty$, $y$ goes to $\answer{\infty}$.
+
+\item Does this function have any vertical asymptotes?
+$\wordChoice{\choice{yes}\choice[correct]{no}}$
+\end{enumerate}
+\end{exercise}
+
+Now, what if we instead restricted our domain to $x \leq 0$? Consider $q(x) = x^2$ defined for $x \leq 0$, the inverse of this function is $s(x) = -\sqrt{x} = -r(x)$.
+
+Hence, if we wish to find all values that undo $y=x^2$, then we must consider both $y = \sqrt{x}$ and $y=-\sqrt{x}$. It is important to note that this is true for {\em all} even roots. 
+We can show this in the same way that we showed odd root functions are odd functions. 
+Consider $r(x) = \sqrt[n]{x} = y$ for $n$ even, then we know that $\underbrace{y \cdot y \cdot y \cdots y}_n=x$, so
+\begin{align*}
+\underbrace{(-y) \cdot (-y) \cdot (-y) \cdots (-y)}_n 
+&= \underbrace{(-1) \cdot (-1) \cdot (-1) \cdots (-1)}_n \cdot \underbrace{y \cdot y \cdot y \cdots y}_n \\
+&= (1) \cdot x = x.,
+\end{align*}
+since we have $(-1)^2 = 1$ multiplied $\frac{n}{2}$ times.
+
+%
+%%This exemplifies the fact that, 
+%In general, the square root is not one-to-one when used for {\em solving} equations. Instead, the output must be chosen. For instance, the square root of 9 is 3, since the square root {\em function} is only defined on $[0,\infty)$. However, if we wish to solve the equation $x^2=9$, the solution is not $x=3$, or, to be more precise, there are \textbf{two} solutions: $x=3$ \textbf{and} $x = -3$, since both $3^2$ and $(-3)^2$ are equal to 9. This can be demonstrated by solving the equation through factoring:
+%$$0=x^2-9 =(x+3)(x-3),$$
+%which has {\em two} solutions: $x=3$ and $x = -3$.
+%
+%$\sqrt{}$ is not one-to-one so you must {\em choose} which value makes sense in the context, or list both.
+
+We now formalize the definition of the $n^{th}$ root function for a general positive integer $n$.
 
 \begin{definition}
 For any real number $x$, the $n^{th}$ root of $x$ is denoted by 
@@ -31,7 +321,8 @@ $$\sqrt[n]{x} = x^{\frac{1}{n}}.$$
 %
 It is further defined as the real number $y$ such that 
 $$y^n = x.$$
-Note that if $n$ is \textbf{even}, then both $y^n$ and $(-y)^n$ will be equal to $x$, so the $n^{th}$ root is actually $|y|$, since we define the $n^{th}$ root {\em function} to produce values in $[0,\infty)$ for $n$ even as with the more-common square root. Further note that the input of an even $n^{th}$ root (the $x$ in $\sqrt[n]{x}$) must be in $[0,\infty)$ as well.
+Note that if $n$ is \textbf{even}, then both $y^n$ and $(-y)^n$ will be equal to $x$, so for this to be a {\em function}, we must choose one or the other. The {\em principal} $n^{th}$ root is the positive value, $|y|$. %since we define the $n^{th}$ root {\em function} to produce values in $[0,\infty)$ for $n$ even as with the more-common square root. 
+Further note that the input of an even $n^{th}$ root (the $x$ in $\sqrt[n]{x}$) must be in $[0,\infty)$. % as well.
 
 However, if $n$ is \textbf{odd}, then there is only one such $y$, and {\em both} the input and output of the $n^{th}$ root function are in $(-\infty,\infty)$.
 \end{definition}
@@ -61,20 +352,45 @@ x^2 &= 4 \\
 \sqrt{x^2} &= \sqrt{4} \\
 \pm x &= 2,
 \end{align*}
-which translates to $x = \pm 2$. This is because the square root of a number is always non-negative; {\em however}, we are looking for the value that makes this equation true, and since $f(x)=x^2$ is \textbf{not} one-to-one, there are two values of $x$ which make it equal to any positive number, as demonstrated above.
+which translates to $x = \pm 2$. %This is because the square root of a number is always non-negative; {\em however}, we are looking for the value that makes this equation true, and s
+Since $f(x)=x^2$ is \textbf{not} one-to-one, there are two values of $x$ which make it equal to any positive number, as demonstrated above.
 %do \textbf{not} restrict the range of the $n^{th}$ root to $[0,\infty)$, but allow it to produce a negative value. In this case, the $n^{th}$ root is no longer one-to-one for even $n$.
-
+This is summarized below.
 
 \begin{callout}
-{\bf Warning:} Solving an equation like $x^2 = 4$ is very different than computing $\sqrt{4} = 2$. To solve the equation, one rewrites it as $x^2-4=0$, then factors it as $(x-2)(x+2) = 0$, and concludes that $x=-2$ or $x=2$. However, people often write this sloppily as $x = \pm 2$, and proceed to say {\bf wrong} things such as $\sqrt{4} = \pm 2$. Square roots are always non-negative, so $\sqrt{4}=2$ is the only correct equality. To relate this back with solving the equation $x^2=4$, one could alternatively take the square root of both sides, leading to $\sqrt{x^2} = \sqrt{4}$. The square root of a square is not the original number, but its absolute value instead. This means that instead of writing the next step as $x=2$ (which would lead us to miss the solution $x=-2$), we should write $|x| = 2$. Which real numbers have absolute value equal to $2$? Just $x=2$ and $x=-2$.
+{\bf Important Algebra Note:}\\
+If $a^3=b$, then we know that $a = \sqrt[3]{b}$.
 
-This is true for any {\em even} root, for instance, consider the equation $x^4 = 16$. If we take the fourth root ($\sqrt[4]{}$) of both sides, we then have $x = \pm 2$. However, if we have $x^3 = 8$, when we take the third root, we get only one solution, $x=2$. Factoring, we can see why this is the case: $x^3=8$ is equivalent to 
-$$0=x^3 - 8=(x-2)(x^2+2x+4),$$
-which has only one real solution, $x=2$.
+However, if $a^2 =b$, then {\bf either} $a=\sqrt{b}$ {\bf or} $a = -\sqrt{b}$.
+\\
 
-However, {\em odd} roots have the unique property that they can be applied to {\em negative} numbers. Following the pattern above, $x^2=-4$ has no real solutions since the square root is only defined for values greater or equal to zero. However, $x^3=-8$ does have a solution: $x=-2$, we can check this easily by multiplying out 
-$$(-2)^3=(-2)\cdot(-2)\cdot(-2) = 4 \cdot (-2) = -8.$$
-It is important to note that the partentheses around the ``-2" terms are {\bf not} optional. 
+{\bf In General:}\\
+For $n$ {\bf odd}, 
+$$\text{ if } a^n = b, \text{ then } a=\sqrt[n]{b}.$$
+
+For $n$ {\bf even},
+$$\text{ if } a^n = b, \text{ then {\bf either} } a=\sqrt[n]{b} \textbf{ or } a = -\sqrt{b}.$$
+
 \end{callout}
+
+%\begin{callout}
+%{\bf Warning:} Solving an equation like $x^2 = 4$ is very different than computing $\sqrt{4} = 2$. To solve the equation, one rewrites it as $x^2-4=0$, then factors it as $(x-2)(x+2) = 0$, and concludes that $x=-2$ or $x=2$. However, people often write this sloppily as $x = \pm 2$, and proceed to say {\bf wrong} things such as $\sqrt{4} = \pm 2$. Square roots are always non-negative, so $\sqrt{4}=2$ is the only correct equality. To relate this back with solving the equation $x^2=4$, one could alternatively take the square root of both sides, leading to $\sqrt{x^2} = \sqrt{4}$. The square root of a square is not the original number, but its absolute value instead. This means that instead of writing the next step as $x=2$ (which would lead us to miss the solution $x=-2$), we should write $|x| = 2$. Which real numbers have absolute value equal to $2$? Just $x=2$ and $x=-2$.
+%
+%This is true for any {\em even} root, for instance, consider the equation $x^4 = 16$. If we take the fourth root ($\sqrt[4]{}$) of both sides, we then have $x = \pm 2$. However, if we have $x^3 = 8$, when we take the third root, we get only one solution, $x=2$. Factoring, we can see why this is the case: $x^3=8$ is equivalent to 
+%$$0=x^3 - 8=(x-2)(x^2+2x+4),$$
+%which has only one real solution, $x=2$.
+%
+%However, {\em odd} roots have the unique property that they can be applied to {\em negative} numbers. Following the pattern above, $x^2=-4$ has no real solutions since the square root is only defined for values greater or equal to zero. However, $x^3=-8$ does have a solution: $x=-2$, we can check this easily by multiplying out 
+%$$(-2)^3=(-2)\cdot(-2)\cdot(-2) = 4 \cdot (-2) = -8.$$
+%It is important to note that the parentheses around the ``-2" terms are {\bf not} optional. 
+%\end{callout}
+
+\begin{summary}
+\\
+In general, we are not able to simply invert polynomials.
+However, when the polynomial is $p(x) = x^n$ for a positive {\em odd} integer $n$, the polynomial is invertible as the $n^{th}$ root function $r(x) = \sqrt[n]{x}$.
+
+When $n$ is {\em even}, it is possible to define an inverse function $r(x) = \sqrt[n]{x}$ on a restricted domain ($[0, \infty)$ or $(-\infty,0]$). The principal $n^{th}$ root is defined as the inverse of $p(x)$ on the restricted domain $[0,\infty)$.
+\end{summary}
 
 \end{document}
