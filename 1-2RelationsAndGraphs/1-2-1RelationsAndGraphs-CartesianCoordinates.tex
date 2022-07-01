@@ -27,7 +27,7 @@ We plot points on a 2-dimensional Cartesian graph.
 The purpose of math is to make sense of the world around up and phenomena we encounter. We use analogies to ground our learning in familiar situations to help us understand mathematics through connections between math and the world.
 \end{MM}
 
-When we model a relationship between two variables visually, we use the Cartesian coordinate system. We begin with the basic vocabulary and ideas that come with the Cartesian coordinate system.
+When we model a relationship between two variables visually, we often use the Cartesian coordinate system. We begin with the basic vocabulary and ideas that come with the Cartesian coordinate system.
 
 The Cartesian coordinate system identifies the location of every point in a plane. Basically, the system gives every point in a plane its own ``address'' in relation to a starting point. We'll use a street grid as an analogy. Here is a map with Carl's home at the center. The map also shows some nearby businesses. Assume each unit in the grid represents one city block.
 
@@ -40,9 +40,9 @@ The Cartesian coordinate system identifies the location of every point in a plan
                 ytick={-4,4},
                 clip=false]
         \addplot[soliddot] coordinates {(0,0)} node[pin=240:{Carl's house}] {};
-        \addplot[soliddot] coordinates {(2, 3)} node[pin=-30:{restaurant}] {};
+        \addplot[soliddot] coordinates {(2, 3)} node[pin=30:{restaurant}] {};
         \addplot[soliddot] coordinates {(-3, 2)} node[pin=100:{pet shop}] {};
-        \addplot[soliddot] coordinates {(3.5, 2)} node[pin=100:{school}] {};
+        \addplot[soliddot] coordinates {(3.5, 2)} node[pin=-100:{school}] {};
         \addplot[soliddot] coordinates {(-2, -4)} node[pin=150:{gas station}] {};
         \addplot[soliddot] coordinates {(3, -3)} node[pin=120:{bar}] {};
         \addplot[mark=none] coordinates {(5, 0)} node[above left] {east};
@@ -112,9 +112,9 @@ In the Cartesian coordinate system, the positive directions are to the right hor
 \begin{problem}
 Use the graph of Carl's neighborhood above to answer the following questions.
 \begin{itemize}
-\item What are the coordinates of the bar? $\answer[given]{(3,-3)}$
-\item What are the coordinates of the gas station? $\answer[given]{(-2,-4)}$
-\item What are the coordinates of Carl's house? $\answer[given]{(0,0)}$
+\item What are the coordinates of the bar? $(\answer[given]{3}$,$\answer[given]{-3})$
+\item What are the coordinates of the gas station? $(\answer[given]{-2}$,$\answer[given]{-4})$
+\item What are the coordinates of Carl's house? $(\answer[given]{0}$,$\answer[given]{0})$
 \end{itemize}
 \end{problem}
 
@@ -174,7 +174,7 @@ The \dfn{Cartesian coordinate system} is a coordinate system that specifies each
 
 The plane based on the $x$-axis and $y$-axis is called a \dfn{coordinate plane}. The ordered pair used to locate a point is called the point's \dfn{coordinates}, which consists of an $x$-coordinate and a $y$-coordinate. For example, the point $(1,2)$, has $x$-coordinate 1,  and $y$-coordinate 2.   The origin has coordinates $(0,0)$. \\
 
-A Cartesian coordinate system is divided into four \dfn{quadrants}, as shown below . The quadrants are traditionally labeled with Roman numerals.
+A Cartesian coordinate system is divided into four \dfn{quadrants} that are separated by the axes, as shown below. The quadrants are traditionally labeled with Roman numerals.
 
 \begin{image}
 \begin{tikzpicture}
