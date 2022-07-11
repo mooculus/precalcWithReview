@@ -80,6 +80,15 @@
   {../14-1DisplacementVsDistance/exercises/}
 }
 
+
+\renewcommand*{\link}[2][]{#1%
+\ifthenelse{\equal{#1}{}}%
+{\url{#2}}%
+{\footnote{See #1 at \url{#2}}}
+}
+
+
+
 \DeclareGraphicsExtensions{.pdf,.png,.jpg,.eps}
 
 \newcommand{\mooculus}{\textsf{\textbf{MOOC}\textnormal{\textsf{ULUS}}}}
@@ -242,7 +251,7 @@
 \newcommand{\licenseAPC}{\renewcommand{\licenseAcknowledgement}{\textbf{Acknowledgements:} Active Prelude to Calculus (https://activecalculus.org/prelude) }}
 \newcommand{\licenseSZ}{\renewcommand{\licenseAcknowledgement}{\textbf{Acknowledgements:} Stitz Zeager Open Source Mathematics (https://www.stitz-zeager.com/) }}
 \newcommand{\licenseAPCSZ}{\renewcommand{\licenseAcknowledgement}{\textbf{Acknowledgements:} Active Prelude to Calculus (https://activecalculus.org/prelude) and Stitz Zeager Open Source Mathematics (https://www.stitz-zeager.com/) }}
-\newcommand{\licenseORCCA}{\renewcommand{\licenseAcknowledgement}{\textbf{Acknowledgements:}Original source material, products with readable and accessible
+\newcommand{\licenseORCCA}{\renewcommand{\licenseAcknowledgement}{\textbf{Acknowledgements:} Original source material, products with readable and accessible
 math content, and other information freely available at pcc.edu/orcca.}}
 \newcommand{\licenseY}{\renewcommand{\licenseAcknowledgement}{\textbf{Acknowledgements:} Yoshiwara Books (https://yoshiwarabooks.org/)}}
 \newcommand{\licenseOS}{\renewcommand{\licenseAcknowledgement}{\textbf{Acknowledgements:} OpenStax College Algebra (https://openstax.org/details/books/college-algebra)}}
@@ -254,7 +263,7 @@ math content, and other information freely available at pcc.edu/orcca.}}
 \fancyhf{}
 \fancyhead[R]{\sectionmark}
 \fancyfoot[L]{\thepage}
-\fancyfoot[C]{\licenseAcknowledgement}
+\fancyfoot[C]{\begin{minipage}{.8\textwidth}\tiny\licenseAcknowledgement\end{minipage}}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 \fi
