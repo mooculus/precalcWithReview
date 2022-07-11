@@ -12,7 +12,7 @@
   {4-1BuildingNewFunctions/}
   {4-2Polynomials/}
   {5-1RationalFunctions/}
-   {5-2ExponentialFunctions/}
+  {5-2ExponentialFunctions/}
   {6-1Domain/}
   {6-2Range/}
   {6-3CompositionOfFunctions/}
@@ -81,11 +81,15 @@
 }
 
 
-\renewcommand*{\link}[2][]{#1%
-\ifthenelse{\equal{#1}{}}%
-{\url{#2}}%
-{\footnote{See #1 at \url{#2}}}
-}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\link}[2][]{\href{#2}{#1}% the optional argument,
+                                       % a name for the link as a clickable link
+\ifthenelse{\equal{#1}{}}% if no optional argument, then 
+{\url{#2}}% just print the name
+{\footnote{See #1 at \url{#2}}}}% include the link address as a footnote
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
 
 
 
