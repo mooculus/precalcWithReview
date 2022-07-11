@@ -86,7 +86,9 @@
                                        % a name for the link as a clickable link
 \ifthenelse{\equal{#1}{}}% if no optional argument, then 
 {\url{#2}}% just print the name
-{\footnote{See #1 at \url{#2}}}}% include the link address as a footnote
+{
+%\footnote{See #1 at \url{#2}}
+}}% include the link address as a footnote
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
@@ -259,7 +261,9 @@
 math content, and other information freely available at pcc.edu/orcca.}}
 \newcommand{\licenseY}{\renewcommand{\licenseAcknowledgement}{\textbf{Acknowledgements:} Yoshiwara Books (https://yoshiwarabooks.org/)}}
 \newcommand{\licenseOS}{\renewcommand{\licenseAcknowledgement}{\textbf{Acknowledgements:} OpenStax College Algebra (https://openstax.org/details/books/college-algebra)}}
-\newcommand{\licenseAPCSZCSCC}{\renewcommand{\licenseAcknowledgement}{\textbf{Acknowledgements:} Active Prelude to Calculus (https://activecalculus.org/prelude), Stitz Zeager Open Source Mathematics (https://www.stitz-zeager.com/), CSCC PreCalculus and Calculus texts (https://ximera.osu.edu/csccmathematics)}}
+\newcommand{\licenseAPCSZCSCC}{\renewcommand{\licenseAcknowledgement}{\textbf{Acknowledgements:} Source material includes: Active Prelude to Calculus (https://activecalculus.org/prelude), Stitz Zeager Open Source Mathematics (https://www.stitz-zeager.com/), CSCC PreCalculus and Calculus texts (https://ximera.osu.edu/csccmathematics)}}
+\newcommand{\licenseAPCSZORCCA}{\renewcommand{\licenseAcknowledgement}{\textbf{Acknowledgements:} Source material includes: Active Prelude to Calculus (https://activecalculus.org/prelude), Stitz Zeager Open Source Mathematics (https://www.stitz-zeager.com/), ORCCA: Original source material, products with readable and accessible math content, and other information freely available at pcc.edu/orcca.}}
+
 
 \ifxake\else %% do nothing on the website
 \usepackage{fancyhdr}
