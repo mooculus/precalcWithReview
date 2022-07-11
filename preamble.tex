@@ -82,7 +82,7 @@
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\renewcommand{\link}[2][]{\href{#2}{#1}% the optional argument,
+\renewcommand{\link}[2][]{\href{#2}{\underline{#1}}% the optional argument,
                                        % a name for the link as a clickable link
 \ifthenelse{\equal{#1}{}}% if no optional argument, then 
 {\url{#2}}% just print the name
