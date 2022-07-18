@@ -21,7 +21,7 @@
 \begin{motivatingQuestions}\begin{itemize}
 \item How does the process of function composition produce a new function from two other functions?
 \item In the composite function $h(x) = f(g(x))$, what do we mean by the ``inner'' and ``outer'' function?  
-\item How does the expression for $AV_{[a,a+h]}$ involve a composite function?
+\item How does the expression for $\av_{[a,a+h]}$ involve a composite function?
 \end{itemize}\end{motivatingQuestions}
 
 
@@ -179,9 +179,9 @@ Let $D(N) = 40 + 0.25N$ be Dolbear's function that converts an input of number o
 
 Recall that the average rate of change of a function $f$ on the interval $[a,b]$ is given by%
 \begin{equation*}
-AV_{[a,b]} = \frac{f(b) - f(a)}{b-a}\text{.}
+\av_{[a,b]} = \frac{f(b) - f(a)}{b-a}\text{.}
 \end{equation*}
-In the graph below, we see the familiar representation of $AV_{[a,b]}$ as the slope of the line joining the points $(a,f(a))$ and $(b,f(b))$ on the graph of $f$. 
+In the graph below, we see the familiar representation of $\av_{[a,b]}$ as the slope of the line joining the points $(a,f(a))$ and $(b,f(b))$ on the graph of $f$. 
 
 \begin{image}
 \includegraphics{composite-aroc-a-b.pdf}
@@ -197,33 +197,33 @@ To think about the interval $[a,b]$ shrinking while $a$ stays fixed, we often ch
 
 This allows us to eventually think about $h$ getting closer and closer to $0$, and in that context we consider the equivalent expression%
 \begin{equation*}
-AV_{[a,a+h]} = \frac{f(a+h) - f(a)}{a+h-a} = \frac{f(a+h) - f(a)}{h} 
+\av_{[a,a+h]} = \frac{f(a+h) - f(a)}{a+h-a} = \frac{f(a+h) - f(a)}{h} 
 \end{equation*}
 for the average rate of change of $f$ on	$[a,a+h]$.%
 
 \begin{example}
-Suppose that $f(x) = x^2$.  Determine the simplest possible expression you can find for $AV_{[3,3+h]}$, the average rate of change of $f$ on the interval $[3,3+h]$.
+Suppose that $f(x) = x^2$.  Determine the simplest possible expression you can find for $\av_{[3,3+h]}$, the average rate of change of $f$ on the interval $[3,3+h]$.
 
 \begin{explanation}
 By definition, we know that%
 \begin{equation*}
-AV_{[3,3+h]} = \frac{f(3+h)-f(3)}{h}.
+\av_{[3,3+h]} = \frac{f(3+h)-f(3)}{h}.
 \end{equation*}
 Using the formula for $f$, we see that%
 \begin{equation*}
-AV_{[3,3+h]} = \frac{(3+h)^2-(3)^2}{h}.
+\av_{[3,3+h]} = \frac{(3+h)^2-(3)^2}{h}.
 \end{equation*}
 Expanding the numerator and combining like terms, it follows that%
 \begin{align*}
-AV_{[3,3+h]} &= \frac{(9+6h+h^2)-9}{h}\\
+\av_{[3,3+h]} &= \frac{(9+6h+h^2)-9}{h}\\
 &= \frac{6h + h^2}{h}\text{.}
 \end{align*}
 Removing a factor of $h$ in the numerator and observing that $h \ne 0$, we can simplify and find that%
 \begin{align*}
-AV_{[3,3+h]} &= \frac{h(6 + h)}{h}\\
+\av_{[3,3+h]} &= \frac{h(6 + h)}{h}\\
 &= 6+h\text{.}
 \end{align*}
-Hence, $AV_{[3,3+h]} = 6+h$, which is the average rate of change of $f(x) = x^2$ on the interval $[3,3+h]$.  
+Hence, $\av_{[3,3+h]} = 6+h$, which is the average rate of change of $f(x) = x^2$ on the interval $[3,3+h]$.  
 \end{explanation}
 
 \end{example}
@@ -232,9 +232,9 @@ Hence, $AV_{[3,3+h]} = 6+h$, which is the average rate of change of $f(x) = x^2$
 Let $f(x) = 2x^2 - 3x + 1$ and $g(x) = \frac{5}{x}$.%
 \begin{enumerate}[label=\alph*.]
 \item Compute $f(1+h)$ and expand and simplify the result as much as possible by combining like terms.
-\item Determine the most simplified expression you can for the average rate of change of $f$ on the interval $[1,1+h]$. That is, determine $AV_{[1,1+h]}$ for $f$ and simplify the result as much as possible.
+\item Determine the most simplified expression you can for the average rate of change of $f$ on the interval $[1,1+h]$. That is, determine $\av_{[1,1+h]}$ for $f$ and simplify the result as much as possible.
 \item Compute $g(1+h)$. Is there any valid algebra you can do to write $g(1+h)$ more simply?
-\item Determine the most simplified expression you can for the average rate of change of $g$ on the interval $[1,1+h]$. That is, determine $AV_{[1,1+h]}$ for $g$ and simplify the result.
+\item Determine the most simplified expression you can for the average rate of change of $g$ on the interval $[1,1+h]$. That is, determine $\av_{[1,1+h]}$ for $g$ and simplify the result.
 \end{enumerate}
 \end{exploration}
 
@@ -246,9 +246,9 @@ Let $f(x) = 2x^2 - 3x + 1$ and $g(x) = \frac{5}{x}$.%
 \begin{summary}\begin{itemize}
 \item When defined, the composition of two functions $f$ and $g$ produces a single new function $f \circ g$ according to the rule $(f \circ g)(x) = f(g(x))$.  We note that $g$ is applied first to the input $x$, and then $f$ is applied to the output $g(x)$ that results from $g$.
 \item In the composite function $h(x) = f(g(x))$, the ``inner'' function is $g$ and the $outer$ function is $f$.  Note that the inner function gets applied to $x$ first, even though the outer function appears first when we read from left to right. 
-\item Because the expression $AV_{[a,a+h]}$ is defined by%
+\item Because the expression $\av_{[a,a+h]}$ is defined by%
 \begin{equation*}
-AV_{[a,a+h]} = \frac{f(a+h) - f(a)}{h} 
+\av_{[a,a+h]} = \frac{f(a+h) - f(a)}{h} 
 \end{equation*}
 and this includes the quantity $f(a+h)$, the average rate of change of a function on the interval $[a,a+h]$ always involves the evaluation of a composite function expression.  This idea plays a crucial role in the study of calculus.
 \end{itemize}\end{summary}

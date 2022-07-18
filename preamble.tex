@@ -12,7 +12,7 @@
   {4-1BuildingNewFunctions/}
   {4-2Polynomials/}
   {5-1RationalFunctions/}
-   {5-2ExponentialFunctions/}
+  {5-2ExponentialFunctions/}
   {6-1Domain/}
   {6-2Range/}
   {6-3CompositionOfFunctions/}
@@ -80,9 +80,30 @@
   {../14-1DisplacementVsDistance/exercises/}
 }
 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\renewcommand{\link}[2][]{\href{#2}{\underline{#1}}% the optional argument,
+                                       % a name for the link as a clickable link
+\ifthenelse{\equal{#1}{}}% if no optional argument, then 
+{\url{#2}}% just print the name
+{
+%\footnote{See #1 at \url{#2}}
+}}% include the link address as a footnote
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
 \DeclareGraphicsExtensions{.pdf,.png,.jpg,.eps}
 
 \newcommand{\mooculus}{\textsf{\textbf{MOOC}\textnormal{\textsf{ULUS}}}}
+
+\newcommand{\av}{\mathrm{AROC}}
+
+\newcommand{\tech}{Desmos}
+
+\newcommand{\calcHW}{\includegraphics[width=0.5cm, trim={0 4mm 0 0}]{../../calc.PNG} \, }
 
 \usepackage[makeroom]{cancel} %% for strike outs
 
@@ -236,11 +257,13 @@
 \newcommand{\licenseAPC}{\renewcommand{\licenseAcknowledgement}{\textbf{Acknowledgements:} Active Prelude to Calculus (https://activecalculus.org/prelude) }}
 \newcommand{\licenseSZ}{\renewcommand{\licenseAcknowledgement}{\textbf{Acknowledgements:} Stitz Zeager Open Source Mathematics (https://www.stitz-zeager.com/) }}
 \newcommand{\licenseAPCSZ}{\renewcommand{\licenseAcknowledgement}{\textbf{Acknowledgements:} Active Prelude to Calculus (https://activecalculus.org/prelude) and Stitz Zeager Open Source Mathematics (https://www.stitz-zeager.com/) }}
-\newcommand{\licenseORCCA}{\renewcommand{\licenseAcknowledgement}{\textbf{Acknowledgements:}Original source material, products with readable and accessible
+\newcommand{\licenseORCCA}{\renewcommand{\licenseAcknowledgement}{\textbf{Acknowledgements:} Original source material, products with readable and accessible
 math content, and other information freely available at pcc.edu/orcca.}}
 \newcommand{\licenseY}{\renewcommand{\licenseAcknowledgement}{\textbf{Acknowledgements:} Yoshiwara Books (https://yoshiwarabooks.org/)}}
 \newcommand{\licenseOS}{\renewcommand{\licenseAcknowledgement}{\textbf{Acknowledgements:} OpenStax College Algebra (https://openstax.org/details/books/college-algebra)}}
-\newcommand{\licenseAPCSZCSCC}{\renewcommand{\licenseAcknowledgement}{\textbf{Acknowledgements:} Active Prelude to Calculus (https://activecalculus.org/prelude), Stitz Zeager Open Source Mathematics (https://www.stitz-zeager.com/), CSCC PreCalculus and Calculus texts (https://ximera.osu.edu/csccmathematics)}}
+\newcommand{\licenseAPCSZCSCC}{\renewcommand{\licenseAcknowledgement}{\textbf{Acknowledgements:} Source material includes: Active Prelude to Calculus (https://activecalculus.org/prelude), Stitz Zeager Open Source Mathematics (https://www.stitz-zeager.com/), CSCC PreCalculus and Calculus texts (https://ximera.osu.edu/csccmathematics)}}
+\newcommand{\licenseAPCSZORCCA}{\renewcommand{\licenseAcknowledgement}{\textbf{Acknowledgements:} Source material includes: Active Prelude to Calculus (https://activecalculus.org/prelude), Stitz Zeager Open Source Mathematics (https://www.stitz-zeager.com/), ORCCA: Original source material, products with readable and accessible math content, and other information freely available at pcc.edu/orcca.}}
+
 
 \ifxake\else %% do nothing on the website
 \usepackage{fancyhdr}
@@ -248,7 +271,7 @@ math content, and other information freely available at pcc.edu/orcca.}}
 \fancyhf{}
 \fancyhead[R]{\sectionmark}
 \fancyfoot[L]{\thepage}
-\fancyfoot[C]{\licenseAcknowledgement}
+\fancyfoot[C]{\begin{minipage}{.8\textwidth}\tiny\licenseAcknowledgement\end{minipage}}
 \renewcommand{\headrulewidth}{0pt}
 \renewcommand{\footrulewidth}{0pt}
 \fi
