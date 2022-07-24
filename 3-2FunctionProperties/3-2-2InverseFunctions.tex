@@ -30,7 +30,7 @@
 %\typeout{Introduction}
 %\typeout{************************************************}
 
-Because every function is a process that converts a collection of inputs to a corresponding collection of outputs, a natural question is: for a particular function, can we change perspective and think of the original function's outputs as the inputs for a reverse process? If we phrase this question algebraically, it is analogous to asking: given an equation that defines $y$ is a function of $x$, is it possible to find a corresponding equation where $x$ is a function of $y$?
+Because every function is a process that converts a collection of inputs to a corresponding collection of outputs, a natural question is: for a particular function, can we find a function that ``undoes'' the first functions? That is, given an output of the function, can we determine the input? If we phrase this question algebraically, it is analogous to asking: given an equation that defines $y$ is a function of $x$, is it possible to find a corresponding equation where $x$ is a function of $y$?
 
 
 %\typeout{************************************************}
@@ -122,7 +122,7 @@ say the exact same thing but from two different perspectives.
 %\typeout{************************************************}
 
 \section{When can we find inverses?}
- It's important to note in the above definition of inverse functions that we say ``\emph{If} there exists $\ldots$''.  That is, we don't guarantee that an inverse function exists for a given function.  Thus, we might ask: how can we determine whether or not a given function has a corresponding inverse function?  As with many questions about functions, there are often three different possible ways to explore such a question:  through a table, through a graph, or through an algebraic formula.
+ It's important to note in the above definition of inverse functions that we say ``\emph{If} there exists $\ldots$''.  That is, we don't guarantee that an inverse function exists for a given function.  Thus, we might ask: how can we determine whether or not a given function has a corresponding inverse function?  As with many questions about functions, there are often three different possible ways to explore such a question. Let's consider this question using a table, through a graph, or through an algebraic formula.
 
 Consider the functions $f$ and $g$ given in the following tables. 
 
@@ -156,9 +156,9 @@ $
 $
 \end{center}
 
-For any function, the question of whether or not it has an inverse comes down to whether or not the process of the function can be reliably reversed.  For functions given in table form such as $f$ and $g$, we essentially ask if it's possible to swich the input and output columns and have the new resulting table also represent a function.
+For any function, the question of whether or not it has an inverse comes down to whether or not the process of the function can be reliably reversed.  For functions given in table form such as $f$ and $g$, we essentially ask if it's possible to switch the input and output columns and have the new resulting table also represent a function.
 
-The function $f$ does not have an inverse function because there are two different inputs that lead to the same output:  $f(0) = 6$ and $f(4) = 6$.  If we attempt to reverse this process, we have a situation where the input $6$ would correspond to \emph{two} potential outputs, $4$ and $6$.
+The function $f$ does not have an inverse function because there are two different inputs that lead to the same output:  $f(0) = 6$ and $f(4) = 6$.  If we attempt to reverse this process, we have a situation where the input $6$ would correspond to \emph{two} potential outputs, $4$ and $6$, which is not allowed for a function.
 
 However, the function $g$ does have an inverse function because when we reverse the columns in the table each input (in order, $3$, $1$, $4$, $2$, $0$) indeed corresponds to one and only one output (in order, $0$, $1$, $2$, $3$, $4$).  We can thus make observations such as $g^{-1}(4) = 2$, which is the same as saying that $g(2) = 4$, just from a different perspective.
 
@@ -169,26 +169,20 @@ Now, consider the functions  $p$ and $q$ represented by the following graphs.
 \includegraphics{inverse-does-it-2.pdf}
 \end{image}
 
-Recall that when a point such as $(a,c)$ lies on the graph of a function $p$, this means that the input $x = a$, which represents to a value on the horizontal axis, corresponds with the output $y = c$ that is represented by a value on the vertical axis.  In this situation, we write $p(a) = c$.  We note explicitly that $p$ is a function because its graph passes the vertical line test: any vertical line intersects the graph of $p$ exactly, and thus each input corresponds to one and only one output.
+Recall that when a point such as $(a,c)$ lies on the graph of a function $p$, this means that the input $x = a$, which represents a value on the horizontal axis, corresponds with the output $y = c$ that is represented by a value on the vertical axis.  In this situation, we write $p(a) = c$.  We note explicitly that $p$ is a function because its graph passes the vertical line test: any vertical line intersects the graph of $p$ once, and thus each input corresponds to one output.
 
-If we attempt to change perspective and use the graph of $p$ to view $x$ as a function of $y$, we see that this fails because the output value $c$ is associated with two different inputs, $a$ and $b$.  Said differently, because the horizontal line $y = c$ intersects the graph of $p$ at both $(a,c)$ and $(b,c)$ (as shown in the figure), we cannot view $y$ as the input to a function process that produces the corresonding $x$-value.  Therefore, $p$ does not have an inverse function.
+If we attempt to change perspective and use the graph of $p$ to view $x$ as a function of $y$, we see that this fails because the output value $c$ is associated with two different inputs, $a$ and $b$.  Said differently, because the horizontal line $y = c$ intersects the graph of $p$ at both $(a,c)$ and $(b,c)$ (as shown in the figure), we cannot view $y$ as the input to a function process that produces the corresponding $x$-value.  Therefore, $p$ does not have an inverse function. Note: We can have a relation that switches the $x$- and $y$-values of $p$, but it won't be a function!
 
-On the other hand, provided that the behavior seen in the figure continues, the function $q$ does have an inverse because we can view $x$ as a function of $y$ via the graph.  This is because for any choice of $y$, there corresponds one and only one $x$ that results from $y$.  We can think of this visually by starting at a value such as $y = c$ on the $y$-axis, moving horizontally to where the line intersects the graph of $p$, and then moving down to the corresonding location (here $x = a$) on the horizontal axis.  From the behavior of the graph of $q$ (a straight line that is always increasing), we see that this correspondence will hold for any choice of $y$, and thus indeed $x$ is a function of $y$.  From this, we can say that $q$ indeed has an inverse function.  We thus can write that $q^{-1}(c) = a$, which is a different way to express the equivalent fact that $q(a) = c$.
+On the other hand, provided that the behavior seen in the figure continues, the function $q$ does have an inverse because we can view $x$ as a function of $y$ via the graph.  This is because for any choice of $y$, there corresponds one $x$ that results from $y$.  We can think of this visually by starting at a value such as $y = c$ on the $y$-axis, moving horizontally to where the line intersects the graph of $p$, and then moving down to the corresonding location (here $x = a$) on the horizontal axis.  From the behavior of the graph of $q$ (a straight line that is always increasing), we see that this correspondence will hold for any choice of $y$, and thus indeed $x$ is a function of $y$.  From this, we can say that $q$ indeed has an inverse function.  We thus can write that $q^{-1}(c) = a$, which is a different way to express the equivalent fact that $q(a) = c$.
 
 The two examples above illustrate an important requirement for a function to have an inverse function. For a function to have an inverse, different inputs must go to different outputs, or else we will run into the same problems as we did in the examples of $f$ and $p$ above.
 
 \begin{definition}
-A function $f$ is said to be  \index{function ! one-to-one}\index{one-to-one function}\index{one-to-one}\dfn{one-to-one} if $f$ matches different inputs to different
+A function $f$ is said to be  \index{function ! one-to-one}\index{one-to-one function}\index{one-to-one}\dfn{one-to-one} if $f$ matches unique inputs to unique
 outputs. Equivalently, $f$ is one-to-one if and only if whenever $f(a) = f(b)$, then $a = b$. If a function is one-to-one, it has an inverse.
 \end{definition}
 
 In particular, the graphical observations that we made for the function $q$ in the last example provide a general test for whether or not a function given by a graph has a corresponding inverse function. 
-
-\begin{remark}
-A function whose graph lies in the $x$-$y$ plane is one-to-one if and only if every horizontal line intersects the graph at most once.  When the graph passes this test, the horizontal coordinate of each point on the graph can be viewed as a function of the vertical coordinate of the point. This is sometimes referred to as \index{horizontal line test}\emph{the horizontal line test}.
-\end{remark}
-
-
 
 \begin{exploration}
 Consider the functions $r$ and $s$ defined by
@@ -205,7 +199,11 @@ $$
 \end{enumerate}
 \end{exploration}
 
-To check your answers for b. and c. above, you could try graphing $r$ and $s$ and applying the horizontal line test. 
+To check your answers for b. and c. above, you could try graphing $r$ and $s$ on Desmos and applying the horizontal line test. 
+\begin{remark}
+A function whose graph lies in the $x$-$y$ plane is one-to-one if and only if every horizontal line intersects the graph at most once.  When the graph passes this test, the horizontal coordinate of each point on the graph can be viewed as a function of the vertical coordinate of the point. This is sometimes referred to as \index{horizontal line test}\emph{the horizontal line test}.
+\end{remark}
+
 
 %\typeout{************************************************}
 %\typeout{Graphical properties of inverse functions}
