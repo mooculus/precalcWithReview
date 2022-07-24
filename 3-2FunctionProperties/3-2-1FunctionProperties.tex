@@ -61,7 +61,7 @@ We'll also discuss the important concept of inverse functions, which can provide
 
 \section{Periodic functions}
 
-Certain naturally occurring phenomena eventually repeat themselves, especially when the phenomenon is somehow connected to a circle. For example, suppose that you are taking a ride on a ferris wheel and we consider your height, $h$, above the ground and how your height changes in tandem with the distance, $d$, that you have traveled around the wheel. We can see a full animation of this situation at \url{http://gvsu.edu/s/0Dt}. 
+Certain naturally occurring phenomena eventually repeat themselves, especially when the phenomenon is somehow connected to a circle. For example, suppose that you are taking a ride on a Ferris wheel and we consider your height, $h$, above the ground and how your height changes in tandem with the distance, $d$, that you have traveled around the wheel. We can see a full animation of this situation at \url{http://gvsu.edu/s/0Dt}. 
 
 Because we have two quantities changing in tandem, it is natural to wonder if it is possible to represent one as a function of the other.
 
@@ -87,11 +87,11 @@ Further, assume that the circumference of the ferris wheel is 24 meters (it's a 
 
 
 
-The natural phenomenon of a point moving around a circle leads to interesting relationships. Let's consider a point traversing a circle of circumference 24 and examine how the point's height, $h$, changes as the distance traversed, $d$, changes. Note particularly that each time the point traverses $\frac{1}{8}$ of the circumference of the circle, it travels a distance of $24 \cdot \frac{1}{8} = 3$ units, as seen below, where each noted point lies 3 additional units along the circle beyond the preceding one.
+Let's consider a point traversing a circle of circumference 24 and examine how the point's height, $h$, changes as the distance traversed, $d$, changes. Note particularly that each time the point traverses $\frac{1}{8}$ of the circumference of the circle, it travels a distance of $24 \cdot \frac{1}{8} = 3$ units, as seen below, where each noted point lies 3 additional units along the circle beyond the preceding one.
 
 
 \begin{image}
-\includegraphics[scale=.3]{traversing-first-example.pdf}
+\includegraphics[width=3in]{traversing-first-example.pdf}
 \end{image}
 
 
@@ -151,7 +151,7 @@ Notice that the graph above resembles the graph of the sine function. As it turn
 
 \begin{definition}
 Let $f$ be a function whose domain and codomain % Have these been introduced?
-are each the set of all real numbers. We say that $f$ is \index{function ! periodic}\index{periodic function}\dfn{periodic} provided that there exists a real number $k$ such that $f(x + k) = f(x)$ for every possible choice of $x$. The smallest value $p$ for which $f(x + p) = f(x)$ for every choice of $x$ is called the \index{period}\dfn{period} of $f$.
+are each the set of all real numbers. We say that $f$ is \index{function ! periodic}\index{periodic function}\dfn{periodic} provided that there exists a real number $k$ such that $f(x + k) = f(x)$ for every possible choice of $x$. The smallest positive value $p$ for which $f(x + p) = f(x)$ for every choice of $x$ is called the \index{period}\dfn{period} of $f$.
 
 \end{definition}
 
@@ -175,31 +175,31 @@ As a reminder, here is a graph of the sine function along with a table listing s
 \end{image}
 
 \begin{center}
-\(
-\begin{array}{ |c || c|  }
+$\arraycolsep=1.4pt\def\arraystretch{2.2}
+\begin{array}{ |c|c|  }
  \hline
- \multicolumn{2}{|c|}{\text{\normalfont Important Values of } y=\sin(x)} \\
+ \multicolumn{2}{|c|}{\text{\normalfont Important Values of }y=\sin(x)} \\
 \hline
  \hline
  x & y\\
  \hline
 
- -\pi&0\\
+ -\pi&\text{ }0\\
 
- -\frac{\pi}{2}&-1\\[2ex]
+ -\frac{\pi}{2}&-1\\
 
- 0&0\\
+ 0&\text{ }0\\
 
- \frac{\pi}{2}&1\\[2ex]
+ \frac{\pi}{2}&\text{ }1\\
 
- \pi&0\\
+ \pi&\text{ }0\\
 
-\frac{3\pi}{2}&-1\\[2ex]
+\frac{3\pi}{2}&-1\\
 
- 2 \pi&0\\
+ 2 \pi&\text{ }0\\
 \hline
 \end{array}
-\)
+$
 \end{center} 
 
 Notice that $\sin\left(-\frac{\pi}{2}\right) = -1$ and $\sin\left(\frac{3\pi}{2}\right) = -1$ as well. In fact, the sine function is periodic with period $2\pi$. 
@@ -220,8 +220,8 @@ Now, here is a graph of the cosine function along with a table listing some of i
 \end{image}
 
 \begin{center}
-\(
-\begin{array}{ |c || c|  }
+$\arraycolsep=1.4pt\def\arraystretch{2.2}
+\begin{array}{ |c | c|  }
  \hline
  \multicolumn{2}{|c|}{\text{\normalfont Important Values of } y=\cos(x)} \\
 \hline
@@ -231,20 +231,20 @@ Now, here is a graph of the cosine function along with a table listing some of i
 
  -\pi&-1\\
 
- -\frac{\pi}{2}&0\\[2ex]
+ -\frac{\pi}{2}&\text{ }0\\[2ex]
 
- 0&1\\
+ 0&\text{ }1\\
 
- \frac{\pi}{2}&0\\[2ex]
+ \frac{\pi}{2}&\text{ }0\\[2ex]
 
  \pi&-1\\
 
-\frac{3\pi}{2}&0\\[2ex]
+\frac{3\pi}{2}&\text{ }0\\[2ex]
 
- 2 \pi&1\\
+ 2 \pi&\text{ }1\\
 \hline
 \end{array}
-\)
+$
 \end{center} 
 
 Notice that $\cos\left(-\pi\right) = -1$ and $\cos\left(\pi\right) = -1$ as well. In fact, the cosine function is also periodic with period $2\pi$. 
