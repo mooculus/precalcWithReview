@@ -31,7 +31,7 @@
 %\typeout{************************************************}
 
 \section{Mathematical Models}
-A mathematical model is an abstract concept through which we use mathematical language and notation to describe a phenomenon in the world around us.  One example of a mathematical model is found in \link[Dolbear's Law]{https://en.wikipedia.org/wiki/Dolbear\%27s_law}, which has proven to be remarkably accurate for the behavior of snowy tree crickets.  For even more of the story, including a reference to this phenomenon on the popular show The Big Bang Theory, see \link{https://priceonomics.com/how-to-tell-the-temperature-using-crickets/}.  In the late 1800s, the physicist Amos Dolbear was listening to crickets chirp and noticed a pattern: how frequently the crickets chirped seemed to be connected to the outside temperature.  
+A mathematical model is an abstract concept through which we use mathematical language and notation to describe a phenomenon in the world around us.  One example of a mathematical model is found in \link[Dolbear's Law,]{https://en.wikipedia.org/wiki/Dolbear\%27s_law} which has proven to be remarkably accurate for the behavior of snowy tree crickets.  For even more of the story, including a reference to this phenomenon on the popular show The Big Bang Theory, see \link{https://priceonomics.com/how-to-tell-the-temperature-using-crickets/}.  In the late 1800s, the physicist Amos Dolbear was listening to crickets chirp and noticed a pattern: how frequently the crickets chirped seemed to be connected to the outside temperature.  
 
 \begin{image}
 \includegraphics[width=.8\textwidth]{CompositionText3.jpg}
@@ -51,12 +51,12 @@ N \text{(chirps per minute)} & T \text{(degrees Fahrenheit)}\\
 $$
 
 For a mathematical model, we often seek an algebraic formula that captures observed behavior accurately and can be used to predict behavior not yet observed.  For the data in the table above, we observe that each of the ordered pairs in the table make the equation%
-\begin{equation}
+\begin{equation*}
 T = 40 + 0.25N
-\end{equation}
+\end{equation*}
 true.  For instance, $70 = 40 + 0.25(120)$.  Indeed, scientists who made many additional cricket chirp observations following Dolbear's initial counts found that the formula above holds with remarkable accuracy for the snowy tree cricket in temperatures ranging from about $50^\circ$ F to $85^\circ$ F.
 
-This model captures a pattern that is found in the world, and can be used to predict the temperature if only the number of chirps per minute is known.  Not all phenomenon in the world that can be measured mathematically occur in a predictable pattern.  In this section, we will study functions which are mathematical ways of formally studying situations where for a given input, such as the number of chirps above, there is one consistant output.  For situations where a given input might give a variety of outputs, we encourage you to study statistics!
+This model captures a pattern that is found in the world, and can be used to predict the temperature if only the number of chirps per minute is known.  Not all phenomenon in the world that can be measured mathematically occur in a predictable pattern.  In this section, we will study functions which are mathematical ways of formally studying situations where for a given input, such as the number of chirps above, there is one consistant output.  For situations where a given input might give a variety of outputs, we encourage you to study statistics! Also note that this relationship is not causal. Even though the number of chirps is considered out ``input'' the increase in chirps does not cause the temperature to increase. 
 
 \section{Functions}
 The mathematical concept of a function is one of the most central ideas in all of mathematics, in part since functions provide an important tool for representing and explaining patterns.  At its core, a function is a repeatable process that takes a collection of input values and generates a corresponding collection of output values with the property that if we use a particular single input, the process always produces exactly the same single output.
@@ -71,7 +71,7 @@ N &\xrightarrow{D} 40 + 0.25 N
 Alternatively, for the relationship ``$80 \xrightarrow{D} 60$'' we can also use the equivalent notation ``$D(80) = 60$'' to indicate that Dolbear's Law takes an input of $80$ chirps per minute and produces a corresponding output of $60$ degrees Fahrenheit.  More generally, we write ``$T = D(N) = 40 + 0.25N$'' to indicate that a certain temperature, $T$, is determined by a given number of chirps per minute, $N$, according to the process $D(N) = 40 + 0.25N$.
 
 
-We will define a function informally and formally.  The informal definition corresponds to the way we will most often think of functions, as a process with inputs and outs.  
+We will define a function informally and formally.  The informal definition corresponds to the way we will most often think of functions, as a process with inputs and outputs.  
 
 \begin{definition}[Informal Definition of a Function]
 A \dfn{function} is a process that may be applied to a collection of input values to produce a corresponding collection of output values in such a way that the process produces one and only one output value for any single input value.
@@ -86,13 +86,14 @@ A \dfn{function} is a collection of ordered pairs $(x,y)$ such that any particul
 How is this definition consistent with the informal, which describes a function as a process? Well, if you have a collection of ordered pairs $(x,y)$, you can choose to view the left number as an input, and the right value as the output. If the function's name is $f$ and you want to find $f(x)$  for a particular number $x$, look in the collection of ordered pairs to see if $x$ appears among the first coordinates. If it does, then $f(x)$ is the (unique) $y$-value it was paired with. If it does not, then that $x$ is just not in the domain of $f$, because you have no way to determine what $f(x)$ would be.
 
 \section{Respresentations of Functions}
-While the formal definition of a function is a set of ordered pairs, there are many ways that we represent functions when studying them.  Each representation has some advantages and disadvantages and one important skill is being able to change between different representations of the same function.  Let's look at some different types of representations.
+While the formal definition of a function is a set of ordered pairs, there are many ways that we represent functions when studying them.  Each representation has advantages and disadvantages and being able to change between different representations of the same function is an important skill.  Let's look at some different types of representations.
 
 \subsection{Tables}
 Functions on a finite set of points are often represented by tables.  One advantage of a table is that you can easily see all the information for a function.  One disadvantage is if you have too many input values, it can be difficult to analyze them all in a table format.  The exploration below shows and example of a function given by a table.
 
 \begin{exploration}
-The following table gives all the values of a function $f$.  Answer the questions about the function below.
+The function $f$ is defined by the table below. Note: this means the table gives all the values of the function.\\ 
+Answer the questions about the function below.
 
 $$
 \begin{array}{cc}
@@ -171,7 +172,7 @@ Here are some graphs of relations.  Can you idenfity which of the relations repr
 \begin{explanation}
 \begin{enumerate}[label=\alph*.]
 \item
-A graph of a (nonvertical) line is a graph of a function.  This is because, for each $x$-value, there is only one $y$-value that cooresponds to it on the line.
+A graph of a (nonvertical) line is the graph of a function.  This is because, for each $x$-value, there is only one $y$-value that corresponds to it on the line.
 
 \begin{image}
 \begin{tikzpicture}
@@ -350,9 +351,9 @@ This graph is also not a function.  Even though it is a single curve, it has inp
 \end{example}
  
  \subsection{Formula Representation}
- Another common way to represent functions is using a formula and function notation.  In the example of Dolbear's Law, the function which models this law is given as a formula by 
+ Another common way to represent functions is using a formula.  In the example of Dolbear's Law, the function which models this law is given as a formula by 
  $$D(N)=40+0.25N \text{ for } 50 \leq x \leq 85$$
- When we give functions as a formula, we also need to say which input values are allowed.  In this case, the allowed inputs are $50 \leq x \leq 85$.  If allowed inputs are not given, the inputs are assumed to be all the values for which the formula used to defined the function makes sense.  We will talk most about allowed inputs of function later in another section.
+ When we give functions as a formula, we also need to say which input values are allowed.  In this case, the allowed inputs are $50 \leq x \leq 85$.  If allowed inputs are not given, the inputs are assumed to be all the values for which the formula used to defined the function makes sense.  
  
  Here are some examples of functions represented by a formula.
  
@@ -376,7 +377,7 @@ Recall that the notation $f(1)$ means to evaluate the function $f$ at the input 
 \end{example}
 
 \section{Intercepts}
-Zero is a very important number, and as we will see later, knowing where a function's $$x$$- or $$y$$-value equals zero can be powerful information. 
+Zero is a very important number, and as we will see later, knowing where a function's $x$- or $y$-value equals zero can be powerful information. 
 
 \begin{definition}[Intercepts]
 Say $f$ is a function. 
@@ -403,6 +404,7 @@ The \dfn{$y$-intercept} of $f$ is a point $(0,y)$ such that $f(0) = y$. That is,
 \item arrow diagrams
 \item graphs
 \item formula
+\item domain and range
 \end{itemize}
 \end{itemize}\end{summary}
 

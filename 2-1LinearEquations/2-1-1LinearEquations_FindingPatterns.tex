@@ -21,11 +21,11 @@
 %\typeout{Review Questions}
 %\typeout{************************************************}
 
-    \section{Review Materials}
-    \begin{itemize}[label=\textbullet]
-	\item \link[Combining Like Terms]{https://spot.pcc.edu/math/orcca/ed2/html/section-combining-like-terms.html}
-	\item \link[Algebraic Properties and Simplifying Expressions]{https://spot.pcc.edu/math/orcca/ed2/html/section-algebraic-properties-and-simplifying-expressions.html}
-   \end{itemize}
+ %   \section{Review Materials}
+    %\begin{itemize}[label=\textbullet]
+	%\item \link[Combining Like Terms]{https://spot.pcc.edu/math/orcca/ed2/html/section-combining-like-terms.html}
+	%\item \link[Algebraic Properties and Simplifying Expressions]{https://spot.pcc.edu/math/orcca/ed2/html/section-algebraic-properties-and-simplifying-expressions.html}
+%   \end{itemize}
 
 
 %\typeout{************************************************}
@@ -35,7 +35,7 @@
 \section{Patterns in Tables}
 % From https://spot.pcc.edu/math/orcca/ed2/html/section-exploring-two-variable-data-and-rate-of-change.html
 \begin{example}
-What is the missing entry in each table? Can you describe each pattern in words and/or mathematics?
+What is the missing entry in the table? Can you describe the pattern in words and/or mathematics?
 
 \begin{center}
 $
@@ -215,14 +215,14 @@ We find that the values from $y=3x$ are 1 too large. So now we make an adjustmen
 \section{Rates of Change}
 % From https://spot.pcc.edu/math/orcca/ed2/html/section-slope.html
 
-For an hourly wage-earner, the amount of money they earn depends on how many hours they work. If a worker earns \$15per hour, then 10
-hours of work corresponds to \$150of pay. Working one additional hour will change 10 hours to 11 hours; and this will cause the \$150 in pay to rise by fifteen dollars to \$165 in pay. Any time we compare how one amount changes (dollars earned) as a consequence of another amount changing (hours worked), we are talking about a \textbf{rate of change}.
+For an hourly wage-earner, the amount of money they earn depends on how many hours they work. If a worker earns $\$15$ per hour, then $10$
+hours of work corresponds to $\$150$ of pay. Working one additional hour will change 10 hours to 11 hours; and this will cause the \$150 in pay to rise by fifteen dollars to \$165 in pay. Any time we compare how one amount changes (dollars earned) as a consequence of another amount changing (hours worked), we are talking about a \textbf{rate of change}.
 
 Given a table of two-variable data, between any two rows we can compute a \textbf{rate of change}.
 
 \begin{example}
-The following \link[data]{wonder.cdc.gov}, given in both table and graphed form, gives the counts of invasive cancer diagnoses in Oregon over a period of time.
-
+The following data, given in both table and graphed form, gives the counts of invasive cancer diagnoses in Oregon over a period of time.\\
+Using the tables, find the \textbf{rate of change} in Oregon invasive cancer diagnoses between 2000 and 2010? 
 \begin{center}
 $
 \begin{array}{||cc||}
@@ -286,7 +286,7 @@ $
 \end{tikzpicture}
 \end{image}
 
-What is the \textbf{rate of change} in Oregon invasive cancer diagnoses between 2000 and 2010? 
+
 
 \begin{explanation}
 The total (net) change in diagnoses over that timespan is
@@ -338,8 +338,8 @@ Here are some examples of rates of change from our example above.
                (2012,20035)
                (2013,20458)
         };
-        \addplot[firstcurve,-] coordinates {(2000,17446) (2010,19727)} node[pos=0.35, pin=100:{rate $228.1\,\frac{\text{diagnoses}}{\text{year}}$}]{};
-        \addplot[firstcurve,-] coordinates {(1999,17599) (2002,17887)} node[pos=0.5, pin=120:{rate $96\,\frac{\text{diagnoses}}{\text{year}}$}]{};
+        \addplot[firstcurve,-] coordinates {(2000,17446) (2010,19727)} node[pos=0.40, pin=95:{rate $228.1\,\frac{\text{diagnoses}}{\text{year}}$}]{};
+        \addplot[firstcurve,-] coordinates {(1999,17599) (2002,17887)} node[pos=0.5, pin=-91:{rate $96\,\frac{\text{diagnoses}}{\text{year}}$}]{};
         \addplot[firstcurve,-] coordinates {(2003,17559) (2011,20636)} node[pos=0.25, pin=-45:{rate $384.6\,\frac{\text{diagnoses}}{\text{year}}$}]{};
     \end{axis}
 \end{tikzpicture}
