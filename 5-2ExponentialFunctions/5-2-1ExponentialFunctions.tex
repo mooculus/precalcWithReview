@@ -35,7 +35,7 @@ Linear functions have constant average rate of change and model many important p
 
 Suppose that a certain mutual fund has a $10$\% annual return.  If we invest \textdollar{}$100$, after $1$ year we still have the original \textdollar{}$100$, plus we gain $10$\% of \textdollar{}$100$, so%
 \begin{equation*}
-100 \xrightarrow{\text{year } 1} 100 + 0.1(100) = 1.1(100)\text{.}
+100 \xrightarrow{\text{year } 1} 1\cdot 100 + 0.1 \cdot 100 = (1 + 0.1)\cdot 100 = 100 + 0.1(100) = 1.1(100)\text{.}
 \end{equation*}
 If we instead invested \textdollar{}$100000$, after $1$ year we again have the original \textdollar{}$100000$, but now we gain $10$\% of \textdollar{}$100000$, and thus%
 \begin{equation*}
@@ -87,9 +87,17 @@ $$f(t) = b^t$$
 an \dfn{exponential function} with \dfn{base} $b$.%
 \end{definition}
 
-For an exponential function $f(t) = b^t$, we note that $f(0) = b^0 = 1$, so an exponential function of this form always passes through $(0,1)$.  In addition, because a positive number raised to any power is always positive (for instance, $2^{10} = 1096$ and $2^{-10} = \frac{1}{2^{10}} = \frac{1}{2096}$), the output of an exponential function is also always positive.  In particular, $f(t) = b^t$ is never zero and thus has no $x$-intercepts.
+For an exponential function $f(t) = b^t$, we note that $f(0) = b^0 = 1$, so an exponential function of this form always passes through $(0,1)$.  In addition, because a positive number raised to any power is always positive (for instance, $2^{10} = 1096$ and $2^{-10} = \frac{1}{2^{10}} = \frac{1}{2096}$), the output of an exponential function is also always positive.  
 
-Because we will be frequently interested in functions such as $I(t)$ and $V(t)$ with the form $ab^t$, we will also refer to functions of this form as ``exponential'', understanding that technically these are vertical stretches of exponential functions according to our definition of exponential function.  In the exploration above, we found that $I(t) = 20000(1.08)^t$ and $V(t) = 20000(0.88)^t$.  It is natural to call $1.08$ the ``growth factor''  of $I$ and similarly $0.88$ the growth factor of $V$.  In addition, we note that these values stem from the actual growth rates:  $0.08$ for $I$ and $-0.12$ for $V$, the latter being negative because value is depreciating.  In general, for a function of form $f(t) = ab^t$, we call $b$ the \dfn{growth factor}. \index{exponential function!growth factor}  Moreover, if $b = 1+r$, we call $r$ the \dfn{growth rate}. \index{exponential function!growth rate}  Whenever $b > 1$, we often say that the function $f$ is exhibiting ``exponential growth'', wherease if $0 < b < 1$, we say $f$ exhibits ``exponential decay''. \index{exponential function!exponential decay}
+\begin{remark}
+In particular, $f(t) = b^t$ is never zero and thus has no $x$-intercepts.
+\end{remark}
+
+Because we will be frequently interested in functions such as $I(t)$ and $V(t)$ with the form $ab^t$, we will also refer to functions of this form as ``exponential'', understanding that technically these are vertical stretches of exponential functions according to our definition of exponential function.  In the exploration above, we found that $I(t) = 20000(1.08)^t$ and $V(t) = 20000(0.88)^t$.  It is natural to call $1.08$ the ``growth factor''  of $I$ and similarly $0.88$ the growth factor of $V$.  In addition, we note that these values stem from the actual growth rates:  $0.08$ for $I$ and $-0.12$ for $V$, the latter being negative because value is depreciating.  
+
+\begin{definition}
+In general, for a function of form $f(t) = ab^t$, we call $b$ the \dfn{growth factor}. \index{exponential function!growth factor}  Moreover, if $b = 1+r$, we call $r$ the \dfn{growth rate}. \index{exponential function!growth rate}  Whenever $b > 1$, we often say that the function $f$ is exhibiting \dfn(exponential growth}, wherease if $0 < b < 1$, we say $f$ exhibits \dfn{exponential decay}. \index{exponential function!exponential decay}
+\end{definition}
 
 \begin{exploration}
 Suppose that at age $20$ you have \textdollar{}$20000$ and you can choose between one of two ways to use the money:  you can invest it in a mutual fund that will, on average, earn $8$\% interest annually, or you can purchase a new automobile that will, on average, depreciate $12$\% annually.  Let's explore how the $20000$ changes over time.%
@@ -102,7 +110,7 @@ Let $I(t)$ denote the value of the \textdollar{}$20000$ after $t$ years if it is
 \item What is the $y$-intercept of $g(t) = ab^t$?
 \item How does changing the value of $b$ affect the shape and behavior of the graph of $g(t) = ab^t$?  Write several sentences to explain.
 \item For what values of the growth factor $b$ is the corresponding growth rate positive?  For which $b$-values is the growth rate negative?
-\item Consider the graphs of the exponential functions $p$ and $q$ provided in teh figure below.  If $p(t) = ab^t$ and $q(t) = cd^t$, what can you say about the values $a$, $b$, $c$, and $d$ (beyond the fact that all are positive and $b \ne 1$ and $d \ne 1$)?  For instance, can you say a certain value is larger than another?  Or that one of the values is less than $1$?
+\item Consider the graphs of the exponential functions $p$ and $q$ provided in the figure below.  If $p(t) = ab^t$ and $q(t) = cd^t$, what can you say about the values $a$, $b$, $c$, and $d$ (beyond the fact that all are positive and $b \ne 1$ and $d \ne 1$)?  For instance, can you say a certain value is larger than another?  Or that one of the values is less than $1$?
 \begin{image}
 \includegraphics{growth-act-a-b-t.pdf}
 %add alt text
@@ -155,6 +163,10 @@ In contrast, the function $s$ given by rightside table for $s(t)$ does not exhib
 \frac{9} {12}= \frac{3}{4}, \frac{6.75}{9} = 0.75 = \frac{3}{4}, \text{ and } \frac{5.0625}{6.75} = 0.75 = \frac{3}{4}\text{.}
 \end{equation*}
 So, where the \emph{differences} in the outputs in the table for $r(t)$ are constant, the \emph{ratios} in the outputs in the table for $s(t)$ are constant.  The latter is a hallmark of exponential functions and may be used to help us determine the formula of a function for which we have certain information.
+
+\begin{remark}
+
+\end{remark}
 
 If we know that a certain function is linear, it suffices to know two points that lie on the line to determine the function's formula.  It turns out that exponential functions are similar:  knowing two points on the graph of a function known to be exponential is enough information to determine the function's formula.  In the following example, we show how knowing two values of an exponential function enables us to find both $a$ and $b$ exactly.
 
@@ -260,6 +272,10 @@ if $b > 1$, then $f$ is always increasing and always increases at an increasing 
 if $0 < b < 1$, then $f$ is always decreasing and always decreases at an increasing rate.%
 \end{itemize}
 \end{callout}
+
+\begin{theorem}
+If a function $f$ is always increasing and always increases at an increasing rate, it is concave up, and vice-versa. If a function $f$ is always decreasing and always decreases at an increasing rate, it is concave down, and vice-versa. 
+\end{theorem}
 
 Observe how a function's average rate of change helps us classify the function's behavior on an interval:  whether the average rate of change is always positive or always negative on the interval enables us to say if the function is always increasing or always decreasing, and then how the average rate of change itself changes enables us to potentially say \emph{how} the function is increasing or decreasing through phrases such as ``decreasing at an increasing rate''.
 
