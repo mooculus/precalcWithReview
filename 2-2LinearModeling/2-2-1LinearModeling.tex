@@ -18,21 +18,31 @@ Let's see how these linear functions can help us in some ``real world'' contexts
 Your friends are trying to get an idea of how many people they can invite to their wedding.  The venue they're looking at costs about \$2,000 to rent and the event coordinator suggested that they budget about \$100 per attendee into the costs.
 \begin{enumerate}
 \item Write a function that represents an estimate for how much this will cost if they have x attendees.	
-\item Now rewrite your function from part (a) with units for each of the values (including the variables).
+\item Now rewrite your function from part (a) with units for each of the values (including the variables). Do the units make sense? How would you check?
 \item	Suppose the venue has a maximum capacity of 250 people.  What is an estimated maximum cost for using that venue?
 \item	Suppose your friends are trying to stick to about \$20,000 for their budget.  About how many guests can they invite?
 \end{enumerate}
 \begin{explanation}
 \begin{enumerate}
-\item $y=100x+2000$ where $y$ is the total cost and $x$ is the number of attendees.
-\item $y \quad \text{dollars} = \frac{\$100}{1 \quad \text{attendee}} x \quad \text{attendees} + 2000 \quad \text{dollars}$
-\item $y = 100 \times 250 + 2000$\\
-y = 25000 + 2000\\
-y = 27000\\
-The maximum cost is \$27000.
-\item $20000 = 100x + 2000$\\
-18000 = 100x\\
-180 = x\\
+\item Because the rate of change is constant at $\$100$ dollars per attendee, $m$ must be $100$. The cost for $0$ attendees is $\$2000$ so our $b$ value is $2000$ this gives us the following equation: 
+\[
+y=100x+2000
+\]
+where $y$ is the total cost and $x$ is the number of attendees.
+\item Substituting the units in we get the following:
+\[
+y \quad \text{dollars} = \frac{100 \quad \text{dollars}}{1 \quad \text{attendee}} \quad x \quad  \text{attendees} + 2000 \quad \text{dollars}
+\]
+To check that the units make sense, we need to make sure that they match on both sides of the equation. The left side only has dollars, so the right side must match up. Since we are multiplying $\frac{\text{dollars}}{\text{attendees}}$ by attendees, the attendees will ``cancel out.'' This leaves us with only dollars on the right side, so both sides agree.
+\item To find the cost for $250$ people we just have to plug in $250$ for $x$.\\ 
+$y = 100 \times 250 + 2000$\\
+$y = 25000 + 2000$\\
+$y = 27000$\\
+The maximum cost is $\$27000$.
+\item Now we are given the total cost, so we can plug $20000$ in for $y$ and find the number of possible attendees.\\
+$20000 = 100x + 2000$\\
+$18000 = 100x$\\
+$180 = x$\\
 The maximum amount of guests they can invite for \$20000 would be 180 people.
 \end{enumerate}
 \end{explanation}
@@ -54,10 +64,10 @@ Now let's look closer at how we use $y=mx+b$ for the previous example.
 \end{enumerate}
 \end{explanation}
 \end{example}
-\begin{exploration}
+\begin{example}
 Below is some information for how electricity usage is billed in Columbus
 \begin{image}
-\includegraphics[width=6in]{electricity.png}
+\includegraphics[width=5in]{electricity.png}
 \end{image}
 https://www.columbus.gov/Templates/Detail.aspx?id=2147500472 
 \begin{enumerate}
@@ -66,7 +76,15 @@ https://www.columbus.gov/Templates/Detail.aspx?id=2147500472
 \item Suppose exactly 700 KWH are used in a month.  Use Schedule A information to calculate a cost for the bill.
 \item Suppose exactly 700 KWH are used in a month.  Now use Schedule A-1 information to calculate a cost for the bill.
 \end{enumerate} 
-\end{exploration}
+\begin{explanation}
+\begin{enumerate}
+\item Write a function, or set of functions, which determine how much your electricity bill will be if you use x KWH in a month.  Don't worry about the variable PCRA rates.
+(Note: the 0.0873 and 0.0724 are dollar amounts, i.e. \$0.0873 and \$0.0724)
+\item Suppose exactly 700 KWH are used in a month.  Use Schedule A information to calculate a cost for the bill.
+\item Suppose exactly 700 KWH are used in a month.  Now use Schedule A-1 information to calculate a cost for the bill.
+\end{enumerate} 
+\end{explanation}
+\end{example}
 \begin{exploration}
 According to True Car (www.truecar.com), a 2018 Toyota Camry (conventional) (29/41 MPG city/hwy) sells for an average of  \$22,030, and a Camry Hybrid (51/53 MPG city/hwy) sells for an average of \$26,247.  Currently gas prices are in the upper \$2 per gallon, so let's estimate about \$2.80 per gallon.
 \begin{enumerate}
@@ -84,7 +102,7 @@ According to True Car (www.truecar.com), a 2018 Toyota Camry (conventional) (29/
 
 \begin{summary}\begin{itemize}
 \item When writing linear equations, consider the units being used in the situation. That can go a long way to properly writing the equation and fully understanding the context.
-\item context
+\item The context also helps with making sure that the equations make sense. 
 \end{itemize}\end{summary}
 
 
