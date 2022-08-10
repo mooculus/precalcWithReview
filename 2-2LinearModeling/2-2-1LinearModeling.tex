@@ -47,6 +47,8 @@ The maximum amount of guests they can invite for \$20000 would be 180 people.
 \end{enumerate}
 \end{explanation}
 \end{example}
+
+As we can see, we can use $y=mx+b$ in a variety of situations. These are not just points on a line or values in a table. In this context, they have a specific purpose and thinking about that context can help us understand linear modeling more deeply. 
 \begin{example}
 Now let's look closer at how we use $y=mx+b$ for the previous example.
 \begin{enumerate}
@@ -64,6 +66,7 @@ Now let's look closer at how we use $y=mx+b$ for the previous example.
 \end{enumerate}
 \end{explanation}
 \end{example}
+Now that we can see how to fit our information into a linear model, we can look at a more challenging real world examples. Utility bills, and federal tax returns are both great cases of tricky linear  models. Take a look at the following example.
 \begin{example}
 Below is some information for how electricity usage is billed in Columbus
 \begin{image}
@@ -78,10 +81,26 @@ https://www.columbus.gov/Templates/Detail.aspx?id=2147500472
 \end{enumerate} 
 \begin{explanation}
 \begin{enumerate}
-\item Write a function, or set of functions, which determine how much your electricity bill will be if you use x KWH in a month.  Don't worry about the variable PCRA rates.
-(Note: the 0.0873 and 0.0724 are dollar amounts, i.e. \$0.0873 and \$0.0724)
-\item Suppose exactly 700 KWH are used in a month.  Use Schedule A information to calculate a cost for the bill.
-\item Suppose exactly 700 KWH are used in a month.  Now use Schedule A-1 information to calculate a cost for the bill.
+\item Unfortunately, we just have to “know” (assume) that the “Energy (per KWH): .0873” is taking about \$ per KWH (that is what it means)
+If a household is using less than 700 KWH, then the Schedule A-1 Instructions are used for calculating their energy costs.  So for $x < 700$ KWH a month, we use:
+\[
+	\$y = \frac{\$0.0724}{\text{KWH}}* x KWH + \$10.70 \text{(for monthly bill)}
+\]
+If a household is using more than 700 KWH, then the Schedule A Instructions are used for calculating their energy costs.  So for x > 700 KWH a month, we use:
+\[
+	\$y =  \frac{\$0.0873}{\text{KWH}}* x KWH + \$10.70 \text{(for monthly bill)}
+\]
+
+It does not seem clear which is used when x = 700 KWH (the wording does not really tell us) but using exactly 700 KWH hours is so rare that it doesn’t matter.
+
+\item $x$ represents KWH, and we want to know the cost for 700 KWH using Schedule A, so we plug $x = 700$ into the Schedule A function:
+\[
+\$y =  \frac{\$0.0873}{\text{KWH}}* 700 KWH + \$10.70 = \$71.81 \text{ bill}
+\]
+\item $x$ represents KWH, and we want to know the cost for 700 KWH using Schedule A-1, so we plug $x = 700$ into the Schedule A-1 function:
+\[
+\$y =  \frac{\$0.0724}{\text{KWH}}* 700 KWH + \$10.70 = \$61.38 \text{ bill}
+\]
 \end{enumerate} 
 \end{explanation}
 \end{example}
