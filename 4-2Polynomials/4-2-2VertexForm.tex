@@ -5,201 +5,25 @@
 \license{Creative Commons Attribution-ShareAlike 4.0 International License}
 
 
-\title{Parabolas}
+\title{Vertex Form}
 
 \begin{document}
 \begin{abstract}
-We explore polynomial functions.
+We explore the vertex form of a quadratic.
 \end{abstract}
 \maketitle
-
-\section{Quadratic Graphs}
-\begin{example}
-      Hannah fired a toy rocket from the ground,
-      which launched into the air with an initial speed of $64$ feet per second.
-      The height of the rocket can be modeled by the equation $y=-16t^2+64t$,
-      where $t$ is how many seconds had passed since the launch.
-      To see the shape of the graph made by this equation,
-      we make a table of values and plot the points.\\
-$$
-\begin{array}{ccc}
-                t & -16t^2+64t & Point\\
-\hline
-                 0 &  -16(0)^2+64(0) =0 & (0,0) \\
-        1& -16(1)^2+64(1) =48&(1,48) \\
-          2 & -16(2)^2+64(2) =64 &(2,64)\\
-3&-16(3)^2+64(3)=48 &(3,48)\\
-            4 & -16(4)^2+64(4)=0  &(4,0)
-    \end{array}
-$$
-\begin{image}
-\begin{tikzpicture}
-                    \begin{axis}[xmin=-2,xmax=6,ymin=-15,ymax=75,
-                                ytick=,
-                                minor ytick={-10,0,...,70},
-                                xlabel={$t$}]
-                        \addplot+[domain=0:4,-] {-16*x^2+64*x};
-                        \addplot[soliddot] coordinates {(0,0)} node[above left]{$(0,0)$};
-                        \addplot[soliddot] coordinates {(1,48)} node[above left]{$(1,48)$};
-                        \addplot[soliddot] coordinates {(2,64)} node[above]{$(2,64)$};
-                        \addplot[soliddot] coordinates {(3,48)} node[above right]{$(3,48)$};
-                        \addplot[soliddot] coordinates {(4,0)} node[above right]{$(4,0)$};
-                    \end{axis}
-                \end{tikzpicture}
-\end{image}
-\end{example}
-
-
- A curve with the shape that we see in the above figure
-      is called a \textbf{parabola}.
-      Notice the symmetry in figure,
-      how the $y$-values in rows above the middle row match those below the middle row.
-      Also notice the symmetry in the shape of the graph,
-      how its left side is a mirror image of its right side.
-
- The first feature that we will talk about is the
-      direction that a parabola opens.
-      All parabolas open either upward or downward.
-      This parabola in the rocket example opens downward because $a$ is negative.
-      That means that for large values of $t$, the $at^2$ term will be large and negative,
-      and the resulting $y$-value will be low on the $y$-axis.
-      So the negative leading coefficient causes the arms of the parabola to point downward.
-    
-
- Here are some more quadratic graphs so we can see which way they open.
-\begin{image}
-\begin{tikzpicture}
-                    \begin{axis}[]
-                        \addplot+[domain=-1.45:3.45] {x^2-2*x+2};
-                        \end{axis}
-                \end{tikzpicture}
-\end{image}
-\begin{image}
-\begin{tikzpicture}
-                    \begin{axis}[]
-                        \addplot+[domain=-6.29:4.29] {-1/4*x^2-1/2*x-1/4};
-                    \end{axis}
-                \end{tikzpicture}
-\end{image}
-\begin{image}
-\begin{tikzpicture}
-                    \begin{axis}[]
-                        \addplot+[domain=1.12:4.87] {3*x^2-18*x+23.5};
-                    \end{axis}
-                \end{tikzpicture}
-\end{image}
-  The graph of a quadratic equation $y=ax^2+bx+c$ is a parabola which opens upward or downward
-        according to the sign of the leading coefficient $a$.
-        If the leading coefficient is positive,
-        the parabola opens upward.
-        If the leading coefficient is negative,
-        the parabola opens downward.
-
- The \textbf{vertex}
-      of a parabola is the highest or lowest point on the graph,
-      depending uponon whether the graph opens downward or upward.
-      In Example 1, the vertex is $(2,64)$.
-      This tells us that Hannah's rocket reached its maximum height of $64$ feet after $2$ seconds.
-      If the parabola opens downward, as in the rocket example,
-      then the $y$-value of the vertex is the \textbf{maximum} $y$-value.
-      If the parabola opens upward then the $y$-value of the vertex is the \textbf{minimum} $y$-value.
-      The \textbf{axis of symmetry}
-      is a vertical line that passes through the vertex, cutting the parabola into two symmetric halves.
-      We write the axis of symmetry as an equation of a vertical line so it always starts with ``$x=$''.
-      In Example 1, the equation for the axis of symmetry is $x=2$.
-  
-
-    
-      The \textbf{vertical intercept} is the point where the parabola crosses the vertical axis.
-      The vertical intercept is the $y$-intercept if the vertical axis is labeled $y$.
-      In Example 1,
-      the point $(\firsthighlight{0},\secondhighlight{0})$ is the starting point of the rocket,
-      and it is where the graph crosses the $y$-axis,
-      so it is the vertical intercept.
-      The $y$-value of $\secondhighlight{0}$ means the rocket was on the ground
-      when the $t$-value was $\firsthighlight{0}$, which was when the rocket launched.
-
-      The \textbf{horizontal intercept(s)}
-      are the points where the parabola crosses the horizontal axis.
-      They are the $x$-intercepts if the horizontal axis is labeled $x$.
-      The point $(0,0)$ on the path of the rocket is also a horizontal intercept.
-      The $t$-value of $0$ indicates the time when the rocket was launched from the ground.
-      There is another horizontal intercept at the point $(4,0)$,
-      which means the rocket came back to hit the ground after $4$ seconds.
-   
-      It is possible for a quadratic graph to have zero, one, or two horizontal intercepts.
-      The figures below show an example of each.
-
-
-
-      
- \begin{example}
-          Use technology to graph and make a table of the quadratic function $f$ defined by
-          $f(x)=2x^2+4x-3$ and find each of the key points or features.
-\begin{enumerate}
-                \item Find the vertex.
-                \item Find the vertical intercept  (i.e. the $y$-intercept).
-                       \item Find the horizontal or (i.e. the $x$-intercept(s)).
-               \item  Find $f(-2)$.
-      \item Solve $f(x)=3$ using the graph.
-           \item Solve $f(x)\le 3$ using the graph.
-        \end{enumerate}
-\begin{explanation}
-           The specifics of how to use any one particular technology tool vary.
-            Whether you use an app, a physical calculator,
-            or something else, a table and graph should look like:\\
-  $$
-  \begin{array}{cc}
-x & f(x) \\
-\hline
--2 & -3 \\
--1 & -5 \\
- 0 & -3 \\
- 1 &  3 \\
- 2 & 13 \\
-  \end{array}
-  $$
-
-\begin{image}
-\begin{tikzpicture}
-                \begin{axis}
-                    \addplot+[domain=-3.449:1.449] {2*x^2+4*x-3};
-                \end{axis}
-            \end{tikzpicture}
-\end{image}
-            Additional features of your technology tool can enhance the graph to help answer these questions.
-            You may be able to make the graph appear like:
-\begin{image}
-      \begin{tikzpicture}
-                \begin{axis}[clip=false]
-                    \addplot [domain=-3.449:1.449, firstcurve] {2*x^2+4*x-3} node[below right] {$y=f(x)$};
-                    \addplot [domain=-7:7, secondcurve] {3} node[above left] {$y=3$};
-                    \addplot [soliddot, color=thirdcolor] coordinates {(-1,-5)} node[below left] {$(-1,-5)$};
-                    \addplot [soliddot, color=fourthcolor] coordinates {(1,3)} node[above right] {$(1,3)$};
-                    \addplot [soliddot, color=fourthcolor] coordinates {(0,-3)} node[below right] {$(0,-3)$};
-                    \addplot [soliddot, color=fourthcolor] coordinates {(-3,3)} node[above left] {$(-3,3)$};
-                    \addplot [soliddot, color=fifthcolor] coordinates {(-2.581,0)} node[above left] {$(-2.6,0)$};
-                    \addplot [soliddot, color=fifthcolor] coordinates {(0.581,0)} node[above right] {$(0.6,0)$};
-                \end{axis}
-            \end{tikzpicture}
-   \end{image}
-\begin{enumerate}
-                \item The vertex is $(-1,-5)$.
-                \item The vertical intercept is $(0,-3)$.
-                \item The horizontal intercepts are approximately $(-2.6,0)$ and $(0.6,0)$.
-              \item  When $x=-2$, $y=-3$, so $f(-2)=-3$.
- 	 \item The solutions to $f(x)=3$ are the $x$-values where $y=3$. We graph the horizontal line $y=3$ and find the $x$-values where the graphs intersect. The solution set is $\{-3,1\}$.
-       	\item  The solutions are all of the $x$-values where the function's graph is below (or touching) the line $y=3$. The interval is $[-3,1]$.
-\end{enumerate}
-\end{explanation}
-\end{example}
 
 
 \section{The Vertex Form of a Quadratic}
 
       We have learned the standard form of a quadratic function's formula, which is $f(x)=ax^2+bx+c$.
       we will learn another form called the vertex form.
-
+\begin{callout} \textbf{\large{Vertex Form of a Quadratic Function}}
+          A quadratic function whose graph has vertex at the point $(h,k)$ is given by
+$$
+f(x)=a(x-h)^2+k
+$$
+\end{callout}
       Using graphing technology, consider the graphs of $f(x)=x^2-6x+7$ and $g(x)=(x-3)^2-2$ on the same axes.
 
         We see only one parabola because these are two different forms of the same function.
@@ -295,12 +119,6 @@ $$
       Note that these coordinates create the vertex at $(2,1)$.
       Now we can define the vertex form of a quadratic function.
 
-\begin{callout} \textbf{\large{Vertex Form of a Quadratic Function}}
-          A quadratic function whose graph has vertex at the point $(h,k)$ is given by
-$$
-f(x)=a(x-h)^2+k
-$$
-\end{callout}
 
    
 
