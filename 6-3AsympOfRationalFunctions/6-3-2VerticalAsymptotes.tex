@@ -1,0 +1,283 @@
+\documentclass{ximera}
+
+\input{../preamble.tex}
+\author{Ivo Terek}
+\license{Creative Commons Attribution-ShareAlike 4.0 International License}
+\acknowledgement{}
+%Source: Stitz-Zeager
+\title{Vertical Asymptotes of Rational Functions}
+
+\begin{document}
+\licenseSZ
+\begin{abstract}
+\end{abstract}
+\maketitle
+
+
+%%\typeout{************************************************}
+%%\typeout{Motivating Questions}
+%%\typeout{************************************************}
+%
+%\begin{motivatingQuestions}\begin{itemize}
+%\item By passing from $1/x$ to $p(x)/q(x)$, what changes? What can we say about the behavior of such ratio?
+%\item Just like $1/x$ had the lines $x=0$ and $y=0$ as asymptotes, what happens for an arbitrary rational function? Are vertical and horizontal asymptotes the only possible types?
+%\end{itemize}\end{motivatingQuestions}
+%
+%
+%%\typeout{************************************************}
+%%\typeout{Subsection Introduction}
+%%\typeout{************************************************}
+%
+%\section{Introduction}
+%
+%We have previously discussed the function $1/x$. Note that both the numerator $1$ and the denominator $x$ are polynomials (the former is a \emph{constant} polynomial). We can study what happens when we replace those with arbitrary polynomials.
+%
+%\begin{definition}
+%  A \emph{rational function} is a function defined as a ratio $f(x) = p(x)/q(x)$ of two polynomials $p(x)$ and $q(x)$, and this ratio makes sense for all real values of $x$, \emph{except} for those such that $q(x) = 0$.
+%\end{definition}
+%
+%\begin{example} Are the following functions rational? For which values of $x$ is the function undefined?
+%  \begin{enumerate}
+%  \item $f(x) = \frac{x^2-2}{x+1}$. \\[1em]
+%    \begin{explanation}
+%      It is a rational function. It is defined for all values of $x$, except for $x = -1$, because this makes the denominator $x+1$ be zero.
+%    \end{explanation}
+%  \item $f(x) = \frac{x^4-3x+1}{x^2-5x+6}$. \\[1em]
+%    \begin{explanation}
+%      It is a rational function. It is defined for all values of $x$, except for $x=2$ and $x=3$, because $x^2-5x+6 = (x-2)(x-3)$. 
+%    \end{explanation}
+%  \item $f(x) = \frac{x-1}{\sqrt{x^4+1}}$. \\[1em]
+%    \begin{explanation}
+%      It is \emph{not} a rational function, because the denominator $\sqrt{x^4+1}$ is \emph{not a polynomial}. Note that even though this does not define a rational function, it is defined for all possible values of $x$, since $\sqrt{x^4+1} \geq 1 > 0$ for all $x$.
+%    \end{explanation}
+%  \item A polynomial function $p(x)$. \\[1em]
+%    \begin{explanation}
+%      Any polynomial function is a rational function, simply because we can write $p(x) = p(x)/1$, and $1$ is a polynomial. And it is defined for every real value of $x$.
+%    \end{explanation}
+%  \item $f(x) = x^2-1 + \frac{x^3}{x^5-1}$. \\[1em]
+%    \begin{explanation}
+%      It is a rational function, which is defined for all $x$ except for $x=1$. To see that this is a rational function, you can either say that it is the sum of the rational functions $x^2-1$ and $x^3/(x^5-1)$, or rewrite it as $$  f(x) = \frac{(x^2-1)(x^5-1) + x^3}{x^5-1} = \frac{x^7-x^5-x^2+x^3-1}{x^5-1},  $$which is manifestly rational.
+%    \end{explanation}
+%  \end{enumerate}
+%\end{example}
+
+
+
+
+\section{Asymptotes - vertical and horizontal}
+
+We have seen that the function $1/x$ has the line $x=0$ as a vertical asymptote, and the line $y=0$ as a horizontal asymptote. Rational functions, in general, may have not only vertical and horizontal asymptotes, but also \emph{slant asymptotes}. Let's start with the two easier cases:
+
+\begin{definition}
+  \mbox{}
+  \begin{enumerate}
+  \item The line $x=c$ is called a \emph{vertical asymptote} of the graph of a function $y=f(x)$ if as $x \to c^-$ or $x \to c^+$, either $f(x) \to +\infty$ or $f(x) \to -\infty$.
+  \item The line $y=c$ is called a \emph{horizontal asymptote} of the graph of a function $y=f(x)$ if as $x \to -\infty$ or $x \to +\infty$, we have $f(x) \to c$.
+  \end{enumerate}
+\end{definition}
+
+
+\begin{example}
+  \mbox{}
+  \begin{enumerate}
+  \item Consider the rational function $f(x) = \frac{x-1}{x-2}$. To understand $x\to +\infty$ intuitively, let's plug some big values for $x$:
+    \begin{align*}
+      f(100) &= \frac{99}{98} \approx 1.010... \\ f(1000) &= \frac{999}{998} \approx 1.001... \\ f(10000) &= \frac{9999}{9998} \approx 1.000...
+    \end{align*}It seems clear that $f(x) \to 1$ as $x \to +\infty$. This says that the line $y=1$ is a horizontal asymptote for $f(x)$. The same strategy shows that $f(x) \to 1$ when $x \to -\infty$ as well, so that $y=1$ is the only horizontal asymptote for $f(x)$. As for vertical asymptotes, we see that the only $x$-value for which $f(x)$ is undefined is $x=2$. So that's where we'll look, by choosing values for $x$ very close to $2$, but not equal to $2$. For example, we have that
+    \begin{align*}
+      f(2.1) &= \frac{1.1}{0.1} = 11 \\ f(2.01) &= \frac{1.01}{0.01} = 101 \\ f(2.001) &= \frac{1.001}{0.001} = 1001 
+    \end{align*}
+    indicates that $f(x) \to +\infty$ as $x \to 2^+$. Similarly, you can check that $f(x) \to -\infty$ as $x \to 2^-$, so the line $x=2$ is a vertical asymptote for $f(x)$ (in fact, the only one). Here's a graph:
+
+\begin{image}
+\begin{tikzpicture}
+    \begin{axis}
+      \addplot[samples=200,domain=2.01:7]{(x-1)/(x-2)};
+      \addplot[samples=200,domain=-7:1.99]{(x-1)/(x-2)};
+      \addplot[dashed, color=penColor] coordinates {(2,-7) (2,7)};
+      \addplot[dashed, color=penColor, domain=-7:7]{1};
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+
+   \item Consider now the rational function $f(x) = \frac{x-1}{x^2-3x+2}$. Let's do as above, and start looking for horizontal asymptotes.
+  \begin{align*}
+    f(100) &\approx 0.010... \\
+    f(1000) &\approx 0.001... \\
+    f(1000) &\approx 0.000...
+  \end{align*}
+  This suggests that $f(x) \to 0$ as $x \to +\infty$. Similarly, you can convince yourself that $f(x) \to 0$ as $x \to -\infty$, so that $y=0$ is the only horizontal asymptote. And for vertical asymptotes, we'll again find the $x$-values for which $f(x)$ is undefined, and see whether any of those indicates a vertical asymptote. Noting that $x^2-3x+2 = (x-1)(x-2)$, we can see that $f(x)$ is undefined for $x=1$ and $x=2$. However, we may write that $$   f(x) = \frac{x-1}{x^2-3x+2} = \frac{x-1}{(x-1)(x-2)} = \frac{1}{x-2},  $$\emph{provided $x \neq 1$}. And $1/(x-2)$ does not increase (or decrease) without bound as $x$ approaches $1$ from either side --- in fact, it approaches $-1$. So, even though $f(x)$ is undefined for the value $x=1$, the line $x=1$ is \emph{not} a vertical asymptote for $f(x)$. But comparing the expression $f(x) = 1/(x-2)$ (again, valid for $x \neq 1$) with what we have previously seen for the function $1/x$, we see that $f(x) \to +\infty$ as $x \to 2^+$ and $f(x) \to -\infty$ as $x \to 2^-$, so that the line $x=2$ is a vertical asymptote for $f(x)$. Here's the graph:
+
+      \begin{image}
+        \begin{tikzpicture}
+          \begin{axis}
+            \addplot[samples=200,domain=-7:0.99]{1/(x-2)};
+            \addplot[samples=200,domain=1.01:1.99]{1/(x-2)};
+            \addplot[samples=200,domain=2.01:7]{1/(x-2)};
+            \draw[fill=white](axis cs:1,-1)circle(1mm);
+            \addplot[dashed, thick, color=penColor] coordinates {(2,-7) (2,7)};
+            \addplot[thick, dashed, color=penColor, domain=-7:7]{0};
+          \end{axis}
+        \end{tikzpicture}
+      \end{image}
+
+  \begin{callout}
+    {\bf Warning:} In item (b) of the above example, the function $f(x)$ given is \emph{not} the same thing as the function $g(x) = 1/(x-2)$. The function $f(x)$ is undefined for $x=1$, but $g(1)$ is defined, and it equals $-1$. The domain is a crucial part of the data defining a function. We will address these issues on Unit 5. 
+  \end{callout}
+  \end{enumerate}
+\end{example}
+
+
+
+\begin{exploration}
+  A mathematical model for the population $P$, in thousands, of a certain species of bacteria, $t$ days after it is introduced to an environment, is given by $P(t) = \frac{200}{(7-t)^2}$, $0 \leq t < 7$.
+  \begin{enumerate}
+  \item Find and interprete $P(0)$.
+  \item When will the population reach $200,000$?
+  \item Determine the behavior of $P$ as $t \to 7^-$. Interpret this result graphically and within the context of the problem.
+  \end{enumerate}
+\end{exploration}
+
+Now, you must be asking yourself if every time we want to test for vertical or horizontal asymptotes, we need to keep plugging values and guessing. Fortunately, the answer is ``no''. Here's what you need to know (formal justificatives require Calculus --- we'll be content with getting intuition for now):
+
+\begin{callout}
+  {\bf Theorem (locating horizontal asymptotes):} Assume that $f(x) = p(x)/q(x)$ is a rational function, and that the leading coefficients of $p(x)$ and $q(x)$ are $a$ and $b$, respectively.
+  \begin{itemize}
+  \item If the degree of $p(x)$ is the same as the degree of $q(x)$, then $y=a/b$ is the unique horizontal asymptote of the graph of $y=f(x)$.
+  \item If the degree of $p(x)$ is less than the degree of $q(x)$, then $y=0$ is the unique horizontal asymptote of the graph of $y=f(x)$.
+  \item If the degree of $p(x)$ is greater than the degree of $q(x)$, then the graph of $y=f(x)$ has no horizontal asymptotes.
+  \end{itemize}
+\end{callout}
+
+
+The above theorem essentially says that one can detect horizontal asymptotes by looking at degrees and leading coefficients. Only the leading terms of $p(x)$ and $q(x)$ matter, and it makes no difference whether one considers $x\to +\infty$ or $x\to -\infty$. For example, how would you apply this to study horizontal asymptotes for the following function? $$ f(x) =  \frac{3x^6-5x^4+3x^3-3x^2 + 10x + 1}{5x^6 + 10000x^5 - 5x+2}$$
+
+\begin{explanation}
+  The degree of the numerator $p(x) = 3x^6-5x^4+3x^3-3x^2 + 10x + 1$ and the degree of the denominator $q(x) = 5x^6 + 10000x^5 - 5x+2$ are equal, namely, to $6$. Thus, since the leading coefficient of $p(x)$ is $3$ and the leading coefficient of $q(x)$ is $5$, we conclude that the line $y=3/5$ is the only horizontal asymptote for this rational function.
+\end{explanation}
+
+\begin{callout}
+  {\bf Theorem (locating vertical asymptotes):} Assume that $f(x) = p(x)/q(x)$ is a rational function written in lowest terms, that is, such that $p(x)$ and $q(x)$ have no common zeros. Let $c$ be a real number for which $f(c)$ is undefined.
+  \begin{itemize}
+  \item If $q(c) \neq 0$, then the graph of $y = f(x)$ has a hole at the point $(c,f(c))$.
+  \item If $q(c) = 0$, then the line $x=c$ is a vertical asymptote of the graph of $y=f(x)$.
+  \end{itemize}
+\end{callout}
+
+The above theorem tells us how to distinguish vertical asymptotes and holes in the graph of a rational function. For example, consider $$  f(x) = \frac{x^2-4x+3}{x^2-3x+2}.  $$Is $f(x)$ in lowest terms? For which values of $x$ is this function undefined? How to go from there?
+
+\begin{explanation}
+You can find out if $f(x)$ is in lowest terms by just factoring both numerator and denominator, and by factoring the denominator, you will also find out which values of $x$ we have $f(x)$ undefined. Since $$   f(x) = \frac{x^2-4x+3}{x^2-3x+2} = \frac{(x-1)(x-3)}{(x-1)(x-2)} = \frac{x-3}{x-2},  $$we see that the values $f(1)$ and $f(2)$ are undefined, while the above equality holds for all $x$ except for $x=1$. In this simplified form, we may recognize $q(x) = x-2$. Since $q(1) = -1 \neq 0$, the graph of $y=f(x)$ has a hole at the point $(1,f(1))$, but since $q(2) = 0$, we have that the line $x=2$ is a vertical asymptote for the graph of $y=f(x)$.
+\end{explanation}
+
+\section{Slant asymptotes}
+
+We are now ready to address the last type of asymptote a rational function may or may not have. And the reasoning is somewhat simple: why should we restrict ourselves to only vertical or horizontal asymptotes? This question itself motivates the name ``slant'' asymptote. Now, you know that the general equation of a line has the form $y=mx+b$, where $m$ is some slope and $b$ is the $y$-intercept. When $m=0$, we have a horizontal line, so when discussing slant asymptotes, we'll always assume that $m \neq 0$.
+
+
+\begin{definition}
+  The line $y=mx+b$, where $m\neq 0$, is called a \emph{slant asymptote} of the graph of a function $y=f(x)$ if as $x \to -\infty$ or as $x\to +\infty$, we have $f(x) \to mx+b$.
+\end{definition}
+
+Note that saying that $y=mx+b$ is a slant asymptote for the graph of $y=f(x)$ is the same thing as saying that $y=0$ is a horizontal asymptote for the graph of the difference function $y=f(x)-(mx+b)$.
+
+
+
+
+\begin{example} Do the following rational functions have slant asymptotes? If so, what are their line equations?
+  \begin{enumerate}
+  \item $f(x) = \frac{x^2-4x+2}{1-x}$. \\[1em]
+    \begin{explanation}
+      When trying to find slant asymptotes, long division is the way to go. Performing it, we see that $$    \frac{x^2-4x+2}{1-x} = -x+3 - \frac{1}{1-x}.  $$Since $1/(1-x) \to 0$ as $x \to \infty$ or $x \to -\infty$ and $y=-x+3$ describes a line, we conclude that $y=-x+3$ is a slant asymptote for the graph of $y=f(x)$.
+  \begin{image}
+ \begin{tikzpicture}
+     \begin{axis}
+       \addplot[samples=200,domain=1.01:7]{(x^2-4*x+2)/(1-x)};
+       \addplot[samples=200,domain=-7:0.99]{(x^2-4*x+2)/(1-x)};
+       \addplot[dashed,thick,domain=-7:7, color=penColor]{-x+3};
+     \end{axis}
+ \end{tikzpicture}
+ \end{image}
+    \end{explanation}
+    
+  \item $f(x) = \frac{x^2-4}{x-2}$. \\[1em]
+    \begin{explanation}
+      We may just simplify it to $f(x) = x+2$, valid for all $x \neq 2$. We may regard this as a long division for which the remainder is zero, as in $$  f(x) = x+2+\frac{0}{x-2},  $$and since $0/(x-2) \to 0$ as $x\to +\infty$ or $x\to -\infty$, it follows that $y=x+2$ is a slant asymptote for the graph of $y=f(x)$, even though the graph is just said line with a hole!
+      \begin{image}
+        \begin{tikzpicture}
+          \begin{axis}
+            \addplot[domain=-7:7]{x+2};
+           \draw[fill=white](axis cs:2,4)circle(1mm);
+          \end{axis}
+        \end{tikzpicture}
+      \end{image}      
+    \end{explanation}
+  \item $f(x)=\frac{x^3-4x^2+5x-1}{x-1}$. \\[1em]
+    \begin{explanation}
+      Performing the long division, as before, we see that $$   f(x) = \frac{x^3-4x^2+5x-1}{x-1} = x^2-3x+2 + \frac{1}{x-1}.  $$As expected, $1/(x-1) \to 0$ when $x \to +\infty$ or $x\to -\infty$, but $y=x^2-3x+2$ is not a line equation. Hence there are no slant asymptotes for the graph of $f(x)$ (loosely speaking, the graph cannot be simultaneously asymptotic to a parabola and to a straight line).
+      \begin{image}
+        \begin{tikzpicture}
+          \begin{axis}
+            \addplot[samples=200,domain=1.01:7]{(x^3-4*x^2+5*x-1)/(x-1)};
+            \addplot[samples=200,domain=-7:0.99]{(x^3-4*x^2+5*x-1)/(x-1)};
+            \addplot[dashed,thick,smooth,domain=-7:7,color=penColor]{x^2-3*x+2};
+          \end{axis}
+        \end{tikzpicture}
+      \end{image}
+    \end{explanation}
+  \item $f(x) = \frac{x^3+2x^2+x+1}{x^3-2x^2-x+1}$. \\[1em]
+   \begin{explanation}
+      Long division shows that: $$   f(x) = \frac{x^3+2x^2+x+1}{x^3-2x^2-x+1} = 1 + \underbrace{\frac{4x^2+2x}{x^3-2x^2-x+1}}_{\to 0}.  $$The indicated remainder goes to zero when $x \to +\infty$ or $x\to -\infty$ simply because the degree of the numerator is lower than the degree of the numerator. The remaining quotient does give us the asymptote $y=1$. But this is not a slant asymptote, it is a horizontal asymptote (as you might have expected).
+%            \begin{image}
+%        \begin{tikzpicture}
+%          \begin{axis}
+%            \addplot[samples=300,domain=-7:-0.83]{(x^3+2*x^2+x+1)/(x^3-2*x^2-x+1)};
+%            \addplot[samples=300,domain=-0.8:0.554]{(x^3+2*x^2+x+1)/(x^3-2*x^2-x+1)};
+%             \addplot[samples=300,domain=0.556:2.24]{(x^3+2*x^2+x+1)/(x^3-2*x^2-x+1)};
+%             \addplot[samples=300,domain=2.26:7]{(x^3+2*x^2+x+1)/(x^3-2*x^2-x+1)};
+%             \addplot[dashed,thick,domain=-7:7, color=penColor]{1};
+%          \end{axis}
+%        \end{tikzpicture}
+%      \end{image}
+      Note that asymptotes are really concerned about the end behavior of the function. In the above example, the line $y=1$ does intersect the graph of $y=f(x)$, but this is fine --- the graph still only approaches said line as $x \to +\infty$ and $x \to -\infty$.
+   \end{explanation}
+  \item $f(x) = \frac{x^2+1}{x^5-4}$. \\[1em]
+    \begin{explanation}
+      Since the degree of the numerator is smaller than the degree of the denominator, you can think of the long division as already having been performed, as in $$ f(x) = \frac{x^2+1}{x^5-4} = 0 + \frac{x^2+1}{x^5-4}.  $$Again, the remainder goes to zero when $x \to +\infty$ or $x\to -\infty$. So, the line $y=0$ would be an asymptote, but it is horizontal, not slant, as in the previous item.
+
+  \begin{image}
+ \begin{tikzpicture}
+     \begin{axis}
+       \addplot[samples=200,domain=-7:1.318]{(x^2+1)/(x^5-4)};
+       \addplot[samples=200,domain=1.32:7]{(x^2+1)/(x^5-4)};
+       \addplot[dashed,thick,domain=-7:7, color=penColor]{0};
+     \end{axis}
+ \end{tikzpicture}
+ \end{image}
+
+      
+    \end{explanation}
+  \end{enumerate}
+
+\end{example}
+
+The above examples suggest that if the degree of the numerator is at least two higher than the degree of the numerator, what survives outside the remainder has degree higher than one, and thus does not describe a line equation --- meaning no slant asymptotes. Similarly, if the degree of the numerator is equal or lower to the degree of the denominator, there's ``not enough quotient left" to describe a line equation. This is not a coincidence, but a general fact.
+
+\begin{callout}
+  {\bf Theorem (on slant asymptotes):} Let $f(x) = p(x)/q(x)$ be a rational function for which the degree of $p(x)$ is exactly one higher than the degree of $q(x)$. Then the graph of $y=f(x)$ has the slant asymptote $y=L(x)$, where $L(x)$ is the quotient obtained by dividing $p(x)$ by $q(x)$. If the degree of $p(x)$ is not exactly one higher than the degree of $q(x)$, there is no slant asymptote whatsoever.
+\end{callout}
+
+  Unlike what happened for horizontal and vertical asymptotes, the above theorem does not \emph{immediately} tell you what is the line equation describing the slant asymptote. We must resort to long division.
+
+%\typeout{************************************************}
+%\typeout{Summary}
+%\typeout{************************************************}
+
+\begin{summary}\begin{itemize}
+%\item A \emph{rational} function is, as the name suggests, a function defined as a \emph{ratio} $f(x) = p(x)/q(x)$ of two polynomials $p(x)$ and $q(x)$. It makes sense for all real values of $x$ \emph{except} for those such that $q(x) = 0$, as one cannot divide by zero.
+\item There are three types of asymptotes for rational functions: vertical asymptotes, horizontal asymptotes, and slant asymptotes. The latter occurs when the degree of the numerator is exactly one higher than the degree of the denominator.
+\end{itemize}\end{summary}
+
+
+
+\end{document}

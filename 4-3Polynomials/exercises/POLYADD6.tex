@@ -1,0 +1,74 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\author{Kenneth Berglund}
+
+
+
+
+\begin{document}
+Consider the quadratic $f(x) = -5x^2 - 10x + 2$.
+\begin{exercise}
+The vertex form of $f(x)$ is $\answer{-5}(x - \answer{-1})^2 + \answer{7}$.
+\begin{exercise}
+\begin{enumerate}
+\item The graph of $f(x)$ is a parabola that opens \wordChoice{\choice{upwards}\choice[correct]{downwards}}.
+
+\item The vertex of the parabola is located at the point $\left(\answer{-1}, \answer{7}\right)$.
+
+\item The graph has $\answer{2}$ $x$-intercept(s).
+\end{enumerate}
+\begin{exercise}
+\begin{enumerate}
+\item The $x$-intercepts (moving from left to right) are $\left(\answer{-1 - \sqrt{\frac{7}{5}}}, \answer{0}\right)$ and $\left(\answer{-1 + \sqrt{\frac{7}{5}}}, \answer{0}\right)$.
+
+\item The $y$-intercept is $(\answer{0}, \answer{2})$.
+
+\item Choose the graph of the parabola from the options below.
+
+\begin{image}
+\begin{tikzpicture}
+    \begin{axis}[ymin=-7, ymax=7]
+         \addplot[<->, samples=200]{5*(x - 1)^2 - 7} node{};
+	\node(label) at (axis cs:-6,6) {$A$};	
+    \end{axis}
+\end{tikzpicture}
+\begin{tikzpicture}
+    \begin{axis}[ymin=-7, ymax=7]
+         \addplot[<->, samples=200]{-5*(x - 1)^2 + 7} node{};
+	\node(label) at (axis cs:-6,6) {$B$};	
+    \end{axis}
+\end{tikzpicture}
+\end{image} 
+
+\begin{image}
+\begin{tikzpicture}
+    \begin{axis}[ymin=-7, ymax=7]
+         \addplot[<->, samples=200]{-5*(x + 1)^2 + 7} node{};
+	\node(label) at (axis cs:-6, 6) {$C$};	
+    \end{axis}
+\end{tikzpicture}
+\begin{tikzpicture}
+    \begin{axis}[ymin=-7, ymax=7]
+         \addplot[<->, samples=200]{5*(x + 1)^2 - 7} node{};
+	\node(label) at (axis cs:-6,6) {$D$};	
+    \end{axis}
+\end{tikzpicture}
+\end{image} 
+
+\begin{multipleChoice}
+\choice{A}
+\choice{B}
+\choice[correct]{C}
+\choice{D}
+\end{multipleChoice}
+
+\end{enumerate}
+\end{exercise}
+\end{exercise}
+
+\end{exercise}
+
+
+\end{document}
