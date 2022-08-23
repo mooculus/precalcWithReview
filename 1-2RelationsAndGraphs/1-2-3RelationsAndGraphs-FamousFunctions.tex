@@ -47,8 +47,7 @@ A prototypical example of a linear function is $$ \mbox{\huge $y=x$}$$
 \end{tikzpicture}
 \end{image}
 
-\begin{center}
-$
+\[
 \begin{array}{ |c || c|  }
  \hline
  \multicolumn{2}{|c|}{\text{\normalfont Important Values of } y=x} \\
@@ -63,8 +62,7 @@ $
  2&2\\
  \hline
 \end{array}
-$
-\end{center}
+\]
 
 In general, linear functions can be written as $y=mx+b$ where $m$ and $b$ can be any numbers.  You can play with changing the values of $m$ and $b$ on the graph using Desmos and see how that changes the line.  
 
@@ -93,8 +91,7 @@ A prototypical example of a quadratic function is $$ \mbox{\huge $y=x^2$}$$
 \end{tikzpicture}
 \end{image}
 
-\begin{center}
-$
+\[
 \begin{array}{ |c || c|  }
  \hline
  \multicolumn{2}{|c|}{\text{\normalfont Important Values of } y=x^2} \\
@@ -109,8 +106,7 @@ $
  2&4\\
  \hline
 \end{array}
-$
-\end{center}
+\]
 
 In general, quadratic functions can be written as $y=ax^2+bx+c$ where $a$, $b$, and $c$ can be any numbers.  You can play with changing the values of $a$, $b$, and $c$ on the graph using Desmos and see how that changes the parabola.  
 
@@ -138,8 +134,7 @@ $$ \mbox{\huge $y=|x|$}$$
 \end{tikzpicture}
 \end{image}
 
-\begin{center}
-$
+\[
 \begin{array}{ |c || c|  }
  \hline
  \multicolumn{2}{|c|}{\text{\normalfont Important Values of } y=|x|} \\
@@ -154,8 +149,7 @@ $
  2&2\\
  \hline
 \end{array}
-$
-\end{center}
+\]
 
 
 
@@ -177,8 +171,7 @@ The square root function is written as, $$ \mbox{\huge $y=\sqrt{x}.$}$$
 \end{image}
 
 
-\begin{center}
-$
+\[
 \begin{array}{ |c || c|  }
  \hline
  \multicolumn{2}{|c|}{\text{\normalfont Important Values of } y=\sqrt{x}} \\
@@ -193,8 +186,7 @@ $
  25&5\\
  \hline
 \end{array}
-$
-\end{center}
+\]
 
 
 
@@ -217,20 +209,22 @@ Here $e$ is the mathematical constant known as Euler's number.  $e \approx 2.718
 \end{tikzpicture}
 \end{image}
 
-$$
-\begin{array}{ |c || c|  }
+\[
+\begin{array}{ |c|  }
  \hline
- \multicolumn{2}{|c|}{\text{\normalfont Important Values of } y=e^x} \\
+ \text{\normalfont Important Values of  $y=e^x$} \\
 \hline
- \hline
- x & y\\
- \hline
- 0&1\\[2ex]
- 1&e\\[2ex]
- -1&\frac{1}{e}\\[2ex]
- \hline
+\hline
+\begin{array}{c || c}
+ x & y  \\
+ \hline 
+ 0&1\\
+ 1&e\\
+ -1&\frac{1}{e}
+\end{array}\\
+\hline
 \end{array}
-$$
+ \]
 
 In general, we can talk about exponential functions of the form $y=b^{x}$ where $b$ is a positive number not equal to $1$.  You can play with changing the values of $b$ on the graph using Desmos and see how that changes the graph.  Pay particular attention to the difference between $b>1$ and $0<b<1$.
 
@@ -252,7 +246,12 @@ In general, we can talk about exponential functions of the form $y=b^{x}$ where 
 
 
 The most famous logarithm function is
- $$ \mbox{\huge $y=\ln(x)=\log_{e}(x)$}$$ 
+\begin{image}
+  \begin{tikzpicture}[scale=2,every node/.style={transform shape}]
+    \node at (0,0) {$y=\ln(x)=\log_{e}(x)$};
+  \end{tikzpicture}
+\end{image}
+ 
 Here $e$ is the mathematical constant known as Euler's number. $e \approx 2.71828$.
 
 \begin{image}
@@ -263,21 +262,22 @@ Here $e$ is the mathematical constant known as Euler's number. $e \approx 2.7182
 \end{tikzpicture}
 \end{image}
 
-$$
-\begin{array}{ |c || c|  }
- \hline
- \multicolumn{2}{|c|}{\text{\normalfont Important Values of } y=ln(x)} \\
-\hline
+\[
+\begin{array}{ |c |  }
+  \hline
+  \text{Important Values of $y=\ln(x)$} \\
+ \begin{array}{c|c}
  \hline
  x & y\\
  \hline
-0&\text{\normalfont undefined}\\ 
-\frac{1}{e}&-1\\ [2ex]
+0&\text{undefined}\\[2ex]
+\frac{1}{e}&-1\\[2ex]
 1&0\\[2ex]
- e&1\\[2ex]
+e&1\\[2ex]
+ \end{array}\\
  \hline
 \end{array}
-$$
+ \]
 
 
 You may notice that the table of values for $y=\ln(x)$ and $y=e^x$ are similiar.  This is becase these two functions are interconnected.  We will explore this more later in the course.
@@ -317,24 +317,24 @@ This function comes from trigonometry. In the table below we will use another ma
 \end{tikzpicture}
 \end{image}
 
-$$
+\[
 \begin{array}{ |c || c|  }
  \hline
- \multicolumn{2}{|c|}{\text{\normalfont Important Values of } y=\sin(x)} \\
+ \text{ Important Values of  $y=\sin(x)$} & \\
 \hline
  \hline
  x & y\\
  \hline
  -\pi&0\\
- -\frac{\pi}{2}&-1\\[2ex]
+ -\frac{\pi}{2}&-1\\
  0&0\\
- \frac{\pi}{2}&1\\[2ex]
+ \frac{\pi}{2}&1\\
  \pi&0\\
-\frac{3\pi}{2}&-1\\[2ex]
+\frac{3\pi}{2}&-1\\
  2 \pi&0\\
 \hline
 \end{array}
-$$
+\]
 
 
 In general, we can consider $y=a\sin(bx)$.  You can play with changing the values of $a$ and $b$ on the graph using Desmos and see how that changes the graph.  
