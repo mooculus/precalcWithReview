@@ -149,11 +149,12 @@
 \let\summary\relax
 \let\endsummary\relax
 \newtheorem*{summary}{Summary}
-\newtheorem*{callout}{Callout}
-\newtheorem*{overview}{Overview}
-\newtheorem*{objectives}{Objectives}
-\newtheorem*{motivatingQuestions}{Motivating Questions}
-\newtheorem*{MM}{Metacognitive Moment}
+\newenvironment{callout}{\begin{remark}}{\end{remark}}
+\newenvironment{overview}{\begin{remark}\textbf{Overview}~}{\end{remark}}
+\newenvironment{objectives}{\begin{remark}\textbf{Objectives}~}{\end{remark}}
+\newenvironment{motivatingQuestions}{\begin{remark}\textbf{Motivating Questions}~}{\end{remark}}
+\newenvironment{MM}{\begin{remark}\textbf{Metacognitive Moment}~}{\end{remark}}
+
       
 %% NEEDED FOR XIMERA 2
 %\ximerizedEnvironment{summary}
