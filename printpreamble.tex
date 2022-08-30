@@ -1,0 +1,97 @@
+%% CALLOUT
+\let\callout\relax
+\let\endcallout\relax
+\NewEnviron{callout}{
+  \begin{tcolorbox}[colback=blue!5, breakable,pad at break*=1mm]
+      \BODY
+  \end{tcolorbox}
+}
+%% MOTIVATING QUESTIONS
+\let\motivatingQuestions\relax
+\let\endmotivatingQuestions\relax
+\NewEnviron{motivatingQuestions}{
+  \begin{tcolorbox}[ breakable,pad at break*=1mm]
+    \textbf{\Large Motivating Questions}\hfill
+    %\begin{itemize}[label=\textbullet]
+      \BODY
+    %\end{itemize}
+  \end{tcolorbox}
+}
+%% OBJECTIVES
+\let\objectives\relax
+\let\endobjectives\relax
+\NewEnviron{objectives}{  
+    \vspace{.5in}
+      %\begin{tcolorbox}[colback=orange!5, breakable,pad at break*=1mm]
+    \textbf{\Large Learning Objectives}
+    \begin{itemize}[label=\textbullet]
+      \BODY
+    \end{itemize}
+    %\end{tcolorbox}
+}
+%% DEFINITION
+\let\definition\relax
+\let\enddefinition\relax
+\NewEnviron{definition}{
+  \begin{tcolorbox}[ breakable,pad at break*=1mm]
+    \noindent\textbf{Definition}~
+      \BODY
+  \end{tcolorbox}
+}
+%% OVERVIEW
+\let\overview\relax
+\let\endoverview\relax
+\NewEnviron{overview}{
+  \begin{tcolorbox}[ breakable,pad at break*=1mm]
+    \textbf{\Large Overview}
+    %\begin{itemize}[label=\textbullet] %% breaks Xake
+      \BODY
+    %\end{itemize}
+  \end{tcolorbox}
+}
+%% SUMMARY
+\let\summary\relax
+\let\endsummary\relax
+\NewEnviron{summary}{
+  \begin{tcolorbox}[ breakable,pad at break*=1mm]
+    \textbf{\Large Summary}
+    %\begin{itemize}[label=\textbullet] %% breaks Xake
+      \BODY
+    %\end{itemize}
+  \end{tcolorbox}
+}
+%% REMARK
+\let\remark\relax
+\let\endremark\relax
+\NewEnviron{remark}{
+  \begin{tcolorbox}[colback=green!5, breakable,pad at break*=1mm]
+    \noindent\textbf{Remark}~
+      \BODY
+  \end{tcolorbox}
+}
+%% EXPLANATION
+\let\explanation\relax
+\let\endexplanation\relax
+\NewEnviron{explanation}{
+    \normalfont
+    \noindent\textbf{Explanation}~
+      \BODY
+}
+%% EXPLORATION
+\let\exploration\relax
+\let\endexploration\relax
+\NewEnviron{exploration}{
+  \begin{tcolorbox}[colback=yellow!10, breakable,pad at break*=1mm]
+    \noindent\textbf{Exploration}~
+      \BODY
+  \end{tcolorbox}
+}
+%% METACOGNITIVE MOMENTS
+\let\MM\relax
+\let\endMM\relax
+\NewEnviron{MM}{
+  \begin{tcolorbox}[colback=pink!15, breakable,pad at break*=1mm]
+    \noindent\textbf{Metacognitive Moment}~
+      \BODY
+  \end{tcolorbox}
+  }
