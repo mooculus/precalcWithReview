@@ -40,18 +40,18 @@ Of the most important types of functions is a linear function. The graph of a li
 A prototypical example of a linear function
 
 \begin{center}
-  \begin{tikzpicture}[scale=2,every node/.style={transform shape}]
+  \begin{tikzpicture}[scale=4,every node/.style={transform shape}]
     \node at (0,0) {$y=x$};
   \end{tikzpicture}
 \end{center}
 
-\begin{image}
+\begin{center}
 \begin{tikzpicture}
     \begin{axis}
         \addplot{x} node{$y=x$};
     \end{axis}
 \end{tikzpicture}
-\end{image}
+\end{center}
 
 
 \[
@@ -91,19 +91,19 @@ The graph of a quadratic function is a parabola.
 
 A prototypical example of a quadratic function is 
 
-\begin{image}
-  \begin{tikzpicture}[scale=2,every node/.style={transform shape}]
+\begin{center}
+  \begin{tikzpicture}[scale=4,every node/.style={transform shape}]
     \node at (0,0) {$y=x^2$};
   \end{tikzpicture}
-\end{image}
+\end{center}
 
-\begin{image}
+\begin{center}
 \begin{tikzpicture}
     \begin{axis}
         \addplot[smooth]{x^2} node{$y=x^2$};
     \end{axis}
 \end{tikzpicture}
-\end{image}
+\end{center}
 
 \[
 \begin{array}{c }
@@ -138,19 +138,20 @@ In general, quadratic functions can be written as $y=ax^2+bx+c$ where $a$, $b$, 
 \section{Absolute Value Function}
 The absolute value function takes all $y$-values and makes them positive.  The absolute value function is written as 
 
-\begin{image}
-  \begin{tikzpicture}[scale=2,every node/.style={transform shape}]
+\begin{center}
+  \begin{tikzpicture}[scale=4,every node/.style={transform shape}]
     \node at (0,0) {$y=|x|$};
   \end{tikzpicture}
-\end{image}
+\end{center}
 
-\begin{image}
+\begin{center}
 \begin{tikzpicture}
     \begin{axis}
-        \addplot[smooth]{abs(x)} node{$y=|x|$};
+        \addplot[samples=200,domain=0:8]{x};
+        \addplot[samples=200,domain=-8:0]{-x};
     \end{axis}
 \end{tikzpicture}
-\end{image}
+\end{center}
 
 \[
 \begin{array}{c }
@@ -180,19 +181,19 @@ The absolute value function takes all $y$-values and makes them positive.  The a
 \section{Square Root Function}
 The square root function is written as
 
-\begin{image}
-  \begin{tikzpicture}[scale=2,every node/.style={transform shape}]
+\begin{center}
+  \begin{tikzpicture}[scale=4,every node/.style={transform shape}]
     \node at (0,0) {$y=\sqrt{x}$};
   \end{tikzpicture}
-\end{image}
+\end{center}
 
-\begin{image}
+\begin{center}
 \begin{tikzpicture}
     \begin{axis}
         \addplot[samples=200,domain=0:30]{sqrt(x)};
     \end{axis}
 \end{tikzpicture}
-\end{image}
+\end{center}
 
 
 \[
@@ -223,21 +224,21 @@ The square root function is written as
 \section{Exponential Functions}
 The exponential growth function is written as
 
-\begin{image}
-  \begin{tikzpicture}[scale=2,every node/.style={transform shape}]
+\begin{center}
+  \begin{tikzpicture}[scale=4,every node/.style={transform shape}]
     \node at (0,0) {$y=e^{x}$};
   \end{tikzpicture}
-\end{image}
+\end{center}
 
 Here $e$ is the mathematical constant known as Euler's number.  $e \approx 2.71828 .$.
 
-\begin{image}
+\begin{center}
 \begin{tikzpicture}
     \begin{axis}
         \addplot[samples=200,domain=-10:4]{e^x};
     \end{axis}
 \end{tikzpicture}
-\end{image}
+\end{center}
 
 \[
 \begin{array}{c}
@@ -274,21 +275,21 @@ In general, we can talk about exponential functions of the form $y=b^{x}$ where 
 
 
 The most famous logarithm function is
-\begin{image}
-  \begin{tikzpicture}[scale=2,every node/.style={transform shape}]
+\begin{center}
+  \begin{tikzpicture}[scale=4,every node/.style={transform shape}]
     \node at (0,0) {$y=\ln(x)=\log_{e}(x)$};
   \end{tikzpicture}
-\end{image}
+\end{center}
  
 Here $e$ is the mathematical constant known as Euler's number. $e \approx 2.71828$.
 
-\begin{image}
+\begin{center}
 \begin{tikzpicture}
     \begin{axis}
         \addplot[samples=200,domain=0.01:8]{ln(x)};
     \end{axis}
 \end{tikzpicture}
-\end{image}
+\end{center}
 
 
 
@@ -331,16 +332,16 @@ In general, we can talk about logarithmic functions of the form $y=\log_b(x)$ wh
 \section{Sine}
 The sine function is written as
 
-\begin{image}
-  \begin{tikzpicture}[scale=2,every node/.style={transform shape}]
+\begin{center}
+  \begin{tikzpicture}[scale=4,every node/.style={transform shape}]
     \node at (0,0) {$y=\sin(x)$};
   \end{tikzpicture}
-\end{image}
+\end{center}
 
 
 This function comes from trigonometry. In the table below we will use another mathematical constant, $\pi$ (``pi" pronounced pie). $\pi \approx 3.14159$.
 
-\begin{image}
+\begin{center}
 \begin{tikzpicture}
     \begin{axis}[ymin=-2, ymax=2,
 		   %xtick={-6.28318, -4.7123889, -3.14159, -1.5708, 1.5708, 3.14159, 4.7123889, 6.28318},
@@ -351,7 +352,7 @@ This function comes from trigonometry. In the table below we will use another ma
         \addplot[samples=200]{sin(pi/4*deg(x))};
     \end{axis}
 \end{tikzpicture}
-\end{image}
+\end{center}
 
 \[
 \begin{array}{ c }
