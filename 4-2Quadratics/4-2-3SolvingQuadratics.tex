@@ -1,11 +1,11 @@
 \documentclass{ximera}
 
 \input{../preamble.tex}
-\author{David Kish}
+\author{David Kish and Elizabeth Miller}
 \license{Creative Commons Attribution-ShareAlike 4.0 International License}
 
 
-\title{Factored Form}
+\title{Root Form}
 
 \begin{document}
 \begin{abstract}
@@ -22,14 +22,16 @@ As seen in the graphs below, the graphs of the functions do not cross the $x$-ax
 %\end{image}
 
 %%%%%%%%%
-\section{Intercept Form}
-\begin{callout} \textbf{\large{Intercept Form of a Quadratic Function}}\\
-          A quadratic function whose graph has x intercepts at the points $(r,0)$ and $(s,0)$ can be written as:\\
+\section{Root Form}
+\begin{callout} \textbf{\large{Root Form of a Quadratic Function}}\\
+          A quadratic function whose graph has $x$-intercepts (called roots) at the points $(r,0)$ and $(s,0)$ can be written as:\\
 \[
 f(x)=a(x-r)(x-s)
 \]
+
 \end{callout}
 
+This form is called \dfn{Root Form} because the roots of the quadratic can be easily read off from this form.
 %\begin{example}
 %\begin{explanation}
 
@@ -37,7 +39,7 @@ f(x)=a(x-r)(x-s)
 %\end{example}
 %%%%%%%%%
 \section{Factoring from Standard Form when $a=1$}
-When $a=1$, out factored form is the same as our Intercept form.
+When $a=1$, putting a quadratic in Root Form is the same as factoring a quadratic.  In general, \dfn{factoring} refers to writing as a product of linear terms, but does not necessarily imply that the $a$ term is pulled out front like it is in Root Form.  
 
 \begin{example}
 Factor the following quadratic into a product of linear factors:
@@ -57,23 +59,23 @@ This means that we can factor the quadratic the following way:
 \[
 x^2+3x+2=(x+2)(x+1)
 \]
-The quadratic is now written as a product of linear factors and because $a=1$, these are also our $x$-intercepts for our function.
+The quadratic is now written as a product of linear factors and because $a=1$, these are also our $x$-intercepts (or roots) for our function.
 \end{explanation}
 \end{example}
 
 %%%%%%%%%
 \section{Factoring from Standard Form when $a>1$}
 \begin{example}
-Factor the following quadratic into a product of linear components:
+Rewrite the following quadratic in Root Form.
 \[
 f(x)= 3x^2-4x-7
 \]
 \begin{explanation}
 First we will start by pulling out a $3$ from every term.
 \[
-3(x^2-\frac{4}{3}x-\frac{7}{3})
+3\left(x^2-\frac{4}{3}x-\frac{7}{3}\right)
 \]
-We now have to find factors that add up to $\frac{4}{3}$ and multiply to $-\frac{7}{3}$. In this particular case, we can see that the difference between the numerators ($7$\&$4$) is $3$, and since $\frac{3}{3}=1$ our job will be a little easier. This leads us to the following factors:
+We now have to find factors that add up to $-\frac{4}{3}$ and multiply to $-\frac{7}{3}$. In this particular case, we can see that the difference between the numerators ($7$\&$4$) is $3$, and since $\frac{3}{3}=1$ our job will be a little easier. This leads us to the following factors:
 \[
 \frac{3}{3}+\frac{-7}{3}=-\frac{4}{3}
 \]
@@ -82,20 +84,64 @@ We now have to find factors that add up to $\frac{4}{3}$ and multiply to $-\frac
 \]
 So, our factored form is as follows:
 \[
-f(x) = 3(x+\frac{3}{3})(x-\frac{7}{3})
+f(x) = 3\left(x+\frac{3}{3}\right)\left(x-\frac{7}{3}\right)
 \]
-We now have the equation written as a product of linear components, and if we want to find the $x$ intercepts we can set each of the components equal to $0$.
-\begin{align*}
-x+\frac{3}{3}&=0\\
-x&=-\frac{3}{3}\\
-x&=-1
-\end{align*}
-\begin{align*}
-x-\frac{7}{3}&=0\\
-x&=\frac{7}{3}
-\end{align*}
-So our solutions or $x$ intercepts are $x=-1$ and $x=\frac{7}{3}$
+%We now have the equation written as a product of linear components, and if we want to find the $x$ intercepts we can set each of the components equal to $0$.
+%\begin{align*}
+%x+\frac{3}{3}&=0\\
+%x&=-\frac{3}{3}\\
+%x&=-1
+%\end{align*}
+%\begin{align*}
+%x-\frac{7}{3}&=0\\
+%x&=\frac{7}{3}
+%\end{align*}
+%So our solutions or $x$ intercepts are $x=-1$ and $x=\frac{7}{3}$
 \end{explanation}
+
+Note that in the previous example, it is not necessary to pull at the $3$ as the first step.  Instead, we could pull out the $3$ as the last step and still have the root form.
+
+\begin{explanation}
+This way, we start with
+\[
+f(x)= 3x^2-4x-7
+\]
+We now have to find numbers $m_1,m_2,b_1, \text{ and } b_2$ such that:
+
+\begin{align*}
+(m_1x+b_1)(m_2x+b_2)&=m_1m_2x^2+m_1b_2x+m_2b_1x+b_1b_2\\
+				&=m_1m_2x^2+(m_1b_2+m_2b_1)x+b_1b_2\\
+				&= 3x^2-4x-7
+\end{align*}
+
+This means that we need
+
+\begin{align*}
+m_1m_2&=3\\
+m_1b_2+m_2b_1&=-4\\
+b_1b_2&=-7
+\end{align*}
+because the only way two quadratics in standard form can be equal is if they have the same coefficients for each term.
+
+Through a little trial and error, we find that:
+\begin{align*}
+m_1&=1\\
+b_1 &=1\\
+m_2&=3\\
+b_2&=7
+\end{align*}
+will work.
+
+We now have the equation written as a product of linear components
+\[
+f(x)= 3x^2-4x-7=(x+1)(3x-7)
+\]
+Now, to write our answer in Root Form, we just need to factor out both $m_1$ and $m_2$.  Since in this example, $m_1=1$, we don't actually have to do any thing for that one.
+\[
+f(x)= 3x^2-4x-7=(x+1)(3x-7)=(x+1)\left[3\left(x-\frac{7}{3}\right)\right]=3(x+1)\left(x-\frac{7}{3}\right)
+\]
+\end{explanation}
+Now, we have our quadratic in Root Form and can read off our roots as $x=1$ and $x=\frac{-7}{3}$.
 \end{example}
 
 %%%%%%%%%%
@@ -122,7 +168,12 @@ x&=\frac{4+10}{6}&x=\frac{4-10}{6}\\
 x&=\frac{14}{6}&x=\frac{-6}{6}\\
 x&=-\frac{7}{3}&x=-1\\
 \end{align*}
-We still get $x=-1$ and $x=\frac{7}{3}$ as our solutions. This can be a very useful tool especially with more complicated quadratic equations.
+We still get $x=-1$ and $x=\frac{7}{3}$ as our roots. This can be a very useful tool especially with more complicated quadratic equations.
+
+Now that we know the roots, we can use the $a$-value we see in standard form, $a=3$ and the two roots $r=1$ and $s=\frac{-7}{3}$ to plug into our Root Form formula $a(x-r)(x-s)$, so again we get as a final answer that
+\[
+f(x)=3(x+1)\left(x-\frac{7}{3}\right)
+\]
 \end{explanation}
 \end{example}
 %%%%%%%%%
