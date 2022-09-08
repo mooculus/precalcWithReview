@@ -17,7 +17,7 @@ We use exponents when exploring real world situations.
 \section{Early Exponentials}
 \begin{example}
 An athlete signs a contract saying that they will earn \$8.3 million with an increase of 4.8\% each year of the 5 year contract.
-Use this scenario to fill in the following table:\\
+Use a calculator to fill in the following table:\\
 \begin{center}
 $\begin{array}{|c|c|c|}
 \hline
@@ -26,17 +26,17 @@ $\begin{array}{|c|c|c|}
 \hline
 1& \$8.3 \quad \text{million} & \text{N/A} \\
 \hline
-2 & \$ \answer{8.7} \quad \text{million} & 8.3 + 8.3 \times \answer{.048}\\
+2 & \$ 8.7 \quad \text{million} & 8.3 + (8.3 \times {.048})\\
 \hline
-3 & \$ \answer{9.1} \quad \text{million} & \answer{8.7} + \answer{8.7} \times \answer{.048}\\
+3 & \$ {9.1} \quad \text{million} & 8.7 + (8.7 \times {.048}) \\
 \hline
-4 & \$ \answer{9.5} \quad \text{million} & \answer{9.1} + \answer{9.1} \times \answer{.048}\\
+4 & \$ {9.5} \quad \text{million} & \answer{9.1} + ({9.1} \times {.048}) \\
 \hline
-5 & \$ \answer{10.0} \quad \text{million} & \answer{9.5} + \answer{9.5} \times \answer{.048}\\
+5 & \$ {10.0} \quad \text{million} & \answer{9.5} + ({9.5} \times {.048})\\
 \hline
 \end{array}$
 \end{center}
-You may have calculated the salaries for each year by first finding 4.8\% of the previous year's salary, and then adding that value to the previous year's salary.  Doing it this way, you have to type two calculations into a calculator (calculate 4.8\%, then record that value, then enter the addition of that value to the salary).  If you did it this way, think about how to write (and do) the computation with just one calculation entry into a calculator.
+You may have calculated the salaries for each year by first finding 4.8\% of the previous year's salary, and then adding that value to the previous year's salary.  Doing it this way, you have to type two calculations into a calculator (calculate 4.8\%, then record that value, then enter the addition of that value to the salary).  If you did it this way, think about how to write (and do) the computation with just one calculation entry into a calculator by factoring $8.3$.
 $$
 8.3 + 8.3 \times \answer{.048} = 8.3 \times (\answer{1} + \answer{.048}) = 8.3 \times \answer{1.048}
 $$
@@ -44,17 +44,23 @@ $$
 %
 Here we see how we can simplify the calculation detailed in the table by recognizing that the salary is changing by $4.8\%$ each year. Thus, each year the new salary is $104.8\%$ of the previous year's salary. In other words, the yearly percentage increase is 4.8\%, which can be applied to give the new salary by multiplying by 1.048 as demonstrated above. 
 
-What if we want to know what the athlete's salary will look like more than one year out? Recall from the previous section on exponents, if we look at a 5-year contract and expand out this exponential expression:
+What if we want to know what the athlete's salary will look like more than one year out? We can use the same process as above without computing each intermediate step to see that the salary after five years will be
 %
-\begin{equation*}
-8.3(1.048)^5 = 8.3 \cdot (1.048 \cdot 1.048 \cdot 1.048 \cdot 1.048  \cdot 1.048)
-\end{equation*}
+$$
+((((8.3 \cdot 1.048) \cdot 1.048)  \cdot 1.048) \cdot 1.048) \cdot 1.048.
+$$
 %
-Here we have 5 copies of this expanded rate. We can re-write this using the associative property of multiplication as: 
+We can re-write this using the associative property of multiplication as: 
 %
-\begin{equation*}
-8.3 \cdot (1.048 \cdot 1.048 \cdot 1.048 \cdot 1.048 \cdot 1.048) = ((((8.3 \cdot 1.048) \cdot 1.048)  \cdot 1.048) \cdot 1.048) \cdot 1.048
-\end{equation*}
+$$
+8.3 \cdot (1.048 \cdot 1.048 \cdot 1.048 \cdot 1.048 \cdot 1.048).
+$$
+%
+Recall from the previous section on exponents, this is the same as
+%
+$$
+8.3(1.048)^5.
+$$
 
 Here we have demonstrated precisely how we can use an exponential expression to more efficiently calculate (and represent such a calculation) the change in salary represented by the above table.
 
@@ -77,7 +83,7 @@ Note that when we have exponential decay the growth rate is negative.
 What we have outlined above is an understanding of what each piece of an exponential model in the form $y=a\cdot b^x$ means in terms of a given context.  We can now use this understanding to create an exponential model for exponential scenarios without having to go through the ``step by step'' process as we did in the original table for the athlete salary problem.  
 %
 \begin{example}
-Some CDs (a banking investment option) are offering rates that give about 3.10\% yield per year as long as a minimum amount, such as \$5,000, is invested.  
+Some CDs (a banking investment option) are offering rates that give about 3.10\% yield per year as long as a minimum amount, such as \$5000, is invested.  
 ``3.10\% yield'' simply means the investment increases (earns) about 3.10\%.  CDs are only given for a certain amount of time (usually a certain number of years).  When a CD ``matures'' (ends), you usually have the option to renew the CD. 
 \begin{enumerate}
 \item Use this scenario to fill out the table below\\
@@ -86,17 +92,17 @@ $\begin{array}{|c|c|c|}
 \text{After }& \text{Value of } & \text{Calculate the value at the end of} \\
 \text{Year:} & \text{investment} & \text{the next year using the previous year's value} \\
 \hline
-0 & \$ \answer{5,000} & N/A \\
+0 & \$ \answer{5000} & N/A \\
 \hline
-1 & \$ \answer{5,155} & \$ \answer{5000}(\answer{1.031}) \\
+1 & \$ \answer{5155} & \$ 5000(1.031) \\
 \hline
-2 &	\$5,314.81 &	\$ \answer{5,155}(\answer{1.031}) \\
+2 &	\$5314.81 &	\$ \answer{5155}(\answer{1.031}) \\
 \hline
-3 &	\$5,479.57 & \$ \answer{5,314.81}(\answer{1.031})   \\
+3 &	\$5479.57 & \$ \answer{5314.81}(\answer{1.031})   \\
 \hline
 \end{array}$
 
-\item Suppose you invest the minimum amount of \$5,000 in order to get this 3.10\% yield.  Write an equation to describe how much the investment will be worth after x years.  Write the units of each value and identify what each represents.
+\item Suppose you invest the minimum amount of \$5000 in order to get this 3.10\% yield.  Write an equation to describe how much the investment will be worth after x years.  Write the units of each value and identify what each represents.
 
 \item Fill in the first column of the table below with the values you calculated in your pre class work.  Then, enter the appropriate values into your model from above to fill in the last column of the table.
 
@@ -105,13 +111,13 @@ $\begin{array}{|c|c|c|}
 \text{After}& \text{Value of investment} & \text{Value of investment} \\
 \text{Year:}& \text{from previous table} & \text{from function} \\
 \hline
-0 & \$5,000 & \\
+0 & \$5000 & \\
 \hline
-1 & \$5,155 &  \\
+1 & \$5155 &  \\
 \hline
-2 &	\$5,314.81 & \\
+2 &	\$5314.81 & \\
 \hline
-3 &	\$5,479.57 &  \\
+3 &	\$5479.57 &  \\
 \hline
 \end{array}$
 
@@ -135,77 +141,79 @@ Use ``Guess and Check'' to answer this question:
 \text{After }& \text{Value of } & \text{Calculate the value at the end of} \\
 \text{Year:} & \text{investment} & \text{the next year using the previous year's value} \\
 \hline
-0 & \$5,000 & N/A  \\
+0 & \$5000 & N/A  \\
 \hline
-1 & \$5,155 & (5000)(1.031) \\
+1 & \$5155 & (5000)(1.031) \\
 \hline
-2 &	\$5,314.81 & (5,155)(1.031) \\
+2 &	\$5314.81 & (5155)(1.031) \\
 \hline
-3 &	\$5,479.57 & (5,314.81)(1.031)   \\
+3 &	\$5479.57 & (5314.81)(1.031)   \\
 \hline
 \end{array}$
 
         \item 
 		\begin{equation*}
-     			y = 5,000(1+.031)^x \text{ which is equivalent to }y = 5,000(1.031)^x
+     			y = 5000(1+.031)^x \text{ which is equivalent to }y = 5000(1.031)^x
      		 \end{equation*}
 		 
 		$y$ is the amount (in dollars) that the investment is worth after $x$ years.
 		
-		5,000 is the amount of the initial investment (also in dollars).
+		5000 is the amount of the initial investment (also in dollars).
 		
 		1.031 is the growth rate of the investment, specifically a 3.1\% increase each year, which means we have 103.1\% of our initial investment after 1 year.
 		
 		$x$ is the number of years of investment to reach the value $y$.
 
-       \item $\begin{array}{|c|c|c|}
+       \item~\begin{center}$\begin{array}{|c|c|c|}
 \hline
 \text{After}& \text{Value of investment} & \text{Value of investment} \\
 \text{Year:}& \text{from previous table} & \text{from function} \\
 \hline
-0 & \$5,000 & \$5,000\\
+0 & \$5000 & \$5000\\
 \hline
-1 & \$5,155 &  \$5,155\\
+1 & \$5155 &  \$5155\\
 \hline
-2 &	\$5,314.81 & \$5,314.81 \\
+2 &	\$5314.81 & \$5314.81 \\
 \hline
-3 &	\$5,479.57 & \$5,479.57 \\
+3 &	\$5479.57 & \$5479.57 \\
 \hline
-\end{array}$\\
+\end{array}$\end{center}
 \smallskip
 The values produced from our function match exactly those given by calculating from the previous year. Think back to our explanation in the previous example. We are performing the same calculation, just via a more efficient method.
 
 \item To calculate our return after 7 years, we simply plug $x=7$ into the formula found in part (b):
 \begin{equation*}
-5,000(1.031)^7 = 6,191.28307844
+5000(1.031)^7 \approx 6191.28307844
 \end{equation*}
-We are dealing with money, so we round this to the nearest hundredth, giving a total value of \$6,191.28. This is an increase of \$1,191.28 over our initial investment.
+We are dealing with money, so we round this to the nearest hundredth, giving a total value of \$6191.28. This is an increase of \$1191.28 over our initial investment.
 
-\item Doubling our investment, means we want the total value to be \$10,000. The process to answer this question is as follows:
+\item Doubling our investment, means we want the total value to be \$10000. The process to answer this question is as follows:
 \begin{enumerate}
-\item Begin ``guessing". The idea is to use your calculator to plug in whole numbers for $x$ until the function produces a value less than our goal of \$10,000 and such that the next whole number will be more. From the previous part, we know that 7 years only gives about a \$2,000 increase, so we should begin with a number at least twice that.
+\item Begin ``guessing". The idea is to use your calculator to plug in whole numbers for $x$ until the function produces a value less than our goal of \$10000 and such that the next whole number will be more. From the previous part, we know that 7 years only gives about a \$2000 increase, so we should begin with a number at least twice that.
 
 Ultimately, we find that plugging in $x =22$ will produce a return of
 %
 \begin{equation*}
- \$5,000(1.031)^{22} = \$9,787.24
+ \$5000(1.031)^{22} \approx \$9787.24
 \end{equation*}
-which is less than \$10,000, while $x= 23$ results in more (see below).
+which is less than \$10000, while $x= 23$ results in more (see below).
 
-\item As noted above, $x=23$ will result in slightly more than the \$10,000 we are looking for:
+\item As noted above, $x=23$ will result in slightly more than the \$10000 we are looking for:
 %
 \begin{equation*}
-\$5,000(1.031)^{23} = \$10,090.65
+\$5000(1.031)^{23} \approx \$10090.65
 \end{equation*}
+
+The left-hand side is the calculator-ready expression, and the right-hand side is an approximation.
 
 \item Finally, we must ask ourselves which of these is closer to the full value of investment that we want? 
 %
 \begin{align*}
-\text{22 years gives: } &\$10,000 - \$9,787.24 = \$212.76\\
-\text{23 years gives: } &\$10,090.65 - \$10,000 = \$90.65
+\text{22 years gives: } &\$10000 - \$9787.24 \approx \$212.76\\
+\text{23 years gives: } &\$10090.65 - \$10000 \approx \$90.65
 \end{align*}
 %
-23 years gets us closer to the goal of \$10,000. Hence, we must maintain the CD for 23 years to double our investment.
+23 years gets us closer to the goal of \$10000. Hence, we must maintain the CD for 23 years to double our investment.
 
 Though it may seem extraneous to write out this subtraction, it is better to develop this habit of checking and concluding your work in a clear and transparent manner. For your success, we recommend you perform such calculations for every problem.
 \end{enumerate}
@@ -244,12 +252,12 @@ $y$ is the number of milligrams of drug concentration $x$ hours after the initia
 $x$ is the number of hours since the initial does was administered.
 
 \item We measure time since the initial dose was administered in hours, so we must plug in $x=24$ hours (1 day) to the equation found in part (a):
-$$y = 300(0.75)^{24}=0.301 \text{mg left after 1 day.}$$
+$$y = 300(0.75)^{24} \approx 0.301 \text{mg left after 1 day.}$$
 
 \item The initial administration had a concentration of 300mg, so we are looking for the number of hours until $y=150$mg. Since we are looking to the nearest half-hour, we plug in half-values for $x$ as well: 1, 1.5, 2, 2.5 \dots \\
-The closest value for $x$ above 150mg is 2, as $300(0.75)^2 = 168.75$. 
+The closest value for $x$ above 150mg is 2, as $300(0.75)^2 \approx 168.75$. 
 
-The closest value for $x$ below 150mg is 2.5, as $300(0.75)^{2.5} = 146.14$.
+The closest value for $x$ below 150mg is 2.5, as $300(0.75)^{2.5} \approx 146.14$.
 
 We now check to see which value is closer to our target concentration of 150mg:\\
 168.75mg - 150mg = 18.75mg \\
@@ -257,8 +265,8 @@ We now check to see which value is closer to our target concentration of 150mg:\
 Thus, the 2.5 hour estimate is closer.
 
 \item We now wish to find out how long it takes to reduce the concentration to 5mg. Thus, we want to solve $5 = 300(0.75)^x$ for $x$. Again, we are estimating to the nearest half-hour, so we plug in half-values for $x$.\\
-The closest value for $x$ that is above 5mg is 14, as $300(0.75)^{14} = 5.34$mg.\\
-The closest value for $x$ that is below 5mg is 14.5, as $300(0.75)^{14.5} = 4.63$mg.
+The closest value for $x$ that is above 5mg is 14, as $300(0.75)^{14} \approx 5.34$.\\
+The closest value for $x$ that is below 5mg is 14.5, as $300(0.75)^{14.5} \approx 4.63$.
 
 Once again, we check to see which value is closer to our target concentration of 5mg:\\
 5.34mg - 5mg = 0.34mg\\
