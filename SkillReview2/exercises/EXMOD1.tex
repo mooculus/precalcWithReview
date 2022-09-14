@@ -1,0 +1,51 @@
+
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\author{David Kish}
+\license{Creative Commons Attribution-ShareAlike 4.0 International License}
+
+
+
+\begin{document}
+The following exponential equation models how a particular medicine degrades in a patient's body over time. In this model, $x$ represents the number of hours that the medicine has been in the patient and $y$ represents the amount of medicine in milligrams left in the patient after $x$ hours.
+\[
+y=300(0.75)^x
+\]
+Use the equation to help answer the questions below.
+
+\begin{exercise}
+Which of the following are correct interpretations of $.075$ from the model?
+  \begin{selectAll}
+    \choice{The medicine in the patient increases by $75\%$ each hour.}
+    \choice[correct]{$75\%$ of the medicine remains in the patient after each hour.}
+    \choice{The medicine in the patient decreases by $0.75$ milligrams every hour.}
+\choice{The medicine in the patient increases by $0.75$ milligrams every hour}
+    \choice[correct]{The medicine in the patient degrades by $25\%$ each hour.}
+  \end{selectAll}
+\end{exercise}
+\begin{exercise}
+What is the value of $y$ when $x=0$?\\
+$y=\answer{300}$ \wordChoice{ \choice[correct]{milligrams} \choice{hours}}
+\end{exercise}
+\begin{exercise}
+Which of the following are correct about the answer to the previous question?
+  \begin{selectAll}
+    \choice[correct]{The answer represents the initial dose of medicine given to the patient.}
+    \choice{The answer represents when there is no medicine left in the patient}
+    \choice[correct]{The answer represents the amount of medicine in the patient after $0$ hours.}
+\choice{The answer represents the amount of time it takes for all of the medicine to leave the patient's body}
+    \choice{The answer represents the amount of medicine in the patients body at the end of the day.}
+  \end{selectAll}
+\end{exercise}
+\begin{exercise}
+What is the remaining drug concentration after a day has passed?\\
+Please enter your answer as a calculator ready response.\\
+$y=\answer{300(0.75)^{24}}$milligrams.
+\end{exercise}
+\begin{exercise}
+We want to know how long it takes for the drug concentration to be cut in half. How would we setup the model to figure this out?\\
+$\answer{150}=300(0.75)^{\answer{x}}$
+\end{exercise}
+\end{document}
