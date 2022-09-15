@@ -38,6 +38,14 @@
       \BODY
   \end{tcolorbox}
 }
+%% THEOREM
+\let\theorem\relax
+\let\endtheorem\relax
+\NewEnviron{theorem}{
+  \begin{tcolorbox}[colback=blue!5, breakable,pad at break*=1mm]
+      \BODY
+  \end{tcolorbox}
+}
 %% OVERVIEW
 \let\overview\relax
 \let\endoverview\relax
