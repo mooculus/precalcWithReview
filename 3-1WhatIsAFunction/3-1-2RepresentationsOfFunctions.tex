@@ -353,7 +353,7 @@ This graph is also not a function.  Even though it is a single curve, it has inp
  \subsection{Formula Representation}
  Another common way to represent functions is using a formula.  In the example of Dolbear's Law, the function which models this law is given as a formula by 
  $$D(N)=40+0.25N \text{ for } 50 \leq x \leq 85$$
- When we give functions as a formula, we also need to say which input values are allowed.  In this case, the allowed inputs are $50 \leq x \leq 85$.  If allowed inputs are not given, the inputs are assumed to be all the values for which the formula used to defined the function makes sense.  
+ When we give functions as a formula, we also need to say which input values are allowed, that is, what the domain of the function is.  In this case, the domain is $50 \leq x \leq 85$.  If the domain is not given, the domain is assumed to be all the values for which the formula used to defined the function makes sense, that is, the implied domain.  
  
  Here are some examples of functions represented by a formula.
  
@@ -369,10 +369,20 @@ Recall that this is the famous function named sine.
 Here is an example of working with the formula representation of a function.
 
 \begin{example}
-Let $f(x)=5x-2$.  Find $f(1)$.
+Let $f(x)=5x-2$.  Find $f(1)$. Then, find $f(m)$, $f(k + 1)$, $f(2h)$, and $f(\bigstar)$.
 
 \begin{explanation}
 Recall that the notation $f(1)$ means to evaluate the function $f$ at the input $x=1$.  That is, $f(1)=5(1)-2=3$.
+
+Similarly, $f(m)$ means to evaluate the function $f$ at the input $x = m$. That is, $f(m) = 5m- 2$. This expression contains no like terms, so it cannot be simplified further.
+
+$f(k + 1) = 5(k + 1) - 2$. Distributing, we find that $5(k + 1) -2 = 5k + 5 - 2 = 5k + 3$, so $f(k + 1) = 5k +3$. 
+
+$f(2h) = 5(2h) - 2$, and multiplying $5(2h)$ yields $10h$, so $f(2h) = 10h - 2$. 
+
+Although $f(\bigstar)$ involves an unusual symbol, we can treat the symbol like a number. Thus, $f(\bigstar) = 5\bigstar - 2$.
+
+
 \end{explanation}
 \end{example}
 
@@ -403,8 +413,7 @@ The \dfn{$y$-intercept} of $f$ is a point $(0,y)$ such that $f(0) = y$. That is,
 \item tables
 \item arrow diagrams
 \item graphs
-\item formula
-\item domain and range
+\item formula with domain and range
 \end{itemize}
 \end{itemize}\end{summary}
 
