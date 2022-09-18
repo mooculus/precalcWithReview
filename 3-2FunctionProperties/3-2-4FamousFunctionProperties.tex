@@ -20,7 +20,7 @@
 %\typeout{************************************************}
 
 %\section{Famous Functions and Relations} 
-In Section 1-2, you saw a variety of famous functions. Now that we have learned more about properties of functions, we can update our knowledge of those famous functions. We will go through the list of famous functions from before and point out where each function might have properties we've since discussed.
+In Section 1-2, you saw a variety of famous functions. Now that we have learned more about properties of functions, we can update our knowledge of those famous functions. We will go through the list of famous functions from before and point out where each function might have properties we've discussed.
 
 \newpage
 
@@ -32,22 +32,28 @@ In Section 1-2, you saw a variety of famous functions. Now that we have learned 
 Recall that the graph of a linear function is a line. 
 
 \begin{example}
-A prototypical example of a linear function is $$ \mbox{\huge $y=x.$}$$ 
+A prototypical example of a linear function is 
 
-\begin{image}
+\begin{center}
+  \begin{tikzpicture}[scale=4,every node/.style={transform shape}]
+    \node at (0,0) {$y=x.$};
+  \end{tikzpicture}
+\end{center}
+
+\begin{center}
 \begin{tikzpicture}
     \begin{axis}
         \addplot{x} node{$y=x$};
     \end{axis}
 \end{tikzpicture}
-\end{image}
+\end{center}
 
-\begin{center}
-\(
-\begin{array}{ |c || c|  }
- \hline
- \multicolumn{2}{|c|}{\text{\normalfont Important Values of } y=x} \\
-\hline
+
+\[
+\begin{array}{  c  }
+ %\hline
+\text{\normalfont Important Values of $y=x$} \\
+ \begin{array}{|c|c|}
  \hline
  x & y\\
  \hline
@@ -58,8 +64,9 @@ A prototypical example of a linear function is $$ \mbox{\huge $y=x.$}$$
  2&2\\
  \hline
 \end{array}
-\)
-\end{center}
+\end{array}
+\]
+
 \end{example}
 
 In general, linear functions can be written as $y=mx+b$ where $m$ and $b$ can be any numbers. We learned that $m$ represents the slope, and $b$ is the $y$-coordinate of the $y$-intercept. You can play with changing the values of $m$ and $b$ on the graph using Desmos and see how that changes the line.  
@@ -72,20 +79,19 @@ Note that a linear function $f$ defined by $f(x) = mx + b$ with $b = 0$ is odd. 
 
 Additionally, if $m \ne 0$, then a linear function is one-to-one, and therefore invertible. We summarize this information in the table below.
 
-\begin{center}
-$
-\begin{array}{|l|l|}
- \hline
- \multicolumn{2}{|c|}{\text{\normalfont Properties of Linear Functions } y=mx + b} \\
-\hline
+\[
+\begin{array}{  c  }
+ %\hline
+\text{\normalfont Properties of Linear Functions} \\
+ \begin{array}{|c|c|}
  \hline
 \text{Periodic?} & \text{If } m = 0 \\ \hline
 \text{Odd?} & \text{If } b = 0 \\ \hline
 \text{Even?} & \text{If } m = 0 \\ \hline
 \text{One-to-one/invertible?} & \text{Yes}\\ \hline
 \end{array}
-$
-\end{center}
+\end{array}
+\]
 
 \newpage
 
@@ -98,22 +104,27 @@ $
 Recall that the graph of a quadratic function is a parabola.
 
 \begin{example}
-A prototypical example of a quadratic function is $$ \mbox{\huge $y=x^2.$}$$
+A prototypical example of a quadratic function is 
 
-\begin{image}
+\begin{center}
+  \begin{tikzpicture}[scale=4,every node/.style={transform shape}]
+    \node at (0,0) {$y=x^2.$};
+  \end{tikzpicture}
+\end{center}
+
+\begin{center}
 \begin{tikzpicture}
     \begin{axis}
         \addplot[smooth]{x^2} node{$y=x^2$};
     \end{axis}
 \end{tikzpicture}
-\end{image}
+\end{center}
 
-\begin{center}
-\(
-\begin{array}{ |c || c|  }
- \hline
- \multicolumn{2}{|c|}{\text{\normalfont Important Values of } y=x^2} \\
-\hline
+\[
+\begin{array}{c  }
+ %\hline
+\text{\normalfont Important Values of $y=x^2$} \\
+ \begin{array}{|c|c|}
  \hline
  x & y\\
  \hline
@@ -124,8 +135,8 @@ A prototypical example of a quadratic function is $$ \mbox{\huge $y=x^2.$}$$
  2&4\\
  \hline
 \end{array}
-\)
-\end{center}
+\end{array}
+\]
 \end{example}
 
 In general, quadratic functions can be written as $y=ax^2+bx+c$ where $a$, $b$, and $c$ can be any numbers.  You can play with changing the values of $a$, $b$, and $c$ on the graph using Desmos and see how that changes the parabola.  
@@ -136,46 +147,50 @@ In general, quadratic functions can be written as $y=ax^2+bx+c$ where $a$, $b$, 
 
 Note that for a quadratic function $f$ defined by $f(x) = ax^2 + bx + c$, if $b = 0$, then $f$ is even. In general, quadratic functions are not one-to-one, odd, or periodic, except in cases where $a = 0$, in which we're actually dealing with a linear function. We summarize this information in the table below.
 
-\begin{center}
-$
-\begin{array}{|l|l|}
- \hline
- \multicolumn{2}{|c|}{\text{\normalfont Properties of Quadratic Functions } y=ax^2 + bx + c, a \ne 0} \\
-\hline
+\[
+\begin{array}{  c  }
+ %\hline
+\text{\normalfont Properties of Quadratic Functions } y=ax^2 + bx + c, a \ne 0 \\
+ \begin{array}{|c|c|}
  \hline
 \text{Periodic?} & \text{No} \\ \hline
 \text{Odd?} & \text{No} \\ \hline
 \text{Even?} & \text{If } b = 0 \\ \hline
 \text{One-to-one/invertible?} & \text{No}\\ \hline
 \end{array}
-$
-\end{center}
+\end{array}
+\]
+
+
 
 \newpage
 
 %\typeout{************************************************}
-%\typeout{Absolute Value}
+%\typeout{Absolute Value Function}
 %\typeout{************************************************}
 
-\section{Absolute Value}
+\section{Absolute Value Function}
 Another important type of function is the absolute value function.  This is the function that takes all $y$-values and makes them positive.  The absolute value function is written as 
 
-$$ \mbox{\huge $y=|x|.$}$$ 
-
-\begin{image}
-\begin{tikzpicture}
-    \begin{axis}
-        \addplot[smooth]{abs(x)} node{$y=|x|$};
-    \end{axis}
-\end{tikzpicture}
-\end{image}
+\begin{center}
+  \begin{tikzpicture}[scale=4,every node/.style={transform shape}]
+    \node at (0,0) {$y=|x|.$};
+  \end{tikzpicture}
+\end{center}
 
 \begin{center}
-\(
-\begin{array}{ |c || c|  }
- \hline
- \multicolumn{2}{|c|}{\text{\normalfont Important Values of } y=|x|} \\
-\hline
+\begin{tikzpicture}
+    \begin{axis}
+        \addplot[samples=200,domain=0:8]{x};
+        \addplot[samples=200,domain=-8:0]{-x};
+    \end{axis}
+\end{tikzpicture}
+\end{center}
+
+\[
+\begin{array}{c }
+\text{\normalfont Important Values of $y=|x|$} \\
+\begin{array}{|c|c|}
  \hline
  x & y\\
  \hline
@@ -186,50 +201,53 @@ $$ \mbox{\huge $y=|x|.$}$$
  2&2\\
  \hline
 \end{array}
-\)
-\end{center}
+\end{array}
+\]
 
 Notice that the absolute value function is even. Is it one-to-one? The fact that it's even tells us that it is not, since $|-x| = |x|$ for all $x$. We summarize this information in the table below.
 
-\begin{center}
-$
-\begin{array}{|l|l|}
- \hline
- \multicolumn{2}{|c|}{\text{\normalfont Properties of the Absolute Value Function } y=|x|} \\
-\hline
+\[
+\begin{array}{c }
+\text{\normalfont Properties of the Absolute Value Function } y=|x| \\
+\begin{array}{|c|c|}
  \hline
 \text{Periodic?} & \text{No} \\ \hline
 \text{Odd?} & \text{No} \\ \hline
 \text{Even?} & \text{Yes } \\ \hline
 \text{One-to-one/invertible?} & \text{No}\\ \hline
 \end{array}
-$
-\end{center}
+\end{array}
+\]
+
 
 \newpage
 
 %\typeout{************************************************}
-%\typeout{Square Root}
+%\typeout{Square Root Function}
 %\typeout{************************************************}
 
-\section{Square Root}
-Another famous function is the square root function, $$ \mbox{\huge $y=\sqrt{x}.$}$$ 
+\section{Square Root Function}
+Another famous function is the square root function,
 
-\begin{image}
+\begin{center}
+  \begin{tikzpicture}[scale=4,every node/.style={transform shape}]
+    \node at (0,0) {$y=\sqrt{x}.$};
+  \end{tikzpicture}
+\end{center}
+
+\begin{center}
 \begin{tikzpicture}
     \begin{axis}
         \addplot[samples=200,domain=0:30]{sqrt(x)};
     \end{axis}
 \end{tikzpicture}
-\end{image}
+\end{center}
 
 
-\begin{center}
-\(
-\begin{array}{ |c || c|  }
- \hline
- \multicolumn{2}{|c|}{\text{\normalfont Important Values of } y=\sqrt{x}} \\
-\hline
+\[
+\begin{array}{c }
+ \text{\normalfont Important Values of $y=\sqrt{x}$} \\
+\begin{array}{|c|c|}
  \hline
  x & y\\
  \hline
@@ -240,61 +258,65 @@ Another famous function is the square root function, $$ \mbox{\huge $y=\sqrt{x}.
  25&5\\
  \hline
 \end{array}
-\)
-\end{center}
+\end{array}
+\]
 
 The square root function is one-to-one. Negative inputs are not valid for the square root function, so it is neither even, odd, nor periodic. We summarize this information in the table below.
 
-\begin{center}
-$
-\begin{array}{|l|l|}
- \hline
- \multicolumn{2}{|c|}{\text{\normalfont Properties of the Square Root Function } y=\sqrt{x}} \\
-\hline
+\[
+\begin{array}{c }
+ \text{\normalfont Properties of the Square Root Function } y=\sqrt{x} \\
+\begin{array}{|c|c|}
  \hline
 \text{Periodic?} & \text{No} \\ \hline
 \text{Odd?} & \text{No} \\ \hline
 \text{Even?} & \text{No} \\ \hline
 \text{One-to-one/invertible?} & \text{Yes}\\ \hline
 \end{array}
-$
-\end{center}
+\end{array}
+\]
 
 \newpage
 
 %\typeout{************************************************}
-%\typeout{Exponential}
+%\typeout{Exponential Functions}
 %\typeout{************************************************}
 
-\section{Exponential}
-Another famous function is the exponential growth function, $$ \mbox{\huge $y=e^{x}.$}$$ 
+\section{Exponential Functions}
+Another famous function is the exponential growth function,
+
+\begin{center}
+  \begin{tikzpicture}[scale=4,every node/.style={transform shape}]
+    \node at (0,0) {$y=e^{x}.$};
+  \end{tikzpicture}
+\end{center}
+
 
 Here $e$ is the mathematical constant known as Euler's number.  $e \approx 2.71828 .$.
 
-\begin{image}
+\begin{center}
 \begin{tikzpicture}
     \begin{axis}
         \addplot[samples=200,domain=-10:4]{e^x};
     \end{axis}
 \end{tikzpicture}
-\end{image}
+\end{center}
 
-\begin{center}
-\(
-\begin{array}{ |c || c|  }
- \hline
- \multicolumn{2}{|c|}{\text{\normalfont Important Values of } y=e^x} \\
+\[
+\begin{array}{c}
+ \text{\normalfont Important Values of } y=e^x \\
+\begin{array}{|c|c|}
 \hline
- \hline
- x & y\\
- \hline
+ x & y \\
+ \hline 
  0&1\\[2ex]
  1&e\\[2ex]
- -1&\frac{1}{e}\\[2ex]
- \hline
+ -1&e^{-1}=\frac{1}{e}\\[2ex]
+\hline
 \end{array}
-\)
-\end{center}
+\end{array}
+ \]
+
 
 In general, we can talk about exponential functions of the form $y=b^{x}$ where $b$ is a positive number not equal to $1$.  You can play with changing the values of $b$ on the graph using Desmos and see how that changes the graph.  Pay particular attention to the difference between $b>1$ and $0<b<1$.
 
@@ -305,29 +327,28 @@ In general, we can talk about exponential functions of the form $y=b^{x}$ where 
 
 Notice that exponential functions are one-to-one, and therefore invertible. However, they are neither even, odd, nor periodic. We summarize this information in the table below.
 
-\begin{center}
-$
-\begin{array}{|l|l|}
- \hline
- \multicolumn{2}{|c|}{\text{\normalfont Properties of the Exponential Functions } y=b^x} \\
+\[
+\begin{array}{c}
+ \text{\normalfont Properties of the Exponential Functions } y=b^x \\
+\begin{array}{|c|c|}
 \hline
- \hline
 \text{Periodic?} & \text{No} \\ \hline
 \text{Odd?} & \text{No} \\ \hline
 \text{Even?} & \text{No} \\ \hline
 \text{One-to-one/invertible?} & \text{Yes} \\ \hline
 \end{array}
-$
-\end{center}
+\end{array}
+ \]
+
 
 
 \newpage
 
 %\typeout{************************************************}
-%\typeout{Logarithms}
+%\typeout{Logarithm Functions}
 %\typeout{************************************************}
 
-\section{Logarithm}
+\section{Logarithm Functions}
 Another group of famous functions are logarithms.
 
 \begin{example}
@@ -335,35 +356,33 @@ The most famous logarithm function is
  $$ \mbox{\huge $y=\ln(x)=\log_{e}(x)$.}$$ 
 Here $e$ is the mathematical constant known as Euler's number. $e \approx 2.71828$.
 
-\begin{image}
+\begin{center}
 \begin{tikzpicture}
     \begin{axis}
         \addplot[samples=200,domain=0.01:8]{ln(x)};
     \end{axis}
 \end{tikzpicture}
-\end{image}
+\end{center}
 
-\begin{center}
-\(
-\begin{array}{ |c || c|  }
- \hline
- \multicolumn{2}{|c|}{\text{\normalfont Important Values of } y=ln(x)} \\
-\hline
+
+\[
+\begin{array}{ c  }
+% \hline
+  \text{Important Values of $y=\ln(x)$}\\
+ \begin{array}{|c|c|}
  \hline
  x & y\\
  \hline
-0&\text{\normalfont undefined}\\ 
-\frac{1}{e}&-1\\ [2ex]
+0&\text{undefined}\\[2ex]
+\frac{1}{e}&-1\\[2ex]
 1&0\\[2ex]
- e&1\\[2ex]
+e&1\\[2ex]
  \hline
+ \end{array}
 \end{array}
-\)
-\end{center}
+ \]
 
 \end{example}
-
-You may notice that the table of values for $y=\ln(x)$ and $y=e^x$ are similiar.  This is becase these two functions are interconnected.  We will explore this more later in the course.
 
 In general, we can talk about logarithmic functions of the form $y=\log_b(x)$ where $b$ is a positive number not equal to $1$.  You can play with changing the values of $b$ on the graph using Desmos and see how that changes the graph.  Pay particular attention to the difference between $b>1$ and $0<b<1$.
 
@@ -373,20 +392,20 @@ In general, we can talk about logarithmic functions of the form $y=\log_b(x)$ wh
 
 Notice that logarithms are neither even, odd, nor periodic. However, they are one-to-one, and therefore invertible. It turns out that the inverse of a logarithm is an exponential function, and vice versa! We summarize this information in the table below.
 
-\begin{center}
-$
-\begin{array}{|l|l|}
- \hline
- \multicolumn{2}{|c|}{\text{\normalfont Properties of the Logarithm Functions } y=\log_b(x)} \\
-\hline
+\[
+\begin{array}{ c  }
+% \hline
+  \text{\normalfont Properties of the Logarithm Functions } y=\log_b(x)\\
+ \begin{array}{|c|c|}
  \hline
 \text{Periodic?} & \text{No} \\ \hline
 \text{Odd?} & \text{No} \\ \hline
 \text{Even?} & \text{No} \\ \hline
 \text{One-to-one/invertible?} & \text{Yes} \\ \hline
+ \end{array}
 \end{array}
-$
-\end{center}
+ \]
+
 
 \newpage
 
@@ -395,15 +414,22 @@ $
 %\typeout{************************************************}
 
 \section{Sine}
-Another important function is the sine function, $$ \mbox{\huge $y=\sin(x)$.}$$ 
+Another important function is the sine function, 
+
+\begin{center}
+  \begin{tikzpicture}[scale=4,every node/.style={transform shape}]
+    \node at (0,0) {$y=\sin(x).$};
+  \end{tikzpicture}
+\end{center}
+
 
 
 This function comes from trigonometry. In the table below we will use another mathematical constant, $\pi$ (``pi" pronounced pie). $\pi \approx 3.14159$.
 
-\begin{image}
+\begin{center}
 \begin{tikzpicture}
     \begin{axis}[ymin=-2, ymax=2,
-		   %xtick={-6.28318, -4.7123889, -3.14159, -1.5708, 1.5708, 3.14159, 4.7123889, 6.28318},
+           %xtick={-6.28318, -4.7123889, -3.14159, -1.5708, 1.5708, 3.14159, 4.7123889, 6.28318},
     xticklabels={
         $-\frac{3\pi}{2}$, $-\pi$, $\frac{\pi}{2}$, $0$,
         $\frac{\pi}{2}$, $\pi$, $\frac{3\pi}{2}$, $2\pi$
@@ -411,52 +437,42 @@ This function comes from trigonometry. In the table below we will use another ma
         \addplot[samples=200]{sin(pi/4*deg(x))};
     \end{axis}
 \end{tikzpicture}
-\end{image}
+\end{center}
 
-\begin{center}
-\(
-\begin{array}{ |c || c|  }
- \hline
- \multicolumn{2}{|c|}{\text{\normalfont Important Values of } y=\sin(x)} \\
-\hline
+\[
+\begin{array}{ c }
+ \text{ Important Values of  $y=\sin(x)$}\\
+\begin{array}{|c|c|}
  \hline
  x & y\\
  \hline
-
- -\pi&0\\
-
+ -\pi&0\\[2ex]
  -\frac{\pi}{2}&-1\\[2ex]
-
- 0&0\\
-
+ 0&0\\[2ex]
  \frac{\pi}{2}&1\\[2ex]
-
- \pi&0\\
-
+ \pi&0\\[2ex]
 \frac{3\pi}{2}&-1\\[2ex]
-
- 2 \pi&0\\
+ 2 \pi&0\\[2ex]
 \hline
 \end{array}
-\)
-\end{center}
+\end{array}
+\]
+
 
 As mentioned earlier, the sine function is odd and periodic with period $2\pi$. Since it is periodic, however, it cannot be one-to-one, since its values repeat. We summarize this information in the table below.
 
-\begin{center}
-$
-\begin{array}{|l|l|}
- \hline
- \multicolumn{2}{|c|}{\text{\normalfont Properties of the Sine Function } y=\sin(x)} \\
-\hline
+\[
+\begin{array}{ c }
+ \text{\normalfont Properties of the Sine Function } y=\sin(x) \\
+\begin{array}{|c|c|}
  \hline
 \text{Periodic?} & \text{Yes, with period }2\pi \\ \hline
 \text{Odd?} & \text{Yes} \\ \hline
 \text{Even?} & \text{No} \\ \hline
 \text{One-to-one/invertible?} & \text{No} \\ \hline
 \end{array}
-$
-\end{center}
+\end{array}
+\]
 
 In general, we can consider $y=a\sin(bx)$.  You can play with changing the values of $a$ and $b$ on the graph using Desmos and see how that changes the graph.  
 
@@ -473,12 +489,18 @@ In general, we can consider $y=a\sin(bx)$.  You can play with changing the value
 %\typeout{************************************************}
 
 \section{Cosine}
-A function introduced in Section 3-2 is the cosine function, $$ \mbox{\huge $y=\cos(x)$.}$$ 
+A function introduced in Section 3-2 is the cosine function, 
+
+\begin{center}
+  \begin{tikzpicture}[scale=4,every node/.style={transform shape}]
+    \node at (0,0) {$y=\cos(x).$};
+  \end{tikzpicture}
+\end{center}
 
 
 As with sine, the cosine function comes from trigonometry. In the table below we will again use $\pi$.
 
-\begin{image}
+\begin{center}
 \begin{tikzpicture}
     \begin{axis}[ymin=-2, ymax=2,
 		   %xtick={-6.28318, -4.7123889, -3.14159, -1.5708, 1.5708, 3.14159, 4.7123889, 6.28318},
@@ -489,52 +511,41 @@ As with sine, the cosine function comes from trigonometry. In the table below we
         \addplot[samples=200]{cos(pi/4*deg(x))};
     \end{axis}
 \end{tikzpicture}
-\end{image}
+\end{center}
 
-\begin{center}
-\(
-\begin{array}{ |c || c|  }
- \hline
- \multicolumn{2}{|c|}{\text{\normalfont Important Values of } y=\cos(x)} \\
-\hline
+\[
+\begin{array}{ c }
+ \text{ Important Values of  $y=\cos(x)$}\\
+\begin{array}{|c|c|}
  \hline
  x & y\\
  \hline
-
- -\pi&-1\\
-
+ -\pi&-1\\[2ex]
  -\frac{\pi}{2}&0\\[2ex]
-
- 0&1\\
-
+ 0&1\\[2ex]
  \frac{\pi}{2}&0\\[2ex]
-
- \pi&-1\\
-
+ \pi&-1\\[2ex]
 \frac{3\pi}{2}&0\\[2ex]
-
- 2 \pi&1\\
+ 2 \pi&1\\[2ex]
 \hline
 \end{array}
-\)
-\end{center} 
+\end{array}
+\]
 
 As mentioned earlier, the cosine function is even and periodic with period $2\pi$. Since it is periodic, however, it cannot be one-to-one, since its values repeat. We summarize some information in the table below.
 
-\begin{center}
-$
-\begin{array}{|l|l|}
- \hline
- \multicolumn{2}{|c|}{\text{\normalfont Properties of the Cosine Function } y=\cos(x)} \\
-\hline
+\[
+\begin{array}{ c }
+ \text{\normalfont Properties of the Cosine Function } y=\cos(x) \\
+\begin{array}{|c|c|}
  \hline
 \text{Periodic?} & \text{Yes, with period }2\pi \\ \hline
 \text{Odd?} & \text{No} \\ \hline
 \text{Even?} & \text{Yes} \\ \hline
 \text{One-to-one/invertible?} & \text{No} \\ \hline
 \end{array}
-$
-\end{center}
+\end{array}
+\]
 
 In general, we can consider $y=a\cos(bx)$.  You can play with changing the values of $a$ and $b$ on the graph using Desmos and see how that changes the graph.  
 
