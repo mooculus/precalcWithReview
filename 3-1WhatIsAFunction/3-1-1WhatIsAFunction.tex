@@ -105,7 +105,61 @@ We now give some important definitions that allow us to talk about the inputs an
 
 It is important to note that the definition of a function includes its domain and range. A function needs a rule and a domain to precisely determine a set of points, the range.
 
+	\section{Interval Notation}
+Intervals (contiguous sections of the number line) play an important role in expressing the domains of many types of functions. As a standard way of writing these solutions, we rely on \emph{interval notation}. Interval notation
+	is a short-hand way of representing the intervals as they appear when sketched on a number line. As an example, consider $x \geq \dfrac{4}{3}$ which, when sketched on a number line, is given by
+	\begin{image}
+		\begin{tikzpicture}
+  			\begin{axis}[numberline,
+                		xmin=-0.5,xmax=1.5,
+                		ticks=none,
+                		after end axis/.code={},
+                		width=200pt, %shrunken, because 4 in a row    
+                		]
+        			\addplot[closedinfiniteinterval, *->, color=penColor] coordinates {(0,0) (1.5,0)};
+        			\addplot[mark=none] coordinates {(0,0)} node[below] {$\dfrac{4}{3}$};
+  			\end{axis}
+		\end{tikzpicture}
+	\end{image}
+	This sketch consists of a single interval with left-hand endpoint at $\dfrac{4}{3}$ and no right-hand endpoint (it keeps going). In interval notation, this would be written as $\left[ \dfrac{4}{3}, \infty \right)$. This is an example of a \emph{closed infinite interval}, 
+	``closed'' because the point at $\dfrac{4}{3}$ (the only endpoint) is included and ``infinite'' because it has infinite width. The solid dot at $\dfrac{4}{3}$ indicates that the point is included in the interval.
+	
+	There are four different types of infinite intervals, two are closed infinite intervals (which contain their respective endpoint) and the other two are open infinite intervals (which do not contain the endpoint). For $a$ a fixed real number, these are:
+	\begin{enumerate}
+		\item $[a, \infty)$ represents $x \geq a$,
+		\item $(-\infty, a]$ represents $x \leq a$,
+		\item $(a, \infty)$ represents $x > a$, and
+		\item $(-\infty, a)$ represents $x < a$.
+	\end{enumerate}
+	The notation indicates uses the square bracket to indicate that the endpoint is included and the round parenthesis to indicate that the endpoint is not included. 
 
+	Not every interval is infinite, however. Consider the interval in the following sketch
+	\begin{image}
+		\begin{tikzpicture}
+  			\begin{axis}[numberline,
+                		xmin=-0.5,xmax=1.5,
+                		ticks=none,
+                		after end axis/.code={},
+                		width=200pt, %shrunken, because 4 in a row    
+                		]
+			        \addplot[openclosedinterval, o-*, color=penColor] coordinates {(-0.5,0) (1,0)};
+        			\addplot[mark=none] coordinates {(1,0)} node[below] {$3$};
+        			\addplot[mark=none] coordinates {(-0.5,0)} node[below] {$-2$};  			
+			\end{axis}
+		\end{tikzpicture}
+	\end{image}
+	which consists of all $x$ with $-2 < x \leq 3$. It is not an infinite interval, having endpoints at $-2$ and $3$. The endpoint at $-2$ is not included, but the endpoint at $3$ is included. In interval notation this would be written as $(-2, 3]$. As with the infinite intervals,
+	the square bracket indicates that the right-hand endpoint is included and the round parenthesis endicates that the left-hand endpoint is not included. (This is an example of a ``half-open interval''.)
+
+	For a bounded intervals (ones that are not infinite), there are also four possibilities. For $a$ and $b$ both fixed real numbers, these are:
+	\begin{enumerate}
+		\item $[a, b]$ represents $a \leq x \leq b$,
+		\item $[a, b)$ represents $a \leq x < b$,
+		\item $(a, b]$ represents $a < x \leq b$ and
+		\item $(a, b)$ represents $a < x < b$.
+	\end{enumerate}
+	Practically, this amounts to writing the left-hand endpoint, the right-hand endpoint, then indicating which endpoints are included in the interval. When neither endpoint is included, $(a,b)$ can be mistaken for a point on a graph. You will need to use the context
+	to know which is meant.
 
 %\section{Representations of Functions}
 %While the formal definition of a function is a set of ordered pairs, there are many ways that we represent functions when studying them.  Each representation has advantages and disadvantages and being able to change between different representations of the same function is an important skill.  Let's look at some different types of representations.
