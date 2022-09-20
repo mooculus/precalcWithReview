@@ -39,11 +39,11 @@ $(a, b)$ represents the values of $x$ such that $a < x < b$.  We call this the \
 Notice that the major difference between these intervals is that $x=a$ and $x=b$ are included in the closed interval but not in the open interval.
 \end{definition}
 
-For a function $s$ that tells the location of a moving object along a straight path at time $t$, we define the average rate of change of $s$ on the interval $[a,b]$ to be the quantity%
+For a function $s$ that tells the location of a moving object along a straight path at time $t$, we define the average rate of change of $s$ between $(a,s(a))$ and $(b,s(b))$ to be the quantity%
 \begin{equation*}
 \av_{[a,b]} = \frac{s(b)-s(a)}{b-a}\text{.}
 \end{equation*}
-\index{average rate of change!of position} Note particularly that the average rate of change of $s$ on $[a,b]$ is measuring the \emph{change in position} divided by the \emph{change in time}.%
+\index{average rate of change!of position} Note particularly that the average rate of change of $s$ between $(a,s(a))$ and $(b,s(b))$ is measuring the \emph{change in position} divided by the \emph{change in time}.%
 
 \begin{exploration}
 Let the height function for a ball tossed vertically be given by $s(t) = 64 - 16(t-1)^2$, where $t$ is measured in seconds and $s$ is measured in feet above the ground.
@@ -76,7 +76,7 @@ In the context of a function that measures height or position of a moving object
 While the average rate of change of a position function tells us the moving object's average velocity, in other contexts, the average rate of change of a function can be similarly defined and has a related interpretation.  We make the following formal definition.
 
 \begin{definition}
-For a function $f$ defined on an interval $[a,b]$, the \dfn{average rate of change of $f$ on $[a,b]$} is the quantity%
+For a function $f$ defined on an interval $[a,b]$, the \dfn{average rate of change of $f$ between $(a,f(a))$ and $(b,f(b))$} is the quantity%
 \begin{equation*}
 \av_{[a,b]} = \frac{f(b) - f(a)}{b-a}\text{.}
 \end{equation*}
@@ -93,7 +93,7 @@ In every situation, the units on the average rate of change help us interpret it
 \end{callout}
 
 \begin{exploration}
-According to the US census, the populations of Kent and Ottawa Counties (Grand Rapids is in Kent, Allenale in Ottawa) from 1960 to 2010 measured in $10$-year intervals are given in the following tables.
+According to the US census, the populations of Kent and Ottawa Counties (Grand Rapids is in Kent, Allendale in Ottawa) from 1960 to 2010 measured in $10$-year intervals are given in the following tables.
 
 \begin{center}
 
@@ -130,11 +130,11 @@ Let $K(Y)$ represent the population of Kent County in year $Y$ and $W(Y)$ the po
 
 The average rate of change of a function on an interval gives us an excellent way to describe how the function behaves, on average.  For instance, if we compute $\av_{[1970,2000]}$ for Kent County, we find that%
 \begin{equation*}
-\av_{[1970,2000]} = \frac{573,336 - 411,044}{30} = 5409.73\text{,}
+\av_{[1970,2000]} = \frac{573,336 - 411,044}{30} \approx 5409.73\text{,} \calcHW
 \end{equation*}
 which tells us that in an average year from 1970 to 2000, the population of Kent County increased by about $5410$ people.  Said differently, we could also say that from 1970 to 2000, Kent County was growing at an average rate of $5410$ people per year.  These ideas also afford the opportunity to make comparisons over time.  Since%
 \begin{equation*}
-\av_{[1990,2000]} = \frac{573,336 - 500,631}{30} = 7270.5\text{,}
+\av_{[1990,2000]} = \frac{573,336 - 500,631}{30} = 7270.5\text{,} \calcHW
 \end{equation*}
 we can not only say that the county's population increased by about $7270$ in an average year between 1990 and 2000, but also that the population was growing faster from 1990 to 2000 than it did from 1970 to 2000.%
 
@@ -161,6 +161,7 @@ Let $f$ be a function defined on an interval $(a,b)$ (that is, on the set of all
 Similarly, we say that $f$ is \dfn{decreasing on $(a,b)$} provided that the function is always falling as we move from left to right.  That is, for any $x$ and $y$ in $(a,b)$,  if $x < y$, then $f(x) > f(y)$.%
 \end{definition}
 
+If a function is increasing, its average rate of change will be positive. If a function is decreasing, its average rate of change will be negative. However the reverse doesn't necessarily hold true.
 If we compute the average rate of change of a function on an interval, we can decide if the function is increasing or decreasing \emph{on average} on the interval, but it takes more work\footnote{Calculus offers one way to justify that a function is always increasing or always decreasing on an interval.\label{fn-7}} to decide if the function is increasing or decreasing \emph{always} on the interval.
 
 \begin{exploration}

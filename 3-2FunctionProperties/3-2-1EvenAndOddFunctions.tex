@@ -257,11 +257,11 @@ We'll also discuss the important concept of inverse functions, which can provide
 
 \section{Odd and even functions}
 
-Consider the two functions, $g(x) = x$ and $h(x) = x^2$, whose graphs are shown below.
+Consider the two functions, $g(x) = x^3$ and $h(x) = x^2$, whose graphs are shown below.
 \begin{image}
 \begin{tikzpicture}
-    \begin{axis}[title={$g(x) = x$}]
-        \addplot[smooth]{x} node{$g(x) = x$};
+    \begin{axis}[title={$g(x) = x^3$}]
+        \addplot[smooth]{x^3} node{$g(x) = x^3$};
     \end{axis}
 \end{tikzpicture}
 
@@ -274,13 +274,22 @@ Consider the two functions, $g(x) = x$ and $h(x) = x^2$, whose graphs are shown 
 
 Note that the graph of $g$ seems to be symmetric about the origin, meaning that when we rotate the graph a half-turn, we get the same graph. Also, the graph of $h$ seems to be symmetric about the $y$-axis, meaning that when we flip the graph across the $y$-axis, we get the same graph. 
 
-Let's first consider the case of $g$. To actually prove the symmetry about the origin analytically, we assume $(x,y)$ is a generic point on the graph of $g$. That is, we assume  $y = x$.  The point symmetric to $(x,y)$ about the origin is $(-x,-y)$.  To show the graph is symmetric about the origin, we need to show that $(-x,-y)$ is on the graph whenever $(x,y)$ is.  In other words, we need to show $(-x,-y)$ satisfies the equation $y = x$ whenever $(x,y)$ does.  Substituting $(-x, -y)$ into the equation gives
+Let's first consider the case of $g$ by looking at a few test points. 
+
+
 \begin{align*}
--y &\stackrel{?}{=} -x \\
-y &\stackrel{\checkmark}{=} x.
+g(2) & = (2)^3 = 8\\
+g(-2) & = (-2)^3 = -8\\
+g(3) & = (3)^3 = 27\\ 
+g(-3) & = (-3)^3 = -27
 \end{align*}
 
-Since we are assuming the original equation $y = x$ is true, we have shown that $(-x, -y)$ satisfies the equation (since it leads to a true result) and hence, is on the graph of $g$. This shows that $g$ is symmetric about the origin.
+We see that $(2,8)$, $(-2,8)$, $(3,27)$, and $(-3,-27)$ are points on the graph which indicates $g(x)$ is an odd function. We can check this for all point, showing that $(-x,-y)$ is on the graph whenever $(x,y)$ is.  In other words, we need to show $(-x,-y)$ satisfies the equation $y = x^3$ whenever $(x,y)$ does.  Substituting $(-x, -y)$ into the equation gives
+
+
+$$g(-x) = (-x)^3= -x\cdot -x \cdot -x = -x^3 = -g(x)$$
+
+ This shows that $g$ is an odd function.
 
 
 
@@ -296,9 +305,15 @@ Notice that to test an equation's graph for symmetry about the origin, we replac
 
 \begin{definition}
 
-A function $f$ is\dfn{even} if $f(-x) = f(x)$ for all $x$ in the domain of $f$.
+A function $f$ is \dfn{even} if $f(-x) = f(x)$ for all $x$ in the domain of $f$. That is, if $(x,y)$ is a point of $f$, so is $(-x,y)$.
 
-A function $f$ is \dfn{odd} if $f(-x) = -f(x)$ for all $x$ in the domain of $f$.
+
+
+\end{definition}
+
+\begin{definition}
+
+A function $f$ is \dfn{odd} if $f(-x) = -f(x)$ for all $x$ in the domain of $f$. That is, if $(x,y)$ is a point of $f$, so is $(-x,-y)$.
 
 \end{definition}
 
@@ -413,6 +428,9 @@ Visualize what the full graph looks like, then click the arrow to compare with t
 
 \begin{explanation}
 
+To sketch our graph, we’ll use the following fact: If a function is \textbf{even} and the point $(x_1,y_1)$ is on the function graph, then the point $(-x_1,y_1)$ is also on the function graph.
+First, let’s look at the linear portion of the graph. This is a line with a hole at $(6,-2)$ and an $x$-intercept at $(7,0)$. This tells us that we have a hole at $(-6,-2)$ and an $x$-intercept at $(-7,0)$. We then draw a line from $(-6,-2)$, through the point $(-7,0)$. Next, we see a point at approximately $(6,2.25)$ so we plot the point $(-6,2.25)$. There’s a vertical asymptote at $x=3$ so we’ll sketch the vertical asymptote $x=-3$. Last, we’ll sketch the function from $(6,2.25)$, curving up toward the vertical asymptote $x=-3$.
+
 \begin{image}
 \begin{tikzpicture}
      \begin{axis}[
@@ -499,6 +517,8 @@ Visualize what the full graph looks like, then click the arrow to compare with t
 \begin{expandable}
 
 \begin{explanation}
+
+If a function is \textbf{odd} and the point $(x_1,y_1)$ is on the function graph, then the point $(-x_1,-y_1)$ is also on the function graph. First, let’s look at the linear portion of the graph. This is a line with a hole at $(6,-2)$ and an $x$-intercept at $(7,0)$. This tells us that we have a hole at $(-6,2)$ and an $x$-intercept at $(-7,0)$. We then draw a line from $(-6,2)$, through the point $(-7,0)$. Next, we see a point at approximately $(6,2.25)$ so we plot the point $(-6,-2.25)$. There’s a vertical asymptote at $x=3$ so we’ll sketch the vertical asymptote $x=-3$. Last, we’ll sketch the function from $(-6,-2.25)$, curving up toward the vertical asymptote $x=-3$.
 
 \begin{image}
 \begin{tikzpicture}
