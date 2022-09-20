@@ -83,7 +83,29 @@ The formal definition of a function will establish a function as a special type 
 A \dfn{function} is a collection of ordered pairs $(x,y)$ such that any particular value of $x$ is paired with at most one value for $y$. That is, a relation in which each $x$-coordinate is matched with only one $y$-coordinate is said to describe $y$ as a \dfn{function} of $x$.
 \end{definition}
 
-How is this definition consistent with the informal, which describes a function as a process? Well, if you have a collection of ordered pairs $(x,y)$, you can choose to view the left number as an input, and the right value as the output. If the function's name is $f$ and you want to find $f(x)$  for a particular number $x$, look in the collection of ordered pairs to see if $x$ appears among the first coordinates. If it does, then $f(x)$ is the (unique) $y$-value it was paired with. If it does not, then that $x$ is just not in the domain of $f$, because you have no way to determine what $f(x)$ would be.
+How is this definition consistent with the informal definition, which describes a function as a process? Well, if you have a collection of ordered pairs $(x,y)$, you can choose to view the left number as an input, and the right value as the output. For a function $f$, $f(x)$ is defined as the unique $y$ value that $x$ is paired with. If $x$ does not appear among the first coordinates of the ordered pairs, then $x$ is not a possible input to $f$, since there is no way to determine $f(x)$. 
+
+%If the function's name is $f$ and you want to find $f(x)$  for a particular number $x$, look in the collection of ordered pairs to see if $x$ appears among the first coordinates. If it does, then $f(x)$ is the (unique) $y$-value it was paired with. If it does not, then that $x$ is just not a possible input to $f$, because you have no way to determine what $f(x)$ would be.
+
+\section{Domain and Range}
+We now give some important definitions that allow us to talk about the inputs and outputs of functions. 
+
+\begin{definition}
+		Let $f$ be a function from $A$ to $B$. The set $A$ of possible inputs to $f$ is called the \dfn{domain} of $f$. The set $B$ is called the \dfn{codomain} of $f$.
+	\end{definition}
+
+	Sometimes, when we are given a function as a formula, we are not told the domain. In these circumstances we use the \emph{implied domain}.
+	\begin{definition}
+		Let $f$ be a function whose inputs are real numbers. The \dfn{implied domain} of $f$ is the collection of all real numbers $x$ for which $f(x)$ is a real number.
+	\end{definition}
+
+	\begin{definition}
+		Let $f$ be a function from $A$ to $B$. The \dfn{range} of $f$ is the collection of the outputs of $f$.
+	\end{definition}
+
+It is important to note that the definition of a function includes its domain and range. A function needs a rule and a domain to precisely determine a set of points, the range.
+
+
 
 %\section{Representations of Functions}
 %While the formal definition of a function is a set of ordered pairs, there are many ways that we represent functions when studying them.  Each representation has advantages and disadvantages and being able to change between different representations of the same function is an important skill.  Let's look at some different types of representations.
