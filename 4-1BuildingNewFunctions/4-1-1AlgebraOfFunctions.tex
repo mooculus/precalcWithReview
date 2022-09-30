@@ -53,7 +53,7 @@
 	In most mathematics up until calculus, the main object we study is \emph{numbers}. We ask questions such as
 	\begin{itemize}
 		\item ``What number(s) form solutions to the equation $x^2 - 4x - 5 = 0$?''\\
-		\item ``What number is the slope of the line $3x - 4y = 7$?''\\
+		\item ``What number is the slope of the line represented by $3x - 4y = 7$?''\\
 		\item ``What number is generated as output by the function $f(x) = \sqrt{x^2 + 1}$ by the input $x = -2$?''
 	\end{itemize}
 	
@@ -136,14 +136,14 @@
 			\begin{enumerate}
 				\item We know that $(f+g)(2) = f(2)+g(2)$. From the tables above $f(2) = 0$ and $g(2)=9$, so $(f+g)(2)=0+9 = 9$.
 				
-				\item Since $f(4)=3$ and $g(4)=4$, we know $(f-g)(4)=3-4 = -1$.
+				\item Since $f(4)=3$ and $g(4)=4$, we know $(f-g)(4)=f(4) - g(4) = 3-4 = -1$.
 
 				\item $(f\cdot g)(2) = f(2)\cdot g(2) = 0 \cdot 9 = 0$.
 
 				\item $\left( \frac{f}{g}\right)(4) = \frac{f(4)}{g(4)}=\frac{3}{4}$.
 				
 				\item The value of $(f+g)(3)$ would be given by $f(3)+g(3)$. we are given the value of $g(3)$ in the table above, but there is no listed
-					value for $f(3)$. That means $f(3)$ is undefined, since $3$ is not a valid input. $(f+g)(3)$ is undefined.
+					value for $f(3)$. That means $f(3)$ is undefined, since $3$ is not a valid input. Therefore, $(f+g)(3)$ is undefined.
 			\end{enumerate}
 		\end{explanation}
 	\end{example}	
@@ -256,6 +256,10 @@
 		\end{explanation}	
 	\end{example}
 
+	\begin{remark}
+	The only way a product of two real numbers can  be zero is if at least one of the factors is itself zero. That is, if $ab = 0$ for two numbers $a$ and $b$, then $a= 0$ or $b = 0$. This technique does not work for numbers other than zero. 
+	\end{remark}
+
 	Consider the functions $f(x) = 2x$ and $g(x) = x$. These are functions whose graphs are straight lines with slopes $2$ and $1$ respectively.
   	\begin{image}
 		\begin{tikzpicture}
@@ -291,15 +295,15 @@
 								
         			\addplot[soliddot, color=penColor] coordinates {(2,4)};
          			\addplot[soliddot, color=penColor2] coordinates {(2,2)};
-         			\addplot[soliddot, color=penColor3] coordinates {(2,6)};
+         			\addplot[soliddot, color=penColor3] coordinates {(2,6)} node[above]{$(2.6)$};
 
         			\addplot[soliddot, color=penColor] coordinates {(1,2)};
          			\addplot[soliddot, color=penColor2] coordinates {(1,1)};
-         			\addplot[soliddot, color=penColor3] coordinates {(1,3)};
+         			\addplot[soliddot, color=penColor3] coordinates {(1,3)} node[above]{$(1, 3)$};
 	
 	       			\addplot[soliddot, color=penColor] coordinates {(3,6)};
          			\addplot[soliddot, color=penColor2] coordinates {(3,3)};
-         			\addplot[soliddot, color=penColor3] coordinates {(3,9)};
+         			\addplot[soliddot, color=penColor3] coordinates {(3,9)} node[above]{$(3,9)$};
 			\end{axis}
 		\end{tikzpicture}
 	\end{image}

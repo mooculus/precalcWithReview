@@ -452,16 +452,46 @@ Intervals (contiguous sections of the number line) play an important role in exp
 %\end{explanation}
 %\end{example}
 %
-%\section{Intercepts}
-%Zero is a very important number, and as we will see later, knowing where a function's $x$- or $y$-value equals zero can be powerful information. 
-%
-%\begin{definition}[Intercepts]
-%Say $f$ is a function. 
-%
-%An \dfn{$x$-intercept} of $f$ is a point $(x,0)$ such that $f(x) = 0$. That is, a point in which the graph of the function touches the $x$-axis. 
-%
-%The \dfn{$y$-intercept} of $f$ is a point $(0,y)$ such that $f(0) = y$. That is, a point in which the graph of the function touches the $y$-axis. Unlike $x$-intercepts, there can be only one $y$-intercept for each function.
-%\end{definition}
+\section{Intercepts}
+Zero is a very important number, and as we will see later, knowing where a function's $x$- or $y$-value equals zero can be powerful information. 
+
+\begin{definition}[Intercepts]
+	Suppose $f$ is a function and set $y=f(x)$.
+
+	An \dfn{$x$-intercept} is a point $(a,0)$ such that $f(a) = 0$. That is, it's a 
+	point where the graph of the function intersects the $x$-axis. 
+
+	The \dfn{$y$-intercept} is a point $(0,b)$ such that $f(0) = b$. That is, it's a 
+	point in which the graph of the function intersects the $y$-axis. Unlike 
+	$x$-intercepts, a function can only have one $y$-intercept.
+\end{definition}
+
+
+\begin{example}
+	Find the $x$- and $y$-intercepts of the function $f$ whose graph is given below.
+	\begin{image}
+		\begin{tikzpicture}
+			\begin{axis}[
+				xmin=-1.5, xmax=5.5, ymin=-2.5,ymax=5.5,    
+				axis lines =middle, 
+				every axis y label/.style={at=(current axis.above origin),anchor=south},
+				every axis x label/.style={at=(current axis.right of origin),anchor=west},
+				xtick={-1,...,5}, ytick={-2,...,5},
+				grid=major, width=3.5in, grid style={dashed, gray!40} 
+				]
+				\addplot[color=blue, very thick, smooth, domain=-1.5:5.5]{(x-2)^2-1} node[pos=0.65, above left]{$\mathbf{\LARGE{y=f(x)}}$};
+				\draw[fill=red] (axis cs:2,-1) circle [color=red,radius=3pt] node[red, below] {$(2, -1)$};				
+				\draw[fill=red] (axis cs:1,0) circle [color=red,radius=3pt] node[red, above right] {$(1,0)$};				
+				\draw[fill=red] (axis cs:3,0) circle [color=red,radius=3pt] node[red, below right] {$(3,0)$};
+				\draw[fill=red] (axis cs:0,3) circle [color=red,radius=3pt] node[red, right] {$(0,3)$};
+			\end{axis}
+		\end{tikzpicture}	
+	\end{image}
+	\begin{explanation}
+		The graph intersects the $x$-axis at the points $(1,0)$ and $(3,0)$, and intersects the $y$-axis at the point $(0,3)$.
+		That means the $x$-intercepts are at $(1,0)$ and $(3, 0)$, and the $y$-intercept is at $(0, 3)$.
+	\end{explanation}
+\end{example}
 
 
 
@@ -469,20 +499,25 @@ Intervals (contiguous sections of the number line) play an important role in exp
 %\typeout{Summary}
 %\typeout{************************************************}
 
-\begin{summary}\begin{itemize}
-\item Informally, a function is a process that may be applied to a collection of input values to produce a corresponding collection of output values in such a way that the process produces one and only one output value for any single input value.
-\item Formally, a function  is a collection of ordered pairs $(x,y)$ such that any particular value of $x$ is paired with at most one value for $y$. That is, a relation in which each $x$-coordinate is matched with only one $y$-coordinate is said to describe $y$ as a \dfn{function} of $x$.
-\item Functions can be used to model many phenomena in the real world, as long as for a given input there is one predictable output.
-%\item Functions can be represented in many ways including as:
-%\begin{itemize}
-%\item sets of ordered pairs
-%\item tables
-%\item arrow diagrams
-%\item graphs
-%\item formula
-%\item domain and range
-%\end{itemize}
-\end{itemize}\end{summary}
+\begin{summary}
+	\begin{itemize}
+		\item Informally, a function is a process that may be applied to a collection of input values to produce a corresponding collection 
+			of output values in such a way that the process produces one and only one output value for any single input value.
+		\item Formally, a function  is a collection of ordered pairs $(x,y)$ such that any particular value of $x$ is paired with at most one 
+			value for $y$. That is, a relation in which each $x$-coordinate is matched with only one $y$-coordinate is said to describe 
+			$y$ as a \dfn{function} of $x$.
+		\item Functions can be used to model many phenomena in the real world, as long as for a given input there is one predictable output.
+	%\item Functions can be represented in many ways including as:
+	%\begin{itemize}
+	%\item sets of ordered pairs
+	%\item tables
+	%\item arrow diagrams
+	%\item graphs
+	%\item formula
+	%\item domain and range
+	%\end{itemize}
+	\end{itemize}
+\end{summary}
 
 
 
