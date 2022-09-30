@@ -19,7 +19,7 @@ We explore quadratic functions.
       The height of the rocket can be modeled by the equation $y=-16t^2+64t$,
       where $t$ is how many seconds had passed since the launch.
       To see the shape of the graph made by this equation,
-      we make a table of values and plot the points.\\
+      we make a table of values, plot the points, and connect them with a curve.\\
 $$
 \begin{array}{ccc}
                 t & -16t^2+64t & Point\\
@@ -51,48 +51,23 @@ $$
 
  A curve with the shape that we see in the above figure
       is called a \textbf{parabola}.
-      Notice the symmetry in figure,
-      how the $y$-values in rows above the middle row match those below the middle row.
+      Notice the symmetry in the table,
+      how the $y$-values in rows $t=0$ and $t=4$ match as well as rows $t=1$ and $t=3$? 
       Also notice the symmetry in the shape of the graph,
       how its left side is a mirror image of its right side.
 
- The first feature that we will talk about is the
-      direction that a parabola opens.
-      All parabolas open either upward or downward.
-      This parabola in the rocket example opens downward because $a$ is negative.
-      That means that for large values of $t$, the $at^2$ term will be large and negative,
-      and the resulting $y$-value will be low on the $y$-axis.
-      So the negative leading coefficient causes the arms of the parabola to point downward.
-    
-
- Here are some more quadratic graphs so we can see which way they open.
-\begin{image}
-\begin{tikzpicture}
-                    \begin{axis}[]
-                        \addplot+[domain=-1.45:3.45] {x^2-2*x+2};
-                        \end{axis}
-                \end{tikzpicture}
-\end{image}
-\begin{image}
-\begin{tikzpicture}
-                    \begin{axis}[]
-                        \addplot+[domain=-6.29:4.29] {-1/4*x^2-1/2*x-1/4};
-                    \end{axis}
-                \end{tikzpicture}
-\end{image}
-\begin{image}
-\begin{tikzpicture}
-                    \begin{axis}[]
-                        \addplot+[domain=1.12:4.87] {3*x^2-18*x+23.5};
-                    \end{axis}
-                \end{tikzpicture}
-\end{image}
   The graph of a quadratic equation $y=ax^2+bx+c$ is a parabola which opens upward or downward
         according to the sign of the leading coefficient $a$.
         If the leading coefficient is positive,
         the parabola opens upward.
         If the leading coefficient is negative,
         the parabola opens downward.
+
+You can play with changing the value of $a$ on the graph using Desmos and see how that changes the parabola.  
+
+\begin{center}  
+\desmos{nmlghfrws9}{800}{600}  
+\end{center}
 
  The \textbf{vertex}
       of a parabola is the highest or lowest point on the graph,
@@ -107,27 +82,31 @@ $$
       We write the axis of symmetry as an equation of a vertical line so it always starts with ``$x=$''.
       In Example 1, the equation for the axis of symmetry is $x=2$.
   
+\begin{definition}[Intercepts]
+	Suppose $f$ is a function and set $y=f(x)$.
 
-    
-      The \textbf{vertical intercept} is the point where the parabola crosses the vertical axis.
-      The vertical intercept is the $y$-intercept if the vertical axis is labeled $y$.
-      In Example 1,
-      the point $(\firsthighlight{0},\secondhighlight{0})$ is the starting point of the rocket,
+	An \dfn{$x$-intercept} is a point $(a,0)$ such that $f(a) = 0$. That is, it's a 
+	point where the graph of the function intersects the $x$-axis. 
+
+	The \dfn{$y$-intercept} is a point $(0,b)$ such that $f(0) = b$. That is, it's a 
+	point in which the graph of the function intersects the $y$-axis. Unlike 
+	$x$-intercepts, a function can only have one $y$-intercept.
+\end{definition}
+      It is possible for a quadratic graph to have zero, one, or two $x$-intercepts.
+
+      In Example 1, first note that this is a function $y=f(t)$. We will have $y$-intercepts but rather than having $x$-intercepts, these will be $t$-intercepts due to our use of the variable $t$ and not $x$.
+      The point $(\firsthighlight{0},\secondhighlight{0})$ is the starting point of the rocket,
       and it is where the graph crosses the $y$-axis,
-      so it is the vertical intercept.
+      so it is the $y$-intercept.
       The $y$-value of $\secondhighlight{0}$ means the rocket was on the ground
       when the $t$-value was $\firsthighlight{0}$, which was when the rocket launched.
-
-      The \textbf{horizontal intercept(s)}
-      are the points where the parabola crosses the horizontal axis.
-      They are the $x$-intercepts if the horizontal axis is labeled $x$.
-      The point $(0,0)$ on the path of the rocket is also a horizontal intercept.
+      The point $(0,0)$ on the path of the rocket is also a $t$-intercept.
       The $t$-value of $0$ indicates the time when the rocket was launched from the ground.
-      There is another horizontal intercept at the point $(4,0)$,
+      There is another $t$-intercept at the point $(4,0)$,
       which means the rocket came back to hit the ground after $4$ seconds.
    
-      It is possible for a quadratic graph to have zero, one, or two horizontal intercepts.
-      The figures below show an example of each.
+
+
 
 
 
@@ -179,6 +158,7 @@ x & f(x) \\
                     \addplot [soliddot, color=fourthcolor] coordinates {(-3,3)} node[above left] {$(-3,3)$};
                     \addplot [soliddot, color=fifthcolor] coordinates {(-2.581,0)} node[above left] {$(-2.6,0)$};
                     \addplot [soliddot, color=fifthcolor] coordinates {(0.581,0)} node[above right] {$(0.6,0)$};
+                    \addplot [soliddot, color=fourthcolor] coordinates {(-2,-3)} node[below left] {$(-2,-3)$};
                 \end{axis}
             \end{tikzpicture}
    \end{image}
@@ -193,135 +173,135 @@ x & f(x) \\
 \end{explanation}
 \end{example}
 
-A polynomal is a particular type of algebraic expression
-\begin{enumerate}
-\item       A company's sales, $s$
-            (in millions of dollars),
-            can be modeled by $2.2t+5.8$,
-            where $t$ stands for the number of years since $2010$.
-\item     The height of an object from the ground, $h$
-            (in feet),
-            launched upward from the top of a building can be modeled by $-16t^2+32t+300$,
-            where $t$ represents the amount of time
-            (in seconds)
-            since the launch.
- \item The volume of an open-top box with a square base, $V$
-            (in cubic inches),
-            can be calculated by $30s^2-\frac{1}{2}s^2$,
-            where $s$ stands for the length of the square base,
-            and the box sides have to be cut from a certain square piece of metal.
-\end{enumerate}
-\section{Polynomial Vocabulary}
-       A polynomial is an expression with one or more
-          terms summed together.
-          A term of a polynomial must either be a plain number
-          or the product of a number and one or more variables raised to natural number powers.
-          The expression $0$ is also considered a polynomial,
-          with zero terms.
-\begin{example}
-Here are some examples of polynomials
-\begin{enumerate}
-   \item  Here are three polynomials: 
-$x^2-5x+2$, $t^3-1$, $7y$.
-        \item The expression $3x^4y^3+7xy^2-12xy$ is an example of a polynomial in more than one variable.
-    \item   The polynomial $x^2-5x+3$ has three terms:
-              $x^2$, $-5x$, and $3$.
-\item The polynomial $ 3x^4+7xy^2-12xy$ also has three terms.
-\item The polynomial $t^3-1$ has two terms.
-\end{enumerate}
-\end{example}
-\begin{definition}
-The coefficient
-          (or numerical coefficient)
-          of a term in a polynomial is the numerical factor in the term.
-\end{definition}
-\begin{example}
-\begin{enumerate}
-   \item  The coefficient of the term
-              $\frac{4}{3}x^6$ is $\frac{4}{3}$.
-\item   The coefficient of the second term of the polynomial $x^2-5x+3$ is $-5$.
-       \item The coefficient of the term
-              $\frac{y^7}{4}$ is $\frac{1}{4}$, because we can rewrite $\frac{y^7}{4}$ as $\frac{1}{4}y^7$.
-\end{enumerate}
-\end{example}
- A term in a polynomial with no variable factor is called a
-          constant term.
-\begin{example}
-   The constant term of the polynomial $x^2-5x+3$ is $3$.
-\end{example}
-\begin{definition}
-      The degree of a term is one way to measure how large it is.
-          When a term only has one variable,
-          its degree is the exponent on that variable.
-          When a term has more than one variable,
-          its degree is the sum of the exponents on the variables.
-          A nonzero constant term has degree $0$.
-\end{definition}
-\begin{example}
-  \begin{enumerate}
-  \item The degree of $5x^2$ is $2$.
-  \item The degree of $-\frac{4}{7}y^5$ is $5$.
-  \item     The degree of $-4x^2y^3$ is $5$.
-  \item  The degree of $17$ is $0$. Constant terms always have $0$ degree.
-  \end{enumerate}
-\end{example}
-
-\begin{definition}
-  The \dfn{degree} of a nonzero polynomial
-  is the greatest degree that appears amongst its terms
-\end{definition}
-\begin{remark}
-   To help us recognize a polynomial's degree,
-        the standard convention at this level is to write a polynomial's terms in order from highest degree to lowest degree.
-        When a polynomial is written in this order,
-        it is written in standard form.
-        For example,
-        it is standard practice to write $7-4x-x^2$ as
-        $-x^2-4x+7$ since $-x^2$ is the leading term.
-        By writing the polynomial in standard form,
-        we can look at the first term to determine both the polynomial's degree and leading term.
-\end{remark}
-
-%%%%%%%%%%
-\section{Adding and Subtracting Polynomials}
-        Bayani started a company that makes one product: one-gallon ketchup jugs for industrial kitchens.
-        The company's production expenses only come from two things:
-        supplies and labor.
-        The cost of supplies, $S$
-        (in thousands of dollars),
-        can be modeled by $S=0.05x^2+2x+30$,
-        where $x$ is number of thousands of jugs of ketchup produced.
-        The labor cost for his employees, $L$
-        (in thousands of dollars),
-        can be modeled by $0.1x^2+4x$,
-        where $x$ again represents the number of jugs they produce
-        (in thousands of jugs).
-        Find a model for the company's total production costs.
-
-%%%%%%%%%%
-\section{Evaluating Polynomial Expressions}
-
-      Recall that evaluating expressions involves replacing the variable(s) in an expression with specific numbers and calculating the result.
-      Here, we will look at evaluating polynomial expressions.
-
-\begin{example}
-Evaluate the expression 
-\begin{center}
-$-12y^3+4y^2-9y+2$ for $y=-5$ 
-\end{center}
-\begin{explanation}
-  We will replace $y$ with $-5$ and simplify the result:
-\begin{center}
-$
-\begin{array}{cl}
-   12y^3+4y^2-9y+2 & = -12(\substitute{-5})^3+4(\substitute{-5})^2-9(\substitute{-5})+2\\
-      & = -12(-125)+4(25)+45+2 \\
-        & = 1647  \\
-\end{array}
-$
-\end{center}
-\end{explanation}
-\end{example}
+%A polynomal is a particular type of algebraic expression
+%\begin{enumerate}
+%\item       A company's sales, $s$
+%            (in millions of dollars),
+%            can be modeled by $2.2t+5.8$,
+%            where $t$ stands for the number of years since $2010$.
+%\item     The height of an object from the ground, $h$
+%            (in feet),
+%            launched upward from the top of a building can be modeled by $-16t^2+32t+300$,
+%            where $t$ represents the amount of time
+%            (in seconds)
+%            since the launch.
+% \item The volume of an open-top box with a square base, $V$
+%            (in cubic inches),
+%            can be calculated by $30s^2-\frac{1}{2}s^2$,
+%            where $s$ stands for the length of the square base,
+%            and the box sides have to be cut from a certain square piece of metal.
+%\end{enumerate}
+%\section{Polynomial Vocabulary}
+%       A polynomial is an expression with one or more
+%          terms summed together.
+%          A term of a polynomial must either be a plain number
+%          or the product of a number and one or more variables raised to natural number powers.
+%          The expression $0$ is also considered a polynomial,
+%          with zero terms.
+%\begin{example}
+%Here are some examples of polynomials
+%\begin{enumerate}
+%   \item  Here are three polynomials: 
+%$x^2-5x+2$, $t^3-1$, $7y$.
+%        \item The expression $3x^4y^3+7xy^2-12xy$ is an example of a polynomial in more than one variable.
+%    \item   The polynomial $x^2-5x+3$ has three terms:
+%              $x^2$, $-5x$, and $3$.
+%\item The polynomial $ 3x^4+7xy^2-12xy$ also has three terms.
+%\item The polynomial $t^3-1$ has two terms.
+%\end{enumerate}
+%\end{example}
+%\begin{definition}
+%The coefficient
+%          (or numerical coefficient)
+%          of a term in a polynomial is the numerical factor in the term.
+%\end{definition}
+%\begin{example}
+%\begin{enumerate}
+%   \item  The coefficient of the term
+%              $\frac{4}{3}x^6$ is $\frac{4}{3}$.
+%\item   The coefficient of the second term of the polynomial $x^2-5x+3$ is $-5$.
+%       \item The coefficient of the term
+%              $\frac{y^7}{4}$ is $\frac{1}{4}$, because we can rewrite $\frac{y^7}{4}$ as $\frac{1}{4}y^7$.
+%\end{enumerate}
+%\end{example}
+% A term in a polynomial with no variable factor is called a
+%          constant term.
+%\begin{example}
+%   The constant term of the polynomial $x^2-5x+3$ is $3$.
+%\end{example}
+%\begin{definition}
+%      The degree of a term is one way to measure how large it is.
+%          When a term only has one variable,
+%          its degree is the exponent on that variable.
+%          When a term has more than one variable,
+%          its degree is the sum of the exponents on the variables.
+%          A nonzero constant term has degree $0$.
+%\end{definition}
+%\begin{example}
+%  \begin{enumerate}
+%  \item The degree of $5x^2$ is $2$.
+%  \item The degree of $-\frac{4}{7}y^5$ is $5$.
+%  \item     The degree of $-4x^2y^3$ is $5$.
+%  \item  The degree of $17$ is $0$. Constant terms always have $0$ degree.
+%  \end{enumerate}
+%\end{example}
+%
+%\begin{definition}
+%  The \dfn{degree} of a nonzero polynomial
+%  is the greatest degree that appears amongst its terms
+%\end{definition}
+%\begin{remark}
+%   To help us recognize a polynomial's degree,
+%        the standard convention at this level is to write a polynomial's terms in order from highest degree to lowest degree.
+%        When a polynomial is written in this order,
+%        it is written in standard form.
+%        For example,
+%        it is standard practice to write $7-4x-x^2$ as
+%        $-x^2-4x+7$ since $-x^2$ is the leading term.
+%        By writing the polynomial in standard form,
+%        we can look at the first term to determine both the polynomial's degree and leading term.
+%\end{remark}
+%
+%%%%%%%%%%%
+%\section{Adding and Subtracting Polynomials}
+%        Bayani started a company that makes one product: one-gallon ketchup jugs for industrial kitchens.
+%        The company's production expenses only come from two things:
+%        supplies and labor.
+%        The cost of supplies, $S$
+%        (in thousands of dollars),
+%        can be modeled by $S=0.05x^2+2x+30$,
+%        where $x$ is number of thousands of jugs of ketchup produced.
+%        The labor cost for his employees, $L$
+%        (in thousands of dollars),
+%        can be modeled by $0.1x^2+4x$,
+%        where $x$ again represents the number of jugs they produce
+%        (in thousands of jugs).
+%        Find a model for the company's total production costs.
+%
+%%%%%%%%%%%
+%\section{Evaluating Polynomial Expressions}
+%
+%      Recall that evaluating expressions involves replacing the variable(s) in an expression with specific numbers and calculating the result.
+%      Here, we will look at evaluating polynomial expressions.
+%
+%\begin{example}
+%Evaluate the expression 
+%\begin{center}
+%$-12y^3+4y^2-9y+2$ for $y=-5$ 
+%\end{center}
+%\begin{explanation}
+%  We will replace $y$ with $-5$ and simplify the result:
+%\begin{center}
+%$
+%\begin{array}{cl}
+%   12y^3+4y^2-9y+2 & = -12(\substitute{-5})^3+4(\substitute{-5})^2-9(\substitute{-5})+2\\
+%      & = -12(-125)+4(25)+45+2 \\
+%        & = 1647  \\
+%\end{array}
+%$
+%\end{center}
+%\end{explanation}
+%\end{example}
 
 % %\section{Exponent Rules}
 %   %%%%%%%%%%%%%%%%
