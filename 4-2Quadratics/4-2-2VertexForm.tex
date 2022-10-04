@@ -8,6 +8,7 @@
 \title{Vertex Form}
 
 \begin{document}
+\licenseY
 \begin{abstract}
 We explore the vertex form of a quadratic.
 \end{abstract}
@@ -17,47 +18,53 @@ We explore the vertex form of a quadratic.
 \section{The Vertex Form of a Quadratic}
 
       We have learned the standard form of a quadratic function's formula, which is $f(x)=ax^2+bx+c$.
-      we will learn another form called the vertex form.
+      But quadratic functions also have different forms, similar to linear functions. Here, we will learn another form for quadratic functions called the vertex form.
 \begin{callout} \textbf{\large{Vertex Form of a Quadratic Function}}
           A quadratic function whose graph has vertex at the point $(h,k)$ is given by
 $$
 f(x)=a(x-h)^2+k
 $$
 \end{callout}
-      Using graphing technology, consider the graphs of $f(x)=x^2-6x+7$ and $g(x)=(x-3)^2-2$ on the same axes.
+    Using graphing technology, consider the graphs of $f(x)=x^2-6x+7$ and $g(x)=(x-3)^2-2$ on the same axes.
 
-        We see only one parabola because these are two different forms of the same function.
-        Indeed, if we convert $g(x)$ into standard form:
+    We see only one parabola because these are two different forms of the same function.
+    Indeed, if we convert $g(x)$ into standard form:
 	\begin{align*}
 		g(x)&=(x-3)^2-2\\
 			&=(x^2-6x+9)-2\\
 			&=x^2-6x+7
 	\end{align*}
-        it is clear that $f$ and $g$ are the same function.
+    it is clear that $f$ and $g$ are the same function.
  
 
-       Graph of $f(x)=x^2-6x+7$ and $g(x)=(x-3)^2-2$
-       the graphs of the two parabolas overlap each other completely
+    Graph of $f(x)=x^2-6x+7$ 
+    \begin{image}
+    \begin{tikzpicture}
+        \begin{axis}[]
+            \addplot [firstcurve, domain=0:6] {x^2-6*x+7};
+            \addplot [soliddot, color=fourthcolor] coordinates {(3,-2)} node[below] {$(3,-2)$};
+        \end{axis}
+    \end{tikzpicture}
+    \end{image}
+    Graph of $g(x)=(x-3)^2-2$
+    \begin{image}
+        \begin{tikzpicture}
+            \begin{axis}[]
+                \addplot [secondcurve, domain=0:6] {(x-3)^2-2+0.1};
+                \addplot [soliddot, color=fourthcolor] coordinates {(3,-2)} node[below] {$(3,-2)$};
+            \end{axis}
+        \end{tikzpicture}
+    \end{image}
+    We see that the graphs of the two parabolas are completely identical.
 
-       \begin{image}
-\begin{tikzpicture}
-                \begin{axis}[]
-                    \addplot [firstcurve, domain=0:6] {x^2-6*x+7};
-                    \addplot [secondcurve, domain=0:6] {(x-3)^2-2+0.1};
-                    \addplot [soliddot, color=fourthcolor] coordinates {(3,-2)} node[below] {$(3,-2)$};
-                \end{axis}
-            \end{tikzpicture}
-       \end{image}
 
-
-
-      The formula given for $g$ is said to be in vertex form
-      because it allows us to read the vertex without doing any calculations.
-      The vertex of the parabola is $(3,-2)$.
-      We can see those numbers in $g(x)=(x-3)^2-2$.
-      The $x$-value is the solution to $(x-3)=0$,
-      and the $y$-value is the constant
-      added at the end.
+    The formula given for $g$ is said to be in vertex form
+    because it allows us to read the vertex without doing any calculations.
+    The vertex of the parabola is $(3,-2)$.
+    We can see those numbers in $g(x)=(x-3)^2-2$.
+    The $x$-value is the solution to $(x-3)=0$,
+    and the $y$-value is the constant
+    added at the end.
 
 
 
@@ -119,7 +126,228 @@ $$
       Note that these coordinates create the vertex at $(2,1)$.
       Now we can define the vertex form of a quadratic function.
 
+\section{Completing the square}
 
+In order to convert a quadratic from standard form to vertex form, we will use a technique called completing the square. First, we'll look at how to use this technique when the coefficient of $x^2$ is $1$.
+
+
+Consider the following squares of binomials.
+
+
+\[
+ \begin{array}{|l|c|c|c|}
+ \hline
+ \text{Square of binomial } (x+p)^2 & p & 2p & p^2\\
+ \hline
+ (x+\substitute{5})^2 = x^2 + 10x + 25 & \substitute{5} & 2(\substitute{5}) = 10 & \substitute{5}^2 = 25 \\
+ (x\substitute{-3})^2 = x^2 - 6x + 9 & \substitute{-3} & 2(\substitute{-3}) = -6 & (\substitute{-3})^2 = 9 \\
+ (x\substitute{-12})^2 = x^2 -24 x + 144 & \substitute{-12} & 2(\substitute{-12}) = -24 & (\substitute{-12})^2 = 144 \\
+ \hline
+\end{array}
+\]
+
+In each case, the square of the binomial is a quadratic trinomial,
+$$
+    (x+p)^2 = x^2 + 2px + p^2.
+$$
+Note that the coefficient of the linear term, 
+$$
+    2p,
+$$
+is twice the constant in the binomial, and the constant term of the trinomial, 
+$$
+    p^2,
+$$
+is the square of the constant in the binomial.
+   
+   
+tk how to format?
+Question: What is the linear term of $(x+6)^2$?
+\begin{itemize}
+    \item $x^2$
+    \item $6x$  
+    \item $12x$
+    \item $36$
+\end{itemize}
+
+   
+   
+
+We would like to reverse the process and write a quadratic expression as the square of a binomial. For example, what constant term can we add to
+$$
+    x^2 - 16x
+$$
+to produce a perfect square trinomial? Compare the expression to the formula above:
+\begin{align*}
+    x^2 + 2px + p^2 &= (x+p)^2 \\
+    x^2 - 16x + ? &= (x + ?)^2.
+\end{align*}   
+We see that   
+$$
+    2p = -16,
+$$
+so
+$$
+    p = \frac{1}{2}(-16) = \substitute{-8},
+$$
+and 
+$$
+    p^2 = (-8)^2 = \substitute{64}.
+$$   
+We substitute these values for $p^2$ and $p$ into the equation to find
+$$
+    x^2 - 16 x + \substitute{64} = (x \substitute{- 8})^2.
+$$
+Notice that in the resulting trinomial, the constant term is equal to the square of one-half the coefficient of $x$. In other words, we can find the constant term by taking one-half the coefficient of $x$ and then squaring the result. Adding a constant term obtained in this way is called completing the square.   
+
+
+\section{Converting to Vertex Form by Completing the Square}
+
+~[Questions: how to format steps, how to format the blanks, and how to add color]
+
+Now we will use completing the square to solve quadratic equations. First, we will solve equations in which the coefficient of the squared term is 1. Consider the function
+$$
+    f(x) = x^2 - 6x - 7,
+$$
+and follow the steps to find the solutions.
+
+\subsubsection{Step 1}
+Begin by separating the constant term from the other terms of the equation, to get
+$$
+    f(x) = (x^2 - 6x\ \rule{1cm}{0.15mm}) + (-7\ \rule{1cm}{0.15mm}).
+$$
+
+\subsubsection{Step 2}
+Now complete the square in the parentheses on the left. Because
+$$
+    p = \frac{1}{2}(-6) = -3
+$$
+and
+$$
+    p^2 = (-3)^2 = 9,
+$$
+we add and subtract $9$ in our equation to get
+$$
+    f(x) = (x^2-6x+\substitute{9}) + (-7 - \substitute{9}).
+$$
+Notice that this doesn't change the value of the function, since we're simply adding $9 - 9 = 0$ and re-grouping.
+
+\subsubsection{Step 3}
+The expression in the left set of parentheses is now the square of a binomial, namely $(x-3)^2$. We write the left side in its square form and simplify the right side, which gives us the final vertex form,
+$$
+    f(x) = (x-3)^2 - 16.
+$$
+As before, you can verify that this function is equivalent to the original by expanding the binomial.
+
+
+    Graph of $f(x)=x^2 - 6x - 7$ 
+    \begin{image}
+    \begin{tikzpicture}
+        \begin{axis}[ymax=2,ymin=-20]
+            \addplot [firstcurve, domain=-1:7] {x^2-6*x-7};
+            % \addplot [soliddot, color=fourthcolor] coordinates {(3,-2)} node[below] {$(3,-2)$};
+        \end{axis}
+    \end{tikzpicture}
+    \end{image}
+    Graph of $g(x)=(x-3)^2-16$
+    \begin{image}
+        \begin{tikzpicture}
+            \begin{axis}[ymax=2,ymin=-20]
+                \addplot [secondcurve, domain=-1:7] {(x-3)^2-16};
+                % \addplot [soliddot, color=fourthcolor] coordinates {(3,-2)} node[below] {$(3,-2)$};
+            \end{axis}
+        \end{tikzpicture}
+    \end{image}
+\begin{example}
+Convert $f(x) = x^2 - 4x - 3$ to vertex form by completing the square.
+
+\begin{explanation}
+\begin{enumerate}[label=\arabic*.]
+    \item Separate the constant term:
+    $$
+        f(x) = (x^2 - 4x\ \rule{1cm}{0.15mm}) + (-3\ \rule{1cm}{0.15mm}).
+    $$
+    \item Complete the square in the left parentheses. The coefficient of $x$ is $-4$, so
+    $$
+        p = \frac{1}{2}(-4) = -2,
+    $$
+    and
+    $$
+        p^2 = (-2)^2 = 4.
+    $$
+    Add and subtract $4$ to the equation:
+    $$
+        f(x) = (x^2 - 4x + \substitute{4}) + (-3-\substitute{4})
+    $$
+    \item Factor the left into a binomial square and simplify the right:
+    $$
+        f(x) = (x-2)^2 - 7.
+    $$
+\end{enumerate}
+\end{explanation}
+\end{example}
+
+\begin{callout}
+Explain how to tell whether $x^2 + bx + c$ is the square of a binomial.
+\end{callout}
+   
+\subsection{The General Case}
+   
+What we've done so far only works if the coefficient of $x^2$ is $1$. If we want to put a quadratic with leading coefficient different from $1$ into vertex form, we do the same steps, but first factor the equation by the leading coefficient, then distribute once we're done.
+
+\begin{example} 
+Put $f(x) = 2x^2 - 6x - 5$ into vertex form.
+\begin{explanation}
+\begin{enumerate}
+    \item[1(a).] Because the coefficient of $x^2$ is $2$, we must factor the entire function by $2$.
+    $$
+    f(x) = 2 \left(x^2 - 3x - \frac{5}{2} \right).
+    $$
+    \item[1(b).] Now continue as before. Separate the constant term:
+    $$
+        f(x) = 2\left((x^2 - 3x\ \rule{1cm}{0.15mm}) + \left(-\frac{5}{2}\ \rule{1cm}{0.15mm}\right)\right).
+    $$
+    \item[2.] Complete the square in the left parentheses. The coefficient of $x$ is $-3$, so
+    $$
+        p = \frac{1}{2}(-3) = -\frac{3}{2},
+    $$
+    and
+    $$
+        p^2 = \left(-\frac{3}{2}\right)^2 = \frac{9}{4}.
+    $$
+    Add and subtract $\frac{9}{4}$ to the equation:
+    $$
+        f(x) = 2\left(\left(x^2 - 3x +\substitute{\frac{9}{4}}\right) + \left(-\frac{5}{2} -\substitute{\frac{9}{4}}\right)\right).
+    $$
+    \item[3.] Factor the left into a binomial square and simplify the right:
+    $$
+        f(x) =2 \left(\left(x-\frac{3}{2}\right)^2 - \frac{19}{4}\right).
+    $$
+    \item[4.] Distribute the $2$, remembering to multiply with the constant as well:
+    $$
+        f(x) =2 \left(x-\frac{3}{2}\right)^2 - \frac{19}{2}.
+    $$
+\end{enumerate}
+\end{explanation}
+\end{example}
+
+
+\begin{summary}
+\begin{enumerate}
+    \item[1.] \begin{enumerate}
+        \item[(a)] Write the function in standard form.
+
+        \item[(b)] Factor by the coefficient of the quadratic term.
+    \end{enumerate}
+    \item[2.] Separate the constant term from the $x$ and $x^2$ terms.
+    \item[3.] Complete the square for the $x$ and $x^2$ terms:
+    \begin{enumerate}
+        \item[(a)] Multiply the coefficient of the first-degree term by one-half, then square the result.
+        \item[(b)] Add the value obtained in (a) inside the parentheses containing $x$ and $x^2$, then subtract this same value from the constant term.
+    \end{enumerate}
+    \item[4.] Write the first set of parentheses as the square of a binomial. Simplify the constant term.
+\end{enumerate}
+\end{summary}
    
 
 % %\section{Exponent Rules}
