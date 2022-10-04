@@ -243,18 +243,28 @@ As before, you can verify that this function is equivalent to the original by ex
     Graph of $f(x)=x^2 - 6x - 7$ 
     \begin{image}
     \begin{tikzpicture}
-        \begin{axis}[ymax=2,ymin=-20]
-            \addplot [firstcurve, domain=-1:7] {x^2-6*x-7};
-            % \addplot [soliddot, color=fourthcolor] coordinates {(3,-2)} node[below] {$(3,-2)$};
+        \begin{axis}[width=0.75\linewidth,
+                			xmin=-2.25,xmax=7.25,
+               				ymin=-2.25,ymax=20.25,
+                			minor ytick=,minor xtick=,
+		                	xtick={-2,...,7}, ytick={-20,-18,...,2},
+                			clip=false,ymax=2,ymin=-20]
+            \addplot [firstcurve, domain=-1.25:7.25] {x^2-6*x-7} node[pos=0.3, above right]{$\Large{y=x^2-6x-7}$};
+            \addplot [soliddot, color=fourthcolor] coordinates {(3,-16)} node[below] {$(3,-16)$};
         \end{axis}
     \end{tikzpicture}
     \end{image}
     Graph of $g(x)=(x-3)^2-16$
     \begin{image}
         \begin{tikzpicture}
-            \begin{axis}[ymax=2,ymin=-20]
-                \addplot [secondcurve, domain=-1:7] {(x-3)^2-16};
-                % \addplot [soliddot, color=fourthcolor] coordinates {(3,-2)} node[below] {$(3,-2)$};
+            \begin{axis}[width=0.75\linewidth,
+                			xmin=-2.25,xmax=7.25,
+               				ymin=-2.25,ymax=20.25,
+                			minor ytick=,minor xtick=,
+		                	xtick={-2,...,7}, ytick={-20,-18,...,2},
+                			clip=false,ymax=2,ymin=-20]
+                \addplot [secondcurve, domain=-1.25:7.25] {(x-3)^2-16} node[pos=0.3, above right]{$\Large{y=(x-3)^2-16}$};
+            \addplot [soliddot, color=fourthcolor] coordinates {(3,-16)} node[below] {$(3,-16)$};
             \end{axis}
         \end{tikzpicture}
     \end{image}
