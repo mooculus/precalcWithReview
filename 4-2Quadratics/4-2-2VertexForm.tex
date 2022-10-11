@@ -37,7 +37,7 @@ $$
     it is clear that $f$ and $g$ are the same function.
  
 
-    Graph of $f(x)=x^2-6x+7$ 
+    
     \begin{image}
     \begin{tikzpicture}
         \begin{axis}[]
@@ -46,15 +46,17 @@ $$
         \end{axis}
     \end{tikzpicture}
     \end{image}
-    Graph of $g(x)=(x-3)^2-2$
+    $$ \text{Graph of } f(x)=x^2-6x+7 
+    $$ 
     \begin{image}
         \begin{tikzpicture}
             \begin{axis}[]
-                \addplot [secondcurve, domain=0:6] {(x-3)^2-2+0.1};
+                \addplot [secondcurve, domain=0:6] {(x-3)^2-2};
                 \addplot [soliddot, color=fourthcolor] coordinates {(3,-2)} node[below] {$(3,-2)$};
             \end{axis}
         \end{tikzpicture}
     \end{image}
+    $$\text{Graph of } g(x)=(x-3)^2-2 $$
     We see that the graphs of the two parabolas are completely identical.
 
 
@@ -160,15 +162,16 @@ $$
 $$
 is the square of the constant in the binomial.
    
-   
-tk how to format?
-Question: What is the linear term of $(x+6)^2$?
-\begin{itemize}
-    \item $x^2$
-    \item $6x$  
-    \item $12x$
-    \item $36$
-\end{itemize}
+\begin{question}  
+Question: What is the linear term of $(x+6)^2$? 
+\begin{multipleChoice}  
+\choice{$x^2$}  
+\choice[correct]{$12x$}  
+\choice{$6x$}  
+\choice{$36$}  
+\end{multipleChoice}  
+\end{question}
+
 
    
    
@@ -180,7 +183,7 @@ $$
 to produce a perfect square trinomial? Compare the expression to the formula above:
 \begin{align*}
     x^2 + 2px + p^2 &= (x+p)^2 \\
-    x^2 - 16x + ? &= (x + ?)^2.
+    x^2 - 16x + \ \rule{0.75cm}{0.15mm} &= (x + \ \rule{0.75cm}{0.15mm})^2.
 \end{align*}   
 We see that   
 $$
@@ -196,14 +199,12 @@ $$
 $$   
 We substitute these values for $p^2$ and $p$ into the equation to find
 $$
-    x^2 - 16 x + \substitute{64} = (x \substitute{- 8})^2.
+    x^2 - 16 x + \answer{64} = (x + \answer{- 8})^2.
 $$
 Notice that in the resulting trinomial, the constant term is equal to the square of one-half the coefficient of $x$. In other words, we can find the constant term by taking one-half the coefficient of $x$ and then squaring the result. Adding a constant term obtained in this way is called completing the square.   
 
 
 \section{Converting to Vertex Form by Completing the Square}
-
-~[Questions: how to format steps, how to format the blanks, and how to add color]
 
 Now we will use completing the square to solve quadratic equations. First, we will solve equations in which the coefficient of the squared term is 1. Consider the function
 $$
@@ -211,13 +212,15 @@ $$
 $$
 and follow the steps to find the solutions.
 
-\subsubsection{Step 1}
+\textbf{Step 1}
+
 Begin by separating the constant term from the other terms of the equation, to get
 $$
     f(x) = (x^2 - 6x\ \rule{1cm}{0.15mm}) + (-7\ \rule{1cm}{0.15mm}).
 $$
 
-\subsubsection{Step 2}
+\textbf{Step 2}
+
 Now complete the square in the parentheses on the left. Because
 $$
     p = \frac{1}{2}(-6) = -3
@@ -232,42 +235,44 @@ $$
 $$
 Notice that this doesn't change the value of the function, since we're simply adding $9 - 9 = 0$ and re-grouping.
 
-\subsubsection{Step 3}
+\textbf{Step 3}
+
 The expression in the left set of parentheses is now the square of a binomial, namely $(x-3)^2$. We write the left side in its square form and simplify the right side, which gives us the final vertex form,
 $$
     f(x) = (x-3)^2 - 16.
 $$
 As before, you can verify that this function is equivalent to the original by expanding the binomial.
 
+\begin{image}
+\begin{tikzpicture}
+    \begin{axis}[width=0.75\linewidth,
+            			xmin=-2.25,xmax=7.25,
+           				ymin=-2.25,ymax=20.25,
+            			minor ytick=,minor xtick=,
+	                	xtick={-2,...,7}, ytick={-20,-18,...,2},
+            			clip=false,ymax=2,ymin=-20]
+        \addplot [firstcurve, domain=-1.25:7.25] {x^2-6*x-7} node[pos=0.3, above right]{$\Large{y=x^2-6x-7}$};
+        \addplot [soliddot, color=fourthcolor] coordinates {(3,-16)} node[below] {$(3,-16)$};
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+$$ \text{Graph of } f(x)=x^2 - 6x - 7 $$ 
 
-    Graph of $f(x)=x^2 - 6x - 7$ 
-    \begin{image}
+\begin{image}
     \begin{tikzpicture}
         \begin{axis}[width=0.75\linewidth,
-                			xmin=-2.25,xmax=7.25,
-               				ymin=-2.25,ymax=20.25,
-                			minor ytick=,minor xtick=,
-		                	xtick={-2,...,7}, ytick={-20,-18,...,2},
-                			clip=false,ymax=2,ymin=-20]
-            \addplot [firstcurve, domain=-1.25:7.25] {x^2-6*x-7} node[pos=0.3, above right]{$\Large{y=x^2-6x-7}$};
-            \addplot [soliddot, color=fourthcolor] coordinates {(3,-16)} node[below] {$(3,-16)$};
+            			xmin=-2.25,xmax=7.25,
+           				ymin=-2.25,ymax=20.25,
+            			minor ytick=,minor xtick=,
+	                	xtick={-2,...,7}, ytick={-20,-18,...,2},
+            			clip=false,ymax=2,ymin=-20]
+            \addplot [secondcurve, domain=-1.25:7.25] {(x-3)^2-16} node[pos=0.3, above right]{$\Large{y=(x-3)^2-16}$};
+        \addplot [soliddot, color=fourthcolor] coordinates {(3,-16)} node[below] {$(3,-16)$};
         \end{axis}
     \end{tikzpicture}
-    \end{image}
-    Graph of $g(x)=(x-3)^2-16$
-    \begin{image}
-        \begin{tikzpicture}
-            \begin{axis}[width=0.75\linewidth,
-                			xmin=-2.25,xmax=7.25,
-               				ymin=-2.25,ymax=20.25,
-                			minor ytick=,minor xtick=,
-		                	xtick={-2,...,7}, ytick={-20,-18,...,2},
-                			clip=false,ymax=2,ymin=-20]
-                \addplot [secondcurve, domain=-1.25:7.25] {(x-3)^2-16} node[pos=0.3, above right]{$\Large{y=(x-3)^2-16}$};
-            \addplot [soliddot, color=fourthcolor] coordinates {(3,-16)} node[below] {$(3,-16)$};
-            \end{axis}
-        \end{tikzpicture}
-    \end{image}
+\end{image}
+$$ \text{Graph of } g(x)=(x-3)^2-16 $$
+
 \begin{example}
 Convert $f(x) = x^2 - 4x - 3$ to vertex form by completing the square.
 
@@ -298,24 +303,24 @@ Convert $f(x) = x^2 - 4x - 3$ to vertex form by completing the square.
 \end{example}
 
 \begin{callout}
-Explain how to tell whether $x^2 + bx + c$ is the square of a binomial.
+Take a moment to think about how to tell if $x^2 + bx + c$ is the square of a binomial.
 \end{callout}
    
 \subsection{The General Case}
    
-What we've done so far only works if the coefficient of $x^2$ is $1$. If we want to put a quadratic with leading coefficient different from $1$ into vertex form, we do the same steps, but first factor the equation by the leading coefficient, then distribute once we're done.
+What we've done so far only works if the coefficient of $x^2$ is $1$. If we want to put a quadratic with leading coefficient different from $1$ into vertex form, we do the same steps, but in addition factor by the leading coefficient as follows.
 
 \begin{example} 
 Put $f(x) = 2x^2 - 6x - 5$ into vertex form.
 \begin{explanation}
 \begin{enumerate}
-    \item[1(a).] Because the coefficient of $x^2$ is $2$, we must factor the entire function by $2$.
+    \item[1(a).] As before, start by separating the constant term from the $x$ and $x^2$ terms: 
     $$
-    f(x) = 2 \left(x^2 - 3x - \frac{5}{2} \right).
+    f(x) = (2x^2 - 6x\ \rule{1cm}{0.15mm}) - (5 \ \rule{1cm}{0.15mm})
     $$
-    \item[1(b).] Now continue as before. Separate the constant term:
+    \item[1(b).] Because the coefficient of $x^2$ is $2$, we must factor the left set of parentheses by $2$.
     $$
-        f(x) = 2\left((x^2 - 3x\ \rule{1cm}{0.15mm}) + \left(-\frac{5}{2}\ \rule{1cm}{0.15mm}\right)\right).
+    f(x) = \substitute{2} (x^2 - 3x\ \rule{1cm}{0.15mm}) - (5 \ \rule{1cm}{0.15mm})
     $$
     \item[2.] Complete the square in the left parentheses. The coefficient of $x$ is $-3$, so
     $$
@@ -325,17 +330,13 @@ Put $f(x) = 2x^2 - 6x - 5$ into vertex form.
     $$
         p^2 = \left(-\frac{3}{2}\right)^2 = \frac{9}{4}.
     $$
-    Add and subtract $\frac{9}{4}$ to the equation:
+    We add $\frac{9}{4}$ to the equation as before, but now we must subtract by $2 \cdot \frac{9}{4}$ instead of just $\frac{9}{4}$ to account for the extra $2$ coming from the coefficient of $x^2$:
     $$
-        f(x) = 2\left(\left(x^2 - 3x +\substitute{\frac{9}{4}}\right) + \left(-\frac{5}{2} -\substitute{\frac{9}{4}}\right)\right).
+        f(x) = \substitute{2}\left(x^2 - 3x +\substitute{\frac{9}{4}}\right) + \left(-\frac{5}{2} -\substitute{2 \cdot \frac{9}{4}}\right).
     $$
-    \item[3.] Factor the left into a binomial square and simplify the right:
+    \item[3.] Factor the left parentheses into a binomial square and simplify the constants in the right parentheses:
     $$
-        f(x) =2 \left(\left(x-\frac{3}{2}\right)^2 - \frac{19}{4}\right).
-    $$
-    \item[4.] Distribute the $2$, remembering to multiply with the constant as well:
-    $$
-        f(x) =2 \left(x-\frac{3}{2}\right)^2 - \frac{19}{2}.
+        f(x) =2 \left(x-\frac{3}{2}\right)^2 - \frac{19}{4}.
     $$
 \end{enumerate}
 \end{explanation}
@@ -345,20 +346,18 @@ Put $f(x) = 2x^2 - 6x - 5$ into vertex form.
 \begin{summary}
 \begin{enumerate}
     \item[1.] \begin{enumerate}
-        \item[(a)] Write the function in standard form.
+        \item[(a)] Write the function in standard form and separate the constant term from the $x$ and $x^2$ terms.
 
-        \item[(b)] Factor by the coefficient of the quadratic term.
+        \item[(b)] Factor the $x$ and $x^2$ terms by the coefficient of the quadratic term.
     \end{enumerate}
-    \item[2.] Separate the constant term from the $x$ and $x^2$ terms.
-    \item[3.] Complete the square for the $x$ and $x^2$ terms:
+    \item[2.] Complete the square for the $x$ and $x^2$ terms:
     \begin{enumerate}
         \item[(a)] Multiply the coefficient of the first-degree term by one-half, then square the result.
-        \item[(b)] Add the value obtained in (a) inside the parentheses containing $x$ and $x^2$, then subtract this same value from the constant term.
+        \item[(b)] Add the value obtained in (a) inside the parentheses containing $x$ and $x^2$, then subtract this value times the original coefficient of $x^2$ from the constant term.
     \end{enumerate}
-    \item[4.] Write the first set of parentheses as the square of a binomial. Simplify the constant term.
+    \item[3.] Write the first set of parentheses as the square of a binomial. Simplify the constant term.
 \end{enumerate}
 \end{summary}
-   
 
 % %\section{Exponent Rules}
 %   %%%%%%%%%%%%%%%%
