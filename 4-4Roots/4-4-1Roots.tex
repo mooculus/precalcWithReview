@@ -540,6 +540,34 @@ Since any even-index root of a negative number is not defined, there are no solu
 
 These examples illustrate a general principle that is good to have in your toolbox for solving equations. If $a^3=b$, then we know that $a = \sqrt[3]{b}$. This is true for any odd powers. However, if $a^2 =b$, then {\bf either} $a=\sqrt{b}$ {\bf or} $a = -\sqrt{b}$. This is true for any even powers.  
 
+\section{Finding $x$-intercepts of a Quadratic in Vertex Form}
+
+Now, we can use our understanding of the squareroot function to find the $x$-intercepts of a quadratic given in vertex form.
+
+\begin{example}
+Find the $x$-intercepts of the quadratic $2(x-3)^2-5= 0$ which is written in vertex form. 
+
+\begin{explanation}
+First, rearrange the equation by adding $5$ to both sides. This yields $$2(x-3)^2 = 5.$$ Then divide each side by $2$, resulting in $$(x-3)^2 = \frac{5}{2}.$$ Taking the square root on both sides, we find that 
+\begin{align*}
+\sqrt{(x-3)^2} &= \sqrt{\frac{5}{2}} \\
+|x-3| &= \sqrt{\frac{5}{2}}\\
+x-3 &= \pm \sqrt{\frac{5}{2}}\\
+x &= 3 \pm \sqrt{\frac{5}{2}}
+\end{align*}
+\end{explanation}
+\end{example}
+
+Notice that this gives us a third method for finding the roots ($x$-intercepts) of a quadratic in general. We can use any of these methods to solve a quadratic.
+\begin{enumerate}
+\item Factor the quadratic and write it in Root Form
+\item Use the quadratic formula to find the roots
+\item Write the quadratic in vertex form and then solve using a squareroot
+\end{enumerate}
+
+Mathematically, these last two methods are actually related.  The quadratic formula is just what happens when you rewrite the general quadratic $f(x)=ax^2+bx+c$ in vertex form and then solve for $x$!
+
+
 %\begin{callout}
 %{\bf Important Algebra Note:}\\
 %If $a^3=b$, then we know that $a = \sqrt[3]{b}$.
@@ -573,7 +601,9 @@ In general, we are not able to simply find the inverse of polynomials.
 
 However, when the polynomial is $p(x) = x^n$ for a positive {\em odd} integer $n$, the polynomial is invertible as the $n^{th}$ root function $r(x) = \sqrt[n]{x}$.
 
-When $n$ is {\em even}, it is possible to define an inverse function $r(x) = \sqrt[n]{x}$ on a restricted domain ($[0, \infty)$ or $(-\infty,0]$). The $n^{th}$ root is defined as the inverse of $p(x)$ on the restricted domain $[0,\infty)$.
+When $n$ is {\em even}, it is possible to define an inverse function $r(x) = \sqrt[n]{x}$ on a restricted domain of $[0, \infty)$. The $n^{th}$ root is defined as the inverse of $p(x)$ on the restricted domain $[0,\infty)$.
 \end{summary}
+
+
 
 \end{document}
