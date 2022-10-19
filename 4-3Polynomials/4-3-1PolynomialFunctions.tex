@@ -1,0 +1,656 @@
+\documentclass{ximera}
+
+\input{../preamble.tex}
+\author{Elizabeth Miller}
+\license{Creative Commons Attribution-ShareAlike 4.0 International License}
+
+
+\title{Polynomial Functions}
+
+\begin{document}
+\begin{abstract}
+We explore polynomial functions.
+\end{abstract}
+\maketitle
+\licenseSZ
+
+
+Constant functions, linear functions, and quadratic functions all belong to a much larger group of functions called \dfn{polynomials}.  
+
+\begin{definition}
+Given real numbers $a_0, a_1, \ldots, a_n$ where $a_n \neq 0$, we say that the function a function $P$ is a \dfn{polynomial} of degree $n$ if
+it can be written in the form%
+$$
+P(x) = a_0 + a_1 x + a_2 x^2 + \cdots + a_{n-1}x^{n-1} + a_n x^n, 
+$$
+When a polynomial is written in this way, we say it is in \dfn{standard form}.
+\end{definition}
+
+Consider $f(x) = 4x^5 - 3x^2 + 2x - 5$.  Is this a polynomial function?  We can re-write the formula for $f$ as $f(x)= 4x^5 + 0 x^{4} + 0 x^{3} + (-3)x^2 + 2 x + (-5).$  Comparing this with our definition of Polyomial Functions, we identify $n=5$, $a_{\mbox{\tiny $5$}} = 4$, $a_{\mbox{\tiny $4$}} = 0$, $a_{\mbox{\tiny $3$}} = 0$, $a_{\mbox{\tiny $2$}} = -3$, $a_{\mbox{\tiny $1$}} = 2$ and $a_{\mbox{\tiny $0$}} = -5$.  In other words, $a_{\mbox{\tiny $5$}}$ is the coefficient of $x^{5}$, $a_{\mbox{\tiny $4$}}$ is the coefficient of $x^{4}$, and so forth;  the subscript on the $a$'s merely indicates to which power of $x$ the coefficient belongs.  
+
+\begin{example}
+Determine if the following functions are polynomials.  Explain your reasoning.
+
+\begin{multicols}{3}
+\begin{enumerate}
+
+\item  $g(x) = \dfrac{4+x^3}{x}$
+\item  $p(x) = \dfrac{4x+x^3}{x}$
+\item  $q(x) = \dfrac{4x+x^3}{x^2+4}$
+
+\end{enumerate}
+\end{multicols}
+
+\begin{multicols}{3}
+\begin{enumerate}
+
+\item  $f(x) =\sqrt[3]{x}$
+\item  $h(x) = |x|$
+\item  $z(x) = 0$
+
+\end{enumerate}
+\end{multicols}
+
+\begin{explanation}
+
+\begin{enumerate}
+
+\item  We note directly that the domain of $g(x) = \frac{x^3+4}{x}$ is $x \neq 0$.  By definition, a polynomial has all real numbers as its domain.  Hence, $g$ can't be a polynomial.
+
+\item  Even though $p(x) = \frac{x^3+4x}{x}$ simplifies to $p(x) = x^2+4$, which certainly looks like the form given in our definition of polynomials, the domain of $p$, which, as you may recall, we determine \emph{before} we simplify, excludes $0$.  Alas, $p$ is not a polynomial function for the same reason $g$ isn't.
+
+\item  After what happened with $p$ in the previous part, you may be a little shy about simplifying $q(x) = \frac{x^3+4x}{x^2+4}$ to $q(x) = x$, which certainly fits our definition of polynomial functions.  If we look at the domain of $q$ before we simplified, we see that it is, indeed, all real numbers.  A function which can be written in the form of of a polynomial whose domain is all real numbers is, in fact, a polynomial.  
+
+\item  We can rewrite $f(x) =\sqrt[3]{x}$ as $f(x) = x^{\frac{1}{3}}$.  Since $\frac{1}{3}$ is not a natural number, $f$ is not a polynomial.
+
+\item  The function $h(x) = |x|$ isn't a polynomial, since it can't be written as a combination of powers of $x$ even though it can be written as a piecewise function involving polynomials.  As we shall see in this section, graphs of polynomials possess a quality (which relies on Calculus to verify) that the graph of $h$ does not.  Polynomials will all be smooth with no sharp corners.
+
+\item  There's nothing in our definition of a polynomial which prevents all the coefficients $a_{n}$, etc., from being $0$.  Hence, $z(x) = 0$, is an honest-to-goodness polynomial.
+
+\end{enumerate}
+\end{explanation}
+\end{example}
+
+\begin{definition}[Polynomial Vocabulary]
+
+Suppose $f$ is a polynomial function. 
+\begin{itemize}
+\item Given $f(x) = a_{n} x^{n} + a_{n-\mbox{\tiny$1$}} x^{n-\mbox{\tiny$1$}} + \ldots + a_{\mbox{\tiny $2$}} x^{\mbox{\tiny $2$}} + a_{\mbox{\tiny $1$}} x + a_{\mbox{\tiny $0$}}$ with $a_{n} \neq 0$, we say 
+
+\begin{itemize}
+
+\item  The natural number $n$ is called the \index{polynomial function ! degree}\index{degree of a polynomial}\dfn{degree} of the polynomial $f$.
+
+\item  If $0 \leq k \leq n$, then we call $a_{k} x^{k}$ a \dfn{term} of the polynomial.  
+
+\item  We call $a_k$ the \dfn{coefficient} of the term $a_{k} x^{k}$. 
+
+\item  The term $a_{n} x^{n}$ is called the \index{polynomial function ! leading term}\index{leading term of a polynomial}\dfn{leading term} or \dfn{highest degree term} of the polynomial $f$.
+
+\item  The real number $a_{n}$ is called the \index{polynomial function ! leading coefficient}\index{leading coefficient of a polynomial}\dfn{leading coefficient} of the polynomial $f$.
+
+\item  The real number $a_{\mbox{\tiny $0$}}$ is called the \index{polynomial function ! constant term}\index{constant term of a polynomial}\dfn{constant term} of the polynomial $f$.
+
+\item  The $x$-intercepts of polynomials are also called \dfn{roots}.  Note that we usually reserve the word roots for talking about the $x$-intercepts of polynomials and don't use it for the $x$-intrecepts of other types of functions.
+
+\end{itemize}
+
+\item  If $f(x) = a_{\mbox{\tiny $0$}}$, and $a_{\mbox{\tiny $0$}} \neq 0$, we say $f$ has degree $0$.
+
+\item  If $f(x) = 0$, we say $f$ has no degree.\footnote{Some authors say $f(x) = 0$ has degree $-\infty$ for reasons not even we will go into.}
+
+\end{itemize}
+
+\end{definition}
+
+The reader may well wonder why we have chosen to separate off constant functions from the other polynomials.  Why not just lump them all together and, instead of forcing $n$ to be a natural number, $n = 1, 2, \ldots$, allow $n$ to be a whole number, $n = 0, 1, 2, \ldots$.  We could unify all of the cases, since, after all, isn't $a_{\mbox{\tiny $0$}}x^{0} = a_{\mbox{\tiny $0$}}$?  The answer is `yes, as long as $x\neq 0$.'  The function $f(x) = 3$ and $g(x) = 3x^{0}$ are different, because their domains are different.  The number $f(0) = 3$ is defined, whereas $g(0) = 3(0)^{0}$ is not.  (Technically, $0^{0}$ is an indeterminant form, which is a special case of being undefined.  You will explore this more in calculus.)  Indeed, much of the theory we will develop in this chapter doesn't include the constant functions, so we might as well treat them as outsiders from the start.  One good thing that comes from our definition of polynomials is that we can now think of linear functions as degree $1$ (or `first degree') polynomial functions and quadratic functions as degree $2$ (or `second degree') polynomial functions.
+
+\begin{example}  
+Find the degree, leading term, leading coefficient and constant term of the following polynomial functions.
+
+\begin{multicols}{2}
+\begin{enumerate}
+
+\item  $f(x) = 4x^5 - 3x^2 + 2x - 5$
+\item $g(x) = 12x +x^3$
+
+\end{enumerate}
+\end{multicols}
+
+\begin{multicols}{2}
+\begin{enumerate}
+
+\item  $h(x) = \dfrac{4-x}{5}$
+\item  $p(x) = (2x-1)^{3}(x-2)(3x+2)$ \vphantom{$\dfrac{4-x}{5}$}
+
+\end{enumerate}
+\end{multicols}
+
+\begin{explanation}
+
+\begin{enumerate}
+
+\item  There are no surprises with $f(x) = 4x^5 - 3x^2 + 2x - 5$.  It matches the form of a polynomial given above, and we see that the degree is $5$, the leading term is $4x^5$, the leading coefficient is $4$ and the constant term is $-5$.
+
+\item The form given in  has the highest power of $x$ first.  To that end, we re-write $g(x) = 12x +x^3 = x^3+12x$, and see that the degree of $g$ is $3$, the leading term is $x^3$, the leading coefficient is $1$ and the constant term is $0$.
+
+\item  We need to rewrite the formula for $h$ so that it resembles the form given in our definition of polynomials:  $h(x) = \frac{4-x}{5} = \frac{4}{5} - \frac{x}{5} = -\frac{1}{5} x + \frac{4}{5}$.  The degree of $h$ is $1$, the leading term is $-\frac{1}{5} x$, the leading coefficient is $-\frac{1}{5}$ and the constant term is $\frac{4}{5}$.
+
+\item  It may seem that we have some work ahead of us to get $p$ in standard form.  However, it is possible to glean the information requested about $p$ without multiplying out the entire expression $(2x-1)^{3}(x-2)(3x+2)$.  The leading term of $p$ will be the term which has the highest power of $x$.  The way to get this term  is to multiply the terms with the highest power of $x$ from each factor together - in other words, the leading term of $p(x)$ is the product of the leading terms of the factors of $p(x)$.  Hence, the leading term of $p$ is $(2x)^3(x)(3x) =  24x^5$.  This means that the degree of $p$ is $5$ and the leading coefficient is $24$.  As for the constant term, we can perform a similar trick.  The constant term is obtained by multiplying the constant terms from each of the factors $(-1)^3(-2)(2) = 4$.  
+\end{enumerate}
+\end{explanation}
+\end{example}
+
+\section{End Behavior of Polynomials}
+
+The end behavior of a function is a way to describe what is happening to the function values (the $y$-values) as the $x$-values go off the graph on the left and right sides.  That is, what happens to $y$ as $x$ becomes large (in the sense of its absolute value) and negative without bound (written $x \rightarrow -\infty$) and, on the flip side, as $x$ becomes large and positive without bound (written $x \rightarrow \infty$).  
+
+For example, given $f(x) = x^2$, as $x \rightarrow -\infty$, we imagine substituting $x=-100$, $x=-1000$, etc., into $f$ to get $f(-100)=10000$, $f(-1000)=1000000$, and so on. Thus  the function values are becoming larger and larger positive numbers (without bound).  To describe this behavior, we write: as $x \rightarrow -\infty$, $f(x) \rightarrow \infty$.  If we study the behavior of $f$ as $x \rightarrow \infty$, we see that in this case, too, $f(x) \rightarrow \infty$.  
+
+The same can be said for any function of the form $f(x) = x^n$ where $n$ is an even natural number.   For example, the functions $f(x)=x^2$, $f(x)=x^4$, and $f(x)=x^6$ are graphed below.
+\[
+\begin{array}{ccccc}
+
+\resizebox {3.5 cm} {!} { 
+            \begin{tikzpicture}
+            	\begin{axis}[
+            		domain=-6.5:6.5, ymax=4.5,xmax=6.5, ymin=-4.5, xmin=-6.5,
+            		axis lines =center, xlabel=$x$, ylabel=$y$,
+            		every axis y label/.style={at=(current axis.above origin),anchor=south},
+            		every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            		]
+           	\addplot [draw=penColor,domain=-4.5:4.5, line width=1 mm, smooth,samples=300] {x^2};   
+                     \node at (axis cs:-3.5, -1.25) [penColor] {\Huge $f(x)=x^2$};    
+	      \end{axis}
+            \end{tikzpicture}}
+
+& \hspace{.1in} &
+
+
+\resizebox {3.5 cm} {!} { 
+            \begin{tikzpicture}
+            	\begin{axis}[
+            		domain=-6.5:6.5, ymax=4.5,xmax=6.5, ymin=-4.5, xmin=-6.5,
+            		axis lines =center, xlabel=$x$, ylabel=$y$,
+            		every axis y label/.style={at=(current axis.above origin),anchor=south},
+            		every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            		]
+           	\addplot [draw=penColor,domain=-4.5:4.5, line width=1 mm, smooth,samples=300] {x^4};   
+                     \node at (axis cs:-3.5, -1.25) [penColor] {\Huge $f(x)=x^4$};    
+	      \end{axis}
+            \end{tikzpicture}}
+
+& \hspace{.1in} &
+
+
+\resizebox {3.5 cm} {!} { 
+            \begin{tikzpicture}
+            	\begin{axis}[
+            		domain=-6.5:6.5, ymax=4.5,xmax=6.5, ymin=-4.5, xmin=-6.5,
+            		axis lines =center, xlabel=$x$, ylabel=$y$,
+            		every axis y label/.style={at=(current axis.above origin),anchor=south},
+            		every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            		]
+           	\addplot [draw=penColor,domain=-2.5:2.5, line width=1 mm, smooth,samples=300] {x^6};   
+                     \node at (axis cs:-3.5, -1.25) [penColor] {\Huge $f(x)=x^6$};    
+	      \end{axis}
+            \end{tikzpicture}}
+
+\end{array}
+\]
+ 
+\begin{theorem}[End Behavior of functions $f(x) = ax^{n}$, $n$ even.]
+
+Suppose $f(x) = a x^{n}$ where $a \neq 0$ is a real number and $n$ is an even natural number.  The end behavior of the graph of $y=f(x)$ matches one of the following: \index{end behavior ! of $f(x) = ax^{n}, n$ even}
+
+\begin{itemize}
+
+\item  for $a > 0$, as $x \rightarrow -\infty$, $f(x) \rightarrow \infty$ and as $x \rightarrow \infty$, $f(x) \rightarrow \infty$
+
+\item  for $a < 0$, as $x \rightarrow -\infty$, $f(x) \rightarrow -\infty$ and as $x \rightarrow \infty$, $f(x) \rightarrow -\infty$
+
+\end{itemize}
+
+Graphically:
+\[
+\begin{array}{ccc}
+
+\resizebox {3.5 cm} {!} { 
+            \begin{tikzpicture}
+            	\begin{axis}[
+            		domain=-6.5:6.5, ymax=4.5,xmax=6.5, ymin=-2, xmin=-6.5,
+            		axis lines =none, xlabel=$x$, ylabel=$y$,
+            		every axis y label/.style={at=(current axis.above origin),anchor=south},
+            		every axis x label/.style={at=(current axis.right of origin),anchor=west}, ,
+            		]
+           	\addplot [draw=penColor,domain=-4:-2.5, line width=1 mm, smooth,samples=300, <-] {x^2/5};   
+           	\addplot [draw=penColor,domain=-2.5:2.5, dashed, line width=1 mm, smooth,samples=300, ] {x^2/5};   
+           	\addplot [draw=penColor,domain=2.5:4, line width=1 mm, smooth,samples=300, ->] {x^2/5};   
+		\node at (axis cs:-0, -1.25) [penColor] {\Huge $a>0, n \text{ even}$};    
+	      \end{axis}
+            \end{tikzpicture}}
+
+& \hspace{.1in} &
+
+
+\resizebox {3.5 cm} {!} { 
+            \begin{tikzpicture}
+            	\begin{axis}[
+            		domain=-6.5:6.5, ymax=4.5,xmax=6.5, ymin=-2, xmin=-6.5,
+            		axis lines =none, xlabel=$x$, ylabel=$y$,
+            		every axis y label/.style={at=(current axis.above origin),anchor=south},
+            		every axis x label/.style={at=(current axis.right of origin),anchor=west}, ,
+            		]
+           	\addplot [draw=penColor,domain=-4:-2.5, line width=1 mm, smooth,samples=300, <-] {3.3-x^2/5};   
+           	\addplot [draw=penColor,domain=-2.5:2.5, dashed, line width=1 mm, smooth,samples=300, ] {3.3-x^2/5};   
+           	\addplot [draw=penColor,domain=2.5:4, line width=1 mm, smooth,samples=300, ->] {3.3-x^2/5};   
+		\node at (axis cs:-0, -1.25) [penColor] {\Huge $a<0, n \text{ even}$};  
+	      \end{axis}
+            \end{tikzpicture}}
+\end{array}
+\]
+
+
+\end{theorem}
+
+We now turn our attention to functions of the form $f(x) = x^{n}$ where $n \geq 3$ is an odd natural number. (We ignore the case when $n=1$, since the graph of $f(x)=x$ is a line and doesn't fit the general pattern of higher-degree odd polynomials.) Below we have graphed $y=x^3$, $y=x^5$, and $y=x^7$.    The `flattening' and `steepening' that we saw with the even powers presents itself here as well, and, it should come as no surprise that all of these functions are odd.  The end behavior of these functions is all the same, with $f(x) \rightarrow -\infty$ as $x \rightarrow -\infty$ and $f(x) \rightarrow \infty$ as $x \rightarrow \infty$.
+
+\[
+\begin{array}{ccccc}
+
+\resizebox {3.5 cm} {!} { 
+            \begin{tikzpicture}
+            	\begin{axis}[
+            		domain=-6.5:6.5, ymax=4.5,xmax=6.5, ymin=-4.5, xmin=-6.5,
+            		axis lines =center, xlabel=$x$, ylabel=$y$,
+            		every axis y label/.style={at=(current axis.above origin),anchor=south},
+            		every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            		]
+           	\addplot [draw=penColor,domain=-4.5:4.5, line width=1 mm, smooth,samples=300] {x^3};   
+                     \node at (axis cs:-3.5, -1.25) [penColor] {\Huge $f(x)=x^3$};    
+	      \end{axis}
+            \end{tikzpicture}}
+
+& \hspace{.1in} &
+
+
+\resizebox {3.5 cm} {!} { 
+            \begin{tikzpicture}
+            	\begin{axis}[
+            		domain=-6.5:6.5, ymax=4.5,xmax=6.5, ymin=-4.5, xmin=-6.5,
+            		axis lines =center, xlabel=$x$, ylabel=$y$,
+            		every axis y label/.style={at=(current axis.above origin),anchor=south},
+            		every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            		]
+           	\addplot [draw=penColor,domain=-3:3, line width=1 mm, smooth,samples=300] {x^5};   
+                     \node at (axis cs:-3.5, -1.25) [penColor] {\Huge $f(x)=x^5$};    
+	      \end{axis}
+            \end{tikzpicture}}
+
+& \hspace{.1in} &
+
+
+\resizebox {3.5 cm} {!} { 
+            \begin{tikzpicture}
+            	\begin{axis}[
+            		domain=-6.5:6.5, ymax=4.5,xmax=6.5, ymin=-4.5, xmin=-6.5,
+            		axis lines =center, xlabel=$x$, ylabel=$y$,
+            		every axis y label/.style={at=(current axis.above origin),anchor=south},
+            		every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            		]
+           	\addplot [draw=penColor,domain=-2:2, line width=1 mm, smooth,samples=300] {x^7};   
+                     \node at (axis cs:-3.5, -1.25) [penColor] {\Huge $f(x)=x^7$};    
+	      \end{axis}
+            \end{tikzpicture}}
+
+\end{array}
+\]
+
+As with the even degreed functions we studied earlier, we can generalize their end behavior.
+
+\begin{theorem}[End Behavior of functions $f(x) = ax^{n}$, $n$ odd.]
+
+Suppose $f(x) = a x^{n}$ where $a \neq 0$ is a real number and $n$ is an odd natural number.  The end behavior of the graph of $y=f(x)$ matches one of the following: \index{end behavior ! of $f(x) = ax^{n}, n$ odd}
+
+\begin{itemize}
+
+\item  for $a > 0$, as $x \rightarrow -\infty$, $f(x) \rightarrow -\infty$ and as $x \rightarrow \infty$, $f(x) \rightarrow \infty$
+
+\item  for $a < 0$, as $x \rightarrow -\infty$, $f(x) \rightarrow \infty$ and as $x \rightarrow \infty$, $f(x) \rightarrow -\infty$
+
+\end{itemize}
+
+Graphically:
+\[
+\begin{array}{ccc}
+
+\resizebox {3.5 cm} {!} { 
+            \begin{tikzpicture}
+            	\begin{axis}[
+            		domain=-6.5:6.5, ymax=4.5,xmax=6.5, ymin=-2, xmin=-6.5,
+            		axis lines =none, xlabel=$x$, ylabel=$y$,
+            		every axis y label/.style={at=(current axis.above origin),anchor=south},
+            		every axis x label/.style={at=(current axis.right of origin),anchor=west}, ,
+            		]
+           	\addplot [draw=penColor,domain=-4:-2.5, line width=1 mm, smooth,samples=300, <-] {x^3/25+2};   
+           	\addplot [draw=penColor,domain=-2.5:2.5, dashed, line width=1 mm, smooth,samples=300, ] {x^3/25+2};   
+           	\addplot [draw=penColor,domain=2.5:4, line width=1 mm, smooth,samples=300, ->] {x^3/25+2};   
+		\node at (axis cs:-0, -1.25) [penColor] {\Huge $a>0, n \text{ odd}$};    
+	      \end{axis}
+            \end{tikzpicture}}
+
+& \hspace{.1in} &
+
+
+\resizebox {3.5 cm} {!} { 
+            \begin{tikzpicture}
+            	\begin{axis}[
+            		domain=-6.5:6.5, ymax=4.5,xmax=6.5, ymin=-2, xmin=-6.5,
+            		axis lines =none, xlabel=$x$, ylabel=$y$,
+            		every axis y label/.style={at=(current axis.above origin),anchor=south},
+            		every axis x label/.style={at=(current axis.right of origin),anchor=west}, ,
+            		]
+           	\addplot [draw=penColor,domain=-4:-2.5, line width=1 mm, smooth,samples=300, <-] {-x^3/25+2};   
+           	\addplot [draw=penColor,domain=-2.5:2.5, dashed, line width=1 mm, smooth,samples=300, ] {-x^3/25+2};   
+           	\addplot [draw=penColor,domain=2.5:4, line width=1 mm, smooth,samples=300, ->] {-x^3/25+2};   
+		\node at (axis cs:-0, -1.25) [penColor] {\Huge $a<0, n \text{ odd}$};  
+	      \end{axis}
+            \end{tikzpicture}}
+\end{array}
+\]
+
+\end{theorem}
+
+Now lets consider the end behavior of polynomials in general.  It turns out that the end behavior of a polynomial always matches the end behavior of its leading term.
+
+\begin{theorem}[End Behavior of Polynomials]
+The end behavior of a polynomial $f(x) = a_{n} x^{n} + a_{n-\mbox{\tiny$1$}} x^{n-\mbox{\tiny$1$}} + \ldots + a_{\mbox{\tiny $2$}} x^{\mbox{\tiny $2$}} + a_{\mbox{\tiny $1$}} x + a_{\mbox{\tiny $0$}}$ with $a_{n} \neq 0$ matches the end behavior of $y = a_{n} x^{n}$.  
+\end{theorem}
+
+To see why this theorem is true, let's first look at a specific example.  Consider $f(x) = 4x^3 - x + 5$.  If we wish to examine end behavior, we look to see the behavior of $f$ as $x \rightarrow \pm \infty$.  Since we're concerned with $x$'s far down the $x$-axis, we are far away from $x=0$ so can rewrite $f(x)$ for these values of $x$ as \[ f(x) = 4x^3 \left( 1 - \dfrac{1}{4x^2} + \dfrac{5}{4x^3}\right)\]
+
+As $x$ becomes unbounded (in either direction), the terms $\frac{1}{4x^2}$ and $\frac{5}{4x^3}$ become closer and closer to $0$, as the table below indicates.
+
+
+
+\renewcommand*{\arraystretch}{2}
+\setlength{\arrayrulewidth}{0.5mm}
+\setlength{\tabcolsep}{18pt}
+\[ 
+\begin{array}{|r||r|r|}  
+
+\hline 
+\rowcolor{gray!20}
+ x & \frac{1}{4x^2} & \frac{5}{4x^3} \\[4pt] \hline
+-1000  & 0.00000025 & -0.00000000125 \\  \hline
+-100  & 0.000025 & -0.00000125 \\  \hline
+-10 & 0.0025 & -0.00125 \\  \hline
+10  & 0.0025 & 0.00125 \\  \hline
+100 & 0.000025 & 0.00000125 \\  \hline
+1000 & 0.00000025 & 0.00000000125 \\  \hline
+\end{array} \]
+
+\smallskip
+
+In other words, as $x \rightarrow \pm \infty$, $f(x) \approx 4x^3\left( 1 - 0 +0\right) = 4x^3$, which is the leading term of $f$.  The formal proof of this theorem requires calculus, but it works in much the same way.  Factoring out the leading term leaves
+
+\[ f(x) = a_{n} x^{n} \left( 1 + \dfrac{a_{n-\mbox{\tiny$1$}}}{a_{n} x}+ \ldots + \dfrac{a_{\mbox{\tiny$2$}}}{a_{n} x^{n-2}} + \dfrac{a_{\mbox{\tiny$1$}}}{a_{n} x^{n-1}}+\dfrac{a_{\mbox{\tiny$0$}}}{a_{n} x^{n}}\right)\]
+
+As $x \rightarrow \pm \infty$, any term with an $x$ in the denominator becomes closer and closer to $0$, and we have $f(x) \approx a_{n} x^{n}$.  
+
+Geometrically, this theorem says that if we graph $y=f(x)$ using a graphing calculator, and continue to `zoom out', the graph of it and its leading term become indistinguishable.  Below are the graphs of $y=4x^3-x+5$ (the thicker line) and $y=4x^3$ (the thinner line) in two different windows.
+
+\[
+\begin{array}{ccc}
+
+\resizebox {3.5 cm} {!} { 
+            \begin{tikzpicture}
+            	\begin{axis}[
+            		domain=-6.5:6.5, ymax=10,xmax=6.5, ymin=-5, xmin=-6.5,
+            		axis lines =center, xlabel=$x$, ylabel=$y$,
+            		every axis y label/.style={at=(current axis.above origin),anchor=south},
+            		every axis x label/.style={at=(current axis.right of origin),anchor=west}, ytick={-10,-8,...,8,10}, grid=none,
+            		]
+           	\addplot [draw=penColor,domain=-3.5:3.5, line width=1 mm, smooth,samples=300] {4*x^3-x+5};   
+           	\addplot [draw=penColor,domain=-3.5:3.5, line width=0.5 mm, smooth,samples=300] {4*x^3};   
+	      \end{axis}
+            \end{tikzpicture}}
+
+& \hspace{.1in} &
+
+
+\resizebox {3.5 cm} {!} { 
+            \begin{tikzpicture}
+            	\begin{axis}[
+            		domain=-6.5:6.5, ymax=100,xmax=6.5, ymin=-100, xmin=-6.5,
+            		axis lines =center, xlabel=$x$, ylabel=$y$,
+            		every axis y label/.style={at=(current axis.above origin),anchor=south},
+            		every axis x label/.style={at=(current axis.right of origin),anchor=west}, ytick={-100,-80,...,80,100}, grid=none,
+            		]
+           	\addplot [draw=penColor,domain=-3.5:3.5, line width=1 mm, smooth,samples=300] {4*x^3-x+5};   
+           	\addplot [draw=penColor,domain=-3.5:3.5, line width=0.5 mm, smooth,samples=300] {4*x^3};   
+	      \end{axis}
+            \end{tikzpicture}}
+
+\end{array}
+\]
+
+
+\section{Other Properties of Polynomial Graphs}
+
+Despite having different end behavior, all functions of the form $f(x) = ax^{n}$ for natural numbers $n$ share two special function properties:  they  are \index{continuous}\index{function ! continuous}\textbf{continuous} and \index{smooth}\index{function ! smooth}\textbf{smooth}.  While these concepts are formally defined using Calculus, informally, graphs of continuous functions have no `breaks' or `holes' in them, and the graphs of smooth functions have no `sharp turns'.  It turns out that these traits are preserved when functions are added together, so general polynomial functions inherit these qualities.  Below we find the graph of a function which is neither smooth nor continuous, and to its right we have a graph of a polynomial, for comparison.  The function whose graph appears on the left fails to be continuous where it has a `break' or `hole' in the graph;  everywhere else, the function is continuous.  The function is continuous at the `corner' and the `cusp', but we consider these `sharp turns', so these are places where the function fails to be smooth.  Apart from these four places, the function is smooth and continuous.  Polynomial functions are smooth and continuous everywhere, as exhibited in the graph on the right.
+
+\[
+\begin{array}{ccc}
+
+\resizebox {3.5 cm} {!} { 
+            \begin{tikzpicture}
+            	\begin{axis}[
+            		domain=-6.5:6.5, ymax=6.5,xmax=6.5, ymin=-6.5, xmin=-6.5,
+            		axis lines =center, xlabel=$x$, ylabel=$y$,
+            		every axis y label/.style={at=(current axis.above origin),anchor=south},
+            		every axis x label/.style={at=(current axis.right of origin),anchor=west}, ,
+            		]
+           	\addplot [draw=penColor,domain=-7:-3, line width=1 mm, smooth,samples=300, <- ] {-x-1};   
+           %	\addplot [draw=penColor,domain=-3:-2, line width=1 mm, smooth,samples=300, -{Circle[length=4mm, fill=white]}] {1-(2/(x+1))};   
+           	\addplot [draw=penColor,domain=-3:-2, line width=1 mm, smooth,samples=300, -{Circle[length=4mm, fill=white]}] {5-x^2/3};   
+           	\addplot [draw=penColor,domain=-2:2, line width=1 mm, smooth,samples=300, {Circle[length=4mm, fill=penColor]}-] {.25*x^2-2};   
+           	\addplot [draw=penColor,domain=2:6.5, line width=1 mm, smooth,samples=300, ->, {Circle[length=4mm, fill=white]}-] {.25*x^2-2};   
+
+   	%	\addplot[color=black,fill=white,only marks, mark=*, ultra thick] coordinates{(-2,3)}; % 		\addplot[color=black,fill=white,only marks, mark=*] coordinates{(2,-1)}; 
+          %           \addplot[color=black,fill=black,only marks,line width=1 mm, mark=*] coordinates{(-2,-1)}; 
+
+		\node at (axis cs:-4, 1) [penColor] {\Huge $\text{cusp}$};    
+		\node at (axis cs:3.5, -2) [penColor] {\Huge $\text{hole}$};    
+		\node at (axis cs:-3.5, -2) [penColor] {\Huge $\text{break}$};    
+	      \end{axis}
+            \end{tikzpicture}}
+
+& \hspace{.1in} &
+
+
+\resizebox {3.5 cm} {!} { 
+            \begin{tikzpicture}
+            	\begin{axis}[
+            		domain=-6.5:6.5, ymax=6.5,xmax=6.5, ymin=-6.5, xmin=-6.5,
+            		axis lines =center, xlabel=$x$, ylabel=$y$,
+            		every axis y label/.style={at=(current axis.above origin),anchor=south},
+            		every axis x label/.style={at=(current axis.right of origin),anchor=west},
+            		]
+           	\addplot [draw=penColor,domain=-6.5:6.5, line width=1 mm, smooth,samples=300] {0.5*x*(x+2)*(x-3)};   
+                   %  \node at (axis cs:-3.5, -1.25) [penColor] {\Huge $f(x)=x^7$};    
+	      \end{axis}
+            \end{tikzpicture}}
+
+\end{array}
+\]
+
+The notion of smoothness is what tells us graphically that, for example, $f(x) = |x|$, whose graph is the characteristic `$\vee$' shape, cannot be a polynomial. 
+
+\section{Roots of Polynomials}
+
+We will often what to find the $x$-intercepts or roots of polynomials.  To do this, we will use the fact that a product of factors can only equal 0 if one of the factors equals zero.  Consider the following example.
+
+\begin{example}
+ Find the roots of $f(x) = x^3 (x-3)^2 (x+2) \left(x^2+1\right)$.
+
+\begin{explanation}
+We are looking for the $x$-values where 
+\[
+x^3 (x-3)^2 (x+2) \left(x^2+1\right)=0
+\]
+
+Because we have a product of factors equal to 0, this will equal 0 exactly when one of the factors equals 0.  Therefore, we have:
+
+\renewcommand*{\arraystretch}{1.2}
+\setlength{\arrayrulewidth}{0.5mm}
+\setlength{\tabcolsep}{18pt}
+\[
+\begin{array}{ccccccc}
+x^3=0 & \text{  or  } &  (x-3)^2=0 & \text{  or  } &  (x+2)=0 & \text{  or  } &  (x^2+1)=0 \\
+x=0 &  &  (x-3)=0 & \ &  (x+2)=0 & &  x^2=-1 \\
+ &  &  x=3 & \ &  x=-2 & &  \text{impossible} \\
+\end{array}
+\]
+
+Notice that the $x^2+1$ factor does not give any roots.  This is because it is an irreducible quadratic.
+\end{explanation}
+\end{example}
+
+You may notice that this polynomial was given as a product of linear factors and irreducible quadratic factors.  This was not a coincidence.  We have the following theorem.
+
+\begin{theorem}[Fundemental Theorem of Algebra]
+Every polynomial can be written as the product of linear factors and irreducible quadratic factors.
+\end{theorem}
+
+This way of writing polynomials is extremely helpful when you want to find the roots.  Its is so helpful we give it a name.
+
+\begin{definition}
+A polynomial is written in Factored Form (or Root Form) when it is written as a product of linear and irreducible quadratic factors with the leading coefficient factored out.
+$$p(x)=a(x-r_1)(x-r_2)...(x-r_k)(x^2+b_1x+c_1)(x^2+b_2x+c_2)...(x^2+b_lx+c_l)$$
+where $(x^2+b_1x+c_1),(x^2+b_2x+c_2),...,(x^2+b_lx+c_l)$ are all irreducible quadratics.
+\end{definition}
+
+It turns out that that $x=r$ is a root of the polynomial $p(x)$ exactly when $(x-r)$ is a factor that appears when $p(x)$ is written in Factored Form, just like in our example above.
+
+\begin{remark}
+Even though all polynomials can be written this way, that does not mean it is easy (or even possible) to take a general polynomial in standard form and write it in factored form!  There is no equivalent of the quadratic formula for polynomials of high enough degree.
+\end{remark}
+
+You may noticed another phenomena in our earlier example.  Some factors were raised to a power higher than 1.  For example, in $f(x) = x^3 (x-3)^2 (x+2) \left(x^2+1\right)$, the factor $(x-3)^2$ is raised to a the second power.  This does not mean we get any additional roots.  Notice that $(x-3)^2=(x-3)(x-3)$ and so both of these factors give a root of $x=3$.  Instead, the second power has an impact on the way the graph of the polynomial, $f(x)$, looks when it is near the root $x=3$.  On either side of $x=3$, the graph of $f(x)$ will bounce off the $x$-axis and turn around just like the graph of $y=x^2$ does as the point $(0,0)$.  In general, it will turn out that if we have $(x-r)^m$ in the factored form of our polynomial, then the graph of the polynomial near $x=r$ will look similar to how the graph of $y=x^m$ looks near $(0,0)$.  
+
+We give this concept a name and solidify it with a theorem.  
+
+\begin{definition}
+Suppose $f$ is a polynomial function and $m$ is a natural number. If $(x-c)^{m}$ is a factor of $f(x)$ but $(x-c)^{m+1}$ is not, then we say $x=c$ is a zero of \index{polynomial function ! zero ! multiplicity}\index{multiplicity ! of a zero}\index{zero ! multiplicity of}\textbf{multiplicity} $m$.
+\end{definition}
+
+Hence,  rewriting  $f(x) = x^3 (x-3)^2 (x+2)$ as $f(x) = (x-0)^3 (x-3)^2 (x-(-2))^{1}$, we see that $x=0$ is a zero of multiplicity $3$, $x=3$ is a zero of multiplicity $2$ and $x=-2$ is a zero of multiplicity $1$.
+
+\begin{theorem}[Role of Multiplicity]
+ Suppose $f$ is a polynomial function  and $x=c$ is a zero of multiplicity $m$.  \index{multiplicity ! effect on the graph of a polynomial}
+
+\begin{itemize}
+
+\item  If $m$ is even, the graph of $y=f(x)$ touches and rebounds from the $x$-axis at $(c,0)$.
+
+\item  If $m$ is odd, the graph of $y=f(x)$ crosses through the $x$-axis at $(c,0)$.
+
+\end{itemize}
+\end{theorem}
+
+\section{Graphing Polynomials}
+
+Our last example shows how end behavior and multiplicity allow us to sketch a decent graph without appealing to a sign diagram.
+
+\begin{example}
+Sketch the graph of $f(x) = -3(2x-1)(x+1)^2$ using end behavior and the multiplicity of its zeros.
+\begin{explanation}
+The end behavior of the graph of $f$ will match that of its leading term.  To find the leading term, we multiply by the leading terms of each factor to get $(-3)(2x)(x)^2 = -6x^3$.  This tells us that the graph will start above the $x$-axis, in Quadrant II, and finish below the $x$-axis, in Quadrant IV.  
+
+\resizebox {5 cm} {!} { 
+            \begin{tikzpicture}
+            	\begin{axis}[
+            		domain=-3:3, ymax=10,xmax=3, ymin=-10, xmin=-3,
+            		axis lines =center, xlabel=$x$, ylabel=$y$,
+            		every axis y label/.style={at=(current axis.above origin),anchor=south},
+            		every axis x label/.style={at=(current axis.right of origin),anchor=west}, xtick={-10,10}, ytick={-30,30}, grid=none,
+            		]
+           	\addplot [draw=penColor,domain=-2:-1.75, line width=1 mm, smooth,samples=300, <-] {-x^3};   
+           	\addplot [draw=penColor,domain=-1.75:1.75, dashed, line width=1 mm, smooth,samples=300, ] {-x^3};   
+           	\addplot [draw=penColor,domain=1.75:2, line width=1 mm, smooth,samples=300, ->] {-x^3};   
+		%\node at (axis cs:-0, -1.25) [penColor] {\Huge $a<0, n \text{ odd}$};  
+	      \end{axis}
+            \end{tikzpicture}}
+
+Note that we don't yet know what is happening in that dotted region in the middle.
+
+Next, we find the zeros of $f$.  Fortunately for us, $f$ is factored.  Setting each factor equal to zero gives is $x = \frac{1}{2}$ and $x=-1$ as zeros. 
+
+To find the multiplicity of $x=\frac{1}{2}$ we note that it corresponds to the factor $(2x-1)$.  This isn't strictly in Factored Form.  If we factor out the $2$, however, we get $(2x-1) = 2\left(x-\frac{1}{2}\right)$, and we see that the multiplicity of $x = \frac{1}{2}$ is $1$.  Since $1$ is an odd number, we know from our theorem about multiplicity that the graph of $f$ will cross through the $x$-axis at $\left(\frac{1}{2},0\right)$.   What's more, we know that the graph will pass right through the $x$-axis at $x=0.5$ without flattening out because the graph will look similar to the way $y=x$ looks at $(0,0)$ when we zoom in around $(0.5,0)$. 
+
+Since the zero $x=-1$ corresponds to the factor $(x+1)^2 = (x-(-1))^2$, we find its multiplicity to be $2$ which is an even number.  As such, the graph of $f$ will touch and rebound from the $x$-axis at $(-1,0)$.  
+
+Though we're not asked to, we can find the $y$-intercept by finding $f(0) = -3(2(0)-1)(0+1)^2 = 3$.  Thus  $(0,3)$ is an additional point on the graph.  Putting this together gives us the graph below.
+
+\begin{image}
+            \begin{tikzpicture}
+            	\begin{axis}[
+            		domain=-3:3, ymax=8,xmax=3, ymin=-8, xmin=-3,
+            		axis lines =center, xlabel=$x$, ylabel=$y$,
+            		every axis y label/.style={at=(current axis.above origin),anchor=south},
+            		every axis x label/.style={at=(current axis.right of origin),anchor=west}, xtick={-3,-2.5,...,3}, ytick={-10,-8,...,10}, 
+            		]
+           	\addplot [draw=penColor,domain=-0:.8, line width=0.5 mm, smooth,samples=300, ->] {-3*(2*x-1)*(x+1)^2};   
+           	\addplot [draw=penColor,domain=-1.75:0, line width=0.5 mm, smooth,samples=300, <-] {-3*(2*x-1)*(x+1)^2};   
+		%\node at (axis cs:-0, -1.25) [penColor] {\Huge $a<0, n \text{ odd}$};  
+
+                     \addplot[color=black,fill=black,only marks,mark=*] coordinates{(-1,0)}; 
+                     %\node[above] at (axis cs:-1,-4) [] { $(-1,0)$};
+                     \addplot[color=black,fill=black,only marks,mark=*] coordinates{(0,3)}; 
+                     %\node[above] at (axis cs:-1,3.5) [] { $(0,3)$};
+                     \addplot[color=black,fill=black,only marks,mark=*] coordinates{(0.5,0)}; 
+                     %\node[above] at (axis cs:1,1) [] { $(0,0.5)$};
+	      \end{axis}
+            \end{tikzpicture}
+\end{image}
+
+\end{explanation}
+\end{example}
+
+Note that while we can say a lot about how graphs of polynomials will look, we cannot say exactly where the turning points (peaks and valleys) will be.  That will require calculus.
+
+
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
