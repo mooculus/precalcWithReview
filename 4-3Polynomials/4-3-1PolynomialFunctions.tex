@@ -26,7 +26,7 @@ $$
 When a polynomial is written in this way, we say it is in \dfn{standard form}.
 \end{definition}
 
-Consider $f(x) = 4x^5 - 3x^2 + 2x - 5$.  Is this a polynomial function?  We can re-write the formula for $f$ as $f(x)= 4x^5 + 0 x^{4} + 0 x^{3} + (-3)x^2 + 2 x + (-5).$  Comparing this with our definition of Polyomial Functions, we identify $n=5$, $a_{\mbox{\tiny $5$}} = 4$, $a_{\mbox{\tiny $4$}} = 0$, $a_{\mbox{\tiny $3$}} = 0$, $a_{\mbox{\tiny $2$}} = -3$, $a_{\mbox{\tiny $1$}} = 2$ and $a_{\mbox{\tiny $0$}} = -5$.  In other words, $a_{\mbox{\tiny $5$}}$ is the coefficient of $x^{5}$, $a_{\mbox{\tiny $4$}}$ is the coefficient of $x^{4}$, and so forth;  the subscript on the $a$'s merely indicates to which power of $x$ the coefficient belongs.  
+Consider $f(x) = 4x^5 - 3x^2 + 2x - 5$.  Is this a polynomial function?  We can re-write the formula for $f$ as $f(x)= 4x^5 + 0 x^{4} + 0 x^{3} + (-3)x^2 + 2 x + (-5).$  Comparing this with our definition of Polyomial Functions, we identify $n=5$, $a_{5} = 4$, $a_{4} = 0$, $a_{3} = 0$, $a_{2} = -3$, $a_{1} = 2$ and $a_{0} = -5$.  In other words, $a_{5}$ is the coefficient of $x^{5}$, $a_{4}$ is the coefficient of $x^{4}$, and so forth;  the subscript on the $a$'s merely indicates to which power of $x$ the coefficient belongs.  
 
 \begin{example}
 Determine if the following functions are polynomials.  Explain your reasoning.
@@ -75,7 +75,7 @@ Determine if the following functions are polynomials.  Explain your reasoning.
 
 Suppose $f$ is a polynomial function. 
 \begin{itemize}
-\item Given $f(x) = a_{n} x^{n} + a_{n-\mbox{\tiny$1$}} x^{n-\mbox{\tiny$1$}} + \ldots + a_{\mbox{\tiny $2$}} x^{\mbox{\tiny $2$}} + a_{\mbox{\tiny $1$}} x + a_{\mbox{\tiny $0$}}$ with $a_{n} \neq 0$, we say 
+\item Given $f(x) = a_{n} x^{n} + a_{n-1} x^{n-1} + \ldots + a_{2} x^{2} + a_{1} x + a_{0}$ with $a_{n} \neq 0$, we say 
 
 \begin{itemize}
 
@@ -89,21 +89,21 @@ Suppose $f$ is a polynomial function.
 
 \item  The real number $a_{n}$ is called the \index{polynomial function ! leading coefficient}\index{leading coefficient of a polynomial}\dfn{leading coefficient} of the polynomial $f$.
 
-\item  The real number $a_{\mbox{\tiny $0$}}$ is called the \index{polynomial function ! constant term}\index{constant term of a polynomial}\dfn{constant term} of the polynomial $f$.
+\item  The real number $a_{0}$ is called the \index{polynomial function ! constant term}\index{constant term of a polynomial}\dfn{constant term} of the polynomial $f$.
 
 \item  The $x$-intercepts of polynomials are also called \dfn{roots}.  Note that we usually reserve the word roots for talking about the $x$-intercepts of polynomials and don't use it for the $x$-intrecepts of other types of functions.
 
 \end{itemize}
 
-\item  If $f(x) = a_{\mbox{\tiny $0$}}$, and $a_{\mbox{\tiny $0$}} \neq 0$, we say $f$ has degree $0$.
+\item  If $f(x) = a_{0}$, and $a_{0} \neq 0$, we say $f$ has degree $0$.
 
-\item  If $f(x) = 0$, we say $f$ has no degree.\footnote{Some authors say $f(x) = 0$ has degree $-\infty$ for reasons not even we will go into.}
+\item  If $f(x) = 0$, we say $f$ has no degree.
 
 \end{itemize}
 
 \end{definition}
 
-The reader may well wonder why we have chosen to separate off constant functions from the other polynomials.  Why not just lump them all together and, instead of forcing $n$ to be a natural number, $n = 1, 2, \ldots$, allow $n$ to be a whole number, $n = 0, 1, 2, \ldots$.  We could unify all of the cases, since, after all, isn't $a_{\mbox{\tiny $0$}}x^{0} = a_{\mbox{\tiny $0$}}$?  The answer is `yes, as long as $x\neq 0$.'  The function $f(x) = 3$ and $g(x) = 3x^{0}$ are different, because their domains are different.  The number $f(0) = 3$ is defined, whereas $g(0) = 3(0)^{0}$ is not.  (Technically, $0^{0}$ is an indeterminant form, which is a special case of being undefined.  You will explore this more in calculus.)  Indeed, much of the theory we will develop in this chapter doesn't include the constant functions, so we might as well treat them as outsiders from the start.  One good thing that comes from our definition of polynomials is that we can now think of linear functions as degree $1$ (or `first degree') polynomial functions and quadratic functions as degree $2$ (or `second degree') polynomial functions.
+The reader may well wonder why we have chosen to separate off constant functions from the other polynomials.  Why not just lump them all together and, instead of forcing $n$ to be a natural number, $n = 1, 2, \ldots$, allow $n$ to be a whole number, $n = 0, 1, 2, \ldots$.  We could unify all of the cases, since, after all, isn't $a_{0}x^{0} = a_{0}$?  The answer is `yes, as long as $x\neq 0$.'  The function $f(x) = 3$ and $g(x) = 3x^{0}$ are different, because their domains are different.  The number $f(0) = 3$ is defined, whereas $g(0) = 3(0)^{0}$ is not.  (Technically, $0^{0}$ is an indeterminant form, which is a special case of being undefined.  You will explore this more in calculus.)  Indeed, much of the theory we will develop in this chapter doesn't include the constant functions, so we might as well treat them as outsiders from the start.  One good thing that comes from our definition of polynomials is that we can now think of linear functions as degree $1$ (or `first degree') polynomial functions and quadratic functions as degree $2$ (or `second degree') polynomial functions.
 
 \begin{example}  
 Find the degree, leading term, leading coefficient and constant term of the following polynomial functions.
@@ -364,7 +364,7 @@ Graphically:
 Now lets consider the end behavior of polynomials in general.  It turns out that the end behavior of a polynomial always matches the end behavior of its leading term.
 
 \begin{theorem}[End Behavior of Polynomials]
-The end behavior of a polynomial $f(x) = a_{n} x^{n} + a_{n-\mbox{\tiny$1$}} x^{n-\mbox{\tiny$1$}} + \ldots + a_{\mbox{\tiny $2$}} x^{\mbox{\tiny $2$}} + a_{\mbox{\tiny $1$}} x + a_{\mbox{\tiny $0$}}$ with $a_{n} \neq 0$ matches the end behavior of $y = a_{n} x^{n}$.  
+The end behavior of a polynomial $f(x) = a_{n} x^{n} + a_{n-1} x^{n-1} + \ldots + a_{2} x^{2} + a_{1} x + a_{0}$ with $a_{n} \neq 0$ matches the end behavior of $y = a_{n} x^{n}$.  
 \end{theorem}
 
 To see why this theorem is true, let's first look at a specific example.  Consider $f(x) = 4x^3 - x + 5$.  If we wish to examine end behavior, we look to see the behavior of $f$ as $x \rightarrow \pm \infty$.  Since we're concerned with $x$'s far down the $x$-axis, we are far away from $x=0$ so can rewrite $f(x)$ for these values of $x$ as \[ f(x) = 4x^3 \left( 1 - \dfrac{1}{4x^2} + \dfrac{5}{4x^3}\right)\]
@@ -373,28 +373,26 @@ As $x$ becomes unbounded (in either direction), the terms $\frac{1}{4x^2}$ and $
 
 
 
-\renewcommand*{\arraystretch}{2}
-\setlength{\arrayrulewidth}{0.5mm}
-\setlength{\tabcolsep}{18pt}
+%\renewcommand*{\arraystretch}{2}
+%\setlength{\arrayrulewidth}{0.5mm}
+%\setlength{\tabcolsep}{18pt}
 \[ 
-\begin{array}{|r||r|r|}  
-
-\hline 
-\rowcolor{gray!20}
- x & \frac{1}{4x^2} & \frac{5}{4x^3} \\[4pt] \hline
--1000  & 0.00000025 & -0.00000000125 \\  \hline
--100  & 0.000025 & -0.00000125 \\  \hline
--10 & 0.0025 & -0.00125 \\  \hline
-10  & 0.0025 & 0.00125 \\  \hline
-100 & 0.000025 & 0.00000125 \\  \hline
-1000 & 0.00000025 & 0.00000000125 \\  \hline
+\begin{array}{c|cc}  
+%\rowcolor{gray!20}
+ x & \frac{1}{4x^2} & \frac{5}{4x^3} \\[2ex] \hline
+-1000  & 0.00000025 & -0.00000000125 \\  
+-100  & 0.000025 & -0.00000125 \\  
+-10 & 0.0025 & -0.00125 \\  
+10  & 0.0025 & 0.00125 \\  
+100 & 0.000025 & 0.00000125 \\ 
+1000 & 0.00000025 & 0.00000000125 \\  
 \end{array} \]
 
 \smallskip
 
 In other words, as $x \rightarrow \pm \infty$, $f(x) \approx 4x^3\left( 1 - 0 +0\right) = 4x^3$, which is the leading term of $f$.  The formal proof of this theorem requires calculus, but it works in much the same way.  Factoring out the leading term leaves
 
-\[ f(x) = a_{n} x^{n} \left( 1 + \dfrac{a_{n-\mbox{\tiny$1$}}}{a_{n} x}+ \ldots + \dfrac{a_{\mbox{\tiny$2$}}}{a_{n} x^{n-2}} + \dfrac{a_{\mbox{\tiny$1$}}}{a_{n} x^{n-1}}+\dfrac{a_{\mbox{\tiny$0$}}}{a_{n} x^{n}}\right)\]
+\[ f(x) = a_{n} x^{n} \left( 1 + \dfrac{a_{n-1}}{a_{n} x}+ \ldots + \dfrac{a_{2}}{a_{n} x^{n-2}} + \dfrac{a_{1}}{a_{n} x^{n-1}}+\dfrac{a_{0}}{a_{n} x^{n}}\right)\]
 
 As $x \rightarrow \pm \infty$, any term with an $x$ in the denominator becomes closer and closer to $0$, and we have $f(x) \approx a_{n} x^{n}$.  
 
