@@ -619,15 +619,19 @@ Though we're not asked to, we can find the $y$-intercept by finding $f(0) = -3(2
 Note that while we can say a lot about how graphs of polynomials will look, we cannot say exactly where the turning points (peaks and valleys) will be.  That will require calculus.
 
 \section{Factoring}
-The following section will contain some techniques useful for factoring polynomials. 
+The following section will contain some techniques that are useful for factoring polynomials. 
 
 A common technique is factoring out a common factor. For example, in the polynomial $f(x) = x^4 - x^3$, each term contains a factor of $x^3$. Therefore, we can factor it out to find $f(x) = x^3(x - 1)$. 
 
-To factor a polynomial like $$f(x) = 2x^2 - 11x + 5,$$ we first multiply together the leading coefficient and the constant term to find 10. Our goal is then to find factors of 10 that sum to the linear coefficient, which in this case is -11. $-1$ and $-10$ fit the bill, since $(-1)(-10) = 10$ and $(-1) + (-10) = -11$. We can now replace the linear term $-11x$ with $-x - 10x$. This yields $$2x^2 - x - 10x + 5.$$ We can then group the terms by two: $$(2x^2 - x) + (-10x + 5).$$ Factoring out a common factor from each yields $$x(2x - 1) + -5(2x - 1).$$ Now, we factor our a common factor of $2x - 1$ from each term, yielding $$(x - 5)(2x - 1).$$ This completes the factorization.
+To factor a polynomial like $$f(x) = 2x^2 - 11x + 5,$$ we first multiply together the leading coefficient and the constant term to find 10. Our goal is then to find factors of 10 that sum to the linear coefficient, which in this case is -11. $-1$ and $-10$ fit the bill, since $(-1)(-10) = 10$ and $(-1) + (-10) = -11$. We can now replace the linear term $-11x$ with $-x - 10x$. This yields $$2x^2 - x - 10x + 5.$$ We can then group the terms by two: $$(2x^2 - x) + (-10x + 5).$$ Factoring out a common factor from each yields $$x(2x - 1) + -5(2x - 1).$$ Now, we factor out a common factor of $2x - 1$ from each term, yielding $$(x - 5)(2x - 1).$$ This completes the factorization.
+
+We can also apply this idea of factoring by grouping to higher-degree polynomials. Given the polynomial $$f(x) = 2x^3 + x^2 - 8x - 4,$$ we can group the terms by two: $$(2x^3 + x^2) + (-8x - 4).$$ Factoring out a common factor from each yields $$x^2(2x - 1) + -4(2x - 1).$$ Now, we factor out a common factor of $2x - 1$ from each term, yielding $$(x^2 - 4)(2x - 1).$$ Note that this further factors as $(x - 2)(x + 2)(2x - 1)$. 
 
 To factor a difference of squares $a^2 - b^2$, we can use the formula $$a^2 - b^2 = (a + b)(a - b),$$ which can be checked by multiplying out the right-hand side.
 
 To factor a difference of cubes, $a^3 - b^3$, we can use the formula $$a^3 - b^3 = (a - b)(a^2 + ab + b^2),$$ which can similarly be checked by multiplying out the right-hand side. 
+
+To factor a sum of cubes, $a^3 + b^3$, we can use the formula $$a^3 + b^3 = (a + b)(a^2 - ab + b^2).$$
 
 \end{document}
 
