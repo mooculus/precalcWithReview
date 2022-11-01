@@ -1,11 +1,11 @@
 \documentclass{ximera}
 
 \input{../preamble.tex}
-\author{Ivo Terek}
+\author{Ivo Terek, Elizabeth Miller}
 \license{Creative Commons Attribution-ShareAlike 4.0 International License}
 \acknowledgement{}
 %Source: Stitz-Zeager
-\title{Horizontal Asymptotes of Rational Functions}
+\title{End Behavior of Rational Functions}
 
 \begin{document}
 \licenseSZ
@@ -14,68 +14,19 @@
 \maketitle
 
 
-%%\typeout{************************************************}
-%%\typeout{Motivating Questions}
-%%\typeout{************************************************}
-%
-%\begin{motivatingQuestions}\begin{itemize}
-%\item By passing from $1/x$ to $p(x)/q(x)$, what changes? What can we say about the behavior of such ratio?
-%\item Just like $1/x$ had the lines $x=0$ and $y=0$ as asymptotes, what happens for an arbitrary rational function? Are vertical and horizontal asymptotes the only possible types?
-%\end{itemize}\end{motivatingQuestions}
-%
-%
-%%\typeout{************************************************}
-%%\typeout{Subsection Introduction}
-%%\typeout{************************************************}
-%
-%\section{Introduction}
-%
-%We have previously discussed the function $1/x$. Note that both the numerator $1$ and the denominator $x$ are polynomials (the former is a \emph{constant} polynomial). We can study what happens when we replace those with arbitrary polynomials.
-%
-%\begin{definition}
-%  A \emph{rational function} is a function defined as a ratio $f(x) = p(x)/q(x)$ of two polynomials $p(x)$ and $q(x)$, and this ratio makes sense for all real values of $x$, \emph{except} for those such that $q(x) = 0$.
-%\end{definition}
-%
-%\begin{example} Are the following functions rational? For which values of $x$ is the function undefined?
-%  \begin{enumerate}
-%  \item $f(x) = \frac{x^2-2}{x+1}$. \\[1em]
-%    \begin{explanation}
-%      It is a rational function. It is defined for all values of $x$, except for $x = -1$, because this makes the denominator $x+1$ be zero.
-%    \end{explanation}
-%  \item $f(x) = \frac{x^4-3x+1}{x^2-5x+6}$. \\[1em]
-%    \begin{explanation}
-%      It is a rational function. It is defined for all values of $x$, except for $x=2$ and $x=3$, because $x^2-5x+6 = (x-2)(x-3)$. 
-%    \end{explanation}
-%  \item $f(x) = \frac{x-1}{\sqrt{x^4+1}}$. \\[1em]
-%    \begin{explanation}
-%      It is \emph{not} a rational function, because the denominator $\sqrt{x^4+1}$ is \emph{not a polynomial}. Note that even though this does not define a rational function, it is defined for all possible values of $x$, since $\sqrt{x^4+1} \geq 1 > 0$ for all $x$.
-%    \end{explanation}
-%  \item A polynomial function $p(x)$. \\[1em]
-%    \begin{explanation}
-%      Any polynomial function is a rational function, simply because we can write $p(x) = p(x)/1$, and $1$ is a polynomial. And it is defined for every real value of $x$.
-%    \end{explanation}
-%  \item $f(x) = x^2-1 + \frac{x^3}{x^5-1}$. \\[1em]
-%    \begin{explanation}
-%      It is a rational function, which is defined for all $x$ except for $x=1$. To see that this is a rational function, you can either say that it is the sum of the rational functions $x^2-1$ and $x^3/(x^5-1)$, or rewrite it as $$  f(x) = \frac{(x^2-1)(x^5-1) + x^3}{x^5-1} = \frac{x^7-x^5-x^2+x^3-1}{x^5-1},  $$which is manifestly rational.
-%    \end{explanation}
-%  \end{enumerate}
-%\end{example}
 
+We have seen that the function $1/x$ has the line $x=0$ as a vertical asymptote, and the line $y=0$ as a horizontal asymptote. Rational functions, in general, may have not only vertical and horizontal asymptotes, but also \emph{slant asymptotes}. Let's start with horizontal and slant asymptotes as these both tell us about the end behavoir of the function.
 
-
-
-\section{Asymptotes - vertical and horizontal}
-
-We have seen that the function $1/x$ has the line $x=0$ as a vertical asymptote, and the line $y=0$ as a horizontal asymptote. Rational functions, in general, may have not only vertical and horizontal asymptotes, but also \emph{slant asymptotes}. Let's start with the two easier cases:
+\section{Horizontal Asymptotes}
 
 \begin{definition}
   \mbox{}
   \begin{enumerate}
-  \item The line $x=c$ is called a \emph{vertical asymptote} of the graph of a function $y=f(x)$ if as $x \to c^-$ or $x \to c^+$, either $f(x) \to +\infty$ or $f(x) \to -\infty$.
   \item The line $y=c$ is called a \emph{horizontal asymptote} of the graph of a function $y=f(x)$ if as $x \to -\infty$ or $x \to +\infty$, we have $f(x) \to c$.
   \end{enumerate}
 \end{definition}
 
+This means that as $x$ gets bigger and bigger (in the positive or negative direction), the $y$-values of the function get close to a particular value $y=c$.   Anther way to understand this that as $x$ gets bigger and bigger (in the positive or negative direction), the graph of the function approaches the horizontal line $y=c$.  Let's look at a particular example.
 
 \begin{example}
   \mbox{}
@@ -83,7 +34,10 @@ We have seen that the function $1/x$ has the line $x=0$ as a vertical asymptote,
   \item Consider the rational function $f(x) = \frac{x-1}{x-2}$. To understand $x\to +\infty$ intuitively, let's plug some big values for $x$:
     \begin{align*}
       f(100) &= \frac{99}{98} \approx 1.010... \\ f(1000) &= \frac{999}{998} \approx 1.001... \\ f(10000) &= \frac{9999}{9998} \approx 1.000...
-    \end{align*}It seems clear that $f(x) \to 1$ as $x \to +\infty$. This says that the line $y=1$ is a horizontal asymptote for $f(x)$. The same strategy shows that $f(x) \to 1$ when $x \to -\infty$ as well, so that $y=1$ is the only horizontal asymptote for $f(x)$. As for vertical asymptotes, we see that the only $x$-value for which $f(x)$ is undefined is $x=2$. So that's where we'll look, by choosing values for $x$ very close to $2$, but not equal to $2$. For example, we have that
+    \end{align*}
+It seems like $f(x) \to 1$ as $x \to +\infty$. This says that the line $y=1$ is a horizontal asymptote for $f(x)$. 
+
+The same strategy shows that $f(x) \to 1$ when $x \to -\infty$ as well, so that $y=1$ is the only horizontal asymptote for $f(x)$. As for vertical asymptotes, we see that the only $x$-value for which $f(x)$ is undefined is $x=2$. So that's where we'll look, by choosing values for $x$ very close to $2$, but not equal to $2$. For example, we have that
     \begin{align*}
       f(2.1) &= \frac{1.1}{0.1} = 11 \\ f(2.01) &= \frac{1.01}{0.01} = 101 \\ f(2.001) &= \frac{1.001}{0.001} = 1001 
     \end{align*}
