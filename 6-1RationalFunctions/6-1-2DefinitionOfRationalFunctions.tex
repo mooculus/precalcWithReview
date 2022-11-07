@@ -97,9 +97,31 @@ That looks quite different from the graphs of functions we have studied thus far
 
 \section{Combining Rational Functions}
 
-When we add, subtract, multiply, or divide rational functions, we get another rational function.
+When we add, subtract, multiply, or divide rational functions, we get another rational function. Let's see why.
 
+\subsection{Adding and Subtracting Rational Functions}
+Given the rational functions $f(x) = \frac{1}{x - 1}$ and $g(x) = \frac{1}{x + 1}$, we can rewrite them with a common denominator: $f(x) = \frac{1}{x - 1} \left(\frac{x + 1}{x + 1}\right) = \frac{x + 1}{(x - 1)(x + 1)}$ and $g(x) = \frac{1}{x +1} \left(\frac{x - 1}{x - 1}\right) = \frac{x - 1}{(x - 1)(x + 1)}$. Then,
+$$
+(f + g)(x) = f(x) + g(x) = \frac{x + 1}{(x - 1)(x + 1)} + \frac{x - 1}{(x - 1)(x + 1)} = \frac{2x}{(x - 1)(x + 1)},
+$$
+yielding another rational function, since both the numerator and denominator are polynomials. 
 
+This idea can be expanded to the sum of any two rational functions. Given two rational functions $f(x) = \frac{p(x)}{q(x)}$ and $g(x) = \frac{r(x)}{s(x)}$, with $p(x)$, $q(x)$, $r(x)$, and $s(x)$ being polynomials, then 
+$$
+(f + g)(x) = \frac{p(x)}{q(x)} + \frac{r(x)}{s(x)} = \frac{p(x)s(x)}{q(x)s(x)} + \frac{r(x)q(x)}{q(x)s(x)} = \frac{p(x)s(x) + r(x)q(x)}{q(x)s(x)}, 
+$$
+which has polynomials as its numerator and denominator and is therefore a rational function. 
+
+Furthermore, by replacing $r(x)$ above with $-r(x)$, we can see that subtracting two rational functions also yields a rational function. Note that the sum and difference of two rational functions are only defined when both rational functions are defined. 
+
+\subsection{Multiplying and Dividing Rational Functions}
+Let's look at multiplication. Given two rational functions $f(x) = \frac{p(x)}{q(x)}$ and $g(x) = \frac{r(x)}{s(x)}$, with $p(x)$, $q(x)$, $r(x)$, and $s(x)$ being polynomials, then 
+$$
+(f \cdot g)(x) = \frac{p(x)}{q(x)} \cdot \frac{r(x)}{s(x)} =  \frac{p(x)r(x)}{q(x)s(x)}, 
+$$
+which has polynomials as its numerator and denominator and is therefore a rational function. 
+
+Furthermore, by swapping the roles of $r(x)$ and $s(x)$, we can see that dividing two rational functions also results in a rational function. Note that the product of two rational functions is only defined when both rational functions are defined. In addition, the quotient of two rational functions is only defined when the dividend and the reciprocal of the divisor are defined. 
 %
 %
 %\section{Asymptotes - vertical and horizontal}
