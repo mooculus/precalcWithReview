@@ -13,9 +13,7 @@
 \end{abstract}
 \maketitle
 
-
-
-We have seen that the function $1/x$ has the line $x=0$ as a vertical asymptote, and the line $y=0$ as a horizontal asymptote. Rational functions, in general, may have not only vertical and horizontal asymptotes, but also \emph{slant asymptotes}. Let's start with horizontal and slant asymptotes as these both tell us about the end behavoir of the function.
+As we have with previous functions we have studied, let's look at the end behavior of rational functions.  Recall that we noticed that the function $f(x)=\frac{1}{x}$ approached 0 as x approached infinity or negative infinity.  In general, if the $y$-values of a function approach a specific number as $x$ approaches infinity or negative infinity, we call that a horizontal asympote of the function.
 
 \section{Horizontal Asymptotes}
 
@@ -26,41 +24,47 @@ We have seen that the function $1/x$ has the line $x=0$ as a vertical asymptote,
   \end{enumerate}
 \end{definition}
 
-This means that as $x$ gets bigger and bigger (in the positive or negative direction), the $y$-values of the function get close to a particular value $y=c$.   Anther way to understand this that as $x$ gets bigger and bigger (in the positive or negative direction), the graph of the function approaches the horizontal line $y=c$.  Let's look at a particular example.
+This means that as $x$ gets bigger and bigger (in the positive or negative direction), the $y$-values of the function get close to a particular value $y=c$.   Anther way to understand this that as $x$ gets bigger and bigger (in the positive or negative direction), the graph of the function approaches the horizontal line $y=c$.  
 
-\begin{example}
-  \mbox{}
-  \begin{enumerate}
-  \item Consider the rational function $f(x) = \frac{x-1}{x-2}$. To understand $x\to +\infty$ intuitively, let's plug some big values for $x$:
+We know from looking at $f(x)=\frac{1}{x}$ that some rational functions have horizontal asymptotes.  The question we would like to investigate is which rational functions have horizontal asymptotes, and if a rational function does have a horizontal asymptote, how do we determine it's value?  Let's look at a few particular examples.
+
+\begin{example} 
+
+Consider the rational function $f(x) = \frac{x-1}{x-2}$. To intuitively understand $x\to +\infty$ intuitively, let's plug some big values for $x$:
     \begin{align*}
       f(100) &= \frac{99}{98} \approx 1.010... \\ f(1000) &= \frac{999}{998} \approx 1.001... \\ f(10000) &= \frac{9999}{9998} \approx 1.000...
     \end{align*}
-It seems like $f(x) \to 1$ as $x \to +\infty$. This says that the line $y=1$ is a horizontal asymptote for $f(x)$. 
+It seems like $f(x) \to 1$ as $x \to +\infty$.  That would mean that the line $y=1$ is a horizontal asymptote for $f(x)$. 
 
-The same strategy shows that $f(x) \to 1$ when $x \to -\infty$ as well, so that $y=1$ is the only horizontal asymptote for $f(x)$. As for vertical asymptotes, we see that the only $x$-value for which $f(x)$ is undefined is $x=2$. So that's where we'll look, by choosing values for $x$ very close to $2$, but not equal to $2$. For example, we have that
-    \begin{align*}
-      f(2.1) &= \frac{1.1}{0.1} = 11 \\ f(2.01) &= \frac{1.01}{0.01} = 101 \\ f(2.001) &= \frac{1.001}{0.001} = 1001 
-    \end{align*}
-    indicates that $f(x) \to +\infty$ as $x \to 2^+$. Similarly, you can check that $f(x) \to -\infty$ as $x \to 2^-$, so the line $x=2$ is a vertical asymptote for $f(x)$ (in fact, the only one). Here's a graph:
+The same strategy shows that $f(x) \to 1$ when $x \to -\infty$ as well, so that $y=1$ is the only horizontal asymptote for $f(x)$. %As for vertical asymptotes, we see that the only $x$-value for which $f(x)$ is undefined is $x=2$. So that's where we'll look, by choosing values for $x$ very close to $2$, but not equal to $2$. For example, we have that
+%    \begin{align*}
+%      f(2.1) &= \frac{1.1}{0.1} = 11 \\ f(2.01) &= \frac{1.01}{0.01} = 101 \\ f(2.001) &= \frac{1.001}{0.001} = 1001 
+%    \end{align*}
+%    indicates that $f(x) \to +\infty$ as $x \to 2^+$. Similarly, you can check that $f(x) \to -\infty$ as $x \to 2^-$, so the line $x=2$ is a vertical asymptote for $f(x)$ (in fact, the only one). 
+
+Here's a graph of the function $f(x) = \frac{x-1}{x-2}$.  Notice how the function gets close to the line $y=1$ as it goes off the page on the left and right sides.
 
 \begin{image}
 \begin{tikzpicture}
     \begin{axis}
       \addplot[samples=200,domain=2.01:7]{(x-1)/(x-2)};
       \addplot[samples=200,domain=-7:1.99]{(x-1)/(x-2)};
-      \addplot[dashed, color=penColor] coordinates {(2,-7) (2,7)};
+ %     \addplot[dashed, color=penColor] coordinates {(2,-7) (2,7)};
       \addplot[dashed, color=penColor, domain=-7:7]{1};
     \end{axis}
 \end{tikzpicture}
 \end{image}
 
-   \item Consider now the rational function $f(x) = \frac{x-1}{x^2-3x+2}$. Let's do as above, and start looking for horizontal asymptotes.
+\end{example}
+
+\begin{example}
+Consider now the rational function $g(x) = \frac{x-1}{x^2-3x+2}$. Let's do as above, and start looking for horizontal asymptotes.
   \begin{align*}
-    f(100) &\approx 0.010... \\
-    f(1000) &\approx 0.001... \\
-    f(1000) &\approx 0.000...
+   g(100) &\approx 0.010... \\
+   g(1000) &\approx 0.001... \\
+    g(10000) &\approx 0.000...
   \end{align*}
-  This suggests that $f(x) \to 0$ as $x \to +\infty$. Similarly, you can convince yourself that $f(x) \to 0$ as $x \to -\infty$, so that $y=0$ is the only horizontal asymptote. And for vertical asymptotes, we'll again find the $x$-values for which $f(x)$ is undefined, and see whether any of those indicates a vertical asymptote. Noting that $x^2-3x+2 = (x-1)(x-2)$, we can see that $f(x)$ is undefined for $x=1$ and $x=2$. However, we may write that $$   f(x) = \frac{x-1}{x^2-3x+2} = \frac{x-1}{(x-1)(x-2)} = \frac{1}{x-2},  $$\emph{provided $x \neq 1$}. And $1/(x-2)$ does not increase (or decrease) without bound as $x$ approaches $1$ from either side --- in fact, it approaches $-1$. So, even though $f(x)$ is undefined for the value $x=1$, the line $x=1$ is \emph{not} a vertical asymptote for $f(x)$. But comparing the expression $f(x) = 1/(x-2)$ (again, valid for $x \neq 1$) with what we have previously seen for the function $1/x$, we see that $f(x) \to +\infty$ as $x \to 2^+$ and $f(x) \to -\infty$ as $x \to 2^-$, so that the line $x=2$ is a vertical asymptote for $f(x)$. Here's the graph:
+  This suggests that $g(x) \to 0$ as $x \to +\infty$. Similarly, you can convince yourself that $g(x) \to 0$ as $x \to -\infty$, so that $y=0$ is the only horizontal asymptote.  Here's the graph of $g(x) = \frac{x-1}{x^2-3x+2}$.  Notice how the function gets close to the line $y=0$ as it goes off the page on the left and right sides.
 
       \begin{image}
         \begin{tikzpicture}
@@ -69,30 +73,28 @@ The same strategy shows that $f(x) \to 1$ when $x \to -\infty$ as well, so that 
             \addplot[samples=200,domain=1.01:1.99]{1/(x-2)};
             \addplot[samples=200,domain=2.01:7]{1/(x-2)};
             \draw[fill=white](axis cs:1,-1)circle(1mm);
-            \addplot[dashed, thick, color=penColor] coordinates {(2,-7) (2,7)};
+       %     \addplot[dashed, thick, color=penColor] coordinates {(2,-7) (2,7)};
             \addplot[thick, dashed, color=penColor, domain=-7:7]{0};
           \end{axis}
         \end{tikzpicture}
       \end{image}
 
-  \begin{callout}
-    {\bf Warning:} In item (b) of the above example, the function $f(x)$ given is \emph{not} the same thing as the function $g(x) = 1/(x-2)$. The function $f(x)$ is undefined for $x=1$, but $g(1)$ is defined, and it equals $-1$. The domain is a crucial part of the data defining a function. We will address these issues on Unit 5. 
-  \end{callout}
-  \end{enumerate}
+You may wonder why there is a hole in this graph!  We will explore that more in the next section.
+
 \end{example}
 
 
 
-\begin{exploration}
-  A mathematical model for the population $P$, in thousands, of a certain species of bacteria, $t$ days after it is introduced to an environment, is given by $P(t) = \frac{200}{(7-t)^2}$, $0 \leq t < 7$.
-  \begin{enumerate}
-  \item Find and interprete $P(0)$.
-  \item When will the population reach $200,000$?
-  \item Determine the behavior of $P$ as $t \to 7^-$. Interpret this result graphically and within the context of the problem.
-  \end{enumerate}
-\end{exploration}
+%\begin{exploration}
+%  A mathematical model for the population $P$, in thousands, of a certain species of bacteria, $t$ days after it is introduced to an environment, is given by $P(t) = \frac{200}{(7-t)^2}$, $0 \leq t < 7$.
+%  \begin{enumerate}
+%  \item Find and interprete $P(0)$.
+%  \item When will the population reach $200,000$?
+%  \item Determine the behavior of $P$ as $t \to 7^-$. Interpret this result graphically and within the context of the problem.
+%  \end{enumerate}
+%\end{exploration}
 
-Now, you must be asking yourself if every time we want to test for vertical or horizontal asymptotes, we need to keep plugging values and guessing. Fortunately, the answer is ``no''. Here's what you need to know (formal justificatives require Calculus --- we'll be content with getting intuition for now):
+Now, you must be asking yourself if every time we want to test for vertical or horizontal asymptotes, we need to keep plugging values and guessing. Fortunately, the answer is ``no''.   With a little bit of algebra, it becomes much more apparent what the end behavior of a rational function will be.  Formal justificatives require Calculus --- we'll be content with getting intuition for now.
 
 \begin{callout}
   {\bf Theorem (locating horizontal asymptotes):} Assume that $f(x) = p(x)/q(x)$ is a rational function, and that the leading coefficients of $p(x)$ and $q(x)$ are $a$ and $b$, respectively.
