@@ -1,0 +1,35 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\author{Ivo Terek, Elizabeth Miller}
+\license{Creative Commons Attribution-ShareAlike 4.0 International License}
+
+%\outcome{Calculating the rate of change.}
+%\outcome{Discuss the meaning of antiderivatives of a position function.}
+
+\begin{document}\licenseY
+
+  In 2005, the population of Egypt was 74 million and was growing $2\%$ per year. If it continues to grow at the same rate, how long will it take the population of Egypt to double? 
+ 
+   \begin{exercise}
+	Step 1:  Create a function where the input is the number of years since 2005 and the output is the population in Egpyt measured in millions of people.
+
+		$P(t)=\answer{74} \cdot \answer{1.02}^t$
+	\begin{exercise}
+	Step 2:  To find how it will take the population to double, you will need to find $t$ such that $P(t)=\answer{148}$.
+	\begin{exercise}
+	Step 3:  Set up the equation you need to solve and then simplify to get: $2=\answer{1.02}^t$.  
+	\begin{exercise}
+	Step 4: To solve this equation, we could immediately take the log base 1.02, but that will make it difficult to get a decimal approximation of the final answer, because most calculators do not have a $\log_{1.02}$ button.  Instead, let's rewrite $1.02^t$ base $e$.  The equation we need to solve will become $2=e^{\answer{\ln(1.02)t}}$.
+	\begin{exercise}
+	This will give us an exact final answer of $\answer{\frac{\ln(2)}{\ln(1.02)}}$ years.
+
+	Now, use a calcululator to approximate the answer to the nearest year: $\answer{35}$ \calcHW years.
+
+ 	\end{exercise}
+ 	\end{exercise}
+ 	\end{exercise}
+ 	\end{exercise}
+\end{exercise}
+\end{document}

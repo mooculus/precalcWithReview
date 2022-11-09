@@ -20,7 +20,7 @@
 %\typeout{************************************************}
 
 \begin{motivatingQuestions}\begin{itemize}
-\item We have learned in childhood how to do long division between numbers and how to recognize quotients and remainders. How to do this with polynomials?
+\item In previous math courses, we learned how to do long division with numbers, including recognizing quotients and remainders. How do we do this with polynomials?
 \item Is there a relation between the degrees of the polynomials involved in the division and the degrees of the quotient and remainder?
 \end{itemize}\end{motivatingQuestions}
 
@@ -31,7 +31,10 @@
 
 \section{Introduction}
 
-Let's recall how division works. Say you need to divide $25$ by $4$ --- the quotient is $6$ and the remainder is $1$. In other words, we have that $25 = 4\cdot 6 + 1$, which can be also written as $$  \frac{25}{4} = 6+\frac{1}{4}. $$In general, when $a$ and $b$ are positive integers, performing the division of $a$ by $b$ gives us some quotient $q$ and some remainder $r$, which is less than $b$. We write $a = bq+r$ for this. This sort of idea also works if, instead of numbers, we consider polynomials. If $f(x)$ and $g(x)$ are polynomials, we'll understand how to find polynomials $q(x)$ and $r(x)$ such that $$  f(x) = g(x)q(x)+r(x),  $$with the degree of $r(x)$ less than the degree of $g(x)$. As for the degree of $q(x)$, it should be the difference between the degrees of $f(x)$ and $g(x)$. This is extremely useful when trying to study rational functions (built from $1/x$, previously discussed) and their asymptotes. We will do this in the next unit.
+Let's recall some terminology from division of numbers. If we divide $25$ by $4$, we have that the quotient is $6$ and the remainder is $1$. In other words, $25 = 4\cdot 6 + 1$, which can be also written as $$  \frac{25}{4} = 6+\frac{1}{4}. $$In general, when $a$ and $b$ are positive integers, performing the division of $a$ by $b$ gives us some quotient $q$ and some remainder $r$, where the remainder is less than $b$. We can express this as $a = bq+r$. This sort of idea also works if, instead of numbers, we consider polynomials. If $f(x)$ and $g(x)$ are polynomials, we'll understand how to find polynomials $q(x)$ and $r(x)$ such that $$  f(x) = g(x)q(x)+r(x),  $$with the degree of $r(x)$ less than the degree of $g(x)$, and the degree of $q(x)$ equal to the difference between the degrees of $f(x)$ and $g(x)$. Note that if $x$ is a point where $g(x) \not= 0$, then we can also write this relationship as
+$$
+  \frac{f(x)}{g(x)} = q(x) + \frac{r(x)}{g(x)}.
+$$ This is extremely useful when trying to study rational functions and their asymptotes, since these functions are by definition quotients of polynomials. 
 
 \section{Long division of polynomials}
 
@@ -41,17 +44,27 @@ The best way to understand this is through guided examples.
   Find the quotient and remainder of the division of $$f(x) = x^3+3x^2+x+1\quad\mbox{by}\quad g(x) = x^2+1.$$
   
   \begin{explanation}
-    We need to find $q(x)$ and $r(x)$. Since the degree of $r(x)$ should be less than the degree of $g(x)$, which is $1$, we know that the degree of $r(x)$ must be $0$ --- so $r(x)$ will be a constant. And since the degree of $g(x)$ equals $2$, we know that the degree of $q(x)$ will be $1$. So, think of steps:
+    We need to find $q(x)$ and $r(x)$. We'll use a diagram similar to those you may have seen for long division of numbers: \begin{align*}
+   & \underline{~~~\phantom{x+3}\phantom{somethings}} \\[-4pt]  x^2+1~&\Big)~ x^3+3x^2+x+1 
+\end{align*}
+    
     \begin{itemize}
-    \item What to we need to multiply $g(x) = x^2+1$ by, to get the leading term of $f(x) = x^3+3x^2+x+1$? Clearly we need just $x$, so we know that $q(x) = x + \cdots$.
-    \item Subtract $x^3+3x^2+x+1$ from $x(x^2+1)$, to get $3x^2+1$.
-    \item What to we need to multiply $g(x) = x^2+1$ by, to get the leading term of $3x^2+1$? This time, we need just $3$, so we know that $q(x) = x + 3$. This is the quotient.
-    \item Subtract $3(x^2+1)$ from $3x^2+1$ to get $-2$. This is the remainder. 
-    \end{itemize}
-All of this is summarized with the diagram \begin{align*}
+    \item First, what do we need to multiply to $g(x) = x^2+1$ in order to get the leading term of $f(x) = x^3+3x^2+x+1$? We can see that $x$ works, since $x \cdot x^2 = x^3$, so we know that $q(x) = x + \cdots$. 
+    
+    \item In the diagram, we place $x$ above the $x^3$ term, then underneath subtract by $x \cdot g(x) = x(x^2+1) = x^3 + x$:\begin{align*}
+   & \underline{~~~x\phantom{+3}\phantom{somethings}} \\[-4pt]  x^2+1~&\Big)~ x^3+3x^2+x+1 \\[-4pt] &\phantom{\big)~} \underline{-x^3\phantom{+3x^2}\!-x\phantom{+1...}} \\[-4pt] &\phantom{\Big)~}\phantom{0n\!}+3x^2\phantom{+0~}~+1
+\end{align*}
+    \item Now we repeat this with the polynomial on the bottom (namely $3x^2 + 1$) in place of $f(x)$. So, what do we need to multiply to $g(x) = x^2+1$ in order to get the leading term of $3x^2+1$? This time, we need just $3$, so we know that $q(x) = x + 3 + \cdots$. 
+    
+    \item We now add $3$ to the polynomial at the top and subtract $3 \cdot g(x) = 3(x^2+1) = 3x^2 + 3$ from the polynomial at the bottom:
+    \begin{align*}
    & \underline{~~~x+3\phantom{somethings}} \\[-4pt]  x^2+1~&\Big)~ x^3+3x^2+x+1 \\[-4pt] &\phantom{\big)~} \underline{-x^3\phantom{+3x^2}\!-x\phantom{+1...}} \\[-4pt] &\phantom{\Big)~}\phantom{0n\!}+3x^2\phantom{+0~}~+1 \\[-4pt] &\phantom{\big)~} \phantom{nn}\underline{-\,3x^2\phantom{+xn}-3\phantom{n}} \\ &\phantom{nnnnnnnnnnn}-2
 \end{align*}
-as expected. Hence the quotient is $x+3$ and the remainder is $-2$. In other words, we may write $$   x^3+3x^2+x+1 =(x^2+1)(x+3) - 2, $$which in particular implies that $$  \frac{x^3+3x^2+x+1}{x^2+1} = x+3 - \frac{2}{x^2+1}.  $$
+    
+    \item Now the polynomial at the bottom is $-2$, which is degree 0. Since the degree is strictly less than the degree of $g(x)$, we're done.
+    
+    \item Our quotient is the polynomial at the top, $q(x) = x + 3$, and our remainder is the polynomial at the bottom, $r(x) = -2$. Therefore we may write $$   x^3+3x^2+x+1 =(x^2+1)(x+3) - 2, $$or equivalently, $$  \frac{x^3+3x^2+x+1}{x^2+1} = x+3 - \frac{2}{x^2+1}.  $$
+    \end{itemize}
   \end{explanation}
 \end{example}
 
@@ -59,25 +72,41 @@ as expected. Hence the quotient is $x+3$ and the remainder is $-2$. In other wor
   Find the quotient and remainder of the division of $$f(x) = 6x^5+9x^4+3x^3+10x^2+19x+7\quad\mbox{by}\quad g(x) = 2x^2+3x+1.$$
   
   \begin{explanation}
-    We need to find $q(x)$ and $r(x)$. Since the degree of $r(x)$ should be less than the degree of $g(x)$, which is $2$, we know that the degree of $r(x)$ must be $0$ (i.e., $r(x)$ is constant) or $1$. And since the degree of $g(x)$ equals $2$, we know that the degree of $q(x)$ will be $3$. Again, let's carry out steps:
+    % We need to find $q(x)$ and $r(x)$. Since the degree of $r(x)$ should be less than the degree of $g(x)$, which is $2$, we know that the degree of $r(x)$ must be $0$ (i.e., $r(x)$ is constant) or $1$. And since the degree of $g(x)$ equals $2$, we know that the degree of $q(x)$ will be $3$. Again, let's carry out steps:
+    Again, we'll use a diagram:
+    \begin{align*}
+   & \underline{~~~\phantom{3x^3+5}\phantom{somethingssomethingssom}} \\[-4pt]  2x^2+3x+1~&\Big)~6x^5+9x^4+3x^3+10x^2+19x+7 
+   \end{align*}
     \begin{itemize}
-    \item What do we need to multiply $g(x) = 2x^2+3x+1$ by, to get the leading term of $f(x) = 6x^5+9x^4+3x^3+10x^2+19x+7$? There's no other choice than $3x^3$, so we know that $q(x) = 3x^3+\cdots$.
-    \item Subtract $f(x)$ from $3x^3g(x)$ to get $10x^2+19x+7$.
-    \item What do we need to multiply $g(x) = 2x^2+3x+1$ by, to get the leading term of $10x^2+19x+7$? This time, $5$ fits the bill. So $q(x) = 3x^2+5$.
-    \item Subtract $5(2x^2+3x+1)$ from $10x^2+19x+7$, to get $4x+2$. This is the remainder.
-    \end{itemize}
-All of this is summarized with the diagram \begin{align*}
+    \item What do we need to multiply to $g(x) = 2x^2+3x+1$ in order to get the leading term of $f(x) = 6x^5+9x^4+3x^3+10x^2+19x+7$? Since $3 \cdot 2 = 6$ and $x^3 \cdot x^2 = x^5$, we should multiply by $3x^3$. So, we know that $q(x) = 3x^3+\cdots$.
+    \item In the diagram, we write $3x^3$ above and subtract $3x^3 \cdot g(x) = 3x^3(2x^2+3x+1) = 6x^5+9x^4+3x^3$ from $f(x)$ to get
+    \begin{align*}
+   & \underline{~~~3x^3\phantom{+5}\phantom{somethingssomethingssom}} \\[-4pt]  2x^2+3x+1~&\Big)~6x^5+9x^4+3x^3+10x^2+19x+7 \\[-4pt] &\phantom{\big)~} \underline{-6x^5-9x^4-3x^3\phantom{............................}} \\[-4pt] &\phantom{\Big)~}\phantom{..........................}+10x^2+19x+7 
+\end{align*}
+    
+    \item Now we repeat with the bottom polynomial, $10x^2+19x+7$, in place of $f(x)$. What do we need to multiply to $g(x) = 2x^2+3x+1$ in order to get the leading term of $10x^2+19x+7$? This time, $5$ will work, so $q(x) = 3x^2+5+\cdots$.
+    
+    \item In the diagram, add $5$ to the polynomial at the top, and subtract the bottom by $5 \cdot g(x) = 5(2x^2+3x+1) = 10x^2+15x+5$ to get
+    \begin{align*}
    & \underline{~~~3x^3+5\phantom{somethingssomethingssom}} \\[-4pt]  2x^2+3x+1~&\Big)~6x^5+9x^4+3x^3+10x^2+19x+7 \\[-4pt] &\phantom{\big)~} \underline{-6x^5-9x^4-3x^3\phantom{............................}} \\[-4pt] &\phantom{\Big)~}\phantom{..........................}+10x^2+19x+7 \\[-4pt] &\phantom{\big).............................}\underline{-10x^2-15x-5\phantom{..}} \\[-3pt] &\phantom{...............................................}4x+2
 \end{align*}
-
     
+  \item Since the polynomial at the bottom is $4x+2$ and thus has degree 1, we know we're done since this is strictly less than the degree of $g(x)$. Therefore our quotient is $q(x) = 3x^3+5$ and our remainder is $4x + 2$. Written out fully, we have
+  \begin{align*}
+    6x^5+9x^4+3x^3+10x^2+19x+7 &= (3x^3+5)(2x^2+3x+1) + (4x+2),
+  \end{align*}
+  or equivalently,
+  \begin{align*}
+    \frac{6x^5+9x^4+3x^3+10x^2+19x+7}{2x^2+3x+1} &= 3x^3+5 + \frac{4x+2}{2x^2+3x+1}
+  \end{align*}
+    \end{itemize}
   \end{explanation}
 \end{example}
 
 
 \begin{summary}\begin{itemize}
 \item Long division of polynomials works essentially like long division of numbers. 
-\item When performing the long division of $f(x)$ by $g(x)$ and writing the relation $f(x) = g(x)q(x)+r(x)$, we'll have that the degree of $r(x)$ is less than the degree of $g(x)$, and the degrees of $g(x)$ and $q(x)$ add to the degree of $f(x)$ (this tells us when to stop dividing).
+\item When performing the long division of $f(x)$ by $g(x)$ and writing the relation $f(x) = g(x)q(x)+r(x)$, we know that the degrees of $g(x)$ and $q(x)$ add to the degree of $f(x)$, and the degree of $r(x)$ is strictly less than the degree of $g(x)$ (this tells us when to stop dividing).
 \end{itemize}\end{summary}
 
 \end{document}
