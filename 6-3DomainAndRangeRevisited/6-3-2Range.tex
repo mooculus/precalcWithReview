@@ -76,7 +76,7 @@
 	come out of the function. For each $b$ in the range of the function $f$, there is actually an $a$ in the domain with $f(a) = b$.
 
 	\begin{example}
-		Let $f$ be the function whose values are completely given in the following table. Find the range of $f$.
+		Let $f$ be the function defined by the following table. Find the range of $f$.
 		$$ \begin{array}{c|c}
 			  x & f(x)\\\hline
 			  0 & 3\\
@@ -90,7 +90,7 @@
 
 			The only outputs of this function are $-2$, $0$, $3$, and $4$. 
 			(Even though the output $3$ is identified twice, it only gets counted once here.) 
-			There are no intervals, just the separated points. The range of $f$ is $\{ -2, 0, 3, 4 \}$.
+			There are no intervals, just the separated points. The range of $f$ is $\{ -2, 0, 3, 4 \}$. Including individual numbers in curly brackets means we are considering the set 					whose only members are those individual numbers. 
 		\end{explanation}	
 	\end{example}
 	
@@ -129,7 +129,7 @@
 				s(c) &= 0\\
 				\frac{1}{c} &= 0\\
 				c \left( \frac{1}{c} \right) &= c \left( 0 \right)\\
-				1 &= 0
+				1 &= c(0)
 			\end{align*}
 			This statement is false for all choices of $c$. That means there is no value of $c$ with $s(c)=0$. In particular, $0$ is not in the range of $s$.	
 		\end{explanation}
@@ -233,6 +233,7 @@
 						\begin{enumerate}
 							\item If the monomial has positive coefficient, the range is $[0, \infty)$.
 							\item If the monomial has negative coefficient, the range is $(-\infty, 0]$.
+							\item If the monomial is a constant $c$, the range is $\{c\}$. 
 						\end{enumerate}
 				\end{enumerate}
 					
@@ -246,6 +247,10 @@
 			\item The Sine function - The sine function $\sin(x)$ has range $[-1,1]$.
 		\end{enumerate}
 	\end{callout}
+
+	\begin{remark}
+	For polynomials, if we know the turning points or maximum or minimum values of the polynomial (as in the case of a parabola), you can determine the range of the polynomial. 				Unfortunately, finding these in general requires calculus. 
+	\end{remark}
 
 \section{Spotting Values not in the Range}
 	Finding the range of a function is quite a bit more involved than finding the domain. Here are some guidelines if you are given a formula for the function instead of its graph.
@@ -309,6 +314,11 @@
 					\end{align*}
 					The outputs of $f$ are never larger than $2$, so the only numbers in the range are less than or equal to $2$. That is, the range 
 					must be inside the interval $(-\infty, 2]$.
+
+					\begin{MM}
+					Notice that this process is just looking at how function transformations are changing the range by undoing the transformations one at a time.
+					\end{MM}
+
 		
 					To verify that the range is exactly $(-\infty, 2]$, suppose $b \leq 2$, then:
 					\begin{align*}
@@ -426,7 +436,7 @@
 						\sin(a) &= \frac{b-3}{5}.
 					\end{align*}
 					Because $-2 \leq b \leq 8$, we know $-1 \leq \frac{b-3}{5} \leq 1$. That means there is a number $a$ with $\sin(a) = \frac{b-3}{5}$, since the range of 
-					$\sin$ is $[-1,1]$.
+					sine is $[-1,1]$.
 					
 					(For instance, if $b=3$ then $\frac{b-3}{5} = 0$ so we would be looking for a value of $a$ with $\sin(a) = 0$. We know that $\sin(0) = 0$, so this means we'd take $a=0$.)
 					For this value of $a$, we have $h(a) = b$, so $b$ is in the range of $h$. The range of $h$ is then $[-2, 8]$.
