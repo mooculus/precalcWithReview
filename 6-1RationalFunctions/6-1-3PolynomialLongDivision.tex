@@ -1,7 +1,7 @@
 \documentclass{ximera}
 
 \input{../preamble.tex}
-\author{Ivo Terek}
+\author{Ivo Terek, Alexander Goldman}
 \license{Creative Commons Attribution-ShareAlike 4.0 International License}
 \acknowledgement{}
 
@@ -103,10 +103,26 @@ The best way to understand this is through guided examples.
   \end{explanation}
 \end{example}
 
+\subsection{More on Remainders}
+
+\begin{callout}
+    {\bf Polynomial Remainder Theorem (Little B\'ezout's (Bay-Zoo) Theorem):} 
+    If $f$ is a polynomial, then $x=r$ is a root of $f$ if and only if one of the following hold:
+    \begin{itemize}
+      \item $(x-r)$ is a factor of $f$,
+      \item $(x-r)$ divides evenly into $f$, or
+      \item the remainder of $\frac{f(x)}{x-r}$ is zero.
+    \end{itemize}
+    Notice that each of these points are different ways of saying the same thing.
+\end{callout}
+
+This can be extended to values $r$ which are not zeros of $f$ as well. Namely, if $r$ is any real number, then $f(r)$ is equal to the remainder of $\frac{f(x)}{x-r}$.
+
 
 \begin{summary}\begin{itemize}
 \item Long division of polynomials works essentially like long division of numbers. 
 \item When performing the long division of $f(x)$ by $g(x)$ and writing the relation $f(x) = g(x)q(x)+r(x)$, we know that the degrees of $g(x)$ and $q(x)$ add to the degree of $f(x)$, and the degree of $r(x)$ is strictly less than the degree of $g(x)$ (this tells us when to stop dividing).
+\item We can detect roots of a polynomial $f(x)$ by dividing by the polynomial $(x-r)$ with no remainder, and conversely, we can detect that $(x-r)$ is a factor of $f(x)$ if $r$ is a root.
 \end{itemize}\end{summary}
 
 \end{document}
