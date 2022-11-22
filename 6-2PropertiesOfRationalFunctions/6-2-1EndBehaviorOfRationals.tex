@@ -124,11 +124,11 @@ and
 \text{as } x \rightarrow -\infty, \frac{1-\frac{1}{x}}{1-\frac{2}{x}} \rightarrow \frac{1-0}{1-0}=\frac{1}{1}=1
 \]
 
-This tells us that $y=0$ is a horizontal asymptote of $f$.
+This tells us that $y=1$ is a horizontal asymptote of $f$.
 \end{explanation}
 \end{example}
 
-The technical reason why this works requre calculus, but for now it is enough to know that if you can rewrite a rational function so it contains terms of $\frac{1}{x^n}$, then as $x$ goes to infinity or negative infinity, those terms will become $0$.  Let's try another example.
+The technical reason why this works require calculus, but for now it is enough to know that if you can rewrite a rational function so it contains terms of $\frac{1}{x^n}$, then as $x$ goes to infinity or negative infinity, those terms will become $0$.  Let's try another example.
 
 \begin{example}  Find the horizontal asympotes of $f(x) = \frac{5x^3-3x-1}{2x^3-2x^2+8}$.
 
@@ -225,7 +225,7 @@ Note that saying that $y=mx+b$ is a slant asymptote for the graph of $y=f(x)$ is
     \end{explanation}
   \item $f(x)=\frac{x^3-4x^2+5x-1}{x-1}$. \\[1em]
     \begin{explanation}
-      Performing the long division, as before, we see that $$   f(x) = \frac{x^3-4x^2+5x-1}{x-1} = x^2-3x+2 + \frac{1}{x-1}.  $$As expected, $1/(x-1) \to 0$ when $x \to +\infty$ or $x\to -\infty$, but $y=x^2-3x+2$ is not a line equation. Hence there are no slant asymptotes for the graph of $f(x)$ (loosely speaking, the graph cannot be simultaneously asymptotic to a parabola and to a straight line).
+      Performing the long division, as before, we see that $$   f(x) = \frac{x^3-4x^2+5x-1}{x-1} = x^2-3x+2 + \frac{1}{x-1}.  $$As expected, $1/(x-1) \to 0$ when $x \to +\infty$ or $x\to -\infty$, but $y=x^2-3x+2$ is not a line equation. Hence there are no slant asymptotes for the graph of $f(x)$.
       \begin{image}
         \begin{tikzpicture}
           \begin{axis}
@@ -236,7 +236,7 @@ Note that saying that $y=mx+b$ is a slant asymptote for the graph of $y=f(x)$ is
         \end{tikzpicture}
       \end{image}
     \end{explanation}
-Notice that even though $x^2-3x+2$ is not an asymptote (because it is not a straight line), we can see from the graph that it still tells us about the end behavior of $f$.  Since $x^2-3x+2$ is an even degree polynomial with a positive leading coefficient, we know that 
+Notice that even though $x^2-3x+2$ is not a slant asymptote (because it is not a straight line), we can see from the graph that it is asymptotic to a parabola.  This means that the parabola still tells us about the end behavior of $f$.  Since $x^2-3x+2$ is an even degree polynomial with a positive leading coefficient, we know that 
 \[
 \text{as } x \rightarrow \pm \infty, x^2-3x+2 \rightarrow \infty.
 \]
