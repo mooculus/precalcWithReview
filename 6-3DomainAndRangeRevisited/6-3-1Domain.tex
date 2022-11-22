@@ -393,7 +393,7 @@
 \section{Spotting Values not in the Domain}
 	Of our list of famous functions, notice that only rational functions, radicals, and logarithms have domain that is not the full set of all real numbers, $(-\infty, \infty)$. When trying to find the domain of a function 
 	constructed out of famous functions, this gives us some guidelines to follow. The following list is not exhaustive, but gives a good place to begin.
-	\begin{callout}
+	\begin{callout}[Strategies for Finding the Domain]
 		\begin{enumerate}
 			\item The input of an even-index radical must be non-negative.
 			\item The input of a logarithm must be positive.
@@ -477,7 +477,37 @@
 			\end{image}
 
 			In order for a number to be in the domain of this function, satisfy both $t > -\dfrac{3}{2}$ and $t \geq \dfrac{1}{5}$.
-			The points satisfying both inequalities are given in the graph
+			The points satisfying both inequalities are given in the graph found by overlaying both graphs above
+
+			\begin{image}
+				\begin{tikzpicture}
+  					\begin{axis}[numberline,
+                				xmin=-0.5,xmax=1.5,
+        		        		ticks=none,
+                				after end axis/.code={},
+         		       			width=200pt, 
+                				]
+        					\addplot[openinfiniteinterval, o->, color=penColor] coordinates {(-0.5,0) (1.5,0)};
+        					\addplot[mark=none] coordinates {(-0.5,0)} node[below] {$-\dfrac{3}{2}$};
+  					\end{axis}
+				\end{tikzpicture}
+			\end{image}
+
+			\begin{image}
+				\begin{tikzpicture}
+  					\begin{axis}[numberline,
+                				xmin=-0.5,xmax=1.5,
+        		        		ticks=none,
+                				after end axis/.code={},
+         		       			width=200pt, 
+                				]
+        					\addplot[closedinfiniteinterval, *->, color=penColor] coordinates {(0.5,0) (1.5,0)};
+        					\addplot[mark=none] coordinates {(0.5,0)} node[below] {$\dfrac{1}{5}$};
+  					\end{axis}
+				\end{tikzpicture}
+			\end{image}
+			
+			and taking the graph of all points on both graphs. 
 			\begin{image}
 				\begin{tikzpicture}
   					\begin{axis}[numberline,
