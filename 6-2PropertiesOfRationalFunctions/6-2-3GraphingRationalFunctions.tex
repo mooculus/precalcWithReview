@@ -1,11 +1,11 @@
 \documentclass{ximera}
 
 \input{../preamble.tex}
-\author{Ivo Terek}
+\author{Elizabeth Miller, Ivo Terek}
 \license{Creative Commons Attribution-ShareAlike 4.0 International License}
 \acknowledgement{}
 %Source: Stitz-Zeager
-\title{Vertical Asymptotes of Rational Functions}
+\title{Graphing Rational Functions}
 
 \begin{document}
 \licenseSZ
@@ -13,77 +13,139 @@
 \end{abstract}
 \maketitle
 
+\section{Vertical Asymptotes and Holes}
 
-%%\typeout{************************************************}
-%%\typeout{Motivating Questions}
-%%\typeout{************************************************}
-%
-%\begin{motivatingQuestions}\begin{itemize}
-%\item By passing from $1/x$ to $p(x)/q(x)$, what changes? What can we say about the behavior of such ratio?
-%\item Just like $1/x$ had the lines $x=0$ and $y=0$ as asymptotes, what happens for an arbitrary rational function? Are vertical and horizontal asymptotes the only possible types?
-%\end{itemize}\end{motivatingQuestions}
-%
-%
-%%\typeout{************************************************}
-%%\typeout{Subsection Introduction}
-%%\typeout{************************************************}
-%
-%\section{Introduction}
-%
-%We have previously discussed the function $1/x$. Note that both the numerator $1$ and the denominator $x$ are polynomials (the former is a \emph{constant} polynomial). We can study what happens when we replace those with arbitrary polynomials.
-%
-%\begin{definition}
-%  A \emph{rational function} is a function defined as a ratio $f(x) = p(x)/q(x)$ of two polynomials $p(x)$ and $q(x)$, and this ratio makes sense for all real values of $x$, \emph{except} for those such that $q(x) = 0$.
-%\end{definition}
-%
-%\begin{example} Are the following functions rational? For which values of $x$ is the function undefined?
-%  \begin{enumerate}
-%  \item $f(x) = \frac{x^2-2}{x+1}$. \\[1em]
-%    \begin{explanation}
-%      It is a rational function. It is defined for all values of $x$, except for $x = -1$, because this makes the denominator $x+1$ be zero.
-%    \end{explanation}
-%  \item $f(x) = \frac{x^4-3x+1}{x^2-5x+6}$. \\[1em]
-%    \begin{explanation}
-%      It is a rational function. It is defined for all values of $x$, except for $x=2$ and $x=3$, because $x^2-5x+6 = (x-2)(x-3)$. 
-%    \end{explanation}
-%  \item $f(x) = \frac{x-1}{\sqrt{x^4+1}}$. \\[1em]
-%    \begin{explanation}
-%      It is \emph{not} a rational function, because the denominator $\sqrt{x^4+1}$ is \emph{not a polynomial}. Note that even though this does not define a rational function, it is defined for all possible values of $x$, since $\sqrt{x^4+1} \geq 1 > 0$ for all $x$.
-%    \end{explanation}
-%  \item A polynomial function $p(x)$. \\[1em]
-%    \begin{explanation}
-%      Any polynomial function is a rational function, simply because we can write $p(x) = p(x)/1$, and $1$ is a polynomial. And it is defined for every real value of $x$.
-%    \end{explanation}
-%  \item $f(x) = x^2-1 + \frac{x^3}{x^5-1}$. \\[1em]
-%    \begin{explanation}
-%      It is a rational function, which is defined for all $x$ except for $x=1$. To see that this is a rational function, you can either say that it is the sum of the rational functions $x^2-1$ and $x^3/(x^5-1)$, or rewrite it as $$  f(x) = \frac{(x^2-1)(x^5-1) + x^3}{x^5-1} = \frac{x^7-x^5-x^2+x^3-1}{x^5-1},  $$which is manifestly rational.
-%    \end{explanation}
-%  \end{enumerate}
-%\end{example}
+We are now getting closer to understanding the properties of rational functions.  We have discussed how to find the domain, end behavior, and $x$-intercepts.  Finding the $y$-intercept just involves plugging $0$ into the function.  But there is one major feature of rational functions we still need to discuss before we can understand them fully.  What happens to the graph of a rational function near the points which are not in the domain?  
 
+Recall that:
 
+\begin{callout}
+A rational functions is not defined when the polynomial in the denominator is equal to zero.  That is, if $r(x)=\frac{p(x)}{q(x)}$ is a rational function and both $p(x)$ and $q(x)$ are polynomials, than the domain of $r(x)$ is all values of $x$ except those where $q(x)=0$.  
+\end{callout}
 
+Rational functions can have two different kinds of behavior near a point where the denominator is zero.  
 
-\section{Asymptotes - vertical and horizontal}
-
-We have seen that the function $1/x$ has the line $x=0$ as a vertical asymptote, and the line $y=0$ as a horizontal asymptote. Rational functions, in general, may have not only vertical and horizontal asymptotes, but also \emph{slant asymptotes}. Let's start with the two easier cases:
+We know from investigating $f(x)=\frac{1}{x}$ that one possibility is a vertical asymptote.  Recall that:
 
 \begin{definition}
-  \mbox{}
-  \begin{enumerate}
-  \item The line $x=c$ is called a \emph{vertical asymptote} of the graph of a function $y=f(x)$ if as $x \to c^-$ or $x \to c^+$, either $f(x) \to +\infty$ or $f(x) \to -\infty$.
-  \item The line $y=c$ is called a \emph{horizontal asymptote} of the graph of a function $y=f(x)$ if as $x \to -\infty$ or $x \to +\infty$, we have $f(x) \to c$.
-  \end{enumerate}
+The line $x=c$ is called a \emph{vertical asymptote} of the graph of a function $y=f(x)$ if as $x \to c^-$ or $x \to c^+$, either $f(x) \to +\infty$ or $f(x) \to -\infty$.  
+
+Here, as $x \to c^-$ means for points near $x=c$ but less than $c$ and as $x \to c^+$ means for points near $x=c$ but greater than $c$.
 \end{definition}
+
+When you put points into a rational function that are close to the point where it is undefined, it will make the bottom of the fraction very small.  Usually, that will make the resulting fraction very big, resulting in a vertical asymptote on the graph.  The exception is when the top of the fraction is also getting very small.  Then, it is not quite clear what is happening to the value of the fraction overall.  Let's investigate.
+
+\begin{example}
+Let's return to the function $f(x) = \frac{x-1}{x^2-3x+2}$.  Earlier, we looked at the end behavior of this function and determined that $f(x) \to 0$ as $x \to +\infty$ and $f(x) \to 0$ as $x \to -\infty$.  Now, let's investigate the middle behavior of this function, by which I mean what it is doing between the two horizontal asymptotes.
+
+First, we need to determine the points which are not in the domain of $f$.  That is, which values of $x$ make $f(x)$ undefined?  Note that we can factor the denominator of this rational function.  
+$$x^2-3x+2 = (x-1)(x-2).$$
+Setting the denominator equal to zero will let us find the points where $f(x)$ is undefined.  This means $(x-1)=0$ or $(x-2)=0$, giving us that $f(x)$ is undefined for $x=1$ and $x=2$. Now lets investigate what happens near each of these points.
+
+Notice that we may write that $$   f(x) = \frac{x-1}{x^2-3x+2} = \frac{(x-1)}{(x-1)(x-2)} = \frac{1}{x-2} \text{\,\,\, \textbf{provided} \, } x \neq 1$$. 
+
+This means that for all values of $x$ other than $x=1$, $f(x)$ gives the same $y$-value as $\frac{1}{x-2}$.  This means that the graph of $f(x)$ and the graph of $\frac{1}{x-2}$ should look identical except for at $x=1$.  
+
+At $x=1$, $f(x)$ is not defined, but $x=1$ is not a special point at all for $\frac{1}{x-2}$.  The graph will continue as normal on either side of $x=1$ and there will be \textbf{no asymptote} there.  Therefore, the conclusion is that $f(x)$ will have a \textbf{hole} at $x=1$.   We can even find the height ($y$-value) at which to draw the hole by finding out what the $y$-value of $\frac{1}{x-2}$ is at $x=1$.  Since we keep referencing it, let's give $\frac{1}{x-2}$ a name.  It is not the same function as $f$ because it has a different domain.  Therefore, it needs a different name.  Let's say $g(x)=\frac{1}{x-2}$.  Then we have that 
+$$g(1)=\frac{1}{1-2}=\frac{1}{-1}=-1.$$
+Our conclusion is that the graph of the function $f(x)=\frac{(x-1)}{(x-1)(x-2)}$ will have a \textbf{hole at the point $(1,-1)$}.
+
+Let's let's compare that with the behavior of $f(x)$ near $x=2$.  Recall that for all values of $x$ other than $x=1$, $f(x)=\frac{(x-1)}{(x-1)(x-2)}$ gives the same $y$-value as $g(x)=\frac{1}{x-2}$.  Since we are not investigating near one, we can just use the simpler function, $g(x)=\frac{1}{x-2}$.  Both $f$ and $g$ will have the same behavior everyone other than at $x=1$!.  But comparing the expression $g(x) = 1/(x-2)$ with what we have previously seen for the function $1/x$, we see that $f(x) \to +\infty$ as $x \to 2^+$ and $f(x) \to -\infty$ as $x \to 2^-$, so that the line $x=2$ is a vertical asymptote for $f(x)$. 
+\end{example}
+
+You may notice that the function $g$ in the previous example played an important role in our ability to determine whether our original function $f$ had a hole or an asymptote at each point which was not in the domain.  The function $g$ was special because it had no factors in common between the numerator and denominator of the rational function.  We give rational functions like this a special name. 
+
+\begin{definition}  
+A rational function is said to be in \textbf{lowest terms} if the numerator and the denominator have no factors in common.
+\end{definition}
+
+This allows us to state the following theorem.
+
+\begin{theorem}
+A rational function in lowest terms will have a vertical asymptote at every point which is not in it's domain.
+\end{theorem}
+
+For rational functions which are not in lowest terms, we will want to factor the numerator and denominator completely to determine what cancels.  We can the write the rational function in lowest terms, being careful to keep track of any points which are not in the domain.  
+
+\begin{theorem}
+Every rational function, $f(x)=\frac{p(x)}{q(x)}$, can be written in lowest terms $g(x)=\frac{r(x)}{s(x)}$ where $r(x)$ and $s(x)$ have no common factors, provided the domain of the function is clearly stated so that any points which were not in the domain of, $f$, the original function are still excluded from $g$, the version of the function in lowest terms.  Any points which are excluded in this way and for which the  $s(x) \neq 0$ will be holes in the graph of the function.  Any points where $s(x)=0$ will be vertical asymptotes.
+\end{theorem}
+
+Let's try applying this theorem to an example.
+
+\begin{example}
+ Let $$f(x)=\frac{(x-5)(x+3)^2(x+2)^3}{x(x+2)(x^2-9)(x-5)^5}$$
+
+Determine where $f$ has vertical asymptotes, holes, and zeros.
+\begin{explanation}
+The first step is to make sure that both the numerator and denominator are completely factored into linear and \textbf{irreducible} quadratic terms.  Recall that a quadratic is irreducible when the discriminant, $b^2-4ac<0$.
+\end{explanation}
+\end{example}
+
+
+\section{Graphing a Rational Function}
+
+Now let's return the previous example and see if we can draw the graph of $f(x)=\frac{x-1}{x^2-3x+2}$.  We have already determined:
+
+\begin{itemize}
+\item As $x \to +\infty$ and $f(x) \to 0$ (or a borizontal asymptote at $y=0$)
+\item As $x \to -\infty$ and $f(x) \to 0$ (or a borizontal asymptote at $y=0$)
+\item The graph will have a hole at $(1,-1)$
+\item The graph will have a vertical asymptote at $x=2$.
+\end{itemize}
+
+Now let's find a few additional points to help us graph the function.
+
+To find the $y$-intercept of $f$, $f(0)=\frac{(0)-1}{(0)^2-3(0)+2}=\frac{-1}{2}$.  To find any $x$-intercepts, we set $y=0$, meaning we are looking at
+$$0=\frac{x-1}{x^2-3x+2}.$$
+A fraction equals zero when the numerator equals zero, so we need
+\begin{align*}
+x-1&=0\\
+x&=1
+\end{align*}
+But, $x=1$ is not in the domain of our function so it is not actually an $x$-intercept!  There are no $x$-intercepts!
+
+It is usually a good idea to find a point between each place where the function is zero or undefined.  This will help us see where the function is.  There is a result in calculus that the graph of a rational function can only change from being postive (above the $x$-axis) to negative (below the $x$-axis) or vice versa when the function is zero or undefined.  We will explore this more later, but this idea motivated the points we are going to choose to plot.
+
+\begin{align*}
+f(-1)&=\frac{(-1)-1}{(-1)^2-3(-1)+2}=\frac{-2}{6}=\frac{-1}{3}\\
+f\left(\frac{3}{2}\right)&=\frac{\left(\frac{3}{2}\right)-1}{\left(\frac{3}{2}\right)^2-3\left(\frac{3}{2}\right)+2}=\frac{\frac{1}{2}}{\frac{9}{4}-\frac{9}{2}+2}=\frac{\frac{1}{2}}{\frac{-1}{4}}=\frac{1}{2} \cdot \frac{-4}{1}=-2\\
+f(3)&=\frac{(3)-1}{(3)^2-3(3)+2}=\frac{2}{2}=1
+\end{align*} 
+
+Putting all of this together, we are able to draw the following graph:
+
+      \begin{image}
+        \begin{tikzpicture}
+          \begin{axis}
+            \addplot[samples=200,domain=-7:0.99]{1/(x-2)};
+            \addplot[samples=200,domain=1.01:1.99]{1/(x-2)};
+            \addplot[samples=200,domain=2.01:7]{1/(x-2)};
+            \draw[fill=white](axis cs:1,-1)circle(1mm);
+            \addplot[dashed, thick, color=penColor] coordinates {(2,-7) (2,7)};
+            \addplot[thick, dashed, color=penColor, domain=-7:7]{0};
+          \end{axis}
+        \end{tikzpicture}
+      \end{image}
+
+It is important to note that many graphing calculators such as Desmos will not show the hole in the graph, but it is important to know that it is there.
+
+
+
+
+
+
+
+\end{document}
+
+
+
+
+
 
 
 \begin{example}
-  \mbox{}
-  \begin{enumerate}
-  \item Consider the rational function $f(x) = \frac{x-1}{x-2}$. To understand $x\to +\infty$ intuitively, let's plug some big values for $x$:
-    \begin{align*}
-      f(100) &= \frac{99}{98} \approx 1.010... \\ f(1000) &= \frac{999}{998} \approx 1.001... \\ f(10000) &= \frac{9999}{9998} \approx 1.000...
-    \end{align*}It seems clear that $f(x) \to 1$ as $x \to +\infty$. This says that the line $y=1$ is a horizontal asymptote for $f(x)$. The same strategy shows that $f(x) \to 1$ when $x \to -\infty$ as well, so that $y=1$ is the only horizontal asymptote for $f(x)$. As for vertical asymptotes, we see that the only $x$-value for which $f(x)$ is undefined is $x=2$. So that's where we'll look, by choosing values for $x$ very close to $2$, but not equal to $2$. For example, we have that
+As for vertical asymptotes, we see that the only $x$-value for which $f(x)$ is undefined is $x=2$. So that's where we'll look, by choosing values for $x$ very close to $2$, but not equal to $2$. For example, we have that
     \begin{align*}
       f(2.1) &= \frac{1.1}{0.1} = 11 \\ f(2.01) &= \frac{1.01}{0.01} = 101 \\ f(2.001) &= \frac{1.001}{0.001} = 1001 
     \end{align*}

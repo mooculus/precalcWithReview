@@ -96,15 +96,74 @@ You may wonder why there is a hole in this graph!  We will explore that more in 
 
 Now, you must be asking yourself if every time we want to test for vertical or horizontal asymptotes, we need to keep plugging values and guessing. Fortunately, the answer is ``no''.   With a little bit of algebra, it becomes much more apparent what the end behavior of a rational function will be.  Formal justificatives require Calculus --- we'll be content with getting intuition for now.
 
-\begin{callout}
-  {\bf Theorem (locating horizontal asymptotes):} Assume that $f(x) = p(x)/q(x)$ is a rational function, and that the leading coefficients of $p(x)$ and $q(x)$ are $a$ and $b$, respectively.
+We will need the following theorem.
+
+\begin{theorem}
+Functions of the form $$f(x)=x^{-n}=\frac{1}{x^n}$$ where $n$ is a counting number, have horizontal asymptotes of $y=0$.  In particular, as $x \rightarrow \infty, y \rightarrow 0$ and   as $x \rightarrow -\infty, y \rightarrow 0$.
+\end{theorem}
+
+Hopefully this theorem seems intuitive.  If $f(x)=\frac{1}{x}$ goes to 0 as $x$ gets big, then raising $x$ to a higher power should just make the function get close to zero more quickly.  If we take this theorem as a given, we can use it and some algebra to rewrite other rational functions so that we can find their horizontal asymptotes.
+
+\begin{example}  Find the horizontal asympotes of $f(x) = \frac{x-1}{x-2}$.
+
+\begin{explanation}
+Notice that this is the same function we looked at in an earlier example.  From plugging in points, we think this function should have a horizontal asymptote of $y=1$, meaning the $y$-values of this function get close to $1$ as $x$ gets big (either big and positive or big and negative).  Now, lets show this with some algebra.  The trick is going to be to \textbf{divide the top and bottom of the rational function by the highest power of $x$ in the denominator}.
+\begin{align*}
+f(x) =& \frac{x-1}{x-2}\\
+=& \frac{\frac{1}{x}\left(x-1\right)}{\frac{1}{x}\left(x-2\right)} \\
+=& \frac{\frac{1}{x} \cdot x-\frac{1}{x}}{\frac{1}{x}\cdot x-\frac{1}{x} \cdot 2} \text{ \, \,\,    distributing} \\
+=& \frac{1-\frac{1}{x}}{1-\frac{2}{x}} \\
+\end{align*}
+
+Now, notice that we have $\frac{1}{x}$ and $\frac{2}{x}$ in our new way of writing this rational function, and we know that both of these functions approach $0$ as $x$ goes to infinity and negative infinity.  This allows us to say  that,
+\[
+\text{as } x \rightarrow \infty, \frac{1-\frac{1}{x}}{1-\frac{2}{x}} \rightarrow \frac{1-0}{1-0}=\frac{1}{1}=1
+\]
+and
+\[
+\text{as } x \rightarrow -\infty, \frac{1-\frac{1}{x}}{1-\frac{2}{x}} \rightarrow \frac{1-0}{1-0}=\frac{1}{1}=1
+\]
+
+This tells us that $y=0$ is a horizontal asymptote of $f$.
+\end{explanation}
+\end{example}
+
+The technical reason why this works requre calculus, but for now it is enough to know that if you can rewrite a rational function so it contains terms of $\frac{1}{x^n}$, then as $x$ goes to infinity or negative infinity, those terms will become $0$.  Let's try another example.
+
+\begin{example}  Find the horizontal asympotes of $f(x) = \frac{5x^3-3x-1}{2x^3-2x^2+8}$.
+
+\begin{explanation}
+Recall that we want to \textbf{divide the top and bottom of the rational function by the highest power of $x$ in the denominator}.  For this function, we want to divide by $x^3$.
+\begin{align*}
+f(x) =& \frac{5x^3-3x-1}{2x^3-2x^2+8}\\
+=& \frac{\frac{1}{x^3}\left(5x^3-3x-1\right)}{\frac{1}{x^3}\left(2x^3-2x^2+8\right)} \\
+=& \frac{\frac{1}{x^3} \cdot 5x^3-\frac{1}{x^3}\cdot 3x - \frac{1}{x^3}}{\frac{1}{x^3}\cdot 2x^3-\frac{1}{x^3} \cdot 2x^2 + \frac{1}{x^3} \cdot 8} \text{ \, \,\,    distributing} \\
+=& \frac{5-\frac{3}{x^2}-\frac{1}{x^3}}{2-\frac{2}{x}+\frac{8}{x^3}} \\
+\end{align*}
+
+Now, notice that we have $\frac{3}{x^2}$, $\frac{1}{x^3}$, $\frac{2}{x}$ and $\frac{8}{x^3}$ in our new way of writing this rational function which all approach $0$ as $x$ goes to infinity and negative infinity.  This allows us to say  that,
+\[
+\text{as } x \rightarrow \infty, \frac{5-\frac{3}{x^2}-\frac{1}{x^3}}{2-\frac{2}{x}+\frac{8}{x^3}} \rightarrow \frac{5-0-0}{2-0+0}=\frac{5}{2}
+\]
+and
+\[
+\text{as } x \rightarrow -\infty, \frac{5-\frac{3}{x^2}-\frac{1}{x^3}}{2-\frac{2}{x}+\frac{8}{x^3}} \rightarrow \frac{5-0-0}{2-0+0}=\frac{5}{2}
+\]
+
+This tells us that $y=\frac{5}{2}$ is a horizontal asymptote of $f$.
+\end{explanation}
+\end{example}
+
+You may have noticed a pattern.  In both examples above, we just ended up with the coefficients of the leading terms from the top and bottom of the rational function.  This pattern holds whenever the top and bottom fractions have the same degree.  The theorem below gives the pattern for horizontal functions in general.
+
+\begin{theorem}
+  {\bf Locating Horizontal Asymptotes:} Assume that $f(x) = p(x)/q(x)$ is a rational function, and that the leading coefficients of $p(x)$ and $q(x)$ are $a$ and $b$, respectively.
   \begin{itemize}
   \item If the degree of $p(x)$ is the same as the degree of $q(x)$, then $y=a/b$ is the unique horizontal asymptote of the graph of $y=f(x)$.
   \item If the degree of $p(x)$ is less than the degree of $q(x)$, then $y=0$ is the unique horizontal asymptote of the graph of $y=f(x)$.
   \item If the degree of $p(x)$ is greater than the degree of $q(x)$, then the graph of $y=f(x)$ has no horizontal asymptotes.
   \end{itemize}
-\end{callout}
-
+\end{theorem}
 
 The above theorem essentially says that one can detect horizontal asymptotes by looking at degrees and leading coefficients. Only the leading terms of $p(x)$ and $q(x)$ matter, and it makes no difference whether one considers $x\to +\infty$ or $x\to -\infty$. For example, how would you apply this to study horizontal asymptotes for the following function? $$ f(x) =  \frac{3x^6-5x^4+3x^3-3x^2 + 10x + 1}{5x^6 + 10000x^5 - 5x+2}$$
 
@@ -112,24 +171,20 @@ The above theorem essentially says that one can detect horizontal asymptotes by 
   The degree of the numerator $p(x) = 3x^6-5x^4+3x^3-3x^2 + 10x + 1$ and the degree of the denominator $q(x) = 5x^6 + 10000x^5 - 5x+2$ are equal, namely, to $6$. Thus, since the leading coefficient of $p(x)$ is $3$ and the leading coefficient of $q(x)$ is $5$, we conclude that the line $y=3/5$ is the only horizontal asymptote for this rational function.
 \end{explanation}
 
-\begin{callout}
-  {\bf Theorem (locating vertical asymptotes):} Assume that $f(x) = p(x)/q(x)$ is a rational function written in lowest terms, that is, such that $p(x)$ and $q(x)$ have no common zeros. Let $c$ be a real number for which $f(c)$ is undefined.
-  \begin{itemize}
-  \item If $q(c) \neq 0$, then the graph of $y = f(x)$ has a hole at the point $(c,f(c))$.
-  \item If $q(c) = 0$, then the line $x=c$ is a vertical asymptote of the graph of $y=f(x)$.
-  \end{itemize}
-\end{callout}
-
-The above theorem tells us how to distinguish vertical asymptotes and holes in the graph of a rational function. For example, consider $$  f(x) = \frac{x^2-4x+3}{x^2-3x+2}.  $$Is $f(x)$ in lowest terms? For which values of $x$ is this function undefined? How to go from there?
-
-\begin{explanation}
-You can find out if $f(x)$ is in lowest terms by just factoring both numerator and denominator, and by factoring the denominator, you will also find out which values of $x$ we have $f(x)$ undefined. Since $$   f(x) = \frac{x^2-4x+3}{x^2-3x+2} = \frac{(x-1)(x-3)}{(x-1)(x-2)} = \frac{x-3}{x-2},  $$we see that the values $f(1)$ and $f(2)$ are undefined, while the above equality holds for all $x$ except for $x=1$. In this simplified form, we may recognize $q(x) = x-2$. Since $q(1) = -1 \neq 0$, the graph of $y=f(x)$ has a hole at the point $(1,f(1))$, but since $q(2) = 0$, we have that the line $x=2$ is a vertical asymptote for the graph of $y=f(x)$.
-\end{explanation}
 
 \section{Slant asymptotes}
 
-We are now ready to address the last type of asymptote a rational function may or may not have. And the reasoning is somewhat simple: why should we restrict ourselves to only vertical or horizontal asymptotes? This question itself motivates the name ``slant'' asymptote. Now, you know that the general equation of a line has the form $y=mx+b$, where $m$ is some slope and $b$ is the $y$-intercept. When $m=0$, we have a horizontal line, so when discussing slant asymptotes, we'll always assume that $m \neq 0$.
+From the theorem above, we can see that in the third case when the degree of the numerator is bigger than the degree of the denominator, there are no horizontal asymptotes..  It would be natural to ask whether we can still say anything about the rational function in that case.  It turns out that we can, and the key is to use \textbf{long division of polynomials}.  Whenever the degree of the numerator is bigger that the degree of the denominator, we can use long division to rewrite the function as a polynomials plus a rational function where the degree of the numerator is \textit{less} than the degree of the denominator. 
 
+\begin{example}
+For example, lets consider the rational function $$h(x) = \frac{x^3+3x^2+x+1}{x^2+1}.$$  In the section on polynomial long division, we determined that that $f(x) = x^3+3x^2+x+1$ divided by $g(x) = x^2+1$ would give us 
+$$  \frac{x^3+3x^2+x+1}{x^2+1} = x+3 - \frac{2}{x^2+1}.  $$
+This means we have rewritten $h(x) = \frac{x^3+3x^2+x+1}{x^2+1}$ as the sum of the polynomial $x+3$ and the rational function $\frac{2}{x^2+1}$.  By the previous therem, we can say that
+\[
+\text{as } x \rightarrow \pm \infty, \frac{2}{x^2+1} \rightarrow 0
+\]
+This implies that when $x$ is really big, $h(x) = \frac{x^3+3x^2+x+1}{x^2+1}$ behaves very similarly to $x+3$ (because the rest of the function essentially becomes very tiny).   Recall that when a graph approaches a line, we call that line an asymptote.  We call the line $y=x+3$ a \textbf{slant asymptote} of the function $h$ because, unlike a vertical or horizontal line, the line $y=x+3$ is slanted.
+\end{example}
 
 \begin{definition}
   The line $y=mx+b$, where $m\neq 0$, is called a \emph{slant asymptote} of the graph of a function $y=f(x)$ if as $x \to -\infty$ or as $x\to +\infty$, we have $f(x) \to mx+b$.
@@ -181,6 +236,15 @@ Note that saying that $y=mx+b$ is a slant asymptote for the graph of $y=f(x)$ is
         \end{tikzpicture}
       \end{image}
     \end{explanation}
+Notice that even though $x^2-3x+2$ is not an asymptote (because it is not a straight line), we can see from the graph that it still tells us about the end behavior of $f$.  Since $x^2-3x+2$ is an even degree polynomial with a positive leading coefficient, we know that 
+\[
+\text{as } x \rightarrow \pm \infty, x^2-3x+2 \rightarrow \infty.
+\]
+ Because of this, we can also say that 
+\[
+\text{as } x \rightarrow \pm \infty, \frac{x^3-4x^2+5x-1}{x-1} \rightarrow \infty.
+\]
+
   \item $f(x) = \frac{x^3+2x^2+x+1}{x^3-2x^2-x+1}$. \\[1em]
    \begin{explanation}
       Long division shows that: $$   f(x) = \frac{x^3+2x^2+x+1}{x^3-2x^2-x+1} = 1 + \underbrace{\frac{4x^2+2x}{x^3-2x^2-x+1}}_{\to 0}.  $$The indicated remainder goes to zero when $x \to +\infty$ or $x\to -\infty$ simply because the degree of the numerator is lower than the degree of the numerator. The remaining quotient does give us the asymptote $y=1$. But this is not a slant asymptote, it is a horizontal asymptote (as you might have expected).
