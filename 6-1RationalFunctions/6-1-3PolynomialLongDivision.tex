@@ -116,6 +116,26 @@ The best way to understand this is through guided examples.
     Notice that each of these points are different ways of saying the same thing.
 \end{callout}
 
+\begin{example}
+Check that $-0.5$ is a root of $f(x) = 6x^5+9x^4+3x^3+10x^2+19x+7$ using the Polynomial Remainder Theorem.
+    
+\begin{explanation}
+    To use the Polynomial Remainder Theorem to check this, we divide $g(x) = x - (-0.5) = x + 0.5$ into $f(x)$.
+    \begin{align*}
+        & \underline{~~~6x^4+6x^3+10x+14\phantom{somethissom}} \\[-4pt]  x+0.5~&\Big)~6x^5+9x^4+3x^3+10x^2+19x+7 \\[-4pt] 
+        &\,\underline{-6x^5-3x^4\phantom{........................................}} \\[-4pt] %
+        &\phantom{\Big)}\phantom{.......}+6x^4+3x^3+10x^2+19x+7 \\[-4pt] %
+        &\phantom{\Big)\,}\phantom{.......}\underline{-\,6x^4-3x^3\phantom{+10x^2+19x+7....}} \\[-4pt] %
+        &\phantom{\Big)\,}\phantom{.......+6x^4+3x^3}+10x^2+19x+7 \\[-4pt] %        
+        &\phantom{\Big)\,}\phantom{............................}\underline{-\,10x^2-5x\phantom{+7....}} \\[-5pt] %
+        &\phantom{\Big)\,}\phantom{.......+6x^4+3x^3+10x^2}+14x+7 \\[-4pt] %
+        &\phantom{\Big)\,}\phantom{.......+6x^4+3x^3+10x^2~}\underline{-\,14x-7\ } \\[-4pt] %
+        &\phantom{\Big)\,}\phantom{.......+6x^4+3x^3+10x^2+14x}+0 
+    \end{align*}
+    The remainder is zero, so we can say that $-0.5$ is indeed a root of $f(x)$. 
+\end{explanation}
+\end{example}
+
 This can be extended to values $r$ which are not zeros of $f$ as well. Namely, if $r$ is any real number, then $f(r)$ is equal to the remainder of $\frac{f(x)}{x-r}$.
 
 
