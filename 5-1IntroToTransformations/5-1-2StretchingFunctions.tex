@@ -29,15 +29,15 @@ Given the parent function \(y = f(x)\) pictured in below , what are the effects 
 We first investigate the effects of \(c = 2\) and \(c = \frac{1}{2}\).  For \(v(x) = 2f(x)\), the algebraic impact of this transformation is that every output of \(f\) is multiplied by \(2\).  This means that the only output that is unchanged is when \(f(x) = 0\), while any other point on the graph of the original function \(f\) will be stretched vertically away from the \(x\)-axis by a factor of \(2\).  We can see this in \textbf{image} where each point on the original dark blue graph is transformed to a corresponding point whose \(y\)-coordinate is twice as large, as partially indicated by the red arrows.%
 
 \begin{image}
-\includegraphics[width=1\linewidth]{images/transformations-vert-stretch-1}
-\includegraphics[width=1\linewidth]{images/transformations-vert-stretch-2}
+\includegraphics[width=1\linewidth]{images/transformations-vert-stretch-1.png}
+\includegraphics[width=1\linewidth]{images/transformations-vert-stretch-2.png}
 \end{image}
 
 
 In contrast, the transformation \(u(x) = \frac{1}{2}f(x)\) is stretched vertically by a factor of \(\frac{1}{2}\), which has the effect of compressing the graph of \(f\) towards the \(x\)-axis, as all function outputs of \(f\) are multiplied by \(\frac{1}{2}\).  For instance, the point \((0,-2)\) on the graph of \(f\) is transformed to the graph of \((0,-1)\) on the graph of \(u\), and others are transformed as indicated by the purple arrows.%
 
 
-To consider the situation where \(c \lt 0\), we first consider the simplest case where \(c = -1\) in the transformation \(z(x) = -f(x)\).  Here the impact of the transformation is to multiply every output of the parent function \(f\) by \(-1\); this takes any point of form \((x,y)\) and transforms it to \((x,-y)\), which means we are reflecting each point on the original function's graph across the \(x\)-axis to generate the resulting function's graph.  This is demonstrated in second graph where \(y = z(x)\) is the reflection of \(y = f(x)\) across the \(x\)-axis and will be discussed more in the next section.%
+To consider the situation where \(c < 0\), we first consider the simplest case where \(c = -1\) in the transformation \(z(x) = -f(x)\).  Here the impact of the transformation is to multiply every output of the parent function \(f\) by \(-1\); this takes any point of form \((x,y)\) and transforms it to \((x,-y)\), which means we are reflecting each point on the original function's graph across the \(x\)-axis to generate the resulting function's graph.  This is demonstrated in second graph where \(y = z(x)\) is the reflection of \(y = f(x)\) across the \(x\)-axis and will be discussed more in the next section.%
 
 
 Finally, we also investigate the case where \(c = -2\), which generates \(y = w(x) = -2f(x)\).  Here we can think of \(-2\) as \(-2 = 2(-1)\): the effect of multiplying by \(-1\) first reflects the graph of \(f\) across the \(x\)-axis (resulting in \(w\)), and then multiplying by \(2\) stretches the graph of \(z\) vertically to result in \(w\), as shown in second graph .%
@@ -48,18 +48,18 @@ Finally, we also investigate the case where \(c = -2\), which generates \(y = w(
 We summarize and generalize our observations from the graphs above as follows.%
 
 \begin{callout}
-Given a function \(y = f(x)\) and a real number \(c \gt 0\), the transformed function \(y = v(x) = cf(x)\) is a \emph{vertical stretch} of the graph of \(f\).  Every point \((x,f(x))\) on the graph of \(f\) gets stretched vertically to the corresponding point \((x,cf(x))\) on the graph of \(v\).  If \(0 \lt c \lt 1\), the graph of \(v\) is a compression of \(f\) toward the \(x\)-axis; if \(c \gt 1\), the graph of \(v\) is a stretch of \(f\) away from the \(x\)-axis.  Points where \(f(x) = 0\) are unchanged by the transformation.%
+Given a function \(y = f(x)\) and a real number \(c > 0\), the transformed function \(y = v(x) = cf(x)\) is a \emph{vertical stretch} of the graph of \(f\).  Every point \((x,f(x))\) on the graph of \(f\) gets stretched vertically to the corresponding point \((x,cf(x))\) on the graph of \(v\).  If \(0 < c < 1\), the graph of \(v\) is a compression of \(f\) toward the \(x\)-axis; if \(c > 1\), the graph of \(v\) is a stretch of \(f\) away from the \(x\)-axis.  Points where \(f(x) = 0\) are unchanged by the transformation.%
 
-Given a function \(y = f(x)\) and a real number \(c \lt 0\), the transformed function \(y = v(x) = cf(x)\) is a reflection of the graph of \(f\) across the \(x\)-axis followed by a vertical stretch by a factor of \(|c|\).%
+Given a function \(y = f(x)\) and a real number \(c < 0\), the transformed function \(y = v(x) = cf(x)\) is a reflection of the graph of \(f\) across the \(x\)-axis followed by a vertical stretch by a factor of \(|c|\).%
 \end{callout}
 
 \begin{exploration} %act-changing-transformations-vert-stretch%
 
 Consider the functions \(r\) and \(s\) given in the following graphs.%
 \begin{image}
-\includegraphics[width=1\linewidth]{images/transformations-act-r-translation}
+\includegraphics[width=1\linewidth]{images/transformations-act-r-translation.png}
 
-\includegraphics[width=1\linewidth]{images/transformations-act-s-translation}
+\includegraphics[width=1\linewidth]{images/transformations-act-s-translation.png}
 \end{image}
 
 \begin{enumerate}[label=\alph*.]
@@ -69,9 +69,9 @@ On the same axes as the plot of \(y = r(x)\), sketch the following graphs:  \(y 
 On the same axes as the plot of \(y = s(x)\), sketch the following graphs:  \(y = k(x) = -s(x)\) and \(y = j(x) = -\frac{1}{2}s(x)\).  Be sure to label several points on each of \(r\), \(g\), and \(h\) with arrows to indicate their correspondence.  In addition, write one sentence to explain the overall transformations that have resulted in \(g\) and \(h\) from \(r\).%
 \item On the additional copies of the two figures below, sketch the graphs of the following transformed functions:  \(y = m(x) = 2r(x+1)-1\) (at left) and \(y = n(x) = \frac{1}{2}s(x-2)+2\).  As above, be sure to label several points on each graph and indicate their correspondence to points on the original parent function.%
 \begin{image}
-\includegraphics[width=1\linewidth]{images/transformations-act-r-translation}
+\includegraphics[width=1\linewidth]{images/transformations-act-r-translation.png}
 
-\includegraphics[width=1\linewidth]{images/transformations-act-s-translation}
+\includegraphics[width=1\linewidth]{images/transformations-act-s-translation.png}
 \end{image}
 \item Describe in words how the function \(y = m(x) = 2r(x+1)-1\) is the result of three elementary transformations of \(y = r(x)\).  Does the order in which these transformations occur matter?  Why or why not?%
 \end{enumerate}
@@ -155,7 +155,7 @@ $
 \section{Reflections Across Axes}
 Points $(x,y)$ and $(x,-y)$ are reflections of each other across the x-axis. Points $(x, y)$ and $(-x, y)$ are reflections of each other across the y-axis. In general, two points that are symmetric with respect to a line are reflections of each other across that line.
 \begin{image}
-\includegraphics[]{images/reflectiongraph}
+\includegraphics[scale=0.65]{images/reflectiongraph.png}
 \end{image}
 \begin{callout}
 The following transformations result in reflections of the graph of $y = f(x)$
