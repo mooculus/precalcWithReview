@@ -33,13 +33,13 @@
 \section{Introduction}
 If a quantity changes so that its growth or decay occurs at a constant percentage rate with respect to time, the function is exponential.  This is because if the growth or decay rate is $r$, the total amount of the quantity at time $t$ is given by $A(t) = a(1+r)^t$, where $a$ is the amount present at time $t = 0$.  Many different natural quantities change according to exponential models:  money growth through compounding interest, the growth of a population of cells, and the decay of radioactive elements
 
-A related situation arises when an object's temperature changes in response to its surroundings.  For instance, if we have a cup of coffee at an initial temperature of $186^\circ$ Fahrenheit and the cup is placed in a room where the surrounding temperature is $71^\circ$, our intuition and experience tell us that over time the coffee will cool and eventually tend to the $71^\circ$ temperature of the surroundings.  From an \link[experiment]{http://gvsu.edu/s/0SB} with an actual temperature probe, we have the data in the table below.
+A related situation arises when an object's temperature changes in response to its surroundings.  For instance, if we have a cup of coffee at an initial temperature of $186^\circ$ Fahrenheit and the cup is placed in a room where the surrounding temperature is $71^\circ$, our intuition and experience tell us that over time the coffee will cool and eventually tend to the $71^\circ$ temperature of the surroundings.  From an experiment with an actual temperature probe, we have the data in the table below.
 
-
+\begin{center}
+Data for cooling coffee\\
+(measured in degrees Fahrenheit at the time t in minutes)\\
 $$
 \begin{array}{cc}
-\multicolumn{2}{c}{\text{Data for cooling coffee}}\\
-\multicolumn{2}{c}{\text{(measured in degrees Fahrenheit at the time t in minutes)}}\\
 t&F(t)\\
 \hline
 0&186\\
@@ -57,6 +57,7 @@ t&F(t)\\
 48&104
 \end{array}
 $$
+\end{center}
 
 Here is a graph of these points.
 
@@ -68,7 +69,7 @@ Here is a graph of these points.
 In one sense, the data looks exponential: the points appear to lie on a curve that is always decreasing and decreasing at an increasing rate.  However, we know that the function can't have the form $f(t) = ab^t$ because such a function's range is the set of all positive real numbers, and it's impossible for the coffee's temperature to fall below room temperature ($71^\circ$).  It is natural to wonder if a function of the form $g(t) = ab^t + c$ will work.  Thus, in order to find a function that fits the data in a situation such as this, we begin by investigating and understanding the roles of $a$, $b$, and $c$ in the behavior of $g(t) = ab^t + c$.
 
 \begin{exploration}
-In \link[\emph{Desmos}]{desmos.com}, define $g(t) = ab^t+c$ and accept the prompt for sliders for $a$, $b$, and $c$. Edit the sliders so that $a$ has values from $a = 5$ to $a = 50$, $b$ has values from $b = 0.7$ to $b = 1.3$, and $c$ has values from $c = -5$ to $b = 5$ (also with a step-size of 0.01). In addition, in \emph{Desmos} let $P = (0, g(0))$ and check the box to show the label. Finally, zoom out so that the window shows an interval of $t$-values from $-30 \le t \le 30$
+In \link[\emph{Desmos}]{http://desmos.com}, define $g(t) = ab^t+c$ and accept the prompt for sliders for $a$, $b$, and $c$. Edit the sliders so that $a$ has values from $a = 5$ to $a = 50$, $b$ has values from $b = 0.7$ to $b = 1.3$, and $c$ has values from $c = -5$ to $b = 5$ (also with a step-size of 0.01). In addition, in \emph{Desmos} let $P = (0, g(0))$ and check the box to show the label. Finally, zoom out so that the window shows an interval of $t$-values from $-30 \le t \le 30$
 \begin{enumerate}[label=\alph*.]
 \item Set $b = 1.1$ and explore the effects of changing the values of $a$ and $c$.  Write several sentences to summarize your observations.
 \item Follow the directions for (a) again, this time with $b = 0.9$
@@ -133,7 +134,7 @@ In addition, we make a key observation about the use of exponents.  For the func
 \begin{equation*}
 \left( \frac{1}{2} \right)^t = \frac{1}{2^t} = 2^{-t}\text{.}
 \end{equation*}
-In our work with transformations involving horizontal scaling in \hyperlink{ez-circular-sinusoidal-horiz-reflection}{Exercise~2.4.5.3}, we saw that the graph of $y = h(-t)$ is the reflection of the graph of $y = h(t)$ across the $y$-axis.  Therefore, we can say that the graphs of $p(t) = 2^t$ and $q(t) = \left(\frac{1}{2}\right)^t = 2^{-t}$ are reflections of one another across the $y$-axis since $p(-t) = 2^{-t} = q(t)$.  We see this fact verified in the graph below.
+In our work with transformations involving horizontal scaling, we saw that the graph of $y = h(-t)$ is the reflection of the graph of $y = h(t)$ across the $y$-axis.  Therefore, we can say that the graphs of $p(t) = 2^t$ and $q(t) = \left(\frac{1}{2}\right)^t = 2^{-t}$ are reflections of one another across the $y$-axis since $p(-t) = 2^{-t} = q(t)$.  We see this fact verified in the graph below.
 
 \begin{image}
 \includegraphics{modeling-exp-reflection.jpg}
@@ -206,10 +207,11 @@ In addition, state the $y$-intercept and the range of the function.  For each fu
 \section{Modeling temperature data}
 Newton's Law of Cooling \index{Newton's Law of Cooling} states that the rate that an object warms or cools occurs in direct proportion to the difference between its own temperature and the temperature of its surroundings.  If we return to the coffee temperature data  and recall that the room temperature in that experiment was $71^\circ$, we can see how to use a transformed exponential function to model the data.  In the table below, we add a row of information to the table where we compute $F(t)-71$ to subtract the room temperature from each reading.
 
+\begin{center}
+Data for cooling coffee\\
+(measured in degrees Fahrenheit at the time t in minutes)\\
 $$
 \begin{array}{ccc}
-\multicolumn{3}{c}{\text{Data for cooling coffee}}\\
-\multicolumn{3}{c}{\text{(measured in degrees Fahrenheit at the time t in minutes)}}\\
 t&F(t)&f(t)=F(t)-71\\
 \hline
 0&186&115\\
@@ -227,6 +229,7 @@ t&F(t)&f(t)=F(t)-71\\
 48&104&33
 \end{array}
 $$
+\end{center}
 
 The data in the last row of the table appears exponential, and if we test the data by computing the quotients of output values that correspond to equally-spaced input, we see a nearly constant ratio.  In particular,%
 \begin{equation*}
