@@ -596,6 +596,88 @@ Mathematically, these last two methods are actually related.  The quadratic form
 %It is important to note that the parentheses around the ``-2" terms are {\bf not} optional. 
 %\end{callout}
 
+\section{Composing $f(x)=x^2$ and $g(x)=\sqrt{x}$}
+
+This final example is going to be a very important one that comes up often so we we will give it its own section.
+
+\begin{example}
+Let $f(x)=x^2$ and let $g(x)=\sqrt{x}$.  
+\begin{enumerate}[label=\alph*.]
+\item Find the domain and range of $f \circ g$ and compare this function to $id(x)=x$ and $abs(x)=|x|$.
+\item Find the domain and range of $g \circ f$ and compare this function to $id(x)=x$ and $abs(x)=|x|$.
+\end{enumerate}
+
+\begin{explanation}
+You probably have the idea that the squaring and squarerooting actions undo one another.  This is true for nonnegative values of $x$, but can get tricky when $x$ is allowed to be negative.  Let's look at each of these situations closely.
+\begin{enumerate}[label=\alph*.]
+\item First we consider $f \circ g$ and compare this function to $id(x)=x$ and $abs(x)=|x|$.  We have $f(x)=x^2$ and $g(x)=\sqrt{x}$ so 
+$$(f \circ g)(x) = f(g(x))=(g(x))^2=(\sqrt{x})^2.$$ 
+
+Let's consider the domain of this function.  Recall that the domain of a composite function $f \circ g$ is the set of those inputs $x$ in the domain of $g$ for which $g(x)$ is in the domain of $f$.  In this case, this means that the domain of $f(g(x))=(\sqrt{x})^2$ is the set of those inputs $x$ in the domain of $g(x)=\sqrt{x}$ for which $\sqrt{x}$ is in the domain of $f(x)=x^2$.  The implied domain of $g(x)=\sqrt{x}$ is $[0,\infty)$ since we cannot take the square root of a negative number.  Therefore, since the domain of the composition has to be only values in the domain of $g(x)$, this means the largest our domain can be is $[0,\infty)$.  Now, the only additional limiting factor is that the values $\sqrt{x}$ must be in the domain of $f$ but since the domain of $f$ is all real numbers, that will not limit the domain of the composition.  Therefore, the domain of $f \circ g$ is  $[0,\infty)$.
+
+Now that we know the domain and we know that squaring and squarerooting undo each other for nonnegative values of $x$, we can conclude that $f \circ g$ is the identity function, $id(x)=x$ but restricted to the domain $[0,\infty)$.  That is,
+$$(f \circ g)(x) =  (\sqrt{x})^2 = x, x \geq 0$$
+
+Since the absolute value function is the same as the identity function when $x \geq 0$.  Therefore, we could also say that 
+$$(f \circ g)(x) =  (\sqrt{x})^2 = |x|, x \geq 0$$
+
+From this information, we also know that the range of $f \circ g$ will also be $[0,\infty)$, since $(f \circ g)(x) =  (\sqrt{x})^2$.
+
+Here is a graph of $(f \circ g)(x) =  (\sqrt{x})^2$.
+
+\begin{image}
+  \begin{tikzpicture}
+        \begin{axis}[
+                    xmin=-5,xmax=7,
+                    ymin=-5,ymax=7,
+%                    xtick={2,4,...,14},
+%                    minor xtick={1,2,...,15},
+%                    ytick={100,200,300},
+%                    minor ytick={20,40,...,320},
+                    ]
+            \addplot+[domain = 0:7,->]{x};
+            \addplot[soliddot] coordinates {(0,0)} node[above left]{$(f \circ g)(x) =  (\sqrt{x})^2$};
+        \end{axis}
+\end{tikzpicture}
+\end{image}
+
+\item Now we consider $g \circ f$ and compare this function to $id(x)=x$ and $abs(x)=|x|$.  The domain of $g(f(x))=\sqrt{x^2}$ is the set of those inputs $x$ in the domain of $f(x)=x^2$ for which $x^2$ is in the domain of $g(x)=\sqrt{x}$.  The domain of $f(x)=x^2$ is all real numbers, so this does not reduce the domain of the composite function.  The range of $f(x)=x^2$ is $[0,\infty)$ since the square of every number will be greater than or equal to zero.  The implied domain of $g(x)=\sqrt{x}$ is $[0,\infty)$.  Therefore, every output from $f(x)=x^2$ is in the domain of $f(x)=\sqrt{x}$.  Therefore, the domain of $g \circ f$ is  $(-\infty,\infty)$.
+
+Now, let's consider the range of $g \circ f$.  We know that the range of $g \circ f$ must be contained in the range of $g(x)=\sqrt{x}$.  The range of $g(x)=\sqrt{x}$ is $[0,\infty)$, so that is the largest range possible for $g \circ f$.  We know that for values of $x \geq 0$, squaring and squarerooting undo one another so we know that all the values of $[0,\infty)$ are contained in the range of $g \circ f$.  More precisely, for any value $x_0$ in $[0,\infty)$, $g(f(x_0))=x_0$ so $x_0$ will be in the range of $g \circ f$.  Thus, the range of $g \circ f$ is $[0,\infty)$.
+
+Now, since we know that this function $g \circ f$ only outputs positive numbers, we know it cannot equal the identity function for inputs of $x<0$.  Let's explore what this function does for values of $x<0$ by considering $x=-2$.
+
+$$g(f(-2))=\sqrt{(-2)^2}=\sqrt{4}=2$$
+
+Notice, that we input $x=-2$ but the output was positive 2.  In fact, for all values of $x<0$, $g(f(x))=\sqrt{x^2}=-x=|x|$.
+
+Since the absolute value function is the same as the identity function when $x \geq 0$ but the negative of the idenity function for $x<0$, we have that 
+$$(g \circ f)(x) =  \sqrt{x^2} = |x|$$
+
+Here is a graph of $(g \circ f)(x) =  \sqrt{x^2} = |x|$.
+
+\begin{image}
+  \begin{tikzpicture}
+        \begin{axis}[
+                    xmin=-7,xmax=7,
+                    ymin=-7,ymax=7,
+%                    xtick={2,4,...,14},
+%                    minor xtick={1,2,...,15},
+%                    ytick={100,200,300},
+%                    minor ytick={20,40,...,320},
+                    ]
+            \addplot+[domain = 0:7,->, color=penColor]{x};
+            \addplot+[domain = -7:0,<-, color=penColor]{-x};
+            \addplot[soliddot, color=penColor] coordinates {(0,0)};
+        \end{axis}
+\end{tikzpicture}
+\end{image}
+\end{enumerate}
+\end{explanation}
+
+\end{example}
+
+
 \begin{summary}
 In general, we are not able to simply find the inverse of polynomials.
 

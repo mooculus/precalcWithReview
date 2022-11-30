@@ -1,0 +1,436 @@
+\documentclass{ximera}
+
+\input{../preamble.tex}
+\author{David Kish}
+\license{Creative Commons Attribution-ShareAlike 4.0 International License}
+
+
+\title{Zeros of Polynomials}
+
+\begin{document}
+\begin{abstract}
+We explore polynomial functions.
+\end{abstract}
+\maketitle
+
+%
+%
+%\typeout{************************************************}
+%\typeout{Section 6.2 Zeros of Polynomials}
+%\typeout{************************************************}
+%
+\section{Zeros of Polynomials}
+\begin{motivatingQuestions}\begin{itemize}
+\item What properties of a polynomial function can we deduce from its algebraic structure?%
+\item What is a sign chart and how does it help us understand a polynomial function's behavior?%
+\item How do zeros of multiplicity other than $1$ impact the graph of a polynomial function?%
+\end{itemize}\end{motivatingQuestions}
+
+We know that linear functions are the simplest of all funcitons we can consider:  their graphs have the simplest shape, their average rate of change is always constant (regardless of the interval chosen), and their formula is elementary.  Moreover, computing the value of a linear function only requires multiplication and addition.%
+
+If we think of a linear function as having formula $L(x) = b + mx$, and the next-simplest functions, quadratic functions, as having form $Q(x) = c + bx + ax^2$, we can see immediate parallels between their respective forms and realize that it's natural to consider slightly more complicated functions by adding additional power functions.%
+
+Indeed, if we instead view linear functions as having form%
+$$
+L(x) = a_0 + a_1 x
+$$
+(for some constants $a_0$ and $a_1$) and quadratic functions as having form%
+$$
+Q(x) = a_0 + a_1 x + a_2 x^2\text{,}
+$$
+
+then it's natural to think about more general functions of this same form, but with additional power functions included.%
+\begin{definition}
+Given real numbers $a_0, a_1, \ldots, a_n$ where $a_n \ne 0$, we say that the function%
+$$
+P(x) = a_0 + a_1 x + a_2 x^2 + \cdots + a_{n-1}x^{n-1} + a_n x^n, 
+$$
+is a polynomial of degree $n$.  In addition, we say that the value of $a_i$ are the coefficients of the polynomial and the individual power functions $a_i x^i$ are the terms of the polynomial. Any value of $x$ for which $P(x) = 0$ is called a zero of the polynomial.  
+\end{definition}
+\begin{example}
+The polyomial function $P(x) = 3 - 7x + 4x^2 - 2x^3 + 9x^5$ has degree $5$, its constant term is $3$, and its linear term is $-7x$.%
+\end{example}
+Since a polynomial is simply a sum of constant multiples of various power functions with positive integer powers, we often refer to those individual terms by referring to their individual degrees:  the linear term, the quadratic term, and so on.  In addition, since the domain of any power function of the form $p(x) = x^n$ where $n$ is a positive whole number is the set of all real numbers, it's also true the the domain of any polynomial function is the set of all real numbers.%
+\begin{exploration}
+Point your browser to the \emph{Desmos} worksheet at \link[http://gvsu.edu/s/0zy]{http://gvsu.edu/s/0zy}.  There you'll find a degree $4$ polynomial of the form $p(x) = a_0 + a_1x + a_2x^2 + a_3x^3 + a_4x^4$, where $a_0, \ldots, a_4$ are set up as sliders.  In the questions that follow, you'll experiment with different values of $a_0, \ldots, a_4$ to investigate different possible behaviors in a degree $4$ polynomial.%
+\begin{enumerate}[label=\alph*.]
+\item What is the largest number of distinct points at which $p(x)$ can cross the $x$-axis?%
+For a polynomial $p$, we call any value $r$ such that $p(r) = 0$ a zero of the polynomial.  Report the values of $a_0, \ldots, a_4$ that lead to that largest number of zeros for $p(x)$.%
+\item What other numbers of zeros are possible for $p(x)$?  Said differently, can you get each possible number of fewer zeros than the largest number that you found in (a)? Why or why not?%
+\item We say that a function has a turning point  if the function changes from decreasing to increasing or increasing to decreasing at the point.  For example, any quadratic function has a turning point at its vertex.%
+
+What is the largest number of turning points that $p(x)$ (the function in the \emph{Desmos} worksheet) can have?  Experiment with the sliders, and report values of $a_0, \ldots, a_4$ that lead to that largest number of turning points for $p(x)$.%
+\item What other numbers of turning points are possible for $p(x)$? Can it have no turning points?  Just one?  Exactly two? Experiment and explain.%
+\item What long-range behavior is possible for $p(x)$?  Said differently, what are the possible results for $\displaystyle \lim_{x \to -\infty} p(x)$ and $\displaystyle \lim_{x \to \infty} p(x)$?%
+\item What happens when we plot $y = a_4 x^4$ in and compare $p(x)$ and $a_4 x^4$?  How do they look when we zoom out? (Experiment with different values of each of the sliders, too.)%
+\end{enumerate}
+%
+\end{exploration}
+
+%
+%
+%\typeout{************************************************}
+%\typeout{Subsection 5.2.1 Key results about polynomial functions}
+%\typeout{************************************************}
+%
+Our observations in \hyperref[PA-poly-polynomials]{Preview Activity~\ref{PA-poly-polynomials}} generalize to polynomials of any degree.  In particular, it is possible to prove the following general conclusions regarding the number of zeros, the long-range behavior, and the number of turning points any polynomial of degree $n$.%
+
+For any degree $n$ polynomial $p(x) = a_0 + a_1 x + \cdots + a_{n-1}x^{n-1} + a_n x^n$, has at most $n$ real zeros.\footnote{We can actually say even more:  if we allow the zeros to be complex numbers, then every degree $n$ polynomial has \emph{exactly} $n$ zeros, provided we count zeros according to their multiplicity.  For example, the polynomial $p(x) = (x-1)^2 = x^2 - 2x + 1$ because it has a zero of multiplicity two at $x = 1$.\label{fn-36}}%
+
+We know that each of the power functions $x$, $x^2$, $\ldots$, $x^n$ grow without bound as $x \to \infty$.  Intuitively, we sense that $x^5$ grows faster than $x^4$ (and likewise for any comparison of a higher power to a lower one).  This means that for large values of $x$, the most important term in any polynomial is its highest order term, as we saw in \hyperref[PA-poly-polynomials]{Preview Activity~\ref{PA-poly-polynomials}} when we compared $p(x) = a_0 + a_1 x + a_2 x^2 + a_3 x^3 + a_4 x^4$ and $y = a_4 x^4$.%
+
+For any degree $n$ polynomial $p(x) = a_0 + a_1 x + \cdots + a_{n-1}x^{n-1} + a_n x^n$, its long-range behavior is the same as its highest-order term $q(x) = a_n x^n$.  Thus, any polynomial of even degree appears ``U-shaped'' ($\cup$ or $\cap$, like $x^2$ or $-x^2$) when we zoom way out, and any polynomial of odd degree appears ``chair-shaped'' (like $x^3$ or $-x^3$) when we zoom way out.%
+
+In \hyperref[F-poly-degree-7-far]{Figure~\ref{F-poly-degree-7-far}}, we see how the degree $7$ polynomial pictured there (and in \hyperref[F-poly-degree-7-near]{Figure~\ref{F-poly-degree-7-near}} as well) appears to look like $q(x) = -x^7$ as we zoom out.%
+
+
+
+
+Finally, a key idea from calculus justifies the fact that the maximum number of turning points of a degree $n$ polynomial is $n-1$, as we conjectured in the degree $4$ case in \textbf{image}.  Moreover, the only possible numbers of turning points must have the same parity as $n-1$; that is, if $n-1$ is even, then the number of turning points must be even, and if instead $n-1$ is odd, the number of turning points must also be odd.  For instance, for the degree $7$ polynomial in \textbf{image}, we know that it is chair-shaped, with one end up and one end down.  There could be zero turning points and the function could always decrease.  But if there is at least one, then there must be a second, since if there were only one the function would decrease and then increase without turning back, which would force the graph to appear U-shaped.%
+
+For any degree $n$ polynomial $p(x) = a_0 + a_1 x + \cdots + a_{n-1}x^{n-1} + a_n x^n$, if $n$ is even, its number of turning points is exactly one of $n-1$, $n-3$, $\ldots$, $1$, and if $n$ is odd, its number of turning points is exactly one of $n-1$, $n-3$, $\ldots$, $0$.%
+
+
+
+By experimenting with coefficients in \emph{Desmos}, find a formula for a polynomial function that has the stated properties, or explain why no such polynomial exists.   in \emph{Desmos}, you'll get prompted to add sliders that make it easy to explore a degree $5$ polynomial.)%
+\begin{enumerate}[label=\alph*.]
+\item A polynomial $p$ of degree $5$ with exactly $3$ real zeros, $4$ turning points, and such that $\lim_{x \to -\infty} p(x) = +\infty$ and $\lim_{x \to \infty} p(x) = -\infty$.%
+\item A polynomial $q$ of degree $4$ with exactly $4$ real zeros, $3$ turning points, and such that $\lim_{x \to -\infty} p(x) = +\infty$ and $\lim_{x \to \infty} p(x) = -\infty$.%
+\item A polynomial $r$ of degree $6$ with exactly $2$ real zeros, $3$ turning points, and such that $\lim_{x \to -\infty} p(x) = -\infty$ and $\lim_{x \to \infty} p(x) = -\infty$.%
+\item A polynomial $s$ of degree $5$ with exactly $5$ real zeros, $3$ turning points, and such that $\lim_{x \to -\infty} p(x) = +\infty$ and $\lim_{x \to \infty} p(x) = -\infty$.%
+\end{enumerate}
+%
+
+%
+%
+%\typeout{************************************************}
+%\typeout{Subsection 5.2.2 Using zeros and signs to understand polynomial behavior}
+%\typeout{************************************************}
+%
+\section{Using zeros and signs to understand polynomial behavior}
+
+Just like a quadratic function can be written in different forms (standard: $q(x) = ax^2 + bx + c$, vertex: $q(x) = a(x-h)^2 + k$, and factored: $q(x) = a(x-r_1)(x-r_2)$), it's possible to write a polynomial function in different forms and to gain information about its behavior from those different forms.  In particular, if we know all of the zeros of a polynomial function, we can write its formula in factored form, which gives us a deeper understanding of its graph.%
+
+The Zero Product Property states that if two or more numbers are multiplied together and the result is $0$, then at least one of the numbers must be $0$.  We use the Zero Product Property regularly with polynomial functions.  If we can determine all $n$ zeros of a degree $n$ polynomial, and we call those zeros $r_1$, $r_2$, $\ldots$, $r_n$, we can write%
+$$
+p(x) = a_n(x-r_1)(x-r_2) \cdots (x-r_2)\text{.}
+$$
+Moreover, if we are given a polynomial in this factored form, we can quickly determine its zeros.  For instance, if $p(x) = 2(x+7)(x+1)(x-2)(x-5)$, we know that the only way $p(x) = 0$ is if at least one of the factors $(x+7)$, $(x+1)$, $(x-2)$, or $(x-5)$ equals $0$, which implies that $x = -7$, $x = -1$, $x = 2$, or $x = 5$.  Hence, from the factored form of a polynomial, it is straightforward to identify the polynomial's zeros, the $x$-values at which its graph crosses the $x$-axis.  We can also use the factored form of a polynomial to develop what we call a \textbf{sign chart}, which we demonstrate in \textbf{image}. %
+\begin{example}{}{ex-polynomial-signs}%
+
+Consider the polynomial function $p(x) = k(x-1)(x-a)(x-b)$.  Suppose we know that $1 < a < b$ and that $k < 0$.  Fully describe the graph of $p$ without the aid of a graphing utility.%
+
+Since $p(x) = k(x-1)(x-a)(x-b)$, we immediately know that $p$ is a degree $3$ polynomial with $3$ real zeros:  $x = 1, a, b$.  We are given that $1 < a < b$ and in addition that $k < 0$.  If we expand the factored form of $p(x)$, it has form $p(x) = kx^3 + \cdots$, and since we know that when we zoom out, $p(x)$ behaves like $kx^3$, we know that with $k < 0$ it follows $\lim_{x \to -\infty} p(x) = +\infty$ and $\lim_{x \to \infty} p(x) = -\infty$.%
+
+Since $p$ is degree $3$ and we know it has zeros at $x = 1, a, b$, we know there are no other locations where $p(x) = 0$.  Thus, on any interval between two zeros (or to the left of the least or the right of the greatest), the polynomial cannot change sign.  We now investigate, interval by interval, the sign of the function.%
+
+
+When $x < 1$, it follows that $x - 1 < 0$.  In addition, since $1 < a < b$, when $x < 1$, $x$ lies to the left of $1$, $a$, and $b$, which also makes $x-a$ and $x-b$ negative.  Moreover, we know that the constant $k < 0$.  Hence, on the interval $x < 1$, all four terms in $p(x) = k(x-1)(x-a)(x-b)$ are negative, which we indicate by writing ``$----$'' in that location on the sign chart pictured in \textbf{image}.%
+
+In addition, since there are an even number of negative terms in the product, the overall product's sign is positive, which we indicate by the single $+$ beneath ``$----$'', and by writing ``POS'' below the coordinate axis.%
+
+We now proceed to the other intervals created by the zeros.  On $1 < x < a$, the term $(x-1)$ has become positive, since $x > 1$.  But both $x-a$ and $x-b$ are negative, as is the constant $k$, and thus we write ``$-+--$'' for this interval, which has overall sign ``$-$'', as noted in the figure.  Similar reasoning completes the diagram.%
+
+From all of the information we have deduced about $p$, we conclude that regardless of the locations of $a$ and $b$, the graph of $p$ must look like the curve shown in \textbf{image}.%
+
+\end{example}
+\begin{exploration}{}{act-poly-polynomials-sign-chart}%
+
+Consider the polynomial function given by%
+$$
+p(x) = 4692(x+1520)(x^2+10000)(x-3471)^2(x-9738)\text{.}
+$$
+%
+
+\begin{enumerate}[label=\alph*.]
+\item What is the degree of $p$?  How can you tell \emph{without} fully expanding the factored form of the function?%
+\item Explain why the factor $(x^2 + 10000)$ is always positive.%
+\item What are the zeros of the polynomial $p$?%
+\item Construct a sign chart for $p$ by using the zeros you identified in (b) and then analyzing the sign of each factor of $p$.%
+\item Without using a graphing utility, construct an approximate graph of $p$ that has the zeros of $p$ carefully labeled on the $x$-axis.%
+\item Use a graphing utility to check your earlier work.  What is challenging or misleading when using technology to graph $p$?%
+\end{enumerate}
+%
+\end{exploration}
+
+%
+%
+%\typeout{************************************************}
+%\typeout{Subsection 5.2.3 Multiplicity of polynomial zeros}
+%\typeout{************************************************}
+%
+{Multiplicity of polynomial zeros}{}{Multiplicity of polynomial zeros}{}{}{subsec-poly-polynomials-multiplicity}
+
+In \textbf{image}, we found that one of the zeros of the polynomial $p(x)=4692(x + 1520)(x^{2} + 10000)(x - 3471)^{2}(x - 9738)$
+
+ leads to different behavior of the function near that zero than we've seen in other situations.  We now consider the more general situation where a polynomial has a repeated factor of the form $(x-r)^{n}$.  When $(x-r)^{n}$ is a factor of a polynomial $p$, we say that $p$ has a zero of multiplicity $n$ at $x=r$. 
+
+To see the impact of repeated factors, we examine a collection of degree $4$ polynomials that each have $4$ real zeros.  We start with the simplest of all, the function $f(x) = x^4$, whose zeros are $x = 0, 0, 0, 0$.  Because the factor ``$x-0$'' is repeated $4$ times, the zero $x = 0$ has multiplicity $4$.%
+
+Next we consider the degree $4$ polynomial $g(x) = x^3 (x-1)$, which has a zero of multiplicity $3$ at $x = 0$ and a zero of multiplicity $1$ at $x = 1$.%
+\begin{image}
+\includegraphics[width=0.5\linewidth]{images/polynomial-3-1.pdf}
+\end{image}
+Observe that in\textbf{image}, the up-close plot near the zero $x = 0$ of multiplicity $3$, the polynomial function $g$ looks similar to the basic cubic polynomial $-x^3$.  In addition, in \textbf{image}, we observe that if we zoom in even futher on the zero of multiplicity $1$, the function $g$ looks roughly linear, like a degree $1$ polynomial.  This type of behavior near repeated zeros turns out to hold in other cases as well.%
+\begin{image}
+\includegraphics[width=1\linewidth]{images/polynomial-3-1-3.pdf}
+\includegraphics[width=1\linewidth]{images/polynomial-3-1-1.pdf}
+\end{image}
+If we next let $h(x) = x^2 (x-1)^2$, we see that $h$ has two distinct real zeros, each of multiplicity $2$.  The graph of $h$ in \textbf{image} shows that $h$ behaves similar to a basic quadratic function near each of those zeros and thus shows U-shaped behavior nearby.  If instead we let $k(x) = x^2(x-1)(x+1)$, we see approximately linear behavior near $x = -1$ and $x = 1$ (the zeros of multiplicity $1$), and quadratic (U-shaped) behavior near $x = 0$ (the zero of multiplicity $2$), as seen in \textbf{image}.%
+\begin{image}
+\includegraphics[width=1\linewidth]{images/polynomial-2-2.pdf}
+\includegraphics[width=1\linewidth]{images/polynomial-2-1-1.pdf}
+\end{image}
+
+Finally, if we consider $m(x) = (x+1)x(x-1)(x-2)$, which has $4$ distinct real zeros each of multiplicity $1$, we observe in \hyperref[F-polynomial-4D]{Figure~\ref{F-polynomial-4D}} that zooming in on each zero individually, the function demonstrates approximately linear behavior as it passes through the $x$-axis.%
+
+\begin{image}
+\includegraphics[width=0.5\linewidth]{images/polynomial-1-1-1-1.pdf}
+\end{image}
+
+Our observations with polynomials of degree $4$ in the various figures above generalize to polynomials of any degree.%
+
+
+If $(x-r)^n$ is a factor of a polynomial $p$, then $x = r$ is a zero of $p$ of multiplicity $n$, and near $x = r$ the graph of $p$ looks like either $-x^n$ or $x^n$.  That is, the shape of the graph near the zero is determined by the multiplicity of the zero.%
+
+\begin{exploration}{}{act-poly-polynomials-multiple-zeros}%
+For each of the following prompts, try to determine a formula for a polynomial that satisfies the given criteria.  If no such polynomial exists, explain why.%
+
+\begin{enumerate}[label=\alph*.]
+\item A polynomial $f$ of degree $10$ whose zeros are $x = -12$ (multiplicity $3$), $x = -9$ (multiplicity $2$), $x = 4$ (multiplicity $4$), and $x = 10$ (multiplicity $1$), and $f$ satisfies $f(0) = 21$.  What can you say about the values of $\lim_{x \to -\infty} f(x)$ and $\lim_{x \to \infty} f(x)$.%
+\item A polynomial $p$ of degree $9$ that satisfies $p(0) = -2$ and $p$ has the graph shown in \hyperref[F-polynomial-degree-9]{Figure~\ref{F-polynomial-degree-9}}.  Assume that all of the zeros of $p$ are shown in the figure.%
+\item A polynomial $q$ of degree $8$ with $3$ distinct real zeros (possibly of different multiplicities) such that $q$ has the sign chart in \hyperref[F-polynomial-sign-chart-2]{Figure~\ref{F-polynomial-sign-chart-2}} and satisfies $q(0) = -10$.%
+\begin{image}
+\includegraphics[width=1\linewidth]{images/poly-degree-9.pdf}
+\includegraphics[width=1\linewidth]{images/poly-sign-chart-2.pdf}
+\end{image}
+\item A polynomial $q$ of degree $9$ with $3$ distinct real zeros (possibly of different multiplicities) such that $q$ satisfies the sign chart in \hyperref[F-polynomial-sign-chart-2]{Figure~\ref{F-polynomial-sign-chart-2}} and satisfies $q(0) = -10$.%
+\item A polynomial $p$ of degree $11$ that satisfies $p(0) = -2$ and $p$ has the graph shown in \hyperref[F-polynomial-degree-9]{Figure~\ref{F-polynomial-degree-9}}.  Assume that all of the zeros of $p$ are shown in the figure.%
+\end{enumerate}
+%
+\end{exploration}
+
+%
+%
+%\typeout{************************************************}
+%\typeout{Subsection 5.2.4 Summary}
+%\typeout{************************************************}
+%
+\begin{summary}\begin{itemize}
+\item From a polynomial function's algebraic structure, we can deduce several key traits of the function.%
+\item If the function is in standard form, say $p(x) = a_0 + a_1 x + a_2 x^2 + \cdots + a_{n-1}x^{n-1} + a_n x^n$, we know that its degree is $n$ and that when we zoom out, $p$ looks like $a_n x^n$ and thus has the same long-range behavior as $a_n x^n$.  Thus, $p$ is chair-shaped if $n$ is odd and U-shaped if $n$ is even.  Whether $\lim_{n \to \infty} p(x)$ is $+\infty$ or $-\infty$ depends on the sign of $a_n$.%
+\item If the function is in factored form, say $p(x) = a_n(x-r_1)(x-r_2) \cdots (x-r_n)$ (where the $r_i$'s are possibly not distinct and possibly complex), we can quickly determine both the degree of the polynomial ($n$) and the locations of its zeros, as well as their multiplicities.%
+\item A sign chart is a visual way to identify all of the locations where a function is zero along with the sign of the function on the various intervals the zeros create.  A sign chart gives us an overall sense of the graph of the function, but without concerning ourselves with any specific values of the function besides the zeros.%
+\item When a polynomial $p$ has a repeated factor such as $(x-5)(x-5)(x-5) = (x-5)^3$, we way that $x = 5$ is a zero of multiplicity $3$.  At the point $x = 5$ where $p$ will cross the $x$-axis, up close it will look like a cubic polynomial and thus be chair-shaped.  In general, if $(x-r)^n$ is a factor of a polynomial $p$ so that $x = r$ is a zero of multiplicity $n$, the polynomial will behave near $x = r$ like a polynomial of degree $n$.%
+\end{itemize}\end{summary}
+
+ 
+% %\section{Exponent Rules}
+%   %%%%%%%%%%%%%%%%
+%    \section{Product Rule}
+%        If we write out $3^5\cdot 3^2$ without using exponents,
+%        we'd have:
+%$$
+% 3^5 \cdot 3^2 = \left(3 \cdot 3\cdot 3\cdot 3\cdot 3\right) \cdot \left(3 \cdot 3\right)
+%$$
+%        If we then count how many $3$s are being multiplied together,
+%        we find we have $5+2=7$, a total of seven $3$s.
+%        So $3^5\cdot 3^2$ simplifies like this:
+%       $$
+%          3^5\cdot 3^2 = 3^{5+2} = 3^7
+%$$
+%\begin{example}          
+%Simplify $x^2\cdot x^3$. \\
+%\begin{explanation}       
+%          To simplify $x^2\cdot x^3$,
+%          we write this out in its expanded form,
+%          as a product of $x$'s, we have
+%$$
+%            x^2\cdot x^3 =(x\cdot x)(x \cdot x \cdot x)
+%            =x\cdot x\cdot x \cdot x \cdot x
+%            =x^5
+%   $$   
+%          Note that we obtained the exponent of $5$ by adding $2$ and $3$.
+%  \end{explanation}
+%\end{example}
+%
+%      This example demonstrates our first exponent rule,
+%      the Product Rule:\\
+%\begin{callout}
+%\textbf{ \Large Product Rule of Exponents} \\
+%      When multiplying two expressions that have the same base,
+%      we can simplify the product by adding the exponents.
+%        $$
+%x^m \cdot x^n = x^{m+n}
+%$$
+%\end{callout}
+%   Recall that $x=x^1$. It helps to remember this when multiplying certain expressions together.
+%\begin{example}        
+%  Multiply $x(x^3+2)$ by using the distributive property.\\
+%\begin{explanation}
+%          According to the distributive property,
+%        $x(x^3+2)=x\cdot x^3 + x\cdot2$
+%          How can we simplify that term $x\cdot x^3$?
+%          It's really the same as $x^1\cdot x^3$,
+%          so according to the Product Rule, it is $x^4$.
+%          So we have:
+%        $$
+%            x(x^3+2)=x\cdot x^3 + x\cdot2
+%            =x^4+2x
+%$$
+%\end{explanation}
+%\end{example}         
+%
+%%%%%%%%%%%%%%%%%
+% \section{Power to a Power Rule}
+%
+%        If we write out $\left(3^5\right)^2$ without using exponents,
+%        we'd have $3^5$ multiplied by itself:
+%   $$
+%         \left(3^5\right)^2 = \left(3^5\right)\cdot \left(3^5\right)
+%         = \left(3\cdot 3\cdot 3\cdot 3 \cdot 3 \right) \cdot \left(3 \cdot 3\cdot 3\cdot 3\cdot 3\right)
+%      $$ 
+%        If we again count how many $3$s are being multiplied,
+%        we have a total of two groups each with five $3$s.
+%        So we'd have $2\cdot 5=10$ instances of a $3$.
+%        So $\left(3^5\right)^2$ simplifies like this:
+%   
+%          $\left(3^5\right)^2 = 3^{2\cdot 5}$
+%          $= 3^{10}$
+%
+%
+%\begin{example}
+%          Simplify $\left(x^2\right)^3$.\\
+%\begin{explanation}
+%          To simplify $\left(x^2\right)^3$,
+%          we write this out in its expanded form,
+%          as a product of $x$'s, we have
+%            $\left(x^2\right)^3 =\left(x^2\right) \cdot \left(x^2\right)\cdot\left(x^2\right)$
+%            $=(x \cdot x)\cdot (x \cdot x)\cdot (x \cdot x)$
+%            $=x^6$
+%     \end{explanation}
+%          Note that we obtained the exponent of $6$ by multiplying $2$ and $3$.
+%\end{example}
+%      This demonstrates our second exponent rule,
+%      the Power to a Power Rule:
+%\begin{callout}
+%\textbf{ \Large Power to a Power Rule} \\
+%      when a base is raised to an exponent and that expression is raised to another exponent,
+%      we multiply the exponents.
+%   $$
+%      \left(x^m\right)^n = x^{m \cdot n}
+%   $$
+%\end{callout}
+%
+%%%%%%%%%%%%%%%%%%%
+%      \section{ Product to a Power Rule}
+%        The third exponent rule deals with having multiplication inside a set of parentheses and an exponent outside the parentheses.
+%        If we write out $\left(3t\right)^5$ without using an exponent,
+%        we'd have $3t$ multiplied by itself five times:
+%$$
+%      (3t)^5= (3t)(3t)(3t)(3t)(3t)
+%$$
+%        Keeping in mind that there is multiplication between every $3$ and $t$,
+%        and multiplication between all of the parentheses pairs,
+%        we can reorder and regroup the factors:
+%          $\left(3t\right)^5 = (3\cdot t)\cdot (3\cdot t)\cdot (3\cdot t)\cdot (3\cdot t)\cdot (3\cdot t)$
+%          $= \left(3\cdot 3\cdot 3\cdot 3\cdot 3 \right) \cdot \left(t \cdot t \cdot t \cdot t \cdot t\right)$
+%          $= 3^5 t^5$
+%        We could leave it written this way if $3^5$ feels especially large.
+%        But if you are able to evaluate $3^5=243$,
+%        then perhaps a better final version of this expression is $243t^5$.
+% 
+%        We essentially applied the outer exponent to each factor inside the parentheses.
+%        It is important to see how the exponent $5$ applied to \textbf{both} the $3$ \textbf{and} the $t$,
+%        not just to the $t$.
+%   
+%
+% \begin{example}   
+%          Simplify $(xy)^5$.
+%    
+%          To simplify $(xy)^5$,
+%          we write this out in its expanded form,
+%          as a product of $x$'s and $y$'s, we have
+%
+%            $(xy)^5 =(x \cdot y) \cdot (x \cdot y) \cdot (x \cdot y) \cdot (x \cdot y) \cdot (x \cdot y)$
+%            $=(x \cdot x \cdot x \cdot x \cdot x) \cdot (y \cdot y \cdot y \cdot y \cdot y)$
+%            $=x^5 y^5$
+%
+%          Note that the exponent on $xy$ can simply be applied to both $x$ and $y$.
+%\end{example}
+%
+%
+%      This demonstrates our third exponent rule,
+%      the Product to a Power Rule:
+%\begin{callout}
+%\textbf{ \Large Product to a Power Rule} \\
+%      When a product is raised to an exponent,
+%      we can apply the exponent to each factor in the product.
+%$$
+%        \left(x\cdot y\right)^n = x^{n}\cdot y^{n}
+% $$
+%\end{callout}
+%
+%
+%%%%%%%%%%%%%%%%%%
+%      \section{Summary of the Rules of Exponents for Multiplication}
+%  
+%
+%
+%          If $a$ and $b$ are real numbers,
+%          and $m$ and $n$ are positive integers,
+%          then we have the following rules:
+% 
+%\textbf{Product Rule}
+%$$
+%            a^{m} \cdot a^{n} = a^{m+n}
+%$$
+%\textbf{Power to a Power Rule}
+%   $$
+%           (a^{m})^{n} = a^{m\cdot n}
+%   $$
+% \textbf{ Product to a Power Rule}
+%   $$
+%           (ab)^{m} = a^{m} \cdot b^{m}
+%   $$  
+%      Many examples will make use of more than one exponent rule.
+%      In deciding which exponent rule to work with first,
+%      it's important to remember that the order of operations still applies.
+%\begin{example} Simplify the following expression.
+%                $\left(3^7r^5\right)^4$\\
+%    \begin{explanation}
+%                Since we cannot simplify anything inside the parentheses, we'll begin simplifying this expression using the Product to a Power rule.
+%                We'll apply the outer exponent of 4 to each factor inside the parentheses.
+%                Then we'll use the Power to a Power Rule to finish the simplification process.
+%      $$          
+%                  \left(3^7r^5\right)^4 = \left(3^7\right)^4 \cdot \left(r^5\right)^4
+%                  = 3^{7\cdot4} \cdot r^{5\cdot 4}
+%                  = 3^{28}r^{20}
+%         $$      
+%                Note that $3^{28}$ is too large to actually compute, even with a calculator,
+%                so we leave it written as $3^{28}$.
+%\end{explanation}
+%\end{example}
+%\begin{example}
+%Simplify the following expression.
+%       $\left(t^3\right)^2\cdot \left(t^4\right)^5$\\
+%\begin{explanation}
+%                According to the order of operations,
+%                we should first simplify any exponents before carrying out any multiplication.
+%                Therefore, we'll begin simplifying this by applying the Power to a Power Rule and then finish using the Product Rule.
+%           $$
+%                  \left(t^3\right)^2\cdot \left(t^4\right)^5 = t^{3\cdot2}\cdot t^{4\cdot5}
+%                  = t^6 \cdot t^{20}
+%                  = t^{6+20}
+%                  = t^{26}
+%$$
+%\end{explanation}
+%\end{example}
+% \begin{remark} 
+%        We cannot simplify an expression like $x^2y^3$ using the Product Rule,
+%        as the factors $x^2$ and $y^3$ do not have the same base.
+%\end{remark}
+
+
+
+\end{document}
