@@ -20,8 +20,8 @@
 %\typeout{************************************************}
 
 \begin{motivatingQuestions}\begin{itemize}
-\item How does the process of function composition effect the domain of the function?
-\item How does the process of function composition effect the range of the function?
+\item How does the process of function composition affect the domain of the function?
+\item How does the process of function composition affect the range of the function?
 \end{itemize}\end{motivatingQuestions}
 
 
@@ -30,9 +30,9 @@
 %\typeout{************************************************}
 
 \section{Domains of Composite Functions}
-The domain of a composite function such as $f \circ g$ is dependent on the domain of $g$ and the domain of $f$. It is important to know when we can apply a composite function and when we cannot, that is, to know the domain of a function such as $f  \circ g$. 
+The domain of a composite function, such as $f \circ g$, is dependent on the domain of $g$ and the domain of $f$. The domain of $f \circ g$ is important because it tells us when we can apply a composite function and when we cannot. 
 
-Let us assume we know the domains of the functions $f$ and $g$ separately. If we write the composite function for an input $x$ as $f(g(x))$, we can see right away that $x$ must be a member of the domain of $g$ in order for the expression to be meaningful, because otherwise we cannot complete the inner function evaluation. However, we also see that $g(x)$ must be a member of the domain of $f$, otherwise the second function evaluation in $f(g(x))$ cannot be completed, and the expression is still undefined. Thus the domain of $f \circ g$ consists of only those inputs in the domain of $g$ that produce outputs from $g$ belonging to the domain of $f$. Note that the domain of $f$ composed with $g$ is the set of all $x$ such that $x$ is in the domain of $g$ and $g(x)$ is in the domain of $f$.
+Let us assume we know the domains of the functions $f$ and $g$ separately. We can write the composite function $f \circ g$ for an input $x$ as $f(g(x))$. Using the figure in Remark 2 below,  we can see that $x$ must be a member of the domain of $g$ in order for the expression to be meaningful, because otherwise we cannot complete the inner function evaluation. However, we also see that $g(x)$ must be a member of the domain of $f$, otherwise the second function evaluation in $f(g(x))$ cannot be completed, and the expression is still undefined. Thus the domain of $f \circ g$ consists of only those inputs in the domain of $g$ that produce outputs from $g$ belonging to the domain of $f$. Note that the domain of $f$ composed with $g$ is the set of all $x$ such that $x$ is in the domain of $g$ and $g(x)$ is in the domain of $f$.
 
 
 \begin{callout}
@@ -94,13 +94,13 @@ $$
 (f \circ g)(x)=\sqrt{\sqrt{3-x}+2}
 $$
 
-For $(f \circ g)(x)=\sqrt{\sqrt{3-x}+2}$, we need $\sqrt{3-x}+2 \geq 0$, since the inside of a square root cannot be negative. Since square roots are non-negative, $\sqrt{3-x} \geq 0$ sp $\sqrt{3-x}+2 \geq 0$ as long as $\sqrt{3-x}$ exists. That means $3-x \geq 0$, which gives a domain of $(- \infty,3]$.
+For $(f \circ g)(x)=\sqrt{\sqrt{3-x}+2}$, we need $\sqrt{3-x}+2 \geq 0$, since the inside of a square root cannot be negative. Since square roots are non-negative, $\sqrt{3-x} \geq 0$ and $\sqrt{3-x}+2 \geq 0$ as long as $\sqrt{3-x}$ exists. That means $3-x \geq 0$, which gives a domain of $(- \infty,3]$.
 
 \end{explanation}
 
 \end{example}
 
-This example shows that knowledge of the range of functions (specifically the inner function) can also be helpful in finding the domain of a composite function. It also shows that the domain of $f \circ g$ can contain values that are not in the domain of $f$, though they must be in the domain of $g$.
+This example shows that knowledge of the range of functions (specifically the inner function, which in this case the range is $\sqrt{3-x} \geq 0$) can also be helpful in finding the domain of a composite function. It also shows that the domain of $f \circ g$ can contain values that are not in the domain of $f$, though they must be in the domain of $g$. In this example, the domain of $f$ is $\left(-2,\infty\right)$ but the domain of $f \circ g$ is $(- \infty,3]$.
 
 \begin{exploration}
 Find the domain of $f \circ g$ where $f(x)=\frac{1}{x-2}$ and $g(x)=\sqrt{x+4}$.
@@ -116,7 +116,7 @@ Find the domain of $f \circ g$ where $f(x)=\frac{1}{x-2}$ and $g(x)=\sqrt{x+4}$.
 \section{Ranges of Composite Functions}
 The range of a composite function such as $f \circ g$ is dependent on the range of $g$ and the range of $f$. It is important to know what values can result from a composite function, that is, to know the range of a function such as $f  \circ g$. 
 
-Let us assume we know the ranges of the functions $f$ and $g$ separately. If we write the composite function for an input $x$ as $f(g(x))$, we can see right away that $f(g(x))$ must be a member of the range of $f$ since we will input the value $g(x)$ into $f$. However, we also see that it is possible that not all values in the range of $f$ are in the range of $f(g(x))$.  
+Let us assume we know the ranges of the functions $f$ and $g$ separately. If we write the composite function for an input $x$ as $f(g(x))$, we can see that $f(g(x))$ must be a member of the range of $f$ since we will input the value $g(x)$ into $f$. However, we also see that it is possible that not all values in the range of $f$ are in the range of $f(g(x))$.  
 
 \begin{image}
 \includegraphics{CompDom1.png}
@@ -128,7 +128,7 @@ From the image above, we can see that there might be values in the yellow region
 	The range of a composite function $f\circ g$ is a subset of the range of $f$. 
 \end{callout}
 
-To find the domain of a composite function, $f \circ g$, you can follow these three steps:
+To find the range of a composite function, $f \circ g$, you can follow these three steps:
 \begin{enumerate}[label=\arabic*)]
 	\item Find the range of $g$.
 	\item Find the range of $f$.
