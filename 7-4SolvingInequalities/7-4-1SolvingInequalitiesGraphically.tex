@@ -47,7 +47,7 @@
 \section{Introduction}
 Dabin and Melina are having a walking race. Dabin can walk 1 meter per second, but Melina can walk 2 meters per second. Since Melina is the faster walker, she gives Dabin a head start of 5 meters. At this point, we can ask a few questions about the race. Two questions we'll focus on are ``When is Dabin in the lead?'' and  ``When is Melina in the lead?'' both of which can be answered by considering inequalities. 
 
-To start, let's define some relevant functions. The function $D$ defined by $D(t) = 5 + t$ represents how far (in meters) Dabin has walked $t$ seconds after the start of the race. Similarly, the function $M$ defined by $M(t) = 2t$ represents how far Melina has walked $t$ seconds after the start of the race. In our framework, asking when Dabin is in the lead is the same as asking for all $t$ such that $D(t) > M(t)$. In the vocabulary that we'll use, we want to solve the inequality $D(t) > M(t)$. 
+To start, let's define some relevant functions. The function $D$ defined by $D(t) = 5 + t$ represents how far (in meters) Dabin has walked $t$ seconds after the start of the race. Similarly, the function $M$ defined by $M(t) = 2t$ represents how far Melina has walked $t$ seconds after the start of the race. Here, asking when Dabin is in the lead is the same as asking for all $t$ such that $D(t) > M(t)$. In the vocabulary that we'll use, we want to solve the inequality $D(t) > M(t)$. 
 
 \begin{definition}
 Say $f$ and $g$ are functions. A \index{solution ! to an inequality}\dfn{solution} to the inequality $f(x) < g(x)$ is the set of $x$ values where $f(x) < g(x)$. Similarly, a solution to the inequality $f(x) > g(x)$ is the set of $x$ values where $f(x) > g(x)$.
@@ -78,7 +78,7 @@ This example asks us to find the set of $t$ values where $D(t) < M(t)$. One appr
 \end{tikzpicture}
 \end{image}
 
-Because of the way we draw the graphs of functions, if $D(x) < M(x)$ for some $x$ if and only if the graph of $D$ lies below the graph of $M$ at the point $x$. Using this information, we can see that if $t > 5$, then the graph of $D$ lies below the graph of $M$. Therefore, the set of all $t$ such that $t > 5$ is the solution to $D(t) < M(t)$. Writing this in interval notation, the solution is $(5, \infty)$. 
+Because of the way we draw the graphs of functions, if $D(t) < M(t)$ for some $y$ if and only if the graph of $D$ lies below the graph of $M$ at the point $t$. Using this information, we can see that if $t > 5$, then the graph of $D$ lies below the graph of $M$. Therefore, the set of all $t$ such that $t > 5$ is the solution to $D(t) < M(t)$. Writing this in interval notation, the solution is $(5, \infty)$. 
 
 Putting this in terms of the scenario described at the beginning of the section, Melinda is in the lead after 5 seconds. 
 \end{explanation}
@@ -121,7 +121,7 @@ Let $f$ and $g$ be functions whose graphs are shown below. Assume all important 
 \end{enumerate}
 \end{explanation}
 
-Now let's turn our attention to inequalities involving absolute values, which are often a source of confusion. The following theorem provides the complete story.
+Now let's turn our attention to inequalities involving absolute values, which are often a source of confusion. The following theorem provides the complete story. As you read through the theorem, use the interactive figure below to help you interpret and make sense of each bullet point statement.
 
 \begin{theorem}
 Let $c$ be a real number.
@@ -210,7 +210,7 @@ We could start by graphing both sides of the inequality on the same graph, but h
 \end{tikzpicture}
 \end{image}
 
-Notice that the two points of intersection are $(0, 0)$ and $(1, 0)$, so $x^2 - x = 0$ for $x = 0$ and $x = 1$. To find the solution to $x^2 - x < 0$, we can see that the graph of $y = x^2 - x$ lies below the graph of $y = 0$ between 0 and 1. Therefore, the solution is $[0, 1]$. 
+Notice that the two points of intersection are $(0, 0)$ and $(1, 0)$, so $x^2 - x = 0$ for $x = 0$ and $x = 1$. To find the solution to $x^2 - x \le < 0$, we can see that the graph of $y = x^2 - x$ lies below the graph of $y = 0$ between 0 and 1. Therefore, the solution is $[0, 1]$. 
 \end{explanation}
 
 The above example illustrates a common technique. Rather than considering two functions $f$ and $g$ and asking when one is greater than, less than, or equal to the other, we can move one function to the other side, and consider the function $f - g$. Now, the problem becomes one of finding when the function $f - g$ is positive, negative, or zero. 
