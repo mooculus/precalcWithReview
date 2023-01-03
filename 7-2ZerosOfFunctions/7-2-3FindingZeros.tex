@@ -1,0 +1,123 @@
+\documentclass[nooutcomes]{ximera}
+
+\input{../preamble.tex}
+\author{Kenneth Berglund}
+\license{Creative Commons Attribution-ShareAlike 4.0 International License}
+
+
+\title{Zeros of Functions}
+
+\begin{document}
+\begin{abstract}
+ We explore what it means to find the zero of a function.
+\end{abstract}
+\maketitle
+
+
+%\typeout{************************************************}
+%\typeout{Motivating Questions}
+%\typeout{************************************************}
+
+\begin{motivatingQuestions}\begin{itemize}
+\item How can we find the zeros of functions?
+\end{itemize}\end{motivatingQuestions}
+
+
+%\typeout{************************************************}
+%\typeout{Subsection Introduction}
+%\typeout{************************************************}
+
+\section{Introduction}
+In this section, we will explore how to find zeros of more complicated functions.  
+
+\subsection{Finding Zeros of Compositions}
+\begin{example}
+Find the zeros of the function $f(x) = \ln(x^2 - 8)$.
+
+\begin{explanation}
+To start, we need to recognize that this is a composition of two functions, so we will be drawing on our knowledge of two different types of functions. The inner function is defined by $g(x) = x^2 - 7$, and the outer function is the natural logarithm. 
+
+Since the outer function is the last function applied, to find the zeros of $f$, we must find the zeros of $\ln$. Recall that $\ln$ has only one zero, when $x = 1$, since $\ln(1) = 0$. 
+
+We might be tempted to stop here and say that $x = 1$ is our zero, but we have to remember we're working with a composition of functions. We need to find the $x$ such that $\ln(x^2 - 8) = 0$, not the $x$ such that $\ln(x) = 0$. However, the work we've done is helpful: we know that plugging 1 into $\ln$ gives 0, so we need to find the numbers we can plug into $x^2 - 8$ to get 1, since we're plugging $x^2 - 8$ into $\ln$. To do this, we set $x^2 - 8 = 1$ and solve:
+\begin{align*}
+x^2 - 8 & = 1 \\
+x^2 & = 9 \\
+x & = \pm 3
+\end{align*}
+Therefore, the zeros of $f$ are $-3$ and $3$.
+
+Let's look closer at what we've found. Recall that to be a zero, we need $f(x) = 0$. Let's check that $-3$ is in fact a zero. 
+$$
+f(-3) = \ln((-3)^2 - 8) = \ln(9 - 8) = \ln(1) = 0,
+$$
+which is what we wanted. 
+\end{explanation}
+\end{example}
+
+\begin{example}
+Write $f(x) = e^{\sqrt{x} - 2} - 3$ as a composition of functions and find its zeros.
+\begin{explanation}
+We can write $f(x) = (g \circ h)(x)$, where $g(x) = e^x - 3$ and $h(x) = \sqrt{x} - 2$. 
+
+To find the zeros of $f$, we could set $f(x) = 0$ and solve, but we'll show another approach using the composition. First, we find the zeros of the outer function $g$. To do this, we set $g(x) = 0$ and solve. This gives us
+\begin{align*}
+e^x - 3 & = 0\\
+e^x & = 3 \\
+x = \ln(3).
+\end{align*}
+
+Next, since $f(x) = g(h(x))$, to find the zeros of $f$, we need to find when $h(x) = \ln(3)$. This gives us
+\begin{align*}
+\sqrt{x} - 2 & = \ln(3)\\
+\sqrt{x} & = \ln(3) + 2 \\
+x & = (\ln(3) + 2)^2,
+\end{align*}
+which is our zero. 
+
+
+\end{explanation}
+\end{example}
+
+\begin{example}
+Find the zeros of $f(x) = (\log_2(x))^2 - 4$. 
+\begin{explanation}
+First, we decompose $f$ as $f(x) = g(h(x))$, where $g(x) = x^2 - 4$ and $h(x) = \log_2(x)$.
+
+Next, we can set $g(x) = 0$ and solve:
+\begin{align*}
+x^2 - 4 & = 0 \\
+x^2 & = 4 \\
+x & = \pm 2.
+\end{align*}
+
+Now, we'll set $h(x) = -2$ and $h(x) = 2$. 
+\begin{align*}
+\log_2(x) & = -2 \\
+x & = 2^{-2} \\
+x & = \frac{1}{4}
+\end{align*}
+and
+\begin{align*}
+\log_2(x) & = 2 \\
+x & = 2^{2} \\
+x & = 4,
+\end{align*}
+so our zeros are $\frac{1}{4}$ and $4$. 
+\end{explanation}
+\end{example}
+
+
+To find the zeros of compositions of functions, we can find the zeros of the outer function, then, for each zero we've found, find the input to the inner function whose output is that zero. 
+%\typeout{************************************************}
+%\typeout{Summary}
+%\typeout{************************************************}
+
+\begin{summary}\begin{itemize}
+\item 
+\end{itemize}\end{summary}
+
+
+
+
+\end{document}
