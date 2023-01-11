@@ -99,14 +99,14 @@ Transformations may be performed one after another. If the transformations inclu
 \item a vertical stretch by a factor of 3
 \item a vertical shift 5 units up
 \end{itemize}
-\item Apply the transformations above in the opposite order and find the equations of the graph that results.
+\item Apply the transformations above in the opposite order and find the equation of the graph that results.
 \end{enumerate}
 \begin{explanation}
 \begin{enumerate}
 \item Applying the transformations in order we have\\
 $
 \begin{array}{lc}
-y = x^2& \text{Original function}\\
+y = x^2& \text{Parent function}\\
 y = (x-2)^2& \text{Horizontal shift} \\
 y = 3(x-2)^2& \text{Vertical stretch} \\
 y = 3(x-2)^2+5& \text{Vertical shift}\\
@@ -116,7 +116,7 @@ $
 \item Applying the transformations in the opposite order we have\\
 $
 \begin{array}{lc}
-y = x^2& \text{Original function}\\
+y = x^2& \text{Parent function}\\
 y = x^2 + 5 & \text{Vertical shift} \\
 y = 3(x^2+5)& \text{Vertical stretch} \\
 y = 3((x-2)^2+5) & \text{Horizontal shift}\\
@@ -133,7 +133,7 @@ The previous example shows how to construct the formula of a function given a se
 \begin{example}
 Given a function $f$ defined by $f(x) = 3|2x + 7| - 2$, find its parent function and list the transformations, in order, applied to the parent function's graph to produce the graph of $f$. 
 \begin{explanation}
-The parent function is given by $|x|$. 
+The parent function $f_0$ is given by $f_0(x) = |x|$. We will use subscripts to denote the intermediate steps between the parent function and the function $f$. 
 
 Now we have to think about what transformations are being applied to the graph $y = |x|$. We can see from the table in the previous section that based on the changes made to the formula, there are 
 \begin{itemize}
@@ -144,9 +144,9 @@ Now we have to think about what transformations are being applied to the graph $
 \end{itemize}
 Note that this is not necessarily the order in which these transformations occur, but an unordered list of them. 
 
-It remains for us to find the order in which these transformations were applied to produce the function $f$. It's a good rule of thumb to start with the transformations closer to the variable $x$, since those are applied to the function first. Let's try starting with the horizontal compression by a factor of 2. Applying this transformation to $y = |x|$ yields $y = |2x|$, since a horizontal compression adds a factor to the variable $x$. This seems to be a good start. Next, let's take care of the horizontal shift by 7 units to the left. Applying this transformation to $y = |2x|$ yields $y = |2(x + 7)|$, since shifting 7 to the left adds 7 to the variable $x$. Note that since it adds 7 only to the $x$, we have to use parentheses here. However, we've gotten off track: $2(x + 7) = 2x + 14$, which is not what we wanted to appear inside the absolute value symbols. Let's try starting over.
+It remains for us to find the order in which these transformations were applied to produce the function $f$. It's a good rule of thumb to start with the transformations closer to the variable $x$, since those are applied to the function first. Let's try starting with the horizontal compression by a factor of 2. Applying this transformation to $f_0(x)$ yields $f_1(x) = f_0(2x) = |2x|$, since a horizontal compression adds a factor to the variable $x$ in the previous function. This seems to be a good start. Next, let's take care of the horizontal shift by 7 units to the left. Applying this transformation to $f_1(x)$ yields $f_2(x) = f_1(x + 7) = |2(x + 7)|$, since shifting 7 to the left adds 7 to the variable $x$ in the previous function. Note that since it adds 7 only to the $x$, we have to use parentheses here. However, we've gotten off track: $2(x + 7) = 2x + 14$, which is not what we wanted to appear inside the absolute value symbols. Let's try starting over.
 
-This time, begin with the horizontal shift 7 units to the left. Applying this to the parent function $y = |x|$ yields $y = |x + 7|$. Then, move on to the horizontal compression by a factor of 2. Applying this transformation yields $y = |2x + 7|$, since according to the table, we multiply only the variable $x$ by 2 for this transformation. Next, let's try taking care of the vertical stretch by a factor of 3. Applying this transformation to $y = |2x + 7|$ gives us $y = 3|2x + 7|$, since vertical stretches correspond to multiplying the entire previous function by the factor. Last, we can incorporate the vertical shift 2 units down. Since that corresponds to subtracting 2 from the previous function, we obtain $y = 3|2x + 7| - 2$, which is exactly the function we wanted to reconstruct. 
+This time, begin with the horizontal shift 7 units to the left. Applying this to the parent function $f_0(x)$ yields $f_1(x) = f_0(x + 7) = |x + 7|$. Then, move on to the horizontal compression by a factor of 2. Applying this transformation to $f_1(x)$ yields $f_2(x) = f_1(2x) = |2x + 7|$, since according to the table, we multiply only the variable $x$ by 2 for this transformation. Next, let's try taking care of the vertical stretch by a factor of 3. Applying this transformation to $f_2(x)$ gives us $f_3(x) = 3f_2(x) = 3|2x + 7|$, since vertical stretches correspond to multiplying the entire previous function by the factor. Last, we can incorporate the vertical shift 2 units down. Since that corresponds to subtracting 2 from the previous function $f_3(x)$, we obtain $f_4(x) = f_3(x) - 2 = 3|2x + 7| - 2$, which is exactly the function we wanted to reconstruct. 
 
 This tells us that the correct order for our transformations is 
 \begin{enumerate}
@@ -171,9 +171,9 @@ One might wonder where reflections fit into all this. Let's see with another exa
 \begin{example}
 Given a function $f$ defined by $f(x) = -\frac{1}{2}\sin\left(-\frac{x}{3} + \pi\right) + 1$, find its parent function and list the transformations, in order, applied to the parent function's graph to produce the graph of $f$. 
 \begin{explanation}
-The parent function of $f$ is $\sin(x)$. 
+The parent function of $f$ is $f_0$ defined by $f_0(x) = \sin(x)$. 
 
-Let's see what happens if we do the reflections after the stretches or compressions, but before the vertical shift. Following our order, we first shift left by $\pi$ units to obtain $y = \sin(x + \pi)$, then stretch horizontally by a factor of 3 to obtain $y = \sin\left(\frac{x}{3} + \pi \right)$, then compress vertically by a factor of 2 to obtain $y = \frac{1}{2}\sin\left(\frac{x}{3} + \pi \right)$. Flipping vertically puts a minus sign on the outside of the function, giving us $y = - \frac{1}{2}\sin\left(\frac{x}{3} + \pi \right)$. Next, flipping horizontally puts a minus sign on the $x$, giving us $y = - \frac{1}{2}\sin\left(\frac{-x}{3} + \pi \right)$. Finally, shifting up by 1 gives us $y = - \frac{1}{2}\sin\left(-\frac{x}{3} + \pi \right) + 1$, which is what we wanted in the end.
+Let's see what happens if we do the reflections after the stretches or compressions, but before the vertical shift. Following our order, we first shift left by $\pi$ units to obtain $f_1(x) = f_0(x + \pi) = \sin(x + \pi)$, then stretch horizontally by a factor of 3 to obtain $f_2(x) = f_1\left(\frac{x}{3}\right) = \sin\left(\frac{x}{3} + \pi \right)$, then compress vertically by a factor of 2 to obtain $f_3(x) = \frac{1}{2}f_2(x)= \frac{1}{2}\sin\left(\frac{x}{3} + \pi \right)$. Flipping vertically puts a minus sign on the outside of the function, giving us $f_4(x) = -f_3(x) = - \frac{1}{2}\sin\left(\frac{x}{3} + \pi \right)$. Next, flipping horizontally puts a minus sign on the $x$, giving us $f_5(x) = f_4(-x) = - \frac{1}{2}\sin\left(\frac{-x}{3} + \pi \right)$. Finally, shifting up by 1 gives us $f_6(x) = f_5(x) + 1 = - \frac{1}{2}\sin\left(-\frac{x}{3} + \pi \right) + 1$, which is what we wanted in the end.
 
 Note that we could have done the horizontal reflection before the vertical reflection and achieved the same result. Therefore, as long as you do the reflections after the stretches or compressions, it doesn't matter which order each reflection comes in. 
 \end{explanation}
@@ -200,27 +200,27 @@ The parent function is given by $|x|$, and the transformations in order are
 \item a vertical shift up by 1 unit.
 \end{enumerate}
 
-To graph $f$, we'll start with the graph of $y = |x|$, and by keeping track of the transformations of a few points, $(0, 0)$, $(1, 1)$, and $(-1, 1)$,  we'll draw the graph after applying each transformation. To start with, here's the graph of $y = |x|$. 
+To graph $f$, we'll start with the graph of $f_0(x) = |x|$, and by keeping track of the transformations of a few points, $(0, 0)$, $(1, 1)$, and $(-1, 1)$,  we'll draw the graph after applying each transformation. To start with, here's the graph of $f_0(x) = |x|$. 
 
 \includegraphics[width=1\linewidth]{images/exgraph1.png}
 
-After horizontally shifting right  by 5 units, our points are $(5, 0)$, $(6, 1)$, and $(4, 1),$ and the graph of $y = |x - 5|$ looks like this:
+After horizontally shifting right  by 5 units, our points are $(5, 0)$, $(6, 1)$, and $(4, 1),$ and the graph of $f_1(x) = f_0(x - 5) = |x - 5|$ looks like this:
 
 \includegraphics[width=1\linewidth]{images/exgraph2.png}
 
-Compressing horizontally by a factor of 3 gives us $y = |3x - 5|$, and our points are $\left(\frac{5}{3}, 0\right)$, $(2, 1)$, and $\left(\frac{4}{3}, 1\right)$:
+Compressing horizontally by a factor of 3 gives us $f_2(x) = f_1(3x) = |3x - 5|$, and our points are $\left(\frac{5}{3}, 0\right)$, $(2, 1)$, and $\left(\frac{4}{3}, 1\right)$:
 
 \includegraphics[width=1\linewidth]{images/exgraph3.png}
 
-Vertically compressing by a factor of 2 gives us the points $\left(\frac{5}{3}, 0\right)$, $\left(2, \frac{1}{2}\right)$, and $\left(\frac{4}{3}, \frac{1}{2}\right)$ and the function $y = \frac{1}{2}|3x - 5|$:
+Vertically compressing by a factor of 2 gives us the points $\left(\frac{5}{3}, 0\right)$, $\left(2, \frac{1}{2}\right)$, and $\left(\frac{4}{3}, \frac{1}{2}\right)$ and the function $f_3(x) = \frac{1}{2}f_2(x) = \frac{1}{2}|3x - 5|$:
 
 \includegraphics[width=1\linewidth]{images/exgraph4.png}
 
-Reflecting across the $x$-axis gives us the points $\left(\frac{5}{3}, 0\right)$, $\left(2, -\frac{1}{2}\right)$, and $\left(\frac{4}{3}, -\frac{1}{2}\right)$ and the function $y = -\frac{1}{2}|3x - 5|$:
+Reflecting across the $x$-axis gives us the points $\left(\frac{5}{3}, 0\right)$, $\left(2, -\frac{1}{2}\right)$, and $\left(\frac{4}{3}, -\frac{1}{2}\right)$ and the function $f_4(x) = -f_3(x) = -\frac{1}{2}|3x - 5|$:
 
 \includegraphics[width=1\linewidth]{images/exgraph5.png}
 
-Finally, vertically shifting up by 1 gives us the points $\left(\frac{5}{3}, 1\right)$, $\left(2, \frac{1}{2}\right)$, and $\left(\frac{4}{3}, \frac{1}{2}\right)$ and the function $f(x) = -\frac{1}{2}|3x - 5| + 1$:
+Finally, vertically shifting up by 1 gives us the points $\left(\frac{5}{3}, 1\right)$, $\left(2, \frac{1}{2}\right)$, and $\left(\frac{4}{3}, \frac{1}{2}\right)$ and the function $f(x) = f_4(x)+ 1 = -\frac{1}{2}|3x - 5| + 1$:
 
 \includegraphics[width=1\linewidth]{images/exgraph6.png}
 
