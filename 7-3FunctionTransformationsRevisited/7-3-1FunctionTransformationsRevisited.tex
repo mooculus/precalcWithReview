@@ -65,6 +65,29 @@
 %\typeout{Putting it Together}
 %\typeout{************************************************}
 
+\section{Introduction}
+In this section, we will review our earlier discussion about function transformations. In addition, we'll explore what happens when multiple function transformations occur. 
+
+\section{Review of Single Transformations}
+The following table gives the formulas and descriptions of all the function transformations we learned about. If $f$ is the parent function, then the formula in the left column gives the function that corresponds to the transformation of the graph given in the middle column. The right column gives the new location of the point $(x, y)$ on the graph of $f$. 
+$$
+\begin{array}{c|c|c}
+\text{Formula} & \text{Description} & \text{Transformed Point}\\
+\hline
+f(x) + k & \text{shift up }k\text{, for } k > 0 &(x, y + k) \\
+f(x) - k & \text{shift down }k\text{, for } k > 0& (x, y - k)\\
+af(x) & \text{vertical stretch by }a\text{, for }a > 1 & (x, ay)\\
+\frac{1}{a}f(x) & \text{vertical compression by }a\text{, for }a > 1 & \left(x, \frac{y}{a}\right)\\
+f(x - h) & \text{shift right by }h\text{, for }h > 0 & (x + h, y)\\
+f(x + h) & \text{shift left by }h\text{, for }h > 0 & (x - h, y)\\
+f(bx) & \text{horizontal compression by }b\text{, for }b > 1 & \left(\frac{x}{b}, y \right)\\
+f\left(\frac{x}{b}\right) & \text{horizontal stretch by }a\text{, for }b > 1 & (bx, y)\\
+-f(x) & \text{vertical flip (flip over }x\text{-axis)} & (x, -y)\\
+f(-x) & \text{horizontal flip (flip over }y\text{-axis)} & (-x, y)\\
+-f(-x) & \text{180}^\circ\text{ rotation (flip over }x\text{-axis and }x\text{-axis)} & (-x, -y)\\
+\end{array}
+$$
+
 \section{Putting it Together}
 Transformations may be performed one after another. If the transformations include stretches, shrinks, or reflections, the order in which the transformations are performed may make a difference. In those cases, be sure to pay particular attention to the order.
 
@@ -74,7 +97,7 @@ Transformations may be performed one after another. If the transformations inclu
 \begin{itemize}
 \item a horizontal shift 2 units to the right
 \item a vertical stretch by a factor of 3
-\item a vertical translation 5 units up
+\item a vertical shift 5 units up
 \end{itemize}
 \item Apply the transformations above in the opposite order and find the equations of the graph that results.
 \end{enumerate}
@@ -86,7 +109,7 @@ $
 y = x^2& \text{Original function}\\
 y = (x-2)^2& \text{Horizontal shift} \\
 y = 3(x-2)^2& \text{Vertical stretch} \\
-y = 3(x-2)^2+5& \text{Vertical translation}\\
+y = 3(x-2)^2+5& \text{Vertical shift}\\
 y = 3x^2 - 12x + 17& \text{Expanded form}
 \end{array}
 $
@@ -94,25 +117,130 @@ $
 $
 \begin{array}{lc}
 y = x^2& \text{Original function}\\
-y = x^2 + 5 & \text{Vertical translation} \\
+y = x^2 + 5 & \text{Vertical shift} \\
 y = 3(x^2+5)& \text{Vertical stretch} \\
-y = 3((x-2)^2+5) & \text{Horizontal translation}\\
+y = 3((x-2)^2+5) & \text{Horizontal shift}\\
 y = 3x^2 - 12x + 27& \text{Expanded form}
 \end{array}
 $
 \end{enumerate}
+This shows that changing the order in which the transformations are applied may end up changing the resulting function. 
 \end{explanation}
 \end{example}
 
-%%\typeout{************************************************}
-%%\typeout{Summary}
-%%\typeout{************************************************}
-%
-%\begin{summary}\begin{itemize}
-%\item 
-%\item 
-%\item
-%\end{itemize}\end{summary}
+The previous example shows how to construct the formula of a function given a sequence of transformations. One might wonder how to find the transformations applied to a parent function's graph given a complicated formula. That is, if we know a formula $af(bx + h) + k$, can we reconstruct the sequence of transformations? There are two parts to this: finding the transformations and finding the order of those transformations. The following example gives some of the reasoning behind the process. 
+
+\begin{example}
+Given a function $f$ defined by $f(x) = 3|2x + 7| - 2$, find its parent function and list the transformations, in order, applied to the parent function's graph to produce the graph of $f$. 
+\begin{explanation}
+The parent function is given by $|x|$. 
+
+Now we have to think about what transformations are being applied to the graph $y = |x|$. We can see from the table in the previous section that based on the changes made to the formula, there are 
+\begin{itemize}
+\item a vertical stretch by a factor of 3,
+\item a horizontal compression by a factor of 2,
+\item a horizontal shift 7 units to the left, and
+\item a vertical shift 2 units down.
+\end{itemize}
+Note that this is not necessarily the order in which these transformations occur, but an unordered list of them. 
+
+It remains for us to find the order in which these transformations were applied to produce the function $f$. It's a good rule of thumb to start with the transformations closer to the variable $x$, since those are applied to the function first. Let's try starting with the horizontal compression by a factor of 2. Applying this transformation to $y = |x|$ yields $y = |2x|$, since a horizontal compression adds a factor to the variable $x$. This seems to be a good start. Next, let's take care of the horizontal shift by 7 units to the left. Applying this transformation to $y = |2x|$ yields $y = |2(x + 7)|$, since shifting 7 to the left adds 7 to the variable $x$. Note that since it adds 7 only to the $x$, we have to use parentheses here. However, we've gotten off track: $2(x + 7) = 2x + 14$, which is not what we wanted to appear inside the absolute value symbols. Let's try starting over.
+
+This time, begin with the horizontal shift 7 units to the left. Applying this to the parent function $y = |x|$ yields $y = |x + 7|$. Then, move on to the horizontal compression by a factor of 2. Applying this transformation yields $y = |2x + 7|$, since according to the table, we multiply only the variable $x$ by 2 for this transformation. Next, let's try taking care of the vertical stretch by a factor of 3. Applying this transformation to $y = |2x + 7|$ gives us $y = 3|2x + 7|$, since vertical stretches correspond to multiplying the entire previous function by the factor. Last, we can incorporate the vertical shift 2 units down. Since that corresponds to subtracting 2 from the previous function, we obtain $y = 3|2x + 7| - 2$, which is exactly the function we wanted to reconstruct. 
+
+This tells us that the correct order for our transformations is 
+\begin{enumerate}
+\item a horizontal shift 7 units to the left, 
+\item a horizontal compression by a factor of 2,
+\item a vertical stretch by a factor of 3, and
+\item a vertical shift 2 units down.
+\end{enumerate}
+\end{explanation}
+\end{example}
+
+Given a function $f$, note that we can apply the same reasoning to $af(bx + h) + k$ to find the order of the transformations applied to the graph of $f$:
+\begin{enumerate}
+\item horizontal shift,
+\item horizontal stretch or compression,
+\item vertical stretch or compression, and 
+\item vertical shift.
+\end{enumerate}
+
+One might wonder where reflections fit into all this. Let's see with another example. 
+
+\begin{example}
+Given a function $f$ defined by $f(x) = -\frac{1}{2}\sin\left(-\frac{x}{3} + \pi\right) + 1$, find its parent function and list the transformations, in order, applied to the parent function's graph to produce the graph of $f$. 
+\begin{explanation}
+The parent function of $f$ is $\sin(x)$. 
+
+Let's see what happens if we do the reflections after the stretches or compressions, but before the vertical shift. Following our order, we first shift left by $\pi$ units to obtain $y = \sin(x + \pi)$, then stretch horizontally by a factor of 3 to obtain $y = \sin\left(\frac{x}{3} + \pi \right)$, then compress vertically by a factor of 2 to obtain $y = \frac{1}{2}\sin\left(\frac{x}{3} + \pi \right)$. Flipping vertically puts a minus sign on the outside of the function, giving us $y = - \frac{1}{2}\sin\left(\frac{x}{3} + \pi \right)$. Next, flipping horizontally puts a minus sign on the $x$, giving us $y = - \frac{1}{2}\sin\left(\frac{-x}{3} + \pi \right)$. Finally, shifting up by 1 gives us $y = - \frac{1}{2}\sin\left(-\frac{x}{3} + \pi \right) + 1$, which is what we wanted in the end.
+
+Note that we could have done the horizontal reflection before the vertical reflection and achieved the same result. Therefore, as long as you do the reflections after the stretches or compressions, it doesn't matter which order each reflection comes in. 
+\end{explanation}
+\end{example}
+
+We can summarize all this information as follows. Given a function $f$, the graph of $af(bx + h) + k$ can be found using the following transformations in order:
+\begin{enumerate}
+\item horizontal shifts given by $h$,
+\item horizontal stretches or compressions given by $b$,
+\item vertical stretches or compressions given by $a$,
+\item reflections given by the sign of $a$ and $b$, and
+\item vertical shifts given by $k$.
+\end{enumerate}
+
+\begin{example}
+Given a function $f$ defined by $f(x) = -\frac{1}{2}|3x - 5| + 1$, find its parent function and list the transformations, in order, applied to the parent function's graph to produce the graph of $f$. Then graph $f$.
+\begin{explanation}
+The parent function is given by $|x|$, and the transformations in order are 
+\begin{enumerate}
+\item a horizontal shift right by 5 units,
+\item a horizontal compression by a factor of 3,
+\item a vertical compression by a factor of 2,
+\item a reflection across the $x$-axis, and
+\item a vertical shift up by 1 unit.
+\end{enumerate}
+
+To graph $f$, we'll start with the graph of $y = |x|$, and by keeping track of the transformations of a few points, $(0, 0)$, $(1, 1)$, and $(-1, 1)$,  we'll draw the graph after applying each transformation. To start with, here's the graph of $y = |x|$. 
+
+\includegraphics[width=1\linewidth]{images/exgraph1.png}
+
+After horizontally shifting right  by 5 units, our points are $(5, 0)$, $(6, 1)$, and $(4, 1),$ and the graph of $y = |x - 5|$ looks like this:
+
+\includegraphics[width=1\linewidth]{images/exgraph2.png}
+
+Compressing horizontally by a factor of 3 gives us $y = |3x - 5|$, and our points are $\left(\frac{5}{3}, 0\right)$, $(2, 1)$, and $\left(\frac{4}{3}, 1\right)$:
+
+\includegraphics[width=1\linewidth]{images/exgraph3.png}
+
+Vertically compressing by a factor of 2 gives us the points $\left(\frac{5}{3}, 0\right)$, $\left(2, \frac{1}{2}\right)$, and $\left(\frac{4}{3}, \frac{1}{2}\right)$ and the function $y = \frac{1}{2}|3x - 5|$:
+
+\includegraphics[width=1\linewidth]{images/exgraph4.png}
+
+Reflecting across the $x$-axis gives us the points $\left(\frac{5}{3}, 0\right)$, $\left(2, -\frac{1}{2}\right)$, and $\left(\frac{4}{3}, -\frac{1}{2}\right)$ and the function $y = -\frac{1}{2}|3x - 5|$:
+
+\includegraphics[width=1\linewidth]{images/exgraph5.png}
+
+Finally, vertically shifting up by 1 gives us the points $\left(\frac{5}{3}, 1\right)$, $\left(2, \frac{1}{2}\right)$, and $\left(\frac{4}{3}, \frac{1}{2}\right)$ and the function $f(x) = -\frac{1}{2}|3x - 5| + 1$:
+
+\includegraphics[width=1\linewidth]{images/exgraph6.png}
+
+This last graph is our final result. While graphing each step along the way may seem like an awful lot of work, it is often easier than trying to work with multiple transformations at once in your head. 
+\end{explanation}
+\end{example}
+
+
+
+
+
+%\typeout{************************************************}
+%\typeout{Summary}
+%\typeout{************************************************}
+
+\begin{summary}\begin{itemize}
+\item Multiple transformations can be applied to a parent function.
+\item The order in which transformations are applied can change the resulting function.
+\item Given a formula of a transformed function, we can infer the order of transformations that produced it, as well as graph the function. 
+\end{itemize}\end{summary}
 
 
 
