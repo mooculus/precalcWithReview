@@ -1,0 +1,196 @@
+\documentclass[nooutcomes]{ximera}
+\input{../preamble.tex}
+
+
+\author{Bobby Ramsey}
+\license{Creative Commons Attribution 4.0 International License}
+\acknowledgement{https://www.stitz-zeager.com/}
+
+\title{Zeros of Functions with Radicals}
+% Learning Objectives for this section
+%\begin{itemize}
+%	\item Definition of the Domain
+%	\item Interval Notation 
+%	\item The Domains of Famous Functions 
+%	\item Spotting Values not in the Domain
+%	\item Piecewise Defined Functions and Restricted Domains 
+%\end{itemize}
+
+
+\begin{document}
+\licenseSZ
+\begin{abstract}
+ 	We find the zeros of a function with radicals.
+\end{abstract}
+\maketitle
+
+
+%\typeout{************************************************}
+%\typeout{Review Questions}
+%\typeout{************************************************}
+
+%\section{Review Materials}
+%    \begin{itemize}[label=\textbullet]
+%	\item \link[Combining Like Terms]{https://spot.pcc.edu/math/orcca/ed2/html/section-combining-like-terms.html}
+%	\item \link[Algebraic Properties and Simplifying Expressions]{https://spot.pcc.edu/math/orcca/ed2/html/section-algebraic-properties-and-simplifying-expressions.html}
+%   \end{itemize}
+%\begin{motivatingQuestions}\begin{itemize}
+	%Often start a section. 
+%	\item 
+%	\item 
+%\end{itemize}\end{motivatingQuestions}
+
+\section{Introduction}
+
+	In the previous section we found zeros for rational functions and ran into the problem of extraneous solutions. 
+	Radical functions are another instance where we have to check for those.
+
+	\begin{callout}
+		Earlier we discussed that domains of the polynomial functions given by the form $x^n$, for $n$ a positive, whole number.
+		If $n$ is odd the range is $(-\infty, \infty)$. That means for every number $b$, there is a number $a$ with $a^n = b$. In this case,
+		there is exactly one number $a$ with this property, which is denoted by $a = \sqrt[n]{b}$. This means $\sqrt[n]{b}$ exists, when $n$ is odd,
+		for all real numbers $b$.
+		
+		If $n$ is even the range of $x^n$ is $[0, \infty)$. This means that for every nonnegative number $b$, there is a number $a$ with $a^n = b$. 
+		In this case, there are exactly two numbers $a$ with this property (unless $b=0$). Those numbers have the same absolule value, but one is positive 
+		and the other is negative. The positive one is denoted by $\sqrt[n]{b}$. This means $\sqrt[n]{b}$ exists, when $n$ is even, only for nonnegative real 
+		numbers $b$ and the result $\sqrt[n]{b}$ is nonnegative.
+	\end{callout}	
+
+	\begin{definition}
+		The \dfn{principal $n^\text{th}$ root function} is given by $\sqrt[n]{x}$, for $n$ a positive, whole number called the \dfn{index of the radical}. The value of $\sqrt[n]{x}$
+		 has the property that
+		$\left( \sqrt[n]{x} \right)^n = x$. 
+	\end{definition}
+	
+	For $n$ odd, the domain of $\sqrt[n]{x}$ is $(-\infty, \infty)$ and the range is $(-\infty, \infty)$. For $n$ even, the domain of $\sqrt[n]{x}$ is $[0, \infty)$ 
+	and the range is $[0, \infty)$.
+			
+%	\begin{exploration}
+%		\begin{enumerate}[label=\alph*.]
+%			\item If you know the value of $x^2$, do you know the value of $x$? What if you know the value of $x^3$ instead?
+%			\item
+%		\end{enumerate}
+%	\end{exploration}
+
+
+\section{Zeros of Rational Functions}
+
+		
+	\begin{example}
+
+		Let $g$ be the function given by $g(x) = \sqrt{1-x^2}$. Find the zeros of $g$.
+		
+		\begin{explanation}
+			
+			\begin{align*}
+				g(x) &= 0\\
+				\sqrt{1-x^2} &= 0\\
+				\left( \sqrt{1-x^2} \right)^2 &= (0)^2\\
+				1-x^2 &= 0\\
+				(1+x)(1-x) &= 0
+			\end{align*}
+			From these factors, either $x=-1$ or $x=1$. Checking these gives:
+			\begin{align*}
+				g(1) &= \sqrt{1-(1)^2} = 0\\
+				g(-1) &= \sqrt{1-(-1)^2} = 0
+			\end{align*}
+			Both of these check out, so the zeroes are $x= \pm 1$.
+			
+		\end{explanation}
+	\end{example}
+
+
+	\begin{example}
+
+		Let $f$ be the function given by $f(x) =  \sqrt{3x+7} - x-1$. Find the zeros of the function $f$.
+	
+		\begin{explanation} 
+			
+			To solve the equation $\sqrt{3x+7} - x-1 =  0$, we'll isolate the radical and square both sides.
+			\begin{align*}
+				\sqrt{3x+7} - x-1 & =  0 \\
+				\sqrt{3x+7} & =  x + 1 \\
+				\left( \sqrt{3x+7} \right)^2 & =  (x + 1)^2 \\
+				3x + 7 &= x^2 + 2x + 1\\
+				x^2 - x - 6 &= 0\\
+				(x+2)(x-3) &= 0
+			\end{align*}			
+
+			Setting these factors each equal to zero gives us the possible solutions $x=-2$ and $x=3$. Let's check them.
+			
+			\begin{align*}
+				f(3) &= \sqrt{3(3)+7} - (3)-1	\\
+					&= \sqrt{16} - 4 = 0 \\ \\
+				f(-2) &= \sqrt{3(-2)+7} - (-2)-1	\\
+					&= \sqrt{1} + 1 = 2 \\ \\
+			\end{align*}
+			
+			Notice that $f(-2)$ is not zero, so $x=-2$ is an extraneous solution.			
+			
+			The only zero is $x=3$.
+		\end{explanation}
+	\end{example}
+	
+	\begin{example}
+		Let $s$ be the function given by $s(t) = t - \sqrt[3]{t^3+3t^2-6t-8}+1$. Find the zeros of the function $s$.
+	
+		\begin{explanation} 
+			
+			As before, we'll isolate the radical. However, the radical here is a cube root so we have to raise each side to the third power, instead of squaring them.
+			\begin{align*}
+				s(t) & =  0 \\
+				t - \sqrt[3]{t^3+3t^2-6t-8}+1 & =  0 \\
+				t +1 & =  \sqrt[3]{t^3+3t^2-6t-8} \\
+				(t +1)^3 & =  \left(\sqrt[3]{t^3+3t^2-6t-8}\right)^3 \\
+				t^3 + 3t^2 + 3t + 1 &= t^3+3t^2-6t-8\\
+				9t &= -9\\
+				t &= -1
+			\end{align*}			
+
+			The only possible zero is $t=-1$. Let's check it.
+			\begin{align*}
+				s(-1) & = (-1) - \sqrt[3]{(-1)^3+3(-1)^2-6(-1)-8}+1 \\
+					&= - \sqrt[3]{-1+3+6-8} = 0.
+			\end{align*}
+			The function $s$ has a single zero, at $t=-1$.
+		\end{explanation}
+	\end{example}
+
+		
+	\begin{example}
+
+		Let $f$ be the function given by $f(x) = 3 + \sqrt{4-x}-\sqrt{2x+1}$. Find the zeros of $f$.
+	
+		\begin{explanation}
+
+			In this case, there are multiple radicals and we can't isolate them both simultaneously. Instead, we'll isolate just one of them first.
+			\begin{align*}
+				f(x) &= 0\\
+				3 + \sqrt{4-x}-\sqrt{2x+1} &= 0 \\
+				3 + \sqrt{4-x}  &= \sqrt{2x+1} \\
+				\left(3+\sqrt{4-x}\right)^2 &= \left( \sqrt{2x+1} \right)^2\\
+				9 + 6\sqrt{4-x} + (4-x) &= 2x+1\\
+				6\sqrt{4-x} &= 3x -12 \\
+				3\left( 2\sqrt{4-x} \right) &= 3(x-4)\\
+				2\sqrt{4-x} &= x-4\\
+				\left( 2\sqrt{4-x} \right)^2 &= (x-4)^2\\
+				4(4-x) &= x^2-8x+16\\
+				16-4x &= x^2-8x+16\\
+				x^2 -4x &= 0\\
+				x(x-4) &= 0
+			\end{align*}
+
+			Setting each of these factors equal to zero gives the two possible zeros $x=0$ and $x=4$. Let's check them.
+			\begin{align*}
+				f(0) & = 3 + \sqrt{4-(0)}-\sqrt{2(0)+1} \\
+					& = 3 + \sqrt{4}-\sqrt{1} = 4\\ \\
+				f(4) & = 3 + \sqrt{4-(4)}-\sqrt{2(4)+1} \\
+					& = 3 + \sqrt{0}-\sqrt{9} = 0.
+			\end{align*}			
+			The possible zero at $x=0$ is an extraneous solution. The only zero of $f$ is $x=4$.
+		\end{explanation}
+	\end{example}
+	
+	
+\end{document}

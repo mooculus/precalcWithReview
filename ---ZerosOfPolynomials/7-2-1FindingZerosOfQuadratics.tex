@@ -1,0 +1,310 @@
+\documentclass{ximera}
+
+\input{../preamble.tex}
+\author{David Kish}
+\license{Creative Commons Attribution-ShareAlike 4.0 International License}
+\acknowledgement{}
+
+\title{Finding Zeros of Quadratics}
+
+\begin{document}
+\begin{abstract}
+  
+\end{abstract}
+\maketitle
+
+
+%\typeout{************************************************}
+%\typeout{Motivating Questions}
+%\typeout{************************************************}
+
+%\begin{motivatingQuestions}\begin{itemize}
+%\item 
+%\item 
+%\item 
+%\end{itemize}\end{motivatingQuestions}
+
+%\typeout{************************************************}
+%\typeout{Subsection Introduction}
+%\typeout{************************************************}
+
+\section{Introduction}
+
+
+%\typeout{************************************************}
+%\typeout{Subsection Introduction}
+%\typeout{************************************************}
+
+\section{Factoring}
+
+ We've seen multiplying polynomials before,
+      such as when you start with
+      $(x+2)(x+3)$ and obtain $x^2+5x+6$.
+     This section,  is about the opposite process of factoring.
+      For example, starting with
+      $x^2+5x+6$ and obtaining $(x+2)(x+3)$.
+      We will start with the simplest kind of factoring:
+      for example starting with $x^2+2x$ and obtaining $x(x+2)$.
+
+      When you write $x^2+2x$,
+      you have an algebraic expression built with two terms that are
+      added together.
+      When you write $x(x+2)$,
+      you have an algebraic expression built with two factors that are
+      multiplied together.
+      Factoring is useful, because sometimes
+      (but not always)
+      having your expression written as parts that are multiplied
+      together makes it easy to simplify the expression.
+
+  You've seen this with fractions.
+      To simplify $\frac{15}{35}$,
+      breaking down the numerator and denominator into factors is useful:
+      $\frac{3\cdot5}{7\cdot5}$.
+      Now you can see that the factors of $5$ cancel.
+
+     There are other reasons to appreciate the value in factoring.
+        One reason is that there is a relationship between a factored polynomial
+        and the horizontal intercepts of its graph.
+        For example in the graph of $y=(x+2)(x-3)$, the horizontal intercepts are $(-2,0)$ and $(3,0)$.
+        Note the $x$-values are $-2$ and $3$,
+        and think about what happens when you subsitutue those numbers in for $x$ in $y=(x+2)(x-3)$.
+\begin{image}
+\begin{tikzpicture}
+                \begin{axis}[xmin=-4,xmax=5,ymin=-8,ymax=10,
+                            xtick={-3,-2,...,4},
+                            minor xtick={-4,-3,...,5},
+                            ytick={-6,-4,...,8},
+                            minor ytick={-8,-7,...,10},
+                            ]
+                    \addplot[firstcurve,domain=-3.531:4.531] {x^2-x-6};
+                    \addplot[color=secondcolor,soliddot] coordinates {(3,0)} node[above left] {$(3,0)$};
+                    \addplot[color=secondcolor,soliddot] coordinates {(-2,0)} node[above right] {$(-2,0)$};
+                \end{axis}
+              \end{tikzpicture}
+\end{image}
+
+ The most basic technique for factoring involves recognizing the
+      \textbf{greatest common factor}
+            between two expressions,
+      which is the largest factor that goes in evenly to both expressions.
+      For example,
+      the greatest common factor between $6$ and $8$ is $2$, since $2$ divides nicely into both $6$ and $8$ and no larger number would divide nicely into both $6$ and $8$.
+
+Similarly, the greatest common factor between $4x$ and $3x^2$ is $x$.
+      If you write $4x$ as a product of its factors,
+      you have $2\cdot 2 \cdot x$.
+      And if you fully factor $3x^2$,
+      you have $3\cdot x\cdot x$.
+      The only factor they have in common is $x$,
+      so that is the greatest common factor.
+      No larger expression goes in nicely to both expressions.
+\begin{example}
+   What is the common factor between $6x^2$ and $70x$?
+        Break down each of these into its factors:
+\begin{center}
+$
+\begin{array}{cc}
+    6x^2  =2\cdot3\cdot x\cdot x & 70x  =2\cdot5\cdot7\cdot x
+\end{array}
+$
+\end{center}
+And identify the common factors:
+\begin{center}
+$
+\begin{array}{cc}
+ 6x^2  =\attention{2}\cdot3\cdot \attention{x}\cdot x & 70x  =\attention{2}\cdot5\cdot7\cdot \attention{x}
+\end{array}
+$
+\end{center}
+\end{example}
+%\typeout{************************************************}
+%\typeout{Subsection Factoring Trinomials with Leading Coefficient One}
+%\typeout{************************************************}
+\section{Factoring Trinomials with Leading Coefficient One}
+  We've learned how to multiply binomials like
+      $(x+2)(x+3)$ and obtain the trinomial $x^2+5x+6$.
+      In this section, we will learn how to undo that.
+      So we'll be starting with a trinomial like
+      $x^2+5x+6$ and obtaining its factored form $(x+2)(x+3)$.
+      The trinomials that we'll factor in this section all have leading coefficient $1$,
+      but in a later section
+      will cover some more general trinomials.
+\begin{example}
+      Consider the example $x^2+\firsthighlight{5}x+\secondhighlight{6}=(x+2)(x+3)$.
+      There are at least three things that are important to notice:
+\begin{itemize}
+\item The leading coefficient of $x^2+\firsthighlight{5}x+\secondhighlight{6}$ is $1$.
+
+   \item  The two factors on the right use the numbers $2$ and $3$,
+            and when you \textit{multiply} these you get the $\secondhighlight{6}$.
+
+            \item The two factors on the right use the numbers $2$ and $3$,
+            and when you \textit{add} these you get the $\firsthighlight{5}$.
+\end{itemize}
+     So the idea is that if you need to factor
+      $x^2+5x+6$ and you somehow discover that $2$ and $3$ are special numbers
+      (because $2\cdot3=6$ and $2+3=5$),
+      then you can conclude that
+      $(x+2)(x+3)$ is the factored form of the given polynomial.
+
+       Factor $x^2+13x+40$.
+        Since the leading coefficient is $1$,
+        we are looking to write this polynomial as
+        $(x+\mathord{?})(x+\mathord{?})$ where the question marks are two possibly different,
+        possibly negative, numbers.
+        We need these two numbers to multiply to $40$ and add to $13$.
+        How can you track these two numbers down?
+        Since the numbers need to multiply to $40$,
+        one method is to list all \textbf{factor pairs}
+        of $40$ in a table just to see what your options are.
+        We'll write every \textit{pair of factors}
+        that multiply to $40$.
+\begin{center}
+$
+\begin{array}{cc}
+           1\cdot40 & -1\cdot(-40) \\
+          2\cdot20 & -2\cdot(-20) \\
+         4\cdot10 & -4\cdot(-10)\\
+        5\cdot8 &  -5\cdot(-8) \\
+ \end{array}
+$
+\end{center}
+        We wanted to find \textit{all} factor pairs.
+        To avoid missing any, we started using $1$ as a factor,
+        and then slowly increased that first factor.
+        The table skips over using $3$ as a factor,
+        because $3$ is not a factor of $40$.
+        Similarly the table skips using $6$ and $7$ as a factor.
+        And there would be no need to continue with $8$ and beyond,
+        because we already found ``large''
+        factors like $8$ as the partners of
+        ``small'' factors like $5$.
+
+   There is an entire second column where the signs are reversed,
+        since these are also ways to multiply two numbers to get $40$.
+        In the end, there are eight factor pairs.
+
+        We need a pair of numbers that also \textit{adds} to $13$.
+        So we check what each of our factor pairs add up to:
+\begin{center}
+$
+\begin{array}{c|l}
+      \text{Factor Pair} & \text{Sum of the Pair} \\
+\hline
+   1\cdot40 & 41 \\
+     2\cdot20 & 22 \\
+   4\cdot10 & 14 \\
+        5\cdot8 & 13 \text{(what we wanted)} \\
+-1\cdot(-40) & \text{(no need to go this far)}\\
+         -2\cdot(-20) & \text{(no need to go this far)}\\
+ -4\cdot(-10) & \text{(no need to go this far}) \\
+-5\cdot(-8) & \text{(no need to go this far)} \\
+\end{array}
+$
+\end{center}
+  The winning pair of numbers is $5$ and $8$.
+        Again, what matters is that $5\cdot8=40$, and $5+8=13$.
+        So we can conclude that $x^2+13x+40=(x+5)(x+8)$.
+\end{example}
+   To ensure that we made no mistakes,
+      here are some possible checks.\\
+\textbf{Multiply it Out}
+   Multiplying out our answer
+        $(x+5)(x+8)$ should give us $x^2+13x+40$.
+
+ $(x+5)(x+8)=(x+5)\cdot x+(x+5)\cdot8
+            =x^2+5x+8x+40
+           = x^2+13x+40$\\
+\textbf{Evaluating}
+ If the answer really is $(x+5)(x+8)$,
+        then notice how evaluating at $-5$ would result in $0$.
+        So the original expression should also result in $0$ if we evaluate at $\substitute{-5}$.
+        And similarly, if we evaluate it at $\substitute{-8}$,
+        $x^2+13x+40$ should be $0$.
+\begin{center}
+$
+\begin{array}{rl}
+(\substitute{-5})^2+13(\substitute{-5})+40 & =0 \\
+          25-65+40 & =0 \\
+          0 &= 0 \text{ Confirmed}\\
+(\substitute{-8})^2+13(\substitute{-8})+40&=0\\
+64-104+40&=0\\
+ 0&=0 \text{ Confrimed}
+\end{array}$
+\end{center}
+This also gives us evidence that the factoring was correct.
+
+       Factor $y^2-11y+24$.
+          The negative coefficient is a small complication from the previous example,
+          but the process is actually still the same.
+
+    We need a pair of numbers that multiply to $24$ and add to $-11$.
+          Note that we \textit{do} care to keep track that they sum to a negative total.
+\begin{center}
+$
+\begin{array}{c|l}
+         \text{Factor Pair} & \text{Sum of the Pair}\\
+\hline
+   1\cdot24 &  25\\
+2\cdot12 & 14 \\
+          3\cdot8 & 11\text{(close; wrong sign)} \\
+          4\cdot6 & 10 \\
+           -1\cdot(-24) & -25\\
+-2\cdot(-12) & -14 \\
+       -3\cdot(-8) & -11 \text{(what we wanted)}\\
+-4\cdot(-6) & \text{(no need to go this far)}
+\end{array}
+$
+\end{center}
+ So $y^2-11y+24=(y-3)(y-8)$.
+       To confirm that this is correct, we should check.
+          Either by multiplying out the factored form:
+\begin{center}
+$
+\begin{array}{rl}
+(y-3)(y-8)& =(y-3)\cdot y-(y-3)\cdot8\\
+               &=y^2-3y-8y+24 \\
+               &=y^2-11y+24 \text{ Confirmed}
+\end{array}
+$
+\end{center}
+
+ Or by evaluating the original expression at $\substitute{3}$ and $\substitute{8}$:
+\begin{center}
+$\begin{array}{rl}
+    \substitute{3}^2-11(\substitute{3})+24 & = 0 \\
+            9-33+24 & = 0 \\
+            0 & = 0 \\
+\substitute{8}^2-11(\substitute{8})+24 &=0\\
+64-88+24 & =0\\
+ 0 & =0
+\end{array}$
+\end{center}
+Our factorization passes the tests.
+
+\begin{callout}
+{\bf Warning:} Solving an equation like $x^2 = 4$ is very different than computing $\sqrt{4} = 2$. To solve the equation, one rewrites it as $x^2-4=0$, then factors it as $(x-2)(x+2) = 0$, and concludes that $x=-2$ or $x=2$. However, people often write this sloppily as $x = \pm 2$, and proceed to say {\bf wrong} things such as $\sqrt{4} = \pm 2$. Square roots are always non-negative, so $\sqrt{4}=2$ is the only correct equality. To relate this back with solving the equation $x^2=4$, one could alternatively take the square root of both sides, leading to $\sqrt{x^2} = \sqrt{4}$. The square root of a square is not the original number, but its absolute value instead. This means that instead of writing the next step as $x=2$ (which would lead us to miss the solution $x=-2$), we should write $|x| = 2$. Which real numbers have absolute value equal to $2$? Just $x=2$ and $x=-2$.
+\end{callout}
+
+
+%\typeout{************************************************}
+%\typeout{Subsection Introduction}
+%\typeout{************************************************}
+
+
+
+%\typeout{************************************************}
+%\typeout{Summary}
+%\typeout{************************************************}
+
+%\begin{summary}\begin{itemize}
+%\item 
+%\item 
+%\item
+%\end{itemize}\end{summary}
+
+
+
+
+\end{document}

@@ -1,0 +1,123 @@
+\documentclass{ximera}
+
+\input{../preamble}
+\author{Kenneth Berglund}
+\license{Creative Commons Attribution-ShareAlike 4.0 International License}
+\acknowledgement{}
+
+\title{What is Calculus?}
+
+\begin{document}
+\begin{abstract}
+\end{abstract}
+\maketitle
+%
+%
+%
+\begin{motivatingQuestions}\begin{itemize}
+\item What are the main ideas of calculus?
+\end{itemize}\end{motivatingQuestions}
+%
+%
+%\typeout{************************************************}
+%\typeout{Subsection Introduction}
+%\typeout{************************************************}
+%
+\section{Introduction}
+%
+This course aims to provide you with a background in all the tools you'll need to be successful in calculus. In this section, we'll provide a brief overview of some of the types of problems you'll be able to solve with calculus. 
+
+%Some of the questions calculus can help to answer are:
+%\begin{itemize}
+%\item What is the area of a region bounded by two curves?
+%\item What is the speed of a runner at mile 2 who runs $f(t) = \sqrt{\frac{t}{6}}$ miles in $t$ minutes? 
+%\item Can you avoid speeding if you drive 6 miles in 5 minutes, and the speed limit is 60 miles per hour?
+%\item Is there a way to write sine and cosine using simpler functions?
+%\item How can we find relative maxima and minima of functions?
+%\item How can you find the volume of a 3D solid whose cross sections all have the same shape?
+%\end{itemize}
+
+\section{Speed}
+Say you're running, and the number of miles you run in $t$ minutes can be given by $f(t) = \sqrt{\frac{t}{6}}$. What is your speed at  the start of mile 2?
+
+Calculus allows us to talk about instantaneous speeds and rates of change, rather than just average rates of change. 
+
+\section{Optimization}
+Say you want to build a fence, and one side of the fenced-in area is already bounded by a building. If your budget only allows for the purchase of 1000 feet of fencing material, what is the largest area which can be enclosed by the fence?
+
+Calculus can answer many questions about maximizing or minimizing certain values. 
+
+\section{Finding Maxima and Minima}
+When we talked about rational functions and polynomials, there was certain information about their graphs that we couldn't provide. For example, the graph of the function defined by $f(x) = x^3 - x$ is shown below.
+
+\begin{image}
+\includegraphics{x-cubed-minus-x.png}
+\end{image}
+
+We can answer questions about its end behavior with the concepts learned in this course. However, we notice that there are a peak and a valley on the graph of $f$. Calculus will give us the tools to be able to find the exact location of those points. 
+
+Calculus helps us find relative maxima and minima.
+
+\section{Volume of Solids}
+Say you have a bowl whose silhouette viewed from the side can be described by a parabola. Assume its cross-sections are perfect circles. What is the volume of the bowl? 
+
+Calculus can help us find the volume of many different kinds of 3D solids. 
+
+\section{Related Rates}
+Say you're filling a cone with base radius 100 centimeters and height 100 centimeters with water at a rate of 4 centimeters cubed per minute. How quickly is the depth of water in the cone is changing when the water is at a height of 50 centimeters? 
+
+Calculus can allow us to describe rates of change in relation to other rates of change. 
+
+\section{Newton's Method}
+Say you're looking at a really complicated function, like $x^6 - 2x^5 - x^4 + x^2 - \pi x + e$. Finding the roots of this function algebraically is impossible, but if you start with a good estimate of the root, a tool from calculus called Newton's Method can refine your solution into a better estimate. What's more, you can then use Newton's method on that better estimate to obtain an even better estimate!
+
+Calculus can help us estimate roots of functions. 
+
+\section{Approximations}
+We know that the sine function is extremely complicated. We saw in the section on inverse trigonometric functions, that sometimes, we can rewrite functions involving trig functions in purely algebraic terms. For example, you can show that $\sin(\arctan(x)) = \frac{x}{\sqrt{x^2 + 1}}$. However, we haven't seen a way to rewrite $\sin$ by itself. However, in certain situations, we can come up with an approximation to functions, and this approximation is linear, which is often much easier to work with! There is a famous linear approximation of $\sin(x)$, but it only works when $x$ is very close to zero. Part of calculus will be learning when certain approximations are good substitutes for the actual function.
+
+Also, there's no reason to stop at linear functions! We can use higher and higher degree polynomials to get better and better approximations of trig functions, as well as other functions. 
+
+Calculus can allow us to approximate complicated functions with polynomials, but these approximations are only good for certain values of $x$. 
+
+\section{Average Rates of Change}
+Say you're driving in an area where the speed limit is 60 miles per hour. If you drive 6 miles in 5 minutes, your average speed is greater than 60 miles per hour, but your speed at any given point on your trip need not be greater than 60 miles per hour: you may slow down and speed up. Is it possible to go 6 miles in 5 minutes without speeding? In other words, if your average rate of change is greater than 60 miles per hour, is it possible for your instantaneous rate of change to be below 60 miles per hour for the entire trip?
+
+Calculus can give us important information on the relationship between average rates of change and instantaneous rates of change. 
+
+\section{Finding the Area}
+In the project this semester, you wrote equations and inequalities that defined the shapes of letters of the alphabet in the plane. However, if you were using these as a font, a reasonable question would be, ``How much ink does each letter use?'' To answer this question, we need to find the area of each letter. With the tools we have now, this isn't possible. However, in calculus, you will learn a way to calculate the exact area of each of your letters.
+
+Calculus provides a method for finding the area bounded by curves in the plane.
+
+
+%\section{Rates of Change}
+%One extremely useful topic in calculus is the idea of instantaneous rates of change. We've often computed average rates of change in this course, so it's important to understand the difference.
+%
+%Imagine you are in a car making the 73-mile trip from Columbus to Dayton. Google Maps says this takes about 1 hour and 8 minutes, so your average speed during the trip would be 
+%$$
+%\frac{73}{1\frac{8}{60}} = \frac{73}{\frac{68}{60}} = \frac{73}{1} \cdot \frac{60}{68} = \frac{4380}{68} \approx 64.4 \text{miles per hour}.
+%$$
+%
+%However, you aren't going 64.4 miles per hour for the entire duration of the trip! At stoplights, your instantaneous speed is 0 miles per hour, and on the highway, your instantaneous speed may be higher than 65 miles per hour. Instantaneous speed captures your speed at a precise moment in time, rather than over an interval of time. 
+%
+%Up until now, we have only been able to calculate the average rate of change of a function. Calculus gives us the tools to be able to calculate the instantaneous rate of change. One very important tool is the idea of the limit. 
+%
+%\section{Limits}
+%\begin{problem}
+%Consider the function $f(x) = \frac{x^2}{x}$. Calculate the following values. Enter DNE if the value does not exist.
+%
+%$f(3) = \answer{3}$
+%
+%$f(-7) = \answer{-7}$
+%
+%For $x \ne 0$, $f(x) = \answer{x}$.
+%
+%$f(0) = \answer{DNE}$.
+%\end{problem}
+%
+%Notice that the function $f$ is defined everywhere except at $x = 0$, that is, its domain is $(-\infty, 0) \cup (0, \infty)$. Where the function \emph{is} defined, though, $f(x) = x$. Thus, the graph of $f$ looks like a line with slope 1 passing through the origin, but with a hole at the origin. It's reasonable to say then, that as $x$ approaches 0, the value of $f(x)$ approaches 0. This motivates the idea of limits. Our function is doing something crazy at $x = 0$, but we can still make a statement about what is happening nearby. 
+
+
+
+\end{document}

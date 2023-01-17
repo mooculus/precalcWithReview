@@ -5,7 +5,7 @@
 \license{Creative Commons Attribution-ShareAlike 4.0 International License}
 \acknowledgement{}
 
-\title{Reflections of Functions}
+\title{Function Transformations Revisited}
 
 \begin{document}
 \begin{abstract}
@@ -81,10 +81,10 @@ af(x) & \text{vertical stretch by }a\text{, for }a > 1 & (x, ay)\\
 f(x - h) & \text{shift right by }h\text{, for }h > 0 & (x + h, y)\\
 f(x + h) & \text{shift left by }h\text{, for }h > 0 & (x - h, y)\\
 f(bx) & \text{horizontal compression by }b\text{, for }b > 1 & \left(\frac{x}{b}, y \right)\\
-f\left(\frac{x}{b}\right) & \text{horizontal stretch by }a\text{, for }b > 1 & (bx, y)\\
+f\left(\frac{x}{b}\right) & \text{horizontal stretch by }b\text{, for }b > 1 & (bx, y)\\
 -f(x) & \text{vertical flip (flip over }x\text{-axis)} & (x, -y)\\
 f(-x) & \text{horizontal flip (flip over }y\text{-axis)} & (-x, y)\\
--f(-x) & \text{180}^\circ\text{ rotation (flip over }x\text{-axis and }x\text{-axis)} & (-x, -y)\\
+-f(-x) & \text{180}^\circ\text{ rotation (flip over }x\text{-axis and }y\text{-axis)} & (-x, -y)\\
 \end{array}
 $$
 
@@ -103,24 +103,24 @@ Transformations may be performed one after another. If the transformations inclu
 \end{enumerate}
 \begin{explanation}
 \begin{enumerate}
-\item Applying the transformations in order we have\\
+\item We will use $f_0$ to denote the parent function and $f_1, f_2, \cdots$ to denote the intermediate functions. Applying the transformations in order we have\\
 $
 \begin{array}{lc}
-y = x^2& \text{Parent function}\\
-y = (x-2)^2& \text{Horizontal shift} \\
-y = 3(x-2)^2& \text{Vertical stretch} \\
-y = 3(x-2)^2+5& \text{Vertical shift}\\
-y = 3x^2 - 12x + 17& \text{Expanded form}
+f_0(x) = x^2& \text{Parent function}\\
+f_1(x) = f_0(x - 2) = (x-2)^2& \text{Horizontal shift} \\
+f_2(x) =3f_1(x) = 3(x-2)^2& \text{Vertical stretch} \\
+f_3(x) = f_2(x) + 5 = 3(x-2)^2+5& \text{Vertical shift}\\
+f(x) = 3x^2 - 12x + 17& \text{Expanded form}
 \end{array}
 $
 \item Applying the transformations in the opposite order we have\\
 $
 \begin{array}{lc}
-y = x^2& \text{Parent function}\\
-y = x^2 + 5 & \text{Vertical shift} \\
-y = 3(x^2+5)& \text{Vertical stretch} \\
-y = 3((x-2)^2+5) & \text{Horizontal shift}\\
-y = 3x^2 - 12x + 27& \text{Expanded form}
+f_0(x) = x^2& \text{Parent function}\\
+f_1(x) = f_0(x) + 5 = x^2 + 5 & \text{Vertical shift} \\
+f_2(x) = 3f_1(x) = 3(x^2+5)& \text{Vertical stretch} \\
+f_3(x) = f_2(x - 2) = 3((x-2)^2+5) & \text{Horizontal shift}\\
+f(x) = 3x^2 - 12x + 27& \text{Expanded form}
 \end{array}
 $
 \end{enumerate}
@@ -131,9 +131,35 @@ This shows that changing the order in which the transformations are applied may 
 The previous example shows how to construct the formula of a function given a sequence of transformations. One might wonder how to find the transformations applied to a parent function's graph given a complicated formula. That is, if we know a formula $af(bx + h) + k$, can we reconstruct the sequence of transformations? There are two parts to this: finding the transformations and finding the order of those transformations. The following example gives some of the reasoning behind the process. 
 
 \begin{example}
-Given a function $f$ defined by $f(x) = 3|2x + 7| - 2$, find its parent function and list the transformations, in order, applied to the parent function's graph to produce the graph of $f$. 
+Given a function $f$ defined by $f(x) = |2x + 7|$, find its parent function and list the transformations, in order, applied to the parent function's graph to produce the graph of $f$. 
 \begin{explanation}
 The parent function $f_0$ is given by $f_0(x) = |x|$. We will use subscripts to denote the intermediate steps between the parent function and the function $f$. 
+
+Now we have to think about what transformations are being applied to the graph $y = |x|$. We can see from the table in the previous section that based on the changes made to the formula, there are 
+\begin{itemize}
+\item a horizontal compression by a factor of 2 and
+\item a horizontal shift 7 units to the left
+\end{itemize}
+Note that this is not necessarily the order in which these transformations occur, but an unordered list of them. 
+
+It remains for us to find the order in which these transformations were applied to produce the function $f$. It's a good rule of thumb to start with the transformations closer to the variable $x$, since those are applied to the function first. Let's try starting with the horizontal compression by a factor of 2. Applying this transformation to $f_0(x)$ yields $f_1(x) = f_0(2x) = |(2x)| = |2x|$, since a horizontal compression adds a factor to the variable $x$ in the previous function. This seems to be a good start. Next, let's take care of the horizontal shift by 7 units to the left. Applying this transformation to $f_1(x)$ yields $f_2(x) = f_1(x + 7) = |2(x + 7)|$, since shifting 7 to the left adds 7 to the variable $x$ in the previous function. Note that since it adds 7 only to the $x$, we have to use parentheses here. However, we've gotten off track: $2(x + 7) = 2x + 14$, which is not what we wanted to appear inside the absolute value symbols. Let's try the other order.
+
+This time, begin with the horizontal shift 7 units to the left. Applying this to the parent function $f_0(x)$ yields $f_1(x) = f_0(x + 7) = |x + 7|$. Then, move on to the horizontal compression by a factor of 2. Applying this transformation to $f_1(x)$ yields $f_2(x) = f_1(2x) = |(2x) + 7| = |2x + 7|$, since according to the table, we multiply only the variable $x$ by 2 for this transformation. 
+
+This tells us that the correct order for our transformations is 
+\begin{enumerate}
+\item a horizontal shift 7 units to the left and
+\item a horizontal compression by a factor of 2
+\end{enumerate}
+\end{explanation}
+\end{example}
+
+Let's see how this fits into a more complicated example.
+
+\begin{example}
+Given a function $f$ defined by $f(x) = 3|2x + 7| - 2$, find its parent function and list the transformations, in order, applied to the parent function's graph to produce the graph of $f$. 
+\begin{explanation}
+The parent function $f_0$ is given by $f_0(x) = |x|$.
 
 Now we have to think about what transformations are being applied to the graph $y = |x|$. We can see from the table in the previous section that based on the changes made to the formula, there are 
 \begin{itemize}
@@ -144,9 +170,7 @@ Now we have to think about what transformations are being applied to the graph $
 \end{itemize}
 Note that this is not necessarily the order in which these transformations occur, but an unordered list of them. 
 
-It remains for us to find the order in which these transformations were applied to produce the function $f$. It's a good rule of thumb to start with the transformations closer to the variable $x$, since those are applied to the function first. Let's try starting with the horizontal compression by a factor of 2. Applying this transformation to $f_0(x)$ yields $f_1(x) = f_0(2x) = |2x|$, since a horizontal compression adds a factor to the variable $x$ in the previous function. This seems to be a good start. Next, let's take care of the horizontal shift by 7 units to the left. Applying this transformation to $f_1(x)$ yields $f_2(x) = f_1(x + 7) = |2(x + 7)|$, since shifting 7 to the left adds 7 to the variable $x$ in the previous function. Note that since it adds 7 only to the $x$, we have to use parentheses here. However, we've gotten off track: $2(x + 7) = 2x + 14$, which is not what we wanted to appear inside the absolute value symbols. Let's try starting over.
-
-This time, begin with the horizontal shift 7 units to the left. Applying this to the parent function $f_0(x)$ yields $f_1(x) = f_0(x + 7) = |x + 7|$. Then, move on to the horizontal compression by a factor of 2. Applying this transformation to $f_1(x)$ yields $f_2(x) = f_1(2x) = |2x + 7|$, since according to the table, we multiply only the variable $x$ by 2 for this transformation. Next, let's try taking care of the vertical stretch by a factor of 3. Applying this transformation to $f_2(x)$ gives us $f_3(x) = 3f_2(x) = 3|2x + 7|$, since vertical stretches correspond to multiplying the entire previous function by the factor. Last, we can incorporate the vertical shift 2 units down. Since that corresponds to subtracting 2 from the previous function $f_3(x)$, we obtain $f_4(x) = f_3(x) - 2 = 3|2x + 7| - 2$, which is exactly the function we wanted to reconstruct. 
+As in the previous example, we begin with the horizontal shift 7 units to the left. Applying this to the parent function $f_0(x)$ yields $f_1(x) = f_0(x + 7) = |x + 7|$. Then, move on to the horizontal compression by a factor of 2. Applying this transformation to $f_1(x)$ yields $f_2(x) = f_1(2x) = |(2x) + 7| = |2x + 7|$, since according to the table, we multiply only the variable $x$ by 2 for this transformation. Next, let's try taking care of the vertical stretch by a factor of 3. Applying this transformation to $f_2(x)$ gives us $f_3(x) = 3f_2(x) = 3|2x + 7|$, since vertical stretches correspond to multiplying the entire previous function by the factor. Last, we can incorporate the vertical shift 2 units down. Since that corresponds to subtracting 2 from the previous function $f_3(x)$, we obtain $f_4(x) = f_3(x) - 2 = 3|2x + 7| - 2$, which is exactly the function we wanted to reconstruct. 
 
 This tells us that the correct order for our transformations is 
 \begin{enumerate}
@@ -155,8 +179,11 @@ This tells us that the correct order for our transformations is
 \item a vertical stretch by a factor of 3, and
 \item a vertical shift 2 units down.
 \end{enumerate}
+
+Note that if we applied transformations 3 and 4 in a different order, we would have obtained a different function.
 \end{explanation}
 \end{example}
+
 
 Given a function $f$, note that we can apply the same reasoning to $af(bx + h) + k$ to find the order of the transformations applied to the graph of $f$:
 \begin{enumerate}
@@ -187,6 +214,8 @@ We can summarize all this information as follows. Given a function $f$, the grap
 \item reflections given by the sign of $a$ and $b$, and
 \item vertical shifts given by $k$.
 \end{enumerate}
+
+Note that this is not the only order you can use to graph transformations of functions. This is just one order that works every time, provided you start with a function of the form $af(bx + h) + k$. 
 
 \begin{example}
 Given a function $f$ defined by $f(x) = -\frac{1}{2}|3x - 5| + 1$, find its parent function and list the transformations, in order, applied to the parent function's graph to produce the graph of $f$. Then graph $f$.
@@ -228,7 +257,11 @@ This last graph is our final result. While graphing each step along the way may 
 \end{explanation}
 \end{example}
 
+Below is a link to a Desmos graph containing $af(bx + h) + k$ for a function $f$ where you can adjust the values of $a$, $b$, $h$, and $k$ to see how they affect the graph. The function $f$ in the link below is the formula for a half-circle, but don't worry too much about where it came from. 
 
+\begin{center}  
+\desmos{wf5aevwjhk}{800}{600}  
+\end{center}
 
 
 

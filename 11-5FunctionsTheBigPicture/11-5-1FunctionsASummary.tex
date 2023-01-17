@@ -1,0 +1,162 @@
+\documentclass{ximera}
+
+\input{../preamble}
+\author{Kenneth Berglund}
+\license{Creative Commons Attribution-ShareAlike 4.0 International License}
+\acknowledgement{}
+
+\title{Functions: A Summary}
+
+\begin{document}
+\begin{abstract}
+\end{abstract}
+\maketitle
+%
+%
+%
+\begin{motivatingQuestions}\begin{itemize}
+\item What have we learned about functions in this course?
+\end{itemize}\end{motivatingQuestions}
+%
+%
+%\typeout{************************************************}
+%\typeout{Subsection Introduction}
+%\typeout{************************************************}
+%
+\section{Introduction}
+%
+Over the past two semesters, you've learned quite a bit about functions. When we started, we didn't even say what a function was, but we've now talked about many functions and discussed their properties, as well as how to work with them.
+
+Here are some questions you should be able to answer. 
+\begin{itemize}
+\item What is a function?
+\item What are some properties that all functions share?
+\item What are the domain and range of a function, and how can they be calculated?
+\item What are zeros of functions, and how can they be found? 
+\item How can functions be built out of other functions? 
+\item Which functions have inverses, and how can they be found?
+\item What kinds of symmetries can the graphs of functions show?
+\item What are some famous kinds of functions? What do their graphs look like? Why are they important? What do they model?
+\item How can we describe the average rate of change of a function?
+\item How can we go back and forth between different representations of a function?
+\end{itemize}
+
+\section{Using Functions to Solve Problems}
+
+
+\section{Analyzing a Function}
+Once we have a function that models some phenomenon, we can ask all sorts of questions about our function. In this section, we'll take a particular function, and see what kinds of interesting things we can discover. Our hope is to demonstrate how you can use the tools we have developed in this course to gain information about complicated functions. 
+
+A model used in many fields is the \emph{logistic function}. The standard logistic function is a function $f$ defined by $f(x) = \frac{1}{1 + e^{-x}}$. Looking at this function can be intimidating, but we have all the tools at our disposal to be able to analyze this function. 
+
+\subsection{Domain and Range}
+Let's start by finding the domain and range of $f$. To find the domain, notice that the only possible obstruction to $f(x)$ being defined is if the denominator were to equal zero. This tells us that to find the domain, we need to solve the equation $1 + e^{-x} = 0$. To do this, we take the following steps:
+\begin{align*}
+1 + e^{-x} & = 0 \\
+1 & = -e^{-x} \\
+-1 & = e^{-x} \\
+\ln(-1) & = \ln(e^{-x}) \\
+\ln(-1) & = -x \\
+-\ln(-1) & = x
+\end{align*}
+
+However, as we learned, the domain of the natural logarithm is $(0, \infty)$, so $-1$ is not in the domain of the natural logarithm, and therefore, this equation does not have a solution. Since the equation does not have a solution, there are no obstructions to $f(x)$ being defined, and the domain of $f$ is $(-\infty, \infty)$.
+
+To find the range of $f$, we first must recall that the range of $e^{-x}$ is $(0, \infty)$. Let's consider what happens as $e^{-x}$ gets arbitrarily large. In this case, the denominator of $\frac{1}{1 + e^{-x}}$ becomes arbitrarily large, and therefore, $f(x)$ becomes arbitrarily close to 0, but always remains positive. 
+
+As $e^{-x}$ gets arbitrarily close to 0, the denominator of $\frac{1}{1 + e^{-x}}$ becomes arbitrarily close to 1, but is always greater than 1, therefore, $f(x)$ can be arbitrarily close to 1, but never greater than or equal to 1. 
+
+Combining these two statements tells us that the range of $f$ is $(0, 1)$. The above arguments use reasoning that you will develop further in calculus: the idea of getting arbitrarily close to a point is a major topic in that subject. Another way to get an idea of the range is to graph the function on a graphing utility such as Desmos. 
+
+\begin{image}
+		  \begin{tikzpicture}
+		  \begin{axis}
+\addplot[thick, domain=-7:7, color=penColor]{1/(1 + exp(-x))};
+\end{axis}
+		    
+		  \end{tikzpicture}
+\end{image}
+
+This makes it easier to see what's going on, but being able to understand how to find the range using reasoning about the range of $e^{-x}$ is an important skill to develop. 
+
+\subsection{Average Rate of Change}
+Notice that the graph of $f$ has an S-shape. It flattens out as the absolute value of $x$ becomes large. We will make this more concrete in the following exploration.
+\begin{exploration}
+In this exploration, we will learn about the average rate of change of $f$ over various intervals. Use a calculator to get a sense of how large or small the rates of change are. 
+	\begin{enumerate}[label=\alph*.]
+	\item Find the average rate of change of $f$ over the interval $[0, 1]$. 
+	\item Find the average rate of change of $f$ over the interval $[2, 3]$. 
+	\item Find the average rate of change of $f$ over the interval $[5, 6]$. 
+	\item Find the average rate of change of $f$ over the interval $[-7, -6]$. 
+	\item Of the intervals above, which had the highest rate of change? The lowest?
+	\end{enumerate}
+\end{exploration}
+
+\subsection{Adapting Models}
+
+One application of the logistic function is to model population growth. At time $x$, the logistic growth model says that the population is $f(x)$. The rationale behind this is that various factors (space, resources, etc.) put a limit, or ``carrying capacity'' on how many individuals can survive in a population. Therefore, population growth should slow down based on how close the population is to the carrying capacity. That is, the closer $f(x)$ is to the carrying capacity, the slower the rate of change of $f$ should be. Population should also be slower when $f(x)$ is close to 0, since there are fewer individuals to reproduce. 
+
+A very reasonable question to ask would be ``How can this be used to model populations if its range is $(0, 1)$?'' The answer is that function transformations allow us to fit the function to our specific need. For example, if the carrying capacity is 5000, instead of using $f(x)$ to model the population, we would use $5000f(x)$. We can use horizontal stretches and compressions to adjust how steep the growth is and use horizontal shifts to adjust the starting population. 
+
+A more general form of the logistic function would then be something of the form $$Kf(r(x - h)) = \frac{K}{1 + e^{-r(x - h)}}.$$ The value $K$ adjusts the vertical stretch and therefore the carrying capacity. The value $r$ corresponds to a horizontal compression or stretch. For the logistic function, this affects the steepness of the graph. As usual, $h$ represents a horizontal shift. 
+
+\begin{exploration}
+Here is a table containing Columbus population data from Wikipedia. 
+
+$$
+\begin{array}{c|c}
+\text{Year}&\text{Population (in thousands)} \\
+\hline
+1812&0.300\\
+1820&1.450\\
+1830&2.435\\
+1840&6.048\\
+1850&17.882\\
+1860&18.554\\
+1870&31.274\\
+1880&51.647\\
+1890&88.150\\
+1900&125.560\\
+1910&181.511\\
+1920&237.031\\
+1930&290.564\\
+1940&306.087\\
+1950&375.901\\
+1960&471.316\\
+1970&539.677\\
+1980&564.871\\
+1990&632.910\\
+2000&711.470\\
+2010&787.033\\
+
+\end{array}
+$$
+
+Use the following Desmos link to answer the following questions. 
+\begin{center}
+\desmos{ymiuslnbqw}{800}{600} 
+\end{center}
+\begin{enumerate}[label=\alph*.]
+\item Experiment with the sliders to find values of $K$, $r$, and $h$ that make $\frac{K}{1 + e^{-r(x - h)}}$ a model for the data above that is as suitable as possible. Answers may vary. 
+\item Based on your values of $K$, $r$, and $h$, what is the carrying capacity of the population of Columbus?
+\item Use your model to estimate the population of Columbus in 2020. 
+\item The actual population of Columbus in 2020 was 905,748. Does this agree with the model you found? Why do you think this is the case?
+\end{enumerate}
+
+\end{exploration}
+
+\subsection{Inverse Function}
+Another fun fact about the function $f$ is that it is one-to-one, and therefore, invertible. What's more, we can use the tools we developed during the sections on inverse functions to be able to find an inverse for the logistic function. Since the logistic function takes a time as an input and returns the population at that time, its inverse takes a number and returns the time when the population has reached that number. 
+
+\begin{exploration}
+Use your model from the previous section. Call it $f$. 
+\begin{enumerate}[label=\alph*.]
+\item Find a formula for $f^{-1}(x)$.
+
+\item Use your formula to estimate when the population of Columbus will be 1,000,000.
+
+\item What is the domain of $f^{-1}$?
+\end{enumerate}
+\end{exploration}
+
+\end{document}

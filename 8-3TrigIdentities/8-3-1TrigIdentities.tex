@@ -1,0 +1,621 @@
+\documentclass{ximera}
+
+\input{../preamble}
+\author{David Kish}
+\license{Creative Commons Attribution-ShareAlike 4.0 International License}
+\acknowledgement{}
+
+\title{Trigonometric Identities}
+
+\begin{document}
+\begin{abstract}
+  
+\end{abstract}
+\maketitle
+
+%\typeout{************************************************}
+%\typeout{Subsection Pythagorean Identities and Conjugates}
+%\typeout{************************************************}
+\section{Introduction to Identities}
+From the previous section, we have found some identities. We will now summarize what we have already found and begin to introduce new identities. These will help us to breakdown and simplify trigonometric equations that will hopefully make our lives easier.\\
+
+Remember that an identity is an equation that is true for all possible values of \(x\) for which the involved quantities are defined.  An example of a non-trigonometric identity is%
+\[
+(x+1)^2 = x^2 + 2x + 1\text{,}
+\]
+since this equation is true for every value of \(x\), and the left and right sides of the equation are simply two different-looking but entirely equivalent expressions.%
+
+Trigonometric identities are simply identities that involve trigonometric functions.  While there are a large number of such identities one can study, we choose to focus on those that turn out to be useful in the study of calculus.  The most important trigonometric identity is the fundamental trigonometric identity, which is a trigonometric restatement of the Pythagorean Theorem.%
+
+For any real angle \(\theta\),%
+\[
+\cos^2(\theta) + \sin^2(\theta) = 1
+\]
+%
+
+Identities are important because they enable us to view the same idea from multiple perspectives.  For example, the fundamental trigonometric identity allows us to think of \(\cos^2(\theta) + \sin^2(\theta)\) as simply \(1\), or alternatively, to view \(\cos^2(\theta)\) as the same quantity as \(1 - \sin^2(\theta)\).%
+
+There are two related Pythagorean identities that involve the tangent, secant, cotangent, and cosecant functions, which we previously derived from the fundamental trigonometric identity by dividing both sides by either \(\cos^2(\theta)\) or \(\sin^2(\theta)\).  We will take another look at this identity before going deeper. If we divide both sides of $\cos^2(\theta) + \sin^2(\theta) = 1$ by \(\cos^2(\theta)\) (and assume that \(\cos(\theta) \ne 0\), we see that%
+\[
+1 + \frac{\sin^2(\theta)}{\cos^2(\theta)} = \frac{1}{\cos^2(\theta)} \text{,}
+\]
+or equivalently,%
+\[
+1 + \tan^2(\theta) = \sec^2(\theta) \text{.}
+\]
+A similar argument dividing by \(\sin^2(\theta)\) (while assuming \(\sin(\theta) \ne 0\)) shows that%
+\[
+\cot^2(\theta) + 1 = \csc^2(\theta) \text{.}
+\]
+These identities prove useful in calculus when we develop the formulas for the derivatives of the tangent and cotangent functions.%
+
+
+%\typeout{************************************************}
+%\typeout{Sums and Difference of Angles}
+%\typeout{************************************************}
+
+\section{Sums and Differences of Angles}
+
+In calculus, it is also beneficial to know a couple of other standard identities for sums of angles or double angles. 
+
+\begin{callout}
+\textbf{Sum and Difference Identities for Cosine:} For all angles $\alpha$ and $\beta$, 
+\begin{itemize}
+
+\item  $\cos(\alpha + \beta) = \cos(\alpha) \cos(\beta) - \sin(\alpha) \sin(\beta)$
+
+\item $\cos(\alpha - \beta) = \cos(\alpha) \cos(\beta) + \sin(\alpha) \sin(\beta)$\\
+
+\textbf{Double Angle Formula:}
+\item  \(\theta\), \(\cos(2\theta) = \cos^2(\theta) - \sin^2(\theta)\)
+
+\end{itemize}
+\end{callout}
+
+
+\begin{callout}
+ \textbf{Sum and Difference Identities for Sine:} For all angles $\alpha$ and $\beta$, 
+\begin{itemize}
+
+\item  $\sin(\alpha + \beta) = \sin(\alpha) \cos(\beta) + \cos(\alpha) \sin(\beta)$
+
+\item $\sin(\alpha - \beta) = \sin(\alpha) \cos(\beta) - \cos(\alpha) \sin(\beta)$\\
+
+\textbf{Double Angle Formula:}
+\item \(\theta\), \(\sin(2\theta) = 2\sin(\theta)\cos(\theta)\)
+
+\end{itemize}
+\end{callout}
+
+
+\begin{example} \label{cosinesumdiffex}  $~$
+
+\begin{enumerate}
+
+\item Find the exact value of $\cos\left(15^{\circ}\right)$.
+
+\item  Verify the identity:  $\cos\left(\frac{\pi}{2} - \theta\right) = \sin(\theta)$.
+
+\end{enumerate}
+
+{\bf Solution.}
+
+\begin{enumerate}
+
+\item In order to use the theorem to find $\cos\left(15^{\circ}\right)$, we need to write $15^{\circ}$ as a sum or difference of angles whose cosines and sines we know.  One way to do so is to write $15^{\circ} = 45^{\circ} - 30^{\circ}$.
+
+\vspace{-.1in}
+
+\[ \begin{array}{rcl}
+
+\cos\left(15^{\circ}\right) & = & \cos\left(45^{\circ} - 30^{\circ} \right) \\ [2pt]
+                            & = & \cos\left(45^{\circ}\right)\cos\left(30^{\circ} \right) + \sin\left(45^{\circ}\right)\sin\left(30^{\circ} \right) \\ [2pt]
+                            & = & \left( \dfrac{\sqrt{2}}{2} \right)\left( \dfrac{\sqrt{3}}{2} \right)  +  \left( \dfrac{\sqrt{2}}{2} \right)\left( \dfrac{1}{2} \right)\\ [15pt]
+														& = &  \dfrac{\sqrt{6}+ \sqrt{2}}{4} \\ 
+\end{array} \]
+
+\item  In a straightforward application of  the theorem, we find
+
+\[ \begin{array}{rcl}
+
+\cos\left(\dfrac{\pi}{2} - \theta\right) & = & \cos\left(\dfrac{\pi}{2}\right)\cos\left(\theta\right) + \sin\left(\dfrac{\pi}{2}\right)\sin\left(\theta \right) \\ [10pt]
+                            & = & \left( 0 \right)\left( \cos(\theta) \right)  +  \left( 1 \right)\left( \sin(\theta) \right) \\ [4pt]
+														& = & \sin(\theta)    \\
+\end{array} \]
+
+
+\end{enumerate}
+
+\vspace{-.25in}
+
+\qed
+
+\end{example}
+
+\begin{example} $~$  \label{sinesumanddiffex}
+
+\begin{enumerate}
+
+\item  Find the exact value of $\sin\left(\frac{19 \pi}{12}\right)$
+
+\item  If $\alpha$ is a Quadrant II angle with $\sin(\alpha) = \frac{5}{13}$, and $\beta$ is a Quadrant III angle with $\tan(\beta) = 2$, find $\sin(\alpha - \beta)$.
+
+\item  Derive a formula for $\tan(\alpha + \beta)$ in terms of $\tan(\alpha)$ and $\tan(\beta)$.
+
+\end{enumerate}
+
+{\bf Solution.}  
+
+\begin{enumerate}
+
+\item  As in the earlier example, we need to write the angle $\frac{19 \pi}{12}$ as a sum or difference of common angles.  The denominator of $12$ suggests a combination of angles with denominators $3$ and $4$.  One such combination is $\; \frac{19 \pi}{12} = \frac{4 \pi}{3} + \frac{\pi}{4}$.  Applying what we know about sum and difference with Sine, we get
+
+\vspace{-.15in}
+
+\[ \begin{array}{rcl}
+
+\sin\left(\dfrac{19 \pi}{12}\right) & = & \sin\left(\dfrac{4 \pi}{3} + \dfrac{\pi}{4} \right) \\ [10pt]
+                            & = & \sin\left(\dfrac{4 \pi}{3} \right)\cos\left(\dfrac{\pi}{4} \right) + \cos\left(\dfrac{4 \pi}{3} \right)\sin\left(\dfrac{\pi}{4} \right) \\ [10pt]
+                            & = & \left( -\dfrac{\sqrt{3}}{2} \right)\left( \dfrac{\sqrt{2}}{2} \right)  +  \left( -\dfrac{1}{2} \right)\left( \dfrac{\sqrt{2}}{2} \right) \\ [15pt]
+														& = &  \dfrac{-\sqrt{6}- \sqrt{2}}{4} \\
+\end{array} \]
+
+\vspace{-.1in}
+
+\item  In order to find $\sin(\alpha - \beta)$ usingthe theorem, we need to find $\cos(\alpha)$ and both $\cos(\beta)$ and $\sin(\beta)$.  To find $\cos(\alpha)$, we use the Pythagorean Identity $\cos^2(\alpha) + \sin^2(\alpha) = 1$.  Since $\sin(\alpha) = \frac{5}{13}$, we have $\cos^{2}(\alpha) + \left(\frac{5}{13}\right)^2 = 1$, or $\cos(\alpha) = \pm \frac{12}{13}$.  Since $\alpha$ is a Quadrant II angle, $\cos(\alpha) = -\frac{12}{13}$. We now set about finding $\cos(\beta)$ and $\sin(\beta)$.  We have several ways to proceed, but the Pythagorean Identity $1 + \tan^{2}(\beta) = \sec^{2}(\beta)$ is a quick way to get $\sec(\beta)$, and hence, $\cos(\beta)$.  With $\tan(\beta) = 2$, we get $1 + 2^2 = \sec^{2}(\beta)$ so that $\sec(\beta) = \pm \sqrt{5}$.  Since $\beta$ is a Quadrant III angle,  we choose $\sec(\beta) =  -\sqrt{5}$ so $\cos(\beta) = \frac{1}{\sec(\beta)} = \frac{1}{-\sqrt{5}} = -\frac{\sqrt{5}}{5}$.  We now need to determine $\sin(\beta)$.  We could use The Pythagorean Identity $\cos^{2}(\beta) + \sin^{2}(\beta) = 1$, but we opt instead to use a quotient identity.  From $\tan(\beta) = \frac{\sin(\beta)}{\cos(\beta)}$, we have $\sin(\beta) = \tan(\beta) \cos(\beta)$ so we get $\sin(\beta) = (2) \left( -\frac{\sqrt{5}}{5}\right) = - \frac{2 \sqrt{5}}{5}$.  We now have all the pieces needed to find $\sin(\alpha - \beta)$:
+
+\[ \begin{array}{rcl} 
+\sin(\alpha - \beta) &  = & \sin(\alpha)\cos(\beta) - \cos(\alpha)\sin(\beta) \\
+ 										 & = & \left( \dfrac{5}{13} \right)\left( -\dfrac{\sqrt{5}}{5} \right) - \left( -\dfrac{12}{13} \right)\left( - \dfrac{2 \sqrt{5}}{5} \right) \\
+ 										 & = & -\dfrac{29\sqrt{5}}{65} \\
+\end{array}\]
+
+\item  We can start expanding $\tan(\alpha + \beta)$ using a quotient identity and our sum formulas
+
+\vspace{-.1in}
+
+\[ \begin{array}{rcl}
+
+\tan(\alpha + \beta) & = & \dfrac{\sin(\alpha + \beta)}{\cos(\alpha + \beta)} \\ [10pt]
+                     & = & \dfrac{\sin(\alpha) \cos(\beta) + \cos(\alpha) \sin(\beta)}{\cos(\alpha) \cos(\beta) - \sin(\alpha) \sin(\beta)} \\ \end{array} \]
+			
+
+Since  $\tan(\alpha) = \frac{\sin(\alpha)}{\cos(\alpha)}$ and $\tan(\beta) = \frac{\sin(\beta)}{\cos(\beta)}$, it looks as though if we divide both numerator and denominator by $\cos(\alpha) \cos(\beta)$ we will have what we want
+
+\vspace{-.1in}
+
+\[ \begin{array}{rcl}
+
+\tan(\alpha + \beta) & = & \dfrac{\sin(\alpha) \cos(\beta) + \cos(\alpha) \sin(\beta)}{\cos(\alpha) \cos(\beta) - \sin(\alpha) \sin(\beta)} \cdot\dfrac{\dfrac{1}{\cos(\alpha) \cos(\beta)}}{\dfrac{1}{\cos(\alpha) \cos(\beta)}}\\
+                    &   & \\
+ 										& = & \dfrac{\dfrac{\sin(\alpha) \cos(\beta)}{\cos(\alpha) \cos(\beta)} + \dfrac{\cos(\alpha) \sin(\beta)}{\cos(\alpha) \cos(\beta)}}{\dfrac{\cos(\alpha) \cos(\beta)}{\cos(\alpha) \cos(\beta)} - \dfrac{\sin(\alpha) \sin(\beta)}{\cos(\alpha) \cos(\beta)}}\\
+                    &   & \\
+										& = & \dfrac{\dfrac{\sin(\alpha) \cancel{\cos(\beta)}}{\cos(\alpha) \cancel{\cos(\beta)}} + \dfrac{\cancel{\cos(\alpha)} \sin(\beta)}{\cancel{\cos(\alpha)} \cos(\beta)}}{\dfrac{\cancel{\cos(\alpha)} \cancel{\cos(\beta)}}{\cancel{\cos(\alpha)} \cancel{\cos(\beta)}} - \dfrac{\sin(\alpha) \sin(\beta)}{\cos(\alpha) \cos(\beta)}}\\
+                    &   & \\
+										& = & \dfrac{\tan(\alpha) + \tan(\beta)}{1 -\tan(\alpha) \tan(\beta)}\\
+\end{array} \]
+
+Naturally, this formula is limited to those cases where all of the tangents are defined.\qed
+
+\end{enumerate}
+
+\end{example}
+\begin{example}  \label{doubleangleex} $~$
+
+\begin{enumerate}
+
+\item  If $\sin(\theta) = x$ for $-\frac{\pi}{2} \leq \theta \leq \frac{\pi}{2}$, find an expression for $\sin(2\theta)$ in terms of $x$.
+
+\item  \label{doubleanglesinewtan} Verify the identity:  $\sin(2\theta) = \dfrac{2\tan(\theta)}{1 + \tan^{2}(\theta)}$.
+
+\item  Express $\cos(3\theta)$ as a polynomial in terms of $\cos(\theta)$.
+\label{cosinepolynomial}
+
+\end{enumerate}
+
+
+{\bf Solution.}
+
+\begin{enumerate}
+
+\item  If your first reaction to `$\sin(\theta) = x$' is `No it's not, $\cos(\theta) = x$!' then you have indeed learned something, and we take comfort in that. However, context is everything.  Here, `$x$' is just a variable - it does not necessarily represent the $x$-coordinate of the point on The Unit Circle which lies on the terminal side of $\theta$, assuming $\theta$ is drawn in standard position.  Here, $x$ represents the quantity $\sin(\theta)$, and what we wish to know is how to express $\sin(2\theta)$ in terms of $x$.  We will see more of this kind of thing in future sections, and, as usual, this is something we need for Calculus.  Since $\sin(2\theta) = 2 \sin(\theta) \cos(\theta)$, we need to write $\cos(\theta)$ in terms of $x$ to finish the problem.  We substitute $x = \sin(\theta)$ into the Pythagorean Identity, $\cos^{2}(\theta) + \sin^{2}(\theta) = 1$, to get $\cos^{2}(\theta) + x^2 = 1$, or $\cos(\theta) = \pm \sqrt{1-x^2}$.  Since  $-\frac{\pi}{2} \leq \theta \leq \frac{\pi}{2}$, $\cos(\theta) \geq 0$, and thus $\cos(\theta) = \sqrt{1-x^2}$.  Our final answer is  $\sin(2\theta) = 2 \sin(\theta) \cos(\theta) = 2x\sqrt{1-x^2}$.
+
+\item  We start with the right hand side of the identity and note that $1 + \tan^{2}(\theta) = \sec^{2}(\theta)$.  From this point, we use the Reciprocal and Quotient Identities to rewrite $\tan(\theta)$ and $\sec(\theta)$ in terms of $\cos(\theta)$ and $\sin(\theta)$:
+
+\vspace{-.15in}
+
+\[ \begin{array}{rcl}
+
+
+\dfrac{2\tan(\theta)}{1 + \tan^{2}(\theta)} & = & \dfrac{2\tan(\theta)}{\sec^{2}(\theta)}= \dfrac{2 \left( \dfrac{\sin(\theta)}{\cos(\theta)}\right)}{\dfrac{1}{\cos^{2}(\theta)}}= 2\left( \dfrac{\sin(\theta)}{\cos(\theta)}\right) \cos^{2}(\theta) \\ [15pt]
+																						& = & 2\left( \dfrac{\sin(\theta)}{\cancel{\cos(\theta)}}\right) \cancel{\cos(\theta)} \cos(\theta) = 2\sin(\theta) \cos(\theta) = \sin(2\theta) \\ 
+
+\end{array} \]
+
+\item In our list of identities, one of the formulas for $\cos(2\theta)$, namely $\cos(2\theta) = 2\cos^{2}(\theta) - 1$, expresses $\cos(2\theta)$ as a polynomial in terms of $\cos(\theta)$.  We are  now asked to find such an  identity for $\cos(3\theta)$.  Using the sum formula for cosine, we begin with 
+
+\vspace{-.1in}
+
+\[ \begin{array}{rcl}
+
+\cos(3\theta) & = & \cos(2\theta + \theta) \\ [2pt]
+              & = & \cos(2\theta)\cos(\theta) - \sin(2\theta)\sin(\theta) \\
+\end{array}\]
+
+Our ultimate goal is to express the right hand side in terms of $\cos(\theta)$ only.  We substitute $\cos(2\theta) = 2\cos^{2}(\theta) -1$ and $\sin(2\theta) = 2\sin(\theta)\cos(\theta)$ which yields
+
+\vspace{-.1in}
+
+\[ \begin{array}{rcl}
+
+\cos(3\theta) & = &  \cos(2\theta)\cos(\theta) - \sin(2\theta)\sin(\theta) \\ [2pt]
+              & = & \left(2\cos^{2}(\theta) - 1\right) \cos(\theta) - \left(2 \sin(\theta) \cos(\theta) \right)\sin(\theta) \\ [2pt] 
+              & = & 2\cos^{3}(\theta)- \cos(\theta) - 2 \sin^2(\theta) \cos(\theta) \\
+              
+\end{array}\]
+
+Finally, we exchange $\sin^{2}(\theta)$ for $1 - \cos^{2}(\theta)$ courtesy of the Pythagorean Identity, and get
+
+\[ \begin{array}{rcl}
+
+\cos(3\theta) & = & 2\cos^{3}(\theta)- \cos(\theta) - 2 \sin^2(\theta) \cos(\theta) \\ [2pt]
+              & = & 2\cos^{3}(\theta)- \cos(\theta) - 2 \left(1 - \cos^{2}(\theta)\right) \cos(\theta) \\ [2pt]
+              & = & 2\cos^{3}(\theta)- \cos(\theta) - 2\cos(\theta) + 2\cos^{3}(\theta) \\ [2pt]
+              & = & 4\cos^{3}(\theta)- 3\cos(\theta) \\
+\end{array}\]        
+ and we are done.  \qed           
+              
+\end{enumerate}
+
+\end{example}
+
+\section{Lists of Identities}
+
+\begin{callout}
+ \textbf{The Pythagorean Identities:} \index{Pythagorean Identities}
+
+\begin{enumerate}
+
+\item $\cos^{2}(\theta) + \sin^{2}(\theta) = 1$.
+
+\textbf{Common Alternate Forms:}
+
+\begin{itemize}
+
+\item  $1 - \sin^{2}(\theta) = \cos^{2}(\theta)$
+
+\item  $1 - \cos^{2}(\theta) = \sin^{2}(\theta)$
+
+\end{itemize}
+
+\item $1 + \tan^{2}(\theta) = \sec^{2}(\theta)$, provided $\cos(\theta) \neq 0$.
+
+\textbf{Common Alternate Forms:}
+
+\begin{itemize}
+
+\item  $\sec^{2}(\theta) - \tan^{2}(\theta) = 1$
+
+\item  $\sec^{2}(\theta) - 1 = \tan^{2}(\theta)$
+
+\end{itemize}
+
+\item $1 + \cot^{2}(\theta) = \csc^{2}(\theta)$, provided $\sin(\theta) \neq 0$.
+
+\textbf{Common Alternate Forms:}
+
+\begin{itemize}
+
+\item  $\csc^{2}(\theta) - \cot^{2}(\theta) = 1$
+
+\item  $\csc^{2}(\theta) - 1 = \cot^{2}(\theta)$
+
+\end{itemize}
+
+\end{enumerate}
+\end{callout}
+
+\begin{callout}
+\textbf{Reciprocal and Quotient Identities:} \index{Reciprocal Identities} \index{Quotient Identities} 
+
+\begin{itemize}
+
+\item $\sec(\theta) = \dfrac{1}{\cos(\theta)}$, provided $\cos(\theta) \neq 0$;\\  if $\cos(\theta) = 0$, $\sec(\theta)$ is undefined.
+
+\item $\csc(\theta) = \dfrac{1}{\sin(\theta)}$, provided $\sin(\theta) \neq 0$;\\  if $\sin(\theta) = 0$, $\csc(\theta)$ is undefined.
+
+\item $\tan(\theta) = \dfrac{\sin(\theta)}{\cos(\theta)}$, provided $\cos(\theta) \neq 0$;\\  if $\cos(\theta) = 0$, $\tan(\theta)$ is undefined.
+
+\item $\cot(\theta) = \dfrac{\cos(\theta)}{\sin(\theta)}$, provided $\sin(\theta) \neq 0$;\\  if $\sin(\theta) = 0$, $\cot(\theta)$ is undefined.
+
+\end{itemize}
+\end{callout}
+
+\begin{callout}
+\centerline{\textbf{Pythagorean Conjugates}}  \index{Pythagorean Conjugates}
+
+\begin{itemize}
+
+\item $1 - \cos(\theta)$ and  $1+\cos(\theta)$:\\  $(1-\cos(\theta))(1+\cos(\theta)) = 1 - \cos^{2}(\theta) = \sin^{2}(\theta)$
+
+\item  $1-\sin(\theta)$ and $1 + \sin(\theta)$: \\ $(1-\sin(\theta))(1+\sin(\theta)) = 1 - \sin^{2}(\theta) = \cos^{2}(\theta)$
+
+\item  $\sec(\theta)-1$ and $\sec(\theta)+1$: \\ $(\sec(\theta)-1)(\sec(\theta)+1) = \sec^{2}(\theta) - 1 =  \tan^{2}(\theta)$
+
+\item  $\sec(\theta)-\tan(\theta)$ and $\sec(\theta)+\tan(\theta)$: \\ $(\sec(\theta)-\tan(\theta))(\sec(\theta)+\tan(\theta)) = \sec^{2}(\theta) - \tan^{2}(\theta) = 1$
+
+\item  $\csc(\theta)-1$ and $\csc(\theta)+1$:\\  $(\csc(\theta)-1)(\csc(\theta)+1) = \csc^{2}(\theta) - 1 =  \cot^{2}(\theta)$
+
+\item  $\csc(\theta)-\cot(\theta)$ and $\csc(\theta)+\cot(\theta)$:\\  $(\csc(\theta)-\cot(\theta))(\csc(\theta)+\cot(\theta)) = \csc^{2}(\theta) - \cot^{2}(\theta) = 1$
+
+\smallskip
+
+\end{itemize}
+\end{callout}
+
+\begin{exploration}
+In this activity, we investigate how a sum of two angles identity for the sine function helps us gain a different perspective on the average rate of change of the sine function.%
+
+Recall that for any function \(f\) on an interval \([a,a+h]\), its average rate of change is%
+\[
+\av_{[a,a+h]} = \frac{f(a+h)-f(a)}{h}\text{.}
+\]
+
+\begin{enumerate}[label=\alph*.]
+\item
+Let \(f(x) = \sin(x)\).  Use the definition of \(\av_{[a,a+h]}\) to write an expression for the average rate of change of the sine function on the interval \([a+h,a]\).%
+\item
+Apply the sum of two angles identity for the sine function, \(\sin(\alpha + \beta) = \sin(\alpha) \cos(\beta) + \cos(\alpha) \sin(\beta)\), to the expression \(\sin(a+h)\).%
+\item
+Explain why your work in (a) and (b) together with some algebra shows that%
+\[
+\av_{[a,a+h]} = \sin(a) \cdot \frac{\cos(h)-1}{h} - \cos(a) \frac{\sin(h)}{h}\text{.}
+\]
+%
+\item
+In calculus, we move from \emph{average} rate of change to \emph{instantaneous} rate of change by letting \(h\) approach \(0\) in the expression for average rate of change.  Using a computational device in radian mode, investigate the behavior of%
+\[
+\frac{\cos(h)-1}{h}
+\]
+as \(h\) gets close to \(0\).  What happens?  Similarly, how does \(\frac{\sin(h)}{h}\) behave for small values of \(h\)?  What does this tell us about \(\av_{[a,a+h]}\) as \(h\) approaches \(0\)?%
+\end{enumerate}
+\end{exploration}
+
+%\typeout{************************************************}
+%\typeout{Subsection More Identities}
+%\typeout{************************************************}
+
+\section{More Identities}
+In the previous sections, we saw the utility of the Pythagorean Identities.  Not only did these identities help us compute the values of the circular functions for angles, they were also useful in simplifying expressions involving the circular functions. We will introduce this set of identities as the `Even / Odd' identities and we will discuss them further with trigonometric transformations in a later section.
+
+\begin{callout}
+ \textbf{Even / Odd Identities:}  For all applicable angles $\theta$, 
+\begin{itemize}
+
+\item  $\cos(-\theta) = \cos(\theta)$
+
+\item  $\sec(-\theta) = \sec(\theta)$
+
+\item  $\sin(-\theta) = -\sin(\theta)$
+
+\item  $\csc(-\theta) = -\csc(\theta)$
+
+\item  $\tan(-\theta) = -\tan(\theta)$
+
+\item  $\cot(-\theta) = -\cot(\theta)$
+
+\end{itemize}
+\end{callout}
+
+%\typeout{************************************************}
+%\typeout{Motivating Questions}
+%\typeout{************************************************}
+
+%\begin{motivatingQuestions}\begin{itemize}
+%\item How to study, in a systematic way, ratios between the sides of a right triangle?
+%\item What are the values of sine, cosine, and tangent, for the most frequent angles of $30^\circ$, $45^\circ$ and $60^\circ$? And why?
+%\end{itemize}\end{motivatingQuestions}
+
+
+%\typeout{************************************************}
+%\typeout{Subsection Introduction}
+%\typeout{************************************************}
+
+%\section{Introduction}
+%
+%Recall that two triangles are called {\bf similar} if one of them can be obtained by rescaling and moving around the other. Here's an example:
+%
+%\begin{figure}[h]
+%  \centering
+%  \includegraphics[scale=.3]{/figures/9-1-1-intro.png}
+%\end{figure}
+%
+%The dotted square symbol is a shorthand for ``$90^\circ$ degrees''. Triangles which have a $90^\circ$ angle are called {\bf right triangles}, and will be the main focus of our discussion. What do similar triangles actually have in common? Certainly angles, but not necessarily the lengths of the sides. However, the {\bf ratios} between any two sides of a triangle will remain the same, no matter how the triangle gets rescaled. Such ratios ultimately give us so much information about the given right triangle that they deserve special names: sine, cosine, and tangent.
+%
+%
+%\section{Definitions and examples}
+%
+%\begin{callout}
+%  {\bf Definition (right triangle trig):} Consider the following right triangle, with one angle $\theta$ (this is the lowercase greek letter ``theta'') indicated, and sides labeled $a$, $b$ and $c$.
+%
+%\begin{center}
+%  \includegraphics[scale=.3]{/figures/9-1-1-defn.png}
+%\end{center}
+%  
+%  Then:
+%  \begin{itemize}
+%  \item   The side labeled with $a$ is called the {\bf adjacent} side to $\theta$.
+%  \item The side labeled with $b$ is called the {\bf opposite} side to $\theta$.
+%  \item   The side labeled with $c$ is called the {\bf hypotenuse} of the triangle.
+%  \end{itemize}
+%  With this in place, we define the {\bf sine}, {\bf cosine}, and {\bf tangent} of $\theta$, by $$\sin\theta = \frac{b}{c} \left(= \frac{\rm opp.}{\rm hyp.}\right), \quad \cos\theta = \frac{a}{c}\left(=\frac{\rm adj.}{\rm hyp.}\right), ~~\mbox{and}~~ \tan\theta = \frac{b}{a} \left(= \frac{\rm opp.}{\rm adj.}\right).$$
+%\end{callout}
+%
+%\begin{remark}
+%  The hypotenuse of a right triangle is always the side opposite to the right angle. Also note that $\tan\theta = \sin\theta/\cos\theta$. You might have seen the mnemonic ``SOH CAH TOA'' before: for example, ``SOH'' means ``sine equals opposite over hypotenuse'', and so on.
+%\end{remark}
+%
+%\begin{example}
+%  For each of the following triangles with given angle $\theta$, identify the adjacent (adj.), opposite (opp.) and hypotenuse (hyp.), and compute $\sin\theta$, $\cos\theta$ and $\tan\theta$.
+%
+%  \begin{enumerate}[label=\alph*.]
+%  \item  \begin{figure}[h]
+%  \centering
+%  \includegraphics[scale=.3]{/figures/9-1-1-triangle-5-12-13.png}
+%\end{figure}
+%
+%
+%    \begin{explanation}
+%      We have ${\rm opp.} = 12$, ${\rm adj.} = 5$ and ${\rm hyp.} = 13$. This means that $$\sin\theta = \frac{12}{13}, \quad \cos\theta = \frac{5}{13},\quad \mbox{and}\quad \tan\theta = \frac{12}{5}.$$
+%    \end{explanation}
+%    
+%  \item \begin{figure}[h]
+%  \centering
+%  \includegraphics[scale=.3]{/figures/9-1-1-triangle-6-8-10.png}
+%\end{figure}
+%
+%    \begin{explanation}
+%      We have ${\rm opp.} = 8$, ${\rm adj.} = 6$ and ${\rm hyp.} = 10$. This means that $$\sin\theta = \frac{8}{10}=\frac{4}{5}, \quad \cos\theta = \frac{6}{10}=\frac{3}{5},\quad \mbox{and}\quad \tan\theta = \frac{8}{10}=\frac{4}{3}.$$
+%    \end{explanation}
+%    
+%  \item \begin{figure}[h]
+%  \centering
+%  \includegraphics[scale=.3]{/figures/9-1-1-triangle-18-24-30.png}
+%\end{figure}
+%
+%
+%        \begin{explanation}
+%          We have ${\rm opp.} = 24$, ${\rm adj.} = 18$ and ${\rm hyp.} = 30$. This means that $$\sin\theta = \frac{24}{30}=\frac{4}{5}, \quad \cos\theta = \frac{18}{30}=\frac{3}{5},\quad \mbox{and}\quad \tan\theta = \frac{24}{18}=\frac{4}{3}.$$ Note that the values were the same values as in the previous item. This was expected, as the triangle there is similar to the triangle given here (the scaling factor is $3$).\end{explanation}    
+%  \end{enumerate}
+%\end{example}
+%
+%\begin{remark}
+%  Note that in all of the above examples, the values of $\sin\theta$ and $\cos\theta$ were always less than $1$. This is always true, and a general consequence of the fact that the hypotenuse is always bigger than either of the other two sides.
+%\end{remark}
+%
+%Often, one has information about the angles, but not about all the sides. Knowing $\sin\theta$, $\cos\theta$ and $\tan\theta$ helps us find out missing sides of a given right triangle. For that, the following fact is extremely important:
+%
+%\begin{callout}
+%  {\bf Theorem (Fundamental Identity):} For any given angle $\theta$, we have that $$\sin^2\theta + \cos^2\theta =1.$$Here, $\sin^2\theta$ means $(\sin\theta)^2$, and similarly for $\cos^2\theta$.
+%\end{callout}
+%
+%Why is this true? Consider again a right triangle like below:
+%
+%\begin{figure}[h]
+%  \centering
+%  \includegraphics[scale=.3]{/figures/9-1-1-identity.png}
+%\end{figure}
+%
+%
+%Then we know that $\sin\theta = b/c$ and $\cos\theta = a/c$. But the Pythagorean theorem also says that $a^2+b^2=c^2$. Putting all of this together, we have that $$\sin^2\theta + \cos^2\theta = \left(\frac{b}{c}\right)^2 + \left(\frac{a}{c}\right)^2 = \frac{b^2}{c^2}+\frac{a^2}{b^2} = \frac{a^2+b^2}{c^2} = \frac{c^2}{c^2} = 1,$$as required.
+%
+%Let's see how to apply this.
+%
+%\begin{example}For each of the following triangles, given the value of a trigonometric function at the indicated angle $\theta$, find the lengths of the missing sides.
+%  \begin{enumerate}[label=\alph*.]
+%  \item Given: $\sin\theta = \sqrt{2}/6$ on
+%
+%    \begin{figure}[h]
+%      \centering
+%      \includegraphics[scale=.3]{/figures/9-1-1-triangle-sin-2sqrt2-6.png}
+%    \end{figure}
+%
+%    \begin{explanation}
+% From the given information, we know that $$\frac{\sqrt{2}}{6} = \sin\theta = \frac{b}{2\sqrt{2}} \implies b = \frac{\sqrt{2}\times (2\sqrt{2})}{6} = \frac{2}{3}.$$Now we use the Pythagorean theorem: the relation $a^2 +(2/3)^2=(2\sqrt{2})^2$ gives us that $$a^2+\frac{4}{9} = 8 \implies a^2 = 8-\frac{4}{9} = \frac{68}{9} \implies a = \frac{2\sqrt{17}}{3}.$$Alternatively, to find the value of $a$, we can also use the fundamental identity $\sin^2\theta+\cos^2\theta=1$ to find $\cos\theta$ first --- which then yields $a$. Here's how this goes: $$ \left(\frac{\sqrt{2}}{6}\right)^2+\cos^2\theta=1 \implies \cos^2\theta = 1- \frac{2}{36} \implies \cos^2\theta = \frac{34}{36},$$and so $\cos\theta = \sqrt{34}/6$. Thus $$\frac{\sqrt{34}}{6} = \cos\theta = \frac{a}{2\sqrt{2}} \implies a = \frac{2\sqrt{2} \times \sqrt{34}}{6} = \frac{2\sqrt{17}}{3},$$as it should be. This is not something particular to this example: usually there is more than one strategy to solve this sort of problem. Which one is the best? You'll be the judge.
+%    \end{explanation}
+%    
+%  \item Given: $\cos\theta = \sqrt{3}/7$ on
+%
+%    \begin{figure}[h]
+%      \centering
+%      \includegraphics[scale=.3]{/figures/9-1-1-triangle-cos-2sqrt46.png}
+%    \end{figure}
+%
+%    \begin{explanation}
+%      Since this time we were given $\cos\theta$, but also the opposite side to $\theta$, which does not appear on the expression for $\cos\theta$, we must rely more on the Pythagorean theorem instead. In any case, we know that $$\frac{\sqrt{3}}{7}= \cos\theta=\frac{a}{c}  \implies c = \frac{7a}{\sqrt{3}}. $$Now, the Pythagorean relation reads $a^2 + (2\sqrt{46})^2 = (7a/\sqrt{3})^2$, and so: $$a^2 + 184 = \frac{49a^2}{3} \implies 184 = \frac{49a^2}{3}-a^2$$Continuing to manipulate this, we see that $$184 = \frac{46a^2}{3} \implies a^2 = \frac{184 \times 3}{46} \implies a^2 = 12 \implies a = 2\sqrt{3}.$$It remains to find the value of $c$. So we go back to the beginning and compute $$c = \frac{7a}{\sqrt{3}}\implies c = \frac{7(2\sqrt{3})}{\sqrt{3}} \implies c=14.$$
+%    \end{explanation}
+%    
+%  \end{enumerate}
+%\end{example}
+%
+%
+%\section{Values of trig functions for standard angles}
+%
+%We know that the sum of the inner angles of a triangle is always $180^\circ$. For right triangles, one of the angles is $90^\circ$, which means that the sum of the remaining two angles must also be $90^\circ$. Frequently we encounter triangles whose angles are $30^\circ$, $60^\circ$ and $90^\circ$, and also triangles whose angles are $45^\circ$, $45^\circ$ and $90^\circ$.
+%
+%[figure]
+%
+%These triangles have a special type of symmetry, which we'll exploit to find the values of sine, cosine, and tangent, for $30^\circ$, $45^\circ$ and $60^\circ$. Finding the values of these trig functions for arbitrary angles, by hand, is a very difficult task. We will see later some trigonometric identities that may help us find such values for other angles but, in general, using a calculator (paying close attention to whether it is set to right ``units'') is the way to go.
+%
+%\subsection{For $30^\circ$ and $60^\circ$}
+%
+%Consider an equilateral triangle of side length $\ell$. Equilateral means that all the sides have the same length. This implies that all the inner angles must be equal and, since they must add up to $180^\circ$, each of them equals $60^\circ$. But also draw a height $h$:
+%
+%\begin{figure}[h]
+%  \centering
+%  \includegraphics[scale=.3]{/figures/9-1-1-triangle-30.png}
+%\end{figure}
+%
+%By the Pythagorean theorem, we know that $$\ell^2 = \left(\frac{\ell}{2}\right)^2 + h^2,$$and so we may compute: $$\ell^2 = \frac{\ell^2}{4} + h^2 \implies \frac{3\ell^2}{4} = h^2 \implies h = \frac{\ell\sqrt{3}}{2}.$$
+%
+%Now, relative to the $60^\circ$ angle, we recognize $${\rm opp.} = h = \frac{\ell\sqrt{3}}{2}, \quad {\rm adj.} = \frac{\ell}{2}, \quad\mbox{and}\quad {\rm hyp.} = \ell.$$
+%
+%This means that $$\sin(60^\circ) = \frac{h}{\ell} = \frac{\left(\frac{\ell\sqrt{3}}{2}\right)}{\ell} = \frac{\sqrt{3}}{2},$$as well as $$\cos(60^\circ) = \frac{\ell/2}{\ell} = \frac{1}{2}\quad\mbox{and}\quad \tan(60^\circ) = \frac{\sin(60^\circ)}{\cos(60^\circ)} = \frac{\sqrt{3}/2}{1/2} = \sqrt{3}.$$
+%
+%To find the values of $\sin(30^\circ)$, $\cos(30^\circ)$, and $\tan(30^\circ)$, we can use the same triangle, noting that the opposite side to $30^\circ$ is the adjacent side to $60^\circ$, and that the adjacent side to $30^\circ$ is the opposite side to $60^\circ$. Since the hypotenuse is always the side opposite to the right angle, we conclude that $$\sin(30^\circ) = \cos(60^\circ) = \frac{1}{2}, \quad \cos(30^\circ) = \sin(60^\circ) = \frac{\sqrt{3}}{2}$$and, finally, that $$\tan(30^\circ) = \frac{\sin(30^\circ)}{\cos(30^\circ)} = \frac{1/2}{\sqrt{3}/2} = \frac{1}{\sqrt{3}} = \frac{\sqrt{3}}{3}.$$
+%
+%\begin{remark}
+%  This is a general phenomenon: two acute angles are called {\bf complementary} if they add up to $90^\circ$. In other words, the complementary angle to $\theta$ is always $90^\circ - \theta$, and $\sin\theta = \cos(90^\circ - \theta)$, as well as $\cos\theta = \sin(90^\circ - \theta)$. In particular, this justifies the name ``cosine'': it is the sine of the complement. We will discuss ``coterminal angles'' and ``cofunctions'' in more generality later.
+%\end{remark}
+%
+%\subsection{For $45^\circ$}
+%
+%Consider a square of side length $\ell$, and draw a diagonal $d$.
+%
+%\begin{figure}[h]
+%  \centering
+%  \includegraphics[scale=.3]{/figures/9-1-1-triangle-45.png}
+%\end{figure}
+%
+%By the Pythagorean theorem, $d^2 = \ell^2+\ell^2 = 2\ell^2$ implies that $d=\ell\sqrt{2}$. Relative to either of the $45^\circ$ angles, we have $${\rm opp.} = \ell, \quad {\rm adj.} =\ell, \quad\mbox{and}\quad {\rm hyp.}=d=\ell\sqrt{2}.$$
+%Hence $$\sin(45^\circ) =\cos(45^\circ) =  \frac{\ell}{\ell\sqrt{2}} = \frac{1}{\sqrt{2}} = \frac{\sqrt{2}}{2} \quad\mbox{and}\quad \tan(45^\circ) = \frac{\sin(45^\circ)}{\cos(45^\circ)} = 1.$$
+%
+%\begin{remark}
+%  It is convenient to write $\sqrt{2}/2$ instead of $1/\sqrt{2}$ (similarly for $\sqrt{3}/3$ versus $1/\sqrt{3}$), even though the latter is mathematically acceptable, because it makes it easier to estimate. Namely, knowing that $\sqrt{2} \approx 1.414$, we know that $\sqrt{2}/2 \approx 0.707$, but when looking at $1/\sqrt{2}$, what does it mean to divide $1$ by $1.414$? This is the general reason why rationalizing fractions is useful.
+%\end{remark}
+%
+%%\typeout{************************************************}
+%%\typeout{Summary}
+%%\typeout{************************************************}
+%
+%\section{Standard values}
+%
+%We can summarize what we have discovered here in a table. Besides our standard angles of $30^\circ$, $45^\circ$, and $60^\circ$, we can also consider $0^\circ$ and $90^\circ$ as extreme cases. Let's do a quick thought experiment to understand this: if a right triangle had an angle of $0^\circ$, this triangle would in fact collapse to a line segment, and we would have ${\rm opp.} = 0$, while ${\rm hyp}. = {\rm adj}.$, suggesting we set $\sin(0^\circ) = 0$ and $\cos(0^\circ) = 1$. Since $0^\circ$ and $90^\circ$ are complementary, we're forced to set $\sin(90^\circ) = 1$ and $\cos(90^\circ) = 0$. But while $$\tan(0^\circ) = \frac{\sin(0^\circ)}{\cos(0^\circ)} = \frac{0}{1} = 0,$$computing $\tan(90^\circ)$ does not make sense, as we would have a division by $\cos(90^\circ) = 0$. We say that $\tan(90^ \circ)$ is {\bf undefined}, or that it {\bf does not exist} (``DNE'' for short, as usual). So, we have:
+%
+%$$
+%\begin{array}{c||ccccc}
+% & 0^\circ & 30^\circ & 45^\circ & 60^\circ & 90^\circ \\
+%\hline\hline \\[-1em]  
+%\sin \theta & 0 & \frac{1}{2} & \frac{\sqrt{2}}{2} & \frac{\sqrt{3}}{2} & 1 \\[1em]
+% \cos \theta & 1 & \frac{\sqrt{3}}{2} & \frac{\sqrt{2}}{2} & \frac{1}{2} & 0 \\[1em]
+%\tan\theta& 0 & \frac{\sqrt{3}}{3} & 1 & \sqrt{3} & {\rm DNE}
+%\end{array}
+%$$
+%
+%Those values should be committed to heart, but it's easier than what it seems. Here's how you can think about it:
+%
+%\begin{itemize}
+%\item No need to memorize values for tangent: if you know $\sin \theta$ and $\cos \theta$, you can just compute $\tan\theta = \sin \theta/\cos\theta$.
+%\item No need to memorize the values for cosine: recall that the cosine of an angle is the sine of the complement. So if you know values for sine, you're in business.
+%\item How to memorize values for sine? The one thing you should remember here is that the values $0$, $1/2$, $\sqrt{2}/2$, $\sqrt{3}/2$ and $1$ will appear. What is their order? Simple: write them in increasing order, just like the angles from $0^\circ$ to $90^\circ$. So $$\sin(0^\circ) = 0, ~ \sin(30^\circ) = \frac{1}{2}, ~ \sin(45^\circ) = \frac{\sqrt{2}}{2}, ~ \sin(60^\circ) = \frac{\sqrt{3}}{2}, ~ \sin(90^\circ)=1.$$
+%\end{itemize}
+%
+%\begin{summary}\begin{itemize}
+%\item We have defined sine, cosine, and tangent, as ratios between sides of a right triangle. For each angle $\theta$, the fundamental identity $\sin^2\theta+\cos^2\theta=1$ holds. It can be used together with the Pythagorean Theorem to get information about all sides of a given triangle, when some of them might be missing, provided you have some information about the angles.
+%\item We have established the standard values of sine, cosine, and tangent, for the most frequent angles of $30^\circ$, $45^\circ$, and $60^\circ$. Those values have been organized in a table. They are so frequent that knowing the values there by heart is useful, but exaggerated efforts into memorizing the table should not be wasted --- understanding how the values are deduced pays off more in the long run.
+%\end{itemize}\end{summary}
+%
+
+
+
+\end{document}

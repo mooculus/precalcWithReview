@@ -1,0 +1,36 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\author{Elizabeth Miller}
+
+
+\begin{document}
+
+The following system of equations is given graphically.  Determine if the system has one solution, no solutions, or infinite solutions.
+
+\begin{image}
+\begin{tikzpicture}
+    \begin{axis}[]
+        \addplot[firstcurve,domain=-6.25:7]{4/5*x-2};
+                \addplot[firstcurve,domain=-6.25:6]{-4/5*x-2};
+    \end{axis}
+\end{tikzpicture}
+\end{image}
+
+\begin{exercise}
+Classify this system as having one solution, no solutions, or infinite solutions.
+\begin{multipleChoice}  
+\choice[correct]{one solution}  
+\choice{no solutions}  
+\choice{infinite solutions}  
+\end{multipleChoice}  
+
+\begin{exercise}
+The solution to this system is $\left(\answer{0},\answer{-2}\right)$.
+\end{exercise}
+
+\end{exercise}
+
+\end{document}
+

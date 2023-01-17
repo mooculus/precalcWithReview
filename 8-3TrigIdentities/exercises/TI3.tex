@@ -1,0 +1,53 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\author{Kenneth Berglund}
+\acknowledgement{https://www.stitz-zeager.com/szct07042013.pdf}
+
+\begin{document}
+\licenseSZ
+\begin{exercise}
+Here is a list of trigonometric identities and steps you may take when verifying identities.
+\begin{itemize}
+\item A. Pythagorean identity
+\item B. Reciprocal identity
+\item C. Quotient identity
+\item D. Pythagorean conjugates
+\item E. Even identity
+\item F. Odd identity
+\item G. Sum identity
+\item H. Difference identity
+\item I. Evaluation of trigonometric function at a famous angle
+\end{itemize}
+
+For each blank step below, select the trigonometric identity used.
+
+
+\begin{center}
+$
+\begin{array}{|c|c|}
+ \hline
+ \text{Verifying } \frac{\sin(\theta)}{1 - \cos(\theta)} = \csc(\theta) + \cot(\theta) \\
+\hline
+ \hline
+\textbf{Expression} & \textbf{Justification} \\ \hline
+\frac{\sin(\theta)}{1 - \cos(\theta)} & \text{Original} \\ \hline
+\frac{\sin(\theta)}{1 - \cos(\theta)}\cdot\frac{1 + \cos(\theta)}{1 + \cos(\theta)} & 
+\text{Algebra}
+ \\ \hline
+\frac{\sin(\theta)(1 + \cos(\theta)}{(1 - \cos(\theta))(1 + \cos(\theta))} & \text{Algebra} \\ \hline
+\frac{\sin(\theta) + \sin(\theta)\cos(\theta)}{(1 - \cos(\theta))(1 + \cos(\theta))} & \text{Algebra} \\ \hline
+\frac{\sin(\theta) + \sin(\theta)\cos(\theta)}{\sin^2(\theta)} & \answer{D} \\ \hline
+\frac{\sin(\theta)}{\sin^2(\theta)} + \frac{\sin(\theta)\cos(\theta)}{\sin^2(\theta)} & \text{Algebra} \\ \hline
+\frac{1}{\sin(\theta)} + \frac{\cos(\theta)}{\sin(\theta)} & \text{Algebra}\\ \hline
+\csc(\theta) + \frac{\cos(\theta)}{\sin(\theta)} & \answer{B} \\ \hline
+\csc(\theta) + \cot(\theta) & \answer{C} \\ \hline
+\end{array}
+$
+\end{center}
+
+
+
+\end{exercise}
+\end{document}

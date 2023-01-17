@@ -1,0 +1,97 @@
+\documentclass{ximera}
+
+\input{../preamble}
+\author{Elizabeth Miller}
+\license{Creative Commons Attribution-ShareAlike 4.0 International License}
+\acknowledgement{https://yoshiwarabooks.org/mfg/chap7.html}
+
+\title{Creating a Font}
+
+\begin{document}
+\begin{abstract}
+  In this project, you will use functions to create a letters for our own class font.  
+
+Each person should turn in their own work for this project.   This is not a group project.  Your functions you use to draw your letters should not be the same as your classmates.  You may work together to come up with ideas and you may come to office hours for assistance, but your final submitted work should be your own.
+\end{abstract}
+\licenseY
+\maketitle
+
+
+
+%\typeout{************************************************}
+%\typeout{Subsection Introduction}
+%\typeout{************************************************}
+
+\section{Introduction}
+
+The graphs of linear, quadratic, exponential and power functions all have a characteristic shape. But the graphs of polynomials have a huge variety of different shapes.
+
+\begin{image}
+\includegraphics[width=.6\textwidth]{Durer-font.png}
+\end{image}
+
+Ever since Gutenberg's invention of movable type in 1455, artists and printers have been interested in the design of pleasing and practical fonts. In 1525, Albrecht Durer published \textit{On the Just Shaping of Letters}, which set forth a system of rules for the geometric construction of Roman capitals. The letters shown above are examples of Durer's font. Until the twentieth century, a ruler and compass were the only practical design tools, so straight lines and circular arcs were the only geometric objects that could be accurately reproduced.
+
+With the advent of computers, complex curves and surfaces, such as the smooth contours of modern cars, can be defined precisely. In the 1960s the French automobile engineer Pierre Bézier developed a new design tool based on polynomials. \dfn{Bézier curves} are widely used today in all fields of design, from technical plans and blueprints to the most creative artistic projects. Many computer drawing programs and printer languages use quadratic and cubic Bézier curves.
+
+\begin{image}
+\includegraphics[width=\textwidth]{letterA.jpg}
+\end{image}
+
+\section{Project}
+
+In this project, you will use the online graphing calculator Desmos to create your letter.  Desmos can be accessed at \link[http://desmos.com]{http://desmos.com}.  
+
+\subsection{Step 1:} Choose \textbf{one letter from each category below} that you will create.
+
+$$
+ \begin{array}{|c | c c c c c c |} 
+ \hline
+ \text{Category 1} & X & Y & A & K & N & W \\ [0.5ex] 
+ \hline
+ \text{Category 2} & J & R & h & S & B & Q \\ [0.5ex] 
+ \hline
+ \text{Category 3} & G & m & g & f & e & a \\[1ex] 
+ \hline
+\end{array}
+$$
+
+\subsection{Step 2} Go to \link[http://desmos.com]{http://desmos.com}.  You may wish to create an account and save your work, but you are not required to do so.  
+
+\subsection{Step 2} Using our Famous Functions and function transformations, create an outline of your letter using functions.  Your letter should sit on the $x$-axis and the top of the letter should be at $y=8$ (except for lowercase letter such as e or a which should have a height of 4 units).  Here is an example:
+
+\begin{image}
+\includegraphics[width=\textwidth]{outlinedLetterV.jpg}
+\end{image}
+
+\subsection{Step 3} Restrict the domain of each of your functions so that extraneous parts of your functions which are not used to create your letter are not showing on your graph. Here is an example.  Pay close attention to the formating to tell Desmos about the restricted domain. 
+
+\begin{center}  
+\desmos{mkvef7gdsm}{800}{600}  
+\end{center} 
+
+\begin{image}
+\includegraphics[width=\textwidth]{unshadedLetterV.jpg}
+\end{image}
+
+\subsection{Step 4}  Use inequalities to tell Desmos how to shade in the inside of your letter.  For example, if you write $f(x)<y<g(x)$, this tells Desmos to color in all the points of the form $(x_0,y_0)$ where $x_0$ is in the domain of both $f(x)$ and $g(x)$ and $y_0$ is bigger than $f(x_0)$ and smaller than $g(x_0)$.  Here is an example:
+
+\begin{center}  
+\desmos{dqrvclqe6a}{800}{600}  
+\end{center} 
+
+\begin{image}
+\includegraphics[width=\textwidth]{LetterVExample.jpg}
+\end{image}
+
+In order to get your picture to be all one color, you can long click on the colored circle next to the equation and pick your favorite color for each formula.
+
+\subsection{Step 5}  Take a screenshot of your letter and the formulas that produced it just like the example above and save it.
+
+\subsection{Step 6}  Repeat steps 2-5 with your other two chosen functions.
+
+\subsection{Step 7}  Turn in your three screenshots as a single pdf in Gradescope.
+ 
+
+
+\end{document}
