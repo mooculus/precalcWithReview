@@ -42,7 +42,7 @@
 
 In the previous sections, you were introduced to the basic trigonometric functions sine and cosine, and saw how they relate measures of angles to
 measurements of triangles. Given a right triangle
-\begin{image}[2in]
+\begin{image}%[2in]
   \begin{tikzpicture}
     \coordinate (C) at (0,2);
     \coordinate (D) at (4,2);
@@ -112,7 +112,7 @@ for computing sine and cosine, that the hypotenuse will have length $1$ (by divi
 We can do this because we are simply scaling the triangle, and as we see
 above, this makes absolutely no difference when computing sine and
 cosine. When the hypotenuse is $1$, we find that a convenient
-way to think about sine and cosine is via a circle.
+way to think about sine and cosine is via a circle with radius 1.
 \begin{image}
 \begin{tikzpicture}
 	\begin{axis}[
@@ -215,6 +215,8 @@ getting to the terminal side. You can also think about rotating clockwise instea
 		If we start with $30^\circ$, and then take another complete counter-clockwise rotation ($360^\circ$), we end up at $390^\circ$. That means $390^\circ$ is coterminal with $30^\circ$.
 
 		If we start with $30^\circ$, and then take another complete clockwise rotation ($-360^\circ$), we end up at $30^\circ-360^\circ = -330^\circ$. That means $-330^\circ$ is coterminal with $30^\circ$.
+
+		Note that there are many more (in fact, infinitely many) angles coterminal with $30^\circ$, which can be found by repeatedly adding or subtracting $360^\circ$.
 	\end{explanation}
 \end{example}
 
@@ -435,7 +437,7 @@ $$
   \qquad
   \begin{aligned}
   \cos(\theta) &= a\\
-  \cot(\theta) &= \frac{a}{b}\text{, if } b \neq 0.    
+  \cot(\theta) &= \frac{a}{b}\text{, if } b \neq 0 \qquad   
   \csc(\theta) &= \frac{1}{b}\text{, if } b \neq 0\\
   \end{aligned}
   $$
@@ -466,7 +468,7 @@ $$
 		    		when $\theta = 0$ this fraction is undefined but $\sec(0) = \frac{1}{1} = 1$. That means $\frac{\tan(\theta)}{\sin(\theta)}$ is
 		    		not always the same as $\sec(\theta)$.
 		    \item $\frac{1}{\sin(\theta)\cdot\cot(\theta)} = \frac{1}{b \left(\frac{a}{b}\right)} = \frac{1}{a}$, provided that BOTH $a \neq 0$ AND $b\neq 0$. For example,
-		    		when $\theta = 0$ this fraction is undefined but $\sec(0) = \frac{1}{1} = 1$. That means $\frac{\tan(\theta)}{\sin(\theta)}$ is not
+		    		when $\theta = 0$ this fraction is undefined but $\sec(0) = \frac{1}{1} = 1$. That means $\frac{1}{\sin(\theta)\cdot\cot(\theta)}$ is not
 		    		always the same as $\sec(\theta)$.
 		  \end{enumerate} 	
 	  \end{explanation}
@@ -937,7 +939,7 @@ We are now in a position to evaluate these trig functions for any standard angle
 			
 			\item $\frac{7\pi}{6}$ is a third quadrant angle with reference angle $\frac{7\pi}{6} - \pi = \frac{\pi}{6}$ radians, which is equivalent to $30^\circ$.
 				We know the trig values of $30^\circ$: $\sin(30^\circ)= \frac{1}{2}$, $\cos(30^\circ) = \frac{\sqrt{3}}{2}$.
-				In the Quadrant III, both the $x$-values and $y$-values are negative so we will have a negative sine and cosine values.
+				In the Quadrant III, both the $x$-values and $y$-values are negative so we will have negative sine and cosine values.
 				This gives
 				$\sin\left( \frac{7\pi}{6} \right) = -\frac{1}{2}$ and $\cos\left( \frac{7\pi}{6}\right) = -\frac{\sqrt{3}}{2}$. Using the definitions of the other trig
 				 functions:
