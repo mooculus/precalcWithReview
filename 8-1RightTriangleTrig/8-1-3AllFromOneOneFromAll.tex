@@ -30,20 +30,20 @@
 
 \section{Introduction}
 
-We have encountered six trigonometric functions of an acute angle $\theta$ so far: $\sin\theta$, $\cos\theta$, $\tan\theta$, $\sec \theta$, $\csc \theta$, and $\cot\theta$. They all help up get information about right triangles having $\theta$ as one of the inner angles. But here is the thing: at this stage, they all carry the same information. All of these quantities are positive real numbers, and we have not only the Pythagorean Theorem, but also the fundamental relations
+We have encountered six trigonometric functions of an acute angle $\theta$ so far: $\sin(\theta)$, $\cos(\theta)$, $\tan(\theta)$, $\sec(\theta)$, $\csc(\theta)$, and $\cot(\theta)$. They all help up get information about right triangles having $\theta$ as one of the inner angles. But here is the thing: at this stage, they all carry the same information. All of these quantities are positive real numbers, and we have not only the Pythagorean Theorem, but also the fundamental relations
 \begin{align*}
-  &\sin^2\theta + \cos^2\theta =1 \\ &1+\cot^2\theta = \csc^2\theta \\ &\tan^2\theta + 1 = \sec^2\theta
+  &\sin^2(\theta) + \cos^2(\theta) =1 \\ &1+\cot^2(\theta) = \csc^2(\theta) \\ &\tan^2(\theta) + 1 = \sec^2(\theta)
 \end{align*}
-Recall that while the first one is the most important one, the second two are immediate consequences of the first, by dividing it by $\sin^2\theta$ and $\cos^2\theta$, respectively. With all of this in place, once you have one of the six trigonometric values at $\theta$, you can in fact find all of them. We'll explore this in this section, with several examples.
+Recall that while the first one is the most important one, the second two are immediate consequences of the first, by dividing it by $\sin^2(\theta)$ and $\cos^2(\theta)$, respectively. With all of this in place, once you have one of the six trigonometric values at $\theta$, you can in fact find all of them. We'll explore this in this section, with several examples.
 
 \section{How to find all trigonometric functions, given one of them?}
 
 There are a few main facts one should keep in mind here.
 \begin{itemize}
-\item You know $\sin\theta$ if and only if you know $\csc\theta$.
-\item You know $\cos\theta$ if and only if you know $\sec\theta$.
-\item You know $\tan\theta$ if and only if you know $\cot\theta$.
-\item If you know $\sin\theta$ and $\cos\theta$, you know $\tan\theta$.
+\item You know $\sin(\theta)$ if and only if you know $\csc(\theta)$.
+\item You know $\cos(\theta)$ if and only if you know $\sec(\theta)$.
+\item You know $\tan(\theta)$ if and only if you know $\cot(\theta)$.
+\item If you know $\sin(\theta)$ and $\cos(\theta)$, you know $\tan(\theta)$.
 \end{itemize}
 
 And there are two strategies: using just the trigonometric identities and proceeding algebraically (let's call this ``strategy 1''), or drawing a suitable right triangle and thinking of ${\rm opp.}$, ${\rm adj.}$ and ${\rm hyp.}$ (let's call this ``strategy 2''). We'll illustrate both of them with several examples, but at the end of the day, you may choose whichever strategy you'd like (unless specifically instructed otherwise).
@@ -51,81 +51,81 @@ And there are two strategies: using just the trigonometric identities and procee
 \begin{example}
   Let $\theta$ be an acute angle. In all of the following problems, given the value of a certain trigonometric function at the value $\theta$, find the remaining five.
   \begin{enumerate}[label=\alph*.]
-  \item Given: $\sin\theta = 1/4$.
+  \item Given: $\sin(\theta) = 1/4$.
 
     \begin{explanation}
       \begin{itemize}
-      \item {\bf Strategy 1:}      Let's find $\cos\theta$ first, using the first fundamental identity $\sin^2\theta+\cos^2\theta=1$. We have $$\left(\frac{1}{4}\right)^2 + \cos^2\theta=1 \implies \frac{1}{16}+\cos^2\theta=1 \implies \cos^2\theta = 1-\frac{1}{16},$$so $$\cos^2\theta = \frac{15}{16} \implies \cos\theta = \frac{\sqrt{15}}{4}.$$ With this, we have that \[   \tan\theta = \frac{\sin\theta}{\cos\theta} = \frac{1/4}{\sqrt{15}/4} = \frac{1}{\sqrt{15}} = \frac{\sqrt{15}}{15}.  \]Flipping the fractions $$\sin\theta = \frac{1}{4}, \quad \cos\theta = \frac{\sqrt{15}}{4} \quad\mbox{and}\quad \tan\theta = \frac{\sqrt{15}}{15},$$respectively, we obtain $$\csc\theta = 4, \quad \sec\theta = \frac{4}{\sqrt{15}} = \frac{4\sqrt{15}}{15},\quad\mbox{and}\quad \cot\theta = \sqrt{15}.$$
+      \item {\bf Strategy 1:}      Let's find $\cos(\theta)$ first, using the first fundamental identity $\sin^2(\theta)+\cos^2(\theta)=1$. We have $$\left(\frac{1}{4}\right)^2 + \cos^2(\theta)=1 \implies \frac{1}{16}+\cos^2(\theta)=1 \implies \cos^2(\theta) = 1-\frac{1}{16},$$so $$\cos^2(\theta) = \frac{15}{16} \implies \cos(\theta) = \frac{\sqrt{15}}{4}.$$ With this, we have that \[   \tan(\theta) = \frac{\sin(\theta)}{\cos(\theta)} = \frac{1/4}{\sqrt{15}/4} = \frac{1}{\sqrt{15}} = \frac{\sqrt{15}}{15}.  \]Flipping the fractions $$\sin(\theta) = \frac{1}{4}, \quad \cos(\theta) = \frac{\sqrt{15}}{4} \quad\mbox{and}\quad \tan(\theta) = \frac{\sqrt{15}}{15},$$respectively, we obtain $$\csc(\theta) = 4, \quad \sec(\theta) = \frac{4}{\sqrt{15}} = \frac{4\sqrt{15}}{15},\quad\mbox{and}\quad \cot(\theta) = \sqrt{15}.$$
 
       \item {\bf Strategy 2:}  We start by drawing the following triangle:
         \begin{figure}[h]
           \centering
           \includegraphics[scale=.3]{./figures/9-1-3-triangle-sin-1-4.png}
         \end{figure}
-        So, we find the missing side $a$, using the Pythagorean relation $a^2+b^2=c^2$, which reads and gives: $$a^2+1^2 = 4^2 \implies a^2+1=16\implies a^2=15,$$so that $a=\sqrt{15}$. Now we have all the sides, so finding all the ratios is immediate: $$\sin\theta = \frac{1}{4},\quad \cos\theta=\frac{\sqrt{15}}{4},\quad\mbox{and}\quad\tan\theta=\frac{1}{\sqrt{15}}=\frac{\sqrt{15}}{15}.$$Flipping all the fractions, we obtain$$\csc\theta = 4,\quad \sec\theta=\frac{4\sqrt{15}}{15},\quad\mbox{and}\quad\cot\theta=\sqrt{15}.$$
+        So, we find the missing side $a$, using the Pythagorean relation $a^2+b^2=c^2$, which reads and gives: $$a^2+1^2 = 4^2 \implies a^2+1=16\implies a^2=15,$$so that $a=\sqrt{15}$. Now we have all the sides, so finding all the ratios is immediate: $$\sin(\theta) = \frac{1}{4},\quad \cos(\theta)=\frac{\sqrt{15}}{4},\quad\mbox{and}\quad\tan(\theta)=\frac{1}{\sqrt{15}}=\frac{\sqrt{15}}{15}.$$Flipping all the fractions, we obtain$$\csc(\theta) = 4,\quad \sec(\theta)=\frac{4\sqrt{15}}{15},\quad\mbox{and}\quad\cot(\theta)=\sqrt{15}.$$
       \end{itemize}
     \end{explanation}
     
-  \item Given: $\cos\theta = 2/3$.
+  \item Given: $\cos(\theta) = 2/3$.
 
     \begin{explanation}
       \begin{itemize}
-      \item {\bf Strategy 1:}       Let's find $\sin\theta$ first, using the first fundamental identity $\sin^2\theta+\cos^2\theta=1$. We have $$\sin^2\theta +\left(\frac{2}{3}\right)^2=1 \implies \sin^2\theta+\frac{4}{9}=1 \implies \sin^2\theta = 1-\frac{4}{9},$$so $$\sin^2\theta = \frac{5}{9} \implies \sin\theta = \frac{\sqrt{5}}{3}.$$ With this, we have that \[   \tan\theta = \frac{\sin\theta}{\cos\theta} = \frac{\sqrt{5}/3}{2/3} = \frac{\sqrt{5}}{2}.  \]Flipping the fractions $$\sin\theta = \frac{\sqrt{5}}{3}, \quad \cos\theta = \frac{2}{3} \quad\mbox{and}\quad \tan\theta = \frac{\sqrt{5}}{2},$$respectively, we obtain $$\csc\theta = \frac{3}{\sqrt{5}}  =\frac{3\sqrt{5}}{5} \quad \sec\theta = \frac{3}{2},\quad\mbox{and}\quad \cot\theta = \frac{2}{\sqrt{5}}=\frac{2\sqrt{5}}{5}.$$
+      \item {\bf Strategy 1:}       Let's find $\sin(\theta)$ first, using the first fundamental identity $\sin^2(\theta)+\cos^2(\theta)=1$. We have $$\sin^2(\theta) +\left(\frac{2}{3}\right)^2=1 \implies \sin^2(\theta)+\frac{4}{9}=1 \implies \sin^2(\theta) = 1-\frac{4}{9},$$so $$\sin^2(\theta) = \frac{5}{9} \implies \sin(\theta) = \frac{\sqrt{5}}{3}.$$ With this, we have that \[   \tan(\theta) = \frac{\sin(\theta)}{\cos(\theta)} = \frac{\sqrt{5}/3}{2/3} = \frac{\sqrt{5}}{2}.  \]Flipping the fractions $$\sin(\theta) = \frac{\sqrt{5}}{3}, \quad \cos(\theta) = \frac{2}{3} \quad\mbox{and}\quad \tan(\theta) = \frac{\sqrt{5}}{2},$$respectively, we obtain $$\csc(\theta) = \frac{3}{\sqrt{5}}  =\frac{3\sqrt{5}}{5} \quad \sec(\theta) = \frac{3}{2},\quad\mbox{and}\quad \cot(\theta) = \frac{2}{\sqrt{5}}=\frac{2\sqrt{5}}{5}.$$
       \item {\bf Strategy 2:} This time, here's the triangle we'll use: \begin{figure}[h]
           \centering
           \includegraphics[scale=.3]{./figures/9-1-3-triangle-cos-2-3.png}
         \end{figure} 
-        We'll use the Pythagorean relation $a^2+b^2=c^2$ to find the missing side $b$, as follows: $$2^2+b^2=3^2\implies 4+b^2=9\implies b^2=5,$$so $b=\sqrt{5}$. Again, with all the sides, we can read all the main ratios: $$\sin\theta = \frac{\sqrt{5}}{3},\quad\cos\theta=\frac{2}{3},\quad\mbox{and}\quad\tan\theta=\frac{\sqrt{5}}{3}.$$Taking reciprocals, we get the rest:$$\csc\theta = \frac{3\sqrt{5}}{5} \quad \sec\theta = \frac{3}{2},\quad\mbox{and}\quad \cot\theta=\frac{2\sqrt{5}}{5}.$$
+        We'll use the Pythagorean relation $a^2+b^2=c^2$ to find the missing side $b$, as follows: $$2^2+b^2=3^2\implies 4+b^2=9\implies b^2=5,$$so $b=\sqrt{5}$. Again, with all the sides, we can read all the main ratios: $$\sin(\theta) = \frac{\sqrt{5}}{3},\quad\cos(\theta)=\frac{2}{3},\quad\mbox{and}\quad\tan(\theta)=\frac{\sqrt{5}}{3}.$$Taking reciprocals, we get the rest:$$\csc(\theta) = \frac{3\sqrt{5}}{5} \quad \sec(\theta) = \frac{3}{2},\quad\mbox{and}\quad \cot(\theta)=\frac{2\sqrt{5}}{5}.$$
       \end{itemize}
     \end{explanation}
     
-  \item Given: $\tan\theta = 5/4$.
+  \item Given: $\tan(\theta) = 5/4$.
 
     \begin{explanation}
       \begin{itemize}
-      \item {\bf Strategy 1:} The only fundamental identity we have involving $\tan\theta$ is $\tan^2\theta+1=\sec^2\theta$, so we might as well use it. It reads $$\left(\frac{5}{4}\right)^2 + 1 = \sec^2\theta \implies \sec^2\theta = \frac{25}{16} + 1 \implies \sec^2\theta = \frac{41}{16},$$and so $$\sec\theta = \frac{\sqrt{41}}{4} \implies \cos\theta = \frac{4}{\sqrt{41}} = \frac{4\sqrt{41}}{41}.$$With this, we could in principle find $\sin\theta$, by using $\sin^2\theta+\cos^2\theta=1$ as usual. But there is a simpler way. Namely, we use that $$\tan\theta = \frac{\sin\theta}{\cos\theta} \implies \sin\theta = \tan\theta \cos\theta= \frac{5}{4}\cdot \frac{4\sqrt{41}}{41} \implies \sin\theta = \frac{5\sqrt{41}}{41}.$$Meaning that $$\csc\theta = \frac{\sqrt{41}}{5} \quad\mbox{and}\quad \cot\theta = \frac{4}{5},$$and we are done.
+      \item {\bf Strategy 1:} The only fundamental identity we have involving $\tan(\theta)$ is $\tan^2(\theta)+1=\sec^2(\theta)$, so we might as well use it. It reads $$\left(\frac{5}{4}\right)^2 + 1 = \sec^2(\theta) \implies \sec^2(\theta) = \frac{25}{16} + 1 \implies \sec^2(\theta) = \frac{41}{16},$$and so $$\sec(\theta) = \frac{\sqrt{41}}{4} \implies \cos(\theta) = \frac{4}{\sqrt{41}} = \frac{4\sqrt{41}}{41}.$$With this, we could in principle find $\sin(\theta)$, by using $\sin^2(\theta)+\cos^2(\theta)=1$ as usual. But there is a simpler way. Namely, we use that $$\tan(\theta) = \frac{\sin(\theta)}{\cos(\theta)} \implies \sin(\theta) = \tan(\theta) \cos(\theta)= \frac{5}{4}\cdot \frac{4\sqrt{41}}{41} \implies \sin(\theta) = \frac{5\sqrt{41}}{41}.$$Meaning that $$\csc(\theta) = \frac{\sqrt{41}}{5} \quad\mbox{and}\quad \cot(\theta) = \frac{4}{5},$$and we are done.
       \item {\bf Strategy 2:} Now, we set a right triangle with legs $4$ and $5$, like below:  \begin{figure}[h]
           \centering
           \includegraphics[scale=.3]{./figures/9-1-3-triangle-tan-5-4.png}
         \end{figure} 
-      \end{itemize} Since the hypotenuse $c$ is missing, applying the Pythagorean Theorem is even easier: $$c^2 = 4^2+5^2 = 16+25=41\implies c=\sqrt{41}.$$With this in place, we read from the triangle the main ratios as $$\sin\theta=\frac{5\sqrt{41}}{41},\quad \cos\theta=\frac{4\sqrt{41}}{41}\quad\mbox{and}\quad\tan\theta=\frac{5}{4}.$$And taking reciprocals:$$\csc\theta=\frac{\sqrt{41}}{5},\quad \sec\theta=\frac{\sqrt{41}}{4}\quad\mbox{and}\quad\cot\theta=\frac{4}{5}.$$
+      \end{itemize} Since the hypotenuse $c$ is missing, applying the Pythagorean Theorem is even easier: $$c^2 = 4^2+5^2 = 16+25=41\implies c=\sqrt{41}.$$With this in place, we read from the triangle the main ratios as $$\sin(\theta)=\frac{5\sqrt{41}}{41},\quad \cos(\theta)=\frac{4\sqrt{41}}{41}\quad\mbox{and}\quad\tan(\theta)=\frac{5}{4}.$$And taking reciprocals:$$\csc(\theta)=\frac{\sqrt{41}}{5},\quad \sec(\theta)=\frac{\sqrt{41}}{4}\quad\mbox{and}\quad\cot(\theta)=\frac{4}{5}.$$
     \end{explanation}
     
-  \item Given: $\sec\theta = 7/3$.
+  \item Given: $\sec(\theta) = 7/3$.
 
     \begin{explanation}
       \begin{itemize}
-      \item {\bf Strategy 1:} We immediately know that $\cos\theta = 3/7$, so let's find $\sin\theta$ next, using the first fundamental identity $\sin^2\theta+\cos^2\theta=1$. We have $$\sin^2\theta +\left(\frac{3}{7}\right)^2=1 \implies \sin^2\theta+\frac{9}{49}=1 \implies \sin^2\theta = 1-\frac{9}{49},$$so $$\sin^2\theta = \frac{40}{49} \implies \sin\theta = \frac{2\sqrt{10}}{7}.$$ With this, we have that \[   \tan\theta = \frac{\sin\theta}{\cos\theta} = \frac{2\sqrt{10}/7}{3/7} = \frac{2\sqrt{10}}{3}.  \]Flipping the remaining fractions $$\sin\theta = \frac{2\sqrt{10}}{7}, \quad\mbox{and}\quad \tan\theta = \frac{2\sqrt{10}}{3},$$respectively, we obtain $$\csc\theta = \frac{7}{2\sqrt{10}}  =\frac{7\sqrt{10}}{20}\quad\mbox{and}\quad \cot\theta = \frac{3}{2\sqrt{10}}=\frac{3\sqrt{10}}{20}.$$
+      \item {\bf Strategy 1:} We immediately know that $\cos(\theta) = 3/7$, so let's find $\sin(\theta)$ next, using the first fundamental identity $\sin^2(\theta)+\cos^2(\theta)=1$. We have $$\sin^2(\theta) +\left(\frac{3}{7}\right)^2=1 \implies \sin^2(\theta)+\frac{9}{49}=1 \implies \sin^2(\theta) = 1-\frac{9}{49},$$so $$\sin^2(\theta) = \frac{40}{49} \implies \sin(\theta) = \frac{2\sqrt{10}}{7}.$$ With this, we have that \[   \tan(\theta) = \frac{\sin(\theta)}{\cos(\theta)} = \frac{2\sqrt{10}/7}{3/7} = \frac{2\sqrt{10}}{3}.  \]Flipping the remaining fractions $$\sin(\theta) = \frac{2\sqrt{10}}{7}, \quad\mbox{and}\quad \tan(\theta) = \frac{2\sqrt{10}}{3},$$respectively, we obtain $$\csc(\theta) = \frac{7}{2\sqrt{10}}  =\frac{7\sqrt{10}}{20}\quad\mbox{and}\quad \cot(\theta) = \frac{3}{2\sqrt{10}}=\frac{3\sqrt{10}}{20}.$$
       \item {\bf Strategy 2:} Let's draw a triangle with hypotenuse $7$ and adjacent side to $\theta$ having length $3$: \begin{figure}[h]
           \centering
           \includegraphics[scale=.3]{./figures/9-1-3-triangle-sec-7-3.png}
         \end{figure}Let's use, as usual, the Pythagorean relation $a^2+b^2=c^2$ to find $b$. It gives us that $$3^2+b^2=7^2\implies 9+b^2=49\implies b^2 = 40\implies b=2\sqrt{10}.$$ 
-      \end{itemize}So we have that $$\sin\theta=\frac{2\sqrt{10}}{7},\quad\cos\theta=\frac{3}{7},\quad\mbox{and}\quad \tan\theta=\frac{2\sqrt{10}}{3}.$$Taking reciprocals and rationalizing each of them, we also get$$\csc\theta=\frac{7\sqrt{10}}{20},\quad\sec\theta=\frac{7}{3},\quad\mbox{and}\quad \cot\theta=\frac{3\sqrt{10}}{20}.$$
+      \end{itemize}So we have that $$\sin(\theta)=\frac{2\sqrt{10}}{7},\quad\cos(\theta)=\frac{3}{7},\quad\mbox{and}\quad \tan(\theta)=\frac{2\sqrt{10}}{3}.$$Taking reciprocals and rationalizing each of them, we also get$$\csc(\theta)=\frac{7\sqrt{10}}{20},\quad\sec(\theta)=\frac{7}{3},\quad\mbox{and}\quad \cot(\theta)=\frac{3\sqrt{10}}{20}.$$
     \end{explanation}
     
-  \item Given: $\csc\theta = 8/7$.
+  \item Given: $\csc(\theta) = 8/7$.
 
     \begin{explanation}
       \begin{itemize}
-      \item {\bf Strategy 1:} We immediately know that $\sin\theta = 7/8$, so let's find $\cos\theta$ next, using the first fundamental identity $\sin^2\theta+\cos^2\theta=1$. We have $$\left(\frac{7}{8}\right)^2+\cos^2\theta=1 \implies \frac{49}{64}+\cos^2\theta=1 \implies \cos^2\theta = 1-\frac{49}{64},$$so $$\cos^2\theta = \frac{15}{64} \implies \cos\theta = \frac{\sqrt{15}}{8}.$$ With this, we have that \[   \tan\theta = \frac{\sin\theta}{\cos\theta} = \frac{7/8}{\sqrt{15}/8} = \frac{7}{\sqrt{15}} = \frac{7\sqrt{15}}{15}.  \]Flipping the remaining fractions $$\cos\theta = \frac{\sqrt{15}}{8}, \quad\mbox{and}\quad \tan\theta = \frac{7}{\sqrt{15}},$$respectively, we obtain $$\sec\theta = \frac{8}{\sqrt{15}} =\frac{8\sqrt{15}}{15} \quad\mbox{and}\quad \cot\theta =\frac{\sqrt{15}}{7}.$$
+      \item {\bf Strategy 1:} We immediately know that $\sin(\theta) = 7/8$, so let's find $\cos(\theta)$ next, using the first fundamental identity $\sin^2(\theta)+\cos^2(\theta)=1$. We have $$\left(\frac{7}{8}\right)^2+\cos^2(\theta)=1 \implies \frac{49}{64}+\cos^2(\theta)=1 \implies \cos^2(\theta) = 1-\frac{49}{64},$$so $$\cos^2(\theta) = \frac{15}{64} \implies \cos(\theta) = \frac{\sqrt{15}}{8}.$$ With this, we have that \[   \tan(\theta) = \frac{\sin(\theta)}{\cos(\theta)} = \frac{7/8}{\sqrt{15}/8} = \frac{7}{\sqrt{15}} = \frac{7\sqrt{15}}{15}.  \]Flipping the remaining fractions $$\cos(\theta) = \frac{\sqrt{15}}{8}, \quad\mbox{and}\quad \tan(\theta) = \frac{7}{\sqrt{15}},$$respectively, we obtain $$\sec(\theta) = \frac{8}{\sqrt{15}} =\frac{8\sqrt{15}}{15} \quad\mbox{and}\quad \cot(\theta) =\frac{\sqrt{15}}{7}.$$
       \item {\bf Strategy 2:} Consider the following triangle: \begin{figure}[h]
           \centering
           \includegraphics[scale=.3]{./figures/9-1-3-triangle-csc-8-7.png}
-        \end{figure}Let's find $a$ using the Pythagorean relation $a^2+b^2=c^2$, which becomes $$a^2+7^2=8^2\implies a^2+49=64\implies a^2 = 15,$$so that $a=\sqrt{15}$. Having all the sides of the triangle, we read that $$\sin\theta=\frac{7}{8},\quad\cos\theta=\frac{\sqrt{15}}{8},\quad\mbox{and}\quad\tan\theta=\frac{7\sqrt{15}}{15}.$$Taking reciprocals, we get $$\csc\theta=\frac{8}{7},\quad\sec\theta=\frac{8\sqrt{15}}{15},\quad\mbox{and}\quad\cot\theta=\frac{\sqrt{15}}{7}$$ as well.
+        \end{figure}Let's find $a$ using the Pythagorean relation $a^2+b^2=c^2$, which becomes $$a^2+7^2=8^2\implies a^2+49=64\implies a^2 = 15,$$so that $a=\sqrt{15}$. Having all the sides of the triangle, we read that $$\sin(\theta)=\frac{7}{8},\quad\cos(\theta)=\frac{\sqrt{15}}{8},\quad\mbox{and}\quad\tan(\theta)=\frac{7\sqrt{15}}{15}.$$Taking reciprocals, we get $$\csc(\theta)=\frac{8}{7},\quad\sec(\theta)=\frac{8\sqrt{15}}{15},\quad\mbox{and}\quad\cot(\theta)=\frac{\sqrt{15}}{7}$$ as well.
       \end{itemize}
     \end{explanation}
     
-  \item Given: $\cot\theta = 2/9$.
+  \item Given: $\cot(\theta) = 2/9$.
 
     \begin{explanation}
       \begin{itemize}
-      \item {\bf Strategy 1:} We immediately know that $\tan \theta = 9/2$ and, again, the only fundamental identity we have involving $\tan\theta$ is $\tan^2\theta+1=\sec^2\theta$. It reads $$\left(\frac{9}{2}\right)^2 + 1 = \sec^2\theta \implies \sec^2\theta = \frac{81}{4} + 1 \implies \sec^2\theta = \frac{85}{4},$$and so $$\sec\theta = \frac{\sqrt{85}}{2} \implies \cos\theta = \frac{2}{\sqrt{85}} = \frac{2\sqrt{85}}{85}.$$Again, instead of using $\sin^2\theta+\cos^2\theta=1$ to find $\sin\theta$, we can just argue that $$\tan\theta = \frac{\sin\theta}{\cos\theta} \implies \sin\theta = \tan\theta \cos\theta= \frac{9}{2}\cdot \frac{2\sqrt{85}}{85} \implies \sin\theta = \frac{9\sqrt{85}}{85}.$$Meaning that $$\csc\theta = \frac{\sqrt{85}}{9},$$and so we are done.
+      \item {\bf Strategy 1:} We immediately know that $\tan(\theta) = 9/2$ and, again, the only fundamental identity we have involving $\tan(\theta)$ is $\tan^2(\theta)+1=\sec^2(\theta)$. It reads $$\left(\frac{9}{2}\right)^2 + 1 = \sec^2(\theta) \implies \sec^2(\theta) = \frac{81}{4} + 1 \implies \sec^2(\theta) = \frac{85}{4},$$and so $$\sec(\theta) = \frac{\sqrt{85}}{2} \implies \cos(\theta) = \frac{2}{\sqrt{85}} = \frac{2\sqrt{85}}{85}.$$Again, instead of using $\sin^2(\theta)+\cos^2(\theta)=1$ to find $\sin(\theta)$, we can just argue that $$\tan(\theta) = \frac{\sin(\theta)}{\cos(\theta)} \implies \sin(\theta) = \tan(\theta) \cos(\theta)= \frac{9}{2}\cdot \frac{2\sqrt{85}}{85} \implies \sin(\theta) = \frac{9\sqrt{85}}{85}.$$Meaning that $$\csc(\theta) = \frac{\sqrt{85}}{9},$$and so we are done.
 
-        As an aside, try to solve this problem again without immediately using that $\tan\theta=9/2$. Start only with $\cot\theta =2/9$, use the identity $1+\cot^2\theta=\csc^2\theta$ and go from there; it is instructive.
+        As an aside, try to solve this problem again without immediately using that $\tan(\theta)=9/2$. Start only with $\cot(\theta) =2/9$, use the identity $1+\cot^2(\theta)=\csc^2(\theta)$ and go from there; it is instructive.
       \item {\bf Strategy 2:} Again, let's set up a convenient triangle: \begin{figure}[h]
           \centering
           \includegraphics[scale=.3]{./figures/9-1-3-triangle-cot-2-9.png}
-        \end{figure} Here, in particular, note that the scale and proportions in this picture are completely off. This is ok, since drawing triangles is just meant to help us organize what is the opposite side to $\theta$, what is the adjacent side, and what is the hypotenuse. It doesn't matter how bad your picture looks, as long as the ``positions'' are correct. In any case, we immediately find $c$ with $$c^2=a^2+b^2=2^2+9^2 = 4+81=85,$$so $c=\sqrt{85}$. Now we can read all the ratios and rationalize them to obtain: $$\sin\theta=\frac{9\sqrt{85}}{85},\quad\cos\theta=\frac{2\sqrt{85}}{85},\quad\mbox{and}\quad\tan\theta=\frac{9}{2}.$$Take reciprocals and rationalize whatever is needed to get $$\csc\theta=\frac{\sqrt{85}}{9},\quad\sec\theta=\frac{\sqrt{85}}{2},\quad\mbox{and}\quad\cot\theta=\frac{2}{9}$$as well.
+        \end{figure} Here, in particular, note that the scale and proportions in this picture are completely off. This is ok, since drawing triangles is just meant to help us organize what is the opposite side to $\theta$, what is the adjacent side, and what is the hypotenuse. It doesn't matter how bad your picture looks, as long as the ``positions'' are correct. In any case, we immediately find $c$ with $$c^2=a^2+b^2=2^2+9^2 = 4+81=85,$$so $c=\sqrt{85}$. Now we can read all the ratios and rationalize them to obtain: $$\sin(\theta)=\frac{9\sqrt{85}}{85},\quad\cos(\theta)=\frac{2\sqrt{85}}{85},\quad\mbox{and}\quad\tan(\theta)=\frac{9}{2}.$$Take reciprocals and rationalize whatever is needed to get $$\csc(\theta)=\frac{\sqrt{85}}{9},\quad\sec(\theta)=\frac{\sqrt{85}}{2},\quad\mbox{and}\quad\cot(\theta)=\frac{2}{9}$$as well.
       \end{itemize}
     \end{explanation}
   \end{enumerate}
@@ -134,13 +134,13 @@ And there are two strategies: using just the trigonometric identities and procee
 Let's summarize the highlights of the strategy, from the algebraic perspective.
 
 \begin{enumerate}
-\item If you're given $\sin$ or $\cos$, use the fundamental identity to find the other one. Then find $\tan=\sin/\cos$, and flip all the fractions to get $\csc$, $\sec$ and $\tan$.
-\item If you're given $\csc$ or $\sec$, flip it to get $\sin$ or $\cos$, and proceed as (a).
-\item If you're given $\tan$, use $\tan^2\theta+1=\sec^2\theta$ to find $\sec\theta$. Once you have $\sec\theta$, you have $\cos\theta$. Then proceed as (a).
-\item If you're given $\cot$, flip it to get $\tan$, and proceed as (c).
+\item If you're given $\sin(\theta)$ or $\cos(\theta)$, use the fundamental identity to find the other one. Then find $\tan(\theta)=\sin(\theta)/\cos(\theta)$, and flip all the fractions to get $\csc(\theta)$, $\sec(\theta)$ and $\tan(\theta)$.
+\item If you're given $\csc(\theta)$ or $\sec(\theta)$, flip it to get $\sin(\theta)$ or $\cos(\theta)$, and proceed as (a).
+\item If you're given $\tan(\theta)$, use $\tan^2(\theta)+1=\sec^2(\theta)$ to find $\sec(\theta)$. Once you have $\sec(\theta)$, you have $\cos(\theta)$. Then proceed as (a).
+\item If you're given $\cot(\theta)$, flip it to get $\tan(\theta)$, and proceed as (c).
 \end{enumerate}
 
-Note that we're employing a mathematician's general philosophy here: take a problem and reduce it to something which you already know how to solve (namely, we're arguing that --- morally --- if you know how to solve the problem when you were given either $\sin$ or $\cos$, then you in fact know how to solve it when given \emph{any} of the six trigonometric functions). And also from the geometric perspective, the strategy is even easier to describe: recognize the trigonometric function you were given in terms of ${\rm opp.}$, ${\rm adj.}$ and ${\rm hyp.}$, then draw a right triangle with this information. You will be missing one side, which can be found with the Pythagorean Theorem. Once you have all sides, you can find all the ratios between sides.
+Note that we're employing a mathematician's general philosophy here: take a problem and reduce it to something which you already know how to solve (namely, we're arguing that --- morally --- if you know how to solve the problem when you were given either $\sin(\theta)$ or $\cos(\theta)$, then you in fact know how to solve it when given \emph{any} of the six trigonometric functions). And also from the geometric perspective, the strategy is even easier to describe: recognize the trigonometric function you were given in terms of ${\rm opp.}$, ${\rm adj.}$ and ${\rm hyp.}$, then draw a right triangle with this information. You will be missing one side, which can be found with the Pythagorean Theorem. Once you have all sides, you can find all the ratios between sides.
 
 Of course, the two above ways to go about this are not the only ones, but they're as good a recipe as any. In any case, you have room for creativity here. And even if one method seems easier than the other, it is useful to be comfortable with both, as this is already a good chance to start getting acquainted with trigonometry identities, which will be indispensable later.
 
