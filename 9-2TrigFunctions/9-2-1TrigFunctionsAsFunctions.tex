@@ -1,7 +1,7 @@
 \documentclass{ximera}
 
 \input{../preamble}
-\author{David Kish}
+\author{David Kish, Kenneth Berglund}
 \license{Creative Commons Attribution-ShareAlike 4.0 International License}
 \acknowledgement{}
 
@@ -22,7 +22,7 @@
 \begin{itemize}
 \item How do trigonometric functions interact with other functions?
 \item How do we find zeros of trigonometric functions?
-\item How does average rate of change look like with trigonometric functions?
+\item What does average rate of change look like with trigonometric functions?
 \end{itemize}
 \end{motivatingQuestions}
 \section{Trig Function Compositions}
@@ -32,73 +32,76 @@ Trigonometric functions can be composed with any of the types of functions that 
 \begin{example}
 Let's consider the following functions: $f(x)=\sin{(x)}$ and $g(x)=3x^2$.
 \\
-Find the function below and state its domain and range
+Find the function below and state its domain and range.
 \begin{enumerate}
-\item $f(g(x))$
-\item $g(f(x))$
-\item $f(f(x))$
+\item $(f \circ g)(x)$
+\item $(g \circ f)(x)$
+\item $(f \circ f)(x)$
 \end{enumerate}
 
 \begin{explanation}
 First let's find the domain and range of $f(x)$ and $g(x)$.\\
-The domain for both $f(x)$ and $g(x)$ is $(-\inf , \inf)$. The range for $f(x)$ is $[-1,1]$ and the range for $g(x)$ is $[0,\inf)$. Now we can look at the compositions.
+The domain for both $f(x)$ and $g(x)$ is $(-\infty , \infty)$. The range for $f(x)$ is $[-1,1]$ and the range for $g(x)$ is $[0,\inf)$. Now we can look at the compositions.
 \begin{enumerate}
 \item $f(g(x))= \sin(3x^2)$\\
-The domain is $(-\infty , \infty)$ and the range is $[-1,1]$.
-\item $g(f(x)) =3\sin(x^2)$\\
-The domain is $(-\infty , \infty)$. The range is $[0,3]$
+The domain of $f \circ g$ consists of all inputs to $g$ whose corresponding outputs are in the domain of $f$.  Since the domain of $f$ is $(-\infty, \infty)$, all outputs of $g$ are in the domain of $f$, so the domain of $f \circ g$ is the entire domain of $g$, namely $(-\infty , \infty)$.
+
+Finding the range of $f \circ g$ is a bit trickier. Since the range of $g$ is only non-negative numbers, only non-negative numbers will be plugged into $f$ when evaluating the composition. The question therefore becomes: what outputs of $f$ correspond to non-negative inputs? The answer is: all of them! By looking at the graph of the sine function, we can see that all $y$-values have a corresponding non-negative $x$-value. Therefore, the range of $f$, namely $[-1, 1]$, is the range of $f \circ g$.
+
+\item $g(f(x)) =3\sin^2(x)$. Remember that $\sin^2(x)$ means $(\sin(x))^2$.\\
+All real numbers can be plugged into $\sin(x)$, and the results can all be squared. The results of \textit{that} process can all be multiplied by 3, so the domain of $g \circ f$ is $(-\infty, \infty)$.
+
+Let's start by finding the range of $\sin^2(x)$. Since we are squaring $\sin(x)$, its outputs are all non-negative. However, the maximum absolute value of $\sin(x)$ is 1, so the maximum value of $\sin^2(x)$ is 1. Since $\sin(x)$ ranges through all values in $[-1, 1]$, $\sin^2(x)$ ranges through all values in $[0, 1]$. Multiplying $\sin^2(x)$ by 3 results in a vertical stretch by a factor of 3, so the range of $3\sin^2(x)$ is $[0, 3]$. 
 \item $f(f(x))= \sin(\sin(x))$\\
-The domain is $(-\infty , \infty)$. The range is $[-\sin(1), \sin(1)]$.
+The domain of $\sin(x)$ is all real numbers, and therefore, all outputs of $\sin(x)$ can be plugged into $\sin(x)$, meaning that the domain of $f \circ f$ is all real numbers, $(-\infty, \infty)$. 
+
+Since $\sin(x)$ increases from -1 to 1 as $x$ goes from $-\pi/2$ to $\pi/2$, $\sin(\sin(x))$ increases from $\sin(-1)$ to $\sin(1)$ as $x$ goes from $-\pi/2$ to $\pi/2$. Therefore, the range of $f \circ f$ is $[\sin(-1), \sin(1)]$. 
 \end{enumerate}
 \end{explanation}
 \end{example}
 
 \section{Finding Zeros of Trigonometric Funtions.}
 \begin{example}
-$f(x)=\sin^2(x)-1$\\
-Find the zeros of $f$ for $0\leq x \leq 2\pi$\\
+Let $f$ be a function defined by $f(x)=\sin^2(x)-1$. Find the zeros of $f$ for $0\leq x \leq 2\pi$.
 \begin{explanation}
-First we need to set $f$ to equal $0$\\
+First we need to set $f(x)$ equal to $0$:\\
 \[
 \sin^2(x)-1=0
 \]
 Now we can recognize that we have a difference of squares, so we have the following:
 \[
-\sin^2(x)-1=(\sin(x)+1)(\sin(x)-1)
+(\sin(x)+1)(\sin(x)-1) = 0.
 \]
-Now we can set each part equal to zero. So we have
+Now we can set each factor on the left equal to zero. So we have
 \[
-\sin(x)+1=0 \text{ and } \sin(x)-1 =0
+\sin(x)+1=0 \text{ and } \sin(x)-1 =0.
 \]
-After simplifying them a bit we  have
+After simplifying them a bit, we have
 \[
-\sin(x) =-1 \text{ and } \sin(x)=1
+\sin(x) =-1 \text{ and } \sin(x)=1.
 \]
-Because these are famous values of $\sin(x)$, we can find values for $x$ without using inverse trigonometry.\\
-$x=-\frac{\pi}{2},\frac{\pi}{2}$
-
+Because these are famous values of $\sin(x)$, we can find values for $x$ without using inverse trigonometry. The solution to $\sin(x) = -1$ is $x = \frac{3\pi}{2}$ and the solution to $\sin(x) = 1$ is $x = \frac{\pi}{2}$. Note that there are other $x$-values for which $\sin(x) = \pm 1$, but these are the only ones for which $0 \le x \le 2\pi$. 
 \end{explanation}
 \end{example}
 
 \begin{example}
-$f(x)=\sin^2(x)+\frac{5}{2}\sin(x)-\frac{3}{2}$\\
-Find the zeros of $f$ for $0\leq x \leq 2\pi$\\
+Let $f$ be a function defined by $f(x)=\sin^2(x)+\frac{5}{2}\sin(x)-\frac{3}{2}$. Find the zeros of $f$ for $0\leq x \leq 2\pi$
 \begin{explanation}
-First we need to set $f$ to equal $0$\\
+First we need to set $f$ to equal $0$:\\
 $\sin^2(x)+\frac{5}{2}\sin(x)-\frac{3}{2}=0$\\
-Thankfully $f$ can factor nicely, so we have\\
+Thankfully the left-hand side can factor nicely, so we have\\
 \[
-\sin^2(x)+\frac{5}{2}\sin(x)-\frac{3}{2}= (\sin(x)-\frac{1}{2})(\sin(x)+3)
+\sin^2(x)+\frac{5}{2}\sin(x)-\frac{3}{2}= \left(\sin(x)-\frac{1}{2}\right)(\sin(x)+3).
 \]
-Now we set each part equal to zero.
+Now we set each factor equal to zero:
 \[
-\sin(x)-\frac{1}{2}=0 \text{ and } \sin(x)+3 =0
+\sin(x)-\frac{1}{2}=0 \text{ and } \sin(x)+3 =0.
 \]
-After simplifying them a bit we  have
+After simplifying them a bit, we have
 \[
-\sin(x) = \frac{1}{2} \text{ and } \sin(x)=-3
+\sin(x) = \frac{1}{2} \text{ and } \sin(x)=-3.
 \]
-$-3$ is outside of the range of $\sin(x)$ so we can disregard that term. Our only concern is the famous value where $sin(x)$ is $\frac{1}{2}$. This happens to occur in two places for $0\leq x \leq 2\pi$, so our answer is $x=\frac{\pi}{6},\frac{5\pi}{6}$
+$-3$ is outside of the range of $\sin(x)$ so we get no solutions to our equation from that factor. Our only concern is the famous value where $sin(x) = \frac{1}{2}$. This happens to occur in two places for $0\leq x \leq 2\pi$, so our answer is $x=\frac{\pi}{6},\frac{5\pi}{6}$.
 \end{explanation}
 \end{example}
 
@@ -108,16 +111,16 @@ $-3$ is outside of the range of $\sin(x)$ so we can disregard that term. Our onl
 We can still find average rate of change with trigonometric functions, but because they are periodic there can be some interesting results.
 
 \begin{example}
-Let $f(x) =\sin(x)$
+Let $f(x) =\sin(x)$.
 \begin{enumerate}
-\item $\av_{[\frac{\pi}{6},\frac{3\pi}{4}]} $
-\item $\av_{[\frac{\pi}{3},\frac{2\pi}{3}]} $
+\item Find $\av_{[\frac{\pi}{6},\frac{3\pi}{4}]} $.
+\item Find $\av_{[\frac{\pi}{3},\frac{2\pi}{3}]} $.
 \end{enumerate}
 \begin{explanation}
 \begin{enumerate}
-\item $\av_{[\frac{\pi}{6},\frac{3\pi}{4}]}  = \frac{\sin(\frac{3\pi}{4})-\sin(\frac{\pi}{6})}{\frac{3\pi}{4} - \frac{\pi}{6}}$\\
-First we substitute our trig values\\
-$\frac{\sin(\frac{3\pi}{4})-\sin(\frac{\pi}{6})}{\frac{3\pi}{4} - \frac{\pi}{6}}=\frac{\frac{\sqrt{2}}{2}-\frac{1}{2}}{\frac{3\pi}{4} - \frac{\pi}{6}}$\\
+\item $$\av_{[\frac{\pi}{6},\frac{3\pi}{4}]}  = \frac{\sin(\frac{3\pi}{4})-\sin(\frac{\pi}{6})}{\frac{3\pi}{4} - \frac{\pi}{6}}$$
+First we substitute in our trig values:
+$$\frac{\sin(\frac{3\pi}{4})-\sin(\frac{\pi}{6})}{\frac{3\pi}{4} - \frac{\pi}{6}}=\frac{\frac{\sqrt{2}}{2}-\frac{1}{2}}{\frac{3\pi}{4} - \frac{\pi}{6}}$$
 Now we simplify our fractions\\
 $\frac{\frac{\sqrt{2}}{2}-\frac{1}{2}}{\frac{3\pi}{4} - \frac{\pi}{6}}= \frac{\frac{\sqrt{2}-1}{2}}{\frac{9\pi}{12} - \frac{2\pi}{12}}= \frac{\frac{\sqrt{2}-1}{2}}{\frac{7\pi}{12}}$\\
 $\frac{\frac{\sqrt{2}-1}{2}}{\frac{7\pi}{12}}=\frac{6(\sqrt{2}-1)}{7\pi}$\\
