@@ -33,7 +33,7 @@ How can we determine a formula involving sine or cosine that models any circular
 \end{itemize}
 \end{motivatingQuestions}
 
-Recall our previous work with transformations, where we studied how the graph of the function \(g\) defined by \(g(x) = af(x-b) + c\) is related to the graph of \(f\), where \(a\), \(b\), and \(c\) are real numbers with \(a \ne 0\).  Because such transformations can shift and stretch a function, we are interested in understanding how we can use transformations of the sine and cosine functions to fit formulas to circular functions.%
+Recall our previous work with transformations, where we studied how the graph of the function \(g\) defined by \(g(x) = af(bx + h) + k\) is related to the graph of \(f\), where \(a\), \(b\), $h$, and \(k\) are real numbers with \(a \ne 0\).  Because such transformations can shift and stretch a function, we are interested in understanding how we can use transformations of the sine and cosine functions to fit formulas to circular functions.%
 \begin{example}
 Let \(f(t) = \cos(t)\).  First, answer all of the questions below \emph{without} using \emph{Desmos}; then use \emph{Desmos} to confirm your conjectures.  For each prompt, describe the graphs of \(g\) and \(h\) as transformations of \(f\) and, in addition, state the amplitude, midline, and period of both \(g\) and \(h\).%
 \begin{enumerate}[label=\alph*.]
@@ -44,10 +44,10 @@ Let \(f(t) = \cos(t)\).  First, answer all of the questions below \emph{without}
 \end{enumerate}
 \begin{explanation}
 \begin{enumerate}[label=\alph*.]
-\item $g(t)$ Has a vertical stretch by 3 and an amplitude of 3. $h(t)$ has a reflection across the $x$-axis with a vertical shrink of $\frac{1}{4}$ and an amplitude of $\frac{1}{4}$. $g(t)$ and $h(t)$ both have a midline at $y=0$ and a period of $2\pi$.
-\item $g(t)$ Has a horizontal shift to the right of $\pi$. $h(t)$ has a horizontal shift to the left of $\frac{\pi}{2}$. $g(t)$ and $h(t)$ both have a midline at $y=0$, a period of $2\pi$, and an amplitude of $1$.
-\item $g(t)$ Has a vertical shift up of $4$ and a midline at $y=4$. $h(t)$ has a vertical shift down of $2$ and a midline of $y=-2$. $g(t)$ and $h(t)$ both have a period of $2\pi$ and an amplitude of $1$.
-\item $g(t)$ Has a vertical stretch by 3,  a horizontal shift to the right of $\pi$,and a vertical shift up of $4$. $g(t)$ has an amplitude of 3 and a midline at $y=4$. $h(t)$ has a reflection across the $x$-axis with a vertical shrink of $\frac{1}{4}$, a horizontal shift to the left of $\frac{\pi}{2}$, and a vertical shift down of $2$. $h(t)$has an amplitude of $\frac{1}{4}$ and a midline of $y=-2$. $g(t)$ and $h(t)$ both have a period of $2\pi$.
+\item The graph of $g$ has a vertical stretch by 3 and an amplitude of 3. The graph of $h$ has a reflection across the $x$-axis with a vertical shrink of $\frac{1}{4}$ and an amplitude of $\frac{1}{4}$. $g(t)$ and $h(t)$ both have a midline at $y=0$ and a period of $2\pi$.
+\item The graph of $g$ has a horizontal shift to the right of $\pi$. The graph of $h$ has a horizontal shift to the left of $\frac{\pi}{2}$. $g(t)$ and $h(t)$ both have a midline at $y=0$, a period of $2\pi$, and an amplitude of $1$.
+\item The graph of $g$ has a vertical shift up of $4$ and a midline at $y=4$. The graph of $h$ has a vertical shift down of $2$ and a midline of $y=-2$. $g(t)$ and $h(t)$ both have a period of $2\pi$ and an amplitude of $1$.
+\item The graph of $g$ has a vertical stretch by 3,  a horizontal shift to the right of $\pi$,and a vertical shift up of $4$. $g(t)$ has an amplitude of 3 and a midline at $y=4$. The graph of $h$ has a reflection across the $x$-axis with a vertical shrink of $\frac{1}{4}$, a horizontal shift to the left of $\frac{\pi}{2}$, and a vertical shift down of $2$. $h(t)$has an amplitude of $\frac{1}{4}$ and a midline of $y=-2$. $g(t)$ and $h(t)$ both have a period of $2\pi$.
 \end{enumerate}
 \end{explanation}
 %
@@ -63,26 +63,65 @@ Let \(f(t) = \cos(t)\).  First, answer all of the questions below \emph{without}
 We know that the standard functions \(f(t) = \sin(t)\) and \(g(t) = \cos(t)\) are circular functions that each have midline \(y = 0\), amplitude \(a = 1\), period \(p = 2\pi\), and range \([-1,1]\). This suggests the following general principles.%
 \begin{callout}
 \textbf{Transformations of sine and cosine with shifts and vertical stretches.}\\
-Given real numbers \(a\), \(c\), and \(d\) with \(a \ne 0\), the functions%
+Given real numbers \(a\), \(h\), and \(k\) with \(a \ne 0\), the functions%
 \[
-f(t) = a\cos(t-c)+d \text{ and } g(t) = a\sin(t-c) + d
+f(t) = a\cos(t-h)+k \text{ and } g(t) = a\sin(t-h) + k
 \]
-each represent a horizontal shift by \(c\) units to the right, followed by a vertical stretch by \(a\) units, followed by a vertical shift of \(d\) units, applied to the parent function (\(\cos(t)\) or \(\sin(t)\), respectively).  The resulting circular functions have midline \(y = d\), amplitude \(a\), range \([d-a,d+a]\), and period \(p = 2\pi\).  In addition, the point \((c,a+d)\) lies on the graph of \(f\) and the point \((c,d)\) lies on the graph of \(g\).%
+each represent a horizontal shift by \(h\) units to the right, followed by a vertical stretch by \(a\) units, followed by a vertical shift of \(k\) units, applied to the parent function (\(\cos(t)\) or \(\sin(t)\), respectively).  The resulting circular functions have midline \(y = k\), amplitude \(a\), range \([k-a,k+a]\), and period \(p = 2\pi\).  In addition, the point \((h,a+k)\) lies on the graph of \(f\) and the point \((h, k)\) lies on the graph of \(g\).%
 \end{callout}
 
 In the figure below, we see how the overall transformation \(k(t) = a\cos(t-b)+c\) comes from executing a sequence of simpler ones.  The original parent function \(y = \cos(t)\) (in dark gray) is first shifted \(b\) units right to generate the light red graph of \(y = \cos(t - b)\).  In turn, that graph is then scaled vertically by \(a\) to generate the purple graph of \(y = a\cos(t-b)\).  Finally, the purple graph is shifted \(c\) units vertically to result in the final graph of \(y = a\cos(t-b) + c\) in blue.%
 \begin{image}
-\includegraphics[width=0.8\linewidth]{images/sinusoidal-transformed-cosine}
+\includegraphics[width=0.8\linewidth]{images/sinusoidal-transformed-cosine.png}
 \end{image}
 It is often useful to follow one particular point through a sequence of transformations.  In the above figure, we see the red point that is located at \((0,1)\) on the original function \(y = \cos(t)\), as well as the point \((c, a+d)\) that is the corresponding point on \(k(t) = a\cos(t-c) + d\) under the overall transformation.  Note that the point \((b,a+c)\) results from the input, \(t = c\), that makes the argument of the cosine function zero:  \(k(c) = a\cos(c-c) + d = a\cos(0) + d\).%
 
 While the sine and cosine functions extend infinitely in either direction, it's natural to think of the point \((0,1)\) as the ``starting point'' of the cosine function, and similarly the point \((0,0)\) as the starting point of the sine function.  We will refer to the corresponding points \((c,a+d)\) and \((c,d)\) on \(k(t) = a\cos(t-c) + d\) and \(h(t) = a\sin(t-c) + d\) as anchor points. Anchor points, along with other information about a circular function's amplitude, midline, and period help us to determine a formula for a function that fits a given situation.%
 
-\begin{exploration}
+\begin{example}
 Consider a spring-mass system where the weight resting on a frictionless table.  We let \(s(t)\) denote the distance from the wall (where the spring is attached) to the weight at time \(t\) in seconds and know that the weight oscillates periodically with a minimum value of \(s(t) = 2\) feet and a maximum value of \(s(t) = 7\) feet with a period of \(2 \pi\).  We also know that \(s(0) = 4.5\) and \(s\left(\frac{\pi}{2}\right) = 2\).%
 
-Determine a formula for \(s(t)\) in the form \(s(t) = a\cos(t-b)+c\) or \(s(t) = a\sin(t-c)+d\).  Is it possible to find two different formulas that work?  For any formula you find, identify the anchor point.%
-\end{exploration}
+Determine a formula for \(s(t)\) in the form \(s(t) = a\cos(t-b)+c\) or \(s(t) = a\sin(t-c)+d\).  Is it possible to find two different formulas that work?  
+\begin{explanation}
+Let's begin by drawing an accurate picture:
+\begin{image}
+\includegraphics[width=0.8\linewidth]{images/spring-ex.png}
+\end{image}
+
+Since the minimum value of $s$ is 2 and the maximum value is 7, the midline of $s$ must be their midpoint, or $\frac{7+2}{2} = \frac{9}{2} = 4.5$. Now we can find the amplitude by finding the distance from the midline to the minimum (or maximum), which would be $|4.5 - 2| = 2.5$. 
+
+Now we can try to find a formula that uses the sine function. Because the amplitude of $\sin(x)$ is 1, we must stretch by a factor of 2.5 to obtain the correct amplitude of $s$. This results in a transformed function of $s_1(x) = 2.5\sin(x)$. Because the midline of $\sin(x)$ is 0, we must shift up by 4.5 to get the midline that we want, resulting in the transformed function $s_2(x) = s_1(x) + 4.5 = 2.5\sin(x) + 4.5$. Now $s_2$ has the correct amplitude, midline, and period (unchanged from $2\pi$). The graph of $s_2$ looks like this:
+\begin{image}
+\includegraphics[width=0.8\linewidth]{images/spring-ex2.png}
+\end{image}
+
+After some examination, we can see that the only change we need to make to obtain the graph of $s$ is to shift $\pi$ units to the left, so that the points $(0, 4.5)$ and $\left(\frac{\pi}{2}, 2\right)$ are on the graph of $s$. Therefore, $s_3(x) = s_2(x + \pi) = 2.5\sin(x + \pi) + 4.5$ is a formula for $s$ in terms of the sine function. 
+
+Note that we said that $2.5\sin(x + \pi) + 4.5$ was only \emph{a} formula for $s$. Let's try to find a formula using $\cos$. Since the amplitude of $\cos(x)$ is also 1, we still need to stretch by a factor of 2.5, yielding $s_1(x) = 2.5\cos(x)$. Again, since the midline of $s_1$ is 0, we need to shift up by 4.5 units, yielding $s_2(x) = s_1(x) + 4.5 = 2.5\cos(x) + 4.5$. The graph of $s_2$ this time looks as follows:
+\begin{image}
+\includegraphics[width=0.8\linewidth]{images/spring-ex3.png}
+\end{image}
+After examining the picture, we see that to obtain the graph of $s$, we need to shift left by $\frac{\pi}{2}$ units, meaning that $s_3(x) = s_2\left(x + \frac{\pi}{2}\right) = 2.5\cos\left(x + \frac{\pi}{2}\right) + 4.5$ is another formula for $s$, this time in terms of the cosine function. 
+\end{explanation}
+\end{example}
+
+The previous example illustrates a general technique for giving the formula of the graph of a circular function of period $2\pi$ with a given midline, amplitude, and $y$-intercept. Say $f$ is a circular function with period $2\pi$. If the midline is $m$, the amplitude is $a$, and we know that $f(0) = z$, then we have a procedure to follow to produce a formula for $f$. 
+\begin{enumerate}
+\item Stretch the graph vertically by a factor of $a$ to obtain $a\sin(x)$
+\item Shift the graph vertically up by $m$ units to obtain $a\sin(x) + m$
+\item Find $x$ such that $a\sin(x) + m = z$
+\item Shift the function horizontally so that the point $(x, z)$ transforms into $(0, z)$. 
+\end{enumerate}
+
+Note that this procedure can work with $\cos$ as well as $\sin$. Let's see an example.
+
+\begin{example}
+Give the formula for a circular function $f$ with period $2\pi$ whose midline is $-2$, whose amplitude is 7, and whose $y$-intercept is $(0, -9)$
+\begin{explanation}
+Since the amplitude is 7, the first transformation we apply to $\cos(x)$ is a vertical stretch by a factor of 7 to obtain $f_1(x) = 7\cos(x)$. Then, we need to shift down by 2 to obtain the correct midline: $f_2(x) = f_1(x) - 2 = 7\cos(x) - 2$. Finally, by looking at a graph, we can tell that $f_2(\pi) = 7\cos(\pi) - 2 = -7 - 2 = -9$, so we need to shift $\pi$ units to the left. Doing this gives us $f(x) = f_2(x + \pi) = 7\cos(x + \pi) - 2$. To check our work, we can graph the function and calculate its midline, amplitude, and $y$-intercept. 
+\end{explanation}
+\end{example} 
+
 %
 %
 %\typeout{************************************************}
@@ -90,13 +129,17 @@ Determine a formula for \(s(t)\) in the form \(s(t) = a\cos(t-b)+c\) or \(s(t) =
 %\typeout{************************************************}
 %
 
-\section{Subsection 2.4.2 Horizontal scaling}
+\section{Horizontal scaling}
 
-There is one more very important transformation of a function that we've not yet explored.  Given a function \(y = f(x)\), we want to understand the related function \(g(x) = f(bx)\), where \(b\) is a positive real number.  The sine and cosine functions are ideal functions with which to explore these effects; moreover, this transformation is crucial for being able to use the sine and cosine functions to model phenomena that oscillate at different frequencies.%
+There is one more very important transformation of a function that we've not yet explored in the trigonometric context.  Given a function \(y = f(x)\), we want to understand the related function \(g(x) = f(bx)\), where \(b\) is a positive real number.  The sine and cosine functions are ideal functions with which to explore these effects; moreover, this transformation is crucial for being able to use the sine and cosine functions to model phenomena that oscillate at different frequencies.%
 
-By using a graphing utility such as Desmos, we can explore the effect of the transformation \(g(t) = f(bt)\), where \(f(t) = \sin(t)\).%
+By using a graphing utility such as Desmos, we can explore the effect of the transformation \(h(t) = f(bt)\), where \(f(t) = \sin(t)\).%
 
-By experimenting with various values or a slider, we gain an intuitive sense for how the value of \(b\) affects the graph of \(h(t) = f(bt)\) in comparision to the graph of \(f(t)\).  When \(b = 2\), we see that the graph of \(h\) is oscillating twice as fast as the graph of \(f\) since \(h(t) = f(2t)\) completes two full cycles over an interval in which \(f\) completes one full cycle.  In contrast, when \(b = \frac{1}{2}\), the graph of \(h\) oscillates half as fast as the graph of \(f\), as \(h(t) = f(\frac{1}{2}t)\) completes only half of one cycle over an interval where \(f(t)\) completes a full one.%
+\begin{center}  
+\desmos{zftuh2cfzr}{800}{600}  
+\end{center}
+
+By experimenting with the slider, we gain an intuitive sense for how the value of \(b\) affects the graph of \(h(t) = f(bt)\) in comparision to the graph of \(f(t)\).  When \(b = 2\), we see that the graph of \(h\) is oscillating twice as fast as the graph of \(f\) since \(h(t) = f(2t)\) completes two full cycles over an interval in which \(f\) completes one full cycle.  In contrast, when \(b = \frac{1}{2}\), the graph of \(h\) oscillates half as fast as the graph of \(f\), as \(h(t) = f(\frac{1}{2}t)\) completes only half of one cycle over an interval where \(f(t)\) completes a full one.%
 
 We can also understand this from the perspective of function composition.  To evaluate \(h(t) = f(2t)\), at a given value of \(t\), we first multiply the input \(t\) by a factor of \(2\), and then evaluate the function \(f\) at the result.  An important observation is that%
 \[
@@ -119,30 +162,30 @@ f(t) = a\cos(b(t-c))+d \text{ or } g(t) = a\sin(b(t-c)) + d\text{.}
 each represent a horizontal shift by \(c\) units to the right, followed by a vertical stretch by \(a\) units, followed by a vertical shift of \(d\) units, applied to the parent function (\(\cos(t)\) or \(\sin(t)\), respectively). They also contain a horizontal scaling of \(f\) by a factor of \(\frac{1}{b}\).  The resulting circular functions have midline \(y = d\), amplitude \(a\), range \([d-a,d+a]\), and period \(p = 2\pi\).  In addition, the point \((c,a+d)\) lies on the graph of \(f\) and the point \((c,d)\) lies on the graph of \(g\).
 \end{callout}
 
-While we will soon focus on horizontal stretches of the sine and cosine functions for the remainder of this section, it's important to note that horizontal scaling follows the same principles for any function we choose.%
-\begin{exploration}
-Consider the functions \(f\) and \(g\) given in the following figures.
-\begin{image}
-\includegraphics[width=1\linewidth]{images/sinusoidal-horiz-scaling-1}
-
-\includegraphics[width=1\linewidth]{images/sinusoidal-horiz-scaling-2}
-\end{image}
-\begin{enumerate}[label=\alph*.]
-\item
-On the same axes as the plot of \(y = f(t)\), sketch the following graphs:  \(y = h(t) = f(\frac{1}{3}t)\) and \(y = j(t) = r=f(4t)\).  Be sure to label several points on each of \(f\), \(h\), and \(k\) with arrows to indicate their correspondence.  In addition, write one sentence to explain the overall transformations that have resulted in \(h\) and \(j\) from \(f\).%
-\item
-On the same axes as the plot of \(y = g(t)\), sketch the following graphs:  \(y = k(t) = g(2t)\) and \(y = m(t) = g(\frac{1}{2}t)\).  Be sure to label several points on each of \(g\), \(k\), and \(m\) with arrows to indicate their correspondence.  In addition, write one sentence to explain the overall transformations that have resulted in \(k\) and \(m\) from \(g\).%
-\item
-On the additional copies of the two figures below, sketch the graphs of the following transformed functions:  \(y = r(t) = 2f(\frac{1}{2}t)\)  and \(y = s(t) = \frac{1}{2}g(2t)\).  As above, be sure to label several points on each graph and indicate their correspondence to points on the original parent function.%
-\begin{image}
-\includegraphics[width=1\linewidth]{images/sinusoidal-horiz-scaling-1}
-
-\includegraphics[width=1\linewidth]{images/sinusoidal-horiz-scaling-2}
-\end{image}
-\item
-Describe in words how the function \(y = r(t) = 2f(\frac{1}{2}t)\) is the result of two elementary transformations of \(y = f(t)\).  Does the order in which these transformations occur matter?  Why or why not?%
-\end{enumerate}
-\end{exploration}
+%While we will soon focus on horizontal stretches of the sine and cosine functions for the remainder of this section, it's important to note that horizontal scaling follows the same principles for any function we choose.%
+%\begin{exploration}
+%Consider the functions \(f\) and \(g\) given in the following figures.
+%\begin{image}
+%\includegraphics[width=1\linewidth]{images/sinusoidal-horiz-scaling-1.png}
+%
+%\includegraphics[width=1\linewidth]{images/sinusoidal-horiz-scaling-2.png}
+%\end{image}
+%\begin{enumerate}[label=\alph*.]
+%\item
+%On the same axes as the plot of \(y = f(t)\), sketch the following graphs:  \(y = h(t) = f(\frac{1}{3}t)\) and \(y = j(t) = r=f(4t)\).  Be sure to label several points on each of \(f\), \(h\), and \(k\) with arrows to indicate their correspondence.  In addition, write one sentence to explain the overall transformations that have resulted in \(h\) and \(j\) from \(f\).%
+%\item
+%On the same axes as the plot of \(y = g(t)\), sketch the following graphs:  \(y = k(t) = g(2t)\) and \(y = m(t) = g(\frac{1}{2}t)\).  Be sure to label several points on each of \(g\), \(k\), and \(m\) with arrows to indicate their correspondence.  In addition, write one sentence to explain the overall transformations that have resulted in \(k\) and \(m\) from \(g\).%
+%\item
+%On the additional copies of the two figures below, sketch the graphs of the following transformed functions:  \(y = r(t) = 2f(\frac{1}{2}t)\)  and \(y = s(t) = \frac{1}{2}g(2t)\).  As above, be sure to label several points on each graph and indicate their correspondence to points on the original parent function.%
+%\begin{image}
+%\includegraphics[width=1\linewidth]{images/sinusoidal-horiz-scaling-1.png}
+%
+%\includegraphics[width=1\linewidth]{images/sinusoidal-horiz-scaling-2.png}
+%\end{image}
+%\item
+%Describe in words how the function \(y = r(t) = 2f(\frac{1}{2}t)\) is the result of two elementary transformations of \(y = f(t)\).  Does the order in which these transformations occur matter?  Why or why not?%
+%\end{enumerate}
+%\end{exploration}
 %
 
 %
@@ -158,14 +201,14 @@ Because the circumference of the unit circle is \(2\pi\), the sine and cosine fu
 We begin by considering two basic examples.  First, let \(f(t) = \sin(t)\) and \(g(t) = f(2t) = \sin(2t)\).  We know from our most recent work that this transformation results in a horizontal compression of the graph of \(\sin(t)\) by a factor of \(\frac{1}{2}\) toward the \(y\)-axis.  If we plot the two functions on the same axes, it becomes apparent how this transformation affects the period of \(f\).%
 \begin{figure}
 \centering
-\includegraphics[width=0.75\linewidth]{images/sinusoidal-sine-horiz-scaling}
+\includegraphics[width=0.75\linewidth]{images/sinusoidal-sine-horiz-scaling.png}
 \caption{A plot of the parent function, \(f(t) = \sin(t)\) (dashed, in gray), and the transformed function \(g(t) = f(2t) = \sin(2t)\) (in blue).\label{F-sinusoidal-sine-compressed}}
 \end{figure}
 
 From the graph, we see that \(g(t) = \sin(2t)\) oscillates twice as frequently as \(f(t) = \sin(t)\), and that \(g\) completes a full cycle on the interval \([0,\pi]\), which is half the length of the period of \(f\).  Thus, the  ``\(2\)'' in \(f(2t)\) causes the period of \(f\) to be \(\frac{1}{2}\) as long; specifially, the period of \(g\) is \(P = \frac{1}{2} (2\pi) = \pi\).%
 \begin{figure}
 \centering
-\includegraphics[width=0.75\linewidth]{images/sinusoidal-sine-horiz-scaling-2}
+\includegraphics[width=0.75\linewidth]{images/sinusoidal-sine-horiz-scaling-2.png}
 \caption{A plot of the parent function, \(f(t) = \sin(t)\) (dashed, in gray), and the transformed function \(h(t) = f(\frac{1}{2}t) = \sin(\frac{1}{2}t)\) (in blue).\label{F-sinusoidal-sine-stretched}}
 \end{figure}
 
