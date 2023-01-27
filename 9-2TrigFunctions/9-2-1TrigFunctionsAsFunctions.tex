@@ -147,6 +147,22 @@ It now remains to see which of these zeros are in the interval $[0, 2\pi)$. A su
 
 The previous example should seem quite complicated, so let's try and summarize what we did. First, we isolated the trigonometric function on one side of the equation. Then, we made a substitution to simplify the equation in $x$ into an equation in $u$ we knew how to solve. Upon solving, we needed to undo the substitution. The twist here is that we needed to undo the substitution for \emph{all} the solutions to the $u$-equation, then see which of them were in $[0, 2\pi)$. 
 
+\begin{example}
+Let $f$ be a function defined by $f(x)=\cos(3x + \pi) - \frac{1}{2}$. Find the zeros of $f$ in the interval $[0, 2\pi)$.
+\begin{explanation}
+First we need to set $f$ equal to $0$:
+$$\cos(3x + \pi) - \frac{1}{2} = 0 \implies \cos(3x + \pi) = \frac{1}{2}$$
+Now comes the substitution part. We'll make a substitution $u = 3x + \pi$. Now our equation has become
+$$\cos(u) = \frac{1}{2}.$$
+
+But we know all the solutions to this equation! If $u = \frac{\pi}{3}$ or $u = \frac{5\pi}{3}$, then $\cos(u) = \frac{1}{2}$. In fact, we know that all solutions are $u = \frac{\pi}{3} + 2\pi j$ and $u = \frac{5\pi}{3} + 2\pi j$ for all integers $j$.
+
+However, to solve our original equation of $\cos(3x + \pi) = \frac{1}{2}$ in terms of $x$, we need to undo our substitution: if $u = 3x + \pi$, then $x = \frac{u}{3} - \frac{\pi}{3}$. Undoing our substitution by subtracting $\pi$ and dividing by $3$, we obtain the solutions $x = -\frac{2\pi}{9} + \frac{2\pi}{3} j$ and $x = \frac{2\pi}{9} + \frac{2\pi}{3} j$ for all integers $j$. This is a complete list of zeros of our function $f$.   
+
+It now remains to see which of these zeros are in the interval $[0, 2\pi)$. Going through all the relevant values of $j$, we find that $\frac{2\pi}{9}$, $\frac{4\pi}{9}$, $\frac{8\pi}{9}$, $\frac{10\pi}{9}$, $\frac{14\pi}{9}$, and $\frac{16\pi}{9}$ are the only zeros in the correct interval.  
+\end{explanation}
+\end{example}
+
 \section{Average Rate of Change with Trigonometry}
 
 We can still find average rate of change with trigonometric functions, but because they are periodic there can be some interesting results.
