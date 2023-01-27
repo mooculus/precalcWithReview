@@ -1,7 +1,7 @@
 \documentclass{ximera}
 
 \input{../preamble}
-\author{David Kish}
+\author{David Kish, Kenneth Berglund}
 \license{Creative Commons Attribution-ShareAlike 4.0 International License}
 \acknowledgement{}
 
@@ -81,7 +81,7 @@ While the sine and cosine functions extend infinitely in either direction, it's 
 \begin{example}
 Consider a spring-mass system where the weight resting on a frictionless table.  We let \(s(t)\) denote the distance from the wall (where the spring is attached) to the weight at time \(t\) in seconds and know that the weight oscillates periodically with a minimum value of \(s(t) = 2\) feet and a maximum value of \(s(t) = 7\) feet with a period of \(2 \pi\).  We also know that \(s(0) = 4.5\) and \(s\left(\frac{\pi}{2}\right) = 2\).%
 
-Determine a formula for \(s(t)\) in the form \(s(t) = a\cos(t-b)+c\) or \(s(t) = a\sin(t-c)+d\).  Is it possible to find two different formulas that work?  
+Determine a formula for \(s(t)\) in the form \(s(t) = a\cos(t-b)+c\) or \(s(t) = a\sin(t-b)+c\).  Is it possible to find two different formulas that work?  
 \begin{explanation}
 Let's begin by drawing an accurate picture:
 \begin{image}
@@ -116,7 +116,7 @@ The previous example illustrates a general technique for giving the formula of t
 Note that this procedure can work with $\cos$ as well as $\sin$. Let's see an example.
 
 \begin{example}
-Give the formula for a circular function $f$ with period $2\pi$ whose midline is $-2$, whose amplitude is 7, and whose $y$-intercept is $(0, -9)$
+Give the formula for a circular function $f$ with period $2\pi$ whose midline is $-2$, whose amplitude is 7, and whose $y$-intercept is $(0, -9)$.
 \begin{explanation}
 Since the amplitude is 7, the first transformation we apply to $\cos(x)$ is a vertical stretch by a factor of 7 to obtain $f_1(x) = 7\cos(x)$. Then, we need to shift down by 2 to obtain the correct midline: $f_2(x) = f_1(x) - 2 = 7\cos(x) - 2$. Finally, by looking at a graph, we can tell that $f_2(\pi) = 7\cos(\pi) - 2 = -7 - 2 = -9$, so we need to shift $\pi$ units to the left. Doing this gives us $f(x) = f_2(x + \pi) = 7\cos(x + \pi) - 2$. To check our work, we can graph the function and calculate its midline, amplitude, and $y$-intercept. 
 \end{explanation}
@@ -155,11 +155,11 @@ Given a function \(y = f(t)\) and a real number \(b \gt 0\), the transformed fun
 
 \begin{callout}
 \textbf{Transformations of sine and cosine with any shift or stretch.}\\
-Given real numbers \(a\), \(b\), \(c\), and \(d\) with \(a \ne 0\) and \(b \gt 0\) , the functions%
+Given real numbers \(a\), \(b\), \(c\), and \(d\) with \(a \ne 0\) and \(b > 0\) , the functions%
 \begin{equation*}
 f(t) = a\cos(b(t-c))+d \text{ or } g(t) = a\sin(b(t-c)) + d\text{.}
 \end{equation*}
-each represent a horizontal shift by \(c\) units to the right, followed by a vertical stretch by \(a\) units, followed by a vertical shift of \(d\) units, applied to the parent function (\(\cos(t)\) or \(\sin(t)\), respectively). They also contain a horizontal scaling of \(f\) by a factor of \(\frac{1}{b}\).  The resulting circular functions have midline \(y = d\), amplitude \(a\), range \([d-a,d+a]\), and period \(p = 2\pi\).  In addition, the point \((c,a+d)\) lies on the graph of \(f\) and the point \((c,d)\) lies on the graph of \(g\).
+each represent a horizontal shift by \(c\) units to the right, followed by a vertical stretch by \(a\) units, followed by a vertical shift of \(d\) units, applied to the parent function (\(\cos(t)\) or \(\sin(t)\), respectively). They also contain a horizontal scaling of \(f\) by a factor of \(\frac{1}{b}\).  The resulting circular functions have midline \(y = d\), amplitude \(a\), range \([d-a,d+a]\), and period \(p = 2\pi/b\).  In addition, the point \((c,a+d)\) lies on the graph of \(f\) and the point \((c,d)\) lies on the graph of \(g\).
 \end{callout}
 
 %While we will soon focus on horizontal stretches of the sine and cosine functions for the remainder of this section, it's important to note that horizontal scaling follows the same principles for any function we choose.%
