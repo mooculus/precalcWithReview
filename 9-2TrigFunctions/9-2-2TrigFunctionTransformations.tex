@@ -123,6 +123,30 @@ Since the amplitude is 7, the first transformation we apply to $\cos(x)$ is a ve
 \end{explanation}
 \end{example} 
 
+\begin{example}
+Graph the function $f$ given by $f(x) = 7\cos(x + \pi) - 1$. Keep track of the points $(0, 1)$, $\left(\frac{\pi}{2}, 0\right)$, and $(\pi, -1)$ in each step. 
+\begin{explanation}
+We first graph the parent function, which is defined in this case by $f_0(x) = \cos(x)$. This graph has the points $(0, 1)$, $\left(\frac{\pi}{2}, 0\right)$, and $(\pi, -1)$, and is shown below.
+\begin{image}
+\includegraphics[width=0.8\linewidth]{images/graph-ex1.png}
+\end{image}
+
+We then proceed using the order of transformations outlined in a previous section. The first transformation to take place is the horizontal shift left by $\pi$ units. That results in the function $f_1(x) = f_0(x + \pi) = \cos(x + \pi)$ and moves our points to $(-\pi, 1)$, $\left(-\frac{\pi}{2}, 0\right)$, and $(0, -1)$.
+\begin{image}
+\includegraphics[width=0.8\linewidth]{images/graph-ex2.png}
+\end{image} 
+
+Next, we have a vertical stretch by a factor of 7. This results in the function $f_2(x) = 7f_1(x) = 7\cos(x + \pi)$ and moves our points to $(-\pi, 7)$, $\left(-\frac{\pi}{2}, 0\right)$, and $(0, -7)$.
+\begin{image}
+\includegraphics[width=0.8\linewidth]{images/graph-ex3.png}
+\end{image} 
+
+Finally, we shift down by 1 unit. This results in the function $f(x) = f_2(x) - 1 = 7\cos(x + \pi) - 1$ and moves our points to $(-\pi, 6)$, $\left(-\frac{\pi}{2}, -1\right)$, and $(0, -8)$.
+\begin{image}
+\includegraphics[width=0.8\linewidth]{images/graph-ex4.png}
+\end{image} 
+\end{explanation}
+\end{example}
 %
 %
 %\typeout{************************************************}
@@ -260,9 +284,12 @@ There is a horizontal shift of $3$ to the right.
 \item
 $u(x)$ has a period of $\frac{2\pi}{3}$, an amplitude of $0.25$ and a midline of $y=5$. \\
 The range of $u(x)$ is $[4.75, 5.25]$. \\
-There is a horizontal shift of $2$ to the right.
+There is a horizontal shift of $2$ to the right. This is because we have to factor out the 3 inside the parentheses: $-0.25\sin(3(x - 2)) + 5$. 
 \end{enumerate}
 \end{explanation}
+
+You might wonder why we've chosen to use the function $a\sin(b(t-h)) + k$ with the parentheses instead of $a\sin(bt - h) + k$ without the parentheses. In the former formula, we save the horizontal shift until the end, but in the latter, we do the horizontal shift before anything else. The reason is that the midline, amplitude, and period of a function are easy to plug into the formula, and we can save any horizontal shifts until the end. 
+
 \end{example}
 \begin{example}
 Consider a spring-mass system where the weight is hanging from the ceiling in such a way that the following is known: we let \(d(t)\) denote the distance from the ceiling to the weight at time \(t\) in seconds and know that the weight oscillates periodically with a minimum value of \(d(t) = 1.5\) and a maximum value of \(d(t) = 4\), with a period of \(3\), and you know \(d(0.5) = 2.75\) and \(d\left(1.25\right) = 4\).%
