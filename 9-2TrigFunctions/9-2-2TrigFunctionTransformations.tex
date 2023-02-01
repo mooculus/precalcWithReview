@@ -33,7 +33,7 @@ How can we determine a formula involving sine or cosine that models any circular
 \end{itemize}
 \end{motivatingQuestions}
 
-Recall our previous work with transformations, where we studied how the graph of the function \(g\) defined by \(g(x) = af(bx + h) + k\) is related to the graph of \(f\), where \(a\), \(b\), $h$, and \(k\) are real numbers with \(a \ne 0\).  Because such transformations can shift and stretch a function, we are interested in understanding how we can use transformations of the sine and cosine functions to fit formulas to circular functions.%
+Recall our previous work with transformations, where we studied how the graph of the function \(g\) defined by \(g(x) = af(bx - h) + k\) is related to the graph of \(f\), where \(a\), \(b\), $h$, and \(k\) are real numbers with \(a \ne 0\).  Because such transformations can shift and stretch a function, we are interested in understanding how we can use transformations of the sine and cosine functions to fit formulas to circular functions.%
 \begin{example}
 Let \(f(t) = \cos(t)\).  First, answer all of the questions below \emph{without} using \emph{Desmos}; then use \emph{Desmos} to confirm your conjectures.  For each prompt, describe the graphs of \(g\) and \(h\) as transformations of \(f\) and, in addition, state the amplitude, midline, and period of both \(g\) and \(h\).%
 \begin{enumerate}[label=\alph*.]
@@ -124,7 +124,7 @@ Since the amplitude is 7, the first transformation we apply to $\cos(x)$ is a ve
 \end{example} 
 
 \begin{example}
-Graph the function $f$ given by $f(x) = 7\cos(x + \pi) - 1$. Keep track of the points $(0, 1)$, $\left(\frac{\pi}{2}, 0\right)$, and $(\pi, -1)$ in each step. 
+Graph the function $f$ given by $f(x) = 7\cos(x + \pi) - 1$. Keep track of the points $(0, 1)$, $\left(\frac{\pi}{2}, 0\right)$, and $(\pi, -1)$ in each step. Give the midline, amplitude, and period of $f$. 
 \begin{explanation}
 We first graph the parent function, which is defined in this case by $f_0(x) = \cos(x)$. This graph has the points $(0, 1)$, $\left(\frac{\pi}{2}, 0\right)$, and $(\pi, -1)$, and is shown below.
 \begin{image}
@@ -146,6 +146,8 @@ Finally, we shift down by 1 unit. This results in the function $f(x) = f_2(x) - 
 \includegraphics[width=0.8\linewidth]{images/graph-ex4.png}
 \end{image} 
 \end{explanation}
+
+We can see from the graph that the midline of our function is $-1$, and the amplitude is 7. The period can also be read off as $2\pi$. Note that we could have read this information off from the formula, since $a = 7$, $k = -1$, and there is no horizontal stretch or compression.
 \end{example}
 %
 %
@@ -247,7 +249,7 @@ Given real numbers \(a\), \(b\), \(h\), and \(k\) with \(a > 0\) and \(b > 0\) ,
 \begin{equation*}
 f(t) = a\cos(b(t-h))+k \text{ or } g(t) = a\sin(b(t-h)) + k\text{.}
 \end{equation*}
-each represent a horizontal shift by \(h\) units to the right, followed by a vertical stretch by \(a\) units, followed by a vertical shift of \(k\) units, applied to the parent function (\(\cos(t)\) or \(\sin(t)\), respectively). They also contain a horizontal scaling of \(\cos\) or $\sin$ by a factor of \(b\).  The resulting circular functions have midline \(y = k\), amplitude \(a\), range \([k-a,k+a]\), and period \(P = 2\pi/b\).  In addition, the point \((h,a+k)\) lies on the graph of \(f\) and the point \((h, k)\) lies on the graph of \(g\).
+each represent a horizontal stretch or compression by a factor of $b$, followed by a vertical stretch by \(a\) units, followed by a vertical shift of \(k\) units, applied to the parent function (\(\cos(t)\) or \(\sin(t)\), respectively). They then contain a horizontal shift to the right by $h$ units. The resulting circular functions have midline \(y = k\), amplitude \(a\), range \([k-a,k+a]\), and period \(P = 2\pi/b\). In addition, the point \((h,a+k)\) lies on the graph of \(f\) and the point \((h, k)\) lies on the graph of \(g\).
 \end{callout}
 
 
@@ -287,10 +289,10 @@ The range of $u(x)$ is $[4.75, 5.25]$. \\
 There is a horizontal shift of $2$ to the right. This is because we have to factor out the 3 inside the parentheses: $-0.25\sin(3(x - 2)) + 5$. 
 \end{enumerate}
 \end{explanation}
-
-You might wonder why we've chosen to use the function $a\sin(b(t-h)) + k$ with the parentheses instead of $a\sin(bt - h) + k$ without the parentheses. In the former formula, we save the horizontal shift until the end, but in the latter, we do the horizontal shift before anything else. The reason is that the midline, amplitude, and period of a function are easy to plug into the formula, and we can save any horizontal shifts until the end. 
-
 \end{example}
+
+You might wonder why we've chosen to use the formula $a\sin(b(t-h)) + k$ with the parentheses instead of $a\sin(bt - h) + k$ without the parentheses. In the former formula, we save the horizontal shift until the end, but in the latter, we do the horizontal shift before anything else. The reason we prefer the former is that the midline, amplitude, and period of a function are easy to plug into the formula, and plugging theses in results in a formula of the form $f_1(t) = a\sin(bt) + k$.We can then find the horizontal shift we need to apply to the graph of $f_1$ to obtain $f(t) = f_1(t - h) = a\sin(b(t - h)) + k$. 
+
 \begin{example}
 Consider a spring-mass system where the weight is hanging from the ceiling in such a way that the following is known: we let \(d(t)\) denote the distance from the ceiling to the weight at time \(t\) in seconds and know that the weight oscillates periodically with a minimum value of \(d(t) = 1.5\) and a maximum value of \(d(t) = 4\), with a period of \(3\), and you know \(d(0.5) = 2.75\) and \(d\left(1.25\right) = 4\).%
 
@@ -323,6 +325,40 @@ Give a formula of the form $a\cos(b(t - h)) + k$ or $a\sin(b(t - h)) + k$ for th
 Although this problem may seem different from the previous problem, we can still collect information about the midline, amplitude, and period from the graph of the function. 
 
 Here, the amplitude is 3, the midline is $-2$, and the period is $\pi$. Using the sine function as a parent function, this gives us $f_1(t) = 3\sin(2t) - 2$. Note that $f_1(0) = 3\sin(0) - 2 = 0 - 2 = -2$, and we want our function to have $f(1) = -2$, so we need to shift the graph of $f_1$ to the right by 1 unit. This gives us $f(t) = f_1(t - 1) = 3\sin(2(t - 1)) - 2$. 
+\end{explanation}
+\end{example}
+
+\begin{example}
+Graph the function $f$ given by $f(x) = -2\sin(2(x - 1)) + 3$. Keep track of the points $(0, 0)$, $\left(\frac{\pi}{2}, 1\right)$, and $(\pi, 0)$ at each step. Give the midline, amplitude, and period of $f$. 
+\begin{explanation}
+While this may seem like a complicated set of transformations, it's nothing that we couldn't have done in the earlier section on function transformations. The only catch here is that in order to use our order from before, we need to distribute the 2 inside the parentheses to obtain $f(x) = -2\sin(2x - 2) + 3$. This puts our function in the form needed to use the order. 
+
+With this change, we can see that our first transformation is a shift right by 2 units, yielding $f_1(x) = \sin(x - 2)$. This transforms our points into $(2, 0)$, $\left(\frac{\pi}{2} + 2, 1 \right)$, and $(\pi + 2, 0)$.  We can see a graph of $f_1$ below.
+\begin{image}
+\includegraphics[width=0.8\linewidth]{images/graph-2-ex1.png}
+\end{image}
+
+Our next transformation in the order is a horizontal compression by a factor of 2, yielding $f_2(x) = f_1(2x) = \sin(2x - 2)$. This transforms our points into $(2, 0)$, $\left(\frac{\pi}{4} + 1, 1 \right)$, and $\left(\frac{\pi}{2} + 1, 0\right)$.  We can see a graph of $f_2$ below.
+\begin{image}
+\includegraphics[width=0.8\linewidth]{images/graph-2-ex2.png}
+\end{image}
+
+Our next transformation is a vertical stretch by a factor of 2, yielding $f_3(x) = 2f_2(x) = 2\sin(2x - 2)$. This transforms our points into $(2, 0)$, $\left(\frac{\pi}{4} + 1, 2 \right)$, and $\left(\frac{\pi}{2} + 1, 0\right)$.  We can see a graph of $f_3$ below.
+\begin{image}
+\includegraphics[width=0.8\linewidth]{images/graph-2-ex3.png}
+\end{image}
+
+Our next transformation is a reflection across the $x$-axis, yielding $f_4(x) = -f_3(x) = -2\sin(2x - 2)$. This transforms our points into $(2, 0)$, $\left(\frac{\pi}{4} + 1, -2 \right)$, and $\left(\frac{\pi}{2} + 1, 0\right)$.  We can see a graph of $f_4$ below.
+\begin{image}
+\includegraphics[width=0.8\linewidth]{images/graph-2-ex4.png}
+\end{image}
+
+Our final transformation is a shift up by 3 units, yielding $f_5(x) = f_4(x) + 3 = -2\sin(2x - 2) + 3$. This transforms our points into $(2, 3)$, $\left(\frac{\pi}{4} + 1, 1 \right)$, and $\left(\frac{\pi}{2} + 1, 3\right)$.  We can see a graph of $f_5$ below.
+\begin{image}
+\includegraphics[width=0.8\linewidth]{images/graph-2-ex5.png}
+\end{image}
+
+The midline of $f$ is 3, the amplitude is 2, and the period is $\pi$. This is all readable from the graph, but also from the formula for $f$, since $|a| = 2$, $b = 2$, and $k = 3$. 
 \end{explanation}
 \end{example}
 
