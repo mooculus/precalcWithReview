@@ -252,6 +252,8 @@ f(t) = a\cos(b(t-h))+k \text{ or } g(t) = a\sin(b(t-h)) + k\text{.}
 each represent a horizontal stretch or compression by a factor of $b$, followed by a vertical stretch by \(a\) units, followed by a vertical shift of \(k\) units, applied to the parent function (\(\cos(t)\) or \(\sin(t)\), respectively). They then contain a horizontal shift to the right by $h$ units. The resulting circular functions have midline \(y = k\), amplitude \(a\), range \([k-a,k+a]\), and period \(P = 2\pi/b\). In addition, the point \((h,a+k)\) lies on the graph of \(f\) and the point \((h, k)\) lies on the graph of \(g\).
 \end{callout}
 
+Be careful! These calculations only apply to $\sin$ and $\cos$. For example, $\tan(bx)$ has a period of $\frac{\pi}{b}$, not $\frac{2\pi}{b}$, since the original period of $\tan$ is just $\pi$. When you're faced with a problem involving a transformation of a trig function, it's best to start from what you already know about the trig function, then see how each transformation affects its properties. 
+
 
 \begin{example}
 Determine the exact period, amplitude, and midline of each of the following functions.  In addition,  state the range of each function and any horizontal shift that has been introduced to the graph.  Make your conclusions without consulting \emph{Desmos}, and then use the program to check your work.%
@@ -311,7 +313,7 @@ Since $a$ corresponds to the amplitude, $a = \frac{\pi}{2}$. Since $k$ correspon
 
 Let's now pay some attention to the choice between sine and cosine. Note that since the midline is $\pi$ and the amplitude is $\frac{\pi}{2}$, the maximum of our function is $\frac{3\pi}{2}$. This means that the condition that $f(8) = \frac{3\pi}{2}$ tells us where the maximum should be. We have a very easy location for the maximum of cosine: $t = 0$, so we'll choose to use cosine here. Note that choosing sine isn't incorrect, just more difficult.
 
-Plugging our values into the equation, we have $f_1(t) = \frac{\pi}{2}\left(\frac{2\pi}{5}t\right) + \pi$. The maximum for cosine occurs at $t = 0$, as stated above, but we want the maximum to occur at $t = 8$, so we'll shift the graph of $f_1(t)$ 8 units to the right. This gives us $f(t) = f_1(t - 8) =  \frac{\pi}{2}\left(\frac{2\pi}{5}(t - 8)\right) + \pi$.
+Plugging our values into the equation, we have $f_1(t) = \frac{\pi}{2}\left(\frac{2\pi}{5}t\right) + \pi$. The maximum for cosine occurs at $t = 0$, as stated above, but we want the maximum to occur at $t = 8$, so we'll shift the graph of $f_1$ 8 units to the right. This gives us $f(t) = f_1(t - 8) =  \frac{\pi}{2}\left(\frac{2\pi}{5}(t - 8)\right) + \pi$.
 \end{explanation}
 \end{example}
 

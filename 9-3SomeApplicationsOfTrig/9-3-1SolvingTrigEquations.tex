@@ -208,7 +208,7 @@ The steps we've followed are summarized in the following.
 \end{image}
 
 In one period $[0, 2\pi)$, there are two angles that have reference angle $\frac{\pi}{6}$ and have negative
-		sine value.  One is in quadrant 3, and one in quadrant 4.  That means the solutions in the interval $[0, 2\pi)$ are $\frac{5\pi}{6}$ and $\frac{11\pi}{6}$.
+		sine value.  One is in quadrant 3, and one in quadrant 4.  That means the solutions in the interval $[0, 2\pi)$ are $\frac{7\pi}{6}$ and $\frac{11\pi}{6}$.
 		
 		To find all solutions, we have to add all multiples of $2\pi$ to these.  The solutions are then $$ \theta = \frac{5\pi}{6} + 2\pi k , \,\, \frac{11\pi}{6}+2\pi k , \,\, k \textrm{ any integer}. $$
 	\end{explanation}
@@ -238,9 +238,9 @@ In one period $[0, 2\pi)$, there are two angles that have reference angle $\frac
     			\node at (1.2,2.3) {$\theta_R$};
   		  \end{tikzpicture}
 		\end{image}
-		From the picture we see $\theta_R = \frac{\pi}{3}$.  Let's look at the unit circle.		
+		From the picture we see $\theta_R = \frac{\pi}{3}$.		
 	
-		The tangent function has one period $\left( -\frac{\pi}{2}, \frac{\pi}{2}\right)$. In the interval $\left( -\frac{\pi}{2}, 0\right)$ 
+		The tangent function goes through one period on the interval $\left( -\frac{\pi}{2}, \frac{\pi}{2}\right)$. In the interval $\left( -\frac{\pi}{2}, 0\right)$ 
 		(which is Quadrant IV), tangent is negative while in $\left( 0, \frac{\pi}{2}\right)$ (which is Quadrant I), tangent is positive.
 		For $\tan(\theta)$ to be negative in this interval, we need $\theta$ to be in $\left( -\frac{\pi}{2}, 0\right)$. The only angle in
 		that interval with reference angle $\frac{\pi}{3}$ is $\theta = -\frac{\pi}{3}$. This is the only solution on this period.
@@ -251,7 +251,7 @@ In one period $[0, 2\pi)$, there are two angles that have reference angle $\frac
 		\end{callout}
 		
 		To find all solutions, we have to add all multiples of $\pi$ to this.  
-		The solutions are then $$ \theta = \frac{2\pi}{3}+ \pi k , \,\, k \textrm{ any integer}. $$
+		The solutions are then $$ \theta = -\frac{\pi}{3}+ \pi k , \,\, k \textrm{ any integer}. $$
 				
 	\end{explanation}
 \end{example}
@@ -260,7 +260,7 @@ Let's try one a bit more complicated.
 \begin{example}
 	Solve the equation: \[ \cos(\theta) \left( \cos(\theta) + 1\right) = \sin^2(\theta). \]
 	\begin{explanation}
-		We'll start by simplifying a bit.
+		We'll start by simplifying a bit. Note that we use a rearranged form of the Pythagorean identity, $\sin^2(\theta)  = 1 - \cos^2(\theta)$. 
 		\begin{align*}
 			\cos(\theta) \left( \cos(\theta) + 1\right) &= \sin^2(\theta) \\
 			\cos^2(\theta) + \cos(\theta) &= \sin^2(\theta) \\
@@ -270,6 +270,9 @@ Let's try one a bit more complicated.
 		\end{align*}
 		Notice that this equation is quadratic in $\cos(\theta)$.  We can factor it like we try to do to solve any other quadratic equation:
 		\[ \left( \cos(\theta) + 1 \right) \left( 2 \cos(\theta) - 1\right) = 0.\]
+		Now, we can set each factor equal to zero and solve the two resulting equations:
+		$$\cos(\theta) + 1 = 0 \text{ and } 2\cos(\theta) - 1 = 0$$
+		yield the equations $\cos(\theta) = -1$ and $\cos(\theta) = \frac{1}{2}$. 
 		On the interval $[0, 2\pi)$, $\cos(\theta) = -1$ has only one solution, $\theta = {\pi}$.  
 		For $\cos(\theta) = \frac{1}{2}$, we see that the reference angle $\theta_R = {\frac{\pi}{3}}$.  Since cosine is positive in Quadrants I and IV,
 		we find solutions $\theta = \frac{\pi}{3}$ and $\frac{5\pi}{3}$.
