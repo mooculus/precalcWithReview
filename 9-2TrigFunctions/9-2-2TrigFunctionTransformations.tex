@@ -5,7 +5,7 @@
 \license{Creative Commons Attribution-ShareAlike 4.0 International License}
 \acknowledgement{}
 
-\title{Trig Functions Transformations}
+\title{Trig Function Transformations}
 
 \begin{document}
 \begin{abstract}
@@ -47,13 +47,13 @@ Let \(f(t) = \cos(t)\).  First, answer all of the questions below \emph{without}
 \item The graph of $g$ has a vertical stretch by 3 and an amplitude of 3. The graph of $h$ has a reflection across the $x$-axis with a vertical shrink of $\frac{1}{4}$ and an amplitude of $\frac{1}{4}$. $g(t)$ and $h(t)$ both have a midline at $y=0$ and a period of $2\pi$.
 \item The graph of $g$ has a horizontal shift to the right of $\pi$. The graph of $h$ has a horizontal shift to the left of $\frac{\pi}{2}$. $g(t)$ and $h(t)$ both have a midline at $y=0$, a period of $2\pi$, and an amplitude of $1$.
 \item The graph of $g$ has a vertical shift up of $4$ and a midline at $y=4$. The graph of $h$ has a vertical shift down of $2$ and a midline of $y=-2$. $g(t)$ and $h(t)$ both have a period of $2\pi$ and an amplitude of $1$.
-\item The graph of $g$ has a vertical stretch by 3,  a horizontal shift to the right of $\pi$,and a vertical shift up of $4$. $g(t)$ has an amplitude of 3 and a midline at $y=4$. The graph of $h$ has a reflection across the $x$-axis with a vertical shrink of $\frac{1}{4}$, a horizontal shift to the left of $\frac{\pi}{2}$, and a vertical shift down of $2$. $h(t)$has an amplitude of $\frac{1}{4}$ and a midline of $y=-2$. $g(t)$ and $h(t)$ both have a period of $2\pi$.
+\item The graph of $g$ has a vertical stretch by 3,  a horizontal shift to the right of $\pi$,and a vertical shift up of $4$. $g(t)$ has an amplitude of 3 and a midline at $y=4$. The graph of $h$ has a reflection across the $x$-axis with a vertical shrink of $\frac{1}{4}$, a horizontal shift to the left of $\frac{\pi}{2}$, and a vertical shift down of $2$. $h(t)$ has an amplitude of $\frac{1}{4}$ and a midline of $y=-2$. $g(t)$ and $h(t)$ both have a period of $2\pi$.
 \end{enumerate}
 \end{explanation}
 %
 \end{example}
 
-Note in the exercise above several patterns. Given a function $a\cos(t + h) + k$, the amplitude of the function was $|a|$, and the midline of the function was $k$. In addition, each function above had period $2\pi$, unchanged from the period of $\cos$. We will see later that this is related to the fact that there were no horizontal stretches or compressions of $\cos$ in the above exercise. 
+Note in the exercise above several patterns. Given a function $a\cos(t - h) + k$, the amplitude of the function was $|a|$, and the midline of the function was $k$. In addition, each function above had period $2\pi$, unchanged from the period of $\cos$. We will see later that this is related to the fact that there were no horizontal stretches or compressions of $\cos$.
 %
 %
 %\typeout{************************************************}
@@ -61,17 +61,17 @@ Note in the exercise above several patterns. Given a function $a\cos(t + h) + k$
 %\typeout{************************************************}
 %
 \section{Shifts and vertical stretches of the sine and cosine functions}
-We know that the standard functions \(f(t) = \sin(t)\) and \(g(t) = \cos(t)\) are circular functions that each have midline \(y = 0\), amplitude \(a = 1\), period \(p = 2\pi\), and range \([-1,1]\). This suggests the following general principles.%
+We know that the standard functions \(f(t) = \sin(t)\) and \(g(t) = \cos(t)\) are circular functions that each have midline \(y = 0\), amplitude \(a = 1\), period \(P = 2\pi\), and range \([-1,1]\). This suggests the following general principles.%
 \begin{callout}
 \textbf{Transformations of sine and cosine with shifts and vertical stretches.}\\
 Given real numbers \(a\), \(h\), and \(k\) with \(a \ne 0\), the functions%
 \[
 f(t) = a\cos(t-h)+k \text{ and } g(t) = a\sin(t-h) + k
 \]
-each represent a horizontal shift by \(h\) units to the right, followed by a vertical stretch by \(a\) units, followed by a vertical shift of \(k\) units, applied to the parent function (\(\cos(t)\) or \(\sin(t)\), respectively).  The resulting circular functions have midline \(y = k\), amplitude \(a\), range \([k-a,k+a]\), and period \(p = 2\pi\).  In addition, the point \((h,a+k)\) lies on the graph of \(f\) and the point \((h, k)\) lies on the graph of \(g\).%
+each represent a horizontal shift by \(h\) units to the right, followed by a vertical stretch by \(a\) units, followed by a vertical shift of \(k\) units, applied to the parent function (\(\cos(t)\) or \(\sin(t)\), respectively).  The resulting circular functions have midline \(y = k\), amplitude \(a\), range \([k-a,k+a]\), and period \(P = 2\pi\).  In addition, the point \((h,a+k)\) lies on the graph of \(f\) and the point \((h, k)\) lies on the graph of \(g\).%
 \end{callout}
 
-In the figure below, we see how the overall transformation \(f(t) = a\cos(t-h)+k\) comes from executing a sequence of simpler ones.  The original parent function \(y = \cos(t)\) (in red) is first shifted \(h\) units right to generate the blue graph of \(y = \cos(t - h)\).  In turn, that graph is then scaled vertically by \(a\) to generate the orange graph of \(y = a\cos(t-h)\).  Finally, the orange graph is shifted \(k\) units vertically to result in the final graph of \(y = a\cos(t-h) + k\) in blue.%
+In the figure below, we see how the overall transformation \(f(t) = a\cos(t-h)+k\) comes from executing a sequence of simpler ones.  The original parent function \(y = \cos(t)\) (in red) is first shifted \(h\) units right to generate the blue graph of \(y = \cos(t - h)\).  In turn, that graph is then scaled vertically by \(a\) to generate the orange graph of \(y = a\cos(t-h)\).  Finally, the orange graph is shifted \(k\) units vertically to result in the final graph of \(y = a\cos(t-h) + k\) in black.%
 \begin{image}
 \includegraphics[width=0.8\linewidth]{images/sinusoidal-transformed-cosine-2.png}
 \end{image}
@@ -83,6 +83,7 @@ While the sine and cosine functions extend infinitely in either direction, it's 
 Consider a spring-mass system where the weight resting on a frictionless table.  We let \(s(t)\) denote the distance from the wall (where the spring is attached) to the weight at time \(t\) in seconds and know that the weight oscillates periodically with a minimum value of \(s(t) = 2\) feet and a maximum value of \(s(t) = 7\) feet with a period of \(2 \pi\).  We also know that \(s(0) = 4.5\) and \(s\left(\frac{\pi}{2}\right) = 2\).%
 
 Determine a formula for \(s(t)\) in the form \(s(t) = a\cos(t-b)+c\) or \(s(t) = a\sin(t-b)+c\).  Is it possible to find two different formulas that work?  
+
 \begin{explanation}
 Let's begin by drawing an accurate picture:
 \begin{image}
@@ -117,14 +118,16 @@ The previous example illustrates a general technique for giving the formula of t
 Note that this procedure can work with $\cos$ as well as $\sin$. Let's see an example.
 
 \begin{example}
-Give the formula for a circular function $f$ with period $2\pi$ whose midline is $-2$, whose amplitude is 7, and whose $y$-intercept is $(0, -9)$.
+Give the formula for a circular function $f$ with period $2\pi$ whose midline is $-2$, whose amplitude is 5, and whose $y$-intercept is $(0, -7)$.
+
 \begin{explanation}
-Since the amplitude is 7, the first transformation we apply to $\cos(x)$ is a vertical stretch by a factor of 7 to obtain $f_1(x) = 7\cos(x)$. Then, we need to shift down by 2 to obtain the correct midline: $f_2(x) = f_1(x) - 2 = 7\cos(x) - 2$. Finally, by looking at a graph, we can tell that $f_2(\pi) = 7\cos(\pi) - 2 = -7 - 2 = -9$, so we need to shift $\pi$ units to the left. Doing this gives us $f(x) = f_2(x + \pi) = 7\cos(x + \pi) - 2$. To check our work, we can graph the function and calculate its midline, amplitude, and $y$-intercept. 
+Since the amplitude is 5, the first transformation we apply to $\cos(x)$ is a vertical stretch by a factor of 5 to obtain $f_1(x) = 5\cos(x)$. Then, we need to shift down by 2 to obtain the correct midline: $f_2(x) = f_1(x) - 2 = 5\cos(x) - 2$. Finally, by looking at a graph, we can tell that $f_2(\pi) = 5\cos(\pi) - 2 = -5 - 2 = -7$, so we need to shift $\pi$ units to the left. Doing this gives us $f(x) = f_2(x + \pi) = 5\cos(x + \pi) - 2$. To check our work, we can graph the function and calculate its midline, amplitude, and $y$-intercept. 
 \end{explanation}
 \end{example} 
 
 \begin{example}
 Graph the function $f$ given by $f(x) = 7\cos(x + \pi) - 1$. Keep track of the points $(0, 1)$, $\left(\frac{\pi}{2}, 0\right)$, and $(\pi, -1)$ in each step. Give the midline, amplitude, and period of $f$. 
+
 \begin{explanation}
 We first graph the parent function, which is defined in this case by $f_0(x) = \cos(x)$. This graph has the points $(0, 1)$, $\left(\frac{\pi}{2}, 0\right)$, and $(\pi, -1)$, and is shown below.
 \begin{image}
@@ -252,8 +255,9 @@ f(t) = a\cos(b(t-h))+k \text{ or } g(t) = a\sin(b(t-h)) + k\text{.}
 each represent a horizontal stretch or compression by a factor of $b$, followed by a vertical stretch by \(a\) units, followed by a vertical shift of \(k\) units, applied to the parent function (\(\cos(t)\) or \(\sin(t)\), respectively). They then contain a horizontal shift to the right by $h$ units. The resulting circular functions have midline \(y = k\), amplitude \(a\), range \([k-a,k+a]\), and period \(P = 2\pi/b\). In addition, the point \((h,a+k)\) lies on the graph of \(f\) and the point \((h, k)\) lies on the graph of \(g\).
 \end{callout}
 
+\begin{callout}
 Be careful! These calculations only apply to $\sin$ and $\cos$. For example, $\tan(bx)$ has a period of $\frac{\pi}{b}$, not $\frac{2\pi}{b}$, since the original period of $\tan$ is just $\pi$. When you're faced with a problem involving a transformation of a trig function, it's best to start from what you already know about the trig function, then see how each transformation affects its properties. 
-
+\end{callout}
 
 \begin{example}
 Determine the exact period, amplitude, and midline of each of the following functions.  In addition,  state the range of each function and any horizontal shift that has been introduced to the graph.  Make your conclusions without consulting \emph{Desmos}, and then use the program to check your work.%
@@ -293,12 +297,13 @@ There is a horizontal shift of $2$ to the right. This is because we have to fact
 \end{explanation}
 \end{example}
 
-You might wonder why we've chosen to use the formula $a\sin(b(t-h)) + k$ with the parentheses instead of $a\sin(bt - h) + k$ without the parentheses. In the former formula, we save the horizontal shift until the end, but in the latter, we do the horizontal shift before anything else. The reason we prefer the former is that the midline, amplitude, and period of a function are easy to plug into the formula, and plugging theses in results in a formula of the form $f_1(t) = a\sin(bt) + k$.We can then find the horizontal shift we need to apply to the graph of $f_1$ to obtain $f(t) = f_1(t - h) = a\sin(b(t - h)) + k$. 
+You might wonder why we've chosen to use the formula $a\sin(b(t-h)) + k$ with the parentheses instead of $a\sin(bt - h) + k$ without the parentheses. In the former formula, we save the horizontal shift until the end, but in the latter, we do the horizontal shift before anything else. The reason we prefer the former is that the midline, amplitude, and period of a function are easy to plug into the formula, and plugging these in results in a formula of the form $f_1(t) = a\sin(bt) + k$. We can then find the horizontal shift we need to apply to the graph of $f_1$ to obtain $f(t) = f_1(t - h) = a\sin(b(t - h)) + k$. 
 
 \begin{example}
 Consider a spring-mass system where the weight is hanging from the ceiling in such a way that the following is known: we let \(d(t)\) denote the distance from the ceiling to the weight at time \(t\) in seconds and know that the weight oscillates periodically with a minimum value of \(d(t) = 1.5\) and a maximum value of \(d(t) = 4\), with a period of \(3\), and you know \(d(0.5) = 2.75\) and \(d\left(1.25\right) = 4\).%
 
 State the midline, amplitude, range, and an anchor point for the function, and hence determine a formula for \(d(t)\) in the form \(a\cos(b(t-h))+k\) or \(a\sin(b(t-h))+k\). Show your work and thinking, and use \emph{Desmos} appropriately to check that your formula generates the desired behavior.%
+
 \begin{explanation}
 Since the period of our function is 3, we know that $b = \frac{2\pi}{3}$. The midline is the midpoint of the minimum and maximum values: $\frac{4 + 1.5}{2} = \frac{5.5}{2} = 2.75$. The amplitude is the distance from the midline to the maximum (or minimum): $|2.75 - 4| = 1.25$. Plugging all this information into a function, we obtain $d_1(t) = 1.25\cos\left(\frac{2\pi}{3}t\right) + 2.75$. 
 
@@ -308,12 +313,13 @@ Since we started with the cosine function, we know that the maximum of $1.25\cos
 
 \begin{example}
 Let $f$ be a circular function with midline $\pi$, amplitude $\frac{\pi}{2}$, and period 5, with $f(8) = \frac{3\pi}{2}$. Give a formula for $f$ of the form $a\cos(b(t - h)) + k$ or $a\sin(b(t - h)) + k$.
+
 \begin{explanation}
 Since $a$ corresponds to the amplitude, $a = \frac{\pi}{2}$. Since $k$ corresponds to the midline, $k = \pi$. Since the period is given by $\frac{2\pi}{b}$, $b = \frac{2\pi}{5}$. 
 
 Let's now pay some attention to the choice between sine and cosine. Note that since the midline is $\pi$ and the amplitude is $\frac{\pi}{2}$, the maximum of our function is $\frac{3\pi}{2}$. This means that the condition that $f(8) = \frac{3\pi}{2}$ tells us where the maximum should be. We have a very easy location for the maximum of cosine: $t = 0$, so we'll choose to use cosine here. Note that choosing sine isn't incorrect, just more difficult.
 
-Plugging our values into the equation, we have $f_1(t) = \frac{\pi}{2}\left(\frac{2\pi}{5}t\right) + \pi$. The maximum for cosine occurs at $t = 0$, as stated above, but we want the maximum to occur at $t = 8$, so we'll shift the graph of $f_1$ 8 units to the right. This gives us $f(t) = f_1(t - 8) =  \frac{\pi}{2}\left(\frac{2\pi}{5}(t - 8)\right) + \pi$.
+Plugging our values into the equation, we have $f_1(t) = \frac{\pi}{2}\cos\left(\frac{2\pi}{5}t\right) + \pi$. The maximum for cosine occurs at $t = 0$, as stated above, but we want the maximum to occur at $t = 8$, so we'll shift the graph of $f_1$ 8 units to the right. This gives us $f(t) = f_1(t - 8) =  \frac{\pi}{2}\cos\left(\frac{2\pi}{5}(t - 8)\right) + \pi$.
 \end{explanation}
 \end{example}
 
@@ -323,6 +329,7 @@ Give a formula of the form $a\cos(b(t - h)) + k$ or $a\sin(b(t - h)) + k$ for th
 \begin{image}
 \includegraphics[width=0.8\linewidth]{images/graph-to-formula.png}
 \end{image}
+
 \begin{explanation}
 Although this problem may seem different from the previous problem, we can still collect information about the midline, amplitude, and period from the graph of the function. 
 
@@ -332,6 +339,7 @@ Here, the amplitude is 3, the midline is $-2$, and the period is $\pi$. Using th
 
 \begin{example}
 Graph the function $f$ given by $f(x) = -2\sin(2(x - 1)) + 3$. Keep track of the points $(0, 0)$, $\left(\frac{\pi}{2}, 1\right)$, and $(\pi, 0)$ at each step. Give the midline, amplitude, and period of $f$. 
+
 \begin{explanation}
 While this may seem like a complicated set of transformations, it's nothing that we couldn't have done in the earlier section on function transformations. The only catch here is that in order to use our order from before, we need to distribute the 2 inside the parentheses to obtain $f(x) = -2\sin(2x - 2) + 3$. This puts our function in the form needed to use the order. 
 
@@ -364,6 +372,7 @@ The midline of $f$ is 3, the amplitude is 2, and the period is $\pi$. This is al
 \end{explanation}
 \end{example}
 
+You may have noticed that the last example involved a reflection, a transformation we have not talked about in the context of circular functions. This is because reflections of circular functions turn out to be obtainable by shifts, so when we're given graphical information and asked to reconstruct the formula for a function, we don't need to use reflections. Reflections may show up when we are given a formula and asked to provide a graph. But we already have lots of practice producing graphs in this situation and can draw on this prior experience with transformations. 
 
 %
 %
