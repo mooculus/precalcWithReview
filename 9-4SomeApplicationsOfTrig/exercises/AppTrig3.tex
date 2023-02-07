@@ -1,0 +1,118 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\author{Elizabeth Campolongo}
+
+\begin{document}
+\begin{exercise}
+
+Solve the equation:
+$$\csc (\theta) = -\sqrt{2}.$$
+
+Give exact answers as in the examples. [\textit{Hint}: Draw the associated triangle.]
+
+\begin{enumerate}
+\item This time we will start with the unit circle.
+\begin{image}
+				\begin{tikzpicture}
+					\begin{axis}[
+				            xmin=-1.1,xmax=1.1,ymin=-1.1,ymax=1.1,
+				            axis lines=center,
+				            width=4in,
+				            xtick={-1,1},
+				            ytick={-1,1},
+				            clip=false,
+				            unit vector ratio*=1 1 1,
+				            xlabel=$x$, ylabel=$y$,
+				            every axis y label/.style={at=(current axis.above origin),anchor=south},
+				            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+				          ]        
+				          \addplot [dashed, smooth, domain=(0:360)] ({cos(x)},{sin(x)}); %% unit circle
+				
+				          \addplot+[thick,penColor2,->] plot coordinates {(0,0) (-.707,-.707)}; %% 225 degrees
+				
+%				          \addplot+[thick,penColor,->] plot coordinates {(0,0) (1,0)}; %% 40 degrees
+				          
+				          \addplot [textColor,smooth, domain=(0:226)] ({.10*cos(x)},{.10*sin(x)});
+				          \addplot [penColor3,smooth, domain=(180:226)] ({.15*cos(x)},{.15*sin(x)});
+				          \node at (axis cs:.07,.15) [anchor=west] {$\theta_1$};
+				          \node at (axis cs:-.3,-.1) [anchor=west, penColor3] {$\theta_2$};
+				         \end{axis}
+				\end{tikzpicture}
+				\end{image}
+Here we see two angles indicated on the unit circle: $\theta_1$ and $\theta_2$. Which one is the reference angle? 
+ \begin{multipleChoice}
+    \choice{$\theta_1$}
+    \choice[correct]{$\theta_2$}
+  \end{multipleChoice}
+
+\item So, what is the reference angle, $\theta_R$? $\answer{\frac{\pi}{4}}$
+
+\item What is the period of $\csc\theta$? $\answer{2\pi}$%$\answer{(0,\pi)}$ $\cup$ $\answer{(\pi,2\pi)}$
+\end{enumerate}
+ \begin{exercise}
+Now let's return to the unit circle. 
+%Now consider the unit circle. Draw the angles corresponding to $\theta_R$ in one period $(0,\pi) \cup (\pi,2\pi)$ on the unit circle. 
+\begin{image}
+				\begin{tikzpicture}
+					\begin{axis}[
+				            xmin=-1.1,xmax=1.1,ymin=-1.1,ymax=1.1,
+				            axis lines=center,
+				            width=4in,
+				            xtick={-1,1},
+				            ytick={-1,1},
+				            clip=false,
+				            unit vector ratio*=1 1 1,
+				            xlabel=$x$, ylabel=$y$,
+				            every axis y label/.style={at=(current axis.above origin),anchor=south},
+				            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+				          ]        
+				          \addplot [dashed, smooth, domain=(0:360)] ({cos(x)},{sin(x)}); %% unit circle
+				
+						          
+				          \addplot+[thick,penColor2,->] plot coordinates {(0,0) (.707,.707)}; %% 45 degrees
+				          				
+				          \addplot+[thick,penColor,->] plot coordinates {(0,0) (-.707,.707)}; %% 135 degrees
+				            \addplot+[thick,penColor3,->] plot coordinates {(0,0) (-.707,-.707)}; %% 225 degrees
+				              \addplot+[thick,penColor4,->] plot coordinates {(0,0) (.707,-.707)}; %% 315 degrees
+				          
+%				          \addplot [penColor2,smooth, samples=500, domain=(0:1350)] ({(.05+.15*x/1350)*cos(x)},{(.05+.15*x/1350)*sin(x)});
+%				          \addplot [penColor3,smooth, domain=(0:41)] ({.2*cos(x)},{.2*sin(x)});
+				          \node at (axis cs:.1,.08) [anchor=west, penColor2] {$\theta_A$}; %\pi/4
+				            \node at (axis cs:-.15,.2) [anchor=west] {$\theta_B$}; %3\pi/4
+				          \node at (axis cs:-.25,-.07) [anchor=west, penColor3] {$\theta_C$}; %5\pi/4
+				          \node at (axis cs:.1,.-.07) [anchor=west, penColor4] {$\theta_D$}; %7\pi/4
+					\addplot+[penColor3, soliddot] coordinates{(0,-1)} node[above right]{$(0,-1)$};
+
+				         \end{axis}
+				\end{tikzpicture}
+				\end{image}
+Above we have four angles indicated on the unit circle, each measuring counterclockwise from the $x$-axis.
+\begin{enumerate}
+\item $\theta_A = \answer{\frac{\pi}{4}}$.
+
+\item $\theta_B = \answer{\frac{3\pi}{4}}$.
+
+\item $\theta_C = \answer{\frac{5\pi}{4}}$.
+
+\item $\theta_D = \answer{\frac{7\pi}{4}}$.
+
+\item Which angles are the solutions to $\csc \theta = - \sqrt{2}$? 
+\begin{multipleChoice}
+\choice{$\theta_A$ and $\theta_C$}
+\choice[correct]{$\theta_C$ and $\theta_D$}
+\choice{$\theta_B$ and $\theta_D$}
+\choice{$\theta_A$ and $\theta_B$}
+\end{multipleChoice}
+\end{enumerate}
+
+%Choose the associated angles .... Draw the angles corresponding to $\theta_R$ in one period $[0,2\pi)$ on the unit circle. 
+ \begin{exercise}
+Now that we've done each of these steps, what are the general solutions to the equation? $\answer{\frac{5\pi}{4} + 2\pi k}$ and $\answer{\frac{7\pi}{4} + 2\pi k}$ for any integer $k$.
+	
+
+\end{exercise}
+\end{exercise}
+\end{exercise}
+\end{document}

@@ -1,0 +1,228 @@
+\documentclass{ximera}
+
+\input{../preamble}
+\author{David Kish, Kenneth Berglund}
+\license{Creative Commons Attribution-ShareAlike 4.0 International License}
+\acknowledgement{}
+
+\title{Trig Functions as Functions}
+
+\begin{document}
+\begin{abstract}
+  
+\end{abstract}
+\maketitle
+
+%\typeout{************************************************}
+%\typeout{Subsection }
+%\typeout{************************************************}
+
+
+\begin{motivatingQuestions}
+\begin{itemize}
+\item How do trigonometric functions interact with other functions?
+\item How do we find zeros of trigonometric functions?
+\item What does average rate of change look like with trigonometric functions?
+\end{itemize}
+\end{motivatingQuestions}
+\section{Trig Function Compositions}
+
+Trigonometric functions can be composed with any of the types of functions that we have already seen. Just as with other function compostions, we need to be mindful of the domains and ranges of our functions.
+
+\begin{example}
+Let's consider the following functions: $f(x)=\sin{(x)}$ and $g(x)=3x^2$.
+\\
+Find the function below and state its domain and range.
+\begin{enumerate}
+\item $(f \circ g)(x)$
+\item $(g \circ f)(x)$
+\item $(f \circ f)(x)$
+\end{enumerate}
+
+\begin{explanation}
+First let's find the domain and range of $f(x)$ and $g(x)$.\\
+The domain for both $f(x)$ and $g(x)$ is $(-\infty , \infty)$. The range for $f(x)$ is $[-1,1]$ and the range for $g(x)$ is $[0,\infty)$. Now we can look at the compositions.
+\begin{enumerate}
+\item $f(g(x))= \sin(3x^2)$\\
+The domain of $f \circ g$ consists of all inputs to $g$ whose corresponding outputs are in the domain of $f$.  Since the domain of $f$ is $(-\infty, \infty)$, all outputs of $g$ are in the domain of $f$, so the domain of $f \circ g$ is the entire domain of $g$, namely $(-\infty , \infty)$.
+
+Finding the range of $f \circ g$ is a bit trickier. Since the range of $g$ is only non-negative numbers, only non-negative numbers will be plugged into $f$ when evaluating the composition. The question therefore becomes: what outputs of $f$ correspond to non-negative inputs? The answer is: all of them! By looking at the graph of the sine function, we can see that all $y$-values have a corresponding non-negative $x$-value. Therefore, the range of $f$, namely $[-1, 1]$, is the range of $f \circ g$.
+
+\item $g(f(x)) =3\sin^2(x)$. Remember that $\sin^2(x)$ means $(\sin(x))^2$.\\
+All real numbers can be plugged into $\sin(x)$, and the results can all be squared. The results of \textit{that} process can all be multiplied by 3, so the domain of $g \circ f$ is $(-\infty, \infty)$.
+
+Let's start by finding the range of $\sin^2(x)$. Since we are squaring $\sin(x)$, its outputs are all non-negative. However, the maximum absolute value of $\sin(x)$ is 1, so the maximum value of $\sin^2(x)$ is 1. Since $\sin(x)$ ranges through all values in $[-1, 1]$, $\sin^2(x)$ ranges through all values in $[0, 1]$. Multiplying $\sin^2(x)$ by 3 results in a vertical stretch by a factor of 3, so the range of $3\sin^2(x)$ is $[0, 3]$. 
+\item $f(f(x))= \sin(\sin(x))$\\
+The domain of $\sin(x)$ is all real numbers, and therefore, all outputs of $\sin(x)$ can be plugged into $\sin(x)$, meaning that the domain of $f \circ f$ is all real numbers, $(-\infty, \infty)$. 
+
+Since $\sin(x)$ increases from -1 to 1 as $x$ goes from $-\pi/2$ to $\pi/2$, $\sin(\sin(x))$ increases from $\sin(-1)$ to $\sin(1)$ as $x$ goes from $-\pi/2$ to $\pi/2$. Since going from $-\pi/2$ to $\pi/2$ takes us through the entire range of $\sin(x)$, the range of $f \circ f$ is $[\sin(-1), \sin(1)]$. Recall that $\sin$ is an odd function, meaning $\sin(-x) = -\sin(x)$. Therefore, another way to write the range of $f \circ f$ is $[-\sin(1), \sin(1)]$. 
+\end{enumerate}
+\end{explanation}
+\end{example}
+
+\section{Finding Zeros of Trigonometric Funtions.}
+\begin{example}
+Let $f$ be a function defined by $f(x)=\sin^2(x)-1$. Find the zeros of $f$ in the interval $[0, 2\pi)$.
+
+\begin{explanation}
+First we need to set $f(x)$ equal to $0$:\\
+\[
+\sin^2(x)-1=0
+\]
+Now we can recognize that we have a difference of squares, so we have the following:
+\[
+(\sin(x)+1)(\sin(x)-1) = 0.
+\]
+Now we can set each factor on the left equal to zero. So we have
+\[
+\sin(x)+1=0 \text{ and } \sin(x)-1 =0.
+\]
+After simplifying them a bit, we have
+\[
+\sin(x) =-1 \text{ and } \sin(x)=1.
+\]
+Because these are famous values of $\sin(x)$, we can find values for $x$ without using inverse trigonometry. The solution to $\sin(x) = -1$ is $x = \frac{3\pi}{2}$ and the solution to $\sin(x) = 1$ is $x = \frac{\pi}{2}$. Note that there are other $x$-values for which $\sin(x) = \pm 1$, but these are the only ones for which $0 \le x < 2\pi$. 
+
+If we wanted to find those other $x$-values, we could add or subtract multiples of $2\pi$ to our solutions in the interval $[0, 2\pi)$. This is because our function is periodic with period $2\pi$. A complete list of all the zeros of $f$ would then be $\frac{\pi}{2} + 2\pi k$ and $\frac{3\pi}{2} + 2\pi k$ for all integers $k$. The notation with the $k$ means that for any integer value of $k$ ($\ldots, -2, -1, 0, 1, 2, \ldots$), $\frac{\pi}{2} + 2\pi k$ gives us another zero of the function $f$, and likewise for $\frac{3\pi}{2} + 2\pi k$. 
+\end{explanation}
+\end{example}
+
+\begin{example}
+Let $f$ be a function defined by $f(x)=\sin^2(x)+\frac{5}{2}\sin(x)-\frac{3}{2}$. Find the zeros of $f$ in the interval $[0, 2\pi)$.
+
+\begin{explanation}
+First we need to set $f$ equal to $0$:\\
+$$\sin^2(x)+\frac{5}{2}\sin(x)-\frac{3}{2}=0$$
+Thankfully the left-hand side can factor nicely, so we have\\
+\[
+\sin^2(x)+\frac{5}{2}\sin(x)-\frac{3}{2}= \left(\sin(x)-\frac{1}{2}\right)(\sin(x)+3).
+\]
+Now we set each factor equal to zero:
+\[
+\sin(x)-\frac{1}{2}=0 \text{ and } \sin(x)+3 =0.
+\]
+After simplifying them a bit, we have
+\[
+\sin(x) = \frac{1}{2} \text{ and } \sin(x)=-3.
+\]
+$-3$ is outside of the range of $\sin(x)$ so we get no solutions to our equation from that factor. Our only concern is the famous value where $\sin(x) = \frac{1}{2}$. This happens to occur in two places for $0\leq x < 2\pi$, so our answer is $x=\frac{\pi}{6},\frac{5\pi}{6}$.
+
+A complete list of all the zeros of $f$ would be $\frac{\pi}{6} + 2\pi k$ and $\frac{5\pi}{6} + 2\pi k$ for all integers $k$. 
+\end{explanation}
+\end{example}
+
+\begin{example}
+Let $f$ be a function defined by $f(x)=\cos(x) + \cos(-x) - \sqrt{2}$. Find the zeros of $f$ in the interval $[0, 2\pi)$.
+
+\begin{explanation}
+First we need to set $f$ equal to $0$:
+$$\cos(x) + \cos(-x) - \sqrt{2}=0$$
+Recall that $\cos$ is an even function, so $\cos(-x) = \cos(x)$. Making this substitution, we have that 
+\begin{align*}
+\cos(x) + \cos(-x) - \sqrt{2} & = 0 \\
+\cos(x) + \cos(x) - \sqrt{2} & = 0 \\
+2\cos(x) - \sqrt{2} & = 0 \\
+2\cos(x) & = \sqrt{2} \\
+\cos(x) & = \frac{\sqrt{2}}{2}.
+\end{align*}
+
+But we know values of $x$ that satisfy this equation from our earlier study: $\frac{\pi}{4}$ and $\frac{7\pi}{4}$. 
+
+A complete list of all the zeros of $f$ would be $\frac{\pi}{4} + 2\pi k$ and $\frac{7\pi}{4} + 2\pi k$ for all integers $k$. 
+\end{explanation}
+\end{example}
+
+\begin{example}
+Let $f$ be a function defined by $f(x)=\csc(x) + \sqrt{2}$. Find the zeros of $f$ in the interval $[0, 2\pi)$.
+\begin{explanation}
+First we need to set $f$ equal to $0$:
+\begin{align*}
+\csc(x) + \sqrt{2} & = 0 \\
+\csc(x) & = -\sqrt{2}.
+\end{align*}
+Now we use the fact that cosecant is the reciprocal of sine:
+\begin{align*}
+\frac{1}{\sin(x)} & = -\sqrt{2} \\
+\sin(x) & = -\frac{1}{\sqrt{2}} \\
+\sin(x) & = -\frac{\sqrt{2}}{2}.
+\end{align*}
+
+We now know values of $x$ that satisfy this equation from our earlier study: $\frac{5\pi}{4}$ and $\frac{7\pi}{4}$. 
+
+A complete list of all the zeros of $f$ would be $\frac{5\pi}{4} + 2\pi k$ and $\frac{7\pi}{4} + 2\pi k$ for all integers $k$. 
+\end{explanation}
+\end{example}
+
+\begin{example}
+Let $f$ be a function defined by $f(x)=\sin(2x) - \frac{1}{2}$. Find the zeros of $f$ in the interval $[0, 2\pi)$.
+
+\begin{explanation}
+First we need to set $f$ equal to $0$:
+$$\sin(2x) - \frac{1}{2} = 0 \implies \sin(2x) = \frac{1}{2}$$
+Now comes a tricky part. We know values that we can plug into $\sin(x)$ to make it equal $\frac{1}{2}$, but we don't have the same comfort level with $\sin(2x)$. What we'll do is make a substitution $u = 2x$. Now our equation has become
+$$\sin(u) = \frac{1}{2}.$$
+
+But we know all the solutions to this equation! If $u = \frac{\pi}{6}$ or $u = \frac{5\pi}{6}$, then $\sin(u) = \frac{1}{2}$. In fact, we know that all solutions are $u = \frac{\pi}{6} + 2\pi k$ and $u = \frac{5\pi}{6} + 2\pi k$ for all integers $k$.
+
+However, to solve our original equation of $\sin(2x) = \frac{1}{2}$ in terms of $x$, we need to undo our substitution: if $u = 2x$, then $x = \frac{u}{2}$. Dividing our solutions in terms of $u$ by 2, we obtain the solutions $x = \frac{\pi}{12} + \pi k$ and $x = \frac{5\pi}{12} + \pi k$ for all integers $k$. This is a complete list of zeros of our function $f$.   
+
+It now remains to see which of these zeros are in the interval $[0, 2\pi)$. A surefire way to do this is to plug in different values for $k$. Plugging in $k = -1$ for $x = \frac{\pi}{12} + \pi k$ gives us a negative, which isn't in the interval $[0, 2\pi)$, so we plug in 0 and 1 for $k$ to obtain $\frac{\pi}{12}$ and $\frac{\pi}{12} + \pi = \frac{13\pi}{12}$. If we plug in 2 for $k$, we obtain $\frac{\pi}{12} + 2\pi = \frac{25\pi}{12}$, which is larger than $2\pi$, and so is not in the correct interval. All other values of $k$ will similarly produce numbers outside $[0, 2\pi)$. Therefore, the only zeros in $[0, 2\pi)$ of the form $x = \frac{\pi}{12} + \pi k$ are $\frac{\pi}{12}$ and $\frac{13\pi}{12}$. Likewise, the only solutions in the interval $[0, 2\pi)$ of the form $x = \frac{5\pi}{12} + \pi k$ are $\frac{5\pi}{12}$ and $\frac{17\pi}{12}$. Therefore, a list of the zeros of $f$ in the interval $[0, 2\pi)$ is given by $\frac{\pi}{12}$, $\frac{5\pi}{12}$, $\frac{13\pi}{12}$, and $\frac{17\pi}{12}$. 
+\end{explanation}
+\end{example}
+
+The previous example should seem quite complicated, so let's try and summarize what we did. First, we isolated the trigonometric function on one side of the equation. Then, we made a substitution to simplify the equation in $x$ into an equation in $u$ we knew how to solve. Upon solving, we needed to undo the substitution. The twist here is that we needed to undo the substitution for \emph{all} the solutions to the $u$-equation, then see which of them were in $[0, 2\pi)$. 
+
+\begin{example}
+Let $f$ be a function defined by $f(x)=\cos(3x + \pi) - \frac{1}{2}$. Find the zeros of $f$ in the interval $[0, 2\pi)$.
+
+\begin{explanation}
+First we need to set $f$ equal to $0$:
+$$\cos(3x + \pi) - \frac{1}{2} = 0 \implies \cos(3x + \pi) = \frac{1}{2}$$
+Now comes the substitution part. We'll make a substitution $u = 3x + \pi$. Now our equation has become
+$$\cos(u) = \frac{1}{2}.$$
+
+But we know all the solutions to this equation! If $u = \frac{\pi}{3}$ or $u = \frac{5\pi}{3}$, then $\cos(u) = \frac{1}{2}$. In fact, we know that all solutions are $u = \frac{\pi}{3} + 2\pi k$ and $u = \frac{5\pi}{3} + 2\pi j$ for all integers $k$.
+
+However, to solve our original equation of $\cos(3x + \pi) = \frac{1}{2}$ in terms of $x$, we need to undo our substitution: if $u = 3x + \pi$, then $x = \frac{u}{3} - \frac{\pi}{3}$. Undoing our substitution by subtracting $\pi$ and dividing by $3$, we obtain the solutions $x = -\frac{2\pi}{9} + \frac{2\pi}{3} k$ and $x = \frac{2\pi}{9} + \frac{2\pi}{3} k$ for all integers $k$. This is a complete list of zeros of our function $f$.   
+
+It now remains to see which of these zeros are in the interval $[0, 2\pi)$. Going through all the relevant values of $k$, we find that $\frac{2\pi}{9}$, $\frac{4\pi}{9}$, $\frac{8\pi}{9}$, $\frac{10\pi}{9}$, $\frac{14\pi}{9}$, and $\frac{16\pi}{9}$ are the only zeros in the correct interval.  
+\end{explanation}
+\end{example}
+
+\section{Average Rate of Change with Trigonometry}
+
+We can still find average rate of change with trigonometric functions, but because they are periodic there can be some interesting results.
+
+\begin{example}
+Let $f(x) =\sin(x)$.
+\begin{enumerate}
+\item Find $\av_{\left[\frac{\pi}{6},\frac{3\pi}{4}\right]} $.
+\item Find $\av_{\left[\frac{\pi}{3},\frac{2\pi}{3}\right]} $.
+\end{enumerate}
+\begin{explanation}
+\begin{enumerate}
+\item $$\av_{\left[\frac{\pi}{6},\frac{3\pi}{4}\right]}  = \frac{\sin(\frac{3\pi}{4})-\sin(\frac{\pi}{6})}{\frac{3\pi}{4} - \frac{\pi}{6}}$$
+First we substitute in our trig values:
+$$\frac{\sin(\frac{3\pi}{4})-\sin(\frac{\pi}{6})}{\frac{3\pi}{4} - \frac{\pi}{6}}=\frac{\frac{\sqrt{2}}{2}-\frac{1}{2}}{\frac{3\pi}{4} - \frac{\pi}{6}}$$
+Next, we simplify our fractions:
+\begin{align*}
+\frac{\frac{\sqrt{2}}{2}-\frac{1}{2}}{\frac{3\pi}{4} - \frac{\pi}{6}} & = \frac{\frac{\sqrt{2}-1}{2}}{\frac{9\pi}{12} - \frac{2\pi}{12}}= \frac{\frac{\sqrt{2}-1}{2}}{\frac{7\pi}{12}}\\
+& = \frac{\frac{\sqrt{2}-1}{2}}{\frac{7\pi}{12}} \\
+& =\frac{6(\sqrt{2}-1)}{7\pi}.
+\end{align*}
+Therefore, 
+$$\av_{\left[\frac{\pi}{6},\frac{3\pi}{4}\right]} =\frac{6\sqrt{2}-6}{7\pi}.$$
+
+\item $$\av_{\left[\frac{\pi}{3},\frac{2\pi}{3}\right]} = \frac{\sin(\frac{2\pi}{3})-\sin(\frac{\pi}{3})}{\frac{2\pi}{3} - \frac{\pi}{3}}$$
+First we substitute in our trig values:
+$$\frac{\sin(\frac{2\pi}{3})-\sin(\frac{\pi}{3})}{\frac{2\pi}{3} - \frac{\pi}{3}} = \frac{\frac{\sqrt{3}}{2}-\frac{\sqrt{3}}{2}}{\frac{2\pi}{3} - \frac{\pi}{3}}.$$
+Next, we simplify:
+$$\frac{\frac{\sqrt{3}}{2}-\frac{\sqrt{3}}{2}}{\frac{2\pi}{3} - \frac{\pi}{3}}=\frac{0}{\frac{\pi}{3}}.$$
+We can see that we have $0$ in the numerator, which means that our average rate of change will be $0$. This is because we picked $x$-values with the same $y$-value. Even though we had positive and negative rates of change at some point between $\frac{\pi}{3}$ and $\frac{2\pi}{3}$, both endpoints of the interval have the same $y$-value, so \emph{on average} there was no change.
+\end{enumerate}
+\end{explanation}
+\end{example}
+
+
+
+\end{document}
