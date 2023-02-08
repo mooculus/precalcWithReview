@@ -76,13 +76,13 @@ To elaborate more on this conclusion, we note that it allows us to read values o
  
 \section{Practicing}
 
-Let's explore several situations on what follows. To draw the graph of $f$ to being with, we rely on what was discussed on previous chapters.
+Let's explore several situations on what follows. To draw the graph of $f$ to begin with, we rely on what was discussed on previous chapters.
 
 \begin{example}
   Consider the function $f(x)=3x-6$. Draw the graph of $f^{-1}$ from the graph of $f$. Then, algebraically find $f^{-1}$ to confirm your work.
   
   \begin{explanation}
-    Since $f$ is a linear function, all we need to know to draw its graph is its slope, and $y$-intersect. The formula immediately tells us that the slope is $3$ and the $y$-intercept is $-6$. The inverse of a one-to-one linear function is also a linear function, and a line is determined by two points. So in this case, all we have to do is to reflect two points in the graph of $f$ about the line $y=x$, and draw the line passing through the reflected points: this is the graph of $f^{-1}$.
+    Since $f$ is a linear function, all we need to know to draw its graph are its slope and $y$-intercept. The formula immediately tells us that the slope is $3$ and the $y$-intercept is $-6$. The inverse of a one-to-one linear function is also a linear function, and a line is determined by two points. So in this case, all we have to do is to reflect two points in the graph of $f$ about the line $y=x$, and draw the line passing through the reflected points: this is the graph of $f^{-1}$.
 
     \begin{image}
       \begin{tikzpicture}
@@ -186,7 +186,7 @@ The graph of $f^{-1}$, also formed by branches of hyperbolas and having a vertic
   Consider the function $f(x) = 3{\rm e}^{x-2}$, defined for all real numbers $x$. Draw the graph of $f^{-1}$ from the graph of $f$. Then, algebraically find $f^{-1}$ to confirm your work.
   
   \begin{explanation}
-    To draw the graph of $f$, we start from the graph of the exponential $y={\rm e}^x$, shift it $2$ units to the right, and then apply a vertical dilation by a factor of $3$.
+    To draw the graph of $f$, we start from the graph of the exponential $y={\rm e}^x$, shift it $2$ units to the right, and then apply a vertical stretch by a factor of $3$.
 
     \begin{image}
       \begin{tikzpicture}
@@ -222,7 +222,7 @@ In practice, this result can be used to quickly find formulas for inverse functi
 Let's revisit the last example above as an application of this:
 
 \begin{example}
-  Consider again the function given by $h(x) = e^{\sqrt{x-3}}$, for all $x\geq 3$, on Example 3. What does $h$ do to a number $x$? First, subtract $3$. Secondly, take the square root. Lastly, exponentiates it. Writing it mathematically, we have that $h = h_1\circ h_2\circ h_3$, where $$h_1(x) =e^x,\quad h_2(x) = \sqrt{x},\quad\mbox{and}\quad h_3(x)= x-3.$$All of those functions are one-to-one, with inverses given by $$h_1^{-1}(x) = \ln x,\quad h_2^{-1}(x) = x^2,\quad\mbox{and}\quad h_3^{-1}(x) = x+3.$$Hence \begin{align*}h^{-1}(x) &= (h_1\circ h_2\circ h_3)^{-1}(x) \\ &= h_3^{-1}\circ h_2^{-1} \circ h_1^{-1}(x) \\ &= h_3^{-1}\circ h_2^{-1}(\ln x) \\ &= h_3^{-1}((\ln x)^2) \\ &= (\ln x)^2 + 3, \end{align*}which agrees with what was obtained before.
+Consider again the function given by $h(x) = e^{\sqrt{x-3}}$, for all $x\geq 3$, on Example 3. What does $h$ do to a number $x$? First, it subtracts $3$. Secondly, it takes the square root. Lastly, it exponentiates it. Writing it mathematically, we have that $h = h_1\circ h_2\circ h_3$, where $$h_1(x) =e^x,\quad h_2(x) = \sqrt{x},\quad\mbox{and}\quad h_3(x)= x-3.$$All of those functions are one-to-one, with inverses given by $$h_1^{-1}(x) = \ln x,\quad h_2^{-1}(x) = x^2,\quad\mbox{and}\quad h_3^{-1}(x) = x+3.$$Hence \begin{align*}h^{-1}(x) &= (h_1\circ h_2\circ h_3)^{-1}(x) \\ &= h_3^{-1}\circ h_2^{-1} \circ h_1^{-1}(x) \\ &= h_3^{-1}\circ h_2^{-1}(\ln x) \\ &= h_3^{-1}((\ln x)^2) \\ &= (\ln x)^2 + 3, \end{align*}which agrees with what was obtained before.
 \end{example}
 
 

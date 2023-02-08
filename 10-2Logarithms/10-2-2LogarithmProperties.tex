@@ -25,7 +25,7 @@
 %\typeout{************************************************}
 %\typeout{Introduction}
 %\typeout{************************************************}
-The key to understanding logarithms is through their relationship with exponential functions. Since $f(x) = \log_b(x)$ is the inverse function to $g(x) = b^x$, many of the properties of exponential functions can be translated into properties of logarithms. In this section, we'll try to discover these and find several other interesting properties of logarithms along with way.
+The key to understanding logarithms is through their relationship with exponential functions. Since $f(x) = \log_b(x)$ is the inverse function to $g(x) = b^x$, many of the properties of exponential functions can be translated into properties of logarithms. In this section, we'll try to discover these and find several other interesting properties of logarithms along the way.
 
 We highlight several important principles from our previous discussion of inverse functions:
 \begin{itemize}
@@ -52,8 +52,8 @@ Another way to see this is by using the fact that the function $g(x) = 10^x$ is 
 
 There was nothing special about 10 and 17 in what we just showed, so this allows us to arrive at a very general way to write positive real numbers as exponentials. 
 
-\begin{callout}
-If $x$ and $b$ are positive real numbers, we can write $x = b^{\log_b(x)}$.
+\begin{callout}[Inverse Property of Logarithms]
+If $x$ and $b$ are positive real numbers and $b \ne 1$, we can write $x = b^{\log_b(x)}$.
 \end{callout}
   
 Another way to understand this is to remember the definition of the logarithm. $\log_b(x)$ is precisely the power to which you have to raise $b$ in order to obtain $x$. 
@@ -63,7 +63,7 @@ Finally, this can also be viewed as a statement about inverse functions. If $f(x
 \section{Product Property of Logarithms}
 You might think that the method in the previous section of writing positive real numbers as exponentials unnecessarily complicates things, but we can use it to adapt properties of exponents into properties of logarithms. 
 
-Recall that multiplying exponential expressions of the same base results in another exponential expression: in symbols, $$b^u \cdot b^v = b^{u + v}$$ for any real numbers $u$ and $v$. 
+Recall that multiplying exponential expressions of the same base results in another exponential expression whose exponent is the sum of the two original exponents: in symbols, $$b^u \cdot b^v = b^{u + v}$$ for any real numbers $u$ and $v$. 
 
 Let's see if we can use this fact, again restricting our attention to $b = 10$. Since 2 and 3 are positive real numbers, we can write $2 = 10^{\log(2)}$ and $3 = 10^{\log(3)}$. Then,
 $$
@@ -71,8 +71,8 @@ $$
 $$
 
 Notice again how we used the fact that the logarithm and exponential with base 10 are inverses! There's nothing special about 2 and 3, so for any positive real numbers $x$ and $y$, $\log(xy) = \log(x) + \log(y)$. Even more, there's nothing special about base 10, allowing us to come up with a general rule.
-\begin{callout}
-If $x$, $y$, and $b$ are positive real numbers, then $\log_b(xy) = \log_b(x) + \log_b(y)$.
+\begin{callout}[Product Property of Logarithms]
+If $x$, $y$, and $b$ are positive real numbers with $b \ne 1$, then $\log_b(xy) = \log_b(x) + \log_b(y)$.
 \end{callout} 
 
 \section{Quotient Property of Logarithms}
@@ -84,8 +84,8 @@ $$
 $$
 
 Combining this with our previous work, we obtain the following quotient property of logarithms.
-\begin{callout}
-If $x$, $y$, and $b$ are positive real numbers, then $\log_b\left(\frac{x}{y}\right) = \log_b(x) - \log_b(y)$.
+\begin{callout}[Quotient Property of Logarithms]
+If $x$, $y$, and $b$ are positive real numbers with $b \ne 1$, then $\log_b\left(\frac{x}{y}\right) = \log_b(x) - \log_b(y)$.
 \end{callout} 
 
 \section{Power Property of Logarithms}
@@ -94,7 +94,7 @@ Something else you might remember about exponents is that repeated exponentiatio
 In general, $$(b^u)^v = b^{u \cdot v}$$ for all real numbers $b$, $u$, and $v$. 
 
 Let's see if this fact has any consequences for logarithms! Recall that for positive $b$ and $x$, $\log_b(x^u)$ is the power to which we need to raise $b$ in order to obtain $x^u$. However, another way to obtain $x^u$ is to raise $b$ to the power $\log_b(x)$ (yielding $x$) and then raise that result to the power $u$. Since repeated exponentiation is the same thing as multiplying exponents, this amounts to raising $b$ to the power $u\log_b(x)$. In symbols, we've shown that
-\begin{callout}
+\begin{callout}[Power Property of Logarithms]
 If $x$ and $b$ are positive real numbers, and $u$ is a real number, then $\log_b(x^u) = u \log_b(x)$.
 \end{callout}
 
@@ -109,14 +109,16 @@ In essence, taking the logarithm of a power of $x$ is the same thing as multiply
 The above calculation uses the product property to arrive at the same conclusion as the power property. 
 
 \section{Change-of-Base Formula}
-One important thing to recognize is that logarithms can have any positive number as their base. Sometimes, when doing calculations, it may be preferable to use one base over another. The good news is that any logarithm can be computed using this preferred base. 
+One important thing to recognize is that logarithms can have any positive number (except 1) as their base. Sometimes, when doing calculations, it may be preferable to use one base over another. The good news is that any logarithm can be computed using this preferred base. 
 
 As an example, consider the quantity $\log_3(7)$. Many calculators are unable to directly calculate logarithms with a base other than $e$ or 10, so let's convert this into a natural logarithm (logarithm with base $e$). Rewriting 7 as $3^{\log_3(7)}$ using the inverse property of logarithms, we see that $\ln(7) = \ln(3^{\log_3(7)})$. Now, using the power property of logarithms, we see that $\ln(3^{\log_3(7)}) = \log_3(7)\cdot \ln(3)$. This gives us the equality $\ln(7) = \log_3(7)\cdot \ln(3)$, so dividing both sides by $\ln(3)$, $\log_3(7) = \frac{\ln(7)}{\ln(3)}$. If you have an aversion to $\log_3$ and a fondness for $\ln$, then this allows you to calculate $\ln(7)/\ln(3)$ instead of $\log_3(7)$. 
 
 Of course, there's nothing special about 3, 7, and the natural logarithm. In general, we have the following formula.
-\begin{callout}
-If $a$, $b$, and $x$ are positive real numbers, then $\log_b(x) = \frac{\log_a(x)}{\log_a(b)}$.
+\begin{callout}[Change-of-Base Formula]
+If $a$, $b$, and $x$ are positive real numbers with $a \ne 1$ and $b \ne 1$, then $\log_b(x) = \frac{\log_a(x)}{\log_a(b)}$.
 \end{callout}
+
+In words, this formula says that instead of using $\log_b$ to calculate $\log_b(x)$, we can make two calculations with $\log_a$ and divide, which will yield the same result. 
 
 \section{Logarithm Properties in Action}
 \begin{example}
@@ -124,7 +126,7 @@ Say $\log_b(3)$ is approximately $0.388$ and $\log_b(2)$ is approximately $0.245
 
 
 	\begin{explanation}
-	To use the properties of logarithms, we can make use of the factorization of 108: $108 = 4 \cdot 27 = 2^2 \cdot 3^3$. Using the product property of logarithms, $\log_b(108) = \log_b(2^2 \cdot 3^3) = \log_b(2^2) + \log_b(3^3)$. Now we can apply the product property of logarithms to simplify each term. We conclude that $\log_b(2^2) + \log_b(3^3) = 2\log_b(2) + 3\log_b(3) = 2(0.388) + 3(0.245) = 1.511$. 
+	To use the properties of logarithms, we can make use of the factorization of 108: $108 = 4 \cdot 27 = 2^2 \cdot 3^3$. Using the product property of logarithms, $\log_b(108) = \log_b(2^2 \cdot 3^3) = \log_b(2^2) + \log_b(3^3)$. Now we can apply the product property of logarithms to simplify each term. By substituting in our approximations, we conclude that $\log_b(2^2) + \log_b(3^3) = 2\log_b(2) + 3\log_b(3) \approx 2(0.388) + 3(0.245) = 1.511$. 
 
 Therefore, $\log_b(108)$ is approximately $1.511$. 
 	\end{explanation}
@@ -136,7 +138,7 @@ Use the properties of logarithms to write $5\log_5(u) - \frac{1}{3}\log_5(v) + \
 	\begin{explanation}
 	We can first use the power property to rewrite $5\log_5(u) = \log_5(u^5)$ and $\frac{1}{3}\log_5(v) = \log_5(v^{1/3})$. Then we can use the product and quotient properties to combine the terms of the expression.
 \begin{align*}
- \log_5(u^5) - \log_5(v^{1/3}) + \log_5(v) & = \log_5\left(\frac{u^5}{v^{1/3}}\right) + \log_5(t) \\
+ \log_5(u^5) - \log_5(v^{1/3}) + \log_5(v) & = \log_5\left(\frac{u^5}{v^{1/3}}\right) + \log_5(v) \\
 & = \log_5\left(\frac{u^5v}{v^{1/3}}\right) \\
 & = \log_5(u^5v^{2/3})
 \end{align*}
@@ -145,14 +147,49 @@ There are other ways to approach this problem as well. See if you can find anoth
 	\end{explanation}
 \end{example}
 
+\begin{example}
+Use the properties of logarithms to rewrite 
+$$
+\log\left(\frac{(x^2 - 1)\sqrt{yz}}{w - 7}\right)
+$$
+as a sum and difference of logarithms. Expand as much as possible. 
+\begin{explanation}
+In the previous example, we wanted to combine logarithms, while in this one, we want to pull them apart. The first way we can do this is by recognizing that the argument of the logarithm is a fraction. This provides us with an opportunity to use the quotient property: 
+$$
+\log\left(\frac{(x^2 - 1)\sqrt{yz}}{w - 7}\right) = \log((x^2 - 1)\sqrt{yz}) - \log(w - 7). 
+$$
+Now our strategy is to look at each log term and see if we can further expand it into more logarithms. In the first term, note that we have a product, so it can expand using the product property:
+$$
+ \log((x^2 - 1)\sqrt{yz}) - \log(w - 7) = \log(x^2 - 1) + \log(\sqrt{yz}) - \log(w - 7). 
+$$
+Note that $\log(w - 7)$ does not contain a power, product, or quotient, so it cannot be expanded. However, now we have $\log(x^2 - 1)$ as a term in our expression. Since $x^2 - 1$ factors as $(x - 1)(x + 1)$, we technically have a product in the argument of that term. We can therefore expand further using the product property: 
+$$
+\log(x^2 - 1) + \log(\sqrt{yz}) - \log(w - 7) = \log(x - 1) + \log(x + 1) + \log(\sqrt{yz}) - \log(w - 7).
+$$
+Note that now, $\log(x - 1)$ and $\log(x + 1)$ cannot be expanded further. That leaves $\log(\sqrt{yz})$. Recall that taking the square root of a quantity is the same as raising it to the 1/2 power. Therefore, $\log(\sqrt{yz}) = \log((yz)^{1/2})$, and we can use the power property to expand, bringing down the exponent:
+$$
+\log(x - 1) + \log(x + 1) + \frac{1}{2}\log(yz) - \log(w - 7).
+$$
+However, this now creates a log term with a product in it. We can therefore expand our expression by replacing $\log(yz)$ with $\log(y) + \log(z)$, being careful to use parentheses so that the whole quantity is multiplied by $\frac{1}{2}$:
+$$
+\log(x - 1) + \log(x + 1) + \frac{1}{2}(\log(y) + \log(z))- \log(w - 7).
+$$
+By distributing the $\frac{1}{2}$, we've arrived at a state where nothing can be further expanded:
+$$
+\log(x - 1) + \log(x + 1) + \frac{1}{2}\log(y) + \frac{1}{2}\log(z)- \log(w - 7).
+$$
+\end{explanation}
+\end{example}
+
+In the previous two examples, we illustrated a trade-off that occurs. When we combine logarithms into one, we often find that their arguments become messy. However, in order to simplify the arguments of logarithms, we need to separate them out into sums and differences of logarithms. We can have simple arguments, but multiple logs, or we can have one log, but complex arguments. 
 
 \begin{summary}
 
-If $x$, $y$, and $b$ are positive real numbers,\begin{itemize}
+If $x$, $y$, and $b$ are positive real numbers with $b \ne 1$,\begin{itemize}
 \item $\log_b(xy) = \log_b(x) + \log_b(y)$
 \item $\log_b\left(\frac{x}{y}\right) = \log_b(x) - \log_b(y)$
 \item $\log_b(x^u) = u\log_b(x)$ for all real numbers $u$. 
-\item  $\log_b(x) = \frac{\log_a(x)}{\log_a(b)}$ for all positive real numbers $a$. 
+\item  $\log_b(x) = \frac{\log_a(x)}{\log_a(b)}$ for all positive real numbers $a \ne 1$. 
 \end{itemize}\end{summary}
 
 \end{document}
