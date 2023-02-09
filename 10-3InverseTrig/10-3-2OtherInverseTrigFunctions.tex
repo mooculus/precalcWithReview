@@ -55,9 +55,9 @@ As with the cosine function, the trigonometric functions $f(t) = \sin(t)$, $h(t)
 
 \section{The Arcsine Function}
 
-We can develop an inverse function for a restricted version of the sine function in a similar way.  As with the cosine function, we need to choose an interval on which the sine function is always increasing or always decreasing in order to have the function pass the horizontal line test.  The standard choice is the domain $\Big[\!\!-\!\frac{\pi}{2}, \frac{\pi}{2}\Big]$ on which $f(t) = \sin(t)$ is increasing and attains all of the values in the range of the sine function.  Thus, we consider $f(t) = \sin(t)$ so that $f : \Big[\!-\frac{\pi}{2}, \frac{\pi}{2}\Big] \to \big[\!-1,1\big]$ and use this restricted function to define the corresponding arcsine function.%
+We can develop an inverse function for a restricted version of the sine function in a similar way.  As with the cosine function, we need to choose an interval on which the sine function is always increasing or always decreasing in order to have the function pass the horizontal line test.  The standard choice is the domain $\Big[\!\!-\!\frac{\pi}{2}, \frac{\pi}{2}\Big]$ on which $f(t) = \sin(t)$ is increasing and attains all of the values in the range of the sine function.  Thus, we consider $f(t) = \sin(t)$ so that $f$ has domain $\Big[\!-\frac{\pi}{2}, \frac{\pi}{2}\Big]$ and range $\big[\!-1,1\big]$ and use this restricted function to define the corresponding arcsine function.%
 \begin{definition}
-Let $y = f(t) = \sin(t)$ be defined on the domain $\Big[\!\!-\!\frac{\pi}{2}, \frac{\pi}{2}\Big]$, and observe $f : \Big[\!-\frac{\pi}{2}, \frac{\pi}{2}\Big] \to \big[\!-1,1\big]$.  For any real number $y$ that satisfies $-1 \leq y \leq 1$, the \dfn{arcsine of $\mathbf{y}$}, denoted%
+Let $y = f(t) = \sin(t)$ be defined on the domain $\Big[\!\!-\!\frac{\pi}{2}, \frac{\pi}{2}\Big]$, and observe $f$ has the range $\big[\!-1,1\big]$.  For any real number $y$ that satisfies $-1 \leq y \leq 1$, the \dfn{arcsine of $\mathbf{y}$}, denoted%
 \begin{equation*}
 \arcsin(y)
 \end{equation*}
@@ -72,9 +72,9 @@ The goal of this activity is to understand key properties of the arcsine functio
 \item
 Using the definition of arcsine given above, what are the domain and range of the arcsine function? \\
 \begin{itemize}
-\item The domain of arcsine is $\Big[\answer{-\frac{\pi}{2}},\answer{\frac{\pi}{2}}\Big]$.
+\item The domain of arcsine is $[\answer{-1} , \answer{1}]$.
 %
-\item The range of arcsine is $[\answer{-1} , \answer{1}]$.
+\item The range of arcsine is $\Big[\answer{-\frac{\pi}{2}},\answer{\frac{\pi}{2}}\Big]$.
 \end{itemize}
 %
 \item Determine the following values exactly: 
@@ -94,10 +94,10 @@ Using the definition of arcsine given above, what are the domain and range of th
 On the axes provided below, sketch a careful plot of the restricted sine function on the interval $\Big[\!\!-\!\frac{\pi}{2},\frac{\pi}{2}\Big]$ along with its corresponding inverse, the arcsine function.  Label at least three points on each curve so that each point on the sine graph corresponds to a point on the arcsine graph.  In addition, sketch the line $y = t$ to demonstrate how the graphs are reflections of one another across this line.
 %
 %
-\item True or false: $\arcsin(\sin(5\pi)) = 5\pi$? $\wordChoice{\choice{\text{true}}\choice[correct]{\text{false}}}$ \\
+\item True or false: $\arcsin(\sin(5\pi)) = 5\pi$? \wordChoice{\choice{true}\choice[correct]{false}} \\
 Write a complete sentence to explain your reasoning.%
 \end{enumerate}
-\includegraphics[width=1\linewidth]{inverse-trig-blank-axes-arcsin.pdf}
+\includegraphics[width=1\linewidth]{inverse-trig-blank-axes-arcsin.png}
 \end{problem}
 
 \begin{callout}{\bf Properties of the arcsine function.}%
@@ -111,7 +111,7 @@ The arcsine function is always increasing on its domain.%
 \item
 Below we have a plot of the restricted sine function (in light blue) and its corresponding inverse, the arcsine function (in dark blue).%
 \end{itemize}
-\includegraphics[width=1\linewidth]{inverse-trig-arcsin-graph.pdf}
+\includegraphics[width=1\linewidth]{inverse-trig-arcsin-graph.png}
 \end{callout}
 
 \section{Exploring Arcsine}
@@ -156,10 +156,9 @@ Hence, $y$ is $-\frac{\pi}{4}$, and we now see that
 \arcsin\!\Big(\sin\!\Big(\frac{5\pi}{4}\Big)\Big) = \arcsin\!\Big(\!\!-\!\frac{\sqrt{2}}{2}\Big) = -\frac{\pi}{4}.
 \end{equation*}
 
-[graph for arcsine?]
 %Now, let's look again at the graph of cosine. Here we highlight $g: [0,\pi] \rightarrow [0,\pi]$ defined by $y=g(x)=\cos(x)$, the restricted cosine function. We may use the symmetry of the graph of cosine to help find the appropriate values for arccosine.
 %\begin{image}
-%\includegraphics{inverse-trig-PA-cosine.pdf}
+%\includegraphics{inverse-trig-PA-cosine.png}
 %\end{image}
 
 \end{explanation}
@@ -171,21 +170,20 @@ Hence, $y$ is $-\frac{\pi}{4}$, and we now see that
 First, we observe that $\frac{\pi}{3}$ is in the range of arcsine, so there should be a solution. We will now use the fact that sine is the inverse of arcsine to reduce this to a linear equation.
 \begin{align*}
 \arcsin(2x) &= \frac{\pi}{3}\\
-\sin(\arcsin(2x)) &= \sin(\frac{\pi}{3}) \\
+\sin(\arcsin(2x)) &= \sin\left(\frac{\pi}{3}\right) \\
 \end{align*}
 Thus, we have
 $$2x = \frac{\sqrt{3}}{2},$$
 which is equivalent to $x = \frac{\sqrt{3}}{4}$.
 
-[Insert graph here?]
 \end{explanation}
 \end{enumerate}
 \end{example}
 
 \section{The Arctangent Function}
-Finally, we develop an inverse function for a restricted version of the tangent function.  We choose the domain $\Big(\!-\frac{\pi}{2}, \frac{\pi}{2}\Big)$ on which $h(t) = \tan(t)$ is increasing and attains all of the values in the range of the tangent function.%
+Next, we develop an inverse function for a restricted version of the tangent function.  We choose the domain $\Big(\!-\frac{\pi}{2}, \frac{\pi}{2}\Big)$ on which $h(t) = \tan(t)$ is increasing and attains all of the values in the range of the tangent function.%
 \begin{definition}
-Let $y = h(t) = \tan(t)$ be defined on the domain $\Big(\!-\frac{\pi}{2}, \frac{\pi}{2}\Big)$, and observe $h : \Big(\!-\frac{\pi}{2}, \frac{\pi}{2}\Big) \to \big(-\infty,\infty\big)$.  For any real number $y$, the \dfn{arctangent of $\mathbf{y}$}, denoted%
+Let $y = h(t) = \tan(t)$ be defined on the domain $\Big(\!-\frac{\pi}{2}, \frac{\pi}{2}\Big)$, and observe $h$ has the range $\big(-\infty,\infty\big)$.  For any real number $y$, the \dfn{arctangent of $\mathbf{y}$}, denoted%
 \begin{equation*}
 \arctan(y)
 \end{equation*}
@@ -201,9 +199,9 @@ Let us once again channel our inner Sherlock Holmes to understand key properties
 \item Using the definition given above, what are the domain and range of the arctangent function?
 %
 \begin{itemize}
-\item The domain of arctangent is $\Big(\answer{-\frac{\pi}{2}} , \answer{\frac{\pi}{2}} \Big)$.
+\item The domain of arctangent is $(\answer{-\infty} , \answer{\infty})$.
 %
-\item The range of arctangent is $(\answer{-\infty} , \answer{\infty})$.
+\item The range of arctangent is $\Big(\answer{-\frac{\pi}{2}} , \answer{\frac{\pi}{2}} \Big)$.
 \end{itemize}
 %
 \item Determine the following values exactly: 
@@ -219,9 +217,9 @@ Let us once again channel our inner Sherlock Holmes to understand key properties
 %
 \item The restricted tangent function on the interval $\Big(\!-\frac{\pi}{2}, \frac{\pi}{2}\Big)$ is plotted below. On the same axes, sketch its corresponding inverse function (arctangent).  Label at least three points on each curve so that each point on the tangent graph corresponds to a point on the arctangent graph. In addition, sketch the line $y = t$ to demonstrate how the graphs are reflections of one another across this line.%
 %
-\item Complete the following sentence:  ``as $t$ increases without bound, $\arctan(t)$ $\ldots$'' $\wordChoice{\choice{\text{increases without bound}}\choice{\text{decreases without bound}}\choice[correct]{\text{increases toward } \frac{\pi}{2}}\choice{\text{decreases toward } -\frac{\pi}{2}}}$%
+\item Complete the following sentence:  ``as $t$ increases without bound, $\arctan(t)$ $\ldots$'' \wordChoice{\choice{increases without bound}\choice{decreases without bound}\choice[correct]{increases toward $\frac{\pi}{2}$}\choice{decreases toward $-\frac{\pi}{2}$}}%
 \end{enumerate}
-\includegraphics[width=1\linewidth]{inverse-tan-graph.pdf}
+\includegraphics[width=1\linewidth]{inverse-tan-graph.png}
 \end{problem}
 
 \begin{callout}{\bf Properties of the arctangent function.}%
@@ -235,7 +233,7 @@ The arctangent function is always increasing on its domain.%
 \item
 Below we have a plot of the restricted tangent function (in light blue) and its corresponding inverse, the arctangent function (in dark blue).%
 \end{itemize}
-\includegraphics[width=1\linewidth]{inverse-trig-arctan-graph.pdf}
+\includegraphics[width=1\linewidth]{inverse-trig-arctan-graph.png}
 \end{callout}
 
 \section{Exploring Arctangent}
@@ -281,10 +279,9 @@ Hence, $y$ is $-\frac{\pi}{3}$, and we now see that
 \arctan\!\Big(\!\tan\!\Big(\frac{5\pi}{3}\Big)\Big) = \arctan(-\sqrt{3}) = -\frac{\pi}{3}.
 \end{equation*}
 
-[graph for arctangent?]
 %Now, let's look again at the graph of cosine. Here we highlight $g: [0,\pi] \rightarrow [0,\pi]$ defined by $y=g(x)=\cos(x)$, the restricted cosine function. We may use the symmetry of the graph of cosine to help find the appropriate values for arccosine.
 %\begin{image}
-%\includegraphics{inverse-trig-PA-cosine.pdf}
+%\includegraphics{inverse-trig-PA-cosine.png}
 %\end{image}
 
 \end{explanation}
@@ -312,11 +309,10 @@ which is further equivalent to $x=-1$
 We will also consider the inverse function for a restricted version of the secant function. 
 As with the cosine and sine functions, we need to choose an interval on which the secant function is always increasing or always decreasing in order to have the function pass the horizontal line test. In the case of secant, this means choosing two distinct intervals. A word of caution in working with the restricted secant function and its associated inverse, there is not a ``standard" choice for the domain of restricted secant. {\it However}, we will establish a convention in this course. 
 
-We Restrict the domain of the function $k(t) = \sec(t)$ to $[0,\pi/2) \cup (\pi/2,\pi ]$, where secant is increasing on each interval and attains all the values within the range of the secant function. By reflecting across the line $y=t$ and switching the $t$ and $y$ coordinates we are able to define the function $k^{-1}(t)=\arcsec(t)$ as follows.
+We restrict the domain of the function $k(t) = \sec(t)$ to $[0,\pi/2) \cup (\pi/2,\pi ]$, where secant is increasing on each interval and attains all the values within the range of the secant function. By reflecting across the line $y=t$ and switching the $t$ and $y$ coordinates we are able to define the function $k^{-1}(t)=\arcsec(t)$ as follows.
 
 \begin{definition}
-Let $y = k(t) = \sec(t)$ be defined on the domain $[0,\pi/2) \cup (\pi/2,\pi ]$, and observe that 
-$$k: \Big[0,\frac{\pi}{2}\Big) \cup \Big(\frac{\pi}{2},\pi \Big] \rightarrow (-\infty,-1] \cup [1,\infty).$$ 
+Let $y = k(t) = \sec(t)$ be defined on the domain $[0,\pi/2) \cup (\pi/2,\pi ]$, and observe that $k$ has the range $(-\infty,-1] \cup [1,\infty)$. 
 For any real number $y$, the {\bf arcsecant of y}, denoted
 $$\arcsec(y)$$
 is the angle $t$ satisfying $0 \leq t < \frac{\pi}{2}$ or $\frac{\pi}{2} < t \leq \pi$. Note that we use $t = \sec^{-1}(y)$ interchangeably with $t = \arcsec(y)$.
@@ -350,12 +346,12 @@ On the axes provided below, sketch a careful plot of the restricted secant funct
 %Can we get axes with $\pm 1$ and $\pi$ and $\frac{\pi}{2}$ labeled?
 %
 %
-\item True or false: $\arcsec(\sec(2\pi)) = 2\pi$? $\wordChoice{\choice{\text{true}}\choice[correct]{\text{false}}}$ \\
+\item True or false: $\arcsec(\sec(2\pi)) = 2\pi$? \wordChoice{\choice{true}\choice[correct]{false}} \\
 Write a complete sentence to explain your reasoning.%
 \end{enumerate}
 
 \begin{image}
-\includegraphics[width=1\linewidth]{SecArcsecAxis.pdf}
+\includegraphics[width=1\linewidth]{SecArcsecAxis.png}
 \end{image}
 \end{problem}
 
@@ -374,9 +370,9 @@ The arcsecant function is always increasing on each interval in its domain.
 For $t$ in the domain of arcsecant, $\arcsec(t) = \arccos\!\Big(\frac{1}{t}\Big)$.
 %
 %
-% %\includegraphics[width=1\linewidth]{arcsecantGraph.pdf}
+% %\includegraphics[width=1\linewidth]{arcsecantGraph.png}
 % 
-%  \includegraphics[width=1\linewidth]{arcsecantGraph2.pdf}
+%  \includegraphics[width=1\linewidth]{arcsecantGraph2.png}
 %
 %CODE FROM STITZ ZEAGER...not sure how to make this work: 
 % \[ \begin{array}{ccc}
@@ -422,7 +418,7 @@ For $t$ in the domain of arcsecant, $\arcsec(t) = \arccos\!\Big(\frac{1}{t}\Big)
 %\end{array}\]
 %Below we have a plot of the restricted tangent function (in light blue) and its corresponding inverse, the arctangent function (in dark blue).%
 \end{itemize}
-\includegraphics[width=1\linewidth]{secArcsecGraphst.pdf}
+\includegraphics[width=1\linewidth]{secArcsecGraphst.png}
 \end{callout}
 
 \section{Exploring Arcsecant} 
@@ -452,7 +448,7 @@ Let's consider a couple more traditional problems combining secant and arcsecant
 \begin{explanation}
 Recall from part (a), that we already solved the equation $x = \arcsec(-\sqrt{2})$, and found that $x = \frac{3\pi}{4}$. Hence, we can now plug that in to solve our current equation:
 %
-$$\sec(\arcsec(-\sqrt{2})) = \sec\!\Big(\frac{3\pi}{4}\Big) = \sqrt{2}.$$
+$$\sec(\arcsec(-\sqrt{2})) = \sec\!\Big(\frac{3\pi}{4}\Big) = -\sqrt{2}.$$
 %
 As we have observed previously with other trig inverses, we have $\sec(\arcsec(x)) = x$ for $x$ in the domain of arcsecant. However, we must be careful in our application of this, as exemplified by the next example.
 \end{explanation}
@@ -496,16 +492,16 @@ For any real number $y$, the arcsecant of $y$ (denoted $\arcsec(y)$) is the angl
 %\par
 The domain of $y = g^{-1}(t) = \arccos(t)$ is $[-1,1]$ with corresponding range $[0,\pi]$, and the arccosine function is always decreasing.  These facts correspond to the domain and range of the restricted cosine function and the fact that the restricted cosine function is decreasing on $[0,\pi]$.
 \begin{image}
-\includegraphics[width = .49\linewidth]{inverse-trig-arccos-graph.pdf}
-\includegraphics[width = .49\linewidth]{inverse-trig-arcsin-graph.pdf}
+\includegraphics[width = .49\linewidth]{inverse-trig-arccos-graph.png}
+\includegraphics[width = .49\linewidth]{inverse-trig-arcsin-graph.png}
 \end{image}
 \par
 The domain of $y = f^{-1}(t) = \arcsin(t)$ is $[-1,1]$ with corresponding range $[-\pi/2, \pi/2]$, and the arcsine function is always increasing.  These facts correspond to the domain and range of the restricted sine function and the fact that the restricted sine function is increasing on $[-\pi/2,\pi/2]$.%
 \par
 The domain of $y = h^{-1}(t) = \arctan(t)$ is the set of all real numbers with corresponding range $(-\pi/2, \pi/2)$, and the arctangent function is always increasing.  These facts correspond to the domain and range of the restricted tangent function and the fact that the restricted tangent function is increasing on $(-\pi/2,\pi/2)$.%
 \begin{image}
-\includegraphics[width = .49\linewidth]{inverse-trig-arctan-graph.pdf}
-\includegraphics[width=.49\linewidth]{secArcsecGraphst.pdf}
+\includegraphics[width = .49\linewidth]{inverse-trig-arctan-graph.png}
+\includegraphics[width=.49\linewidth]{secArcsecGraphst.png}
 \end{image}
 \par
 The domain of $y = k^{-1}(t) = \arcsec(t)$ is $(-\infty,-1] \cup [1,\infty)$,\footnote{We note that this may also be written as $\{x: |x| \geq 1\}$.} with corresponding range $[0,\pi/2) \cup (\pi/2, \pi]$. These facts correspond to the domain and range of the restricted secant function.
