@@ -136,7 +136,7 @@ using the fact that logs and exponentials are inverses. Now we can apply the pow
 $$
 x\log_5(3) = 2 - x.
 $$
-From here, we can isolate all the $x$s on one side and factor:
+From here, we can isolate all the $x$ terms on one side and factor:
 \begin{align*}
 x\log_5(3) & = 2 - x \\
 x\log_5(3) + x & = 2 \\
@@ -147,10 +147,12 @@ x & = \frac{2}{\log_5(3) + 1}.
 \end{explanation}
 
 \begin{callout}
-In fact, we can take $\log_b$ from the beginning for any positive $b \ne 1$ and obtain the same answer. However, it may look different. The key is understanding that the change-of-base formula ensures that the answers are in fact equal. 
+In fact, we can take $\log_b$ from the beginning for any positive $b \ne 1$ and obtain the same answer. However, it may look different. The key is understanding that the change-of-base formula ensures that the answers are in fact equal. Try doing this problem by taking $\ln$ on both sides to start, and check that your answer is the same as ours. 
 \end{callout}
 
 \section{Logarithmic Equations}
+We now turn our attention to equations involving logarithms. These are similar to equations involving exponentials, but now our function we want to isolate is a logarithm. There's also a bit of a catch. Solutions that we find must be in the domain of all logarithm functions that were in the original equation, so there's some checking to be done at the end. Let's see what we mean. 
+
 \begin{example}
 Solve the equation $5\log_2(x + 3) = -2$. 
 \end{example}
@@ -174,7 +176,7 @@ Solve the equation $\log_6(x) = 1 - \log_6(x - 1)$.
 \end{example}
 
 \begin{explanation}
-As in Example 2, there appear to be too many functions going on here. However, if we add $\log_6(x - 1)$ to both sides of the equation and use the product property of logarithms, we obtain:
+At first glance, there appear to be too many functions going on here. However, if we add $\log_6(x - 1)$ to both sides of the equation and use the product property of logarithms, we obtain:
 \begin{align*}
 \log_6(x) + \log_6(x - 1) & = 1 \\
 \log_6(x(x - 1)) & = 1. 
