@@ -34,17 +34,17 @@ How can we solve an equation that involves \(e\) to some unknown quantity?%
 
 In previous sections, we introduced the idea of an inverse function.  The fundamental idea is that \(f\) has an inverse function if and only if there exists another function \(g\) such that \(f\) and \(g\) ``undo'' one another's respective processes.  In other words, the process of the function \(f\) is reversible to generate a related function \(g\).%
 
-More formally, recall that a function \(y = f(x)\) (where \(f : A \to B\)) has an inverse function if and only if there exists another function \(g : B \to A\) such that \(g(f(x)) = x\) for every \(x\) in the domain of \(f\) and \(f(g(y)) = y\).    We know that given a function \(f\), we can use the Horizontal Line Test to determine whether or not \(f\) has an inverse function.  Finally, whenever a function \(f\) has an inverse function, we call its inverse function \(f^{-1}\) and know that the two equations \(y = f(x)\) and \(x = f^{-1}(y)\) say the same thing from different perspectives.%
+More formally, recall that a function \(y = f(x)\) (where $f$ goes from a set $A$ to a set $B$) has an inverse function if and only if there exists another function $g$ going from $B$ to $A$ such that \(g(f(x)) = x\) for every \(x\) in the domain of \(f\) and \(f(g(y)) = y\) for every $y$ in the range of $f$. We know that given a function \(f\), we can use the Horizontal Line Test to determine whether or not \(f\) has an inverse function.  Finally, whenever a function \(f\) has an inverse function, we call its inverse function \(f^{-1}\) and know that the two equations \(y = f(x)\) and \(x = f^{-1}(y)\) say the same thing from different perspectives.%
 \begin{exploration}
 
 Let \(P(t)\) be the ``powers of 10'' function, which is given by \(P(t) = 10^t\).%
 
 \begin{enumerate}[label=\alph*.]
 \item
-Completethe following table to generate certain values of \(P\).%
+Complete the following table to generate certain values of \(P\).%
 \\
 $
-\begin{array}{llllllll}
+\begin{array}{l|lllllll}
 t&-3&-2&-1&0&1&2&3\\
 \hline
 y = P(t) = 10^t&~&~&~&~&~&~&
@@ -56,7 +56,7 @@ Why does \(P\) have an inverse function?%
 Since \(P\) has an inverse function, we know there exists some other function, say \(L\), such that writing ``\(y = P(t)\)'' says the exact same thing as writing ``\(t = L(y)\)''.  In words, where \(P\) produces the result of raising \(10\) to a given power, the function \(L\) reverses this process and instead tells us the power to which we need to raise \(10\), given a desired result.  Complete the table to generate a collection of values of \(L\).%
 \\
 $
-\begin{array}{llllllll}
+\begin{array}{l|lllllll}
 y&10^{-3}&10^{-2}&10^{-1}&10^{0}&10^{1}&10^{2}&10^{3}\\
 \hline
 L(y)&~&~&~&~&~&~&
@@ -77,7 +77,7 @@ What are the domain and range of the function \(P\)?  What are the domain and ra
 %
 \section{The base-\(10\) logarithm}
 
-The powers-of-\(10\) function \(P(t) = 10^t\) is an exponential function with base \(b \gt 1\).  As such, \(P\) is always increasing, and thus its graph passes the Horizontal Line Test, so \(P\) has an inverse function.  We therefore know there exists some other function, \(L\), such that writing \(y = P(t)\) is equivalent to writing \(t = L(y)\).  For instance, we know that \(P(2)=100\) and \(P(-3)=\frac{1}{1000}\), so it's equivalent to say that \(L(100) = 2\) and \(L(\frac{1}{1000}) = -3\).  This new function \(L\) we call the \emph{base \(10\) logarithm}, which is formally defined as follows.%
+The powers-of-\(10\) function \(P(t) = 10^t\) is an exponential function with base \(b = 10 > 1\).  As such, \(P\) is always increasing, and thus its graph passes the Horizontal Line Test, so \(P\) has an inverse function.  We therefore know there exists some other function, \(L\), such that writing \(y = P(t)\) is equivalent to writing \(t = L(y)\).  For instance, we know that \(P(2)=100\) and \(P(-3)=\frac{1}{1000}\), so it's equivalent to say that \(L(100) = 2\) and \(L\left(\frac{1}{1000}\right) = -3\).  This new function \(L\) we call the \emph{base \(10\) logarithm}, which is formally defined as follows.%
 
 Given a positive real number \(y\), the \emph{base-\(10\) logarithm of \(y\)} is the power to which we raise \(10\) to get \(y\).  We use the notation ``\(\log_{10}(y)\)'' to denote the base-\(10\) logarithm of \(y\).%
 
@@ -98,14 +98,14 @@ If we rearrange the statements of the facts, we can see yet another important re
 \end{equation}
 In words, the equation says that ``the power to which we raise \(10\) to get \(10^2\), is \(2\)''.  That is, the base-\(10\) logarithm function undoes the work of the powers of \(10\) function.%
 
-In a similar way, we can observe that by replacing \(-3\) with \(\log_{10}(\frac{1}{1000})\) we have%
+In a similar way, we can observe that by replacing \(-3\) with \(\log_{10}\left(\frac{1}{1000}\right)\) we have%
 \begin{equation}
-10^{\log_{10}(\frac{1}{1000})} = \frac{1}{1000}\text{.}\label{eq-exp-log-base-10-minus-3-undo}
+10^{\log_{10}\left(\frac{1}{1000}\right)} = \frac{1}{1000}\text{.}\label{eq-exp-log-base-10-minus-3-undo}
 \end{equation}
 In words, this says that ``when \(10\) is raised to the power to which we raise \(10\) in order to get \(\frac{1}{1000}\), we get \(\frac{1}{1000}\)''.%
 
-We summarize the key relationships between the powers-of-\(10\) function and its inverse, the base-\(10\) logarithm function, more generally as follows.%
-{\(P(t) = 10^t\) and \(L(y) = \log_{10}(y)\).}
+We summarize the key relationships between the powers-of-\(10\) function and its inverse, the base-\(10\) logarithm function, more generally as follows. %
+Let \(P(t) = 10^t\) and \(L(y) = \log_{10}(y)\).
 \begin{itemize}[label=\textbullet]
 \item
 The domain of \(P\) is the set of all real numbers and the range of \(P\) is the set of all positive real numbers.%
@@ -141,7 +141,7 @@ For each of the following equations, determine the exact value of the unknown va
 \item
 \(3 \cdot 10^t + 11 = 147\)%
 \item
-\(2\log_{10}(y) + 5 = 1\)%
+\(2\log_{10}(t) + 5 = 1\)%
 \end{enumerate}
 
 %
@@ -184,16 +184,16 @@ Complete the following tables with both exact and approximate of \(E\) and \(N\)
 %
 \\
 $
-\begin{array}{llllll}
-\multicolumn{1}{c}{t}&\multicolumn{1}{c}{-2}&\multicolumn{1}{c}{-1}&\multicolumn{1}{c}{0}&\multicolumn{1}{c}{1}&\multicolumn{1}{c}{2}\\
+\begin{array}{l|lllll}
+t&-2&-1&0&1&2\\
 \hline
 E(t)=e^t&e^{-2} \approx 0.135&&&&
 \end{array}
 $
 \\
 $
-\begin{array}{llllll}
-\multicolumn{1}{c}{y}&\multicolumn{1}{c}{e^{-2}}&\multicolumn{1}{c}{e^{-1}}&\multicolumn{1}{c}{1}&\multicolumn{1}{c}{e^1}&\multicolumn{1}{c}{e^2}\\
+\begin{array}{l|lllll}
+y&e^{-2}&e^{-1}&1&e^1&e^2\\
 \hline
 N(y)=\ln(y)&-2&&&&
 \end{array}
@@ -231,13 +231,13 @@ y=f(t)=b^t
 \begin{enumerate}
 \item 
 \begin{align*}
-\log_{2}(8)&=\log_{2}(2^3)
+\log_{2}(8)&=\log_{2}(2^3) \\
 \log_{2}(8)&= 3
 \end{align*}
 
 \item
 \begin{align*} 
-\log_{5}(25)&=\log_{5}(5^2)
+\log_{5}(25)&=\log_{5}(5^2) \\
 \log_{5}(25) & = 2
 \end{align*}
 
@@ -253,9 +253,9 @@ y=f(t)=b^t
 %
 \section{Revisiting $f(t) = b^t$}
 
-In earlier sections, we saw that that function \(f(t) = b^t\) plays a key role in modeling exponential growth and decay, and that the value of \(b\) not only determines whether the function models growth (\(b \gt 1\)) or decay (\(0 \lt b \lt 1\)), but also how fast the growth or decay occurs.  Furthermore, once we introduced the natural base \(e\), we realized that we could write every exponential function of form \(f(t) = b^t\) as a horizontal scaling of the function \(E(t) = e^t\) by writing%
+In earlier sections, we saw that that function \(f(t) = b^t\) plays a key role in modeling exponential growth and decay, and that the value of \(b\) not only determines whether the function models growth (\(b > 1\)) or decay (\(0 < b < 1\)), but also how fast the growth or decay occurs.  Furthermore, once we introduced the natural base \(e\), we realized that we could write every exponential function of form \(f(t) = b^t\) as a horizontal scaling of the function \(E(t) = e^t\) by writing%
 \begin{equation*}
-b^t = f(t) = E(kt) = e^{kt}
+f(t) = b^t = e^{kt} = E(kt)
 \end{equation*}
 for some value \(k\).  Our development of the natural logarithm function in the current section enables us to now determine \(k\) exactly.%
 \begin{example}

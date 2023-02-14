@@ -1,7 +1,7 @@
 \documentclass{ximera}
 
 \input{../preamble}
-\author{Elizabeth Campolongo}
+\author{Elizabeth Campolongo, Kenneth Berglund}
 \licenseAPCSZ
 %\license{Creative Commons Attribution-ShareAlike 4.0 International License}
 %\acknowledgement{https://activecalculus.org/prelude/sec-trig-inverse.htmll}
@@ -22,7 +22,7 @@
 \begin{motivatingQuestions}\begin{itemize}
 %Often start a section. 
 \item How can we use inverse trigonometric functions to determine missing angles in right triangles?
-\item What other situations may require us to use inverse trignometric functions?
+\item What other situations may require us to use inverse trigonometric functions?
 \end{itemize}\end{motivatingQuestions}
 
 
@@ -30,7 +30,7 @@
 %\typeout{Introduction}
 %\typeout{************************************************}
 \section{Introduction}
-When we learned about trig functions in Section 10, we observed that in any right triangle, if we know the measure of one additional angle and the length of one additional side, we can determine all of the other parts of the triangle.  With the inverse trigonometric functions that we developed in the last two sections, we are now also able to determine the missing angles in any right triangle where we know the lengths of two sides.%
+When we learned about trig functions, we observed that in any right triangle, if we know the measure of one additional angle and the length of one additional side, we can determine all of the other parts of the triangle.  With the inverse trigonometric functions that we developed in the last two sections, we are now also able to determine the missing angles in any right triangle where we know the lengths of two sides.%
 \par
 While the original trigonometric functions take a particular angle as input and provide an output that can be viewed as the ratio of two sides of a right triangle, the inverse trigonometric functions take an input that can be viewed as a ratio of two sides of a right triangle and produce the corresponding angle as output. Indeed, it's imperative to remember that statements such as%
 \begin{equation*}
@@ -59,7 +59,7 @@ Like the trigonometric functions themselves, there are a handful of important va
 %
 \par
 %
-In addition, there are many other values at which we may wish to know the angle that results from an inverse trigonometric function. To determine such values, one can use a computational device (such as \emph{Desmos}) in order to evaluate the function; however, in this class we leave it in the form $\arccos(a)$, as this is the exact value.%
+In addition, there are many other values at which we may wish to know the angle that results from an inverse trigonometric function. To determine such values, one can use a computational device (such as \emph{Desmos}) in order to find an approximation; however, in this class we leave it in the form $\arccos(a)$, as this is the exact value.%
 \begin{example}
 %
 Consider the right triangle pictured below and assume we know that the vertical leg has length $1$ and the hypotenuse has length $3$.  Let $\alpha$ be the angle opposite the known leg.  Determine exact values for all of the remaining parts of the triangle.%
@@ -86,6 +86,54 @@ and thus $x^2 = 8$ so $x = \sqrt{8}$.  Calling the remaining angle $\beta$, sinc
 \end{explanation}
 \end{example}
 
+We can also use inverse trigonometric functions to solve equations that up until now, have been unsolvable for us. 
+
+\begin{example}
+Solve the equation $\cos(t) = \frac{1}{3}$. 
+
+\begin{explanation}
+Before learning about inverse trig, since $\frac{1}{3}$ was not a famous value of sine or cosine, we couldn't solve this equation. But now, we know a value of $t$ that gives us $\cos(t) = \frac{1}{3}$, namely, $t = \arccos\left(\frac{1}{3}\right)$. Even though this feels weird, since we don't have a decimal expression for $\arccos\left(\frac{1}{3}\right)$, this does give us a solution to our equation. 
+
+However, we need to be careful. This isn't the only solution to our equation. The picture below reminds us that there are infinitely many places where the graphs of $y = \cos(t)$ and $y = \frac{1}{3}$ intersect. 
+\begin{image}
+\begin{tikzpicture}
+	\begin{axis}[
+            xmin=-6.75,xmax=6.75,ymin=-1.5,ymax=1.5,
+            axis lines=center,
+            xtick={-6.28, -4.71, -3.14, -1.57, 0, 1.57, 3.142, 4.71, 6.28},
+            xticklabels={$-2\pi$,$-3\pi/2$,$-\pi$, $-\pi/2$, $0$, $\pi/2$, $\pi$, $3\pi/2$, $2\pi$},
+            ytick={-1,1},
+            minor ytick=,minor xtick=,
+            width=6in,
+            height=3in,
+            unit vector ratio*=1 1 1,
+            every axis y label/.style={at=(current axis.above origin),anchor=south},
+            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+          ]        
+          \addplot [very thick, penColor, samples=300,smooth, domain=(-6.75:6.75)] {cos(deg(x))} node[pos=0.65, penColor, right, thick] {\large{$y=\cos(\theta)$}};
+	\addplot[ thick, penColor2, domain=(-6.75:6.75)]{0.333} node[pos=0.33, above,penColor2, thick]{$y=\frac{1}{3}$};
+        \end{axis}
+\end{tikzpicture}
+\end{image}
+
+Our strategy to find all solutions to $\cos(t) = \frac{1}{3}$ is to first find all solutions within a single period, then add all multiples of $2\pi$. This should be familiar from an earlier section. Note that the interval $[-\pi, \pi]$ contains a full period of $\cos$, and from the graph above, there are two solutions on that interval: one on the interval $\left[0, \frac{\pi}{2}\right]$ and one on the interval $\left[-\frac{\pi}{2}, 0\right]$. The solution on the interval $\left[0, \frac{\pi}{2}\right]$ is the solution we've already found, $\arccos\left(\frac{1}{3}\right)$, since we know the range of $\arccos$ is $[0, \pi]$. 
+
+As in similar problems we've done before, the other solution has the same reference angle as $\arccos\left(\frac{1}{3}\right)$. We know that $\arccos\left(\frac{1}{3}\right)$ lives in Quadrant I, since it corresponds to a positive cosine value, so it is its own reference angle. The other solution therefore, has reference angle $\arccos\left(\frac{1}{3}\right)$ and because cosine is positive, lies in Quadrant IV. A Quadrant IV angle that has this reference angle is given by $-\arccos\left(\frac{1}{3}\right)$. Since $\arccos\left(\frac{1}{3}\right)$ and $-\arccos\left(\frac{1}{3}\right)$ give a complete list of all solutions on one period of cosine, a complete list of all solutions to our original equation is 
+$$\arccos\left(\frac{1}{3}\right) + 2\pi k \quad \text{and} \quad-\arccos\left(\frac{1}{3}\right) + 2\pi k$$
+ for all integers $k$.
+\end{explanation}
+\end{example}
+
+\begin{example}
+Solve the equation $\sin(t) = -\frac{2}{3}$. 
+
+\begin{explanation}
+As in the previous example, applying the inverse trig function $\arcsin\left(-\frac{2}{3}\right)$ gives us \emph{a} solution to our equation. First let's find out where our solution lives. Since the range of $\arcsin$ is $\left[-\frac{\pi}{2}, \frac{\pi}{2}\right]$ and the associated sine value is negative, we know that $\arcsin\left(-\frac{2}{3}\right)$ must be a negative angle in Quadrant IV, which corresponds to $\left[-\frac{\pi}{2}, 0\right]$. The only other quadrant in which sine is negative is Quadrant III, so the second angle in the period of sine that we're looking for is in Quadrant III with reference angle $-\arcsin\left(-\frac{2}{3}\right)$. The angle $\pi - \arcsin\left(-\frac{2}{3}\right)$ fits the bill. Therefore, a list of all solutions is 
+$$\arcsin\left(-\frac{2}{3}\right) + 2\pi k\quad \text{and} \quad \pi - \arcsin\left(-\frac{2}{3}\right) + 2\pi k$$
+for all integers $k$. 
+\end{explanation}
+\end{example}
+
 \begin{example}
 
 Let's consider the composite function $h(x) = \cos(\arcsin(x))$.  \\
@@ -98,10 +146,10 @@ This function makes sense to consider since the arcsine function has range $[-1,
 \item What is the domain of $h$?  The range of $h$? \\
 %
 \begin{explanation}
-The domain of $h$ is the domain of the inner function, $\arcsin(x)$, which produces values within the domain of the outer function, $\cos(z)$. As noted at the beginning, since the range of $\arcsin(x)$ is $[-1,-1]$ contained in $(-\infty,\infty)$, the domain of $\cos(z)$, the domain of $h$ is simply the domain of $\arcsin(x)$. \\
+The domain of $h$ is the domain of the inner function, $\arcsin(x)$, which produces values within the domain of the outer function, $\cos(z)$. As noted at the beginning, since the range of $\arcsin(x)$ is $\left[-\frac{\pi}{2},\frac{\pi}{2}\right]$ contained in $(-\infty,\infty)$, the domain of $\cos(z)$, the domain of $h$ is simply the domain of $\arcsin(x)$. \\
 The domain of $h$ is therefore $[-1,1]$.
 
-Now, the range of $h$ will be the output of the outer function when the input is the range of the inner function. In other words, we are looking for the values that $\cos(z)$ attains on the interval $[-1,1]$. Since cosine is symmetric about the $y$-axis, this is the same as the values attained by $\cos(z)$ on the interval $[0,1]$. Thus, we have a range of $[\cos(1),1]$.
+Now, the range of $h$ will be the output of the outer function when the input is the range of the inner function. In other words, we are looking for the values that $\cos(z)$ attains on the interval $\left[-\frac{\pi}{2},\frac{\pi}{2}\right]$. Since cosine is symmetric about the $y$-axis, this is the same as the values attained by $\cos(z)$ on the interval $\left[0,\frac{\pi}{2}\right]$. Thus, we have a range of $[0,1]$.
 \end{explanation}
 %
 \item Since the arcsine function produces a value we can consider as an angle, let's say that $\theta = \arcsin(x)$,  so that $\theta$ is the angle whose sine is $x$.  By definition, we can picture $\theta$ as an angle in a right triangle with hypotenuse $1$ and a vertical leg of length $x$, as shown in the image on the left below.  Use the Pythagorean Theorem to determine the length of the horizontal leg as a function of $x$. \\
@@ -115,8 +163,8 @@ since a triangle leg will have positive length.
 \end{explanation}
 %
 \begin{image}
-\includegraphics{inv-trig-cosarcsin.pdf}
-\includegraphics{inv-trig-cosarctan.pdf}
+\includegraphics{inv-trig-cosarcsin.png}
+\includegraphics{inv-trig-cosarctan.png}
 \end{image}%
 
 
@@ -286,7 +334,7 @@ Anytime we know two side lengths in a right triangle, we can use one of the inve
 it follows that $\theta = \arctan\!\bigg(\frac{\text{opp}}{\text{adj}}\bigg)$.%
 %
 \begin{image}
-\includegraphics[width=.5\linewidth]{right-triangle-SOH-CAH-TOA.pdf}
+\includegraphics[width=.5\linewidth]{right-triangle-SOH-CAH-TOA.png}
 \end{image}
 %
 \par

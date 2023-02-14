@@ -62,7 +62,7 @@ While the original trigonometric function $g(t) = \cos(t)$ does not have an inve
 Consider the plot of the standard cosine function on $\Big[-\frac{5\pi}{2},\frac{5\pi}{2}\Big]$ with the portion on $[0,\pi]$ emphasized below.%
 
 \begin{image}
-\includegraphics{inverse-trig-PA-cosine.pdf}
+\includegraphics{inverse-trig-PA-cosine.png}
 \end{image}
 
 \begin{exploration}
@@ -95,7 +95,7 @@ Determine the exact values of $g^{-1}\Big(-\frac{1}{2}\Big)$, $g^{-1}\bigg(\frac
 For the cosine function restricted to the domain $[0,\pi]$ that we considered above, the function is strictly decreasing on its domain and thus passes the Horizontal Line Test. Therefore, this restricted version of the cosine function has an inverse function; we will call this inverse function the \emph{arccosine} function.%
 
 \begin{definition}
-Let $y = g(t) = \cos(t)$ be defined on the domain $[0,\pi]$, and observe $g : [0,\pi] \to [-1,1]$.  For any real number $y$ that satisfies $-1 \leq y \leq 1$, the \dfn{arccosine of $\mathbf{y}$}, denoted%
+Let $y = g(t) = \cos(t)$ be defined on the domain $[0,\pi]$, and observe that $g$ has the range $[-1,1]$.  For any real number $y$ that satisfies $-1 \leq y \leq 1$, the \dfn{arccosine of $\mathbf{y}$}, denoted%
 \begin{equation*}
 \arccos(y)
 \end{equation*}
@@ -126,7 +126,7 @@ The arccosine function is always decreasing on its domain.%
 \item
 Below we have a plot of the restricted cosine function (in light blue) and its corresponding inverse, the arccosine function (in dark blue).%
 \end{itemize}
-\includegraphics[width=1\linewidth]{inverse-trig-arccos-graph.pdf}
+\includegraphics[width=1\linewidth]{inverse-trig-arccos-graph.png}
 \end{callout}
 
 Just as the natural logarithm function allowed us to rewrite exponential equations in an equivalent way (for instance, $y = e^t$ and $t = \ln(y)$ give the same information), the arccosine function allows us to do likewise for certain angles and cosine outputs.  For instance, saying $\cos\big(\frac{\pi}{2}\big) = 0$ is the same as writing $\frac{\pi}{2} = \arccos(0)$, which reads ``$\frac{\pi}{2}$ is the angle whose cosine is $0$''.  Indeed, these relationships are reflected in the plot above, where we see that any point $(a,b)$ that lies on the graph of $y = \cos(t)$ corresponds to the point $(b,a)$ that lies on the graph of $y = \arccos(t)$.%
@@ -189,7 +189,7 @@ A word of caution: arccosine is only the inverse of restricted cosine, as we wil
 \begin{explanation}
 It may be tempting to take a look at this expression and conclude that the solution is $\frac{7\pi}{6}$ since arccosine is the inverse of cosine. 
 
-{\bf But, wait! }
+{\bf But wait! }
 
 Remember, we had to restrict the domain of cosine in order to define an inverse function, which we called arccosine. Arccosine is the inverse of the {\it restricted} cosine function, whose domain is $[0,\pi]$. $\frac{7\pi}{6}$ is larger than $\pi$, so it is not within the domain of this restricted cosine. 
 
@@ -232,7 +232,7 @@ Hence, $\theta$ is $\frac{5\pi}{6}$, and we now see that
 
 Now, let's look again at the graph of cosine. Here we highlight $g: [0,\pi] \rightarrow [0,\pi]$ defined by $y=g(x)=\cos(x)$, the restricted cosine function. We may use the symmetry of the graph of cosine to help find the appropriate values for arccosine.
 \begin{image}
-\includegraphics{inverse-trig-PA-cosine.pdf}
+\includegraphics{inverse-trig-PA-cosine.png}
 \end{image}
 
 
@@ -244,7 +244,7 @@ Now, let's look again at the graph of cosine. Here we highlight $g: [0,\pi] \rig
 
 \end{explanation}
 
-\item We can also solve trig equations as in Section 10-3 Some Applications of Trig Functions: $4\arccos(x)-3\pi=0$.
+\item We can also solve trig equations as in the section Some Applications of Trig Functions. Solve the equation $4\arccos(x)-3\pi=0$.
 
 \begin{explanation}
 We start by isolating the arccosine term so that our equation is now
@@ -253,7 +253,7 @@ $$\arccos(x) = \frac{3\pi}{4}.$$
 We observe that $\frac{3\pi}{4}$ is in the range of arccosine, so we may use the fact that cosine is the inverse of arccosine. Thus, $\arccos(x) = \frac{3\pi}{4}$ is equivalent to 
 $$\cos(\arccos(x)) = \cos\bigg(\frac{3\pi}{4}\bigg).$$
 %
-This is further equivalent to $x = -\frac{2}{2}$.
+This is further equivalent to $x = -\frac{\sqrt{2}}{2}$.
 \end{explanation}
 %
 \end{enumerate}
