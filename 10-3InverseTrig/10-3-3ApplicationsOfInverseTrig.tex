@@ -90,8 +90,9 @@ We can also use inverse trigonometric functions to solve equations that up until
 
 \begin{example}
 Solve the equation $\cos(t) = \frac{1}{3}$. 
+
 \begin{explanation}
-Before learning about inverse trig, since $\frac{1}{3}$ was not a famous value of sine or cosine, we couldn't solve this equation. But now, we know a value of $t$ that gives us $\cos(t) = \frac{1}{3}$, namely, $t = \arccos\left(\frac{1}{3}\right)$. Even though this feels weird, since we don't have a numerical expression for $\arccos\left(\frac{1}{3}\right)$, this does give us a solution to our equation. 
+Before learning about inverse trig, since $\frac{1}{3}$ was not a famous value of sine or cosine, we couldn't solve this equation. But now, we know a value of $t$ that gives us $\cos(t) = \frac{1}{3}$, namely, $t = \arccos\left(\frac{1}{3}\right)$. Even though this feels weird, since we don't have a decimal expression for $\arccos\left(\frac{1}{3}\right)$, this does give us a solution to our equation. 
 
 However, we need to be careful. This isn't the only solution to our equation. The picture below reminds us that there are infinitely many places where the graphs of $y = \cos(t)$ and $y = \frac{1}{3}$ intersect. 
 \begin{image}
@@ -125,8 +126,9 @@ $$\arccos\left(\frac{1}{3}\right) + 2\pi k \quad \text{and} \quad-\arccos\left(\
 
 \begin{example}
 Solve the equation $\sin(t) = -\frac{2}{3}$. 
+
 \begin{explanation}
-As in the previous example, applying the inverse trig function $\arcsin\left(-\frac{2}{3}\right)$ gives us \emph{a} solution to our equation. First let's find out where our solution lives. Since the range of $\arcsin$ is $\left[-\frac{\pi}{2}, \frac{\pi}{2}\right]$ and the associated sine value is negative, we know that $\arcsin\left(-\frac{2}{3}\right)$ must be in Quadrant IV, which corresponds to $\left[-\frac{\pi}{2}, 0\right]$. The only other quadrant in which sine is negative is Quadrant III, so the second angle in the period of sine that we're looking for is in Quadrant III with reference angle $-\arcsin\left(-\frac{2}{3}\right)$. The angle $\pi - \arcsin\left(-\frac{2}{3}\right)$ fits the bill. Therefore, a list of all solutions is 
+As in the previous example, applying the inverse trig function $\arcsin\left(-\frac{2}{3}\right)$ gives us \emph{a} solution to our equation. First let's find out where our solution lives. Since the range of $\arcsin$ is $\left[-\frac{\pi}{2}, \frac{\pi}{2}\right]$ and the associated sine value is negative, we know that $\arcsin\left(-\frac{2}{3}\right)$ must be a negative angle in Quadrant IV, which corresponds to $\left[-\frac{\pi}{2}, 0\right]$. The only other quadrant in which sine is negative is Quadrant III, so the second angle in the period of sine that we're looking for is in Quadrant III with reference angle $-\arcsin\left(-\frac{2}{3}\right)$. The angle $\pi - \arcsin\left(-\frac{2}{3}\right)$ fits the bill. Therefore, a list of all solutions is 
 $$\arcsin\left(-\frac{2}{3}\right) + 2\pi k\quad \text{and} \quad \pi - \arcsin\left(-\frac{2}{3}\right) + 2\pi k$$
 for all integers $k$. 
 \end{explanation}
@@ -144,10 +146,10 @@ This function makes sense to consider since the arcsine function has range $[-1,
 \item What is the domain of $h$?  The range of $h$? \\
 %
 \begin{explanation}
-The domain of $h$ is the domain of the inner function, $\arcsin(x)$, which produces values within the domain of the outer function, $\cos(z)$. As noted at the beginning, since the range of $\arcsin(x)$ is $[-1,-1]$ contained in $(-\infty,\infty)$, the domain of $\cos(z)$, the domain of $h$ is simply the domain of $\arcsin(x)$. \\
+The domain of $h$ is the domain of the inner function, $\arcsin(x)$, which produces values within the domain of the outer function, $\cos(z)$. As noted at the beginning, since the range of $\arcsin(x)$ is $\left[-\frac{\pi}{2},\frac{\pi}{2}\right]$ contained in $(-\infty,\infty)$, the domain of $\cos(z)$, the domain of $h$ is simply the domain of $\arcsin(x)$. \\
 The domain of $h$ is therefore $[-1,1]$.
 
-Now, the range of $h$ will be the output of the outer function when the input is the range of the inner function. In other words, we are looking for the values that $\cos(z)$ attains on the interval $[-1,1]$. Since cosine is symmetric about the $y$-axis, this is the same as the values attained by $\cos(z)$ on the interval $[0,1]$. Thus, we have a range of $[\cos(1),1]$.
+Now, the range of $h$ will be the output of the outer function when the input is the range of the inner function. In other words, we are looking for the values that $\cos(z)$ attains on the interval $\left[-\frac{\pi}{2},\frac{\pi}{2}\right]$. Since cosine is symmetric about the $y$-axis, this is the same as the values attained by $\cos(z)$ on the interval $\left[0,\frac{\pi}{2}\right]$. Thus, we have a range of $[0,1]$.
 \end{explanation}
 %
 \item Since the arcsine function produces a value we can consider as an angle, let's say that $\theta = \arcsin(x)$,  so that $\theta$ is the angle whose sine is $x$.  By definition, we can picture $\theta$ as an angle in a right triangle with hypotenuse $1$ and a vertical leg of length $x$, as shown in the image on the left below.  Use the Pythagorean Theorem to determine the length of the horizontal leg as a function of $x$. \\
