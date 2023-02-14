@@ -90,7 +90,7 @@ x - 1 & = \log_4(3) \\
 x & = \log_4(3) + 1.
 \end{align*}
 
-Therefore, the solution to the equation $-4^x + 6 = 3$ is $\log_4(3) + 1$. Your first instinct might be that this doesn't seem like a solution, since there's still a logarithm in our expression! However, there is no nicer way to write the number $\log_4(3)$. If you were to plug this into a calculator, you would get a decimal approximation to the value of $\log_4(3)$, but any decimal approximation loses some information, so the exact value of the solution is $\log_4(3) + 1$. 
+Therefore, the solution to the equation $-4^x + 6 = 3$ is $\log_4(3) + 1$. Your first instinct might be that this doesn't seem like a solution, since there's still a logarithm in our expression! However, there is no nicer way to write the number $\log_4(3)$. If you were to plug this into a calculator, you would get a decimal approximation to the value of $\log_4(3)$, but the decimal approximation loses some information, so the exact value of the solution is $\log_4(3) + 1$. 
 
 The process of writing out a function $f(x) = 4^x$ and then taking inverses may seem unnecessary, and indeed, there's no need to actually be so explicit when doing your own calculations. For example, the work
 \begin{align*}
@@ -117,24 +117,42 @@ $$
 5^{x\log_5(3)} = 5^{2 - x}.
 $$
 
-Dividing both sides by $5^{2 - x}$ yields 
+If $f(x) = 5^x$, then our equation has become $f(x \log_5(3)) = f(2 - x)$. To solve this, we can take $f^{-1} = \log_5$ of both sides of the equation and do some more algebra to isolate $x$. 
 \begin{align*}
-\frac{5^{x\log_5(3)}}{5^{2 - x}} & = 1 \\
-5^{x \log_5(3) - (2 - x)} & = 1.
+\log_5(5^{x \log_5(3)}) & = \log_5(5^{2 -x }) \\
+x\log_5(3) & = 2 - x \\
+x\log_5(3) + x & = 2 \\
+x(\log_5(3) + 1) & = 2 \\
+x & = \frac{2}{\log_5(3) + 1},
 \end{align*}
+which is our solution.
 
-Now, since our variable is trapped in the exponent, we're in the situation from before! If $f(x) = 5^x$, then our equation has become $f(x \log_5(3) - (2 - x)) = 1$. To solve this, we can take $f^{-1} = \log_5$ of both sides of the equation and do some more algebra to isolate $x$. 
+A more conventional way to solve this equation is to take $\log_5$ of both sides at the very beginning:
 \begin{align*}
-\log_5(5^{x \log_5(3) - (2 - x)}) & = \log_5(1) \\
-x \log_5(3) - (2 - x) & = 0 \\
-x\log_5(3) + x - 2 & = 0 \\
+\log_5(3^x) & = \log_5(5^{2 - x}) \\
+\log_5(3^x) & = 2 - x,
+\end{align*}
+using the fact that logs and exponentials are inverses. Now we can apply the power property of logarithms to simplify the left-hand side:
+$$
+x\log_5(3) = 2 - x.
+$$
+From here, we can isolate all the $x$ terms on one side and factor:
+\begin{align*}
+x\log_5(3) & = 2 - x \\
 x\log_5(3) + x & = 2 \\
 x(\log_5(3) + 1) & = 2 \\
 x & = \frac{2}{\log_5(3) + 1}.
 \end{align*}
+
 \end{explanation}
 
+\begin{callout}
+In fact, we can take $\log_b$ from the beginning for any positive $b \ne 1$ and obtain the same answer. However, it may look different. The key is understanding that the change-of-base formula ensures that the answers are in fact equal. Try doing this problem by taking $\ln$ on both sides to start, and check that your answer is the same as ours. 
+\end{callout}
+
 \section{Logarithmic Equations}
+We now turn our attention to equations involving logarithms. These are similar to equations involving exponentials, but now our function we want to isolate is a logarithm. There's also a bit of a catch. Solutions that we find must be in the domain of all logarithm functions that were in the original equation, so there's some checking to be done at the end. Let's see what we mean. 
+
 \begin{example}
 Solve the equation $5\log_2(x + 3) = -2$. 
 \end{example}
@@ -158,7 +176,7 @@ Solve the equation $\log_6(x) = 1 - \log_6(x - 1)$.
 \end{example}
 
 \begin{explanation}
-As in Example 2, there appear to be too many functions going on here. However, if we add $\log_6(x - 1)$ to both sides of the equation and use the product property of logarithms, we obtain:
+At first glance, there appear to be too many functions going on here. However, if we add $\log_6(x - 1)$ to both sides of the equation and use the product property of logarithms, we obtain:
 \begin{align*}
 \log_6(x) + \log_6(x - 1) & = 1 \\
 \log_6(x(x - 1)) & = 1. 
@@ -174,6 +192,7 @@ This results in a quadratic equation! This is something we know how to solve. By
 
 We're not done yet, however! We need to check that these $x$-values don't cause any logarithms in our original equation to be undefined. Note that $\log_6(-2)$ is undefined, since $-2$ is negative, so $x = -2$ is not a solution to our equation. Since $\log_6(3)$ and $\log_6(3 - 1)$ are both defined, $x = 3$ is our only solution.
 \end{explanation}
+
 \begin{summary}
 
 \begin{itemize}

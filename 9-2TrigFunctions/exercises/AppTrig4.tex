@@ -1,0 +1,122 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\author{Elizabeth Campolongo}
+
+\begin{document}
+\begin{exercise}
+%%%Come up with something quadratic?
+Solve the equation:
+$$\tan^2(\theta) + 2\sec^2(\theta)=3.$$
+
+Give exact answers as in the examples. [\textit{Hint}: Replace $\tan^2(\theta)$ with a trig identity.]
+
+\begin{enumerate}
+\item After using the hint, you should have a quadratic of the form: \smallskip\\
+
+ $\frac{9}{2}\answer{\sec^2(\theta)} -\answer{6} = 0$.
+ \end{enumerate}
+\begin{exercise}
+Now we can factor this as a quadratic in $\sec(\theta)$: \smallskip\\
+$\left(\frac{3}{2}\sec(\theta) - \answer{\sqrt{3}}\right)(\answer{3\sec(\theta)} + 2\sqrt{3})$.
+
+\begin{exercise}
+Now there are two equations to solve:
+\begin{enumerate}
+\item $\sec(\theta) = \answer{\frac{2\sqrt{3}}{3}}$ and
+
+\item $\sec(\theta) = -\answer{\frac{2\sqrt{3}}{3}}$.
+\end{enumerate}
+
+\begin{exercise}
+\begin{enumerate}
+\item What is the domain of $\sec(\theta)$ on the interval $[0, 2\pi]$?\smallskip \\
+$\left[\answer{0},\answer{\frac{\pi}{2}}\right) \cup \left(\answer{\frac{\pi}{2}}, \answer{\frac{3\pi}{2}}\right) \cup \left(\answer{\frac{3\pi}{2}},\answer{2\pi}\right]$.
+
+
+\bigskip
+Now let's return to the unit circle. 
+\begin{image}
+				\begin{tikzpicture}
+					\begin{axis}[
+				            xmin=-1.1,xmax=1.1,ymin=-1.1,ymax=1.1,
+				            axis lines=center,
+				            width=4in,
+				            xtick={-1,1},
+				            ytick={-1,1},
+				            clip=false,
+				            unit vector ratio*=1 1 1,
+				            xlabel=$x$, ylabel=$y$,
+				            every axis y label/.style={at=(current axis.above origin),anchor=south},
+				            every axis x label/.style={at=(current axis.right of origin),anchor=west},
+				          ]        
+				          \addplot [dashed, smooth, domain=(0:360)] ({cos(x)},{sin(x)}); %% unit circle
+				
+				          \addplot+[thick,penColor2,->] plot coordinates {(0,0) (.866,.5)}; %% 30 degrees
+				          				
+				          \addplot+[thick,penColor,->] plot coordinates {(0,0) (-.866,.5)}; %% 150 degrees
+				            \addplot+[thick,penColor3,->] plot coordinates {(0,0) (-.866,-.5)}; %% 210 degrees
+				              \addplot+[thick,penColor4,->] plot coordinates {(0,0) (.866,-.5)}; %% 330 degrees
+				          
+%				          \addplot [penColor2,smooth, samples=100, domain=(0:1350)] ({(.05+.15*x/1350)*cos(x)},{(.05+.15*x/1350)*sin(x)});
+%				          \addplot [penColor3,smooth, domain=(0:151)] ({.2*cos(x)},{.2*sin(x)});
+				          \node at (axis cs:.2,.08) [anchor=west, penColor2] {$\theta_A$}; %\pi/6
+				            \node at (axis cs:-.2,.2) [anchor=west] {$\theta_B$}; %5\pi/6
+				          \node at (axis cs:-.35,-.08) [anchor=west, penColor3] {$\theta_C$}; %4\pi/3
+				          \node at (axis cs:.2,.-.08) [anchor=west, penColor4] {$\theta_D$}; %11\pi/6
+					\addplot+[penColor3, soliddot] coordinates{(0,-1)} node[above right]{$(0,-1)$};
+
+				         \end{axis}
+				\end{tikzpicture}
+				\end{image}
+Above we have four angles indicated on the unit circle, each measuring counterclockwise from the $x$-axis.
+\begin{enumerate}
+\item $\theta_A = \answer{\frac{\pi}{6}}$.
+
+\item $\theta_B = \answer{\frac{5\pi}{6}}$.
+
+\item $\theta_C = \answer{\frac{7\pi}{6}}$.
+
+\item $\theta_D = \answer{\frac{11\pi}{6}}$.
+
+\end{enumerate}
+
+\item What is the reference angle, $\theta_R$? $\answer{\frac{\pi}{6}}$
+
+\end{enumerate}
+ \begin{exercise}
+Which angles are the solutions to $\sec(\theta) = \frac{2\sqrt{3}}{3}$? 
+\begin{multipleChoice}
+\choice{$\theta_A$ and $\theta_C$}
+\choice{$\theta_B$ and $\theta_D$}
+\choice[correct]{$\theta_A$ and $\theta_D$}
+\choice{$\theta_B$ and $\theta_C$}
+\end{multipleChoice}
+
+Which angles are the solutions to $\sec(\theta) = -\frac{2\sqrt{3}}{3}$? 
+\begin{multipleChoice}
+\choice[correct]{$\theta_B$ and $\theta_C$}
+\choice{$\theta_A$ and $\theta_D$}
+\choice{$\theta_A$ and $\theta_B$}
+\choice{$\theta_B$ and $\theta_D$}
+\end{multipleChoice}
+
+
+\begin{exercise} Now that we've done each of these steps, 
+\begin{enumerate} 
+\item What are the general solutions to the equation $\sec(\theta) = \frac{2\sqrt{3}}{3}$? \\
+$\answer{\frac{\pi}{6} + 2\pi k}$ and $\answer{\frac{11\pi}{6} + 2\pi k}$ for any integer $k$.
+
+\item What are the general solutions to the equation $\sec(\theta) = -\frac{2\sqrt{3}}{3}$?\\
+$\answer{\frac{5\pi}{6} + 2\pi k}$ and $\answer{\frac{7\pi}{6} + 2\pi k}$ for any integer $k$.
+
+\end{enumerate}
+	
+\end{exercise}	
+\end{exercise}
+\end{exercise}
+\end{exercise}
+\end{exercise}
+\end{exercise}
+\end{document}

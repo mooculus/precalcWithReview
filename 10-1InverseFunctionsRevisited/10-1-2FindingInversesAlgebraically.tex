@@ -42,7 +42,7 @@ In this section, we will practice how to actually algebraically determine whethe
     \end{axis}
 \end{tikzpicture}
 \end{image}
-Observe that the graph also shows that $f$ passes the Horizontal Line Test, an useful sanity-check.
+Observe that the graph also shows that $f$ passes the Horizontal Line Test, a useful sanity check.
   \end{explanation}
 \end{example}
 
@@ -71,7 +71,7 @@ Observe that the graph also shows that $f$ passes the Horizontal Line Test, an u
   Let $h$ be the function given by $h(x) = e^{\sqrt{x-3}}$ for every real number $x$ greater or equal to $3$. Is $h$ one-to-one? If so, what is the inverse $h^{-1}$? What is its domain?
 
   \begin{explanation}
-    Let's start verifying whether $h$ is one-to-one or not. So, as before, we start with $h(x_1)=h(x_2)$ and try to obtain that $x_1=x_2$. In other words, we start with $e^{\sqrt{x_1-3}} = e^{\sqrt{x_2-3}}$. From arguing either that the exponential function itself is one-to-one, or applying $\ln$ on both sides of this equality, it follows that $\sqrt{x_1-3}=\sqrt{x_2-3}$. Raising both sides to the square, we have that $x_1-3=x_2-3$, and adding $3$ to everything yields $x_1=x_2$, as desired. Therefore, $h$ is one-to-one. To find a formula for $h^{-1}$, we start with $y= e^{\sqrt{x-3}}$ and solve for $x$ in terms of $y$. First, we apply $\ln$ on both sides of the equality, as to obtain $\ln y = \sqrt{x-3}$. Next, we take squares on both sides, so $(\ln y)^2 = x-3$. Finally, we add $3$ to both sides: $$x = (\ln y)^2+3 \implies h^{-1}(x) = (\ln x)^2+3.$$Note that $(\ln x)^2$ is not the same thing as $\ln(x^2)$ (to wit, the latter equals $2\ln x$, by basic properties of the logarithm function). The inverse $h^{-1}$ is defined for all $x>0$, due to the presence of $\ln x$ in its formula.
+    Let's start verifying whether $h$ is one-to-one or not. So, as before, we start with $h(x_1)=h(x_2)$ and try to obtain that $x_1=x_2$. In other words, we start with $e^{\sqrt{x_1-3}} = e^{\sqrt{x_2-3}}$. From arguing either that the exponential function itself is one-to-one, or applying $\ln$ on both sides of this equality, it follows that $\sqrt{x_1-3}=\sqrt{x_2-3}$. Raising both sides to the square, we have that $x_1-3=x_2-3$, and adding $3$ to everything yields $x_1=x_2$, as desired. Therefore, $h$ is one-to-one. To find a formula for $h^{-1}$, we start with $y= e^{\sqrt{x-3}}$ and solve for $x$ in terms of $y$. First, we apply $\ln$ on both sides of the equality, as to obtain $\ln y = \sqrt{x-3}$. Next, we take squares on both sides, so $(\ln y)^2 = x-3$. Finally, we add $3$ to both sides: $$x = (\ln y)^2+3 \implies h^{-1}(x) = (\ln x)^2+3.$$Note that $(\ln x)^2$ is not the same thing as $\ln(x^2)$ (to wit, the latter equals $2\ln x$, by properties of the logarithm function we shall soon see). The inverse $h^{-1}$ is defined for all $x>0$, due to the presence of $\ln x$ in its formula.
   \end{explanation}
 \end{example}
 
