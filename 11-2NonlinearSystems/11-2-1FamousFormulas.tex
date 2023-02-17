@@ -206,8 +206,8 @@ Another important type of function is the absolute value function.  This is the 
 \begin{center}
 \begin{tikzpicture}
     \begin{axis}
-        \addplot[samples=200,domain=0:8]{x};
-        \addplot[samples=200,domain=-8:0]{-x};
+        \addplot[smooth,domain=0:8]{x};
+        \addplot[smooth,domain=-8:0]{-x};
     \end{axis}
 \end{tikzpicture}
 \end{center}
@@ -268,7 +268,7 @@ Another famous function is the square root function,
 \begin{center}
 \begin{tikzpicture}
     \begin{axis}
-        \addplot[samples=200,domain=0:30]{sqrt(x)};
+        \addplot[samples=50,smooth,domain=0:7]{sqrt(x)};
     \end{axis}
 \end{tikzpicture}
 \end{center}
@@ -331,7 +331,7 @@ Here $e$ is the mathematical constant known as Euler's number.  $e \approx 2.718
 \begin{center}
 \begin{tikzpicture}
     \begin{axis}
-        \addplot[samples=200,domain=-10:4]{e^x};
+        \addplot[smooth,domain=-10:4]{e^x};
     \end{axis}
 \end{tikzpicture}
 \end{center}
@@ -399,7 +399,7 @@ Here $e$ is the mathematical constant known as Euler's number. $e \approx 2.7182
 \begin{center}
 \begin{tikzpicture}
     \begin{axis}
-        \addplot[samples=200,domain=0.01:8]{ln(x)};
+        \addplot[samples=50,smooth,domain=0.01:7]{ln(x)};
     \end{axis}
 \end{tikzpicture}
 \end{center}
@@ -480,7 +480,7 @@ This function comes from trigonometry. In the table below we will use another ma
         $-\frac{3\pi}{2}$, $-\pi$, $\frac{\pi}{2}$, $0$,
         $\frac{\pi}{2}$, $\pi$, $\frac{3\pi}{2}$, $2\pi$
     }, ]
-        \addplot[samples=200]{sin(pi/4*deg(x))};
+        \addplot[smooth]{sin(pi/4*deg(x))};
     \end{axis}
 \end{tikzpicture}
 \end{center}
@@ -561,7 +561,7 @@ As with sine, the cosine function comes from trigonometry. In the table below we
         $-\frac{3\pi}{2}$, $-\pi$, $\frac{\pi}{2}$, $0$,
         $\frac{\pi}{2}$, $\pi$, $\frac{3\pi}{2}$, $2\pi$
     }, ]
-        \addplot[samples=200]{cos(pi/4*deg(x))};
+        \addplot[smooth]{cos(pi/4*deg(x))};
     \end{axis}
 \end{tikzpicture}
 \end{center}
@@ -1197,11 +1197,11 @@ A function introduced in Section 4-1 is the tangent function, $$ \mbox{\huge $y=
 %			    clip=false,
 			    grid style={dashed, gray!40}
 		          ]        
-		          \addplot [very thick, penColor, samples=100,smooth, domain=(-1.56:1.56)] {tan(deg(x))};% node [pos=0.51, penColor2, right] {$t(x)$};
-		          \addplot [very thick, penColor, samples=100,smooth, domain=(1.58:4.7)] {tan(deg(x))};
-		          \addplot [very thick, penColor, samples=100,smooth, domain=(4.9:6.28)] {tan(deg(x))};
-		          \addplot [very thick, penColor, samples=100,smooth, domain=(-4.7:-1.58)] {tan(deg(x))};
-		          \addplot [very thick, penColor, samples=100,smooth, domain=(-6.28:-4.9)] {tan(deg(x))};          		          
+		          \addplot [very thick, penColor, samples=50,smooth, domain=(-1.56:1.56)] {tan(deg(x))};% node [pos=0.51, penColor2, right] {$t(x)$};
+		          \addplot [very thick, penColor, samples=50,smooth, domain=(1.58:4.7)] {tan(deg(x))};
+		          \addplot [very thick, penColor, samples=50,smooth, domain=(4.9:6.28)] {tan(deg(x))};
+		          \addplot [very thick, penColor, samples=50,smooth, domain=(-4.7:-1.58)] {tan(deg(x))};
+		          \addplot [very thick, penColor, samples=50,smooth, domain=(-6.28:-4.9)] {tan(deg(x))};          		          
 		        \end{axis}
 		\end{tikzpicture}
 	\end{image}
