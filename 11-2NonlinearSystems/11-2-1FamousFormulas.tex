@@ -24,9 +24,9 @@
 %
 \newcommand\tikzhyperbola[6][thick]{%
     \draw [#1, rotate around={#2: (0, 0)}, shift=#3]
-        plot [variable = \t, samples=1000, domain=-#6:#6] ({#4 / cos( \t )}, {#5 * tan( \t )});
+        plot [variable = \t, smooth, domain=-#6:#6] ({#4 / cos( \t )}, {#5 * tan( \t )});
     \draw [#1, rotate around={#2: (0, 0)}, shift=#3]
-        plot [variable = \t, samples=1000, domain=-#6:#6] ({-#4 / cos( \t )}, {#5 * tan( \t )});
+        plot [variable = \t, smooth, domain=-#6:#6] ({-#4 / cos( \t )}, {#5 * tan( \t )});
 }
 
 \begin{document}
