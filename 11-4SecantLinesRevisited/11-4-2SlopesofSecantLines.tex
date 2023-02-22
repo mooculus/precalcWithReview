@@ -121,7 +121,7 @@ The slope of such a tangent line, when it exists, is called the derivative of $f
 \section{Definitions and examples}
 
 \begin{callout}
-  {\bf Definition:} The difference quotient of a function $y=f(x)$ at a point $a$ of its domain is the quantity $$\frac{f(a+h)-f(a)}{h},$$i.e., the average rate of change of $f$ on the interval $[a,a+h]$.
+  {\bf Definition:} The \dfn{difference quotient} of a function $y=f(x)$ at a point $a$ of its domain is the quantity $$\frac{f(a+h)-f(a)}{h},$$i.e., the average rate of change of $f$ on the interval $[a,a+h]$.
 \end{callout}
 
 \begin{example}
@@ -136,9 +136,9 @@ The slope of such a tangent line, when it exists, is called the derivative of $f
       \end{align*}
       We thus have an equation for the slope of the secant line from $(2,f(2))$ to $(2+h,f(2+h))$: 
       $$\av_{[2,2+h]}= m = h+4.$$
-      Recall from Example 1(a) of Section 12-3-1, that we calculated the slope of the secant line from $(1,f(1))$ to $(2,f(2))$. Letting $h=-1$, we see that this gives the same answer for the slope of that secant line.
+      Recall from an example in the previous section, that we calculated the slope of the secant line from $(1,f(1))$ to $(2,f(2))$. Letting $h=-1$, we see that this gives the same answer for the slope of that secant line.
       
-      Furthermore, if we now let $h \rightarrow 0$, this expression, $\frac{f(2+h)-f(2)}{h} \rightarrow 4$.
+      Furthermore, if we now let $h \rightarrow 0$, this expression, $\frac{f(2+h)-f(2)}{h} = h+ 4 \rightarrow 4$. This means that as $h$ gets smaller and smaller, the difference quotient gets closer and closer to 4. 
     \end{explanation}
     
   \item $f(x) = \sin (x), \ a =\frac{\pi}{3}$.\\
@@ -147,10 +147,11 @@ The slope of such a tangent line, when it exists, is called the derivative of $f
   \begin{equation*}
    \frac{f(\frac{\pi}{3} + h) - f(\frac{\pi}{3})}{h} = \frac{\sin(\frac{\pi}{3} +h) - \sin (\frac{\pi}{3})}{h}
   \end{equation*}
-  Recognizing that we cannot further simplify this expression in its current form, we replace $\sin((\pi/3) +h)$ using the sine sum expression:
+  Recognizing that we cannot further simplify this expression in its current form, we replace $\sin((\pi/3) +h)$ using the angle sum formula:
   \begin{align*}
   \frac{\sin(\frac{\pi}{3} +h) - \sin (\frac{\pi}{3})}{h} 
   &= \frac{\sin(\frac{\pi}{3})\cos (h) + \cos(\frac{\pi}{3}) \sin( h) - \frac{\sqrt{3}}{2}}{h} \\
+  & = \frac{\sqrt{3}/2\cos(h) + 1/2 \sin(h) - \sqrt{3}/2}{h}\\
   &= \frac{1}{2h}\big(\sqrt{3}(\cos (h) -1) + \sin( h)\big)
   \end{align*}
   This gives a less easy to visualize equation for the slope of the secant line from $(a,f(a))$ to $(a+h,f(a+h))$, for $a=\frac{\pi}{3}$: 
@@ -162,7 +163,7 @@ The slope of such a tangent line, when it exists, is called the derivative of $f
   $$ \frac{f(\frac{\pi}{3} + h) - f(\frac{\pi}{3})}{h} = \frac{1}{2} \cdot \frac{\pi}{2}\big(\sqrt{3}(\cos\Big(\frac{\pi}{2}\Big) -1)+ \sin\Big(\frac{\pi}{2}\Big) \big)= 0,$$
  as before.
  
- Furthermore, what happens as we let $h \rightarrow 0$. Consider $h =\frac{\pi}{6}$, then we have 
+ Furthermore, see what happens as we let $h \rightarrow 0$, in essence, what happens as $h$ becomes smaller. Consider $h =\frac{\pi}{6}$, then we have 
   \begin{align*}
    \frac{f(\frac{\pi}{3} + h) - f(\frac{\pi}{3})}{h} &= \frac{1}{2} \cdot \frac{6}{\pi}\big(\sqrt{3}(\cos\Big(\frac{\pi}{6}\Big) -1) + \sin\Big(\frac{\pi}{6}\Big)\big)\\
    &= \frac{3}{\pi}\Big(\sqrt{3}\Big(\frac{\sqrt{3}}{2} -1\Big)+ \frac{1}{2}\Big)\\
@@ -185,7 +186,7 @@ The slope of such a tangent line, when it exists, is called the derivative of $f
   Observe that the equation for the slope of the secant line from $(-1,f(-1))$ to $(-1+h,f(-1+h))$ is simply
   $$\av_{[-1,-1+h]}=  m = 2.$$
   
- Recall from Example 1(c) of Section 12-3-1, that the equation of the secant line from $(-1,f(-1))$ to $(3,f(3))$ was simply $f(x)$. Why was this?
+ Recall from the example in the previous section, that the equation of the secant line from $(-1,f(-1))$ to $(3,f(3))$ was simply $f(x)$. Why was this?
   
 Now, this tells us that regardless of the points we choose, the secant line between them will have the same slope and equation as the line itself.
   \end{explanation}
