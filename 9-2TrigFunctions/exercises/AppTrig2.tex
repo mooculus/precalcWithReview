@@ -35,6 +35,14 @@ Now consider the unit circle.
 				            every axis x label/.style={at=(current axis.right of origin),anchor=west},
 				          ]        
 				          \addplot [dashed, smooth, domain=(0:360)] ({cos(x)},{sin(x)}); %% unit circle
+				          
+				          \addplot [penColor2, smooth, domain=(0:60)] ({.1*cos(x)},{.1*sin(x)}); %% unit circle
+					\addplot [penColor, smooth, domain=(0:120)] ({.15*cos(x)},{.15*sin(x)}); %% arc
+					
+					\addplot [penColor3, smooth, domain=(0:240)] ({.2*cos(x)},{.2*sin(x)}); %% arc
+				          
+				          \addplot [penColor4, smooth, domain=(0:300)] ({.25*cos(x)},{.25*sin(x)}); %% arc
+				          
 				
 				          \addplot+[thick,penColor2,->] plot coordinates {(0,0) (.5,.866)}; %% 60 degrees
 				          				
@@ -44,10 +52,10 @@ Now consider the unit circle.
 				          
 %				          \addplot [penColor2,smooth, samples=500, domain=(0:1350)] ({(.05+.15*x/1350)*cos(x)},{(.05+.15*x/1350)*sin(x)});
 %				          \addplot [penColor3,smooth, domain=(0:41)] ({.2*cos(x)},{.2*sin(x)});
-				          \node at (axis cs:.1,.08) [anchor=west, penColor2] {$\theta_R$}; %\pi/3
-				            \node at (axis cs:-.15,.3) [anchor=west] {$\theta_A$}; %2\pi/3
-				          \node at (axis cs:-.2,-.08) [anchor=west, penColor3] {$\theta_B$}; %4\pi/3
-				          \node at (axis cs:.1,.-.08) [anchor=west, penColor4] {$\theta_C$}; %5\pi/3
+				          \node at (axis cs:.5,.866) [anchor=west, penColor2] {$\theta_R$}; %\pi/3
+				            \node at (axis cs:-.5,.866) [anchor=east] {$\theta_A$}; %2\pi/3
+				          \node at (axis cs:-.5,-.866) [anchor=east, penColor3] {$\theta_B$}; %4\pi/3
+				          \node at (axis cs:.5,-.866) [anchor=west, penColor4] {$\theta_C$}; %5\pi/3
 					\addplot+[penColor3, soliddot] coordinates{(0,-1)} node[above right]{$(0,-1)$};
 
 				         \end{axis}
