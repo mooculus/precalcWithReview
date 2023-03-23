@@ -151,7 +151,7 @@ Intervals (contiguous sections of the number line) play an important role in exp
 	which consists of all $x$ with $-2 < x \leq 3$. It is not an infinite interval, having endpoints at $-2$ and $3$. The endpoint at $-2$ is not included, but the endpoint at $3$ is included. In interval notation this would be written as $(-2, 3]$. As with the infinite intervals,
 	the square bracket indicates that the right-hand endpoint is included and the round parenthesis endicates that the left-hand endpoint is not included. (This is an example of a ``half-open interval''.)
 
-	For a bounded intervals (ones that are not infinite), there are also four possibilities. For $a$ and $b$ both fixed real numbers, these are:
+	For bounded intervals (ones that are not infinite), there are also four possibilities. For $a$ and $b$ both fixed real numbers, these are:
 	\begin{enumerate}
 		\item $[a, b]$ represents $a \leq x \leq b$,
 		\item $[a, b)$ represents $a \leq x < b$,
@@ -468,7 +468,7 @@ Zero is a very important number, and as we will see later, knowing where a funct
 
 
 \begin{example}
-	Find the $x$- and $y$-intercepts of the function $f$ whose graph is given below.
+	Find the $x$- and $y$-intercepts, domain, and range of the function $f$ whose graph is given below.
 	\begin{image}
 		\begin{tikzpicture}
 			\begin{axis}[
@@ -479,7 +479,7 @@ Zero is a very important number, and as we will see later, knowing where a funct
 				xtick={-1,...,5}, ytick={-2,...,5},
 				grid=major, width=3.5in, grid style={dashed, gray!40} 
 				]
-				\addplot[color=blue, very thick, smooth, domain=-1.5:5.5]{(x-2)^2-1} node[pos=0.65, above left]{$\mathbf{\LARGE{y=f(x)}}$};
+				\addplot[color=blue, very thick, <->, smooth, domain=-.5:4.5]{(x-2)^2-1} node[pos=0.65, above left]{$\mathbf{\LARGE{y=f(x)}}$};
 				\draw[fill=red] (axis cs:2,-1) circle [color=red,radius=3pt] node[red, below] {$(2, -1)$};				
 				\draw[fill=red] (axis cs:1,0) circle [color=red,radius=3pt] node[red, above right] {$(1,0)$};				
 				\draw[fill=red] (axis cs:3,0) circle [color=red,radius=3pt] node[red, below right] {$(3,0)$};
@@ -490,6 +490,9 @@ Zero is a very important number, and as we will see later, knowing where a funct
 	\begin{explanation}
 		The graph intersects the $x$-axis at the points $(1,0)$ and $(3,0)$, and intersects the $y$-axis at the point $(0,3)$.
 		That means the $x$-intercepts are at $(1,0)$ and $(3, 0)$, and the $y$-intercept is at $(0, 3)$.
+		
+		The graph indicates that the function continues to be defined for all real numbers, so the function's domain is $(-\infty, \infty)$.
+		For the range, note that the minimum $y$-value of the function is $-1$ and that all numbers greater than $-1$ are $y$-values on the graph. Therefore, the range is $[-1, \infty)$. 
 	\end{explanation}
 \end{example}
 

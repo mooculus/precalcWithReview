@@ -1,0 +1,44 @@
+\documentclass{ximera}
+
+\input{../../preamble.tex}
+
+\author{Kenneth Berglund}
+
+\begin{document}
+
+
+\begin{exercise}
+In this multi-part problem, we will explore the properties of a composition of a trigonometric function with one of our other famous functions. 
+
+Consider the function $f$ defined by $f(x) = \csc(x^2)$. 
+
+If $f = g \circ h$ with $g(x) = \csc(x)$, then $h(x) = \answer{x^2}$. 
+
+\begin{exercise}
+What are the domain and range of $g$ and $h$?
+
+The domain of $g(x) = \csc(x)$ is $x \ne \answer{\pi k}$ for all integers $k$. The range of $g(x) = \csc(x)$ is $(\answer{-\infty}, \answer{-1}] \cup [\answer{1}, \answer{\infty})$. 
+
+The domain of $h(x) = x^2$ is $(\answer{-\infty}, \answer{\infty})$. The range of $h(x) = x^2$ is $[\answer{0}, \answer{\infty})$. 
+
+
+\end{exercise}
+\begin{exercise}
+Next we will consider the domain and range of $f = g \circ h$. 
+
+We know from the previous part that the domain of $g$ is $x \ne \pi k$ for all integers $k$. This means that $\csc(x)$ is undefined when $x = \pi k$ for all integers $k$. However, we're considering $\csc(x^2)$, which is undefined when $x^2 = \pi k$ for all integers $k$. This means $\csc(x^2)$ is undefined when $x = \answer{\sqrt{\pi k}}$ for all integers $k$. Therefore, the domain of $f$ is $x \ne \answer{\sqrt{\pi k}}$. 
+
+As $x$ ranges through all real numbers, $x^2$ ranges through all \wordChoice{\choice[correct]{positive}\choice{negative}} real numbers. As $x^2$ ranges through all positive real numbers, $\csc(x^2)$ ranges through \wordChoice{\choice[correct]{its entire}\choice{only some of its}} range. Therefore, the range of $\csc(x^2)$ is $(\answer{-\infty}, \answer{-1}] \cup [\answer{1}, \answer{\infty})$. 
+
+\begin{exercise}
+Find $\av_{[\sqrt{\pi/4}, \sqrt{\pi/2}]}$ for $f$. 
+
+$\av_{[\sqrt{\pi/4}, \sqrt{\pi/2}]} = \answer{\frac{1 - \sqrt{2}}{\sqrt{\pi/2} - \sqrt{\pi/4}}}$.
+
+\end{exercise}
+
+\end{exercise}
+
+\end{exercise} 
+ 
+\end{document}

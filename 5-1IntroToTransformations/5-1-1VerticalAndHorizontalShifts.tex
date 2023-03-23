@@ -212,7 +212,7 @@ As before we'll continue to call $f$ the {\bf parent function}, whose graph will
     \end{explanation}
   \item $g(x) = (x-2)^2 - 5(x-2)+6$. \\[.5em]
     \begin{explanation}
-      As you might be guessing by now, the parent function can be found by just seeking the shifted variable (in this case, $x-2$), and replacing it with $x$. Meaning that if $f(x) = x^2-5x+6$, then $g(x) =f(x-2)$. Thus, to graph $y=g(x)$, we can just graph $y=f(x)$ and shift it $2$ units to the right. Since we can write $f(x) = (x-2)(x-3)$, we know that $f$ is a parabola which crosses the $x$-axis at $x=2$ and $x=3$, and it is concave up (we'll understand how to graph parabolas in a bit more of detail, finding also its vertex, on the next section). Hence:
+      As you might be guessing by now, the parent function can be found by just seeking the shifted variable (in this case, $x-2$), and replacing it with $x$. Meaning that if $f(x) = x^2-5x+6$, then $g(x) =f(x-2)$. Thus, to graph $y=g(x)$, we can just graph $y=f(x)$ and shift it $2$ units to the right. Since we can write $f(x) = (x-2)(x-3)$, we know that $f$ is a parabola which crosses the $x$-axis at $x=2$ and $x=3$, and it is concave up. Hence:
       \begin{image}
         \begin{tikzpicture}
           \begin{axis}
@@ -225,56 +225,56 @@ As before we'll continue to call $f$ the {\bf parent function}, whose graph will
     \end{explanation}
   \end{enumerate}
 \end{example}
+%
+%\section{More on parabolas}
 
-\section{More on parabolas}
-
-Let's discuss what happens with parabolas and quadratic functions more precisely. Consider a generic $f(x) = ax^2+bx+c$, with $a$, $b$ and $c$ real numbers, and assume that $a \neq 0$. We assume this because if $a$ were zero, we would have a linear function instead of a quadratic one, which is not the focus here. The quadratic formula $$  x = \frac{-b \pm \sqrt{b^2-4ac}}{2a},$$used to find the values of $x$ for which $f(x) = 0$ or, in other words, the possible $x$-intercepts, is usually a source of grief for people studying quadratic functions for the first time. Let's try to remedy this by understanding where such formula comes from. The main strategy here is a little algebraic device called ``completing the squares'', which is also useful for finding the coordinates $(h,k)$ of the vertex of the parabola given by the graph of $f(x)$.
-
-Very briefly, the procedure consists in noting that $(x-h)^2 = x^2-2hx+h^2$ and paying close attention to the $-2hx$ term. Comparing this with the linear term you were given will tell you what $h$ should be. Add and subtract whatever you need to in the quadratic function you were given, to produce $(x-h)^2$ (or, more generally, the multiple $a(x-h)^2$), and whatever constant term is left outside the factored $(\cdots)^2$ will be the desired $k$. We'll see several examples below.
-
-\begin{example}
-  For each of the following quadratic functions, rewrite it in the form $f(x) = a(x-h)^2+k$, for suitable numbers $h$ and $k$. Such point $(h,k)$ is automatically the vertex of the parabola in question.
-  \begin{enumerate}[label=\alph*.]
-  \item $f(x) = x^2-4x+7$. \\[.5em]
-    \begin{explanation}
-      Comparing $x^2-4x$ with $x^2-2hx$ suggests that $h=2$ does the trick. Since $h^2=4$, we add and subtract $4$ in the expression for the given $f(x)$, to get $$  f(x) = x^2-4x+7 =(x^2-4x+4)-4+7 = (x-2)^2+3.   $$Hence, the vertex of the parabola $y=x^2-4x+7$ is the point $(2,3)$.
-    \end{explanation}
-  \item $f(x) = 2x^2 + 6x+12$. \\[.5em]
-    \begin{explanation}
-      This time, look at $2x^2+6x = 2(x^2+3x)$, and compare $x^2+3x$ with $x^2-2hx$. It seems like $h=-3/2$ is what we need. Note that $h^2 = 9/4$. Because of the $2$ we had to factor out, we'll add and subtract $2 \cdot (9/4) = 9/2$ to complete the square. So \begin{align*}f(x) &= 2x^2+6x+12 = 2x^2+6x + \frac{9}{2} - \frac{9}{2} + 12 \\ &= 2\left(x^2+3x+\frac{9}{4}\right) -\frac{9}{2} + 12 = 2\left(x+\frac{3}{2}\right)^2 + \frac{15}{2}\\ &=  2\left(x-\left(-\frac{3}{2}\right)\right)^2 + \frac{15}{2}.\end{align*}Thus $(h,k) = (-3/2, 15/2)$ is the vertex of this parabola.
-    \end{explanation}
-  \item $f(x) = 3x^2 + 12x + 14$. \\[.5em]
-    \begin{explanation}
-      As before, we start focusing on $3x^2+12x = 3(x^2+4x)$. Compare $x^2+4x$ with $x^2-2hx$ to see that we need $h = -2$ here. Since $h^2 = 4$, let's add and subtract $3 \cdot 4 = 12$ from the original expression, to obtain
-      \begin{align*}
-        f(x) &= 3x^2+12x+14 = (3x^2+12x+12)-12+14 \\ &= 3(x^2+4x+4) + 2 = 3(x+2)^2+2 \\ &= 3(x-(-2))^2+2.
-      \end{align*}
-So, the vertex of this parabola has coordinates $(h,k) = (-2,2)$.
-    \end{explanation}
-  \end{enumerate}
-\end{example}
-
-Very generally, consider $f(x) = ax^2+bx+c$, with $a$, $b$ and $c$ real numbers, with $a \neq 0$. Let's repeat everything we have done in the previous example, with $a$, $b$ and $c$ instead of concrete numbers. Here are the steps we can follow:
-
-\begin{itemize}
-\item First, look only at $ax^2 + bx = a(x^2 + bx/a)$.
-\item Compare $x^2+bx/a$ with $x^2-2hx$. The $h$ we need here is $h = -b/2a$. Note that $h^2 = b^2/4a^2$.
-\item Because of the $a$ we had to factor out in the beginning, let's add and subtract $a \cdot (b^2/4a^2) = b^2/4a$ from the original expression.
-\item Compute \begin{align*}  ax^2+bx+c &= \left(ax^2+bx + \frac{b^2}{4a}\right) - \frac{b^2}{4a}+c \\ &= a\left(x^2+\frac{bx}{a} + \frac{b^2}{4a^2}\right) + \frac{-b^2+4ac}{4a} \\ &= a\left(x+\frac{b}{2a}\right)^2+\frac{-b^2+4ac}{4a} \\ &= a\left(x - \left(-\frac{b}{2a}\right)\right)^2 + \frac{-(b^2-4ac)}{4a}. \end{align*}
-\item Hence, the vertex of the parabola described by $y=ax^2+bx+c$ is given by $$(h,k) = \left(-\frac{b}{2a}, -\frac{b^2-4ac}{4a}\right).$$
-\end{itemize}
-
-And with those computations in place, we are in fact very close to understanding where the quadratic formula came from. Solving $ax^2+bx+c=0$ is, by the above, the same as solving $$a\left(x+\frac{b}{2a}\right)^2 - \frac{b^2-4ac}{4a} = 0.$$Reorganize as $$a\left(x+\frac{b}{2a}\right)^2 = \frac{b^2-4ac}{4a},$$and divide by $a$ to get $$\left(x+\frac{b}{2a}\right)^2 = \frac{b^2-4ac}{4a^2}.$$Assuming that $b^2-4ac \geq 0$, we may take square roots on both sides: $$\left|x+\frac{b}{2a} \right| = \frac{\sqrt{b^2-4ac}}{2|a|}.$$
-Eliminating the absolute values, we have $$x+\frac{b}{2a} = \frac{\pm\sqrt{b^2-4ac}}{2a}.$$Now solve for $x$, by putting everything on the right side under a common denominator: $$x = \frac{-b\pm \sqrt{b^2-4ac}}{2a}.$$Mystery solved. For each choice of sign $\pm$, we get one $x$-intercept. Now, we also observe that the average of such solutions does give the $x$-coordinate of the vertex, as you might expect: $$\frac{1}{2}\left(\frac{-b-\sqrt{b^2-4ac}}{2a} + \frac{-b+\sqrt{b^2-4ac}}{2a}\right) = \frac{1}{2} \left(\frac{-2b}{2a}\right) = -\frac{b}{2a}.$$
-
-The $y$-coordinate of the vertex will be, naturally, $k = f(-b/2a)$. This can also be used as a shortcut to write quadratic functions in vertex-form.
-
-\begin{example}
-  Write $f(x) = x^2 - 8x+15$ in vertex-form $f(x) = a(x-h)^2+k$ without completing the squares explicitly.\\[.5em]
-  \begin{explanation}
-    We can factor the quadratic as $f(x) = (x-3)(x-5)$. This means that the $x$-coordinate of the vertex is $h = (3+5)/2 = 4$, and so $$k =f(4) = 4^2-8\cdot 4 + 15 = -1.$$Hence $x^2-8x+15 = (x-4)^2-1$. As a quick sanity-check (particular to \emph{this} example), note that factoring this last result as a difference of squares (because $1^2=1$) does give $(x-3)(x-5)$.
-  \end{explanation}
-\end{example}
+%Let's discuss what happens with parabolas and quadratic functions more precisely. Consider a generic $f(x) = ax^2+bx+c$, with $a$, $b$ and $c$ real numbers, and assume that $a \neq 0$. We assume this because if $a$ were zero, we would have a linear function instead of a quadratic one, which is not the focus here. The quadratic formula $$  x = \frac{-b \pm \sqrt{b^2-4ac}}{2a},$$used to find the values of $x$ for which $f(x) = 0$ or, in other words, the possible $x$-intercepts, is usually a source of grief for people studying quadratic functions for the first time. Let's try to remedy this by understanding where such formula comes from. The main strategy here is a little algebraic device called ``completing the squares'', which is also useful for finding the coordinates $(h,k)$ of the vertex of the parabola given by the graph of $f(x)$.
+%
+%Very briefly, the procedure consists in noting that $(x-h)^2 = x^2-2hx+h^2$ and paying close attention to the $-2hx$ term. Comparing this with the linear term you were given will tell you what $h$ should be. Add and subtract whatever you need to in the quadratic function you were given, to produce $(x-h)^2$ (or, more generally, the multiple $a(x-h)^2$), and whatever constant term is left outside the factored $(\cdots)^2$ will be the desired $k$. We'll see several examples below.
+%
+%\begin{example}
+%  For each of the following quadratic functions, rewrite it in the form $f(x) = a(x-h)^2+k$, for suitable numbers $h$ and $k$. Such point $(h,k)$ is automatically the vertex of the parabola in question.
+%  \begin{enumerate}[label=\alph*.]
+%  \item $f(x) = x^2-4x+7$. \\[.5em]
+%    \begin{explanation}
+%      Comparing $x^2-4x$ with $x^2-2hx$ suggests that $h=2$ does the trick. Since $h^2=4$, we add and subtract $4$ in the expression for the given $f(x)$, to get $$  f(x) = x^2-4x+7 =(x^2-4x+4)-4+7 = (x-2)^2+3.   $$Hence, the vertex of the parabola $y=x^2-4x+7$ is the point $(2,3)$.
+%    \end{explanation}
+%  \item $f(x) = 2x^2 + 6x+12$. \\[.5em]
+%    \begin{explanation}
+%      This time, look at $2x^2+6x = 2(x^2+3x)$, and compare $x^2+3x$ with $x^2-2hx$. It seems like $h=-3/2$ is what we need. Note that $h^2 = 9/4$. Because of the $2$ we had to factor out, we'll add and subtract $2 \cdot (9/4) = 9/2$ to complete the square. So \begin{align*}f(x) &= 2x^2+6x+12 = 2x^2+6x + \frac{9}{2} - \frac{9}{2} + 12 \\ &= 2\left(x^2+3x+\frac{9}{4}\right) -\frac{9}{2} + 12 = 2\left(x+\frac{3}{2}\right)^2 + \frac{15}{2}\\ &=  2\left(x-\left(-\frac{3}{2}\right)\right)^2 + \frac{15}{2}.\end{align*}Thus $(h,k) = (-3/2, 15/2)$ is the vertex of this parabola.
+%    \end{explanation}
+%  \item $f(x) = 3x^2 + 12x + 14$. \\[.5em]
+%    \begin{explanation}
+%      As before, we start focusing on $3x^2+12x = 3(x^2+4x)$. Compare $x^2+4x$ with $x^2-2hx$ to see that we need $h = -2$ here. Since $h^2 = 4$, let's add and subtract $3 \cdot 4 = 12$ from the original expression, to obtain
+%      \begin{align*}
+%        f(x) &= 3x^2+12x+14 = (3x^2+12x+12)-12+14 \\ &= 3(x^2+4x+4) + 2 = 3(x+2)^2+2 \\ &= 3(x-(-2))^2+2.
+%      \end{align*}
+%So, the vertex of this parabola has coordinates $(h,k) = (-2,2)$.
+%    \end{explanation}
+%  \end{enumerate}
+%\end{example}
+%
+%Very generally, consider $f(x) = ax^2+bx+c$, with $a$, $b$ and $c$ real numbers, with $a \neq 0$. Let's repeat everything we have done in the previous example, with $a$, $b$ and $c$ instead of concrete numbers. Here are the steps we can follow:
+%
+%\begin{itemize}
+%\item First, look only at $ax^2 + bx = a(x^2 + bx/a)$.
+%\item Compare $x^2+bx/a$ with $x^2-2hx$. The $h$ we need here is $h = -b/2a$. Note that $h^2 = b^2/4a^2$.
+%\item Because of the $a$ we had to factor out in the beginning, let's add and subtract $a \cdot (b^2/4a^2) = b^2/4a$ from the original expression.
+%\item Compute \begin{align*}  ax^2+bx+c &= \left(ax^2+bx + \frac{b^2}{4a}\right) - \frac{b^2}{4a}+c \\ &= a\left(x^2+\frac{bx}{a} + \frac{b^2}{4a^2}\right) + \frac{-b^2+4ac}{4a} \\ &= a\left(x+\frac{b}{2a}\right)^2+\frac{-b^2+4ac}{4a} \\ &= a\left(x - \left(-\frac{b}{2a}\right)\right)^2 + \frac{-(b^2-4ac)}{4a}. \end{align*}
+%\item Hence, the vertex of the parabola described by $y=ax^2+bx+c$ is given by $$(h,k) = \left(-\frac{b}{2a}, -\frac{b^2-4ac}{4a}\right).$$
+%\end{itemize}
+%
+%And with those computations in place, we are in fact very close to understanding where the quadratic formula came from. Solving $ax^2+bx+c=0$ is, by the above, the same as solving $$a\left(x+\frac{b}{2a}\right)^2 - \frac{b^2-4ac}{4a} = 0.$$Reorganize as $$a\left(x+\frac{b}{2a}\right)^2 = \frac{b^2-4ac}{4a},$$and divide by $a$ to get $$\left(x+\frac{b}{2a}\right)^2 = \frac{b^2-4ac}{4a^2}.$$Assuming that $b^2-4ac \geq 0$, we may take square roots on both sides: $$\left|x+\frac{b}{2a} \right| = \frac{\sqrt{b^2-4ac}}{2|a|}.$$
+%Eliminating the absolute values, we have $$x+\frac{b}{2a} = \frac{\pm\sqrt{b^2-4ac}}{2a}.$$Now solve for $x$, by putting everything on the right side under a common denominator: $$x = \frac{-b\pm \sqrt{b^2-4ac}}{2a}.$$Mystery solved. For each choice of sign $\pm$, we get one $x$-intercept. Now, we also observe that the average of such solutions does give the $x$-coordinate of the vertex, as you might expect: $$\frac{1}{2}\left(\frac{-b-\sqrt{b^2-4ac}}{2a} + \frac{-b+\sqrt{b^2-4ac}}{2a}\right) = \frac{1}{2} \left(\frac{-2b}{2a}\right) = -\frac{b}{2a}.$$
+%
+%The $y$-coordinate of the vertex will be, naturally, $k = f(-b/2a)$. This can also be used as a shortcut to write quadratic functions in vertex-form.
+%
+%\begin{example}
+%  Write $f(x) = x^2 - 8x+15$ in vertex-form $f(x) = a(x-h)^2+k$ without completing the squares explicitly.\\[.5em]
+%  \begin{explanation}
+%    We can factor the quadratic as $f(x) = (x-3)(x-5)$. This means that the $x$-coordinate of the vertex is $h = (3+5)/2 = 4$, and so $$k =f(4) = 4^2-8\cdot 4 + 15 = -1.$$Hence $x^2-8x+15 = (x-4)^2-1$. As a quick sanity-check (particular to \emph{this} example), note that factoring this last result as a difference of squares (because $1^2=1$) does give $(x-3)(x-5)$.
+%  \end{explanation}
+%\end{example}
 
 %\typeout{************************************************}
 %\typeout{Summary}
@@ -283,7 +283,7 @@ The $y$-coordinate of the vertex will be, naturally, $k = f(-b/2a)$. This can al
 \begin{summary}\begin{itemize}
 \item Vertical shifts: given the graph of $y=f(x)$, we can draw the graph of $y=f(x)+a$, with $a>0$, by shifting the graph of $y=f(x)$ up by $a$ units. Similarly, the graph of $y=f(x)-a$ is obtained by shifting the original graph down by $a$ units.
 \item Horizontal shitfs: given the graph of $y=f(x)$, we can draw the graph of $y=f(x-a)$, with $a>0$, by shifting the graph of $y=f(x)$ by $a$ units to the left. Similarly, the graph of $y=f(x+a)$ is obtained by shifting the original graph by $a$ units to the right.
-\item For an arbitrary quadratic function $f(x) = ax^2+bx+c$, we found formulas for the coordinates $(h,k)$ of its vertex by completing the squares. We have also concluded that the $x$-coordinate $h$ of the vertex is, in fact, the average of the $x$-intercepts of the parabola described as the graph of $y=f(x)$ and, in particular, we have seen how to deduce the famous quadratic formula with this general strategy.
+%\item For an arbitrary quadratic function $f(x) = ax^2+bx+c$, we found formulas for the coordinates $(h,k)$ of its vertex by completing the squares. We have also concluded that the $x$-coordinate $h$ of the vertex is, in fact, the average of the $x$-intercepts of the parabola described as the graph of $y=f(x)$ and, in particular, we have seen how to deduce the famous quadratic formula with this general strategy.
 \end{itemize}\end{summary}
 
 
