@@ -49,7 +49,7 @@ jobs:
           GPG_KEY_ID: ${{ secrets.GPG_KEY_ID }}
           # XIMERA_URL: https://ximera.osu.edu/
           XIMERA_URL: https://xerxes.ximera.org/
-          XIMERA_NAME: precalcbart #TEST NAME
+          XIMERA_NAME: precalctestreviewoct #TEST NAME
         run: |
           ls -alrt
           chmod +x xmScripts/xmlatex   # Overleaf sync might reset it :-()
