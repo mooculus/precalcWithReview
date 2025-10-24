@@ -47,12 +47,13 @@ jobs:
           # (The defaults will presumably make this step fail.)
           GPG_KEY: ${{ secrets.GPG_KEY }}
           GPG_KEY_ID: ${{ secrets.GPG_KEY_ID }}
-          XIMERA_URL: https://ximera.osu.edu/
+          # XIMERA_URL: https://ximera.osu.edu/
+          XIMERA_URL: https://xerxes.ximera.org/
           XIMERA_NAME: precalcbart #TEST NAME
         run: |
           ls -alrt
           chmod +x xmScripts/xmlatex   # Overleaf sync might reset it :-()
-          ./xmScripts/xmlatex ghaction
+          ./xmScripts/xmlatex ghaction pre*tex Pre*tex    # Only 'main' courses 
           echo "✅ Published to $XIMERA_URL$XIMERA_NAME " >> $GITHUB_STEP_SUMMARY
 
       - name: Setup ximera serve cache (only .git)
